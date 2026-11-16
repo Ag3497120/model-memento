@@ -7,6 +7,47 @@ export function modelOptions(era) {
   return sourceUrls(era?.model_switch?.sources).length ? [...new Set((era?.model_switch?.options || []).filter(usable))] : [];
 }
 
+// When the edition's own selector list is unrecorded, offer models from Model Memento's
+// records instead, marked as such: the edition's catalog list, then models whose records
+// name this tool as a provider, then the tool maker's own models — released by the edition date.
+const day = value => typeof value !== 'string' || !value ? null : value.length === 4 ? `${value}-01-01` : value.length === 7 ? `${value}-01` : value.slice(0, 10);
+const squash = value => String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const releaseDay = model => day(model.release || model.created || model.lifecycle?.events?.find(event => event.type === 'released')?.date || model.lifecycle?.events?.[0]?.date);
+export function supplementalOptions({ tool, version, models = [], limit = 12 }) {
+  const listed = [...new Set([...(version?.available || []), ...(version?.models || [])].filter(usable))];
+  if (listed.length) return { names: listed, basis: 'catalog' };
+  const until = day(version?.from);
+  if (!until) return { names: [], basis: null };
+  const since = `${Number(until.slice(0, 4)) - 2}${until.slice(4)}`;
+  // Names that read as a product model, not an id, a harness or a mode variant.
+  const modelName = name => usable(name) && /[A-Z]/.test(name) && !/\b(thinking|preview|latest|experimental|exp)\b|[()（）:]/i.test(name);
+  const inWindow = model => { const date = releaseDay(model); return date && date <= until && date >= since && modelName(model.name); };
+  const latest = list => {
+    const seen = new Set();
+    return list.sort((a, b) => releaseDay(b).localeCompare(releaseDay(a))).map(model => model.name)
+      .filter(name => { const key = name.toLowerCase().replace(/(\d)\.0\b/g, '$1').split(/[^a-z0-9.]+/).filter(Boolean).sort().join(' '); if (seen.has(key)) return false; seen.add(key); return true; }).slice(0, limit);
+  };
+  const toolKey = squash(tool?.name);
+  if (toolKey.length >= 4) {
+    const served = latest(models.filter(model => inWindow(model) && (model.providers || []).some(name => squash(name) === toolKey)));
+    if (served.length) return { names: served, basis: 'provider' };
+  }
+  const maker = squash(tool?.vendor);
+  if (maker) {
+    // Researched records first; the large synced list only tops them up (it repeats names in other spellings).
+    const own = models.filter(model => inWindow(model) && squash(model.vendor) === maker);
+    const researched = own.filter(model => model.lifecycle);
+    const newest = researched.map(releaseDay).sort().at(-1) || '';
+    const names = latest([...researched, ...own.filter(model => !model.lifecycle && releaseDay(model) > newest)]);
+    if (names.length) return { names, basis: 'vendor' };
+  }
+  // Multi-vendor tools: the researched models of the preceding year (records with a lifecycle).
+  const yearAgo = `${Number(until.slice(0, 4)) - 1}${until.slice(4)}`;
+  const period = latest(models.filter(model => model.lifecycle && inWindow(model) && releaseDay(model) >= yearAgo));
+  if (period.length) return { names: period.slice(0, 8), basis: 'period' };
+  return { names: [], basis: null };
+}
+
 // The flag and additional arguments come from the edition's steps. These sources
 // supply executable names where the steps only say “起動するコマンド”.
 const launchers = [
@@ -63,9 +104,11 @@ function applyTheme(node, root) {
   node.style.setProperty('--era-model-scheme', style.colorScheme);
 }
 
-export function mountModelSwitch(root, { era, currentModel, currentName, onPick }) {
+export function mountModelSwitch(root, { era, currentModel, currentName, onPick, supplemental = null }) {
   const control = era.model_switch;
-  const options = modelOptions(era);
+  const recorded = modelOptions(era);
+  const supplemented = !recorded.length && Boolean(supplemental?.names?.length);
+  const options = supplemented ? [...supplemental.names] : recorded;
   const cleanup = [];
   const stepsText = (control.steps || []).join(' ');
   const command = control.where === 'slash-command' || (control.where === 'other' && /\/model\b/.test(stepsText))
@@ -112,6 +155,17 @@ export function mountModelSwitch(root, { era, currentModel, currentName, onPick 
     if (!options.length) {
       body.append(el('p', { role: 'status' }, tr('この版の選択肢は未確認です。', "Options for this edition are unverified.")));
       return;
+    }
+    if (supplemented) {
+      const why = {
+        catalog: tr('この版の記録にあるモデル', 'models recorded for this edition'),
+        provider: tr('この道具で使えると記録されたモデル', 'models recorded as available in this tool'),
+        vendor: tr('同じ会社のモデル', 'models from the same company'),
+        period: tr('その時期の調査済みのモデル。この道具で使えたかは未確認', 'researched models of that period; availability in this tool is unverified')
+      }[supplemental.basis] || tr('記録にあるモデル', 'recorded models');
+      body.append(el('p', { class: 'era-model-supplement', role: 'note', 'data-era-model-supplement': supplemental.basis || '' },
+        tr(`当時の画面の一覧は記録がないため、Model Memento の記録から補った候補です（${why}、この版の日付までに出たもの）。実際の画面の一覧とは異なることがあります。`,
+          `This edition's own list is unrecorded, so these are filled in from Model Memento's records (${why}, released by this edition's date). The real list may differ.`)));
     }
     const list = el('div', { class: 'era-model-options', role: 'listbox', 'aria-label': tr('モデルを選ぶ', "Choose a model") });
     rows = options.map((name, index) => {

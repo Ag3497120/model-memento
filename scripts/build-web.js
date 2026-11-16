@@ -422,6 +422,21 @@ try {
   catalogFallback = true;
   console.warn('closedCatalog fallback:', error.message);
 } finally { if (isolated) await fs.rm(isolated, { recursive: true, force: true }); }
+// The upstream list sometimes drops a model or a value (prices vanished for several models on
+// 2026-11-16). A museum keeps its records: fill gaps and dropped models from the saved catalog.
+if (!catalogFallback && Array.isArray(closed)) {
+  const saved = await read(path.join(root, 'data/curated/closed-fallback.json'), []);
+  const live = new Map(closed.map(m => [String(m.id || '').toLowerCase(), m]));
+  for (const record of Array.isArray(saved) ? saved : []) {
+    const key = String(record?.id || '').toLowerCase();
+    if (!key) continue;
+    const current = live.get(key);
+    if (!current) { closed.push(record); live.set(key, record); continue; }
+    for (const field of ['cost', 'context', 'output', 'knowledge', 'release']) {
+      if (current[field] == null && record[field] != null) current[field] = record[field];
+    }
+  }
+}
 if (Array.isArray(closed)) {
   const existingClosedSet = new Set(closed.map(m => String(m.id || '').toLowerCase()));
   for (const extra of autoSyncModels.closed_additions || []) {
