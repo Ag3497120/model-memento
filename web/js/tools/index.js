@@ -83,9 +83,25 @@ function injectAutoSyncCard(surface, ctx) {
   return surface;
 }
 
+/** その道具に、当時の画面を描き直した専用の画面があるか。ない道具は「近日対応」と表示する。 */
+export const hasDedicatedScreen = id => Object.hasOwn(renderers, id);
+
 export async function renderTool(ctx) {
   const mod = renderers[ctx.tool.id];
   const tree = mod ? await mod.render(ctx) : await (await import('../generic.js')).render(ctx);
+  if (!mod) {
+    const { tr } = await import('../i18n.js');
+    const card = document.createElement('aside');
+    card.className = 'coming-soon-card';
+    card.setAttribute('role', 'note');
+    card.innerHTML = '';
+    const strong = document.createElement('strong'); strong.textContent = tr('近日対応', 'Coming soon');
+    const text = document.createElement('span');
+    text.textContent = tr(' · この道具の当時の画面は、まだ描き直していません。今は記録（版・日付・出典）を共通の画面で見せています。',
+      " · This tool's screen of the time is not redrawn yet. For now its records (versions, dates, sources) are shown in a shared layout.");
+    card.append(strong, text);
+    (tree.querySelector?.('.chat-main,.terminal-main,.agent-panel,.playground-main,.messenger-main,.workflow-chat') || tree).prepend?.(card);
+  }
   if (ctx.version?.autoSynced) injectAutoSyncCard(tree, ctx);
   return tree;
 }

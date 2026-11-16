@@ -32,7 +32,8 @@ export async function entranceCases(t, english) {
   assert.ok(doc.querySelector('#memento-entrance-note button'));
   assert.equal(ui.requests.includes('catalog-core'), false);
   assert.deepEqual(timeline().querySelectorAll('[data-featured-tool]').map(node => node.dataset.featuredTool), ['chatgpt', 'claude.ai', 'claude-code']);
-  assert.equal(control('previous').disabled, true);
+  // いちばん古い版の ← は別館への扉（探索で見つかる入口、2026-11-16）
+  assert.ok(!control('previous').disabled);
   assert.match(timeline().textContent, /2022/);
   assert.equal(timeline().closest('.surface'), null);
   const releaseAnswer = museum.answer(english ? 'When were you released?' : 'いつ公開されましたか？');

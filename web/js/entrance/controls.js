@@ -34,11 +34,15 @@ export function versionDate(version) {
     { timeZone: 'UTC', year: 'numeric', month: 'long', ...(date.length === 10 ? { day: 'numeric' } : {}) });
 }
 
-export function mountTimeline(host, { tool, version, tools, onSelect, onMore }) {
+export function mountTimeline(host, { tool, version, tools, onSelect, onMore, onBeforeFirst }) {
   const versions = versionsFor(tool);
   const index = Math.max(0, versions.findIndex(item => item.id === version.id));
   const focused = host.contains?.(document.activeElement) ? document.activeElement?.dataset?.entranceControl : null;
-  const select = position => { const target = versions[position]; if (target && target.id !== version.id) return onSelect(tool.id, target.id); };
+  // いちばん古い版より前へ進もうとしたときだけ、別館への扉を出す（探索で見つかる入口）。
+  const select = position => {
+    if (position < 0 && onBeforeFirst) return onBeforeFirst(tool, version);
+    const target = versions[position]; if (target && target.id !== version.id) return onSelect(tool.id, target.id);
+  };
   const date = el('time', { datetime: version.from, 'data-current-version': version.id }, versionDate(version));
   const range = el('input', { type: 'range', min: 0, max: versions.length - 1, step: 1, value: index,
     'data-entrance-control': 'range', 'aria-label': tr('年代を選ぶ', 'Choose an era'), 'aria-valuetext': versionDate(version), disabled: versions.length < 2 });
@@ -63,7 +67,7 @@ export function mountTimeline(host, { tool, version, tools, onSelect, onMore }) 
         () => onSelect(item.id, versionsFor(item)[0].id), { 'data-featured-tool': item.id, 'data-entrance-control': item.id, 'aria-pressed': String(tool.id === item.id) })),
       button(tr('もっと見る', 'More'), onMore, { 'data-entrance-control': 'more' })),
     el('div', { class: 'memento-time-controls' },
-      button('←', () => select(index - 1), { disabled: index === 0, 'data-entrance-control': 'previous', 'aria-label': tr('前の版', 'Previous version') }),
+      button('←', () => select(index - 1), { disabled: index === 0 && !onBeforeFirst, 'data-entrance-control': 'previous', 'aria-label': tr('前の版', 'Previous version') }),
       el('div', { class: 'memento-time-track' }, range,
         el('div', { class: 'memento-year-markers' }, [...years].map(([year, position]) => button(year, () => select(position), {
           style: `--year-position:${position / Math.max(1, versions.length - 1) * 100}%`,

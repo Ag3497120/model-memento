@@ -1,6 +1,6 @@
 import { tr, pick, num, locale, isEn, setLang } from './i18n.js';
 import { el, button, link, safeLoad, safeSave } from './dom.js';
-import { renderTool } from './tools/index.js';
+import { renderTool, hasDedicatedScreen } from './tools/index.js';
 import { answer } from './closure.js';
 import { chooseEdition, modelFits, releaseOf, availableNames } from './era.js';
 import { searchRegistry, openHF, openCivitai } from './registries.js';
@@ -409,6 +409,19 @@ function activateNav(id) {
   } catch { showChromeError(); }
 }
 
+// 別館（最初に作られた版）への扉。いちばん古い版より前へ進もうとしたときと、案内のメニューから開く。
+function openClassicDoor(tool, version) {
+  const href = new URL('classic/', document.baseURI).href;
+  showChrome('classic', tr('これより前の記録はありません', 'Nothing recorded before this'),
+    el('p', {}, tool && version
+      ? tr(`${tool.name} の記録は ${version.from || 'この版'} から始まります。`, `${tool.name}'s records start at ${version.from || 'this version'}.`)
+      : tr('この博物館には、表の展示とは別の部屋があります。', 'This museum has a room apart from the main exhibits.')),
+    el('p', {}, tr('ただ、この博物館には別館があります。最初に作られた試作の展示（モデルの生没年の暦、提供が終わったモデルを呼び出す降霊、語り手が語る AI の歴史）を、当時のまま残しています。',
+      'There is, however, an older wing: the first prototype of this museum (a calendar of model lifespans, a séance that calls up retired models, and AI history told by a narrator), kept as it was.')),
+    el('p', { class: 'chrome-muted' }, tr('別館は古い試作で、表の展示より粗く、更新もしていません。答えは保存した記録とブラウザ内の下調べから作ります。', 'The wing is an old prototype: rougher than the main exhibits and not updated. Its answers come from saved records and in-browser lookups.')),
+    el('p', {}, el('a', { href, class: 'classic-door-link' }, tr('別館へ入る →', 'Enter the old wing →'))));
+}
+
 function showChromeError() {
   showChrome('error', tr('開けませんでした', 'Could not open'),
     el('p', {}, tr('前のページに戻るか、もう一度お試しください。', 'Go back to the previous page or try again.')));
@@ -503,6 +516,8 @@ function commandPalette(sections) {
   let index = [];
   function reindex() {
     const knownModels = new Map([...allModels, ...state.remoteCache.values()].map(model => [model.id, model]));
+    // 専用の画面がない道具は、一覧で「画面は近日対応」と出す（後から読み足した道具にも付ける）。
+    for (const tool of catalog.tools) tool.comingSoon ??= !hasDedicatedScreen(tool.id);
     index = paletteEntries({ tools: catalog.tools.filter(tool => toolMatchesPlatform(tool, hud.plat)),
       models: [...knownModels.values()], actions: getNavEntries({ app: appStatus.app }) });
   }
@@ -876,6 +891,7 @@ async function render() {
   renderDesktop();
   if (timelineHost) timelineControl = mountTimeline(timelineHost, { tool: state.tool, version: state.version, tools: catalog.tools,
     onSelect: (id, versionId) => selectTool(id, versionId, { focusTimeline: true }),
+    onBeforeFirst: (tool, version) => openClassicDoor(tool, version),
     onMore: () => { openMenu(); const more = chromeDialog.querySelector('.chrome-more-menu'); if (more) more.open = true; chromeDialog.querySelector('[data-chrome-more]')?.focus(); } });
   mountWithSourcesPanel(app, surface, sourcePanel, capturedManifest, state.tool, state.version, () => { render(); });
   surface.querySelector('.composer')?.before(historyQuestions(send));
@@ -1410,6 +1426,8 @@ registerNavEntry({ id: 'language-ja', label: tr('日本語にする', 'Use Japan
 registerNavEntry({ id: 'shortcuts', label: tr('キーボード操作', 'Keyboard shortcuts'), order: 300, group: 'about',
   keywords: 'keyboard shortcuts help キーボード 操作 ヘルプ', onOpen: openShortcuts });
 registerNavEntry({ id: 'help', label: tr('使い方', 'Help'), order: 301, group: 'about', onOpen: () => openHints() });
+registerNavEntry({ id: 'classic', label: tr('別館（最初の試作）', 'Old wing (first prototype)'), order: 320, group: 'about',
+  description: tr('暦・降霊・語られた歴史。古いまま残した展示', 'Calendar, séance and told histories, kept as they were'), onOpen: () => openClassicDoor() });
 subscribeNav(() => {
   if (!chromeDialog.open || chromeView !== 'menu') return;
   const focusedId = document.activeElement?.closest('[data-nav-id]')?.dataset.navId;

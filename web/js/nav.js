@@ -53,7 +53,7 @@ const normalize = value => String(value || '').normalize('NFKC').toLowerCase();
 export function paletteEntries({ tools = [], models = [], actions = [] } = {}) {
   return [
     ...tools.flatMap(tool => [
-      { id: `tool:${tool.id}`, kind: 'tools', label: tool.name, detail: tr('道具', 'Tool'), toolId: tool.id,
+      { id: `tool:${tool.id}`, kind: 'tools', label: tool.name, detail: tool.comingSoon ? tr('道具 · 画面は近日対応', 'Tool · screen coming soon') : tr('道具', 'Tool'), toolId: tool.id,
         keywords: [tool.id, tool.name, tool.description, pick(tool, 'description'), tool.category, tool.archetype].join(' ') },
       ...(tool.versions || []).map(version => ({ id: `version:${version.id}`, kind: 'versions',
         label: `${tool.name} · ${pick(version, 'label') || version.from || version.id}`,
