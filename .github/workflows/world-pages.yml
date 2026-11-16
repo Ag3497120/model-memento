@@ -98,8 +98,9 @@ jobs:
               }
             } else if (response.status !== 404) throw new Error('Cannot read published daily inputs');
           } catch (error) {
-            if (!cached) throw error;
-            console.warn('Using cached daily inputs');
+            // Optional previous state: fall back to the cache, then to the inputs committed in the repository.
+            if (!cached && !committed) throw error;
+            console.warn(`Using ${cached ? 'cached' : 'committed'} daily inputs: ${error.message}`);
           }
           if (cached && Date.parse(cached.at) > Date.parse(committed?.at || 0)) await fs.cp('.daily-cache/auto-sync', 'data/auto-sync', { recursive: true });
           NODE
@@ -254,6 +255,7 @@ jobs:
               }
               continue;
             }
+            if (response.status >= 500) { console.warn(`公開済みの ${remote} を読めないため、今回は引き継がずに続けます (HTTP ${response.status})。`); continue; }
             if (!response.ok) throw new Error('公開済みの日次確認を読み込めません。');
             const text = await response.text();
             if (Buffer.byteLength(text) > 32000000) throw new Error('日次確認が大きすぎます。');
