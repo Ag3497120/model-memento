@@ -41,7 +41,7 @@ function checkEnglish(value, location) {
       assert.ok(item.trim(), `${field}_en[${index}] must contain text`);
       assert.doesNotMatch(item, japanese, `${field}_en[${index}] must be English`);
       assert.deepEqual(urls(item), urls(entries[index]), `${field}_en[${index}] must retain source URLs`);
-      if (/unverified|未確認/.test(entries[index])) assert.match(item, /unverified/, `${field}_en[${index}] must preserve uncertainty`);
+      if (/unverified|未確認/.test(entries[index])) assert.match(item, /unverified/i, `${field}_en[${index}] must preserve uncertainty`);
     });
     checked++;
   }

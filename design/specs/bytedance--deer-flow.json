@@ -1,0 +1,617 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "bytedance--deer-flow",
+  "name": "deer-flow",
+  "vendor": "ByteDance",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "bytedance--deer-flow-2026-06-0",
+      "from": "2026-06-25",
+      "to": null,
+      "source_ref": "v2.0.0",
+      "source_selection": "Release tag published on the catalog date; deployed configuration is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem expanded; 3rem collapsed; mobile 18rem",
+          "contents": [
+            "Chats, Agents and Recent chats; New chat at top and Settings and more at bottom. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-header.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-header.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/ui/sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+          ]
+        },
+        {
+          "name": "welcome and composer",
+          "position": "center",
+          "size": "max 36rem (144 spacing units), centered",
+          "contents": [
+            "Hello, again! and description above the input. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Input footer has attachment, mode and model controls; suggestion buttons below. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Suggestions: Surprise, Write, Research, Collect and Learn. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/welcome.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/chats/chat-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/styles/globals.css",
+            "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/app/workspace/chats/%5Bthread_id%5D/page.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New chat",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Chats",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Settings and more",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Add attachments",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Flash",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Reasoning",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Pro",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Ultra",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Search models...",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+        }
+      ],
+      "conversation": {
+        "user": "How can I assist you today?",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "oklch(0.9855 0.0098 87.47)",
+          "panel": "oklch(0.965 0.0098 87.47)",
+          "text": "oklch(0.145 0 0)",
+          "muted": "oklch(0.556 0 0)",
+          "accent": "oklch(0 0 0)",
+          "border": "oklch(0.922 0.0098 87.47)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "oklch(0.24 0.0036 106.64)",
+          "panel": "oklch(0.245 0.0036 106.64)",
+          "text": "oklch(0.985 0 0)",
+          "muted": "oklch(0.708 0 0)",
+          "accent": "oklch(1 0 0)",
+          "border": "oklch(1 0 0 / 10%)",
+          "user_bubble": null
+        },
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/styles/globals.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Rounded input with footer actions; exact radius unverified.",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx"
+      },
+      "empty_state": {
+        "heading": "Hello, again!",
+        "placeholder": "How can I assist you today?",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "distinctive": [
+        "Centered greeting and suggestion chips. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx",
+        "Chats, Agents and Recent chats. https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts"
+      ],
+      "must_not_copy": [
+        "Product marks, mascot, icons, proprietary fonts and long text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/core/i18n/locales/en-US.ts",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/input-box.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/welcome.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/workspace-header.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/ui/sidebar.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/styles/globals.css",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/components/workspace/chats/chat-box.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.0.0/frontend/src/app/workspace/chats/%5Bthread_id%5D/page.tsx",
+          "kind": "source",
+          "date": "2026-06-25",
+          "shows": "Welcome input width in the thread page."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "bytedance--deer-flow-2026-09-1",
+      "from": "2026-09-24",
+      "to": null,
+      "source_ref": "v2.1.0",
+      "source_selection": "Release tag published on the catalog date; deployed configuration is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem expanded; 3rem collapsed; mobile 18rem",
+          "contents": [
+            "Chats, Agents, Scheduled tasks, Capability Center, Projects and Recent chats; New chat at top and Settings and more at bottom. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-header.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-header.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/ui/sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+          ]
+        },
+        {
+          "name": "welcome and composer",
+          "position": "center",
+          "size": "Centered; exhibit width 36rem is an approximation (unverified for this tag).",
+          "contents": [
+            "Hello, again! and description above the input. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Input footer has attachment, mode and model controls; suggestion buttons below. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Input polish and disclaimer are present. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/welcome.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/chats/chat-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/styles/globals.css"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New chat",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Chats",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Settings and more",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Add attachments",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Flash",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Reasoning",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Pro",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Ultra",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Search models...",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Scheduled tasks",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Projects",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Polish input",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "How can I assist you today?",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "oklch(0.9855 0.0098 87.47)",
+          "panel": "oklch(0.965 0.0098 87.47)",
+          "text": "oklch(0.145 0 0)",
+          "muted": "oklch(0.556 0 0)",
+          "accent": "oklch(0 0 0)",
+          "border": "oklch(0.922 0.0098 87.47)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "oklch(0.24 0.0036 106.64)",
+          "panel": "oklch(0.245 0.0036 106.64)",
+          "text": "oklch(0.985 0 0)",
+          "muted": "oklch(0.708 0 0)",
+          "accent": "oklch(1 0 0)",
+          "border": "oklch(1 0 0 / 10%)",
+          "user_bubble": null
+        },
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/styles/globals.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Rounded input with footer actions; exact radius unverified.",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx"
+      },
+      "empty_state": {
+        "heading": "Hello, again!",
+        "placeholder": "How can I assist you today?",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "distinctive": [
+        "Centered greeting and suggestion chips. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx",
+        "Chats, Agents, Scheduled tasks, Capability Center, Projects and Recent chats. https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts"
+      ],
+      "must_not_copy": [
+        "Product marks, mascot, icons, proprietary fonts and long text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/core/i18n/locales/en-US.ts",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/input-box.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/welcome.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/workspace-header.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/ui/sidebar.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/styles/globals.css",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.1.0/frontend/src/components/workspace/chats/chat-box.tsx",
+          "kind": "source",
+          "date": "2026-09-24",
+          "shows": "Tagged UI implementation."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "bytedance--deer-flow-record",
+      "from": "2026-11-04",
+      "to": null,
+      "source_ref": "v2.2.0",
+      "source_selection": "Release tag published on the catalog date; deployed configuration is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem expanded; 3rem collapsed; mobile 18rem",
+          "contents": [
+            "Chats, Agents, Scheduled tasks, Capability Center, Projects and Recent chats; New chat at top and Settings and more at bottom. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-header.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-header.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/ui/sidebar.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+          ]
+        },
+        {
+          "name": "welcome and composer",
+          "position": "center",
+          "size": "Centered; exhibit width 36rem is an approximation (unverified for this tag).",
+          "contents": [
+            "Hello, again! and description above the input. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Input footer has attachment, mode and model controls; suggestion buttons below. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts",
+            "Reference picker is present. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+          ],
+          "sources": [
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/welcome.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/chats/chat-box.tsx",
+            "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/styles/globals.css"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New chat",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Chats",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Settings and more",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Add attachments",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Flash",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Reasoning",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Pro",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Ultra",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Search models...",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Scheduled tasks",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Projects",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+        },
+        {
+          "label": "Polish input",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx"
+        },
+        {
+          "label": "Add a reference",
+          "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "How can I assist you today?",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "oklch(0.9855 0.0098 87.47)",
+          "panel": "oklch(0.965 0.0098 87.47)",
+          "text": "oklch(0.145 0 0)",
+          "muted": "oklch(0.556 0 0)",
+          "accent": "oklch(0 0 0)",
+          "border": "oklch(0.922 0.0098 87.47)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "oklch(0.24 0.0036 106.64)",
+          "panel": "oklch(0.245 0.0036 106.64)",
+          "text": "oklch(0.985 0 0)",
+          "muted": "oklch(0.708 0 0)",
+          "accent": "oklch(1 0 0)",
+          "border": "oklch(1 0 0 / 10%)",
+          "user_bubble": null
+        },
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/styles/globals.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Rounded input with footer actions; exact radius unverified.",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx"
+      },
+      "empty_state": {
+        "heading": "Hello, again!",
+        "placeholder": "How can I assist you today?",
+        "source": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+      },
+      "distinctive": [
+        "Centered greeting and suggestion chips. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/welcome.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx",
+        "Chats, Agents, Scheduled tasks, Capability Center, Projects and Recent chats. https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-sidebar.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts"
+      ],
+      "must_not_copy": [
+        "Product marks, mascot, icons, proprietary fonts and long text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/core/i18n/locales/en-US.ts",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/input-box.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/welcome.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-sidebar.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-nav-chat-list.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/workspace-header.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/ui/sidebar.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/styles/globals.css",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        },
+        {
+          "url": "https://github.com/bytedance/deer-flow/blob/v2.2.0/frontend/src/components/workspace/chats/chat-box.tsx",
+          "kind": "source",
+          "date": "2026-11-04",
+          "shows": "Tagged UI implementation."
+        }
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

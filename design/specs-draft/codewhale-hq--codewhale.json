@@ -1,0 +1,528 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "codewhale-hq--codewhale",
+  "name": "Codewhale",
+  "vendor": "codewhale-hq",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "codewhale-hq--codewhale-2026-01-0",
+      "from": "2026-01-20",
+      "to": null,
+      "tag": "v0.1.0",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "one-row header and footer; flexible chat and composer",
+          "contents": [
+            "Vertical header, chat, composer and footer. https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message or /help for commands...",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "default",
+        "light": {},
+        "dark": {},
+        "source": {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/palette.rs",
+          "default_header": "#0b1526",
+          "default_composer": "#121c2e",
+          "prompt": "#6aaef2"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "The release was named DeepSeek CLI. https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-01-20",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-01-20",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/palette.rs",
+          "kind": "source",
+          "date": "2026-01-20",
+          "shows": "Theme values."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-05-1",
+      "from": "2026-05-31",
+      "to": null,
+      "tag": "v0.8.48",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "one-row header and footer; flexible chat and composer",
+          "contents": [
+            "Vertical header, chat, composer and footer. https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/localization.rs"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-05-31",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-05-31",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/localization.rs",
+          "kind": "source",
+          "date": "2026-05-31",
+          "shows": "English UI strings."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-06-2",
+      "from": "2026-06-30",
+      "to": null,
+      "tag": "v0.8.66",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": null,
+          "contents": [
+            "Composer code and input hint. https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-06-30",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-06-30",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": "2026-06-30",
+          "shows": "English UI strings."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-07-3",
+      "from": "2026-07-31",
+      "to": null,
+      "tag": "v0.9.3",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": null,
+          "contents": [
+            "Composer code and input hint. https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-07-31",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-07-31",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": "2026-07-31",
+          "shows": "English UI strings."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": "2026-07-31",
+          "shows": "Terminal chrome and launch or idle composition."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-08-4",
+      "from": "2026-08-23",
+      "to": null,
+      "tag": "v0.9.11",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": null,
+          "contents": [
+            "Composer code and input hint. https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-08-23",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-08-23",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": "2026-08-23",
+          "shows": "English UI strings."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": "2026-08-23",
+          "shows": "Terminal chrome and launch or idle composition."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-09-5",
+      "from": "2026-09-22",
+      "to": null,
+      "tag": "v0.10.0",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": null,
+          "contents": [
+            "Composer code and input hint. https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/localization/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-09-22",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-09-22",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/localization/locales/en.json",
+          "kind": "source",
+          "date": "2026-09-22",
+          "shows": "English UI strings."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": "2026-09-22",
+          "shows": "Terminal chrome and launch or idle composition."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    },
+    {
+      "id": "codewhale-hq--codewhale-record",
+      "from": "2026-10-24",
+      "to": null,
+      "tag": "v0.10.2",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": null,
+          "contents": [
+            "Composer code and input hint. https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/localization/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "light": {},
+        "dark": {},
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Terminal coding agent. https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/README.md"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": "2026-10-24",
+          "shows": "Terminal UI source."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": "2026-10-24",
+          "shows": "Composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/localization/locales/en.json",
+          "kind": "source",
+          "date": "2026-10-24",
+          "shows": "English UI strings."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": "2026-10-24",
+          "shows": "Terminal chrome and launch or idle composition."
+        }
+      ],
+      "confidence": 0.3,
+      "limitations": "Partial source audit; state-specific screen composition, model controls, palette and per-version differences remain unverified."
+    }
+  ]
+}

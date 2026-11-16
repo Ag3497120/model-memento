@@ -34,6 +34,17 @@ import * as w4_fmaclen__hollama from './fmaclen--hollama.js';
 import * as w4_gluonfield__enchanted from './gluonfield--enchanted.js';
 import * as w4_n4ze3m__page_assist from './n4ze3m--page-assist.js';
 import * as w4_ai_shifu__chatall from './ai-shifu--chatall.js';
+import * as w5_paperclipai__paperclip from './paperclipai--paperclip.js';
+import * as w5_bytedance__deer_flow from './bytedance--deer-flow.js';
+import * as w5_pingdotgg__t3code from './pingdotgg--t3code.js';
+import * as w5_bytedance__ui_tars_desktop from './bytedance--ui-tars-desktop.js';
+import * as w5_can1357__oh_my_pi from './can1357--oh-my-pi.js';
+import * as w5_esengine__deepseek_reasonix from './esengine--deepseek-reasonix.js';
+import * as w5_openbmb__chatdev from './openbmb--chatdev.js';
+import * as w5_iofficeai__aionui from './iofficeai--aionui.js';
+import * as w5_vxcontrol__pentagi from './vxcontrol--pentagi.js';
+import * as w5_browser_use__browser_use from './browser-use--browser-use.js';
+import * as w5_tinyhumansai__openhuman from './tinyhumansai--openhuman.js';
 import * as chatgpt from './chatgpt.js';
 import * as playground from './playground.js';
 import * as claude from './claude.js';
@@ -89,6 +100,17 @@ const renderers = {
   'n8n': n8n,
   'ollama': ollama,
   'zed': zed,
+  'paperclipai--paperclip': w5_paperclipai__paperclip,
+  'bytedance--deer-flow': w5_bytedance__deer_flow,
+  'pingdotgg--t3code': w5_pingdotgg__t3code,
+  'bytedance--ui-tars-desktop': w5_bytedance__ui_tars_desktop,
+  'can1357--oh-my-pi': w5_can1357__oh_my_pi,
+  'esengine--deepseek-reasonix': w5_esengine__deepseek_reasonix,
+  'openbmb--chatdev': w5_openbmb__chatdev,
+  'iofficeai--aionui': w5_iofficeai__aionui,
+  'vxcontrol--pentagi': w5_vxcontrol__pentagi,
+  'browser-use--browser-use': w5_browser_use__browser_use,
+  'tinyhumansai--openhuman': w5_tinyhumansai__openhuman,
   'enricoros--big-agi': w4_enricoros__big_agi,
   'khoj-ai--khoj': w4_khoj_ai__khoj,
   'mudler--localai': w4_mudler__localai,

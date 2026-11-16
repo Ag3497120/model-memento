@@ -1,0 +1,332 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "can1357--oh-my-pi",
+  "name": "oh-my-pi",
+  "vendor": "can1357",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "can1357--oh-my-pi-2026-01-0",
+      "from": "2026-01-02",
+      "to": null,
+      "source_ref": "v1.337.1",
+      "source_selection": "Catalog release tag; whether it is the closest commit to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "welcome",
+          "position": "top",
+          "size": "80–100 terminal columns; left column 26 columns",
+          "contents": [
+            "2列の歓迎欄にTipsとRecent sessions。ロゴは省略。"
+          ],
+          "contents_en": [
+            "Two-column welcome with Tips and Recent sessions; logo omitted."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/welcome.ts",
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/footer.ts"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "terminal width",
+          "contents": [
+            "会話の下に入力欄と状態欄がある端末表示。"
+          ],
+          "contents_en": [
+            "Transcript above an editor and status/footer; no sidebar in this terminal view."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "unverified",
+          "contents": [
+            "キーボード入力欄。Enterで送信。正確な寸法は未確認。"
+          ],
+          "contents_en": [
+            "Keyboard editor; Enter submits. Exact geometry is unverified."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "model",
+          "position": "footer and slash command",
+          "size": "unverified",
+          "contents": [
+            "状態欄にモデルを表示し、/modelで選択する。候補は設定に依存する。"
+          ],
+          "contents_en": [
+            "Model shown in status; /model opens selection. Available models depend on configuration."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+            "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/footer.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "source": "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/interactive-mode.ts"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/welcome.ts"
+        }
+      ],
+      "empty_state": [
+        "Welcome back!",
+        "Tips",
+        "? for keyboard shortcuts",
+        "/ for commands",
+        "! to run bash",
+        "/status for loaded extensions",
+        "Recent sessions",
+        "No recent sessions"
+      ],
+      "palette": {
+        "dark": {
+          "bg": null,
+          "accent": "#febc38",
+          "border": "#178fb9",
+          "muted": "#777d88",
+          "dim": "#5f6673"
+        }
+      },
+      "palette_note": "Dark theme does not set the terminal background; #18181e in the exhibit is illustrative.",
+      "sources": [
+        "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/welcome.ts",
+        "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/interactive-mode.ts",
+        "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/theme/dark.json",
+        "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/src/modes/interactive/components/footer.ts",
+        "https://github.com/can1357/oh-my-pi/blob/v1.337.1/packages/coding-agent/package.json"
+      ],
+      "unverified": [
+        "Exact record-day build or closest commit",
+        "Actual configured model and provider",
+        "Exact terminal dimensions and background",
+        "Command list placement and ordering in the reconstruction"
+      ]
+    },
+    {
+      "id": "can1357--oh-my-pi-2026-10-1",
+      "from": "2026-10-31",
+      "to": null,
+      "source_ref": "v18.14.2",
+      "source_selection": "Catalog release tag; whether it is the closest commit to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "welcome",
+          "position": "top",
+          "size": "centered; tip at 50 or more columns, wraps at 72 columns",
+          "contents": [
+            "中央の歓迎欄と1件のヒント。ロゴとワードマークは省略。"
+          ],
+          "contents_en": [
+            "Centered welcome and one selected tip; logo and wordmark omitted."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/welcome.ts",
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/tips.txt"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "terminal width",
+          "contents": [
+            "会話の下に入力欄と状態欄がある端末表示。"
+          ],
+          "contents_en": [
+            "Transcript above an editor and status/footer; no sidebar in this terminal view."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/coding-agent/src/modes/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "at least three terminal rows including borders",
+          "contents": [
+            "キーボード入力欄。Enterで送信。正確な寸法は未確認。"
+          ],
+          "contents_en": [
+            "Keyboard editor; Enter submits. Exact geometry is unverified."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/coding-agent/src/modes/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "model",
+          "position": "footer and slash command",
+          "size": "unverified",
+          "contents": [
+            "状態欄にモデルを表示し、/modelで選択する。候補は設定に依存する。"
+          ],
+          "contents_en": [
+            "Model shown in status; /model opens selection. Available models depend on configuration."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/README.md",
+            "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/tips.txt"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "source": "https://github.com/can1357/oh-my-pi/blob/v18.14.2/README.md"
+        },
+        {
+          "label": "/btw",
+          "source": "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/tips.txt"
+        }
+      ],
+      "empty_state": [
+        "Tip:",
+        "You can /btw to ask a side question"
+      ],
+      "palette": {
+        "dark": {
+          "bg": "#151820",
+          "accent": "#00b4ff",
+          "border": "#2a3038",
+          "muted": "#9ca3b0",
+          "dim": "#6b7280",
+          "status": "#0f1216"
+        }
+      },
+      "palette_note": "Titanium is the default dark slot. Terminal colors depend on terminal configuration.",
+      "sources": [
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/welcome.ts",
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/coding-agent/src/modes/interactive-mode.ts",
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/theme/defaults.json",
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/tui/src/prompt/tips.txt",
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/README.md",
+        "https://github.com/can1357/oh-my-pi/blob/v18.14.2/packages/coding-agent/src/modes/settings.ts"
+      ],
+      "unverified": [
+        "Exact record-day build or closest commit",
+        "Actual configured model and provider",
+        "Exact terminal dimensions and background",
+        "Command list placement and ordering in the reconstruction"
+      ]
+    },
+    {
+      "id": "can1357--oh-my-pi-record",
+      "from": "2026-11-15",
+      "to": null,
+      "source_ref": "7c49c11aa5bbaf3f418406583096168ad5b8c6dc",
+      "source_selection": "Catalog record commit; correspondence to the exact date is unverified.",
+      "regions": [
+        {
+          "name": "welcome",
+          "position": "top",
+          "size": "centered; tip at 50 or more columns, wraps at 72 columns",
+          "contents": [
+            "中央の歓迎欄と1件のヒント。ロゴとワードマークは省略。"
+          ],
+          "contents_en": [
+            "Centered welcome and one selected tip; logo and wordmark omitted."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/welcome.ts",
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/tips.txt"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "terminal width",
+          "contents": [
+            "会話の下に入力欄と状態欄がある端末表示。"
+          ],
+          "contents_en": [
+            "Transcript above an editor and status/footer; no sidebar in this terminal view."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/coding-agent/src/modes/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "at least three terminal rows including borders",
+          "contents": [
+            "キーボード入力欄。Enterで送信。正確な寸法は未確認。"
+          ],
+          "contents_en": [
+            "Keyboard editor; Enter submits. Exact geometry is unverified."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/coding-agent/src/modes/interactive-mode.ts"
+          ]
+        },
+        {
+          "name": "model",
+          "position": "footer and slash command",
+          "size": "unverified",
+          "contents": [
+            "状態欄にモデルを表示し、/modelで選択する。候補は設定に依存する。"
+          ],
+          "contents_en": [
+            "Model shown in status; /model opens selection. Available models depend on configuration."
+          ],
+          "sources": [
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/README.md",
+            "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/tips.txt"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "source": "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/README.md"
+        },
+        {
+          "label": "/btw",
+          "source": "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/tips.txt"
+        }
+      ],
+      "empty_state": [
+        "Tip:",
+        "Agent overthinking? Say `chillax`"
+      ],
+      "palette": {
+        "dark": {
+          "bg": "#151820",
+          "accent": "#00b4ff",
+          "border": "#2a3038",
+          "muted": "#9ca3b0",
+          "dim": "#6b7280",
+          "status": "#0f1216"
+        }
+      },
+      "palette_note": "Titanium is the default dark slot. Terminal colors depend on terminal configuration.",
+      "sources": [
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/welcome.ts",
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/coding-agent/src/modes/interactive-mode.ts",
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/theme/defaults.json",
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/tui/src/prompt/tips.txt",
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/README.md",
+        "https://github.com/can1357/oh-my-pi/blob/7c49c11aa5bbaf3f418406583096168ad5b8c6dc/packages/coding-agent/src/modes/settings.ts",
+        "https://github.com/can1357/oh-my-pi/commit/7c49c11aa5bbaf3f418406583096168ad5b8c6dc"
+      ],
+      "unverified": [
+        "Exact record-day build or closest commit",
+        "Actual configured model and provider",
+        "Exact terminal dimensions and background",
+        "Command list placement and ordering in the reconstruction"
+      ]
+    }
+  ]
+}

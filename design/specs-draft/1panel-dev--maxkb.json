@@ -19,7 +19,7 @@
             "A centered chat up to 860px wide under a 56px gradient header; input has the Chinese placeholder 请输入. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/styles/variables.scss)"
           ],
           "contents_en": [
-            "A centered chat up to 860px wide under a 56px gradient header; input has the Chinese placeholder the original Chinese placeholder. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/styles/variables.scss)"
+            "A centered chat up to 860px wide under a 56px gradient header; input placeholder is 请输入. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/styles/variables.scss)"
           ]
         }
       ],
@@ -41,6 +41,12 @@
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/application/CreateAndSetting.vue",
           "label_en": "AI model"
+        },
+        {
+          "label": "重新生成 / 复制 / 赞同 / 反对",
+          "label_en": "Regenerate / Copy / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/OperationButton.vue"
         }
       ],
       "conversation": {
@@ -126,7 +132,7 @@
       ],
       "confidence": 0.7,
       "distinctive_en": [
-        "A centered chat up to 860px wide under a 56px gradient header; input has the Chinese placeholder the original Chinese placeholder. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/styles/variables.scss)",
+        "A centered chat up to 860px wide under a 56px gradient header; input placeholder is 请输入. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/components/ai-chat/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/styles/variables.scss)",
         "Model selection belongs to application configuration, not the end-user chat composer. (https://github.com/1Panel-dev/MaxKB/blob/v0.9.0/ui/src/views/application/CreateAndSetting.vue)"
       ]
     },
@@ -160,6 +166,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -241,6 +257,24 @@
           "kind": "source",
           "date": null,
           "shows": "Model selector in application settings."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.8-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -256,7 +290,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -275,6 +310,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -362,6 +407,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.0.0/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -396,6 +459,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -477,6 +550,24 @@
           "kind": "source",
           "date": null,
           "shows": "Model selector in application settings."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.9-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -511,6 +602,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -592,6 +693,24 @@
           "kind": "source",
           "date": null,
           "shows": "Model selector in application settings."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.10-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -607,7 +726,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -626,6 +746,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -713,6 +843,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.0/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -728,7 +876,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -747,6 +896,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -834,6 +993,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.2.1/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -849,7 +1026,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -868,6 +1046,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -955,6 +1143,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.3.1/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -970,7 +1176,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -989,6 +1196,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1076,6 +1293,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.4.2/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1091,7 +1326,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1110,6 +1346,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1197,6 +1443,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.5.0/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1212,7 +1476,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1231,6 +1496,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1318,6 +1593,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.6.1/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1352,6 +1645,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1433,6 +1736,24 @@
           "kind": "source",
           "date": null,
           "shows": "Model selector in application settings."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.13-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1448,7 +1769,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1467,6 +1789,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1554,6 +1886,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.8.1/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1569,7 +1919,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1588,6 +1939,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1675,6 +2036,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.9.2/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1690,7 +2069,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1709,6 +2089,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1796,6 +2186,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.2-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1811,7 +2219,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -1830,6 +2239,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -1917,6 +2336,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.4-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -1951,6 +2388,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -2032,6 +2479,24 @@
           "kind": "source",
           "date": null,
           "shows": "Model selector in application settings."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v1.10.15-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -2047,7 +2512,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -2066,6 +2532,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -2153,6 +2629,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/v2.10.6-lts/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7
@@ -2168,7 +2662,8 @@
           "position": "center",
           "size": "280px expanded history panel; remaining width conversation",
           "contents": [
-            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/locales/lang/en-US/ai-chat.ts)"
+            "Desktop chat has a collapsible history panel and a separate conversation area. Clear Chat is available in the history panel. (https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/component/HistoryPanel.vue; https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/locales/lang/en-US/ai-chat.ts)",
+            "The history panel background uses 4% of the #3370ff fallback accent; the panel is 280px expanded. (https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/pc/index.vue; https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/component/HistoryPanel.vue)"
           ]
         }
       ],
@@ -2187,6 +2682,16 @@
           "label": "AI model",
           "where": "application settings",
           "source": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/application/ApplicationSetting.vue"
+        },
+        {
+          "label": "Copy / Regenerate Response / Like / Dislike",
+          "where": "completed response operations; original labels are tooltips",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue"
+        },
+        {
+          "label": "Export Chat History / Export Markdown / Export HTML / Export PDF",
+          "where": "conversation header, when records exist",
+          "source": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/views/chat/pc/index.vue"
         }
       ],
       "conversation": {
@@ -2274,6 +2779,24 @@
           "kind": "source",
           "date": null,
           "shows": "History panel and conditional controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/components/ai-chat/component/operation-button/ChatOperationButton.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Completed-response operations; labels are tooltips in the original."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/components/ai-chat/component/chat-input-operate/index.vue",
+          "kind": "source",
+          "date": null,
+          "shows": "Question input and conditional file and audio controls."
+        },
+        {
+          "url": "https://github.com/1Panel-dev/MaxKB/blob/76c070eaf479/ui/src/locales/lang/en-US/common.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English Copy and Export labels."
         }
       ],
       "confidence": 0.7

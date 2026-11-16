@@ -1,0 +1,721 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "iofficeai--aionui",
+  "name": "AionUi",
+  "vendor": "iOfficeAI",
+  "kind": "desktop-chat",
+  "versions": [
+    {
+      "id": "iofficeai--aionui-2025-08-0",
+      "from": "2025-08-07",
+      "to": null,
+      "source_ref": "v1.0.0",
+      "source_selection": "Catalog version tag; exact installed build and user configuration are unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "250px; collapsed 64px",
+          "contents": [
+            "New Chat, history and Settings; #f2f3f5. https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/layout.tsx https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/main.tsx https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/i18n/locales/en-US.json"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "center",
+          "size": "horizontal padding 100px",
+          "contents": [
+            "Centered greeting and input. https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/i18n/locales/en-US.json"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/main.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/main.tsx"
+        },
+        {
+          "label": "Upload Files",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx"
+        },
+        {
+          "label": "Open Folder",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Enter sends; Shift+Enter adds a line.",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#F9FAFB",
+          "panel": "#F2F3F5",
+          "header": "#F7F8FA",
+          "border": "#E5E6EB",
+          "text": null,
+          "accent": null
+        },
+        "dark": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/layout.tsx"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "input_shape": "20px radius, white, 16px padding",
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx"
+      },
+      "empty_state": "Hi, what can I help with?",
+      "distinctive": [
+        "The left rail, centered greeting, upload and open-folder controls. https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/main.tsx"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/i18n/locales/en-US.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/layout.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/ConversationWelcome.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/components/sendbox.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/main.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/panel/geminsettings.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v1.0.0/src/renderer/conversation/gemini/GeminiWorkspace.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "iofficeai--aionui-2026-06-1",
+      "from": "2026-06-30",
+      "to": null,
+      "source_ref": "v2.1.26",
+      "source_selection": "Catalog version tag; exact installed build and user configuration are unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "260px default desktop width",
+          "contents": [
+            "The desktop rail uses bg-2 and a default width of 260px; history and controls depend on user data. https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/components/layout/Layout.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/styles/themes/default-color-scheme.css https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "center",
+          "size": "maximum 800px, 16px side padding",
+          "contents": [
+            "Centered greeting, assistant area, input card and project selector. https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/GuidPage.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/index.module.css https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Add files",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Skills",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "MCP",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Work in a project",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Enter sends; Shift+Enter adds a line.",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/GuidPage.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f9fafb",
+          "panel": "#f2f3f5",
+          "header": null,
+          "border": "#e5e6eb",
+          "text": "#000000",
+          "muted": "#86909c",
+          "accent": "#7583b2"
+        },
+        "dark": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/styles/themes/default-color-scheme.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "input_shape": "24px radius, white fallback, 12px padding",
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/index.module.css"
+      },
+      "empty_state": "Hi, what's your plan for today?",
+      "distinctive": [
+        "The home action row places the model selector beside send and the project selector below. https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+        "The conditional examples ask about capabilities, skills and tools. https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/GuidPage.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/guid.json"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/index.module.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/GuidPage.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/guid.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/services/i18n/locales/en-US/common.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English Add files and other common control labels."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/components/layout/Layout.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Desktop rail width, application regions and theme classes."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.26/packages/desktop/src/renderer/styles/themes/default-color-scheme.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Default light theme color tokens."
+        }
+      ],
+      "confidence": 0.68
+    },
+    {
+      "id": "iofficeai--aionui-2026-07-2",
+      "from": "2026-07-31",
+      "to": null,
+      "source_ref": "v2.1.45",
+      "source_selection": "Catalog version tag; exact installed build and user configuration are unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "260px default desktop width",
+          "contents": [
+            "The desktop rail uses bg-2 and a default width of 260px; history and controls depend on user data. https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/components/layout/Layout.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/styles/themes/default-color-scheme.css https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "center",
+          "size": "maximum 800px, 16px side padding",
+          "contents": [
+            "Centered greeting, assistant area, input card and project selector. https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/GuidPage.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/index.module.css https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Add files",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Skills",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "MCP",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Work in a project",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Enter sends; Shift+Enter adds a line.",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/GuidPage.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f9fafb",
+          "panel": "#f2f3f5",
+          "header": null,
+          "border": "#e5e6eb",
+          "text": "#000000",
+          "muted": "#86909c",
+          "accent": "#7583b2"
+        },
+        "dark": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/styles/themes/default-color-scheme.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "input_shape": "24px radius, white fallback, 12px padding",
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/index.module.css"
+      },
+      "empty_state": "Hi, what's your plan for today?",
+      "distinctive": [
+        "The home action row places the model selector beside send and the project selector below. https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+        "The placeholder mentions slash commands. https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/index.module.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/GuidPage.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/guid.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/services/i18n/locales/en-US/common.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English Add files and other common control labels."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/components/layout/Layout.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Desktop rail width, application regions and theme classes."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.45/packages/desktop/src/renderer/styles/themes/default-color-scheme.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Default light theme color tokens."
+        }
+      ],
+      "confidence": 0.68
+    },
+    {
+      "id": "iofficeai--aionui-2026-08-3",
+      "from": "2026-08-25",
+      "to": null,
+      "source_ref": "v2.1.61",
+      "source_selection": "Catalog version tag; exact installed build and user configuration are unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "260px default desktop width",
+          "contents": [
+            "The desktop rail uses bg-2 and a default width of 260px; history and controls depend on user data. https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/components/layout/Layout.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/styles/themes/default-color-scheme.css https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "center",
+          "size": "maximum 800px, 16px side padding",
+          "contents": [
+            "Centered greeting, assistant area, input card and project selector. https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/GuidPage.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/index.module.css https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Add files",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Skills",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "MCP",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Work in a project",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Enter sends; Shift+Enter adds a line.",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/GuidPage.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f9fafb",
+          "panel": "#f2f3f5",
+          "header": null,
+          "border": "#e5e6eb",
+          "text": "#000000",
+          "muted": "#86909c",
+          "accent": "#7583b2"
+        },
+        "dark": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/styles/themes/default-color-scheme.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "input_shape": "24px radius, white fallback, 12px padding",
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/index.module.css"
+      },
+      "empty_state": "Hi, what's your plan for today?",
+      "distinctive": [
+        "The home action row places the model selector beside send and the project selector below. https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+        "The placeholder mentions slash commands. https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/index.module.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/GuidPage.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/guid.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/services/i18n/locales/en-US/common.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English Add files and other common control labels."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/components/layout/Layout.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Desktop rail width, application regions and theme classes."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.1.61/packages/desktop/src/renderer/styles/themes/default-color-scheme.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Default light theme color tokens."
+        }
+      ],
+      "confidence": 0.68
+    },
+    {
+      "id": "iofficeai--aionui-record",
+      "from": "2026-09-09",
+      "to": null,
+      "source_ref": "v2.2.2",
+      "source_selection": "Catalog version tag; exact installed build and user configuration are unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "260px default desktop width",
+          "contents": [
+            "The desktop rail uses bg-2 and a default width of 260px; history and controls depend on user data. https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/components/layout/Layout.tsx https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/styles/themes/default-color-scheme.css https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "center",
+          "size": "maximum 800px, 16px side padding",
+          "contents": [
+            "Centered greeting, assistant area, input card and project selector. https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/GuidPage.tsx https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/index.module.css https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+        },
+        {
+          "label": "Add files",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Skills",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "MCP",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx"
+        },
+        {
+          "label": "Work in a project",
+          "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Enter sends; Shift+Enter adds a line.",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/GuidPage.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f9fafb",
+          "panel": "#f2f3f5",
+          "header": null,
+          "border": "#e5e6eb",
+          "text": "#000000",
+          "muted": "#86909c",
+          "accent": "#7583b2"
+        },
+        "dark": null,
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/styles/themes/default-color-scheme.css"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "input_shape": "24px radius, white fallback, 12px padding",
+        "source": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/index.module.css"
+      },
+      "empty_state": "Hi, what's your plan for today?",
+      "distinctive": [
+        "The home action row places the model selector beside send and the project selector below. https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+        "The placeholder mentions slash commands. https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/conversation.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/index.module.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/GuidPage.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidActionRow.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/guid.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidModelSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/pages/guid/components/GuidWorkspaceFootnote.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Tagged UI source, English locale or layout."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/services/i18n/locales/en-US/common.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English Add files and other common control labels."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/components/layout/Layout.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Desktop rail width, application regions and theme classes."
+        },
+        {
+          "url": "https://github.com/iOfficeAI/AionUi/blob/v2.2.2/packages/desktop/src/renderer/styles/themes/default-color-scheme.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Default light theme color tokens."
+        }
+      ],
+      "confidence": 0.68
+    }
+  ]
+}

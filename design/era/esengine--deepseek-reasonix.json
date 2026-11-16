@@ -1,0 +1,250 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "esengine--deepseek-reasonix",
+  "versions": [
+    {
+      "id": "esengine--deepseek-reasonix-2026-05-0",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄で /model とモデル ID を入力する。"
+        ],
+        "steps_en": [
+          "Enter /model followed by a model ID in the prompt."
+        ],
+        "options": [
+          "deepseek-v4-flash",
+          "deepseek-v4-pro"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/i18n/EN.ts",
+            "kind": "source",
+            "date": null,
+            "shows": "English welcome text and /model command usage."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal",
+        "date_shown": "2026-05-04",
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/WelcomeBanner.tsx",
+            "kind": "source",
+            "date": null,
+            "shows": "Centered rounded card, vertical spacing, starter commands."
+          }
+        ]
+      },
+      "trend": "中央のウェルカムカードと青い入力欄。 (https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/WelcomeBanner.tsx)",
+      "trend_en": "A centered welcome card and blue prompt. (https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/WelcomeBanner.tsx)",
+      "sources": [
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/WelcomeBanner.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Centered rounded card, vertical spacing, starter commands."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/i18n/EN.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "English welcome text and /model command usage."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/PromptInput.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Prompt prefix, placeholder, terminal width and input."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/ChromeBar.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Top status line and cache display."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/theme/tokens.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Foreground and surface color tokens."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/slash.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Slash command routing."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/b24d2350eda19980dd33ea531e0dc1ac6e426b57/src/cli/ui/App.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "The welcome card appears only before a conversation or active turn."
+        }
+      ]
+    },
+    {
+      "id": "esengine--deepseek-reasonix-2026-10-1",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄で /model を入力する。",
+          "表示された一覧からモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the prompt.",
+          "Choose a model from the resulting list."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/modelpick.go",
+            "kind": "source",
+            "date": null,
+            "shows": "The /model command opens a picker or accepts a model reference."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal",
+        "date_shown": "2026-10-30",
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/chrome.go",
+            "kind": "source",
+            "date": null,
+            "shows": "Banner and full-width ruled composer."
+          }
+        ]
+      },
+      "trend": "会話の下に罫線付き入力欄と状態表示。 (https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/chrome.go)",
+      "trend_en": "A ruled composer and status line sit below the conversation. (https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/chrome.go)",
+      "sources": [
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/chrome.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Banner and full-width ruled composer."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/view.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript viewport and pinned lower region."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/footer.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Mode, state, model and effort footer positions."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/tui/modelpick.go",
+          "kind": "source",
+          "date": null,
+          "shows": "The /model command opens a picker or accepts a model reference."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/base/i18n/messages_en.go",
+          "kind": "source",
+          "date": null,
+          "shows": "English tip and status labels."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cbcc2ebb1e7464e41775583028f4c34247a1d7ba/internal/frontend/termrender/theme.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark theme color tokens."
+        }
+      ]
+    },
+    {
+      "id": "esengine--deepseek-reasonix-record",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄で /model を入力する。",
+          "表示された一覧からモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the prompt.",
+          "Choose a model from the resulting list."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/modelpick.go",
+            "kind": "source",
+            "date": null,
+            "shows": "The /model command opens a picker or accepts a model reference."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal",
+        "date_shown": "2026-11-12",
+        "sources": [
+          {
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/chrome.go",
+            "kind": "source",
+            "date": null,
+            "shows": "Banner and full-width ruled composer."
+          }
+        ]
+      },
+      "trend": "会話の下に罫線付き入力欄と状態表示。 (https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/chrome.go)",
+      "trend_en": "A ruled composer and status line sit below the conversation. (https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/chrome.go)",
+      "sources": [
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/chrome.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Banner and full-width ruled composer."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/view.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript viewport and pinned lower region."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/footer.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Mode, state, model and effort footer positions."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/tui/modelpick.go",
+          "kind": "source",
+          "date": null,
+          "shows": "The /model command opens a picker or accepts a model reference."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/base/i18n/messages_en.go",
+          "kind": "source",
+          "date": null,
+          "shows": "English tip and status labels."
+        },
+        {
+          "url": "https://github.com/esengine/DeepSeek-Reasonix/blob/cd20bb50be3b1eac5fad0648373a158c35767ae4/internal/frontend/termrender/theme.go",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark theme color tokens."
+        }
+      ]
+    }
+  ]
+}

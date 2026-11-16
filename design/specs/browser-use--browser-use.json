@@ -1,0 +1,1269 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "browser-use--browser-use",
+  "name": "Browser Use",
+  "vendor": "Browser Use",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "browser-use--browser-use-2024-11-0",
+      "from": "2024-11-06",
+      "to": "2026-02-26",
+      "regions": [
+        {
+          "name": "Agent logs",
+          "position": "Terminal stream",
+          "size": null,
+          "contents": [
+            "Starting task:, Step, current tabs:, current state, action, Task completed successfully, and Extracted content: are logged during a run. (https://github.com/browser-use/browser-use/blob/0.1.0/browser_use/agent/service.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No terminal model picker; Python Agent receives an llm object. (https://github.com/browser-use/browser-use/blob/0.1.0/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Task passed in Python; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/0.1.0/README.md)",
+        "assistant": "Agent emits step and action logs. (https://github.com/browser-use/browser-use/blob/0.1.0/browser_use/agent/service.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/0.1.0/browser_use/agent/service.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Agent run prints Starting task:, Step, current state, and action. (https://github.com/browser-use/browser-use/blob/0.1.0/browser_use/agent/service.py)",
+        "No startup composer is evidenced in this Python library example. (https://github.com/browser-use/browser-use/blob/0.1.0/README.md)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.1.0/browser_use/agent/service.py",
+          "kind": "source",
+          "date": "2024-11-06",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.1.0/README.md",
+          "kind": "source",
+          "date": "2024-11-06",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-02-1",
+      "from": "2026-02-26",
+      "to": "2026-03-25",
+      "regions": [
+        {
+          "name": "Resource links",
+          "position": "Below header",
+          "size": "Full width, auto height",
+          "contents": [
+            "Four links and two path labels. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Task input",
+          "position": "Bottom",
+          "size": "Full width, auto height",
+          "contents": [
+            "What would you like me to do on the web? and Enter your task... (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Runtime information",
+          "position": "Above input after task starts",
+          "size": "Two equal columns, followed by task panel",
+          "contents": [
+            "Browser and model logs are side by side; task log below; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Output logs",
+          "position": "Main area when enabled",
+          "size": "Three equal columns",
+          "contents": [
+            "Main output, events and CDP logs; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--model",
+          "where": "Launch option and config",
+          "purpose": "The --model startup option overrides config.model.name; runtime information displays LLM details. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Task input at bottom; Enter submits. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)",
+        "assistant": "Runtime panels are hidden on startup. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#121212",
+          "panel": "#1e1e1e",
+          "text": null,
+          "muted": null,
+          "accent": "#ffa62b",
+          "border": "#0178D4",
+          "user_bubble": null,
+          "foreground": "#e0e0e0"
+        },
+        "source": {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "note": "Textual 7.4.0 textual-dark default foreground, primary and accent. Background and surface fallbacks are in design.py; TEXTUAL_THEME can override the default. The $text token is contrast-derived; its exact final color is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": "Full-width Textual Input inside a bottom-docked bordered container. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+      },
+      "empty_state": "What would you like me to do on the web?",
+      "distinctive": [
+        "Bottom task prompt, link panel and path labels. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)",
+        "Runtime information and diagnostic columns start hidden. (https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.0/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-02-26",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.0/README.md",
+          "kind": "source",
+          "date": "2026-02-26",
+          "shows": "Tagged README and library usage."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.0/pyproject.toml",
+          "kind": "source",
+          "date": "2026-02-26",
+          "shows": "CLI dependency pins Textual 7.4.0."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "kind": "source",
+          "date": null,
+          "shows": "textual-dark primary, accent and foreground."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/design.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark background and surface fallback colors."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/constants.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Default theme is textual-dark unless overridden through TEXTUAL_THEME."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-03-2",
+      "from": "2026-03-25",
+      "to": "2026-04-02",
+      "regions": [
+        {
+          "name": "Resource links",
+          "position": "Below header",
+          "size": "Full width, auto height",
+          "contents": [
+            "Four links and two path labels. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Task input",
+          "position": "Bottom",
+          "size": "Full width, auto height",
+          "contents": [
+            "What would you like me to do on the web? and Enter your task... (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Runtime information",
+          "position": "Above input after task starts",
+          "size": "Two equal columns, followed by task panel",
+          "contents": [
+            "Browser and model logs are side by side; task log below; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Output logs",
+          "position": "Main area when enabled",
+          "size": "Three equal columns",
+          "contents": [
+            "Main output, events and CDP logs; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--model",
+          "where": "Launch option and config",
+          "purpose": "The --model startup option overrides config.model.name; runtime information displays LLM details. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Task input at bottom; Enter submits. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)",
+        "assistant": "Runtime panels are hidden on startup. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#121212",
+          "panel": "#1e1e1e",
+          "text": null,
+          "muted": null,
+          "accent": "#ffa62b",
+          "border": "#0178D4",
+          "user_bubble": null,
+          "foreground": "#e0e0e0"
+        },
+        "source": {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "note": "Textual 7.4.0 textual-dark default foreground, primary and accent. Background and surface fallbacks are in design.py; TEXTUAL_THEME can override the default. The $text token is contrast-derived; its exact final color is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": "Full-width Textual Input inside a bottom-docked bordered container. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+      },
+      "empty_state": "What would you like me to do on the web?",
+      "distinctive": [
+        "Bottom task prompt, link panel and path labels. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)",
+        "Runtime information and diagnostic columns start hidden. (https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.5/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-03-25",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.5/README.md",
+          "kind": "source",
+          "date": "2026-03-25",
+          "shows": "Tagged README and library usage."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.5/pyproject.toml",
+          "kind": "source",
+          "date": "2026-03-25",
+          "shows": "CLI dependency pins Textual 7.4.0."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "kind": "source",
+          "date": null,
+          "shows": "textual-dark primary, accent and foreground."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/design.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark background and surface fallback colors."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/constants.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Default theme is textual-dark unless overridden through TEXTUAL_THEME."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-04-3",
+      "from": "2026-04-02",
+      "to": "2026-05-26",
+      "regions": [
+        {
+          "name": "Resource links",
+          "position": "Below header",
+          "size": "Full width, auto height",
+          "contents": [
+            "Four links and two path labels. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Task input",
+          "position": "Bottom",
+          "size": "Full width, auto height",
+          "contents": [
+            "What would you like me to do on the web? and Enter your task... (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Runtime information",
+          "position": "Above input after task starts",
+          "size": "Two equal columns, followed by task panel",
+          "contents": [
+            "Browser and model logs are side by side; task log below; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Output logs",
+          "position": "Main area when enabled",
+          "size": "Three equal columns",
+          "contents": [
+            "Main output, events and CDP logs; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--model",
+          "where": "Launch option and config",
+          "purpose": "The --model startup option overrides config.model.name; runtime information displays LLM details. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Task input at bottom; Enter submits. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)",
+        "assistant": "Runtime panels are hidden on startup. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#121212",
+          "panel": "#1e1e1e",
+          "text": null,
+          "muted": null,
+          "accent": "#ffa62b",
+          "border": "#0178D4",
+          "user_bubble": null,
+          "foreground": "#e0e0e0"
+        },
+        "source": {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "note": "Textual 7.4.0 textual-dark default foreground, primary and accent. Background and surface fallbacks are in design.py; TEXTUAL_THEME can override the default. The $text token is contrast-derived; its exact final color is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": "Full-width Textual Input inside a bottom-docked bordered container. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+      },
+      "empty_state": "What would you like me to do on the web?",
+      "distinctive": [
+        "Bottom task prompt, link panel and path labels. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)",
+        "Runtime information and diagnostic columns start hidden. (https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.6/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-04-02",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.6/README.md",
+          "kind": "source",
+          "date": "2026-04-02",
+          "shows": "Tagged README and library usage."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.6/pyproject.toml",
+          "kind": "source",
+          "date": "2026-04-02",
+          "shows": "CLI dependency pins Textual 7.4.0."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "kind": "source",
+          "date": null,
+          "shows": "textual-dark primary, accent and foreground."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/design.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark background and surface fallback colors."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/constants.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Default theme is textual-dark unless overridden through TEXTUAL_THEME."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-05-4",
+      "from": "2026-05-26",
+      "to": "2026-06-12",
+      "regions": [
+        {
+          "name": "Resource links",
+          "position": "Below header",
+          "size": "Full width, auto height",
+          "contents": [
+            "Four links and two path labels. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Task input",
+          "position": "Bottom",
+          "size": "Full width, auto height",
+          "contents": [
+            "What would you like me to do on the web? and Enter your task... (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Runtime information",
+          "position": "Above input after task starts",
+          "size": "Two equal columns, followed by task panel",
+          "contents": [
+            "Browser and model logs are side by side; task log below; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Output logs",
+          "position": "Main area when enabled",
+          "size": "Three equal columns",
+          "contents": [
+            "Main output, events and CDP logs; hidden initially. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--model",
+          "where": "Launch option and config",
+          "purpose": "The --model startup option overrides config.model.name; runtime information displays LLM details. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Task input at bottom; Enter submits. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)",
+        "assistant": "Runtime panels are hidden on startup. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#121212",
+          "panel": "#1e1e1e",
+          "text": null,
+          "muted": null,
+          "accent": "#ffa62b",
+          "border": "#0178D4",
+          "user_bubble": null,
+          "foreground": "#e0e0e0"
+        },
+        "source": {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "note": "Textual 7.4.0 textual-dark default foreground, primary and accent. Background and surface fallbacks are in design.py; TEXTUAL_THEME can override the default. The $text token is contrast-derived; its exact final color is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": "Full-width Textual Input inside a bottom-docked bordered container. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+      },
+      "empty_state": "What would you like me to do on the web?",
+      "distinctive": [
+        "Bottom task prompt, link panel and path labels. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)",
+        "Runtime information and diagnostic columns start hidden. (https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.9/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-05-26",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.9/README.md",
+          "kind": "source",
+          "date": "2026-05-26",
+          "shows": "Tagged README and library usage."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.12.9/pyproject.toml",
+          "kind": "source",
+          "date": "2026-05-26",
+          "shows": "CLI dependency pins Textual 7.4.0."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "kind": "source",
+          "date": null,
+          "shows": "textual-dark primary, accent and foreground."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/design.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark background and surface fallback colors."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/constants.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Default theme is textual-dark unless overridden through TEXTUAL_THEME."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-06-5",
+      "from": "2026-06-12",
+      "to": "2026-07-27",
+      "regions": [
+        {
+          "name": "Resource links",
+          "position": "Below header",
+          "size": "Full width, auto height",
+          "contents": [
+            "Four links and two path labels. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Task input",
+          "position": "Bottom",
+          "size": "Full width, auto height",
+          "contents": [
+            "What would you like me to do on the web? and Enter your task... (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Runtime information",
+          "position": "Above input after task starts",
+          "size": "Two equal columns, followed by task panel",
+          "contents": [
+            "Browser and model logs are side by side; task log below; hidden initially. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+          ]
+        },
+        {
+          "name": "Output logs",
+          "position": "Main area when enabled",
+          "size": "Three equal columns",
+          "contents": [
+            "Main output, events and CDP logs; hidden initially. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--model",
+          "where": "Launch option and config",
+          "purpose": "The --model startup option overrides config.model.name; runtime information displays LLM details. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Task input at bottom; Enter submits. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)",
+        "assistant": "Runtime panels are hidden on startup. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#121212",
+          "panel": "#1e1e1e",
+          "text": null,
+          "muted": null,
+          "accent": "#ffa62b",
+          "border": "#0178D4",
+          "user_bubble": null,
+          "foreground": "#e0e0e0"
+        },
+        "source": {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "note": "Textual 7.4.0 textual-dark default foreground, primary and accent. Background and surface fallbacks are in design.py; TEXTUAL_THEME can override the default. The $text token is contrast-derived; its exact final color is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": "Full-width Textual Input inside a bottom-docked bordered container. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+      },
+      "empty_state": "What would you like me to do on the web?",
+      "distinctive": [
+        "Bottom task prompt, link panel and path labels. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)",
+        "Runtime information and diagnostic columns start hidden. (https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.2/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-06-12",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.2/README.md",
+          "kind": "source",
+          "date": "2026-06-12",
+          "shows": "Tagged README and library usage."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.2/pyproject.toml",
+          "kind": "source",
+          "date": "2026-06-12",
+          "shows": "CLI dependency pins Textual 7.4.0."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/theme.py",
+          "kind": "source",
+          "date": null,
+          "shows": "textual-dark primary, accent and foreground."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/design.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Dark background and surface fallback colors."
+        },
+        {
+          "url": "https://github.com/Textualize/textual/blob/v7.4.0/src/textual/constants.py",
+          "kind": "source",
+          "date": null,
+          "shows": "Default theme is textual-dark unless overridden through TEXTUAL_THEME."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-07-6",
+      "from": "2026-07-27",
+      "to": "2026-08-16",
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/0.13.7/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.7/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-07-27",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.7/README.md",
+          "kind": "source",
+          "date": "2026-07-27",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-08-7",
+      "from": "2026-08-16",
+      "to": "2026-09-04",
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/0.13.8/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.8/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-08-16",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.8/README.md",
+          "kind": "source",
+          "date": "2026-08-16",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-09-8",
+      "from": "2026-09-04",
+      "to": "2026-10-26",
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/0.13.9/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.9/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-09-04",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.9/README.md",
+          "kind": "source",
+          "date": "2026-09-04",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-10-9",
+      "from": "2026-10-26",
+      "to": "2026-11-10",
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/0.13.14/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.14/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-10-26",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/0.13.14/README.md",
+          "kind": "source",
+          "date": "2026-10-26",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-2026-11-10",
+      "from": "2026-11-10",
+      "to": "2026-11-14",
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/1.0.0/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.0/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-11-10",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.0/README.md",
+          "kind": "source",
+          "date": "2026-11-10",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "browser-use--browser-use-record",
+      "from": "2026-11-14",
+      "to": null,
+      "regions": [
+        {
+          "name": "CLI quickstart",
+          "position": "Terminal output",
+          "size": null,
+          "contents": [
+            "Welcome text, short helper names and commands. (https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "llm",
+          "where": "Python code",
+          "purpose": "No model picker in CLI quickstart; the Python library accepts an llm argument. (https://github.com/browser-use/browser-use/blob/1.0.5/README.md)"
+        }
+      ],
+      "conversation": {
+        "user": "Python is piped on stdin; the exhibit input is a museum control. (https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py)",
+        "assistant": "Quickstart prints helper and command guidance. (https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py",
+          "note": "Terminal colors are controlled externally; exact colors unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "Terminal cells; viewport dimensions unverified.",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A CLI quickstart lists Python helper names and commands. (https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py)",
+        "Feedback command appears in this version. (https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py)"
+      ],
+      "must_not_copy": [
+        "Logos, artwork, branded symbols and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.5/browser_use/cli.py",
+          "kind": "source",
+          "date": "2026-11-14",
+          "shows": "Tagged source for the reconstructed surface; date is the catalog boundary, not a claim about the commit date."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/1.0.5/README.md",
+          "kind": "source",
+          "date": "2026-11-14",
+          "shows": "Tagged README and library usage."
+        }
+      ],
+      "confidence": 0.85
+    }
+  ]
+}
