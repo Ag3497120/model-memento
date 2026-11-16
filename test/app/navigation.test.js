@@ -68,7 +68,9 @@ test('shared panel operates through the menu, palette, pages and keyboard in Jap
     assert.equal(panel.dataset.chromeView, 'preferences');
     const preferences = panel.querySelector('.dialog-body');
     assert.equal(preferences.querySelectorAll('input').length, 3);
-    assert.equal(preferences.querySelectorAll('select').length, 2);
+    assert.equal(preferences.querySelectorAll('select').length, 3);
+    const scheme = panel.querySelector('#chrome-scheme'); scheme.value = 'dark'; scheme.dispatch('change');
+    assert.equal(saved.get('museum.scheme'), '"dark"');
     assert.doesNotMatch(preferences.textContent, /下調べ|指示ファイル|番付|API/);
     const motion = panel.querySelector('#chrome-motion'); motion.value = 'reduce'; motion.dispatch('change');
     assert.equal(saved.get('museum.motion'), '"reduce"');

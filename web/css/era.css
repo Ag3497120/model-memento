@@ -222,3 +222,36 @@ dialog.era-interstitial { width: min(520px, calc(100vw - 24px)); height: auto; m
   .era-update-card .era-update-sources a { color: LinkText; }
   .era-update-rule, .era-update-rule::after { background: CanvasText; }
 }
+
+/* Model menu: opens at its control like a product dropdown (graphical editions only). */
+.surface .era-model-panel.era-model-menu {
+  width: min(288px, calc(100% - 16px)); max-height: min(70%, 460px); gap: 0; padding: 6px;
+  border-radius: 12px; line-height: 1.4; font-size: 14px;
+  box-shadow: 0 10px 32px color-mix(in srgb, #000 22%, transparent), 0 1px 3px color-mix(in srgb, #000 12%, transparent);
+  animation: era-model-menu-in .12s ease-out;
+}
+.surface .era-model-menu .era-model-body { gap: 0; }
+.surface .era-model-menu .era-model-options { gap: 1px; }
+.surface .era-model-menu .era-model-options button, .surface .era-model-menu [data-era-model-more] {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%;
+  min-height: 34px; padding: 7px 10px; border: 0; border-radius: 8px; background: transparent; color: var(--era-model-text); text-align: start; cursor: pointer;
+}
+.surface .era-model-menu .era-model-options button:is(:hover, :focus-visible), .surface .era-model-menu [data-era-model-more]:is(:hover, :focus-visible, [aria-expanded="true"]) {
+  background: color-mix(in srgb, var(--era-model-text) 8%, transparent); outline: 0;
+}
+.surface .era-model-menu .era-model-options button[aria-selected="true"] { color: var(--era-model-text); border: 0; }
+.era-model-menu .era-model-name { min-width: 0; overflow-wrap: anywhere; }
+.era-model-menu .era-model-check { flex: none; color: var(--era-model-accent); font-size: 13px; }
+.era-model-menu .era-model-divider { margin: 4px 6px; border: 0; border-top: 1px solid var(--era-model-border); }
+.surface .era-model-menu .era-model-about { margin: 4px 0 0; padding: 6px 10px 2px; border-top: 1px solid var(--era-model-border); font-size: 11px; line-height: 1.5; }
+.era-model-about > :not(summary) { margin: 6px 0 0; }
+.era-model-about .era-model-steps { padding-left: 18px; }
+.surface .era-model-panel.era-model-submenu { z-index: 21; width: min(260px, calc(100% - 16px)); }
+@keyframes era-model-menu-in { from { opacity: 0; transform: translateY(4px) scale(.98); } }
+@media (prefers-reduced-motion: reduce) { .surface .era-model-panel.era-model-menu { animation: none; } }
+
+/* Dark frame, chosen in Preferences (or the device setting). */
+:root[data-memento-scheme="dark"] .era-desktop { --desk: #1b1e20; --frame: #2a2e31; --frame-text: #e4e7e8; --frame-line: #4b5357; color-scheme: dark; }
+:root[data-memento-scheme="dark"] .era-accent { background: #2a2a27; color: #e6e4dc; border-color: #5c5d5880; }
+:root[data-memento-scheme="dark"] .era-accent-deprecation-notice { background: #3a2f26; }
+:root[data-memento-scheme="dark"] :is(.era-accent-sources a, .era-accent a) { color: #9ccad8; }

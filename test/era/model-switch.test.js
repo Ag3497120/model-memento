@@ -99,7 +99,8 @@ test('renderer palette, font and color scheme are resolved again when opening', 
   const controller = mount(); controller.open();
   assert.equal(panelIn(root).style.getPropertyValue('--era-model-bg'), '#112233');
   assert.equal(panelIn(root).style.getPropertyValue('--era-model-font'), 'monospace');
-  namedButton(panelIn(root), '閉じる').click(); background = '#334455'; controller.open();
+  panelIn(root).dispatch('keydown', { key: 'Escape' }); assert.equal(panelIn(root), null);
+  background = '#334455'; controller.open();
   assert.equal(panelIn(root).style.getPropertyValue('--era-model-bg'), '#334455'); controller.dispose();
 });
 test('CLI restart keeps the quit and restart stages inline and previews the selected command', t => {
@@ -143,4 +144,26 @@ test('a mapped catalogue alias keeps the selected historical label across rerend
   const { root, era } = setup(t, 'top-dropdown');
   mountModelSwitch(root, { era, currentModel: { name: 'Model B (snapshot)' }, currentName: 'Model B', onPick() {} });
   assert.equal(root.querySelector('select').value, 'Model B');
+});
+test('input-bar menu marks the current model and opens “More models” as a second level', t => {
+  const { root, slot, era, picked } = setup(t, 'input-bar', 'input-left');
+  era.model_switch.label = 'More models';
+  const controller = mountModelSwitch(root, { era, currentModel: { name: 'Model A' }, onPick: name => picked.push(name), more: ['Model A', 'Model C', 'Model D'] });
+  slot.querySelector('button').click();
+  const panel = panelIn(root);
+  assert.match(panel.className, /era-model-menu/);
+  assert.equal(namedButton(panel, '閉じる'), undefined);
+  const rows = panel.querySelectorAll('.era-model-options [data-era-model-option]');
+  assert.deepEqual(rows.map(row => row.getAttribute('data-era-model-option')), ['Model A', 'Model B']);
+  assert.match(rows[0].textContent, /✓/); assert.doesNotMatch(rows[1].textContent, /✓/);
+  const more = panel.querySelector('[data-era-model-more]');
+  more.click();
+  const submenu = root.querySelector('[data-era-model-submenu]');
+  assert.ok(submenu);
+  assert.deepEqual(submenu.querySelectorAll('[data-era-model-option]').map(row => row.getAttribute('data-era-model-option')), ['Model C', 'Model D']);
+  assert.match(panel.textContent, /同じ会社のモデルの記録から補った候補/);
+  submenu.querySelectorAll('[data-era-model-option]')[1].click();
+  assert.deepEqual(picked, ['Model D']);
+  assert.equal(panelIn(root), null); assert.equal(root.querySelector('[data-era-model-submenu]'), null);
+  controller.dispose();
 });

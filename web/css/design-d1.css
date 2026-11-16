@@ -247,6 +247,16 @@
 .surface.claude.fidelity-d2 .era-artifact-pane { background: #fff; border-color: var(--border); }
 .surface.claude.fidelity-d2 .era-artifact-head { background: #faf9f5; font: 13px/1.5 system-ui, sans-serif; padding: 12px 16px; }
 
+/* Claude web and desktop in dark appearance (the product offers light, dark and match-system).
+   Values are approximations, like the light palette above; chosen in Preferences or by the device. */
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2:not(.terminal) { --bg: #262624 !important; --panel: #1f1e1d !important; --text: #f5f4ee !important; --muted: #a6a39a !important; --border: #3e3e39 !important; --accent: #d97757 !important; color-scheme: dark; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2:not(.terminal) :is(.native-sidebar, .macos-vibrancy-sidebar) { background: #1f1e1d; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2 .empty-state h1 { color: #f5f4ee; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2 .composer { background: #30302e; box-shadow: 0 3px 12px #0000002e; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2 .composer .send { background: #c6613f; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2 .era-artifact-pane { background: #1f1e1d; }
+:root[data-memento-scheme="dark"] .surface.claude.fidelity-d2 .era-artifact-head { background: #262624; }
+
 /* Claude Code terminal: transcript rather than cards, thin rules around the prompt. */
 .surface.claude-code.fidelity-d2.terminal { --bg: #191919 !important; --panel: #242424 !important; --text: #e8e6df !important; --muted: #a19e96 !important; --border: #55534e !important; --accent: #d4977c !important; color-scheme: dark; background: var(--bg); color: var(--text); font: 13px/1.6 ui-monospace, monospace; padding: 24px; }
 .surface.claude-code.fidelity-d2.terminal .terminal-main { padding: 0; gap: 12px; }

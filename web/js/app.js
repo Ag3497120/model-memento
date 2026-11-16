@@ -18,7 +18,7 @@ import { askRelay } from './relay.js';
 import { mountNewsScreen } from './news/screen.js';
 import { eraForVersion, eraSources, sourceUrls, mementoForModel } from './era/data.js';
 import { renderEraFrame, unofficialNotice } from './era/frame.js';
-import { mountModelSwitch, modelOptions, supplementalOptions } from './era/model-switch.js';
+import { mountModelSwitch, modelOptions, supplementalOptions, makerOptions } from './era/model-switch.js';
 import { createEraTransition } from './era/transition.js';
 import { createAccentSession, mountAccents } from './era/accents.js';
 import { loadEntranceRecords, initialExhibit, exhibitIdentity } from './entrance/data.js';
@@ -32,6 +32,16 @@ const desktop = document.querySelector('#era-desktop');
 const windowShell = document.querySelector('#era-window-shell');
 const accentHost = document.querySelector('#era-accents');
 let motionPreference = safeLoad('motion', 'system');
+// Screen colours: follow the device, or a fixed light/dark choice. Recreated screens whose product
+// had a dark theme, the frame and Model Memento's own panels read <html data-memento-scheme>.
+let schemePreference = safeLoad('scheme', 'system');
+const darkQuery = globalThis.matchMedia?.('(prefers-color-scheme: dark)');
+function applyScheme() {
+  const dark = schemePreference === 'dark' || (schemePreference !== 'light' && Boolean(darkQuery?.matches));
+  if (globalThis.document?.documentElement) document.documentElement.dataset.mementoScheme = dark ? 'dark' : 'light';
+}
+applyScheme();
+darkQuery?.addEventListener?.('change', applyScheme);
 const eraTransition = createEraTransition({ host: document.querySelector('#era-transition'),
   reducedMotion: () => motionPreference === 'reduce' || Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches) });
 let sessionStorageForEra;
@@ -899,7 +909,8 @@ async function render() {
   const era = eraForVersion(eraIndex, state.tool, state.version);
   const supplemental = modelOptions(era).length ? null : supplementalOptions({ tool: state.tool, version: state.version, models: allModels });
   const currentName = (supplemental?.names?.length ? supplemental.names : modelOptions(era)).find(name => state.model && modelFits(state.model, { ...state.version, available: [name] }));
-  modelControl = mountModelSwitch(surface, { era, currentModel: state.model, currentName, onPick: pickNative, supplemental });
+  const more = makerOptions({ tool: state.tool, version: state.version, models: allModels });
+  modelControl = mountModelSwitch(surface, { era, currentModel: state.model, currentName: currentName || state.model?.name, onPick: pickNative, supplemental, more });
   accentControl = mountAccents(surface, { era, host: accentHost, session: accentSession, messageCount: state.messages.filter(message => message.role === 'user').length });
   if (state.personaPlay) main.prepend(el('p', { class: 'notice', role: 'status' }, tr(`【再現】${state.model.name} の話し方を別の AI で再現しています。`, `[Recreation] Another AI is recreating the speaking style of ${state.model.name}.`)));
   for (const message of state.messages) appendMessage(message);
@@ -1088,8 +1099,16 @@ function preferencesPanel(body) {
     el('option', { value: 'reduce' }, tr('動きを減らす', 'Reduce motion')));
   motion.value = motionPreference === 'reduce' ? 'reduce' : 'system';
   motion.addEventListener('change', () => { motionPreference = motion.value; safeSave('motion', motionPreference); eraTransition.cancel(); renderDesktop(); });
+  const scheme = el('select', { id: 'chrome-scheme' },
+    el('option', { value: 'system' }, tr('端末の設定に合わせる', 'Use device preference')),
+    el('option', { value: 'light' }, tr('ライト', 'Light')),
+    el('option', { value: 'dark' }, tr('ダーク', 'Dark')));
+  scheme.value = ['light', 'dark'].includes(schemePreference) ? schemePreference : 'system';
+  scheme.addEventListener('change', () => { schemePreference = scheme.value; safeSave('scheme', schemePreference); applyScheme(); });
   body.append(
     el('label', { class: 'chrome-field', for: 'chrome-language' }, tr('表示言語', 'Language'), language),
+    el('label', { class: 'chrome-field', for: 'chrome-scheme' }, tr('画面の色', 'Appearance'), scheme),
+    el('p', { class: 'chrome-muted' }, tr('ダークの配色が記録にある再現画面（Claude など）と、Model Memento の枠に効きます。', 'Applies to Model Memento’s frame and to recreated screens whose product had a dark theme (such as Claude).')),
     el('label', { class: 'check-label', for: 'chrome-lock-screen' }, lockScreen, tr('モデルを替えても画面を固定する', 'Lock the screen when changing models')),
     el('label', { class: 'check-label', for: 'chrome-lock-model' }, lockModel, tr('道具を替えてもモデルを固定する', 'Lock the model when changing tools')),
     el('label', { class: 'check-label', for: 'chrome-menu-visible' }, menuVisible, tr('メニューバーを表示する', 'Show the menu bar')),

@@ -67,3 +67,19 @@
   .memento-current-date { flex-basis: 130px; }
   .memento-entrance-note { padding-block: 0; }
 }
+
+/* Dark appearance for Model Memento's own controls (Preferences → Appearance, or the device). */
+:root[data-memento-scheme="dark"] :is(.memento-timeline, .memento-entrance-note, .surface .memento-questions, .coming-soon-card) {
+  color: #e2e9e7; background: #1f2624; color-scheme: dark;
+}
+:root[data-memento-scheme="dark"] .memento-timeline { border-bottom-color: #3d4a47; }
+:root[data-memento-scheme="dark"] :is(.memento-timeline, .memento-entrance-note, .surface .memento-questions) button { color: #e2e9e7; border-color: #4a5855; }
+:root[data-memento-scheme="dark"] :is(.memento-timeline, .surface .memento-questions) button:hover { background: #2c3734; }
+:root[data-memento-scheme="dark"] .memento-exhibits [aria-pressed="true"] { border-color: #8fc9b8; background: #2b3a35; }
+:root[data-memento-scheme="dark"] :is(.memento-exhibits > small, .memento-current-date > span, .surface .memento-questions small) { color: #a9b8b4; }
+:root[data-memento-scheme="dark"] .surface .memento-questions { border-color: #3d4a47; }
+:root[data-memento-scheme="dark"] .surface .memento-questions p { color: #c9d4d1; }
+:root[data-memento-scheme="dark"] .memento-time-track input { accent-color: #8fc9b8; }
+:root[data-memento-scheme="dark"] :is(.memento-timeline, .memento-entrance-note, .surface .memento-questions) :focus-visible { outline-color: #8fc9b8; }
+:root[data-memento-scheme="dark"] .answer-text > aside { border-inline-start-color: #5d716c; }
+:root[data-memento-scheme="dark"] .coming-soon-card { border-color: #5d6f6b; }
