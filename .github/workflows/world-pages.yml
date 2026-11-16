@@ -41,6 +41,8 @@ jobs:
       # 合計ではなく各登録先の上限。規約で禁止された登録先はモジュール側で停止する。
       WORLD_REQUEST_BUDGET: ${{ inputs.mode == 'full' && '10000' || '20' }}
       WORLD_TOOLS_BUDGET: '20'
+      # 初回だけ: 公開サイトが world/ に 404 ではなく 503 を返すことがあるため、明示したときだけ新しい索引を作る。
+      WORLD_BOOTSTRAP: ${{ vars.WORLD_BOOTSTRAP }}
     steps:
       - name: ソースを読む
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -152,7 +154,7 @@ jobs:
               state = cached; source = 'cache';
             } catch {
               // A network failure must not erase an established index. A genuinely absent manifest may create the first index.
-              if (status !== 404) throw new Error('前回の一覧も予備も読めません。公開URLを確認し、通信障害の場合は再実行してください。');
+              if (status !== 404 && process.env.WORLD_BOOTSTRAP !== '1') throw new Error('前回の一覧も予備も読めません。公開URLを確認し、通信障害の場合は再実行してください。初回だけはリポジトリ変数 WORLD_BOOTSTRAP=1 で新しく作れます。');
               manifest = null; source = 'bootstrap';
             }
           }
