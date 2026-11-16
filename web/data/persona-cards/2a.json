@@ -17,7 +17,8 @@
           "vendor": "OpenAI"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -35,7 +36,8 @@
           "vendor": "OpenAI"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -53,7 +55,8 @@
           "release": "2024-08-06"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -71,7 +74,8 @@
           "specs.knowledge_cutoff": "2023-10"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -80,16 +84,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gpt-4o-api-2024-08-06-2024-11-20",
         "q": "コンテキスト長は？",
-        "a_ja": "私の一度に扱える文章の長さの上限は8,192トークン（文章を数える単位）と記録されています。",
+        "a_ja": "私の一度に扱える文章の長さの上限は128,000トークン（文章を数える単位）と記録されています。",
         "kind": "self_context",
         "fact_keys": [
           "specs.context_tokens"
         ],
         "fact_values": {
-          "specs.context_tokens": 8192
+          "specs.context_tokens": 128000
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -98,16 +103,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gpt-4o-api-2024-08-06-2024-11-20",
         "q": "一度に出せる長さは？",
-        "a_ja": "私の一度に返せる文章の長さの上限は4,096トークン（文章を数える単位）と記録されています。",
+        "a_ja": "私の一度に返せる文章の長さの上限は16,384トークン（文章を数える単位）と記録されています。",
         "kind": "self_output",
         "fact_keys": [
           "specs.max_output_tokens"
         ],
         "fact_values": {
-          "specs.max_output_tokens": 4096
+          "specs.max_output_tokens": 16384
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -185,7 +191,8 @@
           "specs.languages": "Strong multilingual"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -233,7 +240,8 @@
           "family": "OpenAI"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -251,7 +259,8 @@
           "status": "deprecated"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -284,16 +293,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gpt-4o-api-2024-08-06-2024-11-20",
         "q": "What is your context window?",
-        "a_ja": "私の一度に扱える文章の長さの上限は8,192トークン（文章を数える単位）と記録されています。",
+        "a_ja": "私の一度に扱える文章の長さの上限は128,000トークン（文章を数える単位）と記録されています。",
         "kind": "self_context",
         "fact_keys": [
           "specs.context_tokens"
         ],
         "fact_values": {
-          "specs.context_tokens": 8192
+          "specs.context_tokens": 128000
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -311,7 +321,8 @@
           "release": "2024-08-06"
         },
         "sources": [
-          "https://developers.openai.com/api/docs/deprecations"
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/guides/conversation-state"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -333,7 +344,9 @@
           "vendor": "Anthropic"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -351,7 +364,9 @@
           "vendor": "Anthropic"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -369,7 +384,9 @@
           "release": "2026-09-28"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -387,7 +404,8 @@
           "specs.knowledge_cutoff": "2026-06"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -405,7 +423,9 @@
           "specs.context_tokens": 1000000
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -423,7 +443,9 @@
           "specs.max_output_tokens": 128000
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -443,7 +465,9 @@
           "cost.output": 10
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -465,7 +489,9 @@
           ]
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -474,27 +500,16 @@
         "schema": "memento.persona-card.v1",
         "model_id": "claude-sonnet-5-5",
         "q": "得意なことは？",
-        "a_ja": "私の得意なことは記録では確認できません。提供元の案内は公式の開発者向け窓口 https://platform.claude.com/docs/en/api/overviewで確認してください。",
-        "kind": "unknown",
+        "a_ja": "私の得意なこととして、Anthropic highlights well-scoped tasks, bug fixes and document creationという記録があります。",
+        "kind": "self_strengths",
         "fact_keys": [
-          "links.0"
+          "persona.typical_strengths.0"
         ],
         "fact_values": {
-          "links.0": {
-            "url": "https://platform.claude.com/docs/en/api/overview",
-            "label": "公式の開発者向け窓口",
-            "sources": [
-              "https://platform.claude.com/docs/en/api/overview",
-              "https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript",
-              "https://platform.claude.com/docs/en/models/overview"
-            ],
-            "availability": "unverified"
-          }
+          "persona.typical_strengths.0": "Anthropic highlights well-scoped tasks, bug fixes and document creation."
         },
         "sources": [
-          "https://platform.claude.com/docs/en/api/overview",
-          "https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript",
-          "https://platform.claude.com/docs/en/models/overview"
+          "https://www.anthropic.com/claude-sonnet-5-5"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -570,7 +585,9 @@
           "specs.languages": "Multilingual"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -591,6 +608,7 @@
         },
         "sources": [
           "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
           "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
@@ -638,7 +656,9 @@
           "family": "claude-sonnet"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -656,7 +676,8 @@
           "status": "alive"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -715,7 +736,9 @@
           "specs.context_tokens": 1000000
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -733,7 +756,9 @@
           "release": "2026-09-28"
         },
         "sources": [
-          "https://www.anthropic.com/"
+          "https://www.anthropic.com/",
+          "https://platform.claude.com/docs/en/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true

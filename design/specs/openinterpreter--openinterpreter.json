@@ -1,0 +1,1189 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openinterpreter--openinterpreter",
+  "name": "Open Interpreter",
+  "vendor": "Open Interpreter",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "openinterpreter--openinterpreter-2023-08-0",
+      "from": "2023-08-11",
+      "to": "2024-08-29",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "A terminal transcript with CLI help, followed by the conditional approval notice and > input. The terminal determines width. https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat with Open Interpreter.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py"
+        },
+        {
+          "label": "-y, --yes",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py"
+        },
+        {
+          "label": "-f, --fast",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py"
+        },
+        {
+          "label": "-l, --local",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py"
+        },
+        {
+          "label": "--debug",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py"
+        },
+        {
+          "label": "Open Interpreter will require approval before running code.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py"
+        },
+        {
+          "label": "Use interpreter -y to bypass this.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py"
+        },
+        {
+          "label": "Press CTRL-C to exit.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py"
+        },
+        {
+          "label": ">",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py"
+        }
+      ],
+      "conversation": {
+        "user": "> input (https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#272722",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "panel": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/code_block.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal prompt"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A terminal transcript with CLI help, followed by the conditional approval notice and > input. The terminal determines width. https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py",
+        "Code panel #272722 and output panel #3b3b37 with #FFFFFF text; not the terminal background. https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/code_block.py"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py",
+          "kind": "repository",
+          "date": "2023-08-11",
+          "shows": "CLI help and -f model shortcut"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py",
+          "kind": "repository",
+          "date": "2023-08-11",
+          "shows": "conditional approval notice and > input"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/code_block.py",
+          "kind": "repository",
+          "date": "2023-08-11",
+          "shows": "code and output panel colors"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-08-1",
+      "from": "2024-08-29",
+      "to": "2024-09-15",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "A terminal transcript with the conditional approval notice, followed by %help output and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available Commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%% [commands]",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%reset",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%help",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%info",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%jupyter",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "Open Interpreter will require approval before running code.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Use interpreter -y to bypass this.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Press CTRL-C to exit.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": ">",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py"
+        }
+      ],
+      "conversation": {
+        "user": "> input (https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#272722",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "panel": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/components/code_block.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal prompt"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A terminal transcript after %help, the conditional approval notice and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py",
+        "Code panel #272722 and output panel #3b3b37 with #FFFFFF text; not the terminal background. https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/components/code_block.py"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-08-29",
+          "shows": "conditional approval notice and > input"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py",
+          "kind": "repository",
+          "date": "2024-08-29",
+          "shows": "%help command output"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/start_terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-08-29",
+          "shows": "--model flag"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/components/code_block.py",
+          "kind": "repository",
+          "date": "2024-08-29",
+          "shows": "code and output panel colors"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-09-2",
+      "from": "2024-09-15",
+      "to": "2024-10-24",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "A terminal transcript with the conditional approval notice, followed by %help output and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available Commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%% [commands]",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%reset",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%help",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%info",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%jupyter",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "Open Interpreter will require approval before running code.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Use interpreter -y to bypass this.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Press CTRL-C to exit.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": ">",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py"
+        }
+      ],
+      "conversation": {
+        "user": "> input (https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#272722",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "panel": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/components/code_block.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal prompt"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A terminal transcript after %help, the conditional approval notice and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py",
+        "Code panel #272722 and output panel #3b3b37 with #FFFFFF text; not the terminal background. https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/components/code_block.py"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-09-15",
+          "shows": "conditional approval notice and > input"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py",
+          "kind": "repository",
+          "date": "2024-09-15",
+          "shows": "%help command output"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/start_terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-09-15",
+          "shows": "--model flag"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/components/code_block.py",
+          "kind": "repository",
+          "date": "2024-09-15",
+          "shows": "code and output panel colors"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-10-3",
+      "from": "2024-10-24",
+      "to": "2026-06-20",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "A terminal transcript with the conditional approval notice, followed by %help output and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available Commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%% [commands]",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%reset",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%help",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%info",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "%jupyter",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py"
+        },
+        {
+          "label": "Open Interpreter will require approval before running code.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Use interpreter -y to bypass this.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": "Press CTRL-C to exit.",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py"
+        },
+        {
+          "label": ">",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py"
+        }
+      ],
+      "conversation": {
+        "user": "> input (https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#272722",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "panel": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/components/code_block.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal prompt"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "A terminal transcript after %help, the conditional approval notice and > input; output flows vertically, without a sidebar. Terminal width is environment-dependent. https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py",
+        "Code panel #272722 and output panel #3b3b37 with #FFFFFF text; not the terminal background. https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/components/code_block.py"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-10-24",
+          "shows": "conditional approval notice and > input"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py",
+          "kind": "repository",
+          "date": "2024-10-24",
+          "shows": "%help command output"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/start_terminal_interface.py",
+          "kind": "repository",
+          "date": "2024-10-24",
+          "shows": "--model flag"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/components/code_block.py",
+          "kind": "repository",
+          "date": "2024-10-24",
+          "shows": "code and output panel colors"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-06-4",
+      "from": "2026-06-20",
+      "to": "2026-07-18",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "The Open Interpreter session header is a plain indented title; first-session command hints follow, with a composer below. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "The Open Interpreter session header is a plain indented title; first-session command hints follow, with a composer below. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-06-20",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-06-20",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-06-20",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-07-5",
+      "from": "2026-07-18",
+      "to": "2026-08-20",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "The Open Interpreter session header is a plain indented title; first-session command hints follow, with a composer below. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "The Open Interpreter session header is a plain indented title; first-session command hints follow, with a composer below. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-07-18",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-07-18",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-07-18",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-08-6",
+      "from": "2026-08-20",
+      "to": "2026-09-30",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "56 terminal columns maximum for header inner width",
+          "contents": [
+            "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-08-20",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-08-20",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-08-20",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-09-7",
+      "from": "2026-09-30",
+      "to": "2026-10-31",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "56 terminal columns maximum for header inner width",
+          "contents": [
+            "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-09-30",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-09-30",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-09-30",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-10-8",
+      "from": "2026-10-31",
+      "to": "2026-11-11",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "56 terminal columns maximum for header inner width",
+          "contents": [
+            "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-10-31",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-10-31",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-10-31",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openinterpreter--openinterpreter-record",
+      "from": "2026-11-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "56 terminal columns maximum for header inner width",
+          "contents": [
+            "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/chat_composer.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "To get started, describe a task or try one of these commands:",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/init",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/status",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/permissions",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/model",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "/review",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+        },
+        {
+          "label": "? for shortcuts",
+          "source": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap"
+        }
+      ],
+      "conversation": {
+        "user": "Terminal composer (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/chat_composer.rs)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal composer"
+      },
+      "empty_state": "First-session command hints; placeholder for Open Interpreter is unverified.",
+      "distinctive": [
+        "A bordered session header displays model and directory; its maximum inner width is 56 terminal columns. First-session command hints follow above the composer. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "Model selection is via /model. https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "repository",
+          "date": "2026-11-11",
+          "shows": "session heading and first-session commands"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "repository",
+          "date": "2026-11-11",
+          "shows": "composer behavior"
+        },
+        {
+          "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+          "kind": "repository",
+          "date": "2026-11-11",
+          "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+        }
+      ],
+      "confidence": 0.75
+    }
+  ]
+}

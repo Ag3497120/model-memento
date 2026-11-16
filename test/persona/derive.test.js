@@ -89,8 +89,9 @@ test("family heuristics are labelled inherited, with lower confidence and no inv
   assert.equal(p.traits.interface.value, null);
   assert.equal(p.traits.knowledge_cutoff.value, null);
   assert.equal(derivePersona({ id: "meta-llama/unfamiliar", a: "meta-llama" }).resolution.method, "author");
-  assert.equal(derivePersona("gpt-3.5-turbo").resolution.ancestor, "openai:gpt-3.5-turbo-0301");
-  assert.equal(derivePersona("gpt-4o").resolution.kind, "family-default");
+  // These IDs now have direct curated records, so they no longer use a family guess.
+  assert.equal(derivePersona("gpt-3.5-turbo").resolution.kind, "researched");
+  assert.equal(derivePersona("gpt-4o").resolution.kind, "researched");
 });
 test("unknown parents can still identify a family without claiming a verified relationship", () => {
   const p = derivePersona({ id: "lab/custom", tags: ["base_model:lab/llama-future"] });

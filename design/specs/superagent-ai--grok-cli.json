@@ -1,0 +1,1035 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "superagent-ai--grok-cli",
+  "name": "grok-cli",
+  "vendor": "superagent-ai",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "superagent-ai--grok-cli-2025-07-0",
+      "from": "2025-07-21",
+      "to": "2025-07-31",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": null,
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "gray",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "4項目のヒントと灰色の入力枠。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Four tips and a gray input border. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-07-21",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-07-21",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-07-21",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-07-21",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.1/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-07-21",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2025-07-1",
+      "from": "2025-07-31",
+      "to": "2025-08-05",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": null,
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "gray",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "5項目のヒントと入力欄下の自動編集・モデル表示。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Five tips and auto-edit and model status below the input. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-07-31",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-07-31",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-07-31",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-07-31",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.18/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-07-31",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2025-08-2",
+      "from": "2025-08-05",
+      "to": "2025-09-26",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": "Ask me anything...",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "blue",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "5項目のヒント、青い入力枠、Ask me anything... と入力欄下の状態行。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Five tips, a blue input border, Ask me anything... and a status row. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-08-05",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-08-05",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-08-05",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-08-05",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.23/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-08-05",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2025-09-3",
+      "from": "2025-09-26",
+      "to": "2025-10-01",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": "Ask me anything...",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "blue",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "5項目のヒント、青い入力枠、Ask me anything... と入力欄下の状態行。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Five tips, a blue input border, Ask me anything... and a status row. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-09-26",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-09-26",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-09-26",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-09-26",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.30/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-09-26",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2025-10-4",
+      "from": "2025-10-01",
+      "to": "2025-11-27",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": "Ask me anything...",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "blue",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "5項目のヒント、青い入力枠、Ask me anything... と入力欄下の状態行。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Five tips, a blue input border, Ask me anything... and a status row. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-10-01",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-10-01",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-10-01",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-10-01",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.33/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-10-01",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2025-11-5",
+      "from": "2025-11-27",
+      "to": "2026-03-26",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "1 or 2 terminal columns horizontal padding; flexible height",
+          "contents": [
+            "縦方向の端末画面。開始時のヒント、案内、会話履歴、角の丸い入力枠を順に置く。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-interface.tsx)"
+          ],
+          "contents_en": [
+            "A vertical terminal contains starting tips, instructions, conversation history and a rounded input border in that order. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-interface.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/models",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/hooks/use-input-handler.ts"
+        },
+        {
+          "name": "prompt",
+          "label": "Ask me anything...",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-input.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "gray",
+          "accent": "cyan",
+          "border": "blue",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-input.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded terminal border"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "5項目のヒント、青い入力枠、Ask me anything... と入力欄下の状態行。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-interface.tsx)",
+        "端末の色名は cyan、gray、yellow、blue。実際のRGB値は端末設定による。 (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-input.tsx)"
+      ],
+      "distinctive_en": [
+        "Five tips, a blue input border, Ask me anything... and a status row. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-interface.tsx)",
+        "Terminal color names include cyan, gray, yellow and blue; actual RGB values depend on the terminal. (https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-input.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-interface.tsx",
+          "kind": "repository",
+          "date": "2025-11-27",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/chat-input.tsx",
+          "kind": "repository",
+          "date": "2025-11-27",
+          "shows": "Input border, prompt and placeholder."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/hooks/use-input-handler.ts",
+          "kind": "repository",
+          "date": "2025-11-27",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/ui/components/model-selection.tsx",
+          "kind": "repository",
+          "date": "2025-11-27",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/%40vibe-kit%2Fgrok-cli%400.0.34/src/agent/grok-agent.ts",
+          "kind": "repository",
+          "date": "2025-11-27",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2026-03-6",
+      "from": "2026-03-26",
+      "to": "2026-04-17",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "75 columns maximum for centered composer; flexible height",
+          "contents": [
+            "中央に最大75文字幅の入力欄があり、入力部分は上下1行・左右2文字分の余白、下に1行のモデルとキー操作がある。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx)"
+          ],
+          "contents_en": [
+            "A centered composer is at most 75 terminal columns wide. Its input has one row of vertical and two columns of horizontal padding; a one-row model and shortcut strip follows. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/model",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx"
+        },
+        {
+          "name": "prompt",
+          "label": "What are we building?",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#111111",
+          "text": "#e0e0e0",
+          "muted": "#666666",
+          "accent": "#5c9cf5",
+          "border": "#333333",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rectangular terminal panel"
+      },
+      "empty_state": "What are we building?",
+      "distinctive": [
+        "中央の暗い入力欄とモデル・キー操作の行。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx)",
+        "色は黒、#111111、#1a1a1a、#e0e0e0、#666666、#5c9cf5。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/theme.ts)"
+      ],
+      "distinctive_en": [
+        "Centered dark prompt and a model and keyboard-hint strip. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx)",
+        "Colors are black, #111111, #1a1a1a, #e0e0e0, #666666 and #5c9cf5. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/theme.ts)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-03-26",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/theme.ts",
+          "kind": "repository",
+          "date": "2026-03-26",
+          "shows": "Dark theme color values."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-03-26",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-03-26",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.0/src/grok/models.ts",
+          "kind": "repository",
+          "date": "2026-03-26",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-2026-04-7",
+      "from": "2026-04-17",
+      "to": "2026-05-15",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "75 columns maximum for centered composer; flexible height",
+          "contents": [
+            "中央に最大75文字幅の入力欄があり、入力部分は上下1行・左右2文字分の余白、下に1行のモデルとキー操作がある。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx)"
+          ],
+          "contents_en": [
+            "A centered composer is at most 75 terminal columns wide. Its input has one row of vertical and two columns of horizontal padding; a one-row model and shortcut strip follows. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/model",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx"
+        },
+        {
+          "name": "prompt",
+          "label": "What are we building?",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#111111",
+          "text": "#e0e0e0",
+          "muted": "#666666",
+          "accent": "#5c9cf5",
+          "border": "#333333",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rectangular terminal panel"
+      },
+      "empty_state": "What are we building?",
+      "distinctive": [
+        "中央の暗い入力欄に @ files の案内が加わる。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx)",
+        "色は黒、#111111、#1a1a1a、#e0e0e0、#666666、#5c9cf5。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/theme.ts)"
+      ],
+      "distinctive_en": [
+        "The centered dark prompt adds the @ files hint. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx)",
+        "Colors are black, #111111, #1a1a1a, #e0e0e0, #666666 and #5c9cf5. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/theme.ts)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-04-17",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/theme.ts",
+          "kind": "repository",
+          "date": "2026-04-17",
+          "shows": "Dark theme color values."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-04-17",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-04-17",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.5/src/grok/models.ts",
+          "kind": "repository",
+          "date": "2026-04-17",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "superagent-ai--grok-cli-record",
+      "from": "2026-05-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "main",
+          "size": "75 columns maximum for centered composer; flexible height",
+          "contents": [
+            "中央に最大75文字幅の入力欄があり、入力部分は上下1行・左右2文字分の余白、下に1行のモデルとキー操作がある。サイドバーはない。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx)"
+          ],
+          "contents_en": [
+            "A centered composer is at most 75 terminal columns wide. Its input has one row of vertical and two columns of horizontal padding; a one-row model and shortcut strip follows. No sidebar. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model selection",
+          "label": "/model",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx"
+        },
+        {
+          "name": "prompt",
+          "label": "What are we building?",
+          "source": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#111111",
+          "text": "#e0e0e0",
+          "muted": "#666666",
+          "accent": "#5c9cf5",
+          "border": "#333333",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rectangular terminal panel"
+      },
+      "empty_state": "What are we building?",
+      "distinctive": [
+        "@ files の案内があり、初期モデルは Grok 4.3。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx)",
+        "色は黒、#111111、#1a1a1a、#e0e0e0、#666666、#5c9cf5。 (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/theme.ts)"
+      ],
+      "distinctive_en": [
+        "The @ files hint remains and the default model is Grok 4.3. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx)",
+        "Colors are black, #111111, #1a1a1a, #e0e0e0, #666666 and #5c9cf5. (https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/theme.ts)"
+      ],
+      "must_not_copy": [
+        "logos, wordmarks, artwork, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-05-15",
+          "shows": "Screen layout, strings and controls at the catalog release tag."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/theme.ts",
+          "kind": "repository",
+          "date": "2026-05-15",
+          "shows": "Dark theme color values."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-05-15",
+          "shows": "Slash command for model selection."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/ui/app.tsx",
+          "kind": "repository",
+          "date": "2026-05-15",
+          "shows": "Model picker and navigation."
+        },
+        {
+          "url": "https://github.com/superagent-ai/grok-cli/blob/grok-dev%401.1.7/src/grok/models.ts",
+          "kind": "repository",
+          "date": "2026-05-15",
+          "shows": "Model definitions or fallback model."
+        }
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

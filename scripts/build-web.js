@@ -381,6 +381,9 @@ for (const [sourcePath, shard] of detailShards) await fs.writeFile(path.join(out
 for (const [id, spec] of layoutSnapshots) await fs.writeFile(path.join(out, 'layouts', `${id}.json`), JSON.stringify(spec));
 // Profiles are resolved without importing server.js or writing to the user's archive.
 const { resolveVeraProfile } = await import('../web/lib/vera.js');
+const { applyCuratedOverride, applyClosedOverrides, filterModelSources } = await import('../lib/model-evidence.js');
+const sourceDenylist = await read(path.join(root, 'data/curated/source-denylist.json'));
+if (!Array.isArray(sourceDenylist?.domains)) throw new TypeError('source denylist must contain domains');
 const archived = await read(path.join(root, 'data/curated/models-base.json'), []);
 const roster = (await read(path.join(root, 'data/curated/roster.json'), { models: [] })).models || [];
 const merged = new Map(archived.map(m => [m.id, m]));
@@ -393,13 +396,7 @@ const modelUpdates2026 = await read(path.join(root, 'data/curated/models-updates
 for (const [id, patch] of Object.entries(modelUpdates2026.curated_updates || {})) {
   const cur = merged.get(id);
   if (!cur) continue;
-  if (patch.lifecycle) cur.lifecycle = patch.lifecycle;
-  if (patch.specs) cur.specs = { ...(cur.specs || {}), ...patch.specs };
-  if (patch.summary) cur.summary = patch.summary;
-  if (patch.sources?.length) {
-    const seenUrls = new Set((cur.evidence || []).map(e => e.url).filter(Boolean));
-    cur.evidence = [...(cur.evidence || []), ...patch.sources.filter(u => !seenUrls.has(u)).map(url => ({ url, title: url }))];
-  }
+  merged.set(id, applyCuratedOverride(cur, patch));
 }
 for (const nm of modelUpdates2026.new_curated_models || []) {
   if (!nm?.id) continue;
@@ -407,8 +404,8 @@ for (const nm of modelUpdates2026.new_curated_models || []) {
   merged.set(nm.id, cur ? { ...cur, ...nm, specs: { ...(cur.specs || {}), ...(nm.specs || {}) } } : nm);
 }
 const autoSyncModels = await read(path.join(root, 'data/auto-sync/models.json'), { closed_additions: [], hf_trending: [], updates: {} });
-const raw = [...merged.values()];
-const models = raw.map(m => ({ ...resolveVeraProfile(m, { knownModels: raw }), release: m.release || m.lifecycle?.events?.find(e => e.type === 'released')?.date || m.lifecycle?.events?.[0]?.date || null, recordedSpecs: m.specs || {} }));
+const raw = [...merged.values()].map(m => filterModelSources(m, sourceDenylist.domains));
+const models = raw.map(m => filterModelSources({ ...resolveVeraProfile(m, { knownModels: raw }), release: m.release || m.lifecycle?.events?.find(e => e.type === 'released')?.date || m.lifecycle?.events?.[0]?.date || null, recordedSpecs: m.specs || {}, fact_sources: m.fact_sources, ...(m.summary_en ? { summary_en: m.summary_en } : {}) }, sourceDenylist.domains));
 // Use closedCatalog with an isolated cache so all build writes stay in allowed paths.
 const isolated = offline ? null : await fs.mkdtemp(path.join(os.tmpdir(), 'memento-web-'));
 let closed, catalogFallback = false;
@@ -453,22 +450,23 @@ if (cachedModelsDev && Array.isArray(closed)) {
       if (!prev2 || (!prev2.description && entry.description) || (!prev2.cost && entry.cost)) metaIndex.set(k2, entry);
     }
   }
-  const overrides = modelUpdates2026.closed_overrides || {};
   closed = closed.map(m => {
     const rawMeta = metaIndex.get(String(m.id || '').toLowerCase()) || metaIndex.get(shortKey(m.id)) || metaIndex.get(String(m.key || '').toLowerCase()) || null;
-    const ov = overrides[String(m.id || '').toLowerCase()] || overrides[String(m.key || '').toLowerCase()] || null;
     return {
       ...m,
       description: rawMeta?.description || m.description || null,
-      status: ov?.status || rawMeta?.status || m.status || null,
-      knowledge: ov?.knowledge ?? m.knowledge ?? rawMeta?.knowledge ?? null,
+      status: rawMeta?.status || m.status || null,
+      knowledge: m.knowledge ?? rawMeta?.knowledge ?? null,
       cost: rawMeta?.cost || m.cost || null,
       reasoning_options: rawMeta?.reasoning_options || m.reasoning_options || null,
       temperature: typeof rawMeta?.temperature === 'boolean' ? rawMeta.temperature : m.temperature,
       last_updated: rawMeta?.last_updated || m.last_updated || null,
-      summary: ov?.summary || m.summary || null,
     };
   });
+}
+if (Array.isArray(closed)) {
+  closed = applyClosedOverrides(closed, modelUpdates2026.closed_overrides || {})
+    .map(m => filterModelSources(m, sourceDenylist.domains));
 }
 const at = new Date().toISOString();
 const counts = research.registries.registries || [];
@@ -603,6 +601,15 @@ await write('relay', { url: process.env.MODEL_MEMENTO_RELAY_URL || (await read(p
 {
   const result = await (await import('./build-relay-facts.js')).buildRelayFacts({ projectRoot: root });
   console.log('relay-facts:', JSON.stringify(result));
+}
+// Publish the validated curated personas before building cards; inherited records retain their provenance.
+{
+  const { loadCuratedPersonas } = await import('../lib/persona/catalog.js');
+  const { createPersonaResolver } = await import('../lib/persona/derive.js');
+  const personas = loadCuratedPersonas();
+  createPersonaResolver({ personas }); // Reject conflicting aliases at build time.
+  await write('personas', personas);
+  console.log('personas:', personas.length);
 }
 // persona cards: 記録の事実だけで作る演技の答え（web/data の生成物を読むので最後に回す）
 {

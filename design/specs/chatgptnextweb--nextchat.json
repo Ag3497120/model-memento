@@ -1,0 +1,3137 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "chatgptnextweb--nextchat",
+  "name": "NextChat",
+  "vendor": "ChatGPTNextWeb",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "chatgptnextweb--nextchat-2023-03-0",
+      "from": "2023-03-22",
+      "to": null,
+      "source_ref": "df62e5d38963f5d32de65fc9f0d19b53e2f6b54b",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/store.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts).",
+            "Model is in Settings; no composer model selector is established (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/settings.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx).",
+            "March uses Ctrl + Enter by default (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/store.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/settings.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts",
+        "conditional": "The initial stored session contains the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss).",
+        "Model is in Settings; no composer model selector is established (https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/settings.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, messages and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/components/settings.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/df62e5d38963f5d32de65fc9f0d19b53e2f6b54b/app/store.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-07-1",
+      "from": "2023-07-20",
+      "to": null,
+      "source_ref": "b7320e6834f905debf1d2b7e1326f7e8f28d1ccf",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts).",
+            "The input defaults to Ctrl + Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b7320e6834f905debf1d2b7e1326f7e8f28d1ccf/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-08-2",
+      "from": "2023-08-27",
+      "to": null,
+      "source_ref": "b0c32159e744448b9fbdfa63b1f46bed5050f9a2",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts).",
+            "The input defaults to Ctrl + Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/b0c32159e744448b9fbdfa63b1f46bed5050f9a2/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-09-3",
+      "from": "2023-09-19",
+      "to": null,
+      "source_ref": "26e50cefea3afe79ef98cef951ef404d077aaf3d",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts).",
+            "The input defaults to Ctrl + Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/26e50cefea3afe79ef98cef951ef404d077aaf3d/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-10-4",
+      "from": "2023-10-09",
+      "to": null,
+      "source_ref": "f21f922160a6f024d0fe5e52a0ced59144c2d2cc",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts).",
+            "The input defaults to Meta + Enter on macOS and Ctrl + Enter elsewhere (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f21f922160a6f024d0fe5e52a0ced59144c2d2cc/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-11-5",
+      "from": "2023-11-17",
+      "to": null,
+      "source_ref": "cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts).",
+            "The input defaults to Meta + Enter on macOS and Ctrl + Enter elsewhere (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with ChatGPT Next, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cf220dd2eb08589c7bd99b5a2c05eddf8f2e106f/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2023-12-6",
+      "from": "2023-12-27",
+      "to": null,
+      "source_ref": "d17000975fe58c84e576f89be552c76b91bcb827",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts).",
+            "The input defaults to Meta + Enter on macOS and Ctrl + Enter elsewhere (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d17000975fe58c84e576f89be552c76b91bcb827/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-02-7",
+      "from": "2024-02-26",
+      "to": null,
+      "source_ref": "f22e36e52f35a1d447b50d3b8afb1b70bb160961",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/f22e36e52f35a1d447b50d3b8afb1b70bb160961/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-03-8",
+      "from": "2024-03-13",
+      "to": null,
+      "source_ref": "cc0eae7153a6b4ddbf64043cf6727c4d9e799171",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/cc0eae7153a6b4ddbf64043cf6727c4d9e799171/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-04-9",
+      "from": "2024-04-30",
+      "to": null,
+      "source_ref": "52312dbd23b0080cc8efd21c92fab2cf6a5ef832",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/52312dbd23b0080cc8efd21c92fab2cf6a5ef832/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-05-10",
+      "from": "2024-05-14",
+      "to": null,
+      "source_ref": "d411159124925420cff793fa05afdbd6783845d6",
+      "source_selection": "Snapshot is the latest commit returned through the end of the catalog date in UTC; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/d411159124925420cff793fa05afdbd6783845d6/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-06-11",
+      "from": "2024-06-24",
+      "to": null,
+      "source_ref": "v2.12.4",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.12.4/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-07-12",
+      "from": "2024-07-26",
+      "to": null,
+      "source_ref": "v2.14.0",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.0/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-08-13",
+      "from": "2024-08-16",
+      "to": null,
+      "source_ref": "v2.14.2",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.14.2/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-09-14",
+      "from": "2024-09-25",
+      "to": null,
+      "source_ref": "v2.15.3",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.3/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-10-15",
+      "from": "2024-10-24",
+      "to": null,
+      "source_ref": "v2.15.6",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.6/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2024-11-16",
+      "from": "2024-11-11",
+      "to": null,
+      "source_ref": "v2.15.8",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.15.8/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-2025-02-17",
+      "from": "2025-02-16",
+      "to": null,
+      "source_ref": "v2.16.0",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.0/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgptnextweb--nextchat-record",
+      "from": "2025-07-29",
+      "to": null,
+      "source_ref": "v2.16.1",
+      "source_selection": "Release tag date proximity to the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "左側の幅300pxのサイドバー。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss"
+          ],
+          "contents_en": [
+            "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "remaining width",
+          "contents": [
+            "会話見出し、メッセージ、下部入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts",
+            "送信キーの初期設定。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/store/config.ts"
+          ],
+          "contents_en": [
+            "White chat region: New Conversation, message count, greeting and bottom composer (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts).",
+            "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts).",
+            "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts).",
+            "The input defaults to Enter (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/store/config.ts; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts)."
+          ],
+          "sources": [
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx",
+            "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts"
+        },
+        {
+          "label": "Model",
+          "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Hello! How can I assist you today?",
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e7f8ff",
+          "text": "#303030",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "#dedede",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1b262a",
+          "text": "#bbbbbb",
+          "muted": null,
+          "accent": "#1d93ab",
+          "border": "rgba(255,255,255,0.192)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss",
+          "note": "Theme variables; actual theme follows configuration/system."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded bordered textarea",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.module.scss"
+      },
+      "empty_state": {
+        "title": "New Conversation",
+        "assistant": "Hello! How can I assist you today?",
+        "source": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts",
+        "conditional": "Authorization and context can alter the greeting."
+      },
+      "distinctive": [
+        "淡い青色のサイドバーとティール色の入力欄。https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx"
+      ],
+      "distinctive_en": [
+        "300px pale blue left sidebar with NextChat, Build your own AI assistant., session list and New Chat (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss).",
+        "Composer actions include Settings, theme, Prompts, Masks, Clear Context and a model selector (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts).",
+        "Upload Images is conditional on a vision model, rather than a permanently visible control (https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx; https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts)."
+      ],
+      "must_not_copy": [
+        "ロゴ、画面画像、アイコン、専用フォント、長い原文"
+      ],
+      "must_not_copy_en": [
+        "Logos, screenshots, icons, proprietary fonts and long copied text"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/sidebar.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Sidebar title, subtitle, session list and New Chat.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/chat.tsx",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Chat header, message area, input actions and model selector.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/locales/en.ts",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "English labels, greeting, default conversation title and input hint.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/styles/globals.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Light and dark theme color variables and 300px sidebar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/components/home.module.scss",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Window maximum width and sidebar layout.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/v2.16.1/app/store/config.ts",
+          "date": null,
+          "shows": "送信キーの初期設定。",
+          "shows_en": "Default submit key; October–December 2023 varies by operating system.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.65
+    }
+  ]
+}

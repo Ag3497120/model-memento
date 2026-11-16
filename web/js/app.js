@@ -70,7 +70,8 @@ let allModels = [...models, ...closedModels.filter(m => !models.some(p => p.id =
 let flagshipModels = [...models].sort((a, b) => (releaseOf(b) || '').localeCompare(releaseOf(a) || ''));
 // URL や前回の選択が Tier C の道具なら、その道具を出すために先に読み足す。
 {
-  const wanted = [params.get('tool'), saved.tool].filter(Boolean);
+  // URL の指定があればそれだけを見る（前回の道具が見つかっても、指定した道具を読み足す）。
+  const wanted = params.get('tool') ? [params.get('tool')] : [saved.tool].filter(Boolean);
   const wantedVersion = params.get('version');
   const missing = catalog.extra && ((wanted.length && !wanted.some(id => catalog.tools.some(t => t.id === id)))
     || (wantedVersion && !catalog.tools.some(t => t.versions.some(v => v.id === wantedVersion))));

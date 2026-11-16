@@ -1,0 +1,1622 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "aaif-goose--goose",
+  "name": "Goose",
+  "vendor": "AAIF",
+  "kind": "desktop-chat",
+  "versions": [
+    {
+      "id": "aaif-goose--goose-2024-09-0",
+      "from": "2024-09-10",
+      "to": "2026-03-31",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末の G❯ は #00AEAE。 (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+          ],
+          "contents_en": [
+            "The terminal prompt G❯ is #00AEAE. (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#00AEAE",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "accent": "https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal prompt"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "G❯ から入力する。 (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+      ],
+      "distinctive_en": [
+        "Enter at G❯. (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py",
+          "date": null,
+          "shows": "入力プロンプトの文字と色。",
+          "shows_en": "Prompt text and color.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v0.9.0/README.md",
+          "date": null,
+          "shows": "セッション開始とモデル設定。",
+          "shows_en": "Session startup and model configuration.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/session.py",
+          "date": null,
+          "shows": "セッションの入出力。",
+          "shows_en": "Session input and output.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "aaif-goose--goose-2026-03-1",
+      "from": "2026-03-31",
+      "to": "2026-04-29",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "200px condensed; resizable; expanded defaults to 30%",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "insights min-height 45vh; composer max-height 50vh",
+          "contents": [
+            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "top-rounded composer"
+      },
+      "empty_state": "What would you like to work on? / No recent chat sessions found.",
+      "distinctive": [
+        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/sessions/SessionsInsights.tsx",
+          "date": null,
+          "shows": "統計と最近の会話。",
+          "shows_en": "Statistics and recent chats.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/common/Greeting.tsx",
+          "date": null,
+          "shows": "挨拶文の候補。",
+          "shows_en": "Greeting choices.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-04-2",
+      "from": "2026-04-29",
+      "to": "2026-05-27",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "200px condensed; resizable; expanded defaults to 30%",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "insights min-height 45vh; composer max-height 50vh",
+          "contents": [
+            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "top-rounded composer"
+      },
+      "empty_state": "What would you like to work on? / No recent chat sessions found.",
+      "distinctive": [
+        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/sessions/SessionsInsights.tsx",
+          "date": null,
+          "shows": "統計と最近の会話。",
+          "shows_en": "Statistics and recent chats.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/common/Greeting.tsx",
+          "date": null,
+          "shows": "挨拶文の候補。",
+          "shows_en": "Greeting choices.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-05-3",
+      "from": "2026-05-27",
+      "to": "2026-06-25",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-06-4",
+      "from": "2026-06-25",
+      "to": "2026-07-29",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-07-5",
+      "from": "2026-07-29",
+      "to": "2026-08-27",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-08-6",
+      "from": "2026-08-27",
+      "to": "2026-09-23",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-09-7",
+      "from": "2026-09-23",
+      "to": "2026-10-28",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-2026-10-8",
+      "from": "2026-10-28",
+      "to": "2026-11-15",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "aaif-goose--goose-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px default",
+          "contents": [
+            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ],
+          "contents_en": [
+            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max-width 42rem",
+          "contents": [
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+          ],
+          "contents_en": [
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "model",
+          "label": "Select Model",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx"
+        },
+        {
+          "name": "composer",
+          "label": "⌘↑/⌘↓ to navigate messages",
+          "position": "bottom",
+          "source": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "attachment",
+          "label": "Attach file",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInput.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f4f6f7",
+          "text": "#3f434b",
+          "muted": "#878787",
+          "accent": null,
+          "border": "#e3e6ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#22252a",
+          "panel": "#3f434b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "#3f434b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/theme/theme-tokens.ts",
+          "preference": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/contexts/ThemeContext.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Cash Sans",
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "rounded card"
+      },
+      "empty_state": "Good morning / Good afternoon / Good evening",
+      "distinctive": [
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "distinctive_en": [
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx",
+          "date": null,
+          "shows": "ホーム画面と入力欄の構成。",
+          "shows_en": "Home layout and composer.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts",
+          "date": null,
+          "shows": "ナビゲーションの項目。",
+          "shows_en": "Navigation items.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Layout/AppLayout.tsx",
+          "date": null,
+          "shows": "ナビゲーションと本文の配置。",
+          "shows_en": "Navigation and content arrangement.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/theme/theme-tokens.ts",
+          "date": null,
+          "shows": "テーマの色と角丸。",
+          "shows_en": "Theme colors and radii.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInput.tsx",
+          "date": null,
+          "shows": "入力欄と下部メニュー。",
+          "shows_en": "Composer and bottom menu.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx",
+          "date": null,
+          "shows": "下部のモデル操作。",
+          "shows_en": "Model control in bottom bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/contexts/ThemeContext.tsx",
+          "date": null,
+          "shows": "初期テーマと設定。",
+          "shows_en": "Initial theme and settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInputCard.tsx",
+          "date": null,
+          "shows": "角丸の入力カード。",
+          "shows_en": "Rounded input card.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Layout/constants.ts",
+          "date": null,
+          "shows": "ナビゲーションの幅。",
+          "shows_en": "Navigation width.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

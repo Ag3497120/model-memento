@@ -4,19 +4,36 @@ import { loadCuratedPersonas } from "../../lib/persona/catalog.js";
 import { createPersonaResolver } from "../../lib/persona/derive.js";
 import { Persona, traitEntries } from "../../lib/persona/schema.js";
 
-test("60–80 curated personas validate and every populated trait has evidence", () => {
+test("researched and inherited curated personas validate with evidence and provenance", () => {
   const personas = loadCuratedPersonas();
-  assert.ok(personas.length >= 60 && personas.length <= 80);
+  assert.ok(personas.filter(p => p.resolution.kind === "researched").length >= 70);
+  assert.ok(personas.filter(p => p.resolution.kind === "inherited").length >= 50);
   assert.equal(new Set(personas.map((p) => p.model_id)).size, personas.length);
   for (const p of personas) {
     assert.ok(Persona.safeParse(p).success, p.model_id);
-    assert.equal(p.resolution.kind, "researched");
-    assert.equal(p.reviewed_at, "2026-11-15");
-    assert.ok(traitEntries(p).some(([key, t]) => key !== "interface" && t.value));
+    assert.ok(["researched", "inherited"].includes(p.resolution.kind), p.model_id);
+    assert.match(p.reviewed_at, /^\d{4}-\d{2}-\d{2}$/, p.model_id);
+    if (p.resolution.kind === "inherited") {
+      assert.ok(p.resolution.ancestor, p.model_id);
+      assert.equal(p.resolution.path[0], p.model_id);
+      assert.equal(p.resolution.path.at(-1), p.resolution.ancestor);
+      for (let i = 0; i < p.resolution.path.length - 1; i++) {
+        assert.ok(p.resolution.links.some(link => link.from === p.resolution.path[i] && link.to === p.resolution.path[i + 1]), p.model_id);
+      }
+      for (const link of p.resolution.links) {
+        assert.ok(p.resolution.path.some((id, i) => id === link.from && p.resolution.path[i + 1] === link.to), p.model_id);
+        assert.match(link.source, /^https?:\/\//);
+      }
+    }
     for (const [, t] of traitEntries(p)) {
-      if (t.value !== null) {
+      if (t.value !== null && t.value !== "unverified") {
         assert.match(t.source, /^https?:\/\//);
-        assert.ok(["official", "researched"].includes(t.basis));
+        assert.ok(t.confidence > 0);
+        if (p.resolution.kind === "researched") assert.ok(["official", "researched"].includes(t.basis));
+        else {
+          assert.equal(t.basis, `inherited-from:${p.resolution.ancestor}`);
+          assert.ok(t.confidence <= 0.65);
+        }
         assert.ok(t.note.length > 0);
       } else {
         assert.equal(t.source, null);
@@ -25,7 +42,9 @@ test("60–80 curated personas validate and every populated trait has evidence",
     }
   }
   const resolve = createPersonaResolver({ personas });
-  for (const p of personas) for (const alias of [p.model_id, ...p.aliases]) assert.equal(resolve(alias).resolution.kind, "researched", alias);
+  for (const p of personas) for (const alias of [p.model_id, ...p.aliases]) {
+    assert.equal(resolve(alias).resolution.kind, p.resolution.kind, alias);
+  }
 });
 test("catalog spans the requested eras and preserves weak evidence", () => {
   const personas = loadCuratedPersonas();

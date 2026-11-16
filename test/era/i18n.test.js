@@ -11,7 +11,7 @@ const urls = text => text.match(/https?:\/\/[^\s（）<>()]+/g) || [];
 async function readDocuments(directory) {
   const url = new URL(directory, import.meta.url);
   return Promise.all((await fs.readdir(url)).filter(name => name.endsWith('.json')).sort()
-    .map(async name => JSON.parse(await fs.readFile(new URL(name, url), 'utf8'))));
+    .map(async name => JSON.parse(await fs.readFile(new URL(encodeURIComponent(name), url), 'utf8'))));
 }
 
 const documents = await readDocuments('../../design/era/');

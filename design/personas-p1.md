@@ -1,0 +1,23 @@
+# OpenAI personas P1 / OpenAI ペルソナ P1
+
+調査日 / Reviewed: 2026-11-16. This audit counts only the new `p1-*.json` files; existing OpenAI personas are retained. Traits describe documented capabilities or observations, not a fixed personality. / 既存の OpenAI ペルソナは残し、以下は新規ファイルのみ集計します。公開資料は固定的な人格を証明しません。
+
+## Coverage / 対象
+
+- **26 researched exact IDs:** `gpt-2-1.5b`, `davinci-gpt-3`, `text-davinci-003`, `gpt-3.5-turbo`, `gpt-4`, `gpt-4-turbo`, `gpt-4o`, `gpt-4o-mini`, `o1`, `o3`, `o4-mini`, `gpt-4.1`, `gpt-4.5-preview`, `gpt-5`, `gpt-5.1`, `gpt-5.2`, `gpt-5.4`, `gpt-5.5`, `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`, `gpt-6-astra`, `gpt-6-sol`, `gpt-6-luna`, `gpt-6.1-sol`, `gpt-6.1-terra`.
+- **15 inherited exact IDs:** `gpt-3.5-turbo-0301`, `gpt-3.5-turbo-0613`, `openai/gpt-3.5-turbo-0613`, `gpt-3.5-turbo-1106`, `gpt-3.5-turbo-0125`, `gpt-4-0314`, `gpt-4-0613`, `gpt-4-turbo-2024-04-09`, `gpt-4o-2024-05-13`, `gpt-4o-2024-08-06`, `gpt-4o-2024-11-20`, `openai/gpt-4o-mini-2024-07-18`, `o1-2024-12-17`, `gpt-5-2025-08-07`, `gpt-5.6`.
+- **101 populated trait entries with sources**, including inherited copies; **263 unknown scalar entries** (`null`, confidence zero, no source); **87 empty list fields**, which do not assert that no strengths, quirks or failures exist. These are entry counts, not independent observations. / 出典付き特性101件、未確認のスカラー263件、空のリスト87件。継承の重複を含みます。
+
+## Evidence and limits / 根拠と限界
+
+Every populated trait contains its own URL. The primary material includes [GPT-2 research](https://openai.com/index/better-language-models/), [GPT-3 customization](https://openai.com/index/customizing-gpt-3/), the [GPT-4 technical report](https://cdn.openai.com/papers/gpt-4.pdf), [GPT-4.1 launch](https://openai.com/index/gpt-4-1/), [GPT-4.5 system card](https://openai.com/index/gpt-4-5-system-card/), [o3/o4-mini launch](https://openai.com/index/introducing-o3-and-o4-mini/), [GPT-5 documentation](https://developers.openai.com/api/docs/models/gpt-5), and [GPT-6 model guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol). Where the current API model page reports a cutoff for an undated model alias, it is reported for that alias only; dated snapshots leave cutoff unknown. / 特性ごとの URL を JSON に記載しています。日付付きモデルの知識の時点は継承していません。
+
+Snapshot relationships use the relevant model page or OpenAI's [June 2023 model update](https://openai.com/index/function-calling-and-other-api-updates/). OpenAI states that [the `gpt-5.6` alias routes to `gpt-5.6-sol`](https://developers.openai.com/api/docs/models/gpt-5.6-sol); this alias can change. The provider-prefixed OpenRouter records have additional links in their lineage entries. Strengths inherited from an undated family representative are indicative only; updates may change specific behavior. / 継承した特徴は参考情報であり、個々のスナップショットの振る舞いを実測したものではありません。
+
+Tone, verbosity, formatting, refusals, humour, self-description, quirks and most failure modes remain unverified wherever null or empty. Preview models, different sizes, pro models, specialized models, rolling ChatGPT variants and third-party provider IDs were not assumed to be identical snapshots. In particular, the NanoGPT record `openai/gpt-5.1-2025-11-13` remains unverified: its provider-specific ID was not independently confirmed. Existing researched personas for some preview and dated IDs remain in the catalog. / 空欄は未確認です。異なるサイズ・用途・プロバイダーの同一性は推測していません。
+
+## Reviewer integration issues / レビュアーへの確認
+
+1. `lib/persona/derive.js` indexes only `resolution.kind === "researched"`; it ignores curated inherited records. With the OpenAI-only catalog, `gpt-5-2025-08-07` and `gpt-5.6` currently fall back to `family-default` with `openai:gpt-4-0314` as ancestor, while `gpt-4o-2024-05-13` resolves to its pre-existing researched alias. To make the requested inherited records effective, update the resolver outside this assignment to index exact inherited IDs, preserve their resolution and avoid confusing provider-prefixed API IDs with Hugging Face registry IDs. Define precedence against existing researched aliases and profile overrides and test both. / 継承ファイルは現行 resolver では読まれず、対応するコード変更が必要です。
+2. Loading the complete catalog into `createPersonaResolver` failed during this review with duplicate alias `llama-1`; this is outside P1's permitted files. All JSON parsed, and an OpenAI-only resolver constructed successfully. Recheck after the other catalog work settles. / 全体の resolver は別ベンダーの重複別名で失敗しました。
+3. Some provider-prefixed variants, preview versions, and aliases remain uncovered pending independent evidence and a decision on their relationship to the flagship entries. / 一部の別名や派生版の同一性は未確認です。

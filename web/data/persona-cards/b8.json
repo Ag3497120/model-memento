@@ -17,7 +17,8 @@
           "vendor": "Anthropic"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -35,7 +36,8 @@
           "vendor": "Anthropic"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -53,7 +55,8 @@
           "release": "2025-08-05"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -71,7 +74,8 @@
           "specs.knowledge_cutoff": "2025-03"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -89,7 +93,8 @@
           "specs.context_tokens": 200000
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -98,16 +103,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "claude-opus-4.1",
         "q": "一度に出せる長さは？",
-        "a_ja": "私の一度に返せる文章の長さの上限は4,096トークン（文章を数える単位）と記録されています。",
+        "a_ja": "私の一度に返せる文章の長さの上限は32,000トークン（文章を数える単位）と記録されています。",
         "kind": "self_output",
         "fact_keys": [
           "specs.max_output_tokens"
         ],
         "fact_values": {
-          "specs.max_output_tokens": 4096
+          "specs.max_output_tokens": 32000
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -140,11 +146,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "claude-opus-4.1",
         "q": "得意なことは？",
-        "a_ja": "私の得意なことは記録では確認できません。モデルの出典から提供元の資料を確認してください。",
-        "kind": "unknown",
-        "fact_keys": [],
-        "fact_values": {},
-        "sources": [],
+        "a_ja": "私の得意なこととして、Anthropic describes improvements over Opus 4 in agentic tasks, coding and reasoningという記録があります。",
+        "kind": "self_strengths",
+        "fact_keys": [
+          "persona.typical_strengths.0"
+        ],
+        "fact_values": {
+          "persona.typical_strengths.0": "Anthropic describes improvements over Opus 4 in agentic tasks, coding and reasoning."
+        },
+        "sources": [
+          "https://www.anthropic.com/news/models"
+        ],
         "written_by": "record-template",
         "reviewed": true
       },
@@ -185,7 +197,8 @@
           "specs.languages": "Multilingual, natural Japanese"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -234,7 +247,8 @@
           "family": "Anthropic"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -255,6 +269,7 @@
         },
         "sources": [
           "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview",
           "https://openrouter.ai/api/v1/models/anthropic/claude-opus-4.1/endpoints"
         ],
         "written_by": "record-template",
@@ -297,7 +312,8 @@
           "specs.context_tokens": 200000
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -315,7 +331,8 @@
           "release": "2025-08-05"
         },
         "sources": [
-          "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "https://platform.claude.com/docs/en/models/overview"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -337,7 +354,8 @@
           "vendor": "OpenAI"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -355,7 +373,8 @@
           "vendor": "OpenAI"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -373,7 +392,8 @@
           "release": "2026-09-03"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -391,7 +411,7 @@
           "specs.knowledge_cutoff": "2026-04-30"
         },
         "sources": [
-          "https://openai.com/"
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -409,7 +429,8 @@
           "specs.context_tokens": 1050000
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -427,7 +448,8 @@
           "specs.max_output_tokens": 128000
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -447,7 +469,8 @@
           "cost.output": 50
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -469,7 +492,8 @@
           ]
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -478,27 +502,16 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gpt-6-astra",
         "q": "得意なことは？",
-        "a_ja": "私の得意なことは記録では確認できません。提供元の案内は公式の開発者向け窓口 https://developers.openai.com/api/reference/javaで確認してください。",
-        "kind": "unknown",
+        "a_ja": "私の得意なこととして、複雑な推論、コード作成、業務やソフトウェアをまたぐ作業に対応するという記録があります。",
+        "kind": "self_strengths",
         "fact_keys": [
-          "links.0"
+          "persona.typical_strengths.0"
         ],
         "fact_values": {
-          "links.0": {
-            "url": "https://developers.openai.com/api/reference/java",
-            "label": "公式の開発者向け窓口",
-            "sources": [
-              "https://developers.openai.com/api/reference/java",
-              "https://developers.openai.com/api/docs/quickstart",
-              "https://developers.openai.com/api/docs/models"
-            ],
-            "availability": "unverified"
-          }
+          "persona.typical_strengths.0": "複雑な推論、コード作成、業務やソフトウェアをまたぐ作業に対応する。"
         },
         "sources": [
-          "https://developers.openai.com/api/reference/java",
-          "https://developers.openai.com/api/docs/quickstart",
-          "https://developers.openai.com/api/docs/models"
+          "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -574,7 +587,8 @@
           "specs.languages": "Multilingual"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -595,6 +609,7 @@
         },
         "sources": [
           "https://openai.com/",
+          "https://developers.openai.com/api/docs/models",
           "https://developers.openai.com/"
         ],
         "written_by": "record-template",
@@ -642,7 +657,8 @@
           "family": "gpt-6"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -660,7 +676,7 @@
           "status": "alive"
         },
         "sources": [
-          "https://openai.com/"
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -719,7 +735,8 @@
           "specs.context_tokens": 1050000
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -737,7 +754,8 @@
           "release": "2026-09-03"
         },
         "sources": [
-          "https://openai.com/"
+          "https://openai.com/",
+          "https://developers.openai.com/api/docs/models"
         ],
         "written_by": "record-template",
         "reviewed": true

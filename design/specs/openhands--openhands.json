@@ -1,0 +1,1000 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openhands--openhands",
+  "name": "OpenHands",
+  "vendor": "OpenHands",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "openhands--openhands-2024-06-0",
+      "from": "2024-06-04",
+      "to": "2026-07-30",
+      "regions": [
+        {
+          "name": "chat",
+          "position": "left",
+          "size": "initial 500px; minimum 500px",
+          "contents": [
+            "左の会話欄と下部の入力欄 (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/chat/ChatInput.tsx)"
+          ],
+          "contents_en": [
+            "Chat at left with bottom composer (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/chat/ChatInput.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "resizable; minimum width 500px",
+          "contents": [
+            "右上に Code Editor と Browser、右下に独立した Terminal (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/Workspace.tsx)"
+          ],
+          "contents_en": [
+            "Code Editor and Browser above a separate terminal (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/Workspace.tsx)"
+          ]
+        },
+        {
+          "name": "controls",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "下部の操作バーに設定を置く (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx)"
+          ],
+          "contents_en": [
+            "Bottom controls include settings (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Configuration → Model",
+          "source": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/modals/settings/SettingsForm.tsx",
+          "where": "settings",
+          "purpose": "Configuration → Model (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/modals/settings/SettingsForm.tsx)"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/chat/ChatInput.tsx",
+          "where": "workspace",
+          "purpose": "Send (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/chat/ChatInput.tsx)"
+        },
+        {
+          "label": "Code Editor / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/Workspace.tsx",
+          "where": "workspace",
+          "purpose": "Code Editor / Browser (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/Workspace.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#171717",
+          "panel": "#262626",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#4465DB",
+          "border": "#525252",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/tailwind.config.js",
+          "notes": "Tailwind neutral tokens used by https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx; primary from https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/tailwind.config.js; token mappings unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 12,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": "チャットの挨拶と「No file selected.」。 (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/i18n/translation.json; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/CodeEditor.tsx)",
+      "distinctive": [
+        "左に会話、右にコードと端末 (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx)"
+      ],
+      "distinctive_en": [
+        "Chat on the left, code and terminal at right (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/App.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/chat/ChatInput.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/tailwind.config.js",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/index.css",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/Workspace.tsx",
+          "shows": "作業欄のタブ。",
+          "shows_en": "Workspace tabs.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/modals/settings/SettingsForm.tsx",
+          "shows": "設定のモデル欄。",
+          "shows_en": "Model field in settings.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.8,
+      "empty_state_en": "The chat greeting and “No file selected.” (https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/i18n/translation.json; https://github.com/OpenHands/OpenHands/blob/0.6.1/frontend/src/components/CodeEditor.tsx)"
+    },
+    {
+      "id": "openhands--openhands-2026-07-1",
+      "from": "2026-07-30",
+      "to": "2026-08-27",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "サイドバーと会話ナビゲーション (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+          ],
+          "contents_en": [
+            "Sidebar and conversation navigation (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "center-left",
+          "size": "50% initial split when right panel shown",
+          "contents": [
+            "入力欄を下に置く会話欄 (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ],
+          "contents_en": [
+            "Conversation with composer below (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "50% initial split when shown",
+          "contents": [
+            "右側のタブ付き作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/hooks/use-resizable-panels.ts)"
+          ],
+          "contents_en": [
+            "Tabbed right workspace (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/hooks/use-resizable-panels.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat / Conversations / Settings",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "New Chat / Conversations / Settings (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "Files / Terminal / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "Files / Terminal / Browser (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "More actions / model picker",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "where": "input-bar",
+          "purpose": "More actions / model picker (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/chat/components/chat-input-actions.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#202020",
+          "text": "#F7F7F7",
+          "muted": "#BEBEBE",
+          "accent": null,
+          "border": "#404040",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/themes/color-themes.ts",
+          "notes": "Default theme https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/themes/color-themes.ts; neutral scale https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/themes/color-themes.ts; precise role mapping unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーと開閉可能な作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+      ],
+      "distinctive_en": [
+        "Sidebar and optional workspace (https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/conversation/conversation-main/conversation-main.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/themes/color-themes.ts",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/themes/color-themes.ts",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/components/features/sidebar/sidebar.tsx",
+          "shows": "サイドバー。",
+          "shows_en": "Sidebar.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.8.0/src/hooks/use-resizable-panels.ts",
+          "shows": "初期の幅の割合。",
+          "shows_en": "Initial split percentage.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openhands--openhands-2026-08-2",
+      "from": "2026-08-27",
+      "to": "2026-09-25",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "サイドバーと会話ナビゲーション (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+          ],
+          "contents_en": [
+            "Sidebar and conversation navigation (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "center-left",
+          "size": "50% initial split when right panel shown",
+          "contents": [
+            "入力欄を下に置く会話欄 (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ],
+          "contents_en": [
+            "Conversation with composer below (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "50% initial split when shown",
+          "contents": [
+            "右側のタブ付き作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/hooks/use-resizable-panels.ts)"
+          ],
+          "contents_en": [
+            "Tabbed right workspace (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/hooks/use-resizable-panels.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat / Conversations / Settings",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "New Chat / Conversations / Settings (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "Files / Terminal / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "Files / Terminal / Browser (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "More actions / model picker",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "where": "input-bar",
+          "purpose": "More actions / model picker (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/chat/components/chat-input-actions.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#202020",
+          "text": "#F7F7F7",
+          "muted": "#BEBEBE",
+          "accent": null,
+          "border": "#404040",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/themes/color-themes.ts",
+          "notes": "Default theme https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/themes/color-themes.ts; neutral scale https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/themes/color-themes.ts; precise role mapping unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーと開閉可能な作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+      ],
+      "distinctive_en": [
+        "Sidebar and optional workspace (https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/conversation/conversation-main/conversation-main.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/themes/color-themes.ts",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/themes/color-themes.ts",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/components/features/sidebar/sidebar.tsx",
+          "shows": "サイドバー。",
+          "shows_en": "Sidebar.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.16.0/src/hooks/use-resizable-panels.ts",
+          "shows": "初期の幅の割合。",
+          "shows_en": "Initial split percentage.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openhands--openhands-2026-09-3",
+      "from": "2026-09-25",
+      "to": "2026-10-27",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "サイドバーと会話ナビゲーション (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+          ],
+          "contents_en": [
+            "Sidebar and conversation navigation (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "center-left",
+          "size": "50% initial split when right panel shown",
+          "contents": [
+            "入力欄を下に置く会話欄 (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ],
+          "contents_en": [
+            "Conversation with composer below (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "50% initial split when shown",
+          "contents": [
+            "右側のタブ付き作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/hooks/use-resizable-panels.ts)"
+          ],
+          "contents_en": [
+            "Tabbed right workspace (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/hooks/use-resizable-panels.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat / Conversations / Settings",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "New Chat / Conversations / Settings (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "Files / Terminal / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "Files / Terminal / Browser (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "More actions / model picker",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "where": "input-bar",
+          "purpose": "More actions / model picker (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/chat/components/chat-input-actions.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#202020",
+          "text": "#F7F7F7",
+          "muted": "#BEBEBE",
+          "accent": null,
+          "border": "#404040",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/themes/color-theme/palettes/neutral.ts",
+          "notes": "Default theme https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/themes/color-themes.ts; neutral scale https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/themes/color-theme/palettes/neutral.ts; precise role mapping unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーと開閉可能な作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+      ],
+      "distinctive_en": [
+        "Sidebar and optional workspace (https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/conversation/conversation-main/conversation-main.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/themes/color-themes.ts",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/themes/color-theme/palettes/neutral.ts",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/components/features/sidebar/sidebar.tsx",
+          "shows": "サイドバー。",
+          "shows_en": "Sidebar.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.24.0/src/hooks/use-resizable-panels.ts",
+          "shows": "初期の幅の割合。",
+          "shows_en": "Initial split percentage.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openhands--openhands-2026-10-4",
+      "from": "2026-10-27",
+      "to": "2026-11-12",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "サイドバーと会話ナビゲーション (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+          ],
+          "contents_en": [
+            "Sidebar and conversation navigation (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "center-left",
+          "size": "50% initial split when right panel shown",
+          "contents": [
+            "入力欄を下に置く会話欄 (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ],
+          "contents_en": [
+            "Conversation with composer below (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "50% initial split when shown",
+          "contents": [
+            "右側のタブ付き作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/hooks/use-resizable-panels.ts)"
+          ],
+          "contents_en": [
+            "Tabbed right workspace (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/hooks/use-resizable-panels.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat / Conversations / Settings",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "New Chat / Conversations / Settings (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "Files / Terminal / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "Files / Terminal / Browser (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "More actions / model picker",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "where": "input-bar",
+          "purpose": "More actions / model picker (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/chat/components/chat-input-actions.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#202020",
+          "text": "#F7F7F7",
+          "muted": "#BEBEBE",
+          "accent": null,
+          "border": "#404040",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/themes/color-theme/palettes/neutral.ts",
+          "notes": "Default theme https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/themes/color-themes.ts; neutral scale https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/themes/color-theme/palettes/neutral.ts; precise role mapping unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーと開閉可能な作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+      ],
+      "distinctive_en": [
+        "Sidebar and optional workspace (https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/conversation/conversation-main/conversation-main.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/themes/color-themes.ts",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/themes/color-theme/palettes/neutral.ts",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/components/features/sidebar/sidebar.tsx",
+          "shows": "サイドバー。",
+          "shows_en": "Sidebar.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.34.0/src/hooks/use-resizable-panels.ts",
+          "shows": "初期の幅の割合。",
+          "shows_en": "Initial split percentage.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openhands--openhands-record",
+      "from": "2026-11-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "サイドバーと会話ナビゲーション (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+          ],
+          "contents_en": [
+            "Sidebar and conversation navigation (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/sidebar/sidebar.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "center-left",
+          "size": "50% initial split when right panel shown",
+          "contents": [
+            "入力欄を下に置く会話欄 (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ],
+          "contents_en": [
+            "Conversation with composer below (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/chat/components/chat-input-actions.tsx)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "50% initial split when shown",
+          "contents": [
+            "右側のタブ付き作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/hooks/use-resizable-panels.ts)"
+          ],
+          "contents_en": [
+            "Tabbed right workspace (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/hooks/use-resizable-panels.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Chat / Conversations / Settings",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "New Chat / Conversations / Settings (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "Files / Terminal / Browser",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json",
+          "where": "workspace",
+          "purpose": "Files / Terminal / Browser (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+        },
+        {
+          "label": "More actions / model picker",
+          "source": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "where": "input-bar",
+          "purpose": "More actions / model picker (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/chat/components/chat-input-actions.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#202020",
+          "text": "#F7F7F7",
+          "muted": "#BEBEBE",
+          "accent": null,
+          "border": "#404040",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/themes/color-theme/palettes/neutral.ts",
+          "notes": "Default theme https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/themes/color-themes.ts; neutral scale https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/themes/color-theme/palettes/neutral.ts; precise role mapping unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーと開閉可能な作業欄 (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+      ],
+      "distinctive_en": [
+        "Sidebar and optional workspace (https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx; https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/conversation/conversation-main/conversation-main.tsx",
+          "shows": "会話と作業欄の構造。",
+          "shows_en": "Conversation and workspace structure.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/i18n/translation.json",
+          "shows": "英語の表示文言。",
+          "shows_en": "English UI strings.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/chat/components/chat-input-actions.tsx",
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/themes/color-themes.ts",
+          "shows": "既定テーマ。",
+          "shows_en": "Default theme.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/themes/color-theme/palettes/neutral.ts",
+          "shows": "色の定義。",
+          "shows_en": "Color definitions.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/components/features/sidebar/sidebar.tsx",
+          "shows": "サイドバー。",
+          "shows_en": "Sidebar.",
+          "kind": "source",
+          "date": null
+        },
+        {
+          "url": "https://github.com/OpenHands/OpenHands/blob/v1.40.0/src/hooks/use-resizable-panels.ts",
+          "shows": "初期の幅の割合。",
+          "shows_en": "Initial split percentage.",
+          "kind": "source",
+          "date": null
+        }
+      ],
+      "confidence": 0.65
+    }
+  ]
+}

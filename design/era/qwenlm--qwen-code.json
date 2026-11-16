@@ -1,0 +1,120 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "qwenlm--qwen-code",
+  "versions": [
+    {
+      "id": "qwenlm--qwen-code-2025-08-0",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "終了後、qwen --model にモデル名を指定して起動する。"
+        ],
+        "steps_en": [
+          "Exit and launch qwen --model with a model name."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/config/config.ts",
+            "date": null,
+            "shows": "The qwen CLI accepts --model / -m."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "端末（アプリ名は未確認）",
+        "app_shell_en": "Terminal (application unverified)",
+        "date_shown": "2025-08-01",
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx",
+            "date": null,
+            "shows": "Terminal layout."
+          }
+        ]
+      },
+      "trend": "開始ヒントを複数行表示し、丸い入力欄と3分割の状態欄を備える。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx; https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx)",
+      "trend_en": "Several startup tips precede a rounded input and three-part status footer. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx; https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx)"
+    },
+    {
+      "id": "qwenlm--qwen-code-2026-10-1",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄で /model を実行し、設定済みのモデルから選ぶ。"
+        ],
+        "steps_en": [
+          "Run /model in the prompt and choose a configured model."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/commands/modelCommand.ts",
+            "date": null,
+            "shows": "The command opens selection among configured models."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "端末（アプリ名は未確認）",
+        "app_shell_en": "Terminal (application unverified)",
+        "date_shown": "2026-10-30",
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/layouts/DefaultAppLayout.tsx",
+            "date": null,
+            "shows": "Terminal layout."
+          }
+        ]
+      },
+      "trend": "認証・モデル・作業パスを枠内に表示し、起動ヒントを1件表示する。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)",
+      "trend_en": "A bordered panel shows authentication, model and working directory, followed by one startup tip. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)"
+    },
+    {
+      "id": "qwenlm--qwen-code-record",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄で /model を実行し、設定済みのモデルから選ぶ。"
+        ],
+        "steps_en": [
+          "Run /model in the prompt and choose a configured model."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/commands/modelCommand.ts",
+            "date": null,
+            "shows": "The command opens selection among configured models."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "端末（アプリ名は未確認）",
+        "app_shell_en": "Terminal (application unverified)",
+        "date_shown": "2026-11-14",
+        "sources": [
+          {
+            "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/layouts/DefaultAppLayout.tsx",
+            "date": null,
+            "shows": "Terminal layout."
+          }
+        ]
+      },
+      "trend": "認証・モデル・作業パスを枠内に表示し、起動ヒントを1件表示する。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)",
+      "trend_en": "A bordered panel shows authentication, model and working directory, followed by one startup tip. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)"
+    }
+  ]
+}

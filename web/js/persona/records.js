@@ -45,9 +45,13 @@ export async function loadBrowserRecords() {
 
 export function personaFor(model, context = {}) {
   const supplied = context.persona || model?.persona;
-  if (supplied?.schema === 'memento.persona.v1' && matches(supplied, model)) return supplied;
   const personas = context.personas || browserPersonas;
-  return Array.isArray(personas) ? personas.find(p => p.schema === 'memento.persona.v1' && matches(p, model)) : null;
+  const rows = [supplied, ...(Array.isArray(personas) ? personas : [])].filter(p => p?.schema === 'memento.persona.v1');
+  // Preserve punctuation and provider prefixes for IDs: display-name normalization is lossy.
+  const id = String(model?.id || '').trim().toLowerCase();
+  const exactRows = id ? rows.filter(p => String(p.model_id).trim().toLowerCase() === id) : [];
+  const exact = exactRows.find(p => ['researched', 'inherited'].includes(p.resolution?.kind)) || exactRows[0];
+  return exact || rows.find(p => matches(p, model)) || null;
 }
 
 function matches(persona, model) {

@@ -20,7 +20,7 @@ function validateManifest(value) {
   for (const generation of value.generations) {
     if (!/^[a-f0-9]{64}$/.test(generation.version) || !Number.isFinite(Date.parse(generation.at)) || !Array.isArray(generation.files)) throw new Error('Invalid module generation');
     for (const file of generation.files) {
-      if (!/^(?:js|lib)\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.js$/.test(file.source)
+      if (!/^(?:js|lib)\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*\.js$/.test(file.source) || file.source.includes('..')
         || file.path !== file.source.replace(/\.js$/, `.memento-${generation.version}.js`)
         || !/^[a-f0-9]{64}$/.test(file.sha256)) throw new Error('Invalid module path');
     }

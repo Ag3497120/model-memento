@@ -1,0 +1,897 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "deepseek-ai--deepseek-harness",
+  "name": "DeepSeek Harness",
+  "vendor": "DeepSeek",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "deepseek-ai--deepseek-harness-2026-08-0",
+      "from": "2026-08-17",
+      "to": "2026-08-31",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px default before resizing",
+          "contents": [
+            "New Session; Workspaces; No sessions yet; Add workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-sidebar/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-workspace/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-layout/src/client/columns.ts)"
+          ]
+        },
+        {
+          "name": "hero",
+          "position": "center",
+          "size": "24px horizontal padding; 12px stack gap",
+          "contents": [
+            "Into the Unknown; Preview; Choose workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/HeroShell.module.css)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "under hero",
+          "size": "780px maximum card (748px content plus 32px)",
+          "contents": [
+            "Describe what you want to build. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css)",
+            "Commands, model selector and send controls in input row. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-model-selection/src/client/slots.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-sidebar/src/client/locales.ts"
+        },
+        {
+          "label": "Choose workspace",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Commands",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Select model",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-model-selection/src/client/locales.ts"
+        },
+        {
+          "label": "Send message",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f9fafb",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": "rgba(0,0,0,0.1)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#151517",
+          "panel": "#1b1b1c",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-theme/src/styles/design-platform.css",
+          "note": "Input fill light #ffffff and dark #2c2c2e; Preview background light #e4edfd. System preference is default (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-theme/src/theme-settings.ts). The #4176e6 static blue token exists, but its exact use on the send control is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 22,
+        "density": null,
+        "input_shape": "Rounded composer (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css)"
+      },
+      "empty_state": "Into the Unknown; Preview; Choose workspace; Describe what you want to build (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx)",
+      "distinctive": [
+        "Centered hero, workspace chip, composer and sidebar (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-layout/src/client/columns.ts)",
+        "The input model selector occupies conversation.input.model (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-model-selection/src/client/slots.ts)."
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "English hero, prompt and composer labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Hero hierarchy and workspace chip"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Conversation and composer width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Composer shape"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Composer controls and model seat"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-workspace/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Workspace and session labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-sidebar/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Sidebar new-session label"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-layout/src/client/columns.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Default sidebar width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-model-selection/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Model selector English labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-model-selection/src/client/slots.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Model selector input slot"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-theme/src/styles/design-platform.css",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "Light and dark theme tokens"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.0-rc.7/packages/client/ui-theme/src/theme-settings.ts",
+          "kind": "repository",
+          "date": "2026-08-17",
+          "shows": "System theme preference"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "deepseek-ai--deepseek-harness-2026-08-1",
+      "from": "2026-08-31",
+      "to": "2026-09-29",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px default before resizing",
+          "contents": [
+            "New Session; Workspaces; No sessions yet; Add workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-sidebar/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-workspace/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-layout/src/client/columns.ts)"
+          ]
+        },
+        {
+          "name": "hero",
+          "position": "center",
+          "size": "24px horizontal padding; 12px stack gap",
+          "contents": [
+            "Into the Unknown; Preview; Choose workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/HeroShell.module.css)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "under hero",
+          "size": "adaptive content clamp 680px to 920px plus 32px card allowance",
+          "contents": [
+            "Describe what you want to build... / commands, @ files or sessions. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css)",
+            "Commands, model selector and send controls in input row. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-model-selection/src/client/slots.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-sidebar/src/client/locales.ts"
+        },
+        {
+          "label": "Choose workspace",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Commands",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Select model",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-model-selection/src/client/locales.ts"
+        },
+        {
+          "label": "Send message",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f9fafb",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": "rgba(0,0,0,0.1)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#151517",
+          "panel": "#1b1b1c",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-theme/src/styles/design-platform.css",
+          "note": "Input fill light #ffffff and dark #2c2c2e; Preview background light #e4edfd. System preference is default (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-theme/src/theme-settings.ts). The #4176e6 static blue token exists, but its exact use on the send control is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 22,
+        "density": null,
+        "input_shape": "Rounded composer (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css)"
+      },
+      "empty_state": "Into the Unknown; Preview; Choose workspace; Describe what you want to build... / commands, @ files or sessions (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx)",
+      "distinctive": [
+        "Centered hero, workspace chip, composer and sidebar (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-layout/src/client/columns.ts)",
+        "The input model selector occupies conversation.input.model (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-model-selection/src/client/slots.ts)."
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "English hero, prompt and composer labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Hero hierarchy and workspace chip"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Conversation and composer width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Composer shape"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Composer controls and model seat"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-workspace/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Workspace and session labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-sidebar/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Sidebar new-session label"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-layout/src/client/columns.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Default sidebar width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-model-selection/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Model selector English labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-model-selection/src/client/slots.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Model selector input slot"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-theme/src/styles/design-platform.css",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "Light and dark theme tokens"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.1.2-alpha.3/packages/client/ui-theme/src/theme-settings.ts",
+          "kind": "repository",
+          "date": "2026-08-31",
+          "shows": "System theme preference"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "deepseek-ai--deepseek-harness-2026-09-2",
+      "from": "2026-09-29",
+      "to": "2026-10-30",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px default before resizing",
+          "contents": [
+            "New Session; Workspaces; No sessions yet; Add workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-sidebar/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-workspace/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-layout/src/client/columns.ts)"
+          ]
+        },
+        {
+          "name": "hero",
+          "position": "center",
+          "size": "24px horizontal padding; 12px stack gap",
+          "contents": [
+            "Into the Unknown; Preview; Choose workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/HeroShell.module.css)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "under hero",
+          "size": "adaptive content clamp 680px to 920px plus 32px card allowance",
+          "contents": [
+            "Describe what you want to build, / commands, @ files or sessions. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css)",
+            "Commands, model selector and send controls in input row. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-model-selection/src/client/slots.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-sidebar/src/client/locales.ts"
+        },
+        {
+          "label": "Choose workspace",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Add files or run commands",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Select model",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-model-selection/src/client/locales.ts"
+        },
+        {
+          "label": "Send message",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f9fafb",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": "rgba(0,0,0,0.1)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#151517",
+          "panel": "#1b1b1c",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-theme/src/styles/design-platform.css",
+          "note": "Input fill light #ffffff and dark #2c2c2e; Preview background light #e4edfd. System preference is default (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-theme/src/theme-settings.ts). The #4176e6 static blue token exists, but its exact use on the send control is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 28,
+        "density": null,
+        "input_shape": "Rounded composer (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-theme/src/styles/base.css)"
+      },
+      "empty_state": "Into the Unknown; Preview; Choose workspace; Describe what you want to build, / commands, @ files or sessions (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx)",
+      "distinctive": [
+        "Centered hero, workspace chip, composer and sidebar (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-layout/src/client/columns.ts)",
+        "The input model selector occupies conversation.input.model (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-model-selection/src/client/slots.ts)."
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "English hero, prompt and composer labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Hero hierarchy and workspace chip"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Conversation and composer width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Composer shape"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Composer controls and model seat"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-workspace/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Workspace and session labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-sidebar/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Sidebar new-session label"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-layout/src/client/columns.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Default sidebar width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-model-selection/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Model selector English labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-model-selection/src/client/slots.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Model selector input slot"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-theme/src/styles/design-platform.css",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "Light and dark theme tokens"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.0-rc.2/packages/client/ui-theme/src/theme-settings.ts",
+          "kind": "repository",
+          "date": "2026-09-29",
+          "shows": "System theme preference"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "deepseek-ai--deepseek-harness-2026-10-3",
+      "from": "2026-10-30",
+      "to": "2026-11-15",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px default before resizing",
+          "contents": [
+            "New Session; Workspaces; No sessions yet; Add workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-sidebar/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-workspace/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-layout/src/client/columns.ts)"
+          ]
+        },
+        {
+          "name": "hero",
+          "position": "center",
+          "size": "24px horizontal padding; 12px stack gap",
+          "contents": [
+            "Into the Unknown; Preview; Choose workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/HeroShell.module.css)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "under hero",
+          "size": "adaptive content clamp 680px to 920px plus 32px card allowance",
+          "contents": [
+            "Describe what you want to build, / commands, @ files or sessions. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css)",
+            "Commands, model selector and send controls in input row. (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-model-selection/src/client/slots.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-sidebar/src/client/locales.ts"
+        },
+        {
+          "label": "Choose workspace",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Add files or run commands",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Select model",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-model-selection/src/client/locales.ts"
+        },
+        {
+          "label": "Send message",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f9fafb",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": "rgba(0,0,0,0.1)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#151517",
+          "panel": "#1b1b1c",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-theme/src/styles/design-platform.css",
+          "note": "Input fill light #ffffff and dark #2c2c2e; Preview background light #e4edfd. System preference is default (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-theme/src/theme-settings.ts). The #4176e6 static blue token exists, but its exact use on the send control is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 28,
+        "density": null,
+        "input_shape": "Rounded composer (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-theme/src/styles/base.css)"
+      },
+      "empty_state": "Into the Unknown; Preview; Choose workspace; Describe what you want to build, / commands, @ files or sessions (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx)",
+      "distinctive": [
+        "Centered hero, workspace chip, composer and sidebar (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-layout/src/client/columns.ts)",
+        "The input model selector occupies conversation.input.model (https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-model-selection/src/client/slots.ts)."
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "English hero, prompt and composer labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Hero hierarchy and workspace chip"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Conversation and composer width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Composer shape"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Composer controls and model seat"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-workspace/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Workspace and session labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-sidebar/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Sidebar new-session label"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-layout/src/client/columns.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Default sidebar width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-model-selection/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Model selector English labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-model-selection/src/client/slots.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Model selector input slot"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-theme/src/styles/design-platform.css",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "Light and dark theme tokens"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/dsh-v0.2.1-rc.5/packages/client/ui-theme/src/theme-settings.ts",
+          "kind": "repository",
+          "date": "2026-10-30",
+          "shows": "System theme preference"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "deepseek-ai--deepseek-harness-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px default before resizing",
+          "contents": [
+            "New Session; Workspaces; No sessions yet; Add workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-sidebar/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-workspace/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-layout/src/client/columns.ts)"
+          ]
+        },
+        {
+          "name": "hero",
+          "position": "center",
+          "size": "24px horizontal padding; 12px stack gap",
+          "contents": [
+            "Into the Unknown; Preview; Choose workspace. (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/HeroShell.module.css)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "under hero",
+          "size": "adaptive content clamp 680px to 920px plus 32px card allowance",
+          "contents": [
+            "Describe what you want to build, / commands, @ files or sessions. (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css)",
+            "Commands, model selector and send controls in input row. (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-model-selection/src/client/slots.ts)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-sidebar/src/client/locales.ts"
+        },
+        {
+          "label": "Choose workspace",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Add files or run commands",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts"
+        },
+        {
+          "label": "Select model",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-model-selection/src/client/locales.ts"
+        },
+        {
+          "label": "Send message",
+          "source": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#f9fafb",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": "rgba(0,0,0,0.1)",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#151517",
+          "panel": "#1b1b1c",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-theme/src/styles/design-platform.css",
+          "note": "Input fill light #ffffff and dark #2c2c2e; Preview background light #e4edfd. System preference is default (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-theme/src/theme-settings.ts). The #4176e6 static blue token exists, but its exact use on the send control is unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 28,
+        "density": null,
+        "input_shape": "Rounded composer (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-theme/src/styles/base.css)"
+      },
+      "empty_state": "Into the Unknown; Preview; Choose workspace; Describe what you want to build, / commands, @ files or sessions (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx)",
+      "distinctive": [
+        "Centered hero, workspace chip, composer and sidebar (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx; https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-layout/src/client/columns.ts)",
+        "The input model selector occupies conversation.input.model (https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-model-selection/src/client/slots.ts)."
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "English hero, prompt and composer labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/EmptyHero.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Hero hierarchy and workspace chip"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/ConversationRoot.module.css",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Conversation and composer width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/InputBar.module.css",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Composer shape"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-conversation/src/client/skeleton/InputBar.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Composer controls and model seat"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-workspace/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Workspace and session labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-sidebar/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Sidebar new-session label"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-layout/src/client/columns.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Default sidebar width"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-model-selection/src/client/locales.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Model selector English labels"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-model-selection/src/client/slots.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Model selector input slot"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-theme/src/styles/design-platform.css",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Light and dark theme tokens"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/39163dd30f703a79079e2d2446545cff3c453738/packages/client/ui-theme/src/theme-settings.ts",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "System theme preference"
+        }
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "corrections": [
+    "Theme preference defaults to system, not necessarily light. A chosen workspace and live provider catalog affect which controls and options appear; exact user state and responsive rendering remain unverified."
+  ]
+}

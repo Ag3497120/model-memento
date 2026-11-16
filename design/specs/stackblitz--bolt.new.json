@@ -1,0 +1,401 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "stackblitz--bolt.new",
+  "name": "Bolt.new",
+  "vendor": "StackBlitz",
+  "kind": "web-builder",
+  "versions": [
+    {
+      "id": "stackblitz--bolt.new-init",
+      "from": "2024-09",
+      "to": "2024-12",
+      "regions": [
+        {
+          "name": "header",
+          "position": "top",
+          "size": "54px",
+          "contents": [
+            "ヘッダーは54px。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss)"
+          ],
+          "contents_en": [
+            "The header is 54px high. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss)"
+          ]
+        },
+        {
+          "name": "intro and composer",
+          "position": "center",
+          "size": "37rem max; textarea min-height 76px",
+          "contents": [
+            "見出し、説明、入力欄と5件の例。イントロは上から26vh。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+          ],
+          "contents_en": [
+            "Heading, subtitle, composer and five examples; intro begins at 26vh. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left overlay",
+          "size": "350px",
+          "contents": [
+            "履歴メニューは初期状態で閉じている。Logoutがある。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)"
+          ],
+          "contents_en": [
+            "The history menu starts closed. It includes Logout. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)"
+          ]
+        },
+        {
+          "name": "workbench",
+          "position": "right after chat starts",
+          "size": "min(calc(100% - 640px), 1536px)",
+          "contents": [
+            "会話開始後にCode / PreviewとToggle Terminalを表示できる。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/workbench/Workbench.client.tsx) (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss)"
+          ],
+          "contents_en": [
+            "After chat begins, a workbench can show Code / Preview and Toggle Terminal. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/workbench/Workbench.client.tsx) (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enhance prompt",
+          "where": "composer",
+          "purpose": "入力内容を改善する。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)",
+          "purpose_en": "Enhances the prompt. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+        },
+        {
+          "label": "Start new chat",
+          "where": "sidebar",
+          "purpose": "新しい会話を始める。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)",
+          "purpose_en": "Starts a new conversation. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)"
+        },
+        {
+          "label": "Code / Preview",
+          "where": "workbench",
+          "purpose": "作業表示を切り替える。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/workbench/Workbench.client.tsx)",
+          "purpose_en": "Switches workbench views. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/workbench/Workbench.client.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#FAFAFA",
+          "text": "#0A0A0A",
+          "muted": "#737373",
+          "accent": "#2BA6FF",
+          "border": "#1717171A",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0A0A0A",
+          "panel": "#171717",
+          "text": "#FFFFFF",
+          "muted": "#737373",
+          "accent": "#2BA6FF",
+          "border": "#FFFFFF1A",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss",
+          "primitives": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/uno.config.ts",
+          "theme_selection": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/root.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif",
+        "source": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/root.tsx"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": "comfortable",
+        "input_shape": "rounded rectangle",
+        "source": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx"
+      },
+      "empty_state": "Where ideas begin",
+      "empty_state_source": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx",
+      "distinctive": [
+        "入力欄の下に5件の例が並ぶ。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)",
+        "履歴メニューにはYour ChatsとNo previous conversationsがある。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)"
+      ],
+      "distinctive_en": [
+        "Five example prompts appear under the composer. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)",
+        "The history menu includes Your Chats and No previous conversations. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "入力欄、見出し、例文、開始前後の配置。",
+          "shows_en": "Composer, heading, examples and pre/post-start layout."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/sidebar/Menu.client.tsx",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "履歴メニュー、幅と操作。",
+          "shows_en": "History menu, width and controls."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/header/Header.tsx",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "ヘッダーの高さと構成。",
+          "shows_en": "Header structure and height token."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/workbench/Workbench.client.tsx",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "Code / Previewと端末操作。",
+          "shows_en": "Code / Preview and terminal control."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/styles/variables.scss",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "テーマの役割と寸法。",
+          "shows_en": "Theme roles and dimensions."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/uno.config.ts",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "色の数値。",
+          "shows_en": "Color primitives."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/root.tsx",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "保存済みまたはシステム設定によるテーマ選択。",
+          "shows_en": "Theme selection from saved or system preference."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/lib/stores/theme.ts",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "ライトのフォールバック。",
+          "shows_en": "Light fallback."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/lib/.server/llm/model.ts",
+          "date": "2024-09-30",
+          "kind": "source",
+          "shows": "サーバー側の固定モデル。",
+          "shows_en": "Server-side fixed model."
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "stackblitz--bolt.new-record",
+      "from": "2024-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "header",
+          "position": "top",
+          "size": "54px",
+          "contents": [
+            "ヘッダーは54px。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss)"
+          ],
+          "contents_en": [
+            "The header is 54px high. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss)"
+          ]
+        },
+        {
+          "name": "intro and composer",
+          "position": "center",
+          "size": "37rem max; textarea min-height 76px",
+          "contents": [
+            "見出し、説明、入力欄と5件の例。イントロは上から26vh。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)"
+          ],
+          "contents_en": [
+            "Heading, subtitle, composer and five examples; intro begins at 26vh. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left overlay",
+          "size": "350px",
+          "contents": [
+            "履歴メニューは初期状態で閉じている。Logoutはない。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+          ],
+          "contents_en": [
+            "The history menu starts closed. It has no Logout control. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+          ]
+        },
+        {
+          "name": "workbench",
+          "position": "right after chat starts",
+          "size": "min(calc(100% - 640px), 1536px)",
+          "contents": [
+            "会話開始後にCode / PreviewとToggle Terminalを表示できる。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/workbench/Workbench.client.tsx) (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss)"
+          ],
+          "contents_en": [
+            "After chat begins, a workbench can show Code / Preview and Toggle Terminal. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/workbench/Workbench.client.tsx) (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enhance prompt",
+          "where": "composer",
+          "purpose": "入力内容を改善する。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)",
+          "purpose_en": "Enhances the prompt. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)"
+        },
+        {
+          "label": "Start new chat",
+          "where": "sidebar",
+          "purpose": "新しい会話を始める。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)",
+          "purpose_en": "Starts a new conversation. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+        },
+        {
+          "label": "Code / Preview",
+          "where": "workbench",
+          "purpose": "作業表示を切り替える。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/workbench/Workbench.client.tsx)",
+          "purpose_en": "Switches workbench views. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/workbench/Workbench.client.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#FAFAFA",
+          "text": "#0A0A0A",
+          "muted": "#737373",
+          "accent": "#2BA6FF",
+          "border": "#1717171A",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0A0A0A",
+          "panel": "#171717",
+          "text": "#FFFFFF",
+          "muted": "#737373",
+          "accent": "#2BA6FF",
+          "border": "#FFFFFF1A",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss",
+          "primitives": "https://github.com/stackblitz/bolt.new/blob/eda10b1/uno.config.ts",
+          "theme_selection": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/root.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif",
+        "source": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/root.tsx"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": "comfortable",
+        "input_shape": "rounded rectangle",
+        "source": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx"
+      },
+      "empty_state": "Where ideas begin",
+      "empty_state_source": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx",
+      "distinctive": [
+        "入力欄の下に5件の例が並ぶ。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)",
+        "履歴メニューにはYour ChatsとNo previous conversationsがある。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+      ],
+      "distinctive_en": [
+        "Five example prompts appear under the composer. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)",
+        "The history menu includes Your Chats and No previous conversations. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "入力欄、見出し、例文、開始前後の配置。",
+          "shows_en": "Composer, heading, examples and pre/post-start layout."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "履歴メニュー、幅と操作。",
+          "shows_en": "History menu, width and controls."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/header/Header.tsx",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "ヘッダーの高さと構成。",
+          "shows_en": "Header structure and height token."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/workbench/Workbench.client.tsx",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "Code / Previewと端末操作。",
+          "shows_en": "Code / Preview and terminal control."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/styles/variables.scss",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "テーマの役割と寸法。",
+          "shows_en": "Theme roles and dimensions."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/uno.config.ts",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "色の数値。",
+          "shows_en": "Color primitives."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/root.tsx",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "保存済みまたはシステム設定によるテーマ選択。",
+          "shows_en": "Theme selection from saved or system preference."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/lib/stores/theme.ts",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "ライトのフォールバック。",
+          "shows_en": "Light fallback."
+        },
+        {
+          "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/lib/.server/llm/model.ts",
+          "date": "2024-12-17",
+          "kind": "source",
+          "shows": "サーバー側の固定モデル。",
+          "shows_en": "Server-side fixed model."
+        }
+      ],
+      "confidence": 0.88
+    }
+  ]
+}

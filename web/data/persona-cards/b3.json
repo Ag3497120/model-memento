@@ -382,11 +382,17 @@
         "schema": "memento.persona-card.v1",
         "model_id": "llama-4-maverick",
         "q": "得意なことは？",
-        "a_ja": "私の得意なことは記録では確認できません。モデルの出典から提供元の資料を確認してください。",
-        "kind": "unknown",
-        "fact_keys": [],
-        "fact_values": {},
-        "sources": [],
+        "a_ja": "私の得意なこととして、The instruction-tuned model supports dialogue with text and image inputという記録があります。",
+        "kind": "self_strengths",
+        "fact_keys": [
+          "persona.typical_strengths.0"
+        ],
+        "fact_values": {
+          "persona.typical_strengths.0": "The instruction-tuned model supports dialogue with text and image input."
+        },
+        "sources": [
+          "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+        ],
         "written_by": "record-template",
         "reviewed": true
       },
@@ -436,16 +442,19 @@
         "schema": "memento.persona-card.v1",
         "model_id": "llama-4-maverick",
         "q": "前のモデルは？",
-        "a_ja": "私の前のモデルはllama-3.1-405bと記録されています。",
+        "a_ja": "私の前のモデルはLlama 3.1 405Bと記録されています。",
         "kind": "self_predecessor",
         "fact_keys": [
-          "predecessor"
+          "predecessor",
+          "relations.predecessor.name"
         ],
         "fact_values": {
-          "predecessor": "llama-3.1-405b"
+          "predecessor": "llama-3.1-405b",
+          "relations.predecessor.name": "Llama 3.1 405B"
         },
         "sources": [
-          "https://github.com/meta-llama"
+          "https://github.com/meta-llama",
+          "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
         ],
         "written_by": "record-template",
         "reviewed": true

@@ -1,5 +1,24 @@
 import { el } from '../dom.js';
 import { tr, pick } from '../i18n.js';
+import * as w2_chatgptnextweb__nextchat from './chatgptnextweb--nextchat.js';
+import * as w2_librechat_ai__librechat from './librechat-ai--librechat.js';
+import * as w2_mintplex_labs__anything_llm from './mintplex-labs--anything-llm.js';
+import * as w2_chatboxai__chatbox from './chatboxai--chatbox.js';
+import * as w2_langflow_ai__langflow from './langflow-ai--langflow.js';
+import * as w2_openhands__openhands from './openhands--openhands.js';
+import * as w2_aaif_goose__goose from './aaif-goose--goose.js';
+import * as w2_roocodeinc__roo_code from './roocodeinc--roo-code.js';
+import * as w2_voideditor__void from './voideditor--void.js';
+import * as w2_qwenlm__qwen_code from './qwenlm--qwen-code.js';
+import * as w3_stackblitz__bolt_new from './stackblitz--bolt.new.js';
+import * as w3_kilo_org__kilocode from './kilo-org--kilocode.js';
+import * as w3_codota__tabnine from './codota--tabnine.js';
+import * as w3_aws__amazon_q_developer_cli from './aws--amazon-q-developer-cli.js';
+import * as w3_superagent_ai__grok_cli from './superagent-ai--grok-cli.js';
+import * as w3_openinterpreter__openinterpreter from './openinterpreter--openinterpreter.js';
+import * as w3_sourcegraph__cody_public_snapshot from './sourcegraph--cody-public-snapshot.js';
+import * as w3_farion1231__cc_switch from './farion1231--cc-switch.js';
+import * as w3_huggingface__smolagents from './huggingface--smolagents.js';
 import * as chatgpt from './chatgpt.js';
 import * as playground from './playground.js';
 import * as claude from './claude.js';
@@ -55,6 +74,25 @@ const renderers = {
   'n8n': n8n,
   'ollama': ollama,
   'zed': zed,
+  'stackblitz--bolt.new': w3_stackblitz__bolt_new,
+  'kilo-org--kilocode': w3_kilo_org__kilocode,
+  'codota--tabnine': w3_codota__tabnine,
+  'aws--amazon-q-developer-cli': w3_aws__amazon_q_developer_cli,
+  'superagent-ai--grok-cli': w3_superagent_ai__grok_cli,
+  'openinterpreter--openinterpreter': w3_openinterpreter__openinterpreter,
+  'sourcegraph--cody-public-snapshot': w3_sourcegraph__cody_public_snapshot,
+  'farion1231--cc-switch': w3_farion1231__cc_switch,
+  'huggingface--smolagents': w3_huggingface__smolagents,
+  'chatgptnextweb--nextchat': w2_chatgptnextweb__nextchat,
+  'librechat-ai--librechat': w2_librechat_ai__librechat,
+  'mintplex-labs--anything-llm': w2_mintplex_labs__anything_llm,
+  'chatboxai--chatbox': w2_chatboxai__chatbox,
+  'langflow-ai--langflow': w2_langflow_ai__langflow,
+  'openhands--openhands': w2_openhands__openhands,
+  'aaif-goose--goose': w2_aaif_goose__goose,
+  'roocodeinc--roo-code': w2_roocodeinc__roo_code,
+  'voideditor--void': w2_voideditor__void,
+  'qwenlm--qwen-code': w2_qwenlm__qwen_code,
   'cherry-studio': cherryStudio,
   'antigravity': antigravity,
   'nousresearch--hermes-agent': hermesAgent,

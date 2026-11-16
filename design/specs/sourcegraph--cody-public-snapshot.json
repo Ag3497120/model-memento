@@ -1,0 +1,1055 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "sourcegraph--cody-public-snapshot",
+  "name": "Sourcegraph Cody",
+  "vendor": "Sourcegraph",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "sourcegraph--cody-public-snapshot-2023-07-0",
+      "from": "2023-07-11",
+      "to": "2025-03-28",
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and Recipes navigation above an expanding transcript with greeting and recipe buttons; chat input beneath. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/lib/ui/src/Chat.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and Recipes navigation above an expanding transcript with greeting and recipe buttons; chat input beneath. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/lib/ui/src/Chat.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx"
+        },
+        {
+          "label": "Recipes",
+          "where": "Cody panel",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx"
+        },
+        {
+          "label": "Explain code (high level)",
+          "where": "Cody panel",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx"
+        },
+        {
+          "label": "Smell code",
+          "where": "Cody panel",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx"
+        },
+        {
+          "label": "Generate a unit test",
+          "where": "Cody panel",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "Hello! I'm Cody. I can write code and answer questions for you. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/lib/ui/src/Chat.tsx)",
+      "distinctive": [
+        "初期のChatとRecipesのタブ、挨拶と3つのレシピ。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "Early Chat and Recipes tabs, greeting, and three recipe shortcuts. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Recipe shortcuts and help text.",
+          "shows_en": "Recipe shortcuts and help text."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/lib/ui/src/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Greeting and chat form.",
+          "shows_en": "Greeting and chat form."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/NavBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Recipes tabs.",
+          "shows_en": "Chat and Recipes tabs."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v0.4.3/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example modern VS Code dark theme, not the 2023 default.",
+          "shows_en": "Example modern VS Code dark theme, not the 2023 default."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "sourcegraph--cody-public-snapshot-2025-03-1",
+      "from": "2025-03-28",
+      "to": "2025-04-21",
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is conditional in place of New Chat; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is conditional in place of New Chat; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "History",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "New Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Insert prompt",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Chat mode",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Send",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": null,
+        "input_shape": "Input uses 4px radius and VS Code input background/border variables. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css)"
+      },
+      "empty_state": "Recommended prompt chips are loaded dynamically; Loading... is shown while waiting. Exact items depend on data. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/components/WelcomeMessage.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/components/promptList/PromptList.tsx)",
+      "distinctive": [
+        "プロンプト一覧と会話欄の入力ツールバーを表示。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "Prompt list and composer toolbar appear in the chat panel. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and welcome composition.",
+          "shows_en": "Chat and welcome composition."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/tabs/TabsBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Navigation and new chat actions.",
+          "shows_en": "Navigation and new chat actions."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/HumanMessageCell.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "First-message placeholder.",
+          "shows_en": "First-message placeholder."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer toolbar and model selector placement.",
+          "shows_en": "Composer toolbar and model selector placement."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four-pixel input radius and theme variables.",
+          "shows_en": "Four-pixel input radius and theme variables."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/components/modelSelectField/ModelSelectField.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection behavior.",
+          "shows_en": "Model selection behavior."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example VS Code Dark Modern values.",
+          "shows_en": "Example VS Code Dark Modern values."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/components/WelcomeMessage.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four recommended prompt chips and last conversation, when available.",
+          "shows_en": "Four recommended prompt chips and last conversation, when available."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/components/promptList/PromptList.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Loading state and dynamically supplied prompt items.",
+          "shows_en": "Loading state and dynamically supplied prompt items."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/SubmitButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Send and Stop button titles.",
+          "shows_en": "Send and Stop button titles."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.80.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/ModeSelectorButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Agent mode labels.",
+          "shows_en": "Chat and Agent mode labels."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "sourcegraph--cody-public-snapshot-2025-04-2",
+      "from": "2025-04-21",
+      "to": "2025-05-28",
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "History",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "New Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Insert prompt",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Chat mode",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Send",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": null,
+        "input_shape": "Input uses 4px radius and VS Code input background/border variables. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css)"
+      },
+      "empty_state": "Recommended prompt chips are loaded dynamically; Loading... is shown while waiting. Exact items depend on data. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/components/WelcomeMessage.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/components/promptList/PromptList.tsx)",
+      "distinctive": [
+        "New ChatとOpen in Editorを別の操作として表示。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "New Chat and Open in Editor are separate actions. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and welcome composition.",
+          "shows_en": "Chat and welcome composition."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/tabs/TabsBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Navigation and new chat actions.",
+          "shows_en": "Navigation and new chat actions."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/HumanMessageCell.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "First-message placeholder.",
+          "shows_en": "First-message placeholder."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer toolbar and model selector placement.",
+          "shows_en": "Composer toolbar and model selector placement."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four-pixel input radius and theme variables.",
+          "shows_en": "Four-pixel input radius and theme variables."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/components/modelSelectField/ModelSelectField.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection behavior.",
+          "shows_en": "Model selection behavior."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example VS Code Dark Modern values.",
+          "shows_en": "Example VS Code Dark Modern values."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/components/WelcomeMessage.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four recommended prompt chips and last conversation, when available.",
+          "shows_en": "Four recommended prompt chips and last conversation, when available."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/components/promptList/PromptList.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Loading state and dynamically supplied prompt items.",
+          "shows_en": "Loading state and dynamically supplied prompt items."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/SubmitButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Send and Stop button titles.",
+          "shows_en": "Send and Stop button titles."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.86.1/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/ModeSelectorButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Agent mode labels.",
+          "shows_en": "Chat and Agent mode labels."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "sourcegraph--cody-public-snapshot-2025-05-3",
+      "from": "2025-05-28",
+      "to": "2025-06-27",
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and History navigation above a flexible transcript and input; a separate recommended-prompt area follows the transcript; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "History",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "New Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Insert prompt",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Chat mode",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Send",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": null,
+        "input_shape": "Input uses 4px radius and VS Code input background/border variables. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css)"
+      },
+      "empty_state": "Recommended prompt chips are loaded dynamically; Loading... is shown while waiting. Exact items depend on data. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/components/WelcomeMessage.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/components/promptList/PromptList.tsx)",
+      "distinctive": [
+        "ナビゲーションからPromptsタブがなくなり、歓迎欄は残る。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "The Prompts navigation tab is absent while the welcome area remains. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and welcome composition.",
+          "shows_en": "Chat and welcome composition."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/tabs/TabsBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Navigation and new chat actions.",
+          "shows_en": "Navigation and new chat actions."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/HumanMessageCell.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "First-message placeholder.",
+          "shows_en": "First-message placeholder."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer toolbar and model selector placement.",
+          "shows_en": "Composer toolbar and model selector placement."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four-pixel input radius and theme variables.",
+          "shows_en": "Four-pixel input radius and theme variables."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/components/modelSelectField/ModelSelectField.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection behavior.",
+          "shows_en": "Model selection behavior."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example VS Code Dark Modern values.",
+          "shows_en": "Example VS Code Dark Modern values."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/components/WelcomeMessage.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four recommended prompt chips and last conversation, when available.",
+          "shows_en": "Four recommended prompt chips and last conversation, when available."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/components/promptList/PromptList.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Loading state and dynamically supplied prompt items.",
+          "shows_en": "Loading state and dynamically supplied prompt items."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/SubmitButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Send and Stop button titles.",
+          "shows_en": "Send and Stop button titles."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.98.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/ModeSelectorButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Agent mode labels.",
+          "shows_en": "Chat and Agent mode labels."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "sourcegraph--cody-public-snapshot-2025-06-4",
+      "from": "2025-06-27",
+      "to": "2025-07-30",
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and History navigation above a flexible transcript and input; the welcome component is absent; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and History navigation above a flexible transcript and input; the welcome component is absent; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "History",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "New Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Insert prompt",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Chat mode",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Send",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": null,
+        "input_shape": "Input uses 4px radius and VS Code input background/border variables. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css)"
+      },
+      "empty_state": "No WelcomeMessage is rendered by Chat.tsx. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx)",
+      "distinctive": [
+        "歓迎用の一覧がチャット画面からなくなる。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "The welcome list is no longer rendered in the chat view. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat composition; no WelcomeMessage component.",
+          "shows_en": "Chat composition; no WelcomeMessage component."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/tabs/TabsBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Navigation and new chat actions.",
+          "shows_en": "Navigation and new chat actions."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/HumanMessageCell.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "First-message placeholder.",
+          "shows_en": "First-message placeholder."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer toolbar and model selector placement.",
+          "shows_en": "Composer toolbar and model selector placement."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four-pixel input radius and theme variables.",
+          "shows_en": "Four-pixel input radius and theme variables."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/components/modelSelectField/ModelSelectField.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection behavior.",
+          "shows_en": "Model selection behavior."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example VS Code Dark Modern values.",
+          "shows_en": "Example VS Code Dark Modern values."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/SubmitButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Send and Stop button titles.",
+          "shows_en": "Send and Stop button titles."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.106.2/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/ModeSelectorButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Agent mode labels.",
+          "shows_en": "Chat and Agent mode labels."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "sourcegraph--cody-public-snapshot-record",
+      "from": "2025-07-30",
+      "to": null,
+      "regions": [
+        {
+          "name": "Cody panel",
+          "position": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "Chat and History navigation above a flexible transcript and input; the welcome component is absent; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx)"
+          ],
+          "contents_en": [
+            "Chat and History navigation above a flexible transcript and input; the welcome component is absent; Open in Editor is a separate action; panel width is unverified. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "History",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "New Chat",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Insert prompt",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Chat mode",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        },
+        {
+          "label": "Send",
+          "where": "Cody panel / composer",
+          "purpose": "UI control; https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx and https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Illustrative VS Code 1.98 Dark Modern, not a fixed Cody palette. Cody uses host theme variables: https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/index.css. 2023 default unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": null,
+        "input_shape": "Input uses 4px radius and VS Code input background/border variables. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css)"
+      },
+      "empty_state": "No WelcomeMessage is rendered by Chat.tsx. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx)",
+      "distinctive": [
+        "歓迎一覧のない会話画面と入力欄のモデル選択を継続。 (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx)"
+      ],
+      "distinctive_en": [
+        "The chat view continues without the welcome list, with model selection in the composer. (https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/Chat.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat composition; no WelcomeMessage component.",
+          "shows_en": "Chat composition; no WelcomeMessage component."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/tabs/TabsBar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Navigation and new chat actions.",
+          "shows_en": "Navigation and new chat actions."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/HumanMessageCell.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "First-message placeholder.",
+          "shows_en": "First-message placeholder."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/Toolbar.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer toolbar and model selector placement.",
+          "shows_en": "Composer toolbar and model selector placement."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/HumanMessageEditor.module.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "Four-pixel input radius and theme variables.",
+          "shows_en": "Four-pixel input radius and theme variables."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/components/modelSelectField/ModelSelectField.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection behavior.",
+          "shows_en": "Model selection behavior."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/index.css",
+          "kind": "repository",
+          "date": null,
+          "shows": "VS Code theme variables.",
+          "shows_en": "VS Code theme variables."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/1.98.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "Example VS Code Dark Modern values.",
+          "shows_en": "Example VS Code Dark Modern values."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/SubmitButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Send and Stop button titles.",
+          "shows_en": "Send and Stop button titles."
+        },
+        {
+          "url": "https://github.com/sourcegraph/cody-public-snapshot/blob/vscode-v1.116.0/vscode/webviews/chat/cells/messageCell/human/editor/toolbar/ModeSelectorButton.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat and Agent mode labels.",
+          "shows_en": "Chat and Agent mode labels."
+        }
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "corrections": [
+    "版ごとの固定幅と利用可能なモデルは未確認。"
+  ],
+  "corrections_en": [
+    "Exact panel widths and available models for each edition are unverified."
+  ]
+}

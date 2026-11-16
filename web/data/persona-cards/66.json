@@ -17,8 +17,9 @@
           "vendor": "Google"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
-          "https://ai.google.dev/gemini-api/docs/deprecations"
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations",
+          "https://aistudio.google.com/docs/deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -36,8 +37,9 @@
           "vendor": "Google"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
-          "https://ai.google.dev/gemini-api/docs/deprecations"
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations",
+          "https://aistudio.google.com/docs/deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -55,7 +57,7 @@
           "release": "2025-06-17"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
           "https://ai.google.dev/gemini-api/docs/deprecations"
         ],
         "written_by": "record-template",
@@ -74,7 +76,7 @@
           "specs.knowledge_cutoff": "2025-01"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
           "https://ai.google.dev/gemini-api/docs/deprecations"
         ],
         "written_by": "record-template",
@@ -84,11 +86,18 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gemini-2.5-pro-ga",
         "q": "コンテキスト長は？",
-        "a_ja": "私の一度に扱える文章の長さは記録では確認できません。モデルの出典から提供元の資料を確認してください。",
-        "kind": "unknown",
-        "fact_keys": [],
-        "fact_values": {},
-        "sources": [],
+        "a_ja": "私の一度に扱える文章の長さの上限は1,048,576トークン（文章を数える単位）と記録されています。",
+        "kind": "self_context",
+        "fact_keys": [
+          "specs.context_tokens"
+        ],
+        "fact_values": {
+          "specs.context_tokens": 1048576
+        },
+        "sources": [
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations"
+        ],
         "written_by": "record-template",
         "reviewed": true
       },
@@ -96,11 +105,18 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gemini-2.5-pro-ga",
         "q": "一度に出せる長さは？",
-        "a_ja": "私の一度に返せる文章の長さは記録では確認できません。モデルの出典から提供元の資料を確認してください。",
-        "kind": "unknown",
-        "fact_keys": [],
-        "fact_values": {},
-        "sources": [],
+        "a_ja": "私の一度に返せる文章の長さの上限は65,536トークン（文章を数える単位）と記録されています。",
+        "kind": "self_output",
+        "fact_keys": [
+          "specs.max_output_tokens"
+        ],
+        "fact_values": {
+          "specs.max_output_tokens": 65536
+        },
+        "sources": [
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations"
+        ],
         "written_by": "record-template",
         "reviewed": true
       },
@@ -219,8 +235,9 @@
           "family": "Google"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
-          "https://ai.google.dev/gemini-api/docs/deprecations"
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations",
+          "https://aistudio.google.com/docs/deprecations"
         ],
         "written_by": "record-template",
         "reviewed": true
@@ -238,7 +255,7 @@
           "status": "deprecated"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
           "https://ai.google.dev/gemini-api/docs/deprecations"
         ],
         "written_by": "record-template",
@@ -272,11 +289,18 @@
         "schema": "memento.persona-card.v1",
         "model_id": "gemini-2.5-pro-ga",
         "q": "What is your context window?",
-        "a_ja": "私の一度に扱える文章の長さは記録では確認できません。モデルの出典から提供元の資料を確認してください。",
-        "kind": "unknown",
-        "fact_keys": [],
-        "fact_values": {},
-        "sources": [],
+        "a_ja": "私の一度に扱える文章の長さの上限は1,048,576トークン（文章を数える単位）と記録されています。",
+        "kind": "self_context",
+        "fact_keys": [
+          "specs.context_tokens"
+        ],
+        "fact_values": {
+          "specs.context_tokens": 1048576
+        },
+        "sources": [
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+          "https://ai.google.dev/gemini-api/docs/deprecations"
+        ],
         "written_by": "record-template",
         "reviewed": true
       },
@@ -293,7 +317,7 @@
           "release": "2025-06-17"
         },
         "sources": [
-          "https://aistudio.google.com/docs/deprecations",
+          "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
           "https://ai.google.dev/gemini-api/docs/deprecations"
         ],
         "written_by": "record-template",

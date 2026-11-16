@@ -585,11 +585,11 @@
    "q": "What is your personality?",
    "expected": {
     "kinds": [
-     "self_personality"
+     "unknown"
     ],
     "values": [],
-    "unknown": false,
-    "sourcesRequired": true,
+    "unknown": true,
+    "sourcesRequired": false,
     "firstPerson": true
    }
   },
@@ -632,6 +632,11 @@
    "id": "en39",
    "at": "2026-11-16",
    "reason": "E6 added English (value_en) for the researched strengths trait; expected answer changed from unknown to self_strengths."
+  },
+  {
+   "id": "en38",
+   "at": "2026-11-16",
+   "reason": "Exact-ID persona now takes precedence over the older provider-prefixed match. Its tone is unverified, so both answer paths correctly abstain rather than attribute the other record’s trait."
   }
  ]
 }

@@ -1,0 +1,789 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "kilo-org--kilocode",
+  "name": "Kilo Code",
+  "vendor": "Kilo",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "kilo-org--kilocode-2026-02-0",
+      "from": "2026-02-23",
+      "to": null,
+      "regions": [
+        {
+          "name": "terminal home",
+          "name_en": "terminal home",
+          "position": "center",
+          "position_en": "center",
+          "size": "maximum 75 terminal columns",
+          "contents": [
+            "Centered prompt, optional news and tips; working directory and version in footer (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/routes/home.tsx)"
+          ],
+          "contents_en": [
+            "Centered prompt, optional news and tips; working directory and version in footer (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/routes/home.tsx)"
+          ]
+        },
+        {
+          "name": "prompt",
+          "name_en": "prompt",
+          "position": "center",
+          "position_en": "center",
+          "size": "one to six text rows",
+          "contents": [
+            "Input above agent and current model (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)"
+          ],
+          "contents_en": [
+            "Input above agent and current model (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ask anything... \"Fix broken tests\"",
+          "label_en": "Ask anything... \"Fix broken tests\"",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx"
+        },
+        {
+          "label": "Switch model",
+          "label_en": "Switch model",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/app.tsx"
+        },
+        {
+          "label": "/models",
+          "label_en": "/models",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/app.tsx"
+        },
+        {
+          "label": "Select model",
+          "label_en": "Select model",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/dialog-model.tsx"
+        },
+        {
+          "label": "Connect provider",
+          "label_en": "Connect provider",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/dialog-model.tsx"
+        },
+        {
+          "label": "Favorite",
+          "label_en": "Favorite",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/dialog-model.tsx"
+        },
+        {
+          "label": "Switch agent",
+          "label_en": "Switch agent",
+          "source": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/app.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#616161",
+          "muted": "#717171",
+          "accent": "#0090f1",
+          "border": "#cecece",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#252526",
+          "text": "#cccccc",
+          "muted": "#858585",
+          "accent": "#007fd4",
+          "border": "#3c3c3c",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/context/theme/kilo.json",
+          "note": "Default kilo theme selected by https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/context/theme.tsx; prompt uses backgroundElement #2d2d30 and primary #faf74f."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "unverified"
+      },
+      "empty_state": "Prompt example: Ask anything... \"Fix broken tests\" (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)",
+      "distinctive": [
+        "Centered terminal prompt max width 75 columns; logo omitted (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/routes/home.tsx)",
+        "Model and agent below prompt (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)",
+        "Default agent Code is defined in https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/agent/agent.ts"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Kilo-Org/kilo/releases/tag/v1.0.25",
+          "kind": "source",
+          "date": null,
+          "shows": "Catalog release and source revision"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/routes/home.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/app.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/dialog-model.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/context/theme.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/context/theme/kilo.json",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        }
+      ],
+      "confidence": 0.8,
+      "distinctive_en": [
+        "Centered terminal prompt max width 75 columns; logo omitted (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/routes/home.tsx)",
+        "Model and agent below prompt (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)",
+        "Default agent Code is defined in https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/agent/agent.ts"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "conversation_en": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "empty_state_en": "Prompt example: Ask anything... \"Fix broken tests\" (https://github.com/Kilo-Org/kilo/blob/v1.0.25/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx)"
+    },
+    {
+      "id": "kilo-org--kilocode-2026-09-1",
+      "from": "2026-09-28",
+      "to": null,
+      "regions": [
+        {
+          "name": "session",
+          "name_en": "session",
+          "position": "IDE tool window",
+          "position_en": "IDE tool window",
+          "size": null,
+          "contents": [
+            "Welcome text and conversation with prompt below (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties)"
+          ],
+          "contents_en": [
+            "Welcome text and conversation with prompt below (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties)"
+          ]
+        },
+        {
+          "name": "prompt",
+          "name_en": "prompt",
+          "position": "bottom",
+          "position_en": "bottom",
+          "size": null,
+          "contents": [
+            "Editor above mode, model and reasoning selectors, menu, enhancement and send controls (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt)"
+          ],
+          "contents_en": [
+            "Editor above mode, model and reasoning selectors, menu, enhancement and send controls (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Session",
+          "label_en": "New Session",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "History",
+          "label_en": "History",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "New Worktree",
+          "label_en": "New Worktree",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Settings",
+          "label_en": "Settings",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Type here; use / or @, drop/paste files",
+          "label_en": "Type here; use / or @, drop/paste files",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Select mode",
+          "label_en": "Select mode",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Select model",
+          "label_en": "Select model",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Select reasoning effort",
+          "label_en": "Select reasoning effort",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Session menu",
+          "label_en": "Session menu",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Enhance prompt",
+          "label_en": "Enhance prompt",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        },
+        {
+          "label": "Send",
+          "label_en": "Send",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties"
+        }
+      ],
+      "conversation": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt",
+          "note": "Host theme colors vary; exact host defaults unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "unverified"
+      },
+      "empty_state": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties)",
+      "distinctive": [
+        "Native JetBrains prompt places mode, model and reasoning controls below the editor (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/jetbrains%2Fv7.1.9-rc.1",
+          "kind": "source",
+          "date": null,
+          "shows": "Catalog release and source revision"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        }
+      ],
+      "confidence": 0.65,
+      "distinctive_en": [
+        "Native JetBrains prompt places mode, model and reasoning controls below the editor (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/kotlin/ai/kilocode/client/session/ui/prompt/PromptPanel.kt)"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "conversation_en": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "empty_state_en": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/2ccf28e/packages/kilo-jetbrains/frontend/src/main/resources/messages/KiloBundle.properties)"
+    },
+    {
+      "id": "kilo-org--kilocode-2026-10-2",
+      "from": "2026-10-28",
+      "to": null,
+      "regions": [
+        {
+          "name": "chat sidebar",
+          "name_en": "chat sidebar",
+          "position": "IDE sidebar",
+          "position_en": "IDE sidebar",
+          "size": "flex column; readable width 98ch and responsive gutter",
+          "contents": [
+            "Welcome, conversation and bottom composer (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css)"
+          ],
+          "contents_en": [
+            "Welcome, conversation and bottom composer (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css)"
+          ]
+        },
+        {
+          "name": "welcome",
+          "name_en": "welcome",
+          "position": "center",
+          "position_en": "center",
+          "size": "about text max-width 260px",
+          "contents": [
+            "Welcome text and Feedback & Support; conditional recent sessions (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)"
+          ],
+          "contents_en": [
+            "Welcome text and Feedback & Support; conditional recent sessions (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)"
+          ]
+        },
+        {
+          "name": "prompt",
+          "name_en": "prompt",
+          "position": "bottom",
+          "position_en": "bottom",
+          "size": "6px minimum gutter",
+          "contents": [
+            "Input, mode, model and reasoning controls (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)"
+          ],
+          "contents_en": [
+            "Input, mode, model and reasoning controls (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Task",
+          "label_en": "New Task",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "History",
+          "label_en": "History",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Agent Manager",
+          "label_en": "Agent Manager",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Settings",
+          "label_en": "Settings",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Feedback & Support",
+          "label_en": "Feedback & Support",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Type a message, @ to mention files... (Enter to send, Shift+Enter for new line)",
+          "label_en": "Type a message, @ to mention files... (Enter to send, Shift+Enter for new line)",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Select model",
+          "label_en": "Select model",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Reasoning effort",
+          "label_en": "Reasoning effort",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "More actions",
+          "label_en": "More actions",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Enhance prompt",
+          "label_en": "Enhance prompt",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Send",
+          "label_en": "Send",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        }
+      ],
+      "conversation": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css",
+          "note": "Host theme colors vary; exact host defaults unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 6,
+        "density": "compact",
+        "input_shape": "unverified"
+      },
+      "empty_state": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts)",
+      "distinctive": [
+        "Centered about text and feedback action (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)",
+        "Model selector beneath the prompt (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)",
+        "Workspace scope hint is conditional on a multi-folder workspace (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WorkspaceScopeHint.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.25",
+          "kind": "release",
+          "date": "2026-10-28",
+          "shows": "CLI release at b3b2f3d; VS Code source below is contemporaneous context, not evidence of a VS Code release."
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/SidebarTopBar.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/welcome.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/styles/prompt-input.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        }
+      ],
+      "confidence": 0.7,
+      "distinctive_en": [
+        "Centered about text and feedback action (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)",
+        "Model selector beneath the prompt (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)",
+        "Workspace scope hint is conditional on a multi-folder workspace (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/components/chat/WorkspaceScopeHint.tsx)"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "conversation_en": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "empty_state_en": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/b3b2f3d/packages/kilo-vscode/webview-ui/src/i18n/en.ts)"
+    },
+    {
+      "id": "kilo-org--kilocode-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "chat sidebar",
+          "name_en": "chat sidebar",
+          "position": "IDE sidebar",
+          "position_en": "IDE sidebar",
+          "size": "flex column; readable width 98ch and responsive gutter",
+          "contents": [
+            "Welcome, conversation and bottom composer (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css)"
+          ],
+          "contents_en": [
+            "Welcome, conversation and bottom composer (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css)"
+          ]
+        },
+        {
+          "name": "welcome",
+          "name_en": "welcome",
+          "position": "center",
+          "position_en": "center",
+          "size": "about text max-width 260px",
+          "contents": [
+            "Welcome text and Feedback & Support; conditional recent sessions (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)"
+          ],
+          "contents_en": [
+            "Welcome text and Feedback & Support; conditional recent sessions (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)"
+          ]
+        },
+        {
+          "name": "prompt",
+          "name_en": "prompt",
+          "position": "bottom",
+          "position_en": "bottom",
+          "size": "6px minimum gutter",
+          "contents": [
+            "Input, mode, model and reasoning controls (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)"
+          ],
+          "contents_en": [
+            "Input, mode, model and reasoning controls (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New Task",
+          "label_en": "New Task",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "History",
+          "label_en": "History",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Agent Manager",
+          "label_en": "Agent Manager",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Settings",
+          "label_en": "Settings",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Feedback & Support",
+          "label_en": "Feedback & Support",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Type a message, @ to mention files... (Enter to send, Shift+Enter for new line)",
+          "label_en": "Type a message, @ to mention files... (Enter to send, Shift+Enter for new line)",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Select model",
+          "label_en": "Select model",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Reasoning effort",
+          "label_en": "Reasoning effort",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "More actions",
+          "label_en": "More actions",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Enhance prompt",
+          "label_en": "Enhance prompt",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        },
+        {
+          "label": "Send",
+          "label_en": "Send",
+          "source": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts"
+        }
+      ],
+      "conversation": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css",
+          "note": "Host theme colors vary; exact host defaults unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 6,
+        "density": "compact",
+        "input_shape": "unverified"
+      },
+      "empty_state": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts)",
+      "distinctive": [
+        "Centered about text and feedback action (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)",
+        "Model selector beneath the prompt (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)",
+        "Workspace scope hint is conditional on a multi-folder workspace (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WorkspaceScopeHint.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/SidebarTopBar.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/chat-layout.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/welcome.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/styles/prompt-input.css",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        },
+        {
+          "url": "https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "UI source for the edition"
+        }
+      ],
+      "confidence": 0.7,
+      "distinctive_en": [
+        "Centered about text and feedback action (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WelcomeEmptyState.tsx)",
+        "Model selector beneath the prompt (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/PromptInput.tsx)",
+        "Workspace scope hint is conditional on a multi-folder workspace (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/components/chat/WorkspaceScopeHint.tsx)"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "conversation_en": {
+        "user": "A text prompt is submitted; the active session supplies the transcript.",
+        "assistant": "Responses appear in the conversation.",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "empty_state_en": "Kilo Code is an AI coding assistant. Ask it to build features, fix bugs, or explain your codebase. (https://github.com/Kilo-Org/kilocode/blob/85eb887a7560f452211bcd382eafe8cb2f8df497/packages/kilo-vscode/webview-ui/src/i18n/en.ts)"
+    }
+  ]
+}

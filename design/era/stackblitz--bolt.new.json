@@ -1,0 +1,96 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "stackblitz--bolt.new",
+  "versions": [
+    {
+      "id": "stackblitz--bolt.new-init",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "調査した公開版のモデルはサーバー側で固定され、選択UIは確認できない。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/lib/.server/llm/model.ts) (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+        ],
+        "steps_en": [
+          "The inspected public code fixes the model server-side; a model picker is unverified in the inspected interface. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/lib/.server/llm/model.ts) (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+        ],
+        "options": [],
+        "default": "claude-3-5-sonnet-20240620",
+        "sources": [
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/lib/.server/llm/model.ts",
+            "date": "2024-09-30",
+            "shows": "サーバー側モデルの識別子。",
+            "shows_en": "Server-side model identifier."
+          },
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx",
+            "date": "2024-09-30",
+            "shows": "入力画面。",
+            "shows_en": "Composer UI."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser",
+        "date_shown": "2024-09",
+        "sources": [
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx",
+            "date": "2024-09-30",
+            "shows": "ブラウザーの会話と作業領域。",
+            "shows_en": "Browser chat and workbench."
+          }
+        ]
+      },
+      "trend": "中央の入力欄と例文から作成を始める。 (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)",
+      "trend_en": "A centered composer and examples start the build. (https://github.com/stackblitz/bolt.new/blob/ff8cd57/app/components/chat/BaseChat.tsx)"
+    },
+    {
+      "id": "stackblitz--bolt.new-record",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "調査した公開版のモデルはサーバー側で固定され、選択UIは確認できない。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/lib/.server/llm/model.ts) (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)"
+        ],
+        "steps_en": [
+          "The inspected public code fixes the model server-side; a model picker is unverified in the inspected interface. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/lib/.server/llm/model.ts) (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx)"
+        ],
+        "options": [],
+        "default": "claude-3-5-sonnet-20240620",
+        "sources": [
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/lib/.server/llm/model.ts",
+            "date": "2024-12-17",
+            "shows": "サーバー側モデルの識別子。",
+            "shows_en": "Server-side model identifier."
+          },
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx",
+            "date": "2024-12-17",
+            "shows": "入力画面。",
+            "shows_en": "Composer UI."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser",
+        "date_shown": "2024-12",
+        "sources": [
+          {
+            "url": "https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/chat/BaseChat.tsx",
+            "date": "2024-12-17",
+            "shows": "ブラウザーの会話と作業領域。",
+            "shows_en": "Browser chat and workbench."
+          }
+        ]
+      },
+      "trend": "同じ入力画面を維持し、サイドバーのLogoutが削除された。 (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)",
+      "trend_en": "The same composer remains while Logout was removed from the sidebar. (https://github.com/stackblitz/bolt.new/blob/eda10b1/app/components/sidebar/Menu.client.tsx)"
+    }
+  ]
+}

@@ -1,0 +1,2291 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "huggingface--smolagents",
+  "name": "smolagents",
+  "vendor": "Hugging Face",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "huggingface--smolagents-2024-12-0",
+      "from": "2024-12-27",
+      "to": "2024-12-31",
+      "source_ref": "v0.1.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "unverified",
+          "contents": [
+            "Agent 会話欄の下に1行の Chat Message 入力欄。 (https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Agent chat above a one-line Chat Message textbox. (https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Agent 会話欄と1行入力欄で道具の呼び出しと回答を表示。 (https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "A simple Agent chat and one-line text box stream tool calls and final answers. (https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v0.1.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2024-12-1",
+      "from": "2024-12-31",
+      "to": "2025-01-31",
+      "source_ref": "v1.0.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "unverified",
+          "contents": [
+            "Agent 会話欄の下に1行の Chat Message 入力欄。 (https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Agent chat above a one-line Chat Message textbox. (https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Agent 会話欄と1行入力欄で道具の呼び出しと回答を表示。 (https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "A simple Agent chat and one-line text box stream tool calls and final answers. (https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.0.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-01-2",
+      "from": "2025-01-31",
+      "to": "2025-02-17",
+      "source_ref": "v1.7.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "Agent 会話欄の下に1行の Chat Message 入力欄。 (https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Agent chat above a one-line Chat Message textbox. (https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "サイズ変更可能な会話欄にステップと実行ログを表示。ファイルアップロードは任意。 (https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "The resizable Agent chat includes step and execution-log messages; file upload is optional. (https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.7.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-02-3",
+      "from": "2025-02-17",
+      "to": "2025-03-20",
+      "source_ref": "v1.9.2",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "Agent 会話欄の下に1行の Chat Message 入力欄。 (https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Agent chat above a one-line Chat Message textbox. (https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "サイズ変更可能な会話欄にステップと実行ログを表示。ファイルアップロードは任意。 (https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "The resizable Agent chat includes step and execution-log messages; file upload is optional. (https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.9.2/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-03-4",
+      "from": "2025-03-20",
+      "to": "2025-04-18",
+      "source_ref": "v1.12.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.12.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-04-5",
+      "from": "2025-04-18",
+      "to": "2025-05-27",
+      "source_ref": "v1.14.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.14.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-05-6",
+      "from": "2025-05-27",
+      "to": "2025-06-24",
+      "source_ref": "v1.17.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.17.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-06-7",
+      "from": "2025-06-24",
+      "to": "2025-07-10",
+      "source_ref": "v1.19.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.19.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-07-8",
+      "from": "2025-07-10",
+      "to": "2025-08-20",
+      "source_ref": "v1.20.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.20.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-08-9",
+      "from": "2025-08-20",
+      "to": "2025-09-25",
+      "source_ref": "v1.21.2",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.21.2/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-09-10",
+      "from": "2025-09-25",
+      "to": "2025-11-17",
+      "source_ref": "v1.22.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.22.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2025-11-11",
+      "from": "2025-11-17",
+      "to": "2026-01-16",
+      "source_ref": "v1.23.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "request sidebar",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "Your request と Submit。 (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Your request, three-line input and Submit; file upload depends on configuration. (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "左に入力サイドバー、右に Agent の会話欄。3行入力と Submit。 (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "Request sidebar with a three-line textbox and Submit, alongside a resizable Agent chat. (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Chat Message",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Your request",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Submit",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "Upload a file",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py",
+          "conditional": "file_upload_folder is set"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": "linear-gradient(120deg, #0ea5e9, #6ee7b7 60%, #34d399)",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py"
+        }
+      },
+      "typography": {
+        "ui_named": "IBM Plex Sans",
+        "mono_named": "Inter",
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "three lines",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "Ocean テーマのサイドバーに3行入力欄を置く。 (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "An Ocean-themed request sidebar places the three-line composer beside the Agent chat. (https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.23.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-2026-01-12",
+      "from": "2026-01-16",
+      "to": "2026-05-29",
+      "source_ref": "v1.24.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "history",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "履歴は有効。 (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py)"
+          ],
+          "contents_en": [
+            "Saved chat history is enabled. (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py",
+            "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "履歴付き ChatInterface と Agent 会話欄。 (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "ChatInterface with saved history, title, Agent chat and composer. (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py",
+            "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "New chat",
+          "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+        },
+        {
+          "label": "Type a message...",
+          "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "独自の入力サイドバーに代わり履歴付き ChatInterface を使用。 (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "Gradio ChatInterface replaces the custom request sidebar and enables saved history. (https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.24.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "huggingface--smolagents-record",
+      "from": "2026-05-29",
+      "to": null,
+      "source_ref": "v1.26.0",
+      "source_selection": "Catalog release tag; deployed Gradio package version is unverified.",
+      "regions": [
+        {
+          "name": "history",
+          "position": "left",
+          "size": "unverified",
+          "contents": [
+            "履歴は有効。 (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py)"
+          ],
+          "contents_en": [
+            "Saved chat history is enabled. (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py",
+            "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "main",
+          "size": "scale=1; exact dimensions unverified",
+          "contents": [
+            "履歴付き ChatInterface と Agent 会話欄。 (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py)"
+          ],
+          "contents_en": [
+            "ChatInterface with saved history, title, Agent chat and composer. (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py)"
+          ],
+          "sources": [
+            "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py",
+            "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "source": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py"
+        },
+        {
+          "label": "New chat",
+          "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+        },
+        {
+          "label": "Type a message...",
+          "source": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "Used tool",
+        "streaming": "stream_to_gradio",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#bbbbc2",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py",
+          "note": "Gradio 5.14 reference only; deployed version and resulting palette unverified.",
+          "tokens": null
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "one line",
+        "source": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py",
+        "note": "No greeting is supplied by smolagents; Gradio-specific empty state is unverified."
+      },
+      "distinctive": [
+        "独自の入力サイドバーに代わり履歴付き ChatInterface を使用。 (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py)"
+      ],
+      "distinctive_en": [
+        "Gradio ChatInterface replaces the custom request sidebar and enables saved history. (https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py)"
+      ],
+      "must_not_copy": [
+        "logos, mascots, icons, screenshots, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/gradio_ui.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio layout, labels and streamed messages."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/monitoring.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Terminal metrics and logger formatting."
+        },
+        {
+          "url": "https://github.com/huggingface/smolagents/blob/v1.26.0/src/smolagents/agents.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Agent model configuration and execution log output."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/ocean.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 Ocean theme hue defaults and primary button gradient; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/themes/utils/colors.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 color token values."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/gradio/chat_interface.py",
+          "kind": "source",
+          "date": null,
+          "shows": "ソースコードを参照。",
+          "shows_en": "Gradio 5.14 ChatInterface and optional saved-history layout; installed version is not pinned."
+        },
+        {
+          "url": "https://github.com/gradio-app/gradio/blob/gradio%405.14.0/js/textbox/shared/Textbox.svelte",
+          "kind": "source",
+          "date": null,
+          "shows": "入力欄の送信キー。",
+          "shows_en": "Gradio 5.14 textbox submission keys; installed version is unverified."
+        }
+      ],
+      "confidence": 0.75
+    }
+  ]
+}

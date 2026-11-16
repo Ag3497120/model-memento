@@ -34,7 +34,7 @@ test('マトリョーシカ: 最初の問いを付けたときだけ第2層が�
   const ctx = pick('claude-opus-5-5');
   const withInitial = crossAnswer('前のモデルはいつ公開された？', ctx, { includeInitial: true });
   const without = crossAnswer('前のモデルはいつ公開された？', ctx, { includeInitial: false });
-  assert.match(withInitial.speech || withInitial.text, /Claude Opus 4\.6は2026-02-04に公開されました。$/);
+  assert.match(withInitial.speech || withInitial.text, /Claude Opus 4\.6は2026-02-05に公開されました。$/);
   assert.equal(without.speech || without.text, '私の前のモデルはClaude Opus 4.6です。');
   assert.equal(withInitial.layers.length, 2);
 });

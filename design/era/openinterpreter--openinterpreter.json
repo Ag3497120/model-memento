@@ -1,0 +1,524 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "openinterpreter--openinterpreter",
+  "versions": [
+    {
+      "id": "openinterpreter--openinterpreter-2023-08-0",
+      "model_switch": {
+        "where": "other",
+        "label": "--fast",
+        "steps": [
+          "起動時に -f または --fast を指定する。"
+        ],
+        "steps_en": [
+          "Start with -f or --fast to use the fast model."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py",
+            "date": "2023-08-11",
+            "shows": "Fast model flag"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2023-08-11",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py",
+            "kind": "repository",
+            "date": "2023-08-11",
+            "shows": "CLI help and -f model shortcut"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/interpreter.py",
+            "kind": "repository",
+            "date": "2023-08-11",
+            "shows": "conditional approval notice and > input"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/code_block.py",
+            "kind": "repository",
+            "date": "2023-08-11",
+            "shows": "code and output panel colors"
+          }
+        ]
+      },
+      "trend": "端末の対話と承認確認。ヘルプは起動前に表示した例。 (https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py)",
+      "trend_en": "Terminal chat with an approval notice; help is shown as a previous command. (https://github.com/openinterpreter/openinterpreter/blob/v0.0.289/interpreter/cli.py)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-08-1",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "起動時に interpreter --model とモデル名を入力する。"
+        ],
+        "steps_en": [
+          "Start interpreter --model with a model name."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/start_terminal_interface.py",
+            "date": "2024-08-29",
+            "shows": "Model CLI argument"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2024-08-29",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-08-29",
+            "shows": "conditional approval notice and > input"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/magic_commands.py",
+            "kind": "repository",
+            "date": "2024-08-29",
+            "shows": "%help command output"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/start_terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-08-29",
+            "shows": "--model flag"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/components/code_block.py",
+            "kind": "repository",
+            "date": "2024-08-29",
+            "shows": "code and output panel colors"
+          }
+        ]
+      },
+      "trend": "承認確認と端末入力。%help の出力を表示した例。 (https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py)",
+      "trend_en": "Terminal chat with an approval notice; the example includes %help output. (https://github.com/openinterpreter/openinterpreter/blob/v0.3.10/interpreter/terminal_interface/terminal_interface.py)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-09-2",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "起動時に interpreter --model とモデル名を入力する。"
+        ],
+        "steps_en": [
+          "Start interpreter --model with a model name."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/start_terminal_interface.py",
+            "date": "2024-09-15",
+            "shows": "Model CLI argument"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2024-09-15",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-09-15",
+            "shows": "conditional approval notice and > input"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/magic_commands.py",
+            "kind": "repository",
+            "date": "2024-09-15",
+            "shows": "%help command output"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/start_terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-09-15",
+            "shows": "--model flag"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/components/code_block.py",
+            "kind": "repository",
+            "date": "2024-09-15",
+            "shows": "code and output panel colors"
+          }
+        ]
+      },
+      "trend": "承認確認と端末入力。%help の出力を表示した例。 (https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py)",
+      "trend_en": "Terminal chat with an approval notice; the example includes %help output. (https://github.com/openinterpreter/openinterpreter/blob/v0.3.13/interpreter/terminal_interface/terminal_interface.py)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2024-10-3",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "起動時に interpreter --model とモデル名を入力する。"
+        ],
+        "steps_en": [
+          "Start interpreter --model with a model name."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/start_terminal_interface.py",
+            "date": "2024-10-24",
+            "shows": "Model CLI argument"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2024-10-24",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-10-24",
+            "shows": "conditional approval notice and > input"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/magic_commands.py",
+            "kind": "repository",
+            "date": "2024-10-24",
+            "shows": "%help command output"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/start_terminal_interface.py",
+            "kind": "repository",
+            "date": "2024-10-24",
+            "shows": "--model flag"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/components/code_block.py",
+            "kind": "repository",
+            "date": "2024-10-24",
+            "shows": "code and output panel colors"
+          }
+        ]
+      },
+      "trend": "承認確認と端末入力。%help の出力を表示した例。 (https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py)",
+      "trend_en": "Terminal chat with an approval notice; the example includes %help output. (https://github.com/openinterpreter/openinterpreter/blob/v0.4.2/interpreter/terminal_interface/terminal_interface.py)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-06-4",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-06-20",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-06-20",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-06-20",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-06-20",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-06-20",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "見出しと初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A plain heading and first-session command hints precede the terminal composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.17/codex-rs/tui/src/history_cell/session.rs)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-07-5",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-07-18",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-07-18",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-07-18",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-07-18",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-07-18",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "見出しと初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A plain heading and first-session command hints precede the terminal composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.34/codex-rs/tui/src/history_cell/session.rs)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-08-6",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-08-20",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-08-20",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-08-20",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-08-20",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-08-20",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "枠付きのモデル・ディレクトリ欄と初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A bordered model and directory header precedes the first-session command hints and composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.40/codex-rs/tui/src/history_cell/session.rs)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-09-7",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-09-30",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-09-30",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-09-30",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-09-30",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-09-30",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "枠付きのモデル・ディレクトリ欄と初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A bordered model and directory header precedes the first-session command hints and composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.55/codex-rs/tui/src/history_cell/session.rs)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-2026-10-8",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-10-31",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-10-31",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-10-31",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-10-31",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-10-31",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "枠付きのモデル・ディレクトリ欄と初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A bordered model and directory header precedes the first-session command hints and composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.57/codex-rs/tui/src/history_cell/session.rs)"
+    },
+    {
+      "id": "openinterpreter--openinterpreter-record",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "入力欄に /model と入力し、候補から選ぶ。"
+        ],
+        "steps_en": [
+          "Enter /model in the composer and choose from the presented options."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs",
+            "date": "2026-11-11",
+            "shows": "First-session /model command"
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "Terminal",
+        "date_shown": "2026-11-11",
+        "sources": [
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs",
+            "kind": "repository",
+            "date": "2026-11-11",
+            "shows": "session heading and first-session commands"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+            "kind": "repository",
+            "date": "2026-11-11",
+            "shows": "composer behavior"
+          },
+          {
+            "url": "https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/bottom_pane/snapshots/codex_tui__bottom_pane__chat_composer__tests__empty.snap",
+            "kind": "repository",
+            "date": "2026-11-11",
+            "shows": "composer test snapshot; its Codex placeholder is test data, not proof of the Open Interpreter placeholder"
+          }
+        ]
+      },
+      "trend": "枠付きのモデル・ディレクトリ欄と初回コマンド案内を表示する端末画面。 (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs)",
+      "trend_en": "A bordered model and directory header precedes the first-session command hints and composer. (https://github.com/openinterpreter/openinterpreter/blob/rust-v0.0.61/codex-rs/tui/src/history_cell/session.rs)"
+    }
+  ]
+}

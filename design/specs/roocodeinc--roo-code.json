@@ -1,0 +1,871 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "roocodeinc--roo-code",
+  "name": "Roo Code",
+  "vendor": "Roo Code",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "roocodeinc--roo-code-2025-03-0",
+      "from": "2025-03-19",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話パネル",
+          "name_en": "Chat panel",
+          "position": "VS Code サイドバー",
+          "position_en": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "挨拶、条件付きの履歴、自動承認、入力欄 (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatView.tsx)"
+          ],
+          "contents_en": [
+            "Greeting, conditional history, auto-approval and input (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatView.tsx)"
+          ]
+        },
+        {
+          "name": "入力",
+          "name_en": "Composer",
+          "position": "下部",
+          "position_en": "Bottom",
+          "size": "8px padding; 2px radius",
+          "contents": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ],
+          "contents_en": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Select mode for interaction",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Select API configuration",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Auto-approve: None",
+          "where": "above composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Send message",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#2b2b2b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Example current VS Code Dark Modern; Roo takes host theme variables (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/index.css); historical effective values unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": null,
+        "input_shape": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx"
+      },
+      "empty_state": "What can Roo do for you? (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json)",
+      "distinctive": [
+        "挨拶と入力前の Auto-approve (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "distinctive_en": [
+        "Greeting and auto-approval above composer (https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/i18n/locales/en/chat.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/chat/AutoApproveMenu.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/src/shared/modes.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Current VS Code Dark Modern example; not historical proof"
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.9.2/webview-ui/src/components/settings/ModelPicker.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Provider model picker in settings."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "roocodeinc--roo-code-2026-02-1",
+      "from": "2026-02-27",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話パネル",
+          "name_en": "Chat panel",
+          "position": "VS Code サイドバー",
+          "position_en": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "中央のヒントと入力欄。履歴はタスクがある場合のみ (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatView.tsx)"
+          ],
+          "contents_en": [
+            "Centered tips and input; history only when tasks exist (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatView.tsx)"
+          ]
+        },
+        {
+          "name": "入力",
+          "name_en": "Composer",
+          "position": "下部",
+          "position_en": "Bottom",
+          "size": "width: calc(100% - 16px)",
+          "contents": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ],
+          "contents_en": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Select mode for interaction",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Select API configuration",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Auto-approve off",
+          "where": "below input",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Send message",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#2b2b2b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Example current VS Code Dark Modern; Roo takes host theme variables (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/index.css); historical effective values unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx"
+      },
+      "empty_state": "Roo is a whole AI dev team in your editor (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json)",
+      "distinctive": [
+        "ヒントと入力下部のモード・API 構成・自動承認 (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "distinctive_en": [
+        "Tips and mode, API profile and auto-approval below input (https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/i18n/locales/en/chat.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/welcome/RooTips.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/chat/ApiConfigSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Current VS Code Dark Modern example; not historical proof"
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/webview-ui/src/components/settings/ModelPicker.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Provider model picker in settings."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/cli-v0.1.6/packages/types/src/mode.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Built-in mode names."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "roocodeinc--roo-code-2026-03-2",
+      "from": "2026-03-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話パネル",
+          "name_en": "Chat panel",
+          "position": "VS Code サイドバー",
+          "position_en": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "中央のヒントと入力欄。履歴はタスクがある場合のみ (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatView.tsx)"
+          ],
+          "contents_en": [
+            "Centered tips and input; history only when tasks exist (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatView.tsx)"
+          ]
+        },
+        {
+          "name": "入力",
+          "name_en": "Composer",
+          "position": "下部",
+          "position_en": "Bottom",
+          "size": "width: calc(100% - 16px)",
+          "contents": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ],
+          "contents_en": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Select mode for interaction",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Select API configuration",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Auto-approve off",
+          "where": "below input",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Send message",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#2b2b2b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Example current VS Code Dark Modern; Roo takes host theme variables (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/index.css); historical effective values unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx"
+      },
+      "empty_state": "Roo is a whole AI dev team in your editor (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json)",
+      "distinctive": [
+        "ヒントと入力下部のモード・API 構成・自動承認 (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "distinctive_en": [
+        "Tips and mode, API profile and auto-approval below input (https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/i18n/locales/en/chat.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/welcome/RooTips.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/chat/ApiConfigSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Current VS Code Dark Modern example; not historical proof"
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/webview-ui/src/components/settings/ModelPicker.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Provider model picker in settings."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.51.1/packages/types/src/mode.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Built-in mode names."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "roocodeinc--roo-code-2026-04-3",
+      "from": "2026-04-23",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話パネル",
+          "name_en": "Chat panel",
+          "position": "VS Code サイドバー",
+          "position_en": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "中央のヒントと入力欄。履歴はタスクがある場合のみ (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatView.tsx)"
+          ],
+          "contents_en": [
+            "Centered tips and input; history only when tasks exist (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatView.tsx)"
+          ]
+        },
+        {
+          "name": "入力",
+          "name_en": "Composer",
+          "position": "下部",
+          "position_en": "Bottom",
+          "size": "width: calc(100% - 16px)",
+          "contents": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ],
+          "contents_en": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Select mode for interaction",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Select API configuration",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Auto-approve off",
+          "where": "below input",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Send message",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#2b2b2b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Example current VS Code Dark Modern; Roo takes host theme variables (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/index.css); historical effective values unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+      },
+      "empty_state": "Roo is a whole AI dev team in your editor (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json)",
+      "distinctive": [
+        "ヒントと入力下部のモード・API 構成・自動承認 (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "distinctive_en": [
+        "Tips and mode, API profile and auto-approval below input (https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/i18n/locales/en/chat.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/welcome/RooTips.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/chat/ApiConfigSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Current VS Code Dark Modern example; not historical proof"
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/webview-ui/src/components/settings/ModelPicker.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Provider model picker in settings."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/v3.53.0/packages/types/src/mode.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Built-in mode names."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "roocodeinc--roo-code-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話パネル",
+          "name_en": "Chat panel",
+          "position": "VS Code サイドバー",
+          "position_en": "VS Code sidebar",
+          "size": null,
+          "contents": [
+            "中央のヒントと入力欄。履歴はタスクがある場合のみ (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx)"
+          ],
+          "contents_en": [
+            "Centered tips and input; history only when tasks exist (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx)"
+          ]
+        },
+        {
+          "name": "入力",
+          "name_en": "Composer",
+          "position": "下部",
+          "position_en": "Bottom",
+          "size": "width: calc(100% - 16px)",
+          "contents": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ],
+          "contents_en": [
+            "Mode / API configuration (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Select mode for interaction",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Select API configuration",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Auto-approve off",
+          "where": "below input",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx"
+        },
+        {
+          "label": "Send message",
+          "where": "composer",
+          "purpose": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Type your task here... (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1f1f1f",
+          "panel": "#181818",
+          "text": "#cccccc",
+          "muted": "#9d9d9d",
+          "accent": "#0078d4",
+          "border": "#2b2b2b",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "note": "Example current VS Code Dark Modern; Roo takes host theme variables (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/index.css); historical effective values unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx"
+      },
+      "empty_state": "Roo is a whole AI dev team in your editor (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json)",
+      "distinctive": [
+        "ヒントと入力下部のモード・API 構成・自動承認 (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx)"
+      ],
+      "distinctive_en": [
+        "Tips and mode, API profile and auto-approval below input (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx, https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx)",
+        "Optional Worktree selector (https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/chat.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/welcome/RooTips.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/ApiConfigSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Current VS Code Dark Modern example; not historical proof"
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/chat/WorktreeSelector.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/i18n/locales/en/worktrees.json",
+          "kind": "source",
+          "date": null,
+          "shows": "Version-specific source for layout, strings, theme variables or controls."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/webview-ui/src/components/settings/ModelPicker.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "Provider model picker in settings."
+        },
+        {
+          "url": "https://github.com/RooCodeInc/Roo-Code/blob/b867ec9145750d0ae1ff7f02d35406e9bf2a0b16/packages/types/src/mode.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Built-in mode names."
+        }
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

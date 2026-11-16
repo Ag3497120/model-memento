@@ -1,0 +1,563 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "voideditor--void",
+  "name": "Void",
+  "vendor": "Void",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "voideditor--void-2025-01-0",
+      "from": "2025-01-19",
+      "to": null,
+      "regions": [
+        {
+          "name": "補助サイドバー",
+          "name_en": "Auxiliary sidebar",
+          "position": "右側のエディター横",
+          "position_en": "beside editor in auxiliary bar",
+          "size": null,
+          "contents": [
+            "Void Chat / Chat; https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ],
+          "contents_en": [
+            "Void Chat; https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "name_en": "Composer",
+          "position": "空のチャットの上部",
+          "position_en": "top of empty chat",
+          "size": "textarea min-height 81px; container margins 8px (April landing: horizontal 16px and top 32px)",
+          "contents": [
+            "[keybinding] to select. Enter instructions... (https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ],
+          "contents_en": [
+            "[keybinding] to select. Enter instructions... (https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Provider required",
+          "where": "input-bar",
+          "purpose": "プロバイダー未設定時の警告。https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "purpose_en": "Warning when a provider is required. https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx"
+        },
+        {
+          "label": "New Chat / View Past Chats",
+          "where": "sidebar-header",
+          "purpose": "新規会話と履歴。https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "purpose_en": "New conversation and history. https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarActions.ts"
+        }
+      ],
+      "conversation": {
+        "user": "入力欄から送信。https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "メッセージ欄に表示。https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Send from the composer. https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "Responses appear in the message area. https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1F1F1F",
+          "panel": "#181818",
+          "text": "#CCCCCC",
+          "muted": "#989898",
+          "accent": "#0078D4",
+          "border": "#2B2B2B",
+          "user_bubble": null
+        },
+        "source": {
+          "theme": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "colors": "https://github.com/voideditor/void/blob/v1.0.0/extensions/theme-defaults/themes/dark_modern.json",
+          "workbench": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/common/theme.ts",
+          "tailwind": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "rounded bordered composer; minimum textarea height 81px (https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      },
+      "empty_state": {
+        "text": [],
+        "source": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx"
+      },
+      "distinctive": [
+        "空のチャットの先頭に入力欄を置き、入力欄の下段にモデルを置く。 (https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "distinctive_en": [
+        "The empty chat places the composer at the top, with model selection in its lower row. (https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/voideditor/void/releases/tag/v1.0.0",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Catalog date and release tag."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Chat layout, minimum input height, placeholder and controls; later versions include modes and April suggestions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarThreadSelector.tsx",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "History view and its empty state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Chat header actions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/sidebarPane.ts",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Auxiliary bar registration and title."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Configured model selector and provider-required state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Default dark theme name."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Named theme colors."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/common/theme.ts",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Workbench color defaults."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.0/src/vs/workbench/contrib/void/browser/react/tailwind.config.js",
+          "kind": "source",
+          "date": "2025-01-19",
+          "shows": "Void semantic colors and font sizes."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "voideditor--void-2025-03-1",
+      "from": "2025-03-22",
+      "to": null,
+      "regions": [
+        {
+          "name": "補助サイドバー",
+          "name_en": "Auxiliary sidebar",
+          "position": "右側のエディター横",
+          "position_en": "beside editor in auxiliary bar",
+          "size": null,
+          "contents": [
+            "Void Chat / Chat; https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ],
+          "contents_en": [
+            "Void Chat; https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "name_en": "Composer",
+          "position": "空のチャットの上部",
+          "position_en": "top of empty chat",
+          "size": "textarea min-height 81px; container margins 8px (April landing: horizontal 16px and top 32px)",
+          "contents": [
+            "[keybinding] to add a file. Enter instructions... (https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ],
+          "contents_en": [
+            "[keybinding] to add a file. Enter instructions... (https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Provider required",
+          "where": "input-bar",
+          "purpose": "プロバイダー未設定時の警告。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "purpose_en": "Warning when a provider is required. https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx"
+        },
+        {
+          "label": "New Chat / View Past Chats",
+          "where": "sidebar-header",
+          "purpose": "新規会話と履歴。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "purpose_en": "New conversation and history. https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarActions.ts"
+        },
+        {
+          "label": "Agent / Gather / Chat",
+          "where": "input-bar",
+          "purpose": "モード選択。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx 既定 Agent。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts",
+          "purpose_en": "Mode selector; Agent is the default. https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts"
+        }
+      ],
+      "conversation": {
+        "user": "入力欄から送信。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "メッセージ欄に表示。https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Send from the composer. https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "Responses appear in the message area. https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E1E",
+          "panel": "#252526",
+          "text": "#D4D4D4",
+          "muted": "#A6A6A6",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "theme": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "colors": "https://github.com/voideditor/void/blob/v1.0.2/extensions/theme-defaults/themes/dark_vs.json",
+          "workbench": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/common/theme.ts",
+          "tailwind": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "rounded bordered composer; minimum textarea height 81px (https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      },
+      "empty_state": {
+        "text": [],
+        "source": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx"
+      },
+      "distinctive": [
+        "入力欄に Agent / Gather / Chat の選択を追加し、既定は Agent。 (https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "distinctive_en": [
+        "The composer adds Agent, Gather and Chat modes, with Agent as the default. (https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/voideditor/void/releases/tag/v1.0.2",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Catalog date and release tag."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Chat layout, minimum input height, placeholder and controls; later versions include modes and April suggestions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarThreadSelector.tsx",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "History view and its empty state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Chat header actions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/sidebarPane.ts",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Auxiliary bar registration and title."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Configured model selector and provider-required state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Default dark theme name."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/extensions/theme-defaults/themes/dark_vs.json",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Named theme colors."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/common/theme.ts",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Workbench color defaults."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/browser/react/tailwind.config.js",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Void semantic colors and font sizes."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.0.2/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts",
+          "kind": "source",
+          "date": "2025-03-22",
+          "shows": "Default chat mode is agent."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "voideditor--void-record",
+      "from": "2025-04-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "補助サイドバー",
+          "name_en": "Auxiliary sidebar",
+          "position": "右側のエディター横",
+          "position_en": "beside editor in auxiliary bar",
+          "size": null,
+          "contents": [
+            "Void Chat / Chat; https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ],
+          "contents_en": [
+            "Chat; https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarPane.ts"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "name_en": "Composer",
+          "position": "空のチャットの上部",
+          "position_en": "top of empty chat",
+          "size": "textarea min-height 81px; container margins 8px (April landing: horizontal 16px and top 32px)",
+          "contents": [
+            "@ to mention, [keybinding] to add a selection. Enter instructions... (https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ],
+          "contents_en": [
+            "@ to mention, [keybinding] to add a selection. Enter instructions... (https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Provider required",
+          "where": "input-bar",
+          "purpose": "プロバイダー未設定時の警告。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "purpose_en": "Warning when a provider is required. https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx"
+        },
+        {
+          "label": "New Chat / View Past Chats",
+          "where": "sidebar-header",
+          "purpose": "新規会話と履歴。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "purpose_en": "New conversation and history. https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarActions.ts"
+        },
+        {
+          "label": "Agent / Gather / Chat",
+          "where": "input-bar",
+          "purpose": "モード選択。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx 既定 Agent。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts",
+          "purpose_en": "Mode selector; Agent is the default. https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts"
+        }
+      ],
+      "conversation": {
+        "user": "入力欄から送信。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "メッセージ欄に表示。https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "conversation_en": {
+        "user": "Send from the composer. https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "assistant": "Responses appear in the message area. https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E1E",
+          "panel": "#252526",
+          "text": "#D4D4D4",
+          "muted": "#A6A6A6",
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "theme": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "colors": "https://github.com/voideditor/void/blob/v1.3.4/extensions/theme-defaults/themes/dark_vs.json",
+          "workbench": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/common/theme.ts",
+          "tailwind": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace",
+        "source": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/tailwind.config.js"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "rounded bordered composer; minimum textarea height 81px (https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      },
+      "empty_state": {
+        "text": [
+          "Suggestions",
+          "Summarize my codebase",
+          "How do types work in Rust?",
+          "Create a .voidrules file for me"
+        ],
+        "source": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx"
+      },
+      "distinctive": [
+        "空画面に Suggestions と3つの候補を表示し、@ メンションを案内する。 (https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "distinctive_en": [
+        "The landing page adds Suggestions and three prompts, with an @ mention hint. (https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "must_not_copy_en": [
+        "logos, marks, screenshots, proprietary fonts, and product artwork"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/voideditor/void/releases/tag/v1.3.4",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Catalog date and release tag."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarChat.tsx",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Chat layout, minimum input height, placeholder and controls; later versions include modes and April suggestions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/SidebarThreadSelector.tsx",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "History view and its empty state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarActions.ts",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Chat header actions."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/sidebarPane.ts",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Auxiliary bar registration and title."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/ModelDropdown.tsx",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Configured model selector and provider-required state."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/services/themes/common/workbenchThemeService.ts",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Default dark theme name."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/extensions/theme-defaults/themes/dark_vs.json",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Named theme colors."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/common/theme.ts",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Workbench color defaults."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/browser/react/tailwind.config.js",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Void semantic colors and font sizes."
+        },
+        {
+          "url": "https://github.com/voideditor/void/blob/v1.3.4/src/vs/workbench/contrib/void/common/voidSettingsTypes.ts",
+          "kind": "source",
+          "date": "2025-04-15",
+          "shows": "Default chat mode is agent."
+        }
+      ],
+      "confidence": 0.82
+    }
+  ]
+}

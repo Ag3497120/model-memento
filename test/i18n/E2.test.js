@@ -137,7 +137,7 @@ test('E2 English output questions and conversation memory retain their intended 
   assert.match(memory.text, /I remember.*Sam/);
   noJapanese(memory.text);
   const relation = answer('When was your predecessor released?', { ...archive, model: selected });
-  assert.match(relation.text, /My predecessor is Claude Opus 4.6\. Claude Opus 4.6 was released on 2026-02-04\./);
+  assert.match(relation.text, /My predecessor is Claude Opus 4.6\. Claude Opus 4.6 was released on 2026-02-05\./);
 });
 
 test('E2 reviewed cards require English answers and continue checking citations and numbers', () => {

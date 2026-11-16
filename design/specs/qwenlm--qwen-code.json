@@ -1,0 +1,507 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "qwenlm--qwen-code",
+  "name": "Qwen Code",
+  "vendor": "QwenLM",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "qwenlm--qwen-code-2025-08-0",
+      "from": "2025-08-01",
+      "to": "2026-10-30",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "Main area: 90% of terminal width.",
+          "contents": [
+            "上からヘッダー、4行の開始ヒント、履歴、入力欄、フッター。サイドバーはこの通常の端末レイアウトにない。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx)",
+            "開始ヒントは「Tips for getting started:」「Ask questions, edit files, or run commands.」「Be specific for the best results.」「QWEN.md」「/help」を含む。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx)",
+            "入力は丸い枠、左右1文字分の余白、> と Type your message or @path/to/file。送信はEnter。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx)",
+            "フッターはパス、サンドボックス状態、モデルと残りコンテキストの3領域。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx)",
+            "主領域は端末幅の90%。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx)"
+          ],
+          "contents_en": [
+            "Header, four startup tips, history, input and footer in a vertical terminal; no sidebar in the ordinary layout. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx)",
+            "Tips include “Tips for getting started:”, “Ask questions, edit files, or run commands.”, “Be specific for the best results.”, QWEN.md and /help. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx)",
+            "Rounded input border, one-cell horizontal padding, > and “Type your message or @path/to/file”; Enter submits. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx)",
+            "Footer has path, sandbox status and model with context remaining. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx)",
+            "Main area is 90% of terminal width. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "action": "submit prompt",
+          "source": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx"
+        },
+        {
+          "label": "--model",
+          "action": "launch with model",
+          "source": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/config/config.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0b0e14",
+          "panel": null,
+          "text": "#bfbdb6",
+          "muted": "#3D4149",
+          "accent": "#39BAE6",
+          "border": "#39BAE6",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/themes/qwen-dark.ts",
+          "notes": "Qwen Dark is the initial theme (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/themes/theme-manager.ts); terminal background itself is not forced by this record."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "terminal character cells",
+        "input_shape": "rounded border; one-cell horizontal padding"
+      },
+      "empty_state": "Tips for getting started:",
+      "distinctive": [
+        "上からヘッダー、4行の開始ヒント、履歴、入力欄、フッター。サイドバーはこの通常の端末レイアウトにない。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx)",
+        "開始ヒントは「Tips for getting started:」「Ask questions, edit files, or run commands.」「Be specific for the best results.」「QWEN.md」「/help」を含む。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx)",
+        "入力は丸い枠、左右1文字分の余白、> と Type your message or @path/to/file。送信はEnter。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx)",
+        "フッターはパス、サンドボックス状態、モデルと残りコンテキストの3領域。 (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx)"
+      ],
+      "distinctive_en": [
+        "Four numbered startup tips and a rounded prompt. (https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx; https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/App.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Layout and ordering"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Header.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Header and responsive dimensions"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Startup tips"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Footer"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/themes/qwen-dark.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Qwen Dark color values"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/ui/themes/theme-manager.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default theme selection"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.0.1-alpha.14/packages/cli/src/config/config.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "qwenlm--qwen-code-2026-10-1",
+      "from": "2026-10-30",
+      "to": "2026-11-14",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "本文は最大100文字列、情報枠は2列時最大60文字列。",
+          "contents": [
+            "縦方向に会話履歴と入力・フッター。メイン領域は最大100列。通常画面にサイドバーはない。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+            "ヘッダーの情報枠は単線、横1文字分余白。横幅が許せばロゴ横に最大60列、狭い場合は残り幅を使う。認証、モデル、/model to change、作業パスを表示する。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)",
+            "Tips: に起動ヒントを1件表示。Type / to see all available commands. はフォールバック。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)",
+            "入力プレースホルダーは Type your message or @path/to/file。Enterで送信し、? for shortcuts がフッターにある。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Footer.tsx)",
+            "Qwen OAuth、API Keyなどの認証名をモデルとともに表示する。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)",
+            "入力欄は上下の水平線で、左右の枠はない。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/BaseTextInput.tsx)"
+          ],
+          "contents_en": [
+            "Vertical history and composer/footer, with main area capped at 100 columns; no sidebar in the ordinary terminal layout. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+            "Single-border info panel has one-cell horizontal padding, at most 60 columns beside the logo, otherwise fills available width; it shows authentication, model, /model hint and directory. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)",
+            "One startup tip after “Tips:”; “Type / to see all available commands.” is the fallback. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)",
+            "The placeholder is “Type your message or @path/to/file”; Enter submits and the footer offers “? for shortcuts”. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Footer.tsx)",
+            "Authentication labels such as Qwen OAuth and API Key appear with the model. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)",
+            "Prompt has horizontal top and bottom lines and no side borders. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/BaseTextInput.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "action": "submit prompt",
+          "source": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/InputPrompt.tsx"
+        },
+        {
+          "label": "/model",
+          "action": "choose configured model",
+          "source": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/commands/modelCommand.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": null,
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#6C7086",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/semantic-tokens.ts",
+          "notes": "Qwen Dark passes darkSemanticColors, which uses darkTheme rather than qwenDarkColors (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/qwen-dark.ts; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/semantic-tokens.ts; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/theme.ts). Empty foreground inherits terminal color; actual terminal background unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "terminal character cells",
+        "input_shape": "Horizontal top and bottom lines without side borders; terminal width."
+      },
+      "empty_state": "Tips: Type / to see all available commands. (fallback)",
+      "distinctive": [
+        "縦方向に会話履歴と入力・フッター。メイン領域は最大100列。通常画面にサイドバーはない。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+        "ヘッダーの情報枠は単線、横1文字分余白。横幅が許せばロゴ横に最大60列、狭い場合は残り幅を使う。認証、モデル、/model to change、作業パスを表示する。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)",
+        "Tips: に起動ヒントを1件表示。Type / to see all available commands. はフォールバック。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)",
+        "入力プレースホルダーは Type your message or @path/to/file。Enterで送信し、? for shortcuts がフッターにある。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Footer.tsx)",
+        "Qwen OAuth、API Keyなどの認証名をモデルとともに表示する。 (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx)"
+      ],
+      "distinctive_en": [
+        "Bordered info panel with model hint and a single startup tip. (https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/layouts/DefaultAppLayout.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Layout and ordering"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Header.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Header and responsive dimensions"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Startup tips"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Footer"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/qwen-dark.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Qwen Dark color values"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/theme-manager.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default theme selection"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/commands/modelCommand.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/semantic-tokens.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Semantic color mapping"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/themes/theme.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Dark semantic color values"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/Composer.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt placeholder and footer"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/package.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "CLI package version"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/cua-driver-rs-v0.27.0/packages/cli/src/ui/components/BaseTextInput.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt border and keyboard submission."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "qwenlm--qwen-code-record",
+      "from": "2026-11-14",
+      "to": null,
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": "本文は最大100文字列、情報枠は2列時最大60文字列。",
+          "contents": [
+            "縦方向に会話履歴と入力・フッター。メイン領域は最大100列。通常画面にサイドバーはない。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+            "ヘッダーの情報枠は単線、横1文字分余白。横幅が許せばロゴ横に最大60列、狭い場合は残り幅を使う。認証、モデル、/model to change、作業パスを表示する。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)",
+            "Tips: に起動ヒントを1件表示。Type / to see all available commands. はフォールバック。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)",
+            "入力プレースホルダーは Type your message or @path/to/file。Enterで送信し、? for shortcuts がフッターにある。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Footer.tsx)",
+            "Qwen Subscriptionではプランとモデルを表示し、既定の空行を省く。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)",
+            "入力欄は上下の水平線で、左右の枠はない。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/BaseTextInput.tsx)"
+          ],
+          "contents_en": [
+            "Vertical history and composer/footer, with main area capped at 100 columns; no sidebar in the ordinary terminal layout. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+            "Single-border info panel has one-cell horizontal padding, at most 60 columns beside the logo, otherwise fills available width; it shows authentication, model, /model hint and directory. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)",
+            "One startup tip after “Tips:”; “Type / to see all available commands.” is the fallback. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)",
+            "The placeholder is “Type your message or @path/to/file”; Enter submits and the footer offers “? for shortcuts”. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Footer.tsx)",
+            "Subscription headers show the plan and model and omit the default blank spacer. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)",
+            "Prompt has horizontal top and bottom lines and no side borders. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/BaseTextInput.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "action": "submit prompt",
+          "source": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/InputPrompt.tsx"
+        },
+        {
+          "label": "/model",
+          "action": "choose configured model",
+          "source": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/commands/modelCommand.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": null,
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#6C7086",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/semantic-tokens.ts",
+          "notes": "Qwen Dark passes darkSemanticColors, which uses darkTheme rather than qwenDarkColors (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/qwen-dark.ts; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/semantic-tokens.ts; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/theme.ts). Empty foreground inherits terminal color; actual terminal background unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "terminal character cells",
+        "input_shape": "Horizontal top and bottom lines without side borders; terminal width."
+      },
+      "empty_state": "Tips: Type / to see all available commands. (fallback)",
+      "distinctive": [
+        "縦方向に会話履歴と入力・フッター。メイン領域は最大100列。通常画面にサイドバーはない。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/layouts/DefaultAppLayout.tsx)",
+        "ヘッダーの情報枠は単線、横1文字分余白。横幅が許せばロゴ横に最大60列、狭い場合は残り幅を使う。認証、モデル、/model to change、作業パスを表示する。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)",
+        "Tips: に起動ヒントを1件表示。Type / to see all available commands. はフォールバック。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)",
+        "入力プレースホルダーは Type your message or @path/to/file。Enterで送信し、? for shortcuts がフッターにある。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Composer.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Footer.tsx)",
+        "Qwen Subscriptionではプランとモデルを表示し、既定の空行を省く。 (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx)"
+      ],
+      "distinctive_en": [
+        "Bordered info panel with model hint and a single startup tip. (https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx; https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, artwork, wordmarks, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/layouts/DefaultAppLayout.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Layout and ordering"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Header.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Header and responsive dimensions"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Startup tips"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Footer"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/qwen-dark.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Qwen Dark color values"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/theme-manager.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default theme selection"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/commands/modelCommand.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Model selection"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/semantic-tokens.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Semantic color mapping"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/themes/theme.ts",
+          "kind": "repository",
+          "date": null,
+          "shows": "Dark semantic color values"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/Composer.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt placeholder and footer"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/package.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "CLI package version"
+        },
+        {
+          "url": "https://github.com/QwenLM/qwen-code/blob/v0.27.2-nightly.20261113.6f754be654/packages/cli/src/ui/components/BaseTextInput.tsx",
+          "kind": "repository",
+          "date": null,
+          "shows": "Prompt border and keyboard submission."
+        }
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "corrections": [
+    "タグが日付に最も近いコミットかどうか、実際の端末背景と寸法は unverified。ロゴを省略。"
+  ],
+  "corrections_en": [
+    "Whether each catalog tag is the nearest commit, the actual terminal background and pixel dimensions are unverified. Logo omitted."
+  ]
+}

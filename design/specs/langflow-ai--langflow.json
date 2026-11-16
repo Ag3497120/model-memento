@@ -1,0 +1,1664 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "langflow-ai--langflow",
+  "name": "Langflow",
+  "vendor": "Langflow",
+  "kind": "workflow-canvas",
+  "versions": [
+    {
+      "id": "langflow-ai--langflow-2023-03-0",
+      "from": "2023-03-14",
+      "to": "2026-03-26",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "部品一覧はAPIから取得される。 (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/components/extraSidebarComponent/index.tsx)"
+          ],
+          "contents_en": [
+            "Component list is populated from the API. (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/components/extraSidebarComponent/index.tsx)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "フロー編集用のキャンバス。 (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/index.tsx)"
+          ],
+          "contents_en": [
+            "Flow editing canvas. (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/index.tsx)"
+          ]
+        },
+        {
+          "name": "chat",
+          "position": "bottom-right",
+          "size": "340px; message area 400px high",
+          "contents": [
+            "右下にChat、Clearと入力欄。 (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx)"
+          ],
+          "contents_en": [
+            "Floating Chat with Clear and input at lower right. (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "bottom-right",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx"
+        },
+        {
+          "label": "Clear",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/tailwind.config.js",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "single-line input"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "右下の340px幅チャットと部品一覧。 (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx) (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/components/extraSidebarComponent/index.tsx)"
+      ],
+      "distinctive_en": [
+        "A 340px floating chat and component list. (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx) (https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/components/extraSidebarComponent/index.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/components/chatComponent/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/utils.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/tailwind.config.js",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Tailwind configuration; actual default theme unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v0.0.31/langflow/frontend/src/pages/FlowPage/components/extraSidebarComponent/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "API-populated component list."
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "langflow-ai--langflow-2026-03-1",
+      "from": "2026-03-26",
+      "to": "2026-04-24",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/utils/styleUtils.ts)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/utils/styleUtils.ts)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 65%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/utils/styleUtils.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.8.3/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-04-2",
+      "from": "2026-04-24",
+      "to": "2026-05-29",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 65%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-05-3",
+      "from": "2026-05-29",
+      "to": "2026-06-23",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 65%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.9.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-06-4",
+      "from": "2026-06-23",
+      "to": "2026-07-28",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 65%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.10.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-07-5",
+      "from": "2026-07-28",
+      "to": "2026-08-25",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 40%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Agentナビゲーション。",
+          "shows_en": "Agent navigation."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.1/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-08-6",
+      "from": "2026-08-25",
+      "to": "2026-09-29",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 40%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Agentナビゲーション。",
+          "shows_en": "Agent navigation."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.11.5/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-09-7",
+      "from": "2026-09-29",
+      "to": "2026-10-22",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 40%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Agentナビゲーション。",
+          "shows_en": "Agent navigation."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.12.4/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-2026-10-8",
+      "from": "2026-10-22",
+      "to": "2026-11-15",
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 40%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Agentナビゲーション。",
+          "shows_en": "Agent navigation."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/v1.13.0/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "langflow-ai--langflow-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "components",
+          "position": "left",
+          "size": "17.5rem",
+          "contents": [
+            "検索と部品欄。 (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/locales/en.json)"
+          ],
+          "contents_en": [
+            "Search and component sidebar. (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/locales/en.json)"
+          ]
+        },
+        {
+          "name": "workflow-canvas",
+          "position": "center",
+          "size": "flexible",
+          "contents": [
+            "フロー編集キャンバスと部品。例示ノードの位置は再構成。 (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ],
+          "contents_en": [
+            "Flow canvas and components. The example node positions are reconstructed. (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json)"
+          ]
+        },
+        {
+          "name": "playground",
+          "position": "right",
+          "size": "326px initial; resizable 15–60%",
+          "contents": [
+            "Playgroundパネルと入力欄。 (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ],
+          "contents_en": [
+            "Playground panel and composer. (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx) (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Playground",
+          "where": "right panel",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Send a message...",
+          "where": "composer",
+          "purpose": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx"
+        },
+        {
+          "label": "Attach",
+          "where": "composer",
+          "purpose": "Attachment control; disabled in this recreation. (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx)"
+        }
+      ],
+      "conversation": {
+        "user": "Send a message... (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "hsl(240 5% 40%)",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/style/index.css",
+          "note": "Light theme tokens; actual default preference unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "bordered textarea"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の17.5rem部品欄と右のPlayground。 (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "distinctive_en": [
+        "A 17.5rem component sidebar and right Playground. (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx)",
+        "Version History (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx)",
+        "Agent (https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、専用フォント、長い引用"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, proprietary fonts and long quotations"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "フロー画面と寸法。",
+          "shows_en": "Flow layout and dimensions."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/input-wrapper.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "チャットの入力と操作。",
+          "shows_en": "Chat input and controls."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "英語ラベル。",
+          "shows_en": "English labels."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/style/index.css",
+          "kind": "source",
+          "date": null,
+          "shows": "テーマ設定。既定設定は未確認。",
+          "shows_en": "Light theme color tokens; actual default preference unverified."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/backend/base/langflow/initial_setup/starter_projects/Memory%20Chatbot.json",
+          "kind": "source",
+          "date": null,
+          "shows": "部品一覧またはスターターフローの部品。",
+          "shows_en": "Example component names and model field in a starter flow."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/FlowVersionSidebar/index.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "版履歴パネル。",
+          "shows_en": "Version History panel."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/pages/FlowPage/components/flowSidebarComponent/components/sidebar-nav-items.ts",
+          "kind": "source",
+          "date": null,
+          "shows": "Agentナビゲーション。",
+          "shows_en": "Agent navigation."
+        },
+        {
+          "url": "https://github.com/langflow-ai/langflow/blob/260cbf347cc5563cc48c79094c175ca31532ea2b/src/frontend/src/components/core/playgroundComponent/chat-view/chat-input/components/upload-file-button.tsx",
+          "kind": "source",
+          "date": null,
+          "shows": "添付ボタン。再現では無効。",
+          "shows_en": "Attachment button; disabled in the recreation."
+        }
+      ],
+      "confidence": 0.82
+    }
+  ]
+}
