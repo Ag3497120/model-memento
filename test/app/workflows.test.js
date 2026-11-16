@@ -21,5 +21,5 @@ test('installed workflows have parseable Node programs and publish generated dat
   assert.doesNotMatch(world, /copyFile\([^\n]*enrich-queue/);
   const contrib = await fs.readFile(new URL('contrib-intake.yml', directory), 'utf8');
   assert.match(contrib, /ref: \$\{\{ github.event.repository.default_branch }}/);
-  assert.match(contrib, /issues: write/); assert.match(contrib, /discussions: write/); assert.match(contrib, /queue: max/);
+  assert.match(contrib, /issues: write/); assert.match(contrib, /discussions: write/); assert.doesNotMatch(contrib, /queue:/); assert.match(contrib, /cancel-in-progress: false/);
 });

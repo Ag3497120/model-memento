@@ -47,6 +47,10 @@ jobs:
         with:
           persist-credentials: false
 
+      # GitHub Pages のホスト名は小文字。大文字の所有者名のままだと転送が起き、転送を拒む取得が失敗する。
+      - name: 公開サイトのURLを小文字のホスト名にする
+        run: echo "WORLD_SITE_URL=$(printf '%s' "$WORLD_SITE_URL" | sed -E 's#^(https?://[^/]+)#\L\1#')" >> "$GITHUB_ENV"
+
       - name: Node.jsを準備
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:

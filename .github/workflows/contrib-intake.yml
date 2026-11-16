@@ -14,7 +14,6 @@ permissions:
 # The state is shared; do not drop a prior accepted event by cancelling its writer.
 concurrency:
   group: memento-contribution-state-v1
-  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -23,10 +22,13 @@ jobs:
     timeout-minutes: 30
     outputs:
       accepted: ${{ steps.intake.outputs.accepted }}
-    env:
-      MEMENTO_CONTRIB_OUT: ${{ runner.temp }}/contrib-next
-      MEMENTO_CONTRIB_REPLY: ${{ runner.temp }}/contrib-reply.txt
     steps:
+      # runner.temp is not available in job-level env; set these paths from the shell instead.
+      - name: 作業用の場所を決める
+        run: |
+          echo "MEMENTO_CONTRIB_OUT=$RUNNER_TEMP/contrib-next" >> "$GITHUB_ENV"
+          echo "MEMENTO_CONTRIB_REPLY=$RUNNER_TEMP/contrib-reply.txt" >> "$GITHUB_ENV"
+
       - name: 既定ブランチの検査コードだけを読む
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -158,7 +160,6 @@ jobs:
     if: needs.intake.outputs.accepted == 'true'
     concurrency:
       group: world-pages
-      queue: max
       cancel-in-progress: false
     permissions:
       contents: write
