@@ -91,7 +91,13 @@ export async function retainModuleVersions({ web, previous, fetch: fetcher = glo
   const base = remote ? new URL(previous.replace(/\/?$/, '/')) : path.resolve(previous);
   async function read(relative, maxBytes) {
     if (!remote) return fs.readFile(path.join(base, relative));
-    const response = await fetcher(new URL(relative, base), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+    // Pages sometimes answers a missing file with 503 before settling on 404: retry server errors.
+    let response;
+    for (let attempt = 0; ; attempt++) {
+      response = await fetcher(new URL(relative, base), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+      if (response.status < 500 || attempt >= 4 || fetcher !== globalThis.fetch) break;
+      await new Promise(resolve => setTimeout(resolve, 3000 * (attempt + 1)));
+    }
     if (response.status === 404 && relative === manifestPath) return null;
     if (!response.ok) throw new Error(`Cannot retain published modules (HTTP ${response.status})`);
     const chunks = [];

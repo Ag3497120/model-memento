@@ -49,6 +49,7 @@ jobs:
         with:
           persist-credentials: false
 
+      # Pages は存在しないファイルに一時的に 503 を返すことがあるため、公開サイトの読み取りは 5xx を最大 5 回まで再試行する。
       # GitHub Pages のホスト名は小文字。大文字の所有者名のままだと転送が起き、転送を拒む取得が失敗する。
       - name: 公開サイトのURLを小文字のホスト名にする
         run: echo "WORLD_SITE_URL=$(printf '%s' "$WORLD_SITE_URL" | sed -E 's#^(https?://[^/]+)#\L\1#')" >> "$GITHUB_ENV"
@@ -81,7 +82,7 @@ jobs:
           let cached = await read('.daily-cache/auto-sync/sync-report.json');
           const committed = await read('data/auto-sync/sync-report.json');
           try {
-            const response = await fetch(new URL('data/daily-inputs.json', process.env.WORLD_SITE_URL.replace(/\/?$/, '/')), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+            const response = await (async (u, o) => { for (let i = 0; ; i++) { const r = await fetch(u, { ...o, signal: AbortSignal.timeout(20000) }); if (r.status < 500 || i >= 4) return r; await new Promise(s => setTimeout(s, 3000 * (i + 1))); } })(new URL('data/daily-inputs.json', process.env.WORLD_SITE_URL.replace(/\/?$/, '/')), { redirect: 'error', signal: AbortSignal.timeout(20000) });
             if (response.ok) {
               const text = await response.text();
               if (Buffer.byteLength(text) > 10000000) throw new Error('Daily inputs exceed size limit');
@@ -132,7 +133,7 @@ jobs:
           const valid = data => data?.schema === 'memento.world-index.v1' && Array.isArray(data.shards) && data.registries && Number.isFinite(Date.parse(data.builtAt));
           let state = '', source = '', status = null, manifest = null;
           try {
-            const response = await fetch(url, { signal: AbortSignal.timeout(30000), redirect: 'error', headers: { 'Cache-Control': 'no-cache' } });
+            const response = await (async (u, o) => { for (let i = 0; ; i++) { const r = await fetch(u, { ...o, signal: AbortSignal.timeout(20000) }); if (r.status < 500 || i >= 4) return r; await new Promise(s => setTimeout(s, 3000 * (i + 1))); } })(url, { signal: AbortSignal.timeout(30000), redirect: 'error', headers: { 'Cache-Control': 'no-cache' } });
             status = response.status;
             if (!response.ok) throw new Error(`HTTP ${status}`);
             let size = 0;
@@ -245,7 +246,7 @@ jobs:
           const site = new URL(process.env.WORLD_SITE_URL.replace(/\/?$/, '/'));
           const out = path.resolve('web');
           for (const [remote, local] of [['links-status.json', path.join(out, 'links-status.json')], ['data/news-snapshot.json', '.daily-out/news/snapshot.json'], ['data/contrib/build-input.json', path.join(out, 'data/contrib/build-input.json')], ['data/contrib/credits.json', path.join(out, 'data/contrib/credits.json')]]) {
-            const response = await fetch(new URL(remote, site), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+            const response = await (async (u, o) => { for (let i = 0; ; i++) { const r = await fetch(u, { ...o, signal: AbortSignal.timeout(20000) }); if (r.status < 500 || i >= 4) return r; await new Promise(s => setTimeout(s, 3000 * (i + 1))); } })(new URL(remote, site), { redirect: 'error', signal: AbortSignal.timeout(20000) });
             if (response.status === 404) {
               if (remote === 'data/news-snapshot.json') {
                 await fs.mkdir(path.dirname(local), { recursive: true });
