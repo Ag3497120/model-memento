@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -71,7 +72,7 @@ function chat(ctx, title, subtitle = '') {
   return el('main', { class: 'chat-main' }, S.thread(ctx, title, subtitle), input);
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.from;
   const root = el('div', { class: `surface huggingchat d3 phase-${ym}`, 'data-spec-version': v.id });
@@ -199,7 +200,7 @@ function decorateMessages(root, ctx, v) {
       
       if (!user && v.from >= '2025-10') {
         const model = ctx?.model?.name;
-        if (model) message.append(el('small', { class: 'd3-model-meta' }, tr('選択中のモデル: ', 'Selected model · '), model, tr(' · 実際の経路・提供元は未確認', ' · Actual route and provider are unverified')));
+        if (model) message.append(el('small', { class: 'd3-model-meta', title: tr('実際の経路・提供元は未確認です。', 'Actual route and provider are unverified.') }, model));
       }
       
     }
@@ -208,4 +209,9 @@ function decorateMessages(root, ctx, v) {
   observer.observe(root, { childList: true, subtree: true });
   update();
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'huggingchat');
 }

@@ -87,7 +87,7 @@ function chatPanel(ctx, title = 'GitHub Copilot') {
     transcript(ctx, title, tr('道具やモデルについて、この入力欄から聞けます。', "Ask about tools and models here.")), input(ctx, tr('質問や作業の内容を入力してください', "Enter a question or task")));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.id.match(/\d{4}-\d{2}/)?.[0] || v.ym;
   const editor = S.codeEditor(ctx, 'hello.py');
@@ -149,4 +149,22 @@ export function render(ctx) {
   if (!controls.parentNode) panel.querySelector('.panel-header').after(controls);
   if (!workspace) workspace = el('main', { class: 'ide-workspace' }, S.explorer(ctx), editor, panel);
   return root(v, 'ide vscode vscode-copilot-' + ym.slice(0, 4) + ' phase-' + ym + ' d2-copilot', top, workspace, sources(v));
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
+  return surface;
 }

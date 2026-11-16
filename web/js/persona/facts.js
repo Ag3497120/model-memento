@@ -80,7 +80,7 @@ export function modelFacts(model, context = {}) {
   }
 
   const persona = personaFor(model, context);
-  for (const name of ['tone', 'verbosity', 'formatting_habits', 'self_description', 'typical_strengths', 'failure_modes', 'quirks']) {
+  for (const name of ['tone', 'verbosity', 'formatting_habits', 'refusal_style', 'interface', 'self_description', 'typical_strengths', 'failure_modes', 'quirks']) {
     for (const [i, trait] of trustedTraits(persona, name).entries()) translated(`persona.${name}.${i}`, trait, 'value', [trait.source]);
   }
   // Older researched records carry per-trait evidence references.
@@ -167,7 +167,10 @@ export function selfAnswer(intent, model, context = {}) {
   if (intent === 'identity') {
     const name = use('name');
     const vendor = use('vendor');
-    body = name ? tr(`私は${name}です。${vendor ? `${vendor}が作ったモデルとして記録されています。` : '開発元は記録では確認できません。'}`, `I am ${name}. ${vendor ? `I am recorded as a model made by ${vendor}.` : "My developer is not in the records."}`) : unknown('名前');
+    const description = traits(['persona.self_description.']);
+    const completion = all.get('persona.interface.0')?.value === 'completion';
+    if (completion) use('persona.interface.0');
+    body = name ? tr(`私は${name}です。${vendor ? `${vendor}が作ったモデルです。` : '開発元は記録では確認できません。'}${description.length ? traitText(description) + '。' : completion ? '与えられた文章の続きを書きます。' : ''}`, `I am ${name}. ${vendor ? `I am a model made by ${vendor}.` : "My developer is not in the records."}${description.length ? ' ' + traitText(description) + '.' : completion ? ' I continue the supplied text.' : ''}`) : unknown('名前');
   } else if (intent === 'maker') {
     const maker = use('vendor');
     body = maker ? tr(`私は${maker}が作ったモデルです。`, `I am a model made by ${maker}.`) : unknown('開発元');
@@ -233,12 +236,15 @@ export function selfAnswer(intent, model, context = {}) {
 export function freeFormAnswer(model, context = {}) {
   const all = modelFacts(model, context);
   const facts = [...all.values()].filter(f => f.key === 'name' || f.key.startsWith('links.'));
-  return { text: tr(`私は${all.get('name')?.value || '選択中のモデルの記録を読む案内役'}として記録を案内しています。コードや文章を作る依頼には、${routeOptions(model, context)}`, `I am presenting records as ${all.get("name")?.value || "a guide to the selected model records"}. For requests to write code or prose, ${routeOptions(model, context)}`) + sourceText(facts), facts, kind: 'creative' };
+  const speech = tr('私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。', 'I cannot answer free-form requests to create new code or prose from these records alone.');
+  const note = routeOptions(model, context);
+  return { text: speech + `\n\n${tr('資料館の注記（役の外）', 'Museum note (outside the role)')}\n${note}` + sourceText(facts),
+    speech, museumNote: { text: note, facts, sources: urls(facts.flatMap(f => f.sources || [])) }, facts, kind: 'creative', relayAllowed: false };
 }
 
 export function unknownAnswer(question, model, context = {}) {
   const next = /天気|weather/i.test(question)
     ? tr('地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。', 'Include a location and check a weather forecast or the real model search feature.')
     : tr('確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。', 'Specify the detail you want to check, or consult the provider documentation linked in the model sources.');
-  return { text: tr(`私は記録をもとに答えています。その内容は記録では確認できません。${next}`, `I answer from the records. That information is not in the records. ${next}`), facts: [], kind: 'unknown' };
+  return { text: tr(`私にはその情報がありません。その内容は記録では確認できません。${next}`, `I do not have that information. That information is not in the records. ${next}`), facts: [], kind: 'unknown' };
 }

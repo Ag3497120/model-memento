@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import { composer, thread } from '../surface.js';
@@ -14,7 +15,7 @@ const releases = {
   'earendil-works--pi-record': '1.5.2'
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const { id, ym } = editionTag(ctx);
   const release = releases[id] || (ym >= '2026-11' ? '1.5.2' : ym >= '2026-10' ? '1.0.0' : ym >= '2026-09' ? '0.99.2' : ym >= '2026-08' ? '0.84.4' : ym >= '2026-07' ? '0.83.0' : ym >= '2026-06' ? '0.80.3' : '0.12.0');
   const early = release === '0.12.0';
@@ -83,4 +84,9 @@ export function render(ctx) {
     settings.append(el('label', {}, tr('推論の強さ（表示例）', 'Reasoning effort (example)'), reasoning));
   }
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'pi-coding-agent');
 }

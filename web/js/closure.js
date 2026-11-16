@@ -4,10 +4,14 @@ import { fitContext, estimateTokens } from '../lib/core.js';
 import { inferArchetypeKey } from '../lib/vera.js';
 import { createCross } from './cross.js';
 import { releaseOf } from './era.js';
-import { loadBrowserRecords, personaFor, trustedTraits, recordedValue } from './persona/records.js';
+import { loadBrowserRecords, recordedValue } from './persona/records.js';
 import { selfIntent, isFreeForm, isArchiveRequest, isPersonalUnknown, isLiveQuestion } from './persona/intents.js';
 import { modelFacts, sourceText, selfAnswer, freeFormAnswer, unknownAnswer } from './persona/facts.js';
 import { cachedCard, preparePersonaCards } from './persona/cards.js';
+import { resolveConversation } from './persona/conversation.js';
+import { eraAnswer, conversationAnswer, archiveAnswer, protectAnswer } from './persona/era.js';
+import { voiceAnswer } from './persona/voice.js';
+export { greeting as modelGreeting } from './persona/voice.js';
 import {
   getArchiveIndex,
   findMentionedModels,
@@ -977,12 +981,6 @@ function handleModelLookup(targetModel, focus, { question, activeModel, index, e
   if (note) lines.push(note);
 }
 
-function handleCreative({ model, question, emit, lines }) {
-  const result = freeFormAnswer(model);
-  lines.push(result.text);
-  result.facts.forEach(emit);
-}
-
 /** Extract strong content terms (non-stopword Latin tokens, Katakana words, Kanji compounds) for strict search gating. */
 function extractStrongTerms(question) {
   const norm = normalizeQuery(question);
@@ -1042,15 +1040,6 @@ function handleArchiveSearch({ question, activeModel, activeTool, index, emit, l
   return 'archive_search';
 }
 
-function shapeVoice(lines, { model, context }) {
-  if (!lines.length) return '';
-  const styles = trustedTraits(personaFor(model, context), 'formatting_habits').map(t => recordedValue(t, 'value')).filter(Boolean).join(' ');
-  if (/番号付き|numbered/i.test(styles) && lines.length > 2) {
-    return lines.map((line, i) => `${i + 1}. ${line}`).join('\n\n');
-  }
-  return lines.join('\n\n');
-}
-
 /**
  * Answer a user question using symbolic 6-arm ledgers, cross-archive search,
  * strict historical cutoff gates, and zero-hallucination citation rules.
@@ -1062,16 +1051,29 @@ export function answer(question, context = {}) {
   const index = resolveIndex(context);
   const activeModel = hydrateModel(model, index);
   const history = normalizeHistory(context.messages || context.history || [], question);
+  const resolved = resolveConversation(question, { ...context, model: activeModel });
+  const originalQuestion = question;
+  question = resolved.question;
   const ledger = ledgerFor({ ...context, model: activeModel });
   const { cross, contextStats } = buildCrossLedger({ model: activeModel, tool, version, models, research, history });
-  const finish = result => ({ text: result.text, facts: result.facts, kind: result.kind,
-    cutoff: cutoffOf(activeModel), closed: true, forgotten: contextStats.forgottenTurns });
+  const finish = result => {
+    result = voiceAnswer(protectAnswer(result, activeModel, context), activeModel, context);
+    return { text: result.text, facts: result.facts, kind: result.kind,
+      cutoff: cutoffOf(activeModel), closed: true, forgotten: contextStats.forgottenTurns,
+      ...Object.fromEntries(['speech', 'museumNote', 'voice', 'eraBlocked', 'relayAllowed'].filter(key => result[key] !== undefined).map(key => [key, result[key]])),
+      ...(result.kind === 'unknown' ? { relayAllowed: false } : {}) };
+  };
   const explicitModels = explicitModelMentions(question, index);
   const others = explicitModels.filter(m => m.id !== activeModel.id);
   const memoryQuestion = isEn && /\bremember\b|\bmy name\b|\bwhat did i\b/i.test(question);
   const namedTool = !(isEn && selfIntent(question) && /\b(?:you|your|yourself)\b/i.test(question)) &&
     findMentionedTools(question, index, { activeTool: null, limit: 4 })
       .some(t => t.name?.length > 2 && normalizeQuery(question).includes(normalizeQuery(t.name)));
+  const roleContext = { ...context, model: activeModel };
+  const historical = !isArchiveRequest(question) && eraAnswer(question, roleContext, { models: explicitModels });
+  if (historical) return finish(historical);
+  const conversational = conversationAnswer(originalQuestion, roleContext, resolved);
+  if (conversational) return finish(conversational);
   if (!isArchiveRequest(question) && isFreeForm(question) && !(isEn && selfIntent(question) === 'output')) {
     return finish(freeFormAnswer(others[0] ? hydrateModel(others[0], index) : activeModel, context));
   }
@@ -1081,7 +1083,7 @@ export function answer(question, context = {}) {
   const earlyCard = earlyIntent ? cachedCard(question, activeModel.id, modelFacts(activeModel, context), context.personaCards) : null;
   if (!context.noCross && !earlyCard && !memoryQuestion && !isArchiveRequest(question) && !isPersonalUnknown(question) && !isLiveQuestion(question)) {
     const crossed = crossAnswer(question, { ...context, model: activeModel });
-    if (crossed) return finish({ ...crossed, text: crossed.text + sourceText(crossed.facts) });
+    if (crossed) return finish({ ...crossed, text: crossed.voice || crossed.museumNote ? crossed.text : crossed.text + sourceText(crossed.facts) });
   }
   if (!isArchiveRequest(question) && !others.length && !namedTool) {
     if (isPersonalUnknown(question) || isLiveQuestion(question)) return finish(unknownAnswer(question, activeModel, context));
@@ -1140,18 +1142,18 @@ export function answer(question, context = {}) {
   } else if (kind === 'model_lookup') {
     handleModelLookup(route.targetModel || activeModel, route.focus || {}, { question, activeModel, index, emit, lines });
   } else if (kind === 'creative') {
-    handleCreative({ model: activeModel, question, emit, lines });
+    return finish(freeFormAnswer(activeModel, context));
   } else {
     kind = handleArchiveSearch({ question, activeModel, activeTool: tool, index, emit, lines });
   }
 
-  const text = shapeVoice(lines, { model: activeModel, context });
-  return {
+  const text = lines.join('\n\n');
+  return finish(archiveAnswer({
     text,
     facts: used,
     kind,
     cutoff: cutoffOf(activeModel),
     closed: true,
     forgotten: contextStats.forgottenTurns
-  };
+  }, activeModel, context));
 }

@@ -28,13 +28,13 @@ jobs:
       MEMENTO_CONTRIB_REPLY: ${{ runner.temp }}/contrib-reply.txt
     steps:
       - name: 既定ブランチの検査コードだけを読む
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: ${{ github.event.repository.default_branch }}
           persist-credentials: false
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
 
@@ -50,7 +50,7 @@ jobs:
 
       - name: 前回の照合用の状態を読む
         id: state
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .contrib-cache
           key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -76,7 +76,7 @@ jobs:
 
       - name: 次のビルドが読む入力と協力者一覧を渡す
         if: steps.intake.outputs.accepted == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: memento-contrib-build-input
           path: |
@@ -87,7 +87,7 @@ jobs:
 
       - name: 管理者の確認用データを別に保存する
         if: steps.intake.outputs.accepted == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: memento-contrib-review-and-state
           path: |
@@ -110,13 +110,13 @@ jobs:
 
       - name: 検査と受け渡しが終わった状態だけを保存する
         if: steps.intake.outputs.accepted == 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .contrib-cache
           key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: 返信文を返信専用の処理へ渡す
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: memento-contrib-reply
           path: ${{ runner.temp }}/contrib-reply.txt
@@ -133,13 +133,13 @@ jobs:
       discussions: write
     steps:
       - name: 検査済みの返信文だけを読む
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: memento-contrib-reply
           path: reply
 
       - name: IssueまたはDiscussionへ受付結果を返信する
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         with:
           script: |
             const fs = require('node:fs/promises');

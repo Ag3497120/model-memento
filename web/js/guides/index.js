@@ -1,6 +1,6 @@
 import { tr, pick, num } from '../i18n.js';
 import { el, button, link } from '../dom.js';
-import { openNavEntry, registerNavEntry } from '../nav.js';
+import { openNavEntry, registerNavEntry, openNavPage } from '../nav.js';
 import { guideDate, loadGuideIndex, selectGuides, timelineGuides } from './data.js';
 
 const kinds = {
@@ -149,7 +149,10 @@ export async function openGuides(context = {}) {
   }
   const body = el('div', { class: 'chrome-dialog-body guides-body' }, el('p', { role: 'status' }, tr('資料を読み込んでいます…', "Loading guides…")));
   dialog.replaceChildren(el('header', { class: 'screen-header chrome-dialog-header' },
-    button(tr('‹ メニュー', "‹ Menu"), () => dialog.close(), { 'data-screen-back': '' }), el('h2', { id: 'guides-heading' }, tr('指示の出し方', "Prompting guides")), button(tr('閉じる', "Close"), () => dialog.close())), body);
+    button(tr('‹ メニュー', "‹ Menu"), () => dialog.close(), { 'data-screen-back': '' }),
+    el('div', { class: 'chrome-page-heading' }, el('p', { class: 'chrome-page-origin' }, 'Model Memento'),
+      el('h2', { id: 'guides-heading' }, tr('指示の出し方', "Prompting guides"))), button(tr('閉じる', "Close"), () => dialog.close())), body);
+  openNavPage({ id: 'guides', title: tr('指示の出し方', 'Prompting guides'), target: dialog, reopen: () => openGuides(context) });
   dialog.addEventListener('close', () => { if (opener?.isConnected) opener.focus(); }, { once: true });
   if (!dialog.open) dialog.showModal();
   try { const index = await loadGuideIndex(); if (current === revision && dialog.open) renderScreen(body, index, context); }

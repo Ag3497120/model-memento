@@ -162,3 +162,20 @@ test('answer rendering uses text nodes and safe clickable sources', () => {
   assert.equal(anchor.href, 'https://example.org/model');
   assert.equal(anchor.rel, 'noopener noreferrer');
 });
+
+test('D4 a stand-in never receives future successor or retirement records as role knowledge', async () => {
+  const old = { ...ctx.model, specs: { knowledge_cutoff: '2020-12' }, successor: 'later', lifecycle: { status: 'retired', events: [{ type: 'retired_api', date: '2025-06-01' }] } };
+  const later = { id: 'later', name: 'Later Model', release: '2024-01-01', evidence: [{ url: 'https://example.org/later' }] };
+  const context = { model: old, models: [old, later] };
+  const prompt = standInPrompt(context, 'What is your successor?');
+  assert.match(prompt, /2020-12/);
+  assert.doesNotMatch(prompt, /2025-06-01|"successor"|"status"/);
+  const module = engineModule();
+  const session = createStandIn(context, { gpu, importer: async () => module });
+  await session.enable();
+  const result = await session.generate('Later Modelの公開日は？');
+  assert.equal(result.eraBlocked, true);
+  assert.equal(module.calls.requests.length, 0);
+  assert.match(result.museumNote.text, /2024-01-01/);
+  await session.dispose();
+});

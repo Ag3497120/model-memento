@@ -1,0 +1,157 @@
+{
+  "schema": "memento.cross-eval.v1",
+  "at": "2026-11-16",
+  "base": {
+    "questions": 102,
+    "template": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 15.21
+    },
+    "cross": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 7.5
+    },
+    "cross_flat": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 6.43
+    },
+    "cross_then_template": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 14.46
+    }
+  },
+  "paraphrase": {
+    "questions": 29,
+    "template": {
+      "answer_rate": 73.91,
+      "correct_value": 73.91,
+      "correct_unknown": 100,
+      "correct_all": 79.31,
+      "ms": 10.25
+    },
+    "cross": {
+      "answer_rate": 60.87,
+      "correct_value": 60.87,
+      "correct_unknown": 100,
+      "correct_all": 68.97,
+      "ms": 6.71
+    },
+    "cross_flat": {
+      "answer_rate": 60.87,
+      "correct_value": 60.87,
+      "correct_unknown": 100,
+      "correct_all": 68.97,
+      "ms": 6.49
+    },
+    "cross_then_template": {
+      "answer_rate": 82.61,
+      "correct_value": 82.61,
+      "correct_unknown": 100,
+      "correct_all": 86.21,
+      "ms": 15.19
+    }
+  },
+  "twoHop": [
+    {
+      "model": "claude-opus-5-5",
+      "q": "前のモデルはいつ公開された？",
+      "with_initial": "私の前のモデルはClaude Opus 4.6です。Claude Opus 4.6は2026-02-04に公開されました。\n\n出典\n- [出典 1](https://models.dev/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
+      "without_initial": "私の前のモデルはClaude Opus 4.6です。\n\n出典\n- [出典 1](https://models.dev/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
+      "layer2": {
+        "layer": 2,
+        "center": "claude-opus-4-6",
+        "query": "私の前のモデルはClaude Opus 4.6です。 前のモデルはいつ公開された？",
+        "trace": [
+          {
+            "center": "claude-opus-4-6",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4@20250514",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4-6-think",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 0.83,
+            "predicate": 1,
+            "score": 0.83,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4-6",
+            "chain": "family",
+            "arm": "DOWN",
+            "subject": 1,
+            "predicate": 0.5,
+            "score": 0.5,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4@20250514",
+            "chain": "family",
+            "arm": "DOWN",
+            "subject": 1,
+            "predicate": 0.5,
+            "score": 0.5,
+            "gap": false
+          }
+        ],
+        "lock": "LEFT"
+      }
+    },
+    {
+      "model": "gpt-3.5-turbo-0301",
+      "q": "後継はいつ公開された？",
+      "with_initial": "私の知識は2021-09までです。後継については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-3.5-turbo-0301: gpt-3.5-turbo-0301の後継モデルはgpt-3.5-turboと記録されています。 GPT-3.5-turbo: GPT-3.5-turboの公開日は2023-03-01と記録されています。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://models.dev/)\n- [出典 3](https://openrouter.ai/models)\n- [出典 4](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 5](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
+      "without_initial": "私の知識は2021-09までです。後継については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-3.5-turbo-0301: gpt-3.5-turbo-0301の後継モデルはgpt-3.5-turboと記録されています。 GPT-3.5-turbo: GPT-3.5-turboの公開日は2023-03-01と記録されています。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://models.dev/)\n- [出典 3](https://openrouter.ai/models)\n- [出典 4](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 5](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
+      "layer2": null
+    },
+    {
+      "model": "gemini-1.0-pro",
+      "q": "後継の文脈長は？",
+      "with_initial": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\nGemini 1.0 Pro: Gemini 1.0 Proの後継モデルはgemini-2.5-flashと記録されています。 Gemini 2.5 Flash: Gemini 2.5 Flashの一度に扱える文章の長さの上限は1,048,576トークン（文章を数える単位）と記録されています。\n\n出典\n- [出典 1](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)\n- [出典 2](https://models.dev/)\n- [出典 3](https://openrouter.ai/models)\n- [出典 4](https://blog.google/technology/ai/google-gemini-ai/)",
+      "without_initial": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\nGemini 1.0 Pro: Gemini 1.0 Proの後継モデルはgemini-2.5-flashと記録されています。 Gemini 2.5 Flash: Gemini 2.5 Flashの一度に扱える文章の長さの上限は1,048,576トークン（文章を数える単位）と記録されています。\n\n出典\n- [出典 1](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)\n- [出典 2](https://models.dev/)\n- [出典 3](https://openrouter.ai/models)\n- [出典 4](https://blog.google/technology/ai/google-gemini-ai/)",
+      "layer2": null
+    },
+    {
+      "model": "gpt-4-0314",
+      "q": "後継モデルはいつ出た？",
+      "with_initial": "私の知識は2021-09までです。後継については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の後継モデルはgpt-5 , or gpt-4.1 for latency-sensitive tasks that don’t require reasoningと記録されています。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://arxiv.org/abs/2303.08774)\n- [出典 3](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 4](https://arxiv.org/html/2303.08774v6)\n- [出典 5](https://cdn.openai.com/papers/gpt-4-system-card.pdf)",
+      "without_initial": "私の知識は2021-09までです。後継については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の後継モデルはgpt-5 , or gpt-4.1 for latency-sensitive tasks that don’t require reasoningと記録されています。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://arxiv.org/abs/2303.08774)\n- [出典 3](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 4](https://arxiv.org/html/2303.08774v6)\n- [出典 5](https://cdn.openai.com/papers/gpt-4-system-card.pdf)",
+      "layer2": null
+    }
+  ]
+}

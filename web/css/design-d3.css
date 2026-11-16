@@ -519,3 +519,281 @@
 .d3.openwebui .d3-work-pane { display: flex; flex-direction: column; min-height: 0; }
 .d3.openwebui .d3-work-content { display: flex; flex-direction: column; flex: 1; min-height: 0; }
 .d3.openwebui .d3-work-content > .chat-main { flex: 1; }
+
+/* D3 fidelity pass. Facts and edition links: design/fidelity-d3.md.
+   All new pixel spacing/type sizes below are reconstruction choices, unverified
+   as historical measurements. Existing sourced palette tokens stay authoritative.
+   Scoped to the fifteen D3 renderers; other workers' surfaces are unaffected. */
+.surface.d3-fidelity {
+  --f-bg: var(--d4-bg, var(--bg));
+  --f-panel: var(--d4-panel, var(--panel));
+  --f-text: var(--d4-text, var(--text));
+  --f-muted: var(--d4-muted, var(--muted));
+  --f-border: var(--d4-border, var(--border));
+  --f-accent: var(--d4-accent, var(--accent));
+  position: relative;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+.surface.d3-fidelity [hidden] { display: none !important; }
+.surface.d3-fidelity [data-d3-product-name] { font-family: system-ui, sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; }
+.surface.d3-fidelity :is(button,select,input,textarea) { font-family: inherit; }
+.surface.d3-fidelity :is(button,summary,a,select,textarea,input):focus-visible { outline: 2px solid var(--f-accent); outline-offset: 3px; }
+.surface.d3-fidelity button:not(:disabled):hover { background-color: color-mix(in srgb, var(--f-text) 7%, var(--f-bg)); }
+.surface.d3-fidelity button:disabled { cursor: default; opacity: .45; }
+.surface.d3-fidelity :is(.native-header,.panel-header) { min-height: 38px; padding: 6px 12px; gap: 8px; box-shadow: none; }
+.surface.d3-fidelity .native-header strong { font-size: 13px; }
+.surface.d3-fidelity .empty-state h1 { letter-spacing: normal; }
+.surface.d3-fidelity :is(.native-sidebar,.cherry-assistants,.lm-runtime) { overflow: auto; scrollbar-width: thin; }
+.surface.d3-fidelity .composer { box-shadow: none; gap: 8px; }
+.surface.d3-fidelity .composer textarea { min-width: 0; font-size: 14px; line-height: 1.5; }
+.surface.d3-fidelity .composer .send { flex: none; min-width: 30px; min-height: 30px; padding: 4px 9px; }
+.surface.d3-fidelity .composer:focus-within { border-color: var(--f-accent); }
+.surface.d3-fidelity .message { box-shadow: none; line-height: 1.65; }
+.surface.d3-fidelity .message-label { font-size: 11px; font-weight: 500; }
+.surface.d3-fidelity .message .answer-text { min-width: 0; }
+.surface.d3-fidelity .stream-fx-head,
+.surface.d3-fidelity .stream-fx-foot { display: none !important; }
+.surface.d3-fidelity .message.assistant.is-thinking::before { content: none; }
+.surface.d3-fidelity .message .answer-text::after { content: none !important; }
+.surface.d3-fidelity .d3-generation-label { display: none; color: var(--f-muted); font-size: 12px; }
+.surface.d3-fidelity .message.is-thinking .d3-generation-label { display: block; }
+.surface.d3-fidelity .message.is-streaming .answer-text { border-inline-end: 2px solid var(--f-muted); padding-inline-end: 2px; }
+.surface.d3-fidelity .d3-recreation { flex: none; display: block; padding: 2px 12px 0; font: 10px/1.5 system-ui, sans-serif; color: var(--f-muted); }
+.surface.d3-fidelity .d3-fidelity-sources { flex: none; padding: 2px 12px 5px; margin: 0; font: 10px/1.5 system-ui, sans-serif; color: var(--f-muted); max-height: 28%; overflow: auto; text-align: start; }
+.surface.d3-fidelity .d3-fidelity-sources summary { cursor: pointer; }
+.surface.d3-fidelity .d3-fidelity-sources a { display: inline-block; margin: 4px 8px 0 0; color: inherit; }
+.surface.d3-fidelity .d3-fidelity-sources p { white-space: pre-line; font: inherit; }
+.surface.d3-fidelity .d3-answer-actions { display: flex; align-items: center; gap: 4px; margin-top: 10px; }
+.surface.d3-fidelity .d3-answer-actions button { font-size: 11px; padding: 3px 7px; min-height: 26px; border: 0; border-radius: 5px; background: transparent; color: var(--f-muted); }
+.surface.d3-fidelity .message:is(.is-thinking,.is-streaming) .d3-answer-actions { display: none; }
+
+/* Aider's Rich/prompt-toolkit flow and Streamlit browser are different surfaces.
+   https://github.com/Aider-AI/aider/blob/v0.59.0/aider/io.py
+   https://github.com/Aider-AI/aider/blob/v0.31.0/aider/gui.py */
+.surface.d3-fidelity.d2-aider-flow { padding: 18px 22px; font: 13px/1.55 ui-monospace, monospace; }
+.surface.d3-fidelity.d2-aider-flow :is(.boot,.thread,.composer) { padding: 0; margin: 0 0 12px; }
+.surface.d3-fidelity.d2-aider-flow .boot { max-height: none; color: var(--f-muted); white-space: pre-wrap; }
+.surface.d3-fidelity.d2-aider-flow .thread { min-height: 0; }
+.surface.d3-fidelity.d2-aider-flow .empty-state { display: none; }
+.surface.d3-fidelity.d2-aider-flow .message { display: block; padding: 6px 0; margin: 0; }
+.surface.d3-fidelity.d2-aider-flow .composer textarea { font: inherit; }
+.surface.d3-fidelity.d2-aider-flow .d2-key-hint { font-size: 11px; margin-bottom: 6px; }
+.surface.d3-fidelity.aider-browser .native-sidebar { flex: 0 0 270px; width: 270px; padding: 28px 20px; gap: 18px; }
+.surface.d3-fidelity.aider-browser .native-sidebar > span { font-size: 16px; }
+.surface.d3-fidelity.aider-browser .native-sidebar :is(select,input) { border: 1px solid var(--f-border); border-radius: 7px; background: var(--f-bg); padding: 8px; }
+.surface.d3-fidelity.aider-browser .thread { padding: 32px max(24px,calc((100% - 720px)/2)); }
+.surface.d3-fidelity.aider-browser .empty-state { min-height: 45%; }
+.surface.d3-fidelity.aider-browser .empty-state h1 { font-size: 24px; }
+.surface.d3-fidelity.aider-browser .composer { border-radius: 8px; margin: 12px 28px; }
+.surface.d3-fidelity.aider-browser .message { background: transparent; border: 0; padding: 16px 0; }
+.surface.d3-fidelity.aider-browser .d2-command-hint { font-size: 12px; padding: 12px 28px; color: var(--f-muted); }
+
+/* Bing 2023: tone selector, white answer cards, right history. 2024: carousel,
+   Notebook split, then a roomier companion. Palette inherited; exact values
+   remain unverified. https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/
+   https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/ */
+.surface.d3-fidelity.bing .surface-row { min-height: 0; }
+.surface.d3-fidelity.bing .native-header { min-height: 48px; border: 0; background: transparent; padding-inline: 24px; }
+.surface.d3-fidelity.bing .conversation-tones { margin: 12px auto 4px; padding: 0; width: fit-content; border-radius: 12px; gap: 0; background: var(--f-panel); }
+.surface.d3-fidelity.bing .conversation-tones legend { text-align: center; padding: 0 0 10px; font-size: 12px; color: var(--f-muted); }
+.surface.d3-fidelity.bing .tone-card { min-width: 100px; max-width: 150px; border-radius: 9px; border: 0; padding: 12px 15px; box-shadow: none; font-size: 12px; }
+.surface.d3-fidelity.bing .tone-card.active { color: var(--f-bg); background: var(--f-accent); }
+.surface.d3-fidelity.bing .thread { padding: 20px max(24px,calc((100% - 760px)/2)); }
+.surface.d3-fidelity.bing .empty-state { min-height: 65%; }
+.surface.d3-fidelity.bing .empty-state h1 { font-size: 28px; font-weight: 500; }
+.surface.d3-fidelity.bing .message.user { margin-left: auto; padding: 12px 18px; max-width: 85%; border-radius: 12px 12px 2px 12px; }
+.surface.d3-fidelity.bing .message.assistant { border-radius: 8px; padding: 18px 22px; }
+.surface.d3-fidelity.bing .composer { width: calc(100% - 48px); max-width: 800px; margin: 10px auto; border-radius: 12px; padding: 14px 18px; }
+.surface.d3-fidelity.bing .d1-composer-controls { padding: 0 24px; justify-content: center; font-size: 12px; }
+.surface.d3-fidelity.bing .d1-right-history { width: 260px; padding: 22px 16px; background: color-mix(in srgb, var(--f-panel) 50%, transparent); font-size: 12px; }
+.surface.d3-fidelity.bing .d1-right-history h3 { font-size: 13px; font-weight: 600; }
+.surface.d3-fidelity.bing .d1-scroll-cards { order: 1; max-width: 800px; margin: auto; padding: 12px 24px; gap: 12px; }
+.surface.d3-fidelity.bing .d1-scroll-cards > * { flex: 1 0 190px; border-radius: 14px; min-height: 100px; text-align: left; background: var(--f-panel); border: 1px solid var(--f-border); padding: 16px; }
+.surface.d3-fidelity.bing .chat-main:has(.d1-scroll-cards) .thread { order: 0; }
+.surface.d3-fidelity.bing .chat-main:has(.d1-scroll-cards) :is(.composer,.d1-composer-controls,.native-footnote) { order: 2; }
+.surface.d3-fidelity.bing:has(.message) .d1-scroll-cards { display: none; }
+.surface.d3-fidelity.bing.d1-notebook .d1-notebook-input { padding: 20px; border-right: 1px solid var(--f-border); }
+.surface.d3-fidelity.bing.d1-notebook .d1-notebook-output { padding: 20px; background: var(--f-panel); }
+.surface.d3-fidelity.bing.d1-notebook .composer { width: 100%; max-width: none; margin: 10px 0; border-radius: 8px; }
+.surface.d3-fidelity.bing:is(.d1-airy,.copilot-2025-04,.copilot-macos-2025-03) .composer { border-radius: 24px; min-height: 64px; }
+.surface.d3-fidelity.bing.d1-airy .message.assistant { border: 0; background: transparent; }
+
+/* Editor density and real code gutters, preserving file-switch handlers.
+   https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx
+   https://zed.dev/blog/assistant ; https://docs.continue.dev/ide-extensions/chat/basics */
+.surface.d3-fidelity:is(.continue,.cline,.zed) { font-size: 12px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .explorer { gap: 2px; padding: 10px 8px; font-size: 12px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .explorer strong { padding: 2px 6px 10px; font-size: 10px; font-weight: 500; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .explorer button { text-align: left; border: 0; padding: 4px 8px; background: transparent; border-radius: 3px; font-size: 12px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .explorer button.is-active { background: color-mix(in srgb, var(--f-accent) 14%, var(--f-panel)); }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .editor-tab { height: 34px; font: 12px/1.5 system-ui, sans-serif; border-top: 0; border-bottom: 1px solid var(--f-border); }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .code-content { padding: 16px 0; font: 13px/1.8 ui-monospace, monospace; }
+.surface.d3-fidelity .d3-code-line { display: block; white-space: pre; }
+.surface.d3-fidelity .d3-code-line::before { content: attr(data-line); display: inline-block; width: 4ch; margin-right: 3ch; text-align: right; color: var(--f-muted); opacity: .65; user-select: none; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .integrated-terminal { font: 11px/1.6 ui-monospace, monospace; min-height: 110px; border-top: 1px solid var(--f-border); }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .agent-panel { min-width: 260px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .thread { padding: 14px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .message { padding: 12px 0; margin: 0; font-size: 12px; border-radius: 0; max-width: 100%; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .message-label { display: block; width: auto; margin-bottom: 6px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .composer { margin: 8px 10px; padding: 10px; }
+.surface.d3-fidelity:is(.continue,.cline,.zed) .composer textarea { font-size: 12px; }
+.surface.d3-fidelity.continue .d3-toolbar { padding: 5px 10px; gap: 5px; font-size: 11px; }
+.surface.d3-fidelity.continue .d3-toolbar :is(button,select) { font-size: 11px; padding: 4px 6px; border-radius: 4px; }
+.surface.d3-fidelity.continue .d3-step { padding: 10px; border-radius: 5px; }
+.surface.d3-fidelity.continue .composer { border-radius: 5px; min-height: 74px; align-items: end; }
+.surface.d3-fidelity.cline .d2-task-heading { padding: 12px 14px; font-size: 12px; }
+.surface.d3-fidelity.cline .d2-task-heading small { font-size: 10px; margin-top: 6px; }
+.surface.d3-fidelity.cline .empty-state { text-align: left; align-items: flex-start; justify-content: flex-start; padding-top: 40px; }
+.surface.d3-fidelity.cline .empty-state h1 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.surface.d3-fidelity.cline .composer { align-items: flex-start; border-width: 1px; }
+.surface.d3-fidelity.cline .composer > button:not(.send) { font-size: 11px; padding: 4px 6px; background: transparent; border: 0; }
+.surface.d3-fidelity.cline .d2-cline-modes { padding: 0 10px 10px; justify-content: space-between; font-size: 11px; }
+.surface.d3-fidelity.cline .d2-mode-switch { border: 1px solid var(--f-border); border-radius: 5px; padding: 2px; }
+.surface.d3-fidelity.cline .d2-mode-switch button { border: 0; padding: 3px 9px; font-size: 11px; }
+.surface.d3-fidelity.cline .d2-mode-switch button[aria-pressed=true] { background: color-mix(in srgb, var(--f-accent) 18%, var(--f-bg)); }
+.surface.d3-fidelity.zed .d3-toolbar { padding: 6px 10px; font-size: 11px; }
+.surface.d3-fidelity.zed .d3-editable-buffer { background: var(--f-bg); }
+.surface.d3-fidelity.zed .d3-buffer-entry > strong { display: block; border-bottom: 1px solid var(--f-border); padding-bottom: 5px; font: 11px/1.5 system-ui, sans-serif; color: var(--f-accent); }
+.surface.d3-fidelity.zed .d3-editable-buffer .composer { align-items: start; }
+.surface.d3-fidelity.zed .d3-editable-buffer textarea { font: 13px/1.7 ui-monospace, monospace; min-height: 100px; }
+.surface.d3-fidelity.zed .d3-review { margin: 0 10px; padding: 7px 0; border: 0; font-size: 11px; }
+
+/* Chat UI: quieter sidebar, constrained readable column and attached composer.
+   https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatWindow.svelte
+   https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/MessageInput.svelte */
+.surface.d3-fidelity:is(.huggingchat,.openwebui) .native-sidebar { padding: 16px 12px; gap: 10px; }
+.surface.d3-fidelity:is(.huggingchat,.openwebui) .native-sidebar button { text-align: left; border: 0; font-size: 12px; padding: 9px 12px; border-radius: 7px; }
+.surface.d3-fidelity:is(.huggingchat,.openwebui) .native-sidebar input { font-size: 12px; padding: 8px 10px; border-radius: 7px; }
+.surface.d3-fidelity:is(.huggingchat,.openwebui) .thread { padding: 24px max(24px,calc((100% - 760px)/2)); }
+.surface.d3-fidelity:is(.huggingchat,.openwebui) .composer { width: calc(100% - 48px); max-width: 760px; margin: 10px auto; min-height: 54px; padding: 12px 14px; }
+.surface.d3-fidelity.huggingchat .d3-hf-introduction { gap: 28px; align-items: center; }
+.surface.d3-fidelity.huggingchat .d3-model-card { border-radius: 12px; padding: 18px; text-align: left; font-size: 12px; }
+.surface.d3-fidelity.huggingchat .message.assistant { border-radius: 16px; padding: 18px 20px; }
+.surface.d3-fidelity.huggingchat .message.user { padding: 16px 4px; }
+.surface.d3-fidelity.huggingchat .sidebar-bottom { background: linear-gradient(90deg,transparent,var(--f-panel)); border-radius: 12px; padding: 6px; }
+.surface.d3-fidelity.openwebui .message.assistant { border: 0; border-radius: 0; background: transparent; padding: 18px 0; }
+.surface.d3-fidelity.openwebui .message.user { padding: 12px 18px; max-width: 85%; }
+.surface.d3-fidelity.openwebui.phase-2023-10 .message { max-width: none; border-radius: 0; padding: 20px; }
+.surface.d3-fidelity.openwebui.phase-2023-10 .message.assistant { background: var(--f-panel); }
+.surface.d3-fidelity.openwebui .d3-toolbar { min-height: 44px; font-size: 13px; }
+.surface.d3-fidelity.openwebui .d3-add-menu { font-size: 12px; }
+.surface.d3-fidelity.openwebui .d3-central-input:not(:has(.message)) { justify-content: center; }
+.surface.d3-fidelity.openwebui .d3-central-input:not(:has(.message)) > .d3-toolbar { position: absolute; top: 0; }
+
+/* LM Studio and Cherry Studio keep their desktop rails and inspector columns.
+   https://lmstudio.ai/blog/lmstudio-v0.3.0
+   https://github.com/CherryHQ/cherry-studio/blob/v0.5.0/src/renderer/src/pages/home/HomePage.tsx */
+.surface.d3-fidelity:is(.lmstudio,.cherry-studio) .activity-bar { padding: 12px 4px; gap: 10px; border-right: 1px solid var(--f-border); }
+.surface.d3-fidelity:is(.lmstudio,.cherry-studio) .activity-bar button { padding: 8px 3px; border: 0; border-radius: 6px; font-size: 10px; background: transparent; }
+.surface.d3-fidelity:is(.lmstudio,.cherry-studio) .thread { padding: 20px max(22px,calc((100% - 740px)/2)); }
+.surface.d3-fidelity:is(.lmstudio,.cherry-studio) .composer { margin: 10px 20px 14px; border-radius: 10px; min-height: 88px; align-items: end; }
+.surface.d3-fidelity.lmstudio .lm-icon-rail { width: 54px; flex: none; }
+.surface.d3-fidelity.lmstudio .lm-runtime { width: 230px; flex: 0 1 230px; padding: 16px; border-left: 1px solid var(--f-border); font-size: 12px; }
+.surface.d3-fidelity.lmstudio .lm-runtime :is(h3,strong) { font-size: 12px; font-weight: 600; }
+.surface.d3-fidelity.lmstudio .lm-runtime label { display: flex; flex-direction: column; align-items: start; gap: 6px; }
+.surface.d3-fidelity.lmstudio .native-sidebar { width: 210px; font-size: 12px; padding: 16px 10px; }
+.surface.d3-fidelity.lmstudio .message { border: 0; background: transparent; padding: 14px 0; border-radius: 0; }
+.surface.d3-fidelity.cherry-studio .cherry-assistants { padding: 14px 12px; gap: 10px; }
+.surface.d3-fidelity.cherry-studio .cherry-assistants > strong { font-size: 12px; font-weight: 500; }
+.surface.d3-fidelity.cherry-studio .cherry-assistants button { font-size: 12px; text-align: left; padding: 9px 12px; border: 1px solid var(--f-border); border-radius: 6px; }
+.surface.d3-fidelity.cherry-studio .d3-toolbar { font-size: 11px; padding: 7px 12px; }
+.surface.d3-fidelity.cherry-studio .chat-main > .d3-toolbar { border-bottom: 1px solid var(--f-border); min-height: 40px; }
+.surface.d3-fidelity.cherry-studio .message.assistant { background: transparent; border: 0; border-radius: 0; padding: 18px 0; }
+.surface.d3-fidelity.cherry-studio .message.user { border: 0; border-radius: 10px; padding: 14px 18px; max-width: 90%; }
+
+/* n8n: editor canvas with ports; the chat-model subnode hangs below the agent.
+   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/
+   https://github.com/n8n-io/n8n/blob/n8n@1.28.0/packages/editor-ui/src/components/NodeDetailsView.vue */
+.surface.d3-fidelity.n8n .d3-workflow-tabs { display: flex; justify-content: center; align-items: center; gap: 24px; height: 38px; flex: none; border-bottom: 1px solid var(--f-border); background: var(--f-panel); font-size: 11px; }
+.surface.d3-fidelity.n8n .d3-workflow-tabs > span { height: 100%; padding-top: 10px; border-bottom: 2px solid var(--f-accent); }
+.surface.d3-fidelity.n8n .d3-workflow-tabs button { border: 0; background: transparent; font-size: 11px; }
+.surface.d3-fidelity.n8n .workflow-canvas { background-image: radial-gradient(var(--f-border) 1px,transparent 1px); background-size: 20px 20px; padding: 40px 30px 100px; }
+.surface.d3-fidelity.n8n .workflow-canvas > .empty-state { min-height: 0; }
+.surface.d3-fidelity.n8n .workflow-canvas > .empty-state button { width: 150px; height: 100px; border: 2px dashed var(--f-border); border-radius: 10px; background: var(--f-panel); font-size: 12px; }
+.surface.d3-fidelity.n8n .workflow-node { position: relative; min-width: 130px; min-height: 88px; border-radius: 12px; padding: 18px; font-size: 12px; }
+.surface.d3-fidelity.n8n .workflow-node::after { content: ''; position: absolute; width: 8px; height: 8px; border: 2px solid var(--f-border); background: var(--f-bg); border-radius: 50%; right: -6px; top: calc(50% - 4px); }
+.surface.d3-fidelity.n8n .workflow-node[aria-pressed=true] { outline: 2px solid var(--f-accent); outline-offset: 4px; }
+.surface.d3-fidelity.n8n .d3-workflow-flow { display: flex; align-items: flex-start; padding-top: 10px; }
+.surface.d3-fidelity.n8n .node-connection { width: 80px; height: 2px; background: var(--f-border); padding: 0; margin-top: 44px; flex: none; }
+.surface.d3-fidelity.n8n .d3-workflow-agent-branch { position: relative; }
+.surface.d3-fidelity.n8n .d3-workflow-model-branch { position: relative; padding-top: 60px; display: flex; flex-direction: column; align-items: center; }
+.surface.d3-fidelity.n8n .d3-workflow-model-branch::before { content: ''; position: absolute; height: 55px; border-left: 2px dashed var(--f-border); top: 0; left: 50%; }
+.surface.d3-fidelity.n8n .d3-workflow-model-branch small { font-size: 10px; padding-bottom: 8px; color: var(--f-muted); }
+.surface.d3-fidelity.n8n .d3-workflow-model-branch .model { min-width: 90px; max-width: 110px; border-radius: 50%; min-height: 90px; font-size: 10px; }
+.surface.d3-fidelity.n8n .d3-workflow-main > .d3-toolbar { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); border: 1px solid var(--f-border); border-radius: 8px; background: var(--f-panel); z-index: 1; }
+.surface.d3-fidelity.n8n .d3-workflow-main:has(.workflow-chat:not([hidden])) > .d3-toolbar { bottom: 45%; }
+.surface.d3-fidelity.n8n .d3-node-details { z-index: 2; }
+
+/* Ollama: CLI before the app; monochrome chat with a capsule input afterwards.
+   https://github.com/ollama/ollama/blob/v0.1.24/cmd/interactive.go
+   https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ChatForm.tsx */
+.surface.d3-fidelity.d3-ollama-terminal { padding: 20px 24px; font: 13px/1.6 ui-monospace, monospace; }
+.surface.d3-fidelity.d3-ollama-terminal .boot { max-height: none; margin: 0 0 16px; color: var(--f-muted); font: inherit; }
+.surface.d3-fidelity.d3-ollama-terminal .terminal-main { overflow: auto; }
+.surface.d3-fidelity.d3-ollama-terminal .thread { flex: none; padding: 0; overflow: visible; }
+.surface.d3-fidelity.d3-ollama-terminal .composer { flex: none; margin: 0; padding: 0; }
+.surface.d3-fidelity.d3-ollama-terminal .composer textarea { font: inherit; }
+.surface.d3-fidelity.d3-ollama-terminal .composer .send { display: none; }
+.surface.d3-fidelity.d3-ollama-app .thread { padding: 24px max(24px,calc((100% - 720px)/2)); }
+.surface.d3-fidelity.d3-ollama-app .composer { width: calc(100% - 48px); max-width: 768px; min-height: 84px; margin: 12px auto 18px; border-radius: 22px; padding: 14px 18px; align-items: end; }
+.surface.d3-fidelity.d3-ollama-app .composer > :not(textarea) { font-size: 11px; }
+.surface.d3-fidelity.d3-ollama-app .native-sidebar { width: 220px; padding: 16px 12px; font-size: 12px; }
+.surface.d3-fidelity.d3-ollama-app .message.assistant { padding: 16px 0; border: 0; background: transparent; }
+
+/* OpenClaw control dashboard and native menu remain separate edition layouts.
+   https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/layout.css */
+.surface.d3-fidelity.d2-control-ui .d2-control-sidebar { padding: 18px 12px; gap: 10px; font-size: 12px; }
+.surface.d3-fidelity.d2-control-ui .d2-control-sidebar > span { padding: 4px 10px 20px; }
+.surface.d3-fidelity.d2-control-ui .d2-control-sidebar button { border: 0; background: transparent; padding: 9px 12px; text-align: left; border-radius: 6px; font-size: 12px; }
+.surface.d3-fidelity.d2-control-ui .d2-control-header { min-height: 54px; padding: 10px 20px; font-size: 12px; }
+.surface.d3-fidelity.d2-control-ui .composer { min-height: 100px; margin: 12px 20px; padding: 14px; border-radius: 12px; align-items: end; }
+.surface.d3-fidelity.d2-control-ui .composer > :not(textarea) { font-size: 11px; }
+.surface.d3-fidelity.d2-control-ui .message { border-radius: 10px; box-shadow: none; padding: 14px 18px; }
+.surface.d3-fidelity.d2-menubar .d2-menubar-menu { margin: 10px; width: 300px; max-width: calc(100% - 20px); padding: 8px; gap: 4px; border-radius: 10px; font-size: 12px; background: var(--f-panel); }
+.surface.d3-fidelity.d2-menubar .d2-menubar-menu > button { text-align: left; border: 0; background: transparent; padding: 6px 10px; border-radius: 5px; }
+
+/* GPT-2 prints completed samples, separated by plain text rules, rather than
+   streamed assistant bubbles. https://github.com/openai/gpt-2/blob/master/src/interactive_conditional_samples.py */
+.surface.d3-fidelity.gpt2 { font: 13px/1.55 ui-monospace, monospace; padding: 22px; }
+.surface.d3-fidelity.gpt2 .boot { color: var(--f-muted); margin: 0 0 16px; font: inherit; }
+.surface.d3-fidelity.gpt2 .composer { display: flex; align-items: start; padding: 0; margin: 0; gap: 1ch; }
+.surface.d3-fidelity.gpt2 .composer textarea { font: inherit; }
+.surface.d3-fidelity.gpt2 .prompt-glyph { font: inherit; white-space: nowrap; }
+.surface.d3-fidelity.gpt2 .thread { padding: 0; }
+.surface.d3-fidelity.gpt2 .message.assistant { overflow-x: auto; margin: 12px 0; }
+
+@media (min-width: 760px) {
+  .surface.d3-fidelity.continue .explorer { width: 155px; }
+  .surface.d3-fidelity.continue .agent-panel { width: 360px; flex: 0 1 38%; }
+  .surface.d3-fidelity.cline .agent-panel { width: 360px; flex: 0 1 38%; }
+  .surface.d3-fidelity.cline .explorer { width: 150px; }
+  .surface.d3-fidelity.zed .agent-panel { width: 640px; flex: 0 1 48%; }
+  .surface.d3-fidelity.zed .d3-zed-parallel .agent-panel { flex: 1; }
+}
+@media (max-width: 759px) {
+  .surface.d3-fidelity:is(.continue,.cline,.zed) .explorer { display: none; }
+  .surface.d3-fidelity:is(.continue,.cline,.zed) .agent-panel { min-width: 0; width: 100%; }
+  .surface.d3-fidelity.zed .d3-threads-sidebar { display: none; }
+  .surface.d3-fidelity:is(.lmstudio,.cherry-studio) .lm-runtime { display: none; }
+  .surface.d3-fidelity.bing .d1-right-history { display: none; }
+}
+@media (max-width: 600px) {
+  .surface.d3-fidelity.aider-browser .native-sidebar { display: none; }
+  .surface.d3-fidelity:is(.bing,.huggingchat,.openwebui,.d3-ollama-app) .composer { width: calc(100% - 24px); margin-inline: 12px; }
+  .surface.d3-fidelity.bing .tone-card { min-width: 0; font-size: 10px; padding: 10px; }
+  .surface.d3-fidelity.n8n .node-connection { width: 35px; }
+  .surface.d3-fidelity.n8n .workflow-node { min-width: 100px; padding: 12px; }
+  .surface.d3-fidelity:is(.gpt2,.d2-aider-flow,.d3-ollama-terminal) { padding: 12px; }
+}
+/* Preserve literal newlines for code selection/copy; gutter spans remain inline. */
+.surface.d3-fidelity .d3-code-line { display: inline; }
+.surface.d3-fidelity.cline .d2-marketplace { padding: 12px; gap: 10px; }
+.surface.d3-fidelity.cline .d2-marketplace > input { margin: 0 8px; border: 1px solid var(--f-border); border-radius: 4px; background: var(--f-bg); padding: 8px 10px; font-size: 12px; }
+.surface.d3-fidelity.cline .d2-marketplace .d2-market-results { padding: 16px 8px; font-size: 12px; color: var(--f-muted); }
+/* March 2023 release notes establish purple/blue/green tone-dependent chrome.
+   Exact HEX shades are unverified reconstruction choices, not measured tokens:
+   https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/ */
+.surface.d3-fidelity.bing:has(.tone-creative.active) { --accent: #7b3fd1; }
+.surface.d3-fidelity.bing:has(.tone-precise.active) { --accent: #15745e; }
+.surface.d3-fidelity.bing:has(.tone-card.active) { background: linear-gradient(155deg,color-mix(in srgb,var(--accent) 7%,var(--bg)),var(--bg) 70%); }

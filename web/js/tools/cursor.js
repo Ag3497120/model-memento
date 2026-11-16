@@ -101,7 +101,7 @@ function panel(ctx, title = tr('会話', "Chat"), withModel = false, modelAbove 
     transcript(ctx, title, tr('道具やモデルについて、この入力欄から聞けます。', "Ask about tools and models here.")), form);
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.id.match(/\d{4}-\d{2}/)?.[0] || v.ym;
   const withModel = ['cursor-2024-03', 'cursor-2024-07', 'cursor-2025-03', 'cursor-2026-11'].includes(v.id);
@@ -212,7 +212,9 @@ export function render(ctx) {
       workspace = el('main', { class: 'cursor-2026-workspace' }, agents, chat);
     }
   }
-  chat.querySelector('.panel-header').after(controls);
+  // The August workspace owns a separate Chat panel beside its floating Composer.
+  const visibleChat = ym === '2024-08' ? workspace.querySelectorAll('.agent-panel').at(-1) : chat;
+  visibleChat.querySelector('.panel-header').after(controls);
   const surface = root(v, 'ide cursor edition-' + ym.slice(0, 4) + ' phase-' + ym + ' d2-cursor', top, workspace, sources(v));
   if (v.id === 'cursor-2026-01-macos' || v.id === 'cursor-2026-04') {
     // Label these access panels as position unverified.
@@ -229,5 +231,35 @@ export function render(ctx) {
     });
   }
   if (ym === '2023-03') surface.classList.add('d2-codemirror');
+  if (ym >= '2023-04' && ym <= '2025-03') {
+    const bar = el('nav', { class: 'd2-activity-bar', 'aria-label': tr('作業領域', 'Workspace') });
+    for (const [glyph, label, target] of [['▤', tr('ファイル', 'Files'), 'app'], ['⌕', tr('検索', 'Search'), 'research'], ['⑂', tr('変更履歴', 'Source control'), 'memories'], ['⚙', tr('設定', 'Settings'), 'settings']]) {
+      bar.append(action(ctx, glyph, target, { title: label, 'aria-label': label }));
+    }
+    workspace.prepend(bar);
+  }
+  const code = surface.querySelector('.code-content');
+  if (code) {
+    const lines = code.textContent.split('\n');
+    code.replaceChildren(...lines.map((line, index) => el('span', { class: 'd2-code-line', 'data-line': String(index + 1) }, line || ' ')));
+  }
+  return surface;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

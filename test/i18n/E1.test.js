@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { Element, installDOM, testEra } from '../era/dom.js';
+import { installDOM, testEra } from '../era/dom.js';
+import { mountNavigation, tick } from '../app/navigation-fixture.js';
 
 globalThis.__MEMENTO_LANG = 'en';
 const frame = await import('../../web/js/era/frame.js?en');
@@ -56,10 +57,11 @@ test('E1 era controls select English siblings while preserving Japanese placemen
 
 test('E1 transitions use translated notices and trend captions', async t => {
   const make = installDOM(t), host = make('aside'), callbacks = [];
-  const effect = transition.createEraTransition({ host, reducedMotion: () => true,
+  const effect = transition.createEraTransition({ host, reducedMotion: () => false,
     schedule: callback => { callbacks.push(callback); return callbacks.length; }, unschedule() {} });
-  const era = { ...testEra(), trend_en: 'Conversation-first layout' };
-  const from = { tool: { id: 'example' }, version: { id: 'old', from: '2022-01-01' } };
+  const era = { ...testEra(), trend_en: 'Conversation-first layout (https://example.com/trend)' };
+  const from = { tool: { id: 'example' }, version: { id: 'old', from: '2022-01-01' },
+    era: { ...testEra(), desktop: { ...testEra().desktop, date_shown: '2022-01-01' } } };
   const to = { tool: { id: 'example' }, version: { id: 'new', from: '2023-03-14' }, era };
   const done = effect.run({ from, to, swap: async () => {} });
   await Promise.resolve();
@@ -120,86 +122,50 @@ test('E1 model records and blend blueprints show English data and controls', asy
   assert.match(panel.textContent, /Appearance reference/); assert.match(panel.textContent, /Model routing/); english(panel);
 });
 
-test('E1 app menu, picker, panels, welcome guide and both language switches use normal entry points', async t => {
-  installDOM(t);
-  class ShellElement extends Element {
-    contains(other) { for (let node = other; node; node = node.parentNode) if (node === this) return true; return false; }
-    matches(selector) {
-      const id = /#([\w-]+)/.exec(selector)?.[1];
-      const tag = /^[a-zA-Z][\w-]*/.exec(selector)?.[0];
-      return (!id || this.getAttribute('id') === id) && (!tag || this.tagName === tag.toUpperCase())
-        && super.matches(selector.replace(/#[\w-]+/g, '').replace(/^[a-zA-Z][\w-]*/, ''));
-    }
-    append(...nodes) {
-      super.append(...nodes);
-      if (this.tagName === 'SELECT' && !this.value) this.value = this.children[0]?.value || '';
-    }
-  }
-  document.createElement = tag => new ShellElement(tag);
-  document.createTextNode = text => new ShellElement('', String(text));
-  const previous = Object.fromEntries(['window', 'location', 'history', 'localStorage', 'fetch', 'requestAnimationFrame', 'MutationObserver'].map(key => [key, globalThis[key]]));
-  t.after(() => { for (const [key, value] of Object.entries(previous)) { if (value === undefined) delete globalThis[key]; else globalThis[key] = value; } });
-  const body = new ShellElement('body');
-  document.body = body;
-  document.querySelectorAll = selector => body.querySelectorAll(selector);
-  document.querySelector = selector => body.querySelector(selector);
-  document.addEventListener = () => {};
-  for (const id of ['era-menu-bar', 'era-desktop', 'era-window-shell', 'era-accents', 'era-transition', 'app', 'settings', 'chrome-dialog', 'chrome-hint']) {
-    const node = new ShellElement(['settings', 'chrome-dialog', 'chrome-hint'].includes(id) ? 'dialog' : 'div');
-    node.setAttribute('id', id); body.append(node);
-  }
-  const saved = new Map();
-  globalThis.localStorage = { getItem: key => saved.get(key) ?? null, setItem: (key, value) => saved.set(key, value) };
-  globalThis.location = { href: 'https://example.com/?lang=en', search: '?lang=en' };
-  globalThis.history = { replaceState() {} };
-  globalThis.window = { sessionStorage: localStorage, dispatchEvent() {}, requestIdleCallback() {} };
-  globalThis.requestAnimationFrame = fn => fn();
-  globalThis.MutationObserver = class { observe() {} disconnect() {} };
-  const model = { id: 'fixture', name: 'Fixture model', release: '2023-01-01', specs: {}, traits: [], evidence: [{ url: 'https://example.com/model' }] };
-  const version = { id: 'fixture-2023', from: '2023-03-14', label: '版名', label_en: 'Fixture edition', defaultModel: model.id, available: [model.name],
-    harness: { instruction_rules: '日本語の指示', instruction_rules_en: 'Recorded instruction rules.' } };
-  const tool = { id: 'fixture', name: 'Fixture tool', tier: 'C', versions: [version], description: '説明', description_en: 'Fixture description' };
-  const records = {
-    models: [model], closed: [], 'catalog-core': { tools: [tool] }, research: {}, counts: { registries: [], at: '2026-11-16' },
-    manifest: { at: '2026-11-16', models: 1, closed: 0, tools: 1, versions: 1, tiers: { A: 0, B: 0, C: 1 } },
-    memories: [], instructions: { files: [{ toolId: 'fixture', since: '2023-01-01', path: 'RULES.md', scope: '範囲', scope_en: 'Project', note: '注記', note_en: 'Recorded file.' }] },
-    'captured-surfaces': {}, 'vcross-status': null,
-    era: { [version.id]: { ...testEra(), tool_id: tool.id, id: version.id, trend_en: 'Fixture trend', model_switch: { where: 'none', steps: [], options: [], sources: [] } } }
-  };
-  globalThis.fetch = async input => {
-    const path = new URL(String(input), 'https://example.com/').pathname;
-    if (path === '/api/status') return Response.json({ app: false, features: {} });
-    const name = path.split('/').at(-1).replace(/\.json$/, '');
-    return Object.hasOwn(records, name) ? Response.json(records[name]) : new Response('{}', { status: 404 });
-  };
-  await import('../../web/js/app.js?en');
+test('E1 unified panel, palette, pages, welcome guide and language actions use normal entry points in English', async t => {
+  const ui = await mountNavigation(t, { welcome: true });
+  const { doc, panel, saved, museum, key } = ui;
   const nav = await import('../../web/js/nav.js');
-  const hint = document.querySelector('#chrome-hint');
+  t.after(() => nav.setNavPageHost(null));
+  const hint = doc.querySelector('#chrome-hint');
   const language = hint.querySelector('.chrome-language-switch');
-  assert.ok(language);
   assert.equal(language.textContent, '日本語');
   language.click(); assert.equal(new URL(location.href).searchParams.get('lang'), 'ja');
-  language.remove(); english(hint);
-  assert.match(document.title, /Model Memento \(unofficial\)/);
-  hint.close();
-  document.querySelector('#era-menu-bar button').click();
-  const menu = document.querySelector('#chrome-dialog');
-  assert.match(menu.textContent, /Settings and records/);
-  assert.match(menu.textContent, /Unofficial recreation/);
-  const entry = nav.getNavEntries().find(item => item.id === 'language');
-  assert.equal(entry.group, 'help'); assert.equal(entry.keepMenu, true); assert.equal(entry.label, '日本語');
-  menu.querySelector('[data-nav-id="language"]').remove(); english(menu);
-  await nav.openNavEntry('language'); assert.equal(saved.get('museum.lang'), 'ja');
-  menu.querySelector('[data-chrome-trigger="picker"]').click();
-  assert.match(menu.textContent, /Choose a tool, era and model/); english(menu);
-  await nav.openNavEntry('search'); english(menu); assert.match(menu.textContent, /Found 1/);
-  await import('../../web/js/persona/standin.js');
-  for (const id of ['settings', 'models', 'tools', 'blend', 'instructions', 'memories', 'votes', 'research', 'app']) {
-    await window.museum.open(id);
-    await new Promise(resolve => setImmediate(resolve));
-    const panel = document.querySelector('#settings');
-    english(panel);
+  language.remove(); english(hint); hint.close();
+  assert.match(doc.title, /Model Memento \(unofficial\)/);
+  key('k', { ctrlKey: true });
+  assert.equal(panel.open, true);
+  english(panel);
+  assert.match(panel.textContent, /Preferences/);
+  assert.match(panel.textContent, /About \/ Help/);
+  assert.match(panel.textContent, /Unofficial recreation/);
+  assert.equal(doc.querySelector('#settings'), null);
+  const query = () => panel.querySelector('#chrome-query');
+  query().value = 'fixture 2023'; query().dispatch('input');
+  english(panel);
+  assert.equal(panel.querySelectorAll('[role="option"]').length, 1);
+  assert.match(panel.querySelector('[role="option"]').textContent, /Second edition/);
+  key('Escape', { target: query() });
+  panel.querySelector('[data-nav-id="picker"]').click();
+  assert.match(panel.textContent, /Choose a tool, era and model/); english(panel);
+  panel.querySelector('[data-chrome-back]').click();
+  await nav.openNavEntry('search'); english(panel);
+  query().value = 'sources'; query().dispatch('input'); english(panel);
+  assert.equal(panel.querySelector('[role="option"]').dataset.paletteId, 'action:sources');
+  key('Escape', { target: query() });
+  await nav.openNavEntry('language-ja'); assert.equal(saved.get('museum.lang'), 'ja');
+  for (const id of ['settings', 'models', 'tools', 'blend', 'instructions', 'memories', 'votes', 'research', 'app', 'memento-about']) {
+    await museum.open(id); await tick(); english(panel);
+    assert.equal(panel.open, true);
+    assert.ok(panel.querySelector('[data-chrome-back]'));
+    assert.equal(panel.querySelectorAll('[role="tablist"]').length, 0);
   }
+  await museum.open('preferences');
+  const preferenceLanguage = panel.querySelector('#chrome-language');
+  preferenceLanguage.value = 'ja'; preferenceLanguage.dispatch('change');
+  assert.equal(saved.get('museum.lang'), 'ja');
+  assert.equal(nav.getNavEntries().find(entry => entry.id === 'language-ja').paletteOnly, true);
+  key('?', { target: doc.body }); english(panel); assert.match(panel.textContent, /Keyboard shortcuts/);
   const html = await fs.readFile(new URL('../../web/index.html', import.meta.url), 'utf8');
   assert.match(html, /data-content-en="A static museum/);
   assert.match(html, /data-en="Loading records…"/);

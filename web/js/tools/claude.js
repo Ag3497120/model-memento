@@ -6,6 +6,23 @@ import * as E from '../surface-era.js';
 const menu = (label, ...items) => el('details', { class: 'd1-menu' }, el('summary', {}, label), ...items);
 const notes = 'https://support.claude.com/en/articles/12138966-release-notes';
 
+function launchPage(ctx) {
+  // H1: July 2023 home and conversation captures, linked in hero-audit.md.
+  const input = S.composer(ctx, 'Message Claude or search past chats...', '', 'Start a new chat');
+  const attachment = button('', () => ctx.open('tools'), { class: 'hero-attachment', 'aria-label': 'Attach files',
+    title: tr('添付の表示例', 'Attachment example') });
+  attachment.append(el('span', { class: 'hero-paperclip', 'aria-hidden': 'true' }));
+  input.insertBefore(attachment, input.querySelector('.send'));
+  const prompts = ['Summarize this PDF document in a bullet point outline', 'Help me practice my Spanish vocab', 'Explain how this python game works'];
+  return el('div', { class: 'surface claude d1 edition-2023 hero-claude-2023', lang: 'en' },
+    el('div', { class: 'main-column' }, el('main', { class: 'chat-main' },
+      S.thread(ctx, 'Meet Claude'), input,
+      el('section', { class: 'hero-claude-suggestions' }, el('h2', {}, 'Try these'),
+        ...prompts.map(text => button(text, () => ctx.send(text)))),
+      el('footer', { class: 'native-footnote' }),
+      el('p', { 'data-fidelity-note': '' }, tr('2023年7月の画面資料に基づきます。過去の会話検索と添付は表示例です。初日の厳密な寸法は未確認です。', 'Based on July 2023 captures. Past-chat search and attachments are display examples. Exact launch-day dimensions are unverified.')))));
+}
+
 function shell(ctx, { before = [], controls = [], extra = [], cls = '', rail = true, source = notes } = {}) {
   const side = rail ? el('aside', { class: 'native-sidebar' }, el('strong', { class: 'sidebar-title' }, 'Claude'),
     button(tr('新しい会話', "New chat"), () => ctx.newChat()), el('nav', { 'aria-label': tr('会話一覧', "Chats") }, ...extra),
@@ -38,10 +55,8 @@ function thinking() {
 function renderVersion(ctx) {
   const { ym } = E.editionTag(ctx);
   if (ym === '2023-07') {
-    // spec: claude.ai-2023-07 corrections — retain warm hero shape, remove asserted hex color and launch-day picker/marketing text.
-    return shell(ctx, { rail: false, before: [el('div', { class: 'claude-2023-hero' },
-      el('span', { class: 'rights-l1-avatar', 'aria-label': 'AI' }, 'AI'), el('strong', {}, 'Claude'))],
-      source: 'https://www.anthropic.com/news/claude-2' });
+    // spec: claude.ai-2023-07 empty_state / conversation; no wordmark or logo.
+    return launchPage(ctx);
   }
   if (ym === '2023-11') {
     // spec: claude.ai-2023-11 corrections — remove API-only system prompt and constant context meter.
@@ -122,7 +137,7 @@ function renderVersion(ctx) {
 }
 
 const specSources = {
-  "claude.ai-2023-07": ["https://www.anthropic.com/news/claude-2","https://cointelegraph.com/news/anthropic-launches-claude-2-amid-continuing-ai-hullabaloo","https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/"], // spec: claude.ai-2023-07 sources
+  "claude.ai-2023-07": ["https://www.anthropic.com/news/claude-2","https://www.searchenginejournal.com/anthropic-launches-claude-2-with-100k-context-windows-file-uploads/491412/","https://cdn.searchenginejournal.com/wp-content/uploads/2023/07/claude-public-beta-website-anthropic-meet-claude-64ada1d33013f-sej.png","https://cdn.searchenginejournal.com/wp-content/uploads/2023/07/claude-2-100k-pdf-analysis-public-beta-website-chat-64ada2e345f13-sej.png"], // spec: claude.ai-2023-07 sources
   "claude.ai-2023-11": ["https://www.anthropic.com/news/claude-2-1","https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/"], // spec: claude.ai-2023-11 sources
   "claude.ai-2024-03": ["https://www.anthropic.com/news/claude-3-family","https://www.watch.impress.co.jp/docs/topic/1581763.html"], // spec: claude.ai-2024-03 sources
   "claude.ai-2024-06": ["https://www.anthropic.com/news/claude-3-5-sonnet","https://www.anthropic.com/news/projects","https://simonwillison.net/2024/Jun/20/claude-35-sonnet/"], // spec: claude.ai-2024-06 sources
@@ -143,7 +158,7 @@ const specSources = {
   "claude.ai-2026-11": ["https://claude.com/resources/articles/sheets-whiteboards-data","https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them","https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings","https://support.claude.com/en/articles/12138966-release-notes"], // spec: claude.ai-2026-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/claude.ai.json: the older records confirm proximity to the input, but not the side.
   for (const input of surface.querySelectorAll('.composer textarea')) input.setAttribute('data-era-input', '');
@@ -163,10 +178,57 @@ export function render(ctx) {
   else (surface.querySelector('main') || surface).append(el('footer', { class: 'native-footnote' }, sources));
   // spec: claude.ai-2023-07 conversation.user; all versions — Japanese reconstruction label.
   const log = surface.querySelector('.thread');
-  if (log && typeof MutationObserver !== 'undefined') new MutationObserver(() => {
+  const decorate = () => {
+    if (ym === '2023-07') {
+      const active = Boolean(log.querySelector('.message'));
+      const input = surface.querySelector('.composer textarea');
+      const placeholder = active ? 'Message Claude...' : 'Message Claude or search past chats...';
+      input.setAttribute('placeholder', placeholder);
+      input.setAttribute('data-base-placeholder', placeholder);
+      surface.querySelector('.composer .send').textContent = active ? '➤' : 'Start a new chat';
+    }
     for (const label of log.querySelectorAll('.message.user .message-label')) {
       if (label.textContent === 'You') label.textContent = tr('あなた', "You");
     }
-  }).observe(log, { childList: true });
+    for (const turn of log.querySelectorAll('.message.assistant')) {
+      if (turn.hasAttribute('data-d2-actions')) continue;
+      turn.setAttribute('data-d2-actions', '');
+      const actions = el('div', { class: 'd2-turn-actions', role: 'group', 'aria-label': tr('回答の操作', 'Response actions') });
+      actions.append(button(ym === '2023-07' ? 'Copy' : '⧉', async () => {
+        try { await globalThis.navigator?.clipboard?.writeText(turn.querySelector('.answer-text')?.textContent || ''); } catch { /* Browser permission. */ }
+      }, { 'aria-label': tr('回答をコピー', 'Copy response'), title: tr('コピー', 'Copy') }));
+      if (ym === '2023-07') actions.append(button('Retry', () => {
+        const turns = [...log.querySelectorAll('.message')];
+        const question = turns.slice(0, turns.indexOf(turn)).filter(item => item.classList.contains('user')).at(-1);
+        const text = question?.querySelector('.answer-text')?.textContent;
+        if (text) ctx.send(text);
+      }));
+      for (const [glyph, value, label] of [['👍', 'helpful', tr('役に立った', 'Helpful')], ['👎', 'review', tr('見直しが必要', 'Needs review')]]) actions.append(button(glyph, event => {
+        turn.setAttribute('data-rating', value);
+        for (const item of actions.querySelectorAll('[data-rating-choice]')) item.setAttribute('aria-pressed', String(item === event.currentTarget));
+      }, { 'data-rating-choice': value, 'aria-label': label, title: label, 'aria-pressed': 'false' }));
+      turn.append(actions);
+    }
+  };
+  if (log) decorate();
+  if (log && typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(log, { childList: true, subtree: true });
+  return surface;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

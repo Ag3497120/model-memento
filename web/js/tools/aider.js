@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -107,7 +108,7 @@ function browser(ctx, v) {
   return root(v, 'openwebui aider-browser d2-desktop ' + (v.id === 'aider-2024-05' ? 'd2-aider-browser-early' : ''), sidebar, main);
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   if (v.id === 'aider-2024-05' || v.id === 'aider-2025-09') return browser(ctx, v);
   // spec: aider-2023-11 corrections[1]; aider-2024-06 corrections[3]; aider-2025-01 corrections[4]; aider-2025-04 corrections[7]; aider-2026-03 corrections[8]; aider-2026-11 corrections[8]
@@ -137,4 +138,9 @@ export function render(ctx) {
     transcript(ctx, '', ''), el('p', { class: 'd2-key-hint' }, unverified ? tr('モデルの切替方法: unverified（未確認）', "Model switching · unverified") : commands),
     form, sources(v)
   ));
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'aider');
 }

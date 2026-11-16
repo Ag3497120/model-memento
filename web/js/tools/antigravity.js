@@ -26,7 +26,7 @@ function artifacts(input) {
   );
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const { ym } = editionTag(ctx);
   const phase = ym >= '2026-11' ? '2026-11' : ym >= '2026-10' ? '2026-10' : ym >= '2026-05' ? '2026-05' : '2025-11';
   const source = phase === '2025-11' ? launch : phase === '2026-05' ? standalone : changelog;
@@ -145,4 +145,22 @@ export function render(ctx) {
     ));
   } else rail.append(button(tr('設定と記録', "Settings and records"), () => ctx.open('settings')));
   return root;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
+  return surface;
 }

@@ -4,13 +4,14 @@ import { appFeature } from './runtime.js';
 import { linkStatus, statusLabel } from '../links/status.js';
 import { patchLabel } from '../patch/label.js';
 import { guidesSection } from '../guides/index.js';
+import { openNavPage } from '../nav.js';
 
 const safeURL = value => { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? url.href : null; } catch { return null; } };
 const basisLabels = { researched: tr('調べた資料', "Researched sources"), official: tr('公式の説明', "Official explanation"), 'family-default': tr('系列からの仮の特徴', "Provisional family traits") };
 export function basisLabel(value) { return typeof value === 'string' && value.startsWith('inherited-from:') ? tr(`近いモデルから借りた特徴（${value.slice(15)}）`, `Traits borrowed from a related model (${value.slice(15)})`) : basisLabels[value] || tr('未確認', "unverified"); }
 const traitLabels = { tone: tr('口調', "Tone"), verbosity: tr('説明の長さ', "Response length"), formatting_habits: tr('書き方', "Formatting"), refusal_style: tr('断り方', "Refusal style"), humour: tr('ユーモア', "Humor"), self_description: tr('自分の説明', "Self-description"), knowledge_cutoff: tr('知識の時点', "Knowledge date"), interface: tr('対話の形式', "Interaction format"), quirks: tr('癖', "Quirks"), failure_modes: tr('間違いやすい点', "Failure modes"), typical_strengths: tr('得意なこと', "Strengths") };
 const levels = { indexed: tr('記録のみ（自動）', "Indexed record (automatic)"), notable: tr('主な記録', "Notable record"), researched: tr('調べた記録', "Researched record") };
-let dialog, revision = 0, play;
+let standaloneDialog, revision = 0, play;
 export function setPersonaPlayer(callback) { play = callback; }
 async function json(url) {
   const response = await fetch(url, { cache: 'no-cache', signal: AbortSignal.timeout(20_000) });
@@ -19,11 +20,19 @@ async function json(url) {
 }
 export async function openModelPage(record) {
   const current = ++revision, opener = document.activeElement;
-  if (!dialog) { dialog = el('dialog', { class: 'chrome-dialog', 'aria-label': tr('モデルの記録', "Model record") }); document.body.append(dialog); }
   const name = record.n || record.name || record.id;
-  const body = el('div', { class: 'chrome-dialog-body' });
-  dialog.replaceChildren(el('header', { class: 'chrome-dialog-header' }, el('h2', {}, name), button(tr('閉じる', "Close"), () => dialog.close())), body);
-  dialog.addEventListener('close', () => opener?.isConnected && opener.focus(), { once: true });
+  const hosted = openNavPage({ id: `model-record:${record.id}`, title: name, reopen: () => openModelPage(record) });
+  if (!hosted && !standaloneDialog) {
+    standaloneDialog = el('dialog', { class: 'chrome-dialog', 'aria-label': tr('モデルの記録', 'Model record') });
+    document.body.append(standaloneDialog);
+  }
+  const dialog = hosted?.dialog || standaloneDialog;
+  const body = hosted?.body || el('div', { class: 'chrome-dialog-body' });
+  if (!hosted) {
+    dialog.replaceChildren(el('header', { class: 'chrome-dialog-header' }, el('div', { class: 'chrome-page-heading' },
+      el('p', { class: 'chrome-page-origin' }, 'Model Memento'), el('h2', {}, name)), button(tr('閉じる', 'Close'), () => dialog.close())), body);
+    dialog.addEventListener('close', () => opener?.isConnected && opener.focus(), { once: true });
+  }
   if (!dialog.open) dialog.showModal();
   const level = record._worldLevel || (record.research?.status === 'researched' ? 'researched' : 'indexed');
   body.append(el('p', {}, levels[level] || levels.indexed));
@@ -45,7 +54,7 @@ export async function openModelPage(record) {
     : json(new URL('../../data/real-links.json', import.meta.url)).then(rows => rows[`${record.r || record.registry || ''}:${record.id}`] || rows[record.id]);
   const [persona, real, patchData, statuses] = await Promise.allSettled([personaTask, linksTask,
     json(new URL('../../data/patch.json', import.meta.url)), json(new URL('../../links-status.json', import.meta.url))]);
-  if (revision !== current || !dialog.open) return;
+  if (revision !== current || !dialog.open || body.isConnected === false) return;
   patch.textContent = patchLabel(patchData.status === 'fulfilled' ? patchData.value : null);
   personaBox.replaceChildren(el('h3', {}, tr('話し方の記録', "Speaking style records")), el('p', {}, tr('別の AI で話し方を近づける再現です。元のモデル本人ではありません。', "Another AI approximates the original model’s speaking style in this recreation.")));
   const p = persona.status === 'fulfilled' ? persona.value : null;

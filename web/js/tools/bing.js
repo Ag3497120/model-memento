@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -146,7 +147,7 @@ const specSources = {
   "bing-chat-microsoft-copilot-2026-11": ["https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/","https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528"], // spec: bing-chat-microsoft-copilot-2026-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/bing-chat-microsoft-copilot.json: none/other records do not establish a model-control location.
   for (const input of surface.querySelectorAll('.composer textarea')) input.setAttribute('data-era-input', '');
@@ -166,4 +167,9 @@ export function render(ctx) {
     }
   }).observe(log, { childList: true });
   return surface;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'bing');
 }

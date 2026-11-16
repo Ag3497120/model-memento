@@ -1,0 +1,41 @@
+name: 記録の訂正・権利の相談 / Correction or rights concern
+description: 誤りや権利の問題を知らせる / Report a mistake or a rights concern
+title: "[Correction / Rights] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Model Memento は非公式の資料館です。各社とは関係がありません。
+        Model Memento is an unofficial museum, with no affiliation to the featured companies.
+        この投稿は公開されます。個人情報や公開できない資料は含めないでください。
+        This issue is public. Please leave out personal information and private material.
+  - type: dropdown
+    id: concern
+    attributes:
+      label: 種類 / Type
+      options:
+        - 記録の誤り / Factual correction
+        - 権利の問題 / Rights concern
+        - 両方 / Both
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: ページのURL・道具・版 / Page URL, tool and edition
+    validations:
+      required: true
+  - type: textarea
+    id: concern-details
+    attributes:
+      label: 問題と希望する変更 / Concern and requested change
+      description: 該当する文章や要素を短く示してください。 / Briefly identify the text or element concerned.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 根拠のURL・権利との関係 / Evidence URLs or relationship to the rights
+      description: 公開できる根拠のURL、訂正案、または権利との関係を説明してください。 / Provide public evidence, a proposed correction, or your relationship to the rights.
+    validations:
+      required: true

@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -64,7 +65,7 @@ function chat(ctx, title, subtitle = '') {
   return el('main', { class: 'chat-main' }, S.thread(ctx, title, subtitle), S.composer(ctx, tr('メッセージを入力', 'Enter a message'), '', tr('送信', 'Send')));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.from;
   const root = el('div', { class: `surface n8n workflow d3 d3-compact phase-${ym}`, 'data-spec-version': v.id });
@@ -94,18 +95,20 @@ export function render(ctx) {
     const trigger = button(tr('会話の開始', 'Chat trigger'), () => openDetails(tr('会話の開始', 'Chat trigger')), { class: 'workflow-node trigger' });
     const agent = button(tr('AIによる処理', 'AI processing'), () => openDetails(tr('AIによる処理', 'AI processing')), { class: 'workflow-node agent' });
     const model = button(modelTitle, () => openDetails(modelTitle), { class: 'workflow-node model' });
-    graph.append(trigger, el('span', { class: 'node-connection', 'aria-hidden': 'true' }, '→'));
-    if (ym !== '2023-10') graph.append(agent, el('span', { class: 'node-connection', 'aria-hidden': 'true' }, '→'));
-    graph.append(model);
+    if (ym === '2023-10') graph.append(el('div', { class: 'd3-workflow-flow' }, trigger, el('span', { class: 'node-connection', 'aria-hidden': 'true' }), model));
+    else graph.append(el('div', { class: 'd3-workflow-flow' }, trigger, el('span', { class: 'node-connection', 'aria-hidden': 'true' }),
+      el('div', { class: 'd3-workflow-agent-branch' }, agent, el('div', { class: 'd3-workflow-model-branch' }, el('small', {}, tr('会話モデル', 'Chat Model')), model))));
     hasChat = true; test.hidden = !hasChat;
   })); // spec: n8n-2023-10 empty_state; n8n-2024-09 empty_state; n8n-2025 empty_state; n8n-2025-08 empty_state; n8n-2026-04 empty_state; n8n-2026-11 regions[0]
   function openDetails(title) {
     settingsTitle.textContent = title;
     modelSettings.hidden = title !== modelTitle;
     details.hidden = false;
+    for (const node of graph.querySelectorAll('.workflow-node')) node.setAttribute('aria-pressed', String(node.textContent === title));
   }
   graph.append(empty);
   root.append(S.header(ctx, tr('n8n — 手順', 'n8n — Workflow'), [el('label', {}, el('input', { type: 'checkbox' }), tr('有効', 'Active')), action(ctx, tr('保存', 'Save'), 'memories')], tr('設定', 'Settings')),
+    el('nav', { class: 'd3-workflow-tabs', 'aria-label': tr('作業画面', 'Workspace views') }, el('span', { 'aria-current': 'page' }, tr('編集', 'Editor')), action(ctx, tr('実行履歴', 'Executions'), 'memories')),
     el('main', { class: 'd3-workflow-main' }, graph, operations, drawer, details), sources(v)); // spec: n8n-2023-10 regions; n8n-2024-09 regions; n8n-2025-08 regions; all versions corrections[0,4..7]
   return decorateMessages(root, ctx, v);
 }
@@ -140,4 +143,9 @@ function decorateMessages(root, ctx, v) {
   observer.observe(root, { childList: true, subtree: true });
   update();
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'n8n');
 }

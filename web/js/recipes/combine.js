@@ -25,7 +25,7 @@ export function openCombine(options = {}) {
   screen.open(options);
 }
 
-registerNavEntry({ id: 'combine', label: tr('組み合わせる', "Combine"), icon: '⊕', order: 20, group: 'make',
+registerNavEntry({ id: 'combine', label: tr('組み合わせる', "Combine"), icon: '⊕', order: 20, group: 'try',
   description: tr('やりたいことから、AIと道具の組み合わせを作る', "Combine AI and tools for what you want to do"),
   onOpen: context => openCombine({ tools: context.tools, onOpenTool: context.onOpenTool }) });
 

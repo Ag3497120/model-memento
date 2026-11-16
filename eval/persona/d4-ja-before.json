@@ -1,0 +1,969 @@
+{
+  "schema": "memento.era-voice-eval.v1",
+  "fixture_sha256": "de95df612a1553ff0db0609f18cdc77a4af63eccfc8f3a4091fc5f8fc8f817a3",
+  "code_sha256": {
+    "web/js/closure.js": "9f65d439509d5e7c949ba478b6280d5fc92f00587f6f52b1b55a544c1e73b7a5",
+    "web/js/cross/stereo.js": "fe436ab4434d26f53363df9bcb511ddb5fcf7013706810ad92d4bdd4b75304fa",
+    "web/js/persona/cards.js": "d740a48b9e5b39947b94a000e71e1603851065c565cd6e650cfb39ce0deeb7b5",
+    "web/js/persona/facts.js": "b2b4e0b7ca419af0ee2dc2058700df2b967ff9d8e56291df0cf991618878a05b",
+    "web/js/persona/guides.js": "93a7cc6fec0e6b86281b27d07bc074b3d414c0ee978eb4590f3c925a8ec9ff1a",
+    "web/js/persona/intents.js": "26410e8aed6a1005b019d799a9ff88320a8a44b997cd23904d0083c7e9a82b7a",
+    "web/js/persona/records.js": "fb098edd3a923bee3c17aa59398537e27e3564c846f4febba7e07184015b848e",
+    "web/js/persona/render.js": "72dc5bf6dedffb3ed295e8b46eb07c7827d1d1f66a4331aaf71644bf0371181b",
+    "web/js/persona/standin.js": "10f46ae3994ce2f1475656313c6bdf06ab54952c2bf2caa7f56798730e745aa0"
+  },
+  "results": {
+    "template": {
+      "correct": 1,
+      "total": 14,
+      "responses": [
+        {
+          "id": "later-model",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Archive Later [archive-later] の記録です。\n\n文脈長: 8,192 tokens",
+            "facts": [
+              {
+                "id": "archive-later:specs",
+                "text": "文脈長: 8,192 tokens",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "model_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "later-tool",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Future Tool [future-tool]\n\nHomepage: https://example.org/tool\n\nFuture Tool の 2025-01-01 版（UI）の記録です（全1版収録）。",
+            "facts": [
+              {
+                "id": "tool:future-tool:meta",
+                "text": "Future Tool [future-tool]",
+                "sources": [
+                  "https://example.org/tool",
+                  "https://example.org/tool/release"
+                ]
+              },
+              {
+                "id": "tool:future-tool:links",
+                "text": "Homepage: https://example.org/tool",
+                "sources": [
+                  "https://example.org/tool",
+                  "https://example.org/tool/release"
+                ]
+              }
+            ],
+            "kind": "tool_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "successor",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私の後継モデルはArchive Laterと記録されています。\n\n出典\n- [出典 1](https://example.org/old)\n- [出典 2](https://example.org/later)",
+            "facts": [
+              {
+                "key": "successor",
+                "id": "model:archive-old:successor",
+                "value": "archive-later",
+                "text": "archive-later",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "relations.successor.name",
+                "id": "model:archive-old:relations.successor.name",
+                "value": "Archive Later",
+                "text": "Archive Later",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "self_successor",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "retirement",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は提供終了として記録されています。終了・廃止の記録日は2024-01-01です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "status",
+                "id": "model:archive-old:status",
+                "value": "retired",
+                "text": "retired",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "lifecycle.events.1",
+                "id": "model:archive-old:lifecycle.events.1",
+                "value": {
+                  "type": "retired_api",
+                  "date": "2024-01-01",
+                  "label": null
+                },
+                "text": "{\"type\":\"retired_api\",\"date\":\"2024-01-01\",\"label\":null}",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_status",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "identity",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": false,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私はArchive Oldです。Exampleが作ったモデルとして記録されています。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "name",
+                "id": "model:archive-old:name",
+                "value": "Archive Old",
+                "text": "Archive Old",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "vendor",
+                "id": "model:archive-old:vendor",
+                "value": "Example",
+                "text": "Example",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "identity",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "price-followup",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私の記録上の利用料金は、文章100万トークン（文章を数える単位）あたり入力1米ドル、出力2米ドルです。現在の料金は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "later-followup",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私の記録上の利用料金は、文章100万トークン（文章を数える単位）あたり入力1米ドル、出力2米ドルです。現在の料金は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "why",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": true,
+            "sourced": false,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "unknown-voice",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": false,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "refusal-voice",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": false,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私はArchive Knownとして記録を案内しています。コードや文章を作る依頼には、この Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://example.org/known)",
+            "facts": [
+              {
+                "key": "name",
+                "id": "model:archive-known:name",
+                "value": "Archive Known",
+                "text": "Archive Known",
+                "sources": [
+                  "https://example.org/known"
+                ]
+              }
+            ],
+            "kind": "creative",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "completion-unknown",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "greeting",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "explicit-self",
+          "correct": true,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私の記録上の利用料金は、文章100万トークン（文章を数える単位）あたり入力1米ドル、出力2米ドルです。現在の料金は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "unknown-cutoff",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Archive Later [archive-later] の記録です。\n\n提供元: Example / 公開: 2023-03-14\n\nライフサイクル記録: 2023-03-14 公開",
+            "facts": [
+              {
+                "id": "archive-later:lifecycle",
+                "text": "提供元: Example / 公開: 2023-03-14",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              },
+              {
+                "id": "archive-later:events",
+                "text": "ライフサイクル記録: 2023-03-14 公開",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "model_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        }
+      ]
+    },
+    "normal": {
+      "correct": 1,
+      "total": 14,
+      "responses": [
+        {
+          "id": "later-model",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Archive Laterは一度に8,192トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://example.org/later)",
+            "facts": [
+              {
+                "key": "specs.context_tokens",
+                "id": "model:archive-later:specs.context_tokens",
+                "value": 8192,
+                "text": "8192",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "model_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "later-tool",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Future Tool [future-tool]\n\nHomepage: https://example.org/tool\n\nFuture Tool の 2025-01-01 版（UI）の記録です（全1版収録）。",
+            "facts": [
+              {
+                "id": "tool:future-tool:meta",
+                "text": "Future Tool [future-tool]",
+                "sources": [
+                  "https://example.org/tool",
+                  "https://example.org/tool/release"
+                ]
+              },
+              {
+                "id": "tool:future-tool:links",
+                "text": "Homepage: https://example.org/tool",
+                "sources": [
+                  "https://example.org/tool",
+                  "https://example.org/tool/release"
+                ]
+              }
+            ],
+            "kind": "tool_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "successor",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私の後継はArchive Laterです。\n\n出典\n- [出典 1](https://example.org/later)",
+            "facts": [
+              {
+                "key": "relations.successor.name",
+                "id": "model:archive-old:relations.successor.name",
+                "value": "Archive Later",
+                "text": "Archive Later",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "self_successor",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "retirement",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は提供終了として記録されています。終了の記録日は2024-01-01です。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "lifecycle.events.1",
+                "id": "model:archive-old:lifecycle.events.1",
+                "value": {
+                  "type": "retired_api",
+                  "date": "2024-01-01",
+                  "label": null
+                },
+                "text": "{\"type\":\"retired_api\",\"date\":\"2024-01-01\",\"label\":null}",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "status",
+                "id": "model:archive-old:status",
+                "value": "retired",
+                "text": "retired",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_status",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "identity",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私はArchive Oldです。Exampleが作ったモデルです。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "vendor",
+                "id": "model:archive-old:vendor",
+                "value": "Example",
+                "text": "Example",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "name",
+                "id": "model:archive-old:name",
+                "value": "Archive Old",
+                "text": "Archive Old",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "identity",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "price-followup",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は100万トークンあたり入力1米ドル・出力2米ドルで使えると記録されています。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "later-followup",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は100万トークンあたり入力1米ドル・出力2米ドルで使えると記録されています。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "why",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": true,
+            "sourced": false,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "unknown-voice",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": false,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "refusal-voice",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": false,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私はArchive Knownとして記録を案内しています。コードや文章を作る依頼には、この Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://example.org/known)",
+            "facts": [
+              {
+                "key": "name",
+                "id": "model:archive-known:name",
+                "value": "Archive Known",
+                "text": "Archive Known",
+                "sources": [
+                  "https://example.org/known"
+                ]
+              }
+            ],
+            "kind": "creative",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "completion-unknown",
+          "correct": false,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "greeting",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": false,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+            "facts": [],
+            "kind": "unknown",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "explicit-self",
+          "correct": true,
+          "checks": {
+            "speech": true,
+            "noFuture": true,
+            "note": true,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "私は100万トークンあたり入力1米ドル・出力2米ドルで使えると記録されています。\n\n出典\n- [出典 1](https://example.org/old)",
+            "facts": [
+              {
+                "key": "cost.input",
+                "id": "model:archive-old:cost.input",
+                "value": 1,
+                "text": "1米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              },
+              {
+                "key": "cost.output",
+                "id": "model:archive-old:cost.output",
+                "value": 2,
+                "text": "2米ドル / 1000000トークン",
+                "sources": [
+                  "https://example.org/old"
+                ]
+              }
+            ],
+            "kind": "self_price",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        },
+        {
+          "id": "unknown-cutoff",
+          "correct": false,
+          "checks": {
+            "speech": false,
+            "noFuture": false,
+            "note": false,
+            "sourced": true,
+            "voice": true,
+            "completion": true,
+            "oneLine": true,
+            "language": true
+          },
+          "response": {
+            "text": "Archive Laterは2023-03-14に公開されました。\n\n出典\n- [出典 1](https://example.org/later)",
+            "facts": [
+              {
+                "key": "release",
+                "id": "model:archive-later:release",
+                "value": "2023-03-14",
+                "text": "2023-03-14",
+                "sources": [
+                  "https://example.org/later"
+                ]
+              }
+            ],
+            "kind": "model_lookup",
+            "cutoff": null,
+            "closed": true,
+            "forgotten": 0
+          }
+        }
+      ]
+    }
+  }
+}

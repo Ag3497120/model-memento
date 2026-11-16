@@ -6,9 +6,12 @@
 // どちらも同じ中心に十分なエネルギーを届けたときだけ答える（合意）。届かない・途中で切れる
 // ときは型付きの「不明」を返す。候補の組み合わせを入れ替えて最も安定した組を探す（並び替え）。
 import design from './design.json' with { type: 'json' };
-import { modelFacts, modalityText, languageText, statusText } from '../persona/facts.js';
+import { modelFacts, selfAnswer, modalityText, languageText, statusText } from '../persona/facts.js';
 import { isEn, tr, locale, pick as localized } from '../i18n.js';
 import { recordedValue } from '../persona/records.js';
+import { resolveConversation } from '../persona/conversation.js';
+import { eraAnswer, conversationAnswer, protectAnswer } from '../persona/era.js';
+import { voiceAnswer, withoutSources } from '../persona/voice.js';
 
 const P = design.params;
 const norm = value => String(value ?? '').normalize('NFKC').toLowerCase();
@@ -258,6 +261,13 @@ const kindOf = (path, subject) => !subject.self ? 'model_lookup' : path.gap ? 'u
  * includeInitial: 第2層に最初の問いも付けるか（構想の焦点。両方を測る）。
  */
 export function crossAnswer(question, context, { layers = 2, includeInitial = true, useEnergy = true } = {}) {
+  const resolved = resolveConversation(question, context);
+  const originalQuestion = question;
+  question = resolved.question;
+  const historical = eraAnswer(question, context);
+  if (historical) return { ...historical, engine: 'stereo-cross', layers: [] };
+  const conversational = conversationAnswer(originalQuestion, context, resolved);
+  if (conversational) return { ...conversational, engine: 'stereo-cross', layers: [] };
   factCache = new Map();
   const universe = buildUniverse(context);
   // 名前らしい語（英字と数字の組）が問いにあるのに、どの中心にも届かなければ、会話の相手に置き換えない。
@@ -267,6 +277,11 @@ export function crossAnswer(question, context, { layers = 2, includeInitial = tr
   const selected = context.model ? universe.byId.get(context.model.id) || { id: context.model.id, model: context.model, name: recordedValue(context.model, 'name') || context.model.id, aliases: [], facts: null } : null;
   const first = solveLayer(question, context, { selected, useEnergy });
   if (!first.stable) return null;
+  // A partial alias found by the cross must pass the same gate as an exact name.
+  if (!first.subject.self) {
+    const guarded = eraAnswer(question, context, { models: [first.subject.center.model] });
+    if (guarded) return { ...guarded, engine: 'stereo-cross', layers: [] };
+  }
   const facts = [];
   const collect = path => { for (const n of path.nodes) for (const f of n.facts) if (!facts.includes(f)) facts.push(f); };
   let text;
@@ -293,6 +308,13 @@ export function crossAnswer(question, context, { layers = 2, includeInitial = tr
     }
   }
   const sources = [...new Set(facts.flatMap(f => f.sources || []))];
-  return { text, kind: kindOf(first.path, first.subject), facts, sources, engine: 'stereo-cross', layers: layerTrace,
+  const result = { text, kind: kindOf(first.path, first.subject), facts, sources, engine: 'stereo-cross', layers: layerTrace,
     center: first.subject.center.id, chain: first.path.chain.id };
+  // Identity is an introduction in the model's era, not a recital of a retirement record.
+  if (first.subject.self && first.path.chain.id === 'identity') {
+    const identity = selfAnswer('identity', context.model, context);
+    result.text = withoutSources(identity.text);
+    result.facts = identity.facts;
+  }
+  return voiceAnswer(protectAnswer(result, context.model, context), context.model, context);
 }

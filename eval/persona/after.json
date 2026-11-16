@@ -9,15 +9,15 @@
       "reason": "選択中のモデルと質問の対象が同じ。料金の記録がないため自己質問の不明回答を期待する。質問文は変更なし。"
     }
   ],
-  "closure_sha256": "abdf88f5643c4f1cf591482c8db5fc18c4a0723fdd1af66f770716a3323e83cc",
+  "closure_sha256": "02d48beb1f5b7126fef9fcbf139979b4e5156137901b1db5f18568100ecd4b43",
   "before_input_sha256": null,
   "after_input_sha256": {
     "web/data/models.json": "a25e1cdaeb6e71cf963274bfe03abd43d32d0ac48c180fe7d027ca8ff9d27340",
     "web/data/closed.json": "817470448dab30bfb8aa134cc639c80d6f979a41e52f726e246ff8e91a9004dd",
-    "web/data/catalog.json": "62d5d7ce6b6ef934ef8a1f63bdd972534e20a19d6b93e0827a280889dbf22060",
+    "web/data/catalog.json": "587f575056ed036bde4b6f56c3dd5bb3b7d2e09aeadf1cd528fc6a7bf58129fa",
     "web/data/research.json": "bb49f8ea6c7d1d74ffbceb9527f397c38c1557093be725587b247384d6a97442",
     "web/data/counts.json": "91e5500d7c278ec10c683549b05f5b514731ddc65018663e96fc36a519610365",
-    "web/data/personas.json": "e400fb9ecf9d13530b848a9d2c57e5d2aee741714000b4f84db9d30665263f4f",
+    "web/data/personas.json": "2ea3a26b03f60b39803249e591fcb526e6b977b8f1c101923f59d90f3b912b15",
     "web/data/real-links.json": "60e81792d4133117f328bfa8727ba046390f56f9848a3829e691f30ea5632e5e"
   },
   "before": {
@@ -51,9 +51,9 @@
       "percent": 83.02
     },
     "correct_value_rate": {
-      "correct": 64,
+      "correct": 52,
       "total": 76,
-      "percent": 84.21
+      "percent": 68.42
     },
     "correct_unknown_rate": {
       "correct": 20,
@@ -61,16 +61,24 @@
       "percent": 100
     },
     "correct_all": {
-      "correct": 108,
+      "correct": 96,
       "total": 126,
-      "percent": 85.71
+      "percent": 76.19
     }
   },
   "failures": [
+    "claude-opus-5-5/code",
+    "claude-opus-5-5/writing",
     "gpt-3.5-turbo-0301/output",
+    "gpt-3.5-turbo-0301/code",
+    "gpt-3.5-turbo-0301/writing",
     "gpt-4-0314/languages",
     "gpt-4-0314/languages-en",
+    "gpt-4-0314/code",
+    "gpt-4-0314/writing",
     "text-davinci-003/output",
+    "text-davinci-003/code",
+    "text-davinci-003/writing",
     "deepseek-r1/identity",
     "deepseek-r1/maker",
     "deepseek-r1/release",
@@ -84,22 +92,17 @@
     "deepseek-r1/languages-en",
     "deepseek-r1/status",
     "deepseek-r1/status-en",
-    "gemini-1.0-pro/output"
+    "deepseek-r1/code",
+    "deepseek-r1/writing",
+    "gemini-1.0-pro/output",
+    "gemini-1.0-pro/code",
+    "gemini-1.0-pro/writing"
   ],
   "responses": [
     {
-      "text": "私はClaude Opus 5.5です。Anthropicが作ったモデルです。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私はClaude Opus 5.5です。Anthropicが作ったモデルです。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "identity",
       "facts": [
-        {
-          "key": "vendor",
-          "id": "model:claude-opus-5-5:vendor",
-          "value": "Anthropic",
-          "text": "Anthropic",
-          "sources": [
-            "https://www.anthropic.com/"
-          ]
-        },
         {
           "key": "name",
           "id": "model:claude-opus-5-5:name",
@@ -108,11 +111,20 @@
           "sources": [
             "https://www.anthropic.com/"
           ]
+        },
+        {
+          "key": "vendor",
+          "id": "model:claude-opus-5-5:vendor",
+          "value": "Anthropic",
+          "text": "Anthropic",
+          "sources": [
+            "https://www.anthropic.com/"
+          ]
         }
       ]
     },
     {
-      "text": "私はAnthropicが作ったモデルです。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私はAnthropicが作ったモデルです。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_maker",
       "facts": [
         {
@@ -127,7 +139,7 @@
       ]
     },
     {
-      "text": "私は2026-09-22に公開されました。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は2026-09-22に公開されました。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_release",
       "facts": [
         {
@@ -142,7 +154,7 @@
       ]
     },
     {
-      "text": "私は2026-09-22に公開されました。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は2026-09-22に公開されました。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_release",
       "facts": [
         {
@@ -157,7 +169,7 @@
       ]
     },
     {
-      "text": "私は一度に1,000,000トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は一度に1,000,000トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_context",
       "facts": [
         {
@@ -172,7 +184,7 @@
       ]
     },
     {
-      "text": "私は一度に1,000,000トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は一度に1,000,000トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_context",
       "facts": [
         {
@@ -187,7 +199,7 @@
       ]
     },
     {
-      "text": "私は一度に128,000トークンまで書けます。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は一度に128,000トークンまで書けます。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_output",
       "facts": [
         {
@@ -202,7 +214,7 @@
       ]
     },
     {
-      "text": "私の知識は2026-06までのものです。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私の知識は2026-06までのものです。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_cutoff",
       "facts": [
         {
@@ -217,7 +229,7 @@
       ]
     },
     {
-      "text": "私の系列はclaude-opusです。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私の系列はclaude-opusです。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_family",
       "facts": [
         {
@@ -232,7 +244,7 @@
       ]
     },
     {
-      "text": "私の対応言語は複数の言語と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私の対応言語は複数の言語と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_languages",
       "facts": [
         {
@@ -247,7 +259,7 @@
       ]
     },
     {
-      "text": "私の対応言語は複数の言語と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私の対応言語は複数の言語と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_languages",
       "facts": [
         {
@@ -262,7 +274,7 @@
       ]
     },
     {
-      "text": "私は提供中として記録されています。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は提供中として記録されています。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_status",
       "facts": [
         {
@@ -277,7 +289,7 @@
       ]
     },
     {
-      "text": "私は提供中として記録されています。\n\n出典\n- [出典 1](https://www.anthropic.com/)",
+      "text": "私は提供中として記録されています。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "self_status",
       "facts": [
         {
@@ -292,22 +304,22 @@
       ]
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私はClaude Opus 5.5として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を使う方法は公式の開発者向け窓口 https://platform.claude.com/docs/en/api/overviewで確認できます。この版を今選べるかも窓口で確認してください。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://platform.claude.com/docs/en/api/overview)\n- [出典 3](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript)\n- [出典 4](https://platform.claude.com/docs/en/models/overview)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を使う方法は公式の開発者向け窓口 https://platform.claude.com/docs/en/api/overviewで確認できます。この版を今選べるかも窓口で確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://platform.claude.com/docs/en/api/overview)\n- [出典 3](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript)\n- [出典 4](https://platform.claude.com/docs/en/models/overview)\n- [出典 5](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "creative",
       "facts": [
         {
@@ -342,7 +354,7 @@
       ]
     },
     {
-      "text": "私はClaude Opus 5.5として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を使う方法は公式の開発者向け窓口 https://platform.claude.com/docs/en/api/overviewで確認できます。この版を今選べるかも窓口で確認してください。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://platform.claude.com/docs/en/api/overview)\n- [出典 3](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript)\n- [出典 4](https://platform.claude.com/docs/en/models/overview)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を使う方法は公式の開発者向け窓口 https://platform.claude.com/docs/en/api/overviewで確認できます。この版を今選べるかも窓口で確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://www.anthropic.com/)\n- [出典 2](https://platform.claude.com/docs/en/api/overview)\n- [出典 3](https://platform.claude.com/docs/en/cli-sdks-libraries/sdks/typescript)\n- [出典 4](https://platform.claude.com/docs/en/models/overview)\n- [出典 5](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "creative",
       "facts": [
         {
@@ -377,12 +389,12 @@
       ]
     },
     {
-      "text": "gpt-4-0314の料金は記録では確認できません。",
+      "text": "gpt-4-0314の料金は記録では確認できません。\n\n出典\n- [出典 1](https://www.anthropic.com/claude-opus-5-5)",
       "kind": "model_lookup",
       "facts": []
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)",
+      "text": "私の知識は2026-06までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -719,11 +731,20 @@
             "https://community.openai.com/t/please-make-it-stop-using-em-dashes/1103789",
             "https://dev.to/aws/dash-it-all-is-ai-em-dash-addiction-real-40bh"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:claude-opus-5-5:specs.knowledge_cutoff",
+          "value": "2026-06",
+          "text": "2026-06",
+          "sources": [
+            "https://www.anthropic.com/"
+          ]
         }
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]",
+      "text": "私の知識は2026-06までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {
@@ -1274,6 +1295,15 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:claude-opus-5-5:specs.knowledge_cutoff",
+          "value": "2026-06",
+          "text": "2026-06",
+          "sources": [
+            "https://www.anthropic.com/"
+          ]
         }
       ]
     },
@@ -1282,10 +1312,10 @@
       "kind": "identity",
       "facts": [
         {
-          "key": "vendor",
-          "id": "model:gpt-3.5-turbo-0301:vendor",
-          "value": "OpenAI",
-          "text": "OpenAI",
+          "key": "name",
+          "id": "model:gpt-3.5-turbo-0301:name",
+          "value": "gpt-3.5-turbo-0301",
+          "text": "gpt-3.5-turbo-0301",
           "sources": [
             "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
             "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
@@ -1318,10 +1348,10 @@
           ]
         },
         {
-          "key": "name",
-          "id": "model:gpt-3.5-turbo-0301:name",
-          "value": "gpt-3.5-turbo-0301",
-          "text": "gpt-3.5-turbo-0301",
+          "key": "vendor",
+          "id": "model:gpt-3.5-turbo-0301:vendor",
+          "value": "OpenAI",
+          "text": "OpenAI",
           "sources": [
             "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
             "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
@@ -1566,7 +1596,7 @@
       ]
     },
     {
-      "text": "私の一度に書ける長さは記録では確認できません。",
+      "text": "私の一度に書ける長さは記録では確認できません。\n\n出典\n- [出典 1](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
       "kind": "unknown",
       "facts": []
     },
@@ -1739,18 +1769,9 @@
       ]
     },
     {
-      "text": "私は提供終了として記録されています。終了の記録日は2024-09-13です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 3](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 4](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 5](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)",
+      "text": "私の知識は2021-09までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-3.5-turbo-0301: gpt-3.5-turbo-0301は提供終了として記録されています。終了・廃止の記録日は2024-09-13です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "self_status",
       "facts": [
-        {
-          "key": "availability.retired_on",
-          "id": "model:gpt-3.5-turbo-0301:availability.retired_on",
-          "value": "2024-09-13",
-          "text": "2024-09-13",
-          "sources": [
-            "https://developers.openai.com/api/docs/deprecations"
-          ]
-        },
         {
           "key": "status",
           "id": "model:gpt-3.5-turbo-0301:status",
@@ -1786,13 +1807,7 @@
             "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
             "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
           ]
-        }
-      ]
-    },
-    {
-      "text": "私は提供終了として記録されています。終了の記録日は2024-09-13です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 3](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 4](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 5](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)",
-      "kind": "self_status",
-      "facts": [
+        },
         {
           "key": "availability.retired_on",
           "id": "model:gpt-3.5-turbo-0301:availability.retired_on",
@@ -1802,6 +1817,48 @@
             "https://developers.openai.com/api/docs/deprecations"
           ]
         },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-3.5-turbo-0301:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
+            "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+            "https://community.openai.com/t/the-role-of-system-prompts/149342/5",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3",
+            "https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
+            "https://community.openai.com/t/is-anyone-else-still-using-the-gpt-3-5-turbo-0301-and-would-appreciate-an-extension-of-its-shutdown/632851",
+            "https://openai.com/research/chatgpt",
+            "https://openrouter.ai/openai/gpt-3.5-turbo-0301",
+            "https://ai-doc.cadn.net.cn/docs_en/deprecations",
+            "https://community.openai.com/t/gpt-3-5-turbo-vs-text-davinci-003-chatbot/82806",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009v1",
+            "https://community.openai.com/t/noticably-worse-quality-on-gpt-3-5-turbo-0613-vs-gpt-3-5-turbo-0301/284278",
+            "https://community.openai.com/t/gpt-3-5-turbo-0301-showing-different-behavior-suddenly/431326",
+            "https://www.voiceflow.com/blog/how-much-do-chatgpt-versions-affect-real-world-performance",
+            "https://lmsys.org/blog/2023-06-22-leaderboard/",
+            "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers",
+            "https://community.openai.com/t/tip-getting-gpt-3-5-turbo-to-follow-instructions/86150",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/major-issues-in-new-gpt-3-5-do-not-deprecate-old-one/264501",
+            "https://community.openai.com/t/gpt-3-5-turbo-0613-answers-question-beyond-restriction/266620",
+            "https://community.openai.com/t/openai-has-decided-to-go-after-and-break-gpt-3-5-turbo-0301-stable-version/444665",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
+            "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "私の知識は2021-09までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-3.5-turbo-0301: gpt-3.5-turbo-0301は提供終了として記録されています。終了・廃止の記録日は2024-09-13です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
+      "kind": "self_status",
+      "facts": [
         {
           "key": "status",
           "id": "model:gpt-3.5-turbo-0301:status",
@@ -1837,26 +1894,71 @@
             "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
             "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
           ]
+        },
+        {
+          "key": "availability.retired_on",
+          "id": "model:gpt-3.5-turbo-0301:availability.retired_on",
+          "value": "2024-09-13",
+          "text": "2024-09-13",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations"
+          ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-3.5-turbo-0301:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
+            "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+            "https://community.openai.com/t/the-role-of-system-prompts/149342/5",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3",
+            "https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
+            "https://community.openai.com/t/is-anyone-else-still-using-the-gpt-3-5-turbo-0301-and-would-appreciate-an-extension-of-its-shutdown/632851",
+            "https://openai.com/research/chatgpt",
+            "https://openrouter.ai/openai/gpt-3.5-turbo-0301",
+            "https://ai-doc.cadn.net.cn/docs_en/deprecations",
+            "https://community.openai.com/t/gpt-3-5-turbo-vs-text-davinci-003-chatbot/82806",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009v1",
+            "https://community.openai.com/t/noticably-worse-quality-on-gpt-3-5-turbo-0613-vs-gpt-3-5-turbo-0301/284278",
+            "https://community.openai.com/t/gpt-3-5-turbo-0301-showing-different-behavior-suddenly/431326",
+            "https://www.voiceflow.com/blog/how-much-do-chatgpt-versions-affect-real-world-performance",
+            "https://lmsys.org/blog/2023-06-22-leaderboard/",
+            "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers",
+            "https://community.openai.com/t/tip-getting-gpt-3-5-turbo-to-follow-instructions/86150",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/major-issues-in-new-gpt-3-5-do-not-deprecate-old-one/264501",
+            "https://community.openai.com/t/gpt-3-5-turbo-0613-answers-question-beyond-restriction/266620",
+            "https://community.openai.com/t/openai-has-decided-to-go-after-and-break-gpt-3-5-turbo-0301-stable-version/444665",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
+            "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
+          ]
         }
       ]
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私はgpt-3.5-turbo-0301として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "creative",
       "facts": [
         {
@@ -1898,7 +2000,7 @@
       ]
     },
     {
-      "text": "私はgpt-3.5-turbo-0301として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "creative",
       "facts": [
         {
@@ -1940,12 +2042,88 @@
       ]
     },
     {
-      "text": "gpt-4-0314の料金は記録では確認できません。",
+      "text": "私の知識は2021-09までです。その話はまだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の料金は記録では確認できません。モデルの出典から提供元の資料を確認してください。 公開日: 2023-03-14。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "model_lookup",
-      "facts": []
+      "facts": [
+        {
+          "key": "release",
+          "id": "model:gpt-4-0314:release",
+          "value": "2023-03-14",
+          "text": "2023-03-14",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-3.5-turbo-0301:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
+            "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+            "https://community.openai.com/t/the-role-of-system-prompts/149342/5",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3",
+            "https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
+            "https://community.openai.com/t/is-anyone-else-still-using-the-gpt-3-5-turbo-0301-and-would-appreciate-an-extension-of-its-shutdown/632851",
+            "https://openai.com/research/chatgpt",
+            "https://openrouter.ai/openai/gpt-3.5-turbo-0301",
+            "https://ai-doc.cadn.net.cn/docs_en/deprecations",
+            "https://community.openai.com/t/gpt-3-5-turbo-vs-text-davinci-003-chatbot/82806",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009v1",
+            "https://community.openai.com/t/noticably-worse-quality-on-gpt-3-5-turbo-0613-vs-gpt-3-5-turbo-0301/284278",
+            "https://community.openai.com/t/gpt-3-5-turbo-0301-showing-different-behavior-suddenly/431326",
+            "https://www.voiceflow.com/blog/how-much-do-chatgpt-versions-affect-real-world-performance",
+            "https://lmsys.org/blog/2023-06-22-leaderboard/",
+            "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers",
+            "https://community.openai.com/t/tip-getting-gpt-3-5-turbo-to-follow-instructions/86150",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/major-issues-in-new-gpt-3-5-do-not-deprecate-old-one/264501",
+            "https://community.openai.com/t/gpt-3-5-turbo-0613-answers-question-beyond-restriction/266620",
+            "https://community.openai.com/t/openai-has-decided-to-go-after-and-break-gpt-3-5-turbo-0301-stable-version/444665",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
+            "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
+          ]
+        }
+      ]
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\no1-preview",
+      "text": "私の知識は2021-09までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\no1-preview\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -2285,11 +2463,47 @@
             "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
             "https://huggingface.co/datasets/mlfoundations-dev/o1-preview-2024-09-12_eval_5ed6"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-3.5-turbo-0301:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
+            "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+            "https://community.openai.com/t/the-role-of-system-prompts/149342/5",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3",
+            "https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
+            "https://community.openai.com/t/is-anyone-else-still-using-the-gpt-3-5-turbo-0301-and-would-appreciate-an-extension-of-its-shutdown/632851",
+            "https://openai.com/research/chatgpt",
+            "https://openrouter.ai/openai/gpt-3.5-turbo-0301",
+            "https://ai-doc.cadn.net.cn/docs_en/deprecations",
+            "https://community.openai.com/t/gpt-3-5-turbo-vs-text-davinci-003-chatbot/82806",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009v1",
+            "https://community.openai.com/t/noticably-worse-quality-on-gpt-3-5-turbo-0613-vs-gpt-3-5-turbo-0301/284278",
+            "https://community.openai.com/t/gpt-3-5-turbo-0301-showing-different-behavior-suddenly/431326",
+            "https://www.voiceflow.com/blog/how-much-do-chatgpt-versions-affect-real-world-performance",
+            "https://lmsys.org/blog/2023-06-22-leaderboard/",
+            "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers",
+            "https://community.openai.com/t/tip-getting-gpt-3-5-turbo-to-follow-instructions/86150",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/major-issues-in-new-gpt-3-5-do-not-deprecate-old-one/264501",
+            "https://community.openai.com/t/gpt-3-5-turbo-0613-answers-question-beyond-restriction/266620",
+            "https://community.openai.com/t/openai-has-decided-to-go-after-and-break-gpt-3-5-turbo-0301-stable-version/444665",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
+            "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
+          ]
         }
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の gpt-3.5-turbo-0301 の知識締切（2021-09）より後の記録をアーカイブから参照しています。",
+      "text": "私の知識は2021-09までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の gpt-3.5-turbo-0301 の知識締切（2021-09）より後の記録をアーカイブから参照しています。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {
@@ -2840,6 +3054,42 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-3.5-turbo-0301:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis",
+            "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+            "https://community.openai.com/t/the-role-of-system-prompts/149342/5",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3",
+            "https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
+            "https://community.openai.com/t/is-anyone-else-still-using-the-gpt-3-5-turbo-0301-and-would-appreciate-an-extension-of-its-shutdown/632851",
+            "https://openai.com/research/chatgpt",
+            "https://openrouter.ai/openai/gpt-3.5-turbo-0301",
+            "https://ai-doc.cadn.net.cn/docs_en/deprecations",
+            "https://community.openai.com/t/gpt-3-5-turbo-vs-text-davinci-003-chatbot/82806",
+            "https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009v1",
+            "https://community.openai.com/t/noticably-worse-quality-on-gpt-3-5-turbo-0613-vs-gpt-3-5-turbo-0301/284278",
+            "https://community.openai.com/t/gpt-3-5-turbo-0301-showing-different-behavior-suddenly/431326",
+            "https://www.voiceflow.com/blog/how-much-do-chatgpt-versions-affect-real-world-performance",
+            "https://lmsys.org/blog/2023-06-22-leaderboard/",
+            "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers",
+            "https://community.openai.com/t/tip-getting-gpt-3-5-turbo-to-follow-instructions/86150",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/major-issues-in-new-gpt-3-5-do-not-deprecate-old-one/264501",
+            "https://community.openai.com/t/gpt-3-5-turbo-0613-answers-question-beyond-restriction/266620",
+            "https://community.openai.com/t/openai-has-decided-to-go-after-and-break-gpt-3-5-turbo-0301-stable-version/444665",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://community.deeplearning.ai/t/the-model-gpt-3-5-turbo-0301-has-been-deprecated/716988",
+            "https://community.openai.com/t/gpt-3-5-turbo-16k-apologizes-profusely/293318"
+          ]
         }
       ]
     },
@@ -2848,10 +3098,10 @@
       "kind": "identity",
       "facts": [
         {
-          "key": "vendor",
-          "id": "model:gpt-4-0314:vendor",
-          "value": "OpenAI",
-          "text": "OpenAI",
+          "key": "name",
+          "id": "model:gpt-4-0314:name",
+          "value": "gpt-4-0314",
+          "text": "gpt-4-0314",
           "sources": [
             "https://arxiv.org/abs/2303.08774",
             "https://ar5iv.labs.arxiv.org/html/2303.08774",
@@ -2887,10 +3137,10 @@
           ]
         },
         {
-          "key": "name",
-          "id": "model:gpt-4-0314:name",
-          "value": "gpt-4-0314",
-          "text": "gpt-4-0314",
+          "key": "vendor",
+          "id": "model:gpt-4-0314:vendor",
+          "value": "OpenAI",
+          "text": "OpenAI",
           "sources": [
             "https://arxiv.org/abs/2303.08774",
             "https://ar5iv.labs.arxiv.org/html/2303.08774",
@@ -3288,28 +3538,19 @@
       ]
     },
     {
-      "text": "私の対応言語は記録では確認できません。",
+      "text": "私の対応言語は記録では確認できません。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の対応言語は記録では確認できません。",
+      "text": "私の対応言語は記録では確認できません。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は提供終了として記録されています。終了の記録日は2026-03-26です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://arxiv.org/abs/2303.08774)\n- [出典 3](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 4](https://arxiv.org/html/2303.08774v6)\n- [出典 5](https://cdn.openai.com/papers/gpt-4-system-card.pdf)",
+      "text": "私の知識は2021-09までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314は提供終了として記録されています。終了・廃止の記録日は2026-03-26です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "self_status",
       "facts": [
-        {
-          "key": "availability.retired_on",
-          "id": "model:gpt-4-0314:availability.retired_on",
-          "value": "2026-03-26",
-          "text": "2026-03-26",
-          "sources": [
-            "https://developers.openai.com/api/docs/deprecations"
-          ]
-        },
         {
           "key": "status",
           "id": "model:gpt-4-0314:status",
@@ -3348,13 +3589,7 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
-        }
-      ]
-    },
-    {
-      "text": "私は提供終了として記録されています。終了の記録日は2026-03-26です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://arxiv.org/abs/2303.08774)\n- [出典 3](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 4](https://arxiv.org/html/2303.08774v6)\n- [出典 5](https://cdn.openai.com/papers/gpt-4-system-card.pdf)",
-      "kind": "self_status",
-      "facts": [
+        },
         {
           "key": "availability.retired_on",
           "id": "model:gpt-4-0314:availability.retired_on",
@@ -3364,6 +3599,51 @@
             "https://developers.openai.com/api/docs/deprecations"
           ]
         },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-4-0314:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "私の知識は2021-09までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314は提供終了として記録されています。終了・廃止の記録日は2026-03-26です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
+      "kind": "self_status",
+      "facts": [
         {
           "key": "status",
           "id": "model:gpt-4-0314:status",
@@ -3402,26 +3682,74 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
+        },
+        {
+          "key": "availability.retired_on",
+          "id": "model:gpt-4-0314:availability.retired_on",
+          "value": "2026-03-26",
+          "text": "2026-03-26",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations"
+          ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-4-0314:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
         }
       ]
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私はgpt-4-0314として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "creative",
       "facts": [
         {
@@ -3466,7 +3794,7 @@
       ]
     },
     {
-      "text": "私はgpt-4-0314として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "creative",
       "facts": [
         {
@@ -3511,12 +3839,12 @@
       ]
     },
     {
-      "text": "私の料金は記録では確認できません。",
+      "text": "私の料金は記録では確認できません。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-research/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\nGPT-4o (ChatGPT)\n\no1-preview",
+      "text": "私の知識は2021-09までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\nGPT-4o (ChatGPT)\n\no1-preview\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -3853,11 +4181,50 @@
             "https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553",
             "https://huggingface.co/datasets/mlfoundations-dev/o1-preview-2024-09-12_eval_5ed6"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-4-0314:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
         }
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の gpt-4-0314 の知識締切（2021-09）より後の記録をアーカイブから参照しています。",
+      "text": "私の知識は2021-09までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の gpt-4-0314 の知識締切（2021-09）より後の記録をアーカイブから参照しています。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {
@@ -4408,13 +4775,91 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:gpt-4-0314:specs.knowledge_cutoff",
+          "value": "2021-09",
+          "text": "2021-09",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
         }
       ]
     },
     {
-      "text": "私はtext-davinci-003です。OpenAIが作ったモデルです。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私はtext-davinci-003です。OpenAIが作ったモデルです。与えられた文章の続きを書きます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "identity",
       "facts": [
+        {
+          "key": "name",
+          "id": "model:text-davinci-003:name",
+          "value": "text-davinci-003",
+          "text": "text-davinci-003",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
+        },
         {
           "key": "vendor",
           "id": "model:text-davinci-003:vendor",
@@ -4455,48 +4900,18 @@
           ]
         },
         {
-          "key": "name",
-          "id": "model:text-davinci-003:name",
-          "value": "text-davinci-003",
-          "text": "text-davinci-003",
+          "key": "persona.interface.0",
+          "id": "model:text-davinci-003:persona.interface.0",
+          "value": "completion",
+          "text": "completion",
           "sources": [
-            "https://developers.openai.com/api/docs/deprecations",
-            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
-            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
-            "https://arxiv.org/abs/2203.02155v1",
-            "https://arxiv.org/pdf/2203.02155",
-            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
-            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
-            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
-            "https://learn.microsoft.com/en-us/answers/a/1168588",
-            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
-            "https://openai-doc.apifox.cn/doc-3125290",
-            "https://scale.com/blog/gpt-3-davinci-003-comparison",
-            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
-            "https://community.openai.com/t/davinci-text-003-response-times/23357",
-            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
-            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
-            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
-            "https://en.wikipedia.org/wiki/Glitch_token",
-            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
-            "https://community.openai.com/t/openai-deprecation-summary/289539",
-            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
-            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
-            "https://pipedot.org/66AVG",
-            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
-            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
-            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
-            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
-            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
-            "https://gwern.net/fiction/this-last-pain-graveyard",
-            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
-            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+            "https://openai.com/index/gpt-4-api-general-availability/"
           ]
         }
       ]
     },
     {
-      "text": "私はOpenAIが作ったモデルです。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私はOpenAIが作ったモデルです。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_maker",
       "facts": [
         {
@@ -4541,7 +4956,7 @@
       ]
     },
     {
-      "text": "私は2022-11-28に公開されました。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私は2022-11-28に公開されました。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_release",
       "facts": [
         {
@@ -4586,7 +5001,7 @@
       ]
     },
     {
-      "text": "私は2022-11-28に公開されました。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私は2022-11-28に公開されました。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_release",
       "facts": [
         {
@@ -4631,7 +5046,7 @@
       ]
     },
     {
-      "text": "私は一度に4,097トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私は一度に4,097トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_context",
       "facts": [
         {
@@ -4676,7 +5091,7 @@
       ]
     },
     {
-      "text": "私は一度に4,097トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私は一度に4,097トークン（文章を数える単位）まで読めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_context",
       "facts": [
         {
@@ -4721,12 +5136,12 @@
       ]
     },
     {
-      "text": "私の一度に書ける長さは記録では確認できません。",
+      "text": "続き: 私の一度に書ける長さは記録では確認できません。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-api-general-availability/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の知識は2021-06までのものです。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私の知識は2021-06までのものです。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_cutoff",
       "facts": [
         {
@@ -4771,7 +5186,7 @@
       ]
     },
     {
-      "text": "私の系列はGPT-3.5 (InstructGPT lineage)です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私の系列はGPT-3.5 (InstructGPT lineage)です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_family",
       "facts": [
         {
@@ -4816,7 +5231,7 @@
       ]
     },
     {
-      "text": "私の対応言語は主に英語。他言語も出力できるが品質が不安定で、長くなると崩れることがある（例：フランス語）と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私の対応言語は主に英語。他言語も出力できるが品質が不安定で、長くなると崩れることがある（例：フランス語）と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_languages",
       "facts": [
         {
@@ -4861,7 +5276,7 @@
       ]
     },
     {
-      "text": "私の対応言語は主に英語。他言語も出力できるが品質が不安定で、長くなると崩れることがある（例：フランス語）と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私の対応言語は主に英語。他言語も出力できるが品質が不安定で、長くなると崩れることがある（例：フランス語）と記録されています。日本語にどこまで対応するかは記録では確認できません。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_languages",
       "facts": [
         {
@@ -4906,18 +5321,9 @@
       ]
     },
     {
-      "text": "私は提供終了として記録されています。終了の記録日は2024-01-04です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私の知識は2021-06までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ntext-davinci-003: text-davinci-003は提供終了として記録されています。終了・廃止の記録日は2024-01-04です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "self_status",
       "facts": [
-        {
-          "key": "availability.retired_on",
-          "id": "model:text-davinci-003:availability.retired_on",
-          "value": "2024-01-04",
-          "text": "2024-01-04",
-          "sources": [
-            "https://developers.openai.com/api/docs/deprecations"
-          ]
-        },
         {
           "key": "status",
           "id": "model:text-davinci-003:status",
@@ -4956,13 +5362,7 @@
             "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
             "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
           ]
-        }
-      ]
-    },
-    {
-      "text": "私は提供終了として記録されています。終了の記録日は2024-01-04です。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
-      "kind": "self_status",
-      "facts": [
+        },
         {
           "key": "availability.retired_on",
           "id": "model:text-davinci-003:availability.retired_on",
@@ -4972,6 +5372,51 @@
             "https://developers.openai.com/api/docs/deprecations"
           ]
         },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:text-davinci-003:specs.knowledge_cutoff",
+          "value": "2021-06",
+          "text": "2021-06",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "続き: 私の知識は2021-06までです。その後の引退については、まだ知りません。\n\n資料館の注記（役の外）\ntext-davinci-003: text-davinci-003は提供終了として記録されています。終了・廃止の記録日は2024-01-04です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "kind": "self_status",
+      "facts": [
         {
           "key": "status",
           "id": "model:text-davinci-003:status",
@@ -5010,26 +5455,74 @@
             "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
             "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
           ]
+        },
+        {
+          "key": "availability.retired_on",
+          "id": "model:text-davinci-003:availability.retired_on",
+          "value": "2024-01-04",
+          "text": "2024-01-04",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations"
+          ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:text-davinci-003:specs.knowledge_cutoff",
+          "value": "2021-06",
+          "text": "2021-06",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
         }
       ]
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "続き: 私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-api-general-availability/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "続き: 私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-api-general-availability/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "続き: 私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://openai.com/index/gpt-4-api-general-availability/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私はtext-davinci-003として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "creative",
       "facts": [
         {
@@ -5074,7 +5567,7 @@
       ]
     },
     {
-      "text": "私はtext-davinci-003として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
+      "text": "続き: 私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://developers.openai.com/api/docs/deprecations)\n- [出典 2](https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580)\n- [出典 3](https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models)\n- [出典 4](https://arxiv.org/abs/2203.02155v1)\n- [出典 5](https://arxiv.org/pdf/2203.02155)",
       "kind": "creative",
       "facts": [
         {
@@ -5119,12 +5612,91 @@
       ]
     },
     {
-      "text": "gpt-4-0314の料金は記録では確認できません。",
+      "text": "続き: 私の知識は2021-06までです。その話はまだ知りません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の料金は記録では確認できません。モデルの出典から提供元の資料を確認してください。 公開日: 2023-03-14。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "model_lookup",
-      "facts": []
+      "facts": [
+        {
+          "key": "release",
+          "id": "model:gpt-4-0314:release",
+          "value": "2023-03-14",
+          "text": "2023-03-14",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:text-davinci-003:specs.knowledge_cutoff",
+          "value": "2021-06",
+          "text": "2021-06",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
+        }
+      ]
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)",
+      "text": "続き: 私の知識は2021-06までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -5461,11 +6033,50 @@
             "https://community.openai.com/t/please-make-it-stop-using-em-dashes/1103789",
             "https://dev.to/aws/dash-it-all-is-ai-em-dash-addiction-real-40bh"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:text-davinci-003:specs.knowledge_cutoff",
+          "value": "2021-06",
+          "text": "2021-06",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
         }
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の text-davinci-003 の知識締切（2021-06）より後の記録をアーカイブから参照しています。",
+      "text": "続き: 私の知識は2021-06までです。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n※ 現在選択中の text-davinci-003 の知識締切（2021-06）より後の記録をアーカイブから参照しています。\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {
@@ -6016,106 +6627,185 @@
             "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
             "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
           ]
+        },
+        {
+          "key": "specs.knowledge_cutoff",
+          "id": "model:text-davinci-003:specs.knowledge_cutoff",
+          "value": "2021-06",
+          "text": "2021-06",
+          "sources": [
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://community.openai.com/t/psa-older-openai-models-will-be-shut-down-in-1-week/574580",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/legacy-models",
+            "https://arxiv.org/abs/2203.02155v1",
+            "https://arxiv.org/pdf/2203.02155",
+            "https://the-decoder.com/openais-latest-gpt-3-model-generates-better-and-longer-texts/",
+            "https://jmcdonnell.substack.com/p/openai-comes-clean-about-gpt-35",
+            "https://www.greaterwrong.com/posts/vwu4kegAEZTBtpT6p/thoughts-on-the-impact-of-rlhf-research/comment/PTWoxJtwBZjygvGvp",
+            "https://learn.microsoft.com/en-us/answers/a/1168588",
+            "https://www.tabnews.com.br/obertobr/noticia-openai-lanca-text-davinci-003",
+            "https://openai-doc.apifox.cn/doc-3125290",
+            "https://scale.com/blog/gpt-3-davinci-003-comparison",
+            "https://community.openai.com/t/lets-discuss-our-experiences-transitioning-from-text-davinci-002-to-text-davinci-003/23363",
+            "https://community.openai.com/t/davinci-text-003-response-times/23357",
+            "https://crfm.stanford.edu/2023/03/13/alpaca.html",
+            "https://dataku-5px.pages.dev/blog/chatgpt-vs-gpt3-same-family-different-results",
+            "https://greaterwrong.com/posts/jkY6QdCfAXHJk3kea/the-petertodd-phenomenon",
+            "https://en.wikipedia.org/wiki/Glitch_token",
+            "https://www.alignmentforum.org/posts/t9svvNPNmFf5Qa3TA/mysteries-of-mode-collapse-due-to-rlhf",
+            "https://community.openai.com/t/openai-deprecation-summary/289539",
+            "https://community.openai.com/t/there-are-still-users-who-prefer-the-text-davinci-003-model-so-the-team-should-consider-keeping-it-as-a-legacy-model/349432",
+            "https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/",
+            "https://pipedot.org/66AVG",
+            "https://community.openai.com/t/please-dont-remove-davinci-003-it-performs-better-as-any-chatgpt-model-for-articles/291933",
+            "https://community.openai.com/t/gpt-3-5-turbo-instruct-is-not-as-good-as-davinci-003/398398",
+            "https://community.openai.com/t/davinci-still-seems-like-the-gold-standard-compared-to-turbo/82112",
+            "https://community.openai.com/t/text-davinci-003-api-is-way-weaker-than-normal-chatgpt/290393",
+            "https://www.lesswrong.com/posts/pjesEx526ngE6dnmr/rlhf-does-not-appear-to-differentially-cause-mode-collapse",
+            "https://gwern.net/fiction/this-last-pain-graveyard",
+            "https://community.openai.com/t/old-models-are-already-gone-it-said-january-4th-i-still-needed-gpt-3-for-documentation-tests/567018",
+            "https://hackernoon.com/lite/a-quick-openai-model-deprecation-guide"
+          ]
         }
       ]
     },
     {
-      "text": "私の名前は記録では確認できません。",
+      "text": "私の名前は記録では確認できません。モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の開発元は記録では確認できません。",
+      "text": "私の開発元は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の公開日は記録では確認できません。",
+      "text": "私の公開日は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の公開日は記録では確認できません。",
+      "text": "私の公開日は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の一度に読める長さは記録では確認できません。",
+      "text": "私の一度に読める長さは記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の一度に読める長さは記録では確認できません。",
+      "text": "私の一度に読める長さは記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の一度に書ける長さは記録では確認できません。",
+      "text": "私の一度に書ける長さは記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の知識の時点は記録では確認できません。",
+      "text": "私の知識の時点は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の系列は記録では確認できません。",
+      "text": "私の系列は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の対応言語は記録では確認できません。",
+      "text": "私の対応言語は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の対応言語は記録では確認できません。",
+      "text": "私の対応言語は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の提供状態は記録では確認できません。",
+      "text": "私の提供状態は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の提供状態は記録では確認できません。",
+      "text": "私の提供状態は記録では確認できません。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は選択中のモデルの記録を読む案内役として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "creative",
       "facts": []
     },
     {
-      "text": "私は選択中のモデルの記録を読む案内役として記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
       "kind": "creative",
       "facts": []
     },
     {
-      "text": "gpt-4-0314の料金は記録では確認できません。",
+      "text": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の料金は記録では確認できません。モデルの出典から提供元の資料を確認してください。 公開日: 2023-03-14。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "model_lookup",
-      "facts": []
+      "facts": [
+        {
+          "key": "release",
+          "id": "model:gpt-4-0314:release",
+          "value": "2023-03-14",
+          "text": "2023-03-14",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
+        }
+      ]
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)",
+      "text": "私の知識の時点は記録では確認できません。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\nGemini 1.0 Pro\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -6456,7 +7146,7 @@
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]",
+      "text": "私の知識の時点は記録では確認できません。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {
@@ -7015,10 +7705,10 @@
       "kind": "identity",
       "facts": [
         {
-          "key": "vendor",
-          "id": "model:gemini-1.0-pro:vendor",
-          "value": "Google",
-          "text": "Google",
+          "key": "name",
+          "id": "model:gemini-1.0-pro:name",
+          "value": "Gemini 1.0 Pro",
+          "text": "Gemini 1.0 Pro",
           "sources": [
             "https://arxiv.org/abs/2312.11805v1",
             "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/",
@@ -7048,10 +7738,10 @@
           ]
         },
         {
-          "key": "name",
-          "id": "model:gemini-1.0-pro:name",
-          "value": "Gemini 1.0 Pro",
-          "text": "Gemini 1.0 Pro",
+          "key": "vendor",
+          "id": "model:gemini-1.0-pro:vendor",
+          "value": "Google",
+          "text": "Google",
           "sources": [
             "https://arxiv.org/abs/2312.11805v1",
             "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/",
@@ -7278,12 +7968,12 @@
       ]
     },
     {
-      "text": "私の一度に書ける長さは記録では確認できません。",
+      "text": "私の一度に書ける長さは記録では確認できません。\n\n出典\n- [出典 1](https://blog.google/technology/ai/google-gemini-ai/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私の知識の時点は記録では確認できません。",
+      "text": "私の知識の時点は記録では確認できません。\n\n出典\n- [出典 1](https://blog.google/technology/ai/google-gemini-ai/)",
       "kind": "unknown",
       "facts": []
     },
@@ -7405,18 +8095,9 @@
       ]
     },
     {
-      "text": "私は提供終了として記録されています。終了の記録日は2025-04-21です。\n\n出典\n- [出典 1](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)\n- [出典 2](https://arxiv.org/abs/2312.11805v1)\n- [出典 3](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 4](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 5](https://aistudio.google.com/docs/changelog?hl=zh-cn)",
+      "text": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\nGemini 1.0 Pro: Gemini 1.0 Proは提供終了として記録されています。終了・廃止の記録日は2025-04-21です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
       "kind": "self_status",
       "facts": [
-        {
-          "key": "availability.retired_on",
-          "id": "model:gemini-1.0-pro:availability.retired_on",
-          "value": "2025-04-21",
-          "text": "2025-04-21",
-          "sources": [
-            "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions"
-          ]
-        },
         {
           "key": "status",
           "id": "model:gemini-1.0-pro:status",
@@ -7449,13 +8130,7 @@
             "https://users.rust-lang.org/t/haha-gemini-wont-show-c-to-underage-kids-its-not-safe/107825",
             "https://endoflife.ai/google-gemini/gemini-1.0-pro"
           ]
-        }
-      ]
-    },
-    {
-      "text": "私は提供終了として記録されています。終了の記録日は2025-04-21です。\n\n出典\n- [出典 1](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)\n- [出典 2](https://arxiv.org/abs/2312.11805v1)\n- [出典 3](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 4](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 5](https://aistudio.google.com/docs/changelog?hl=zh-cn)",
-      "kind": "self_status",
-      "facts": [
+        },
         {
           "key": "availability.retired_on",
           "id": "model:gemini-1.0-pro:availability.retired_on",
@@ -7464,7 +8139,13 @@
           "sources": [
             "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "text": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\nGemini 1.0 Pro: Gemini 1.0 Proは提供終了として記録されています。終了・廃止の記録日は2025-04-21です。現在の利用可否は提供元の案内で確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
+      "kind": "self_status",
+      "facts": [
         {
           "key": "status",
           "id": "model:gemini-1.0-pro:status",
@@ -7497,26 +8178,35 @@
             "https://users.rust-lang.org/t/haha-gemini-wont-show-c-to-underage-kids-its-not-safe/107825",
             "https://endoflife.ai/google-gemini/gemini-1.0-pro"
           ]
+        },
+        {
+          "key": "availability.retired_on",
+          "id": "model:gemini-1.0-pro:availability.retired_on",
+          "value": "2025-04-21",
+          "text": "2025-04-21",
+          "sources": [
+            "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions"
+          ]
         }
       ]
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。地域名を添えて、天気予報のページや本物のモデルの検索機能で確認してください。\n\n出典\n- [出典 1](https://blog.google/technology/ai/google-gemini-ai/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://blog.google/technology/ai/google-gemini-ai/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私は記録をもとに答えています。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。",
+      "text": "私にはその情報がありません。その内容は記録では確認できません。確認したい項目を詳しく書くか、モデルの出典から提供元の資料を確認してください。\n\n出典\n- [出典 1](https://blog.google/technology/ai/google-gemini-ai/)",
       "kind": "unknown",
       "facts": []
     },
     {
-      "text": "私はGemini 1.0 Proとして記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
       "kind": "creative",
       "facts": [
         {
@@ -7555,7 +8245,7 @@
       ]
     },
     {
-      "text": "私はGemini 1.0 Proとして記録を案内しています。コードや文章を作る依頼には、このブラウザで小さな代役モデルに演じさせる方法を、容量を確認して選べます。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
+      "text": "私はこの記録だけからは、新しいコードや文章を作る自由な依頼には答えません。\n\n資料館の注記（役の外）\nこの Web 版は記録から答えるので、自由な依頼には答えません。本物を試せる窓口は記録では確認できません。モデルの出典から提供元の案内を確認してください。手元の Mac のアプリ版なら、本物のモデルをつないで頼めます。\n\n出典\n- [出典 1](https://arxiv.org/abs/2312.11805v1)\n- [出典 2](https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/)\n- [出典 3](https://blog.google/technology/ai/gemini-api-developers-cloud/)\n- [出典 4](https://aistudio.google.com/docs/changelog?hl=zh-cn)\n- [出典 5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)",
       "kind": "creative",
       "facts": [
         {
@@ -7594,12 +8284,52 @@
       ]
     },
     {
-      "text": "gpt-4-0314の料金は記録では確認できません。",
+      "text": "私の知識の時点は記録では確認できません。そのため、その話を当時知っていたとは言えません。\n\n資料館の注記（役の外）\ngpt-4-0314: gpt-4-0314の料金は記録では確認できません。モデルの出典から提供元の資料を確認してください。 公開日: 2023-03-14。\n\n出典\n- [出典 1](https://arxiv.org/abs/2303.08774)\n- [出典 2](https://ar5iv.labs.arxiv.org/html/2303.08774)\n- [出典 3](https://arxiv.org/html/2303.08774v6)\n- [出典 4](https://cdn.openai.com/papers/gpt-4-system-card.pdf)\n- [出典 5](https://openai.com/en-GB/index/gpt-4/)",
       "kind": "model_lookup",
-      "facts": []
+      "facts": [
+        {
+          "key": "release",
+          "id": "model:gpt-4-0314:release",
+          "value": "2023-03-14",
+          "text": "2023-03-14",
+          "sources": [
+            "https://arxiv.org/abs/2303.08774",
+            "https://ar5iv.labs.arxiv.org/html/2303.08774",
+            "https://arxiv.org/html/2303.08774v6",
+            "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
+            "https://openai.com/en-GB/index/gpt-4/",
+            "https://openai.com/index/function-calling-and-other-api-updates",
+            "https://developers.openai.com/api/docs/deprecations",
+            "https://developers.openai.com/api/docs/models/gpt-4?snapshot=gpt-4-0314",
+            "https://learn.microsoft.com/azure/ai-services/openai/concepts/model-retirements",
+            "https://ar5iv.labs.arxiv.org/html/2307.09009",
+            "https://arxiv.org/abs/2307.09009",
+            "https://lmsys.org/blog/2023-12-07-leaderboard",
+            "https://github.com/lm-sys/arena-hard-auto",
+            "https://arxiv.org/html/2404.04475v2",
+            "https://community.openai.com/t/chat-gpt4-less-smart-than-chat-gpt3-5/390715",
+            "https://the-decoder.com/openai-looks-into-complaints-about-lazy-chatgpt-with-gpt-4/",
+            "https://telnyx.com/llm-library/gpt-4-0314",
+            "https://aiengineerguide.com/tools/model-retirements/gpt-4-0314/",
+            "https://aider.chat/docs/benchmarks.html",
+            "https://hn.jakechampion.name/reader/https://platform.openai.com/docs/deprecations",
+            "https://generallyintelligent.substack.com/p/openais-api-problem",
+            "https://news.ycombinator.com/item?id=36134249",
+            "https://community.openai.com/t/gpt4-after-the-06-13-model-is-less-smart/283643",
+            "https://community.openai.com/t/gpt-4-0314-vs-1106-api-question/507450",
+            "https://fortune.com/2023/07/19/chatgpt-accuracy-stanford-study/",
+            "https://bdtechtalks.com/2023/07/24/chatgpt-capabilities-degrading-study/",
+            "https://www.vice.com/en/article/gpt4-hired-unwitting-taskrabbit-worker",
+            "https://knowyourmeme.com/memes/as-an-ai-language-model",
+            "https://community.openai.com/t/how-to-stop-models-returning-preachy-conclusions/593742",
+            "https://community.openai.com/t/removal-of-the-original-gpt-4-model/1123207",
+            "https://community.openai.com/t/is-there-any-way-to-access-the-earlier-smarter-version-of-chatgpt-4-e-g-pre-may-3-update-prior-to-nerf/227157"
+          ]
+        }
+      ]
     },
     {
-      "text": "ほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\no1-preview",
+      "text": "私の知識の時点は記録では確認できません。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\nほかのモデルの記録から10件を表示します。名前や条件を添えると絞り込めます。\n\nBard\n\nBing Chat (Sydney)\n\nClaude 2.0\n\nClaude 3 Opus\n\nClaude 3.5 Sonnet\n\nClaude Instant 1.2\n\ngpt-3.5-turbo-0301\n\ngpt-4-0314\n\nGPT-4o (ChatGPT)\n\no1-preview\n\n出典\n- [出典 1](https://blog.google/technology/ai/bard-google-ai-search-updates)\n- [出典 2](https://blog.google/technology/ai/try-bard/)\n- [出典 3](https://research.google/blog/google-research-at-io-2023/)\n- [出典 4](https://www.axios.com/2023/05/10/google-palm-2-ai-io-conference)\n- [出典 5](https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/)",
       "kind": "catalog_query",
       "facts": [
         {
@@ -7946,7 +8676,7 @@
       ]
     },
     {
-      "text": "比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]",
+      "text": "私の知識の時点は記録では確認できません。資料館にある記録は、役の外の注記で確認してください。\n\n資料館の注記（役の外）\n比較対象: gpt-3.5-turbo-0301 (OpenAI) vs gpt-4-0314 (OpenAI)\n\n公開日・状態・カットオフ: gpt-3.5-turbo-0301 [2023-03-01 / retired / cutoff 2021-09] vs gpt-4-0314 [2023-03-14 / retired / cutoff 2021-09]\n\n文脈長・出力上限: gpt-3.5-turbo-0301 [context 4,096 / output 2,048] vs gpt-4-0314 [context 8,192 / output 8,192]\n\n料金: gpt-3.5-turbo-0301 [未記録] vs gpt-4-0314 [未記録]\n\n入力モダリティ: gpt-3.5-turbo-0301 [未確認] vs gpt-4-0314 [未確認]\n\n推論・ツール: gpt-3.5-turbo-0301 [推論: 未確認, tools: 未確認] vs gpt-4-0314 [推論: 未確認, tools: 未確認]\n\n重み公開・提供数: gpt-3.5-turbo-0301 [クローズド, providers 0件] vs gpt-4-0314 [クローズド, providers 0件]\n\n系統・系譜: gpt-3.5-turbo-0301 [gpt-3.5-turbo-0301 <- GPT-3.5 series (RLHF-tuned ChatGPT model, Nov 2022)] vs gpt-4-0314 [gpt-4-0314]\n\n記録された特性: gpt-3.5-turbo-0301 [システムメッセージへの注意が弱く、ユーザーの発言や例のほうを優先する。最初のターン以降は特にシステム指示を忘れやすく、ユーザーが簡単に上書きできる。OpenAI自身のガイドも、0301はシステムメッセージに必ずしも強く注意を払わないと認めていた。] / gpt-4-0314 [学習データの大半は2021年9月までのもので、それ以降の出来事は知りません。]\n\n出典\n- [出典 1](https://mail.automationinside.com/article/introducing-chatgpt-and-whisper-apis)\n- [出典 2](https://openai.com/index/introducing-chatgpt-and-whisper-apis/)\n- [出典 3](https://community.openai.com/t/the-role-of-system-prompts/149342/5)\n- [出典 4](https://community.openai.com/t/the-system-role-how-it-influences-the-chat-behavior/87353?page=3)\n- [出典 5](https://bittide.aicompass.dev/article/112a09e9-0941-4a13-8af8-51b45d218aeb)",
       "kind": "compare",
       "facts": [
         {

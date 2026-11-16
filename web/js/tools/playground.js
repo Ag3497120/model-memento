@@ -155,7 +155,7 @@ const specSources = {
   "openai-playground-2026-06": ["https://help.openai.com/en/articles/9824968-prompt-management-in-playground","https://developers.openai.com/api/docs/changelog","https://platform.openai.com/playground"], // spec: openai-playground-2026-06 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/openai-playground.json: mark the shared completion editor as well as chat inputs.
   for (const input of surface.querySelectorAll('.composer textarea, .d1-completion-editor')) input.setAttribute('data-era-input', '');
@@ -174,5 +174,23 @@ export function render(ctx) {
       if (label.textContent === 'You') label.textContent = tr('あなた', 'You');
     }
   }).observe(log, { childList: true });
+  return surface;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

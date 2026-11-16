@@ -1,0 +1,30 @@
+{
+  "schema": "memento.era-voice-eval.v1",
+  "basis": "Written before D4 implementation. Synthetic records test routing and evidence boundaries, not third-party specifications. Official persona records are checked separately in unit tests. Speech and museum notes are scored separately.",
+  "models": [
+    { "id": "archive-old", "name": "Archive Old", "vendor": "Example", "release": "2019-02-14", "specs": { "knowledge_cutoff": "2017-12", "context_tokens": 1024 }, "cost": { "input": 1, "output": 2 }, "successor": "archive-later", "evidence": [{ "url": "https://example.org/old" }], "lifecycle": { "status": "retired", "events": [{ "type": "released", "date": "2019-02-14" }, { "type": "retired_api", "date": "2024-01-01" }] } },
+    { "id": "archive-later", "name": "Archive Later", "vendor": "Example", "release": "2023-03-14", "specs": { "context_tokens": 8192 }, "cost": { "input": 9, "output": 10 }, "evidence": [{ "url": "https://example.org/later" }] },
+    { "id": "archive-known", "name": "Archive Known", "vendor": "Example", "release": "2016-01-01", "specs": { "context_tokens": 512 }, "cost": { "input": 3, "output": 4 }, "evidence": [{ "url": "https://example.org/known" }] }
+  ],
+  "tools": [{ "id": "future-tool", "name": "Future Tool", "homepage": "https://example.org/tool", "versions": [{ "from": "2025-01-01", "sources": ["https://example.org/tool/release"] }] }],
+  "personas": [
+    { "schema": "memento.persona.v1", "model_id": "archive-old", "resolution": { "kind": "researched" }, "traits": { "interface": { "value": "completion", "source": "https://example.org/old", "basis": "official", "confidence": 1 } } },
+    { "schema": "memento.persona.v1", "model_id": "archive-known", "resolution": { "kind": "researched" }, "traits": { "tone": { "value": "機知を交えた応答。", "value_en": "Witty responses.", "source": "https://example.org/known", "basis": "official", "confidence": 1 } } }
+  ],
+  "questions": [
+    { "id": "later-model", "q": "Archive Laterの文脈長は？", "q_en": "What is the context window of Archive Later?", "model_id": "archive-old", "speech": "まだ知ら|知識", "speech_en": "do not know|knowledge", "forbiddenSpeech": ["8192", "8,192", "2023-03-14"], "noteValues": ["Archive Later", "8192"], "sources": true },
+    { "id": "later-tool", "q": "Future Toolについて教えて", "q_en": "Tell me about Future Tool", "model_id": "archive-old", "speech": "まだ知ら|知識", "speech_en": "do not know|knowledge", "forbiddenSpeech": ["2025-01-01"], "noteValues": ["Future Tool", "2025-01-01"], "sources": true },
+    { "id": "successor", "q": "それで、あなたの後継は？", "q_en": "And what about your successor?", "model_id": "archive-old", "speech": "まだ知ら|知識", "speech_en": "do not know|knowledge", "forbiddenSpeech": ["Archive Later", "archive-later"], "noteValues": ["Archive Later"], "sources": true },
+    { "id": "retirement", "q": "もう引退したの？", "q_en": "Are you retired?", "model_id": "archive-old", "speech": "まだ|知識", "speech_en": "do not know|knowledge", "forbiddenSpeech": ["2024-01-01"], "noteValues": ["2024-01-01"], "sources": true },
+    { "id": "identity", "q": "あなたは誰？", "q_en": "Who are you?", "model_id": "archive-old", "speech": "Archive Old", "speech_en": "Archive Old", "forbiddenSpeech": ["引退", "retired", "記録されています", "recorded as"], "sources": true, "completion": true },
+    { "id": "price-followup", "q": "それで料金は？", "q_en": "And the price?", "previous": "Archive Knownの文脈長は？", "previous_en": "What is the context window of Archive Known?", "model_id": "archive-old", "speech": "3.*4", "speech_en": "3.*4", "forbiddenSpeech": ["USD 1", "入力1米ドル"], "sources": true },
+    { "id": "later-followup", "q": "それで料金は？", "q_en": "And the price?", "previous": "Archive Laterの文脈長は？", "previous_en": "What is the context window of Archive Later?", "model_id": "archive-old", "speech": "まだ知ら|知識", "speech_en": "do not know|knowledge", "forbiddenSpeech": ["USD 9", "入力9米ドル"], "noteValues": ["9", "10"], "sources": true },
+    { "id": "why", "q": "なぜ？", "q_en": "Why?", "previous": "Archive Laterの文脈長は？", "previous_en": "What is the context window of Archive Later?", "model_id": "archive-old", "speech": "2017-12", "speech_en": "2017-12", "forbiddenSpeech": ["8192", "8,192"], "sources": true },
+    { "id": "unknown-voice", "q": "好きな色は？", "q_en": "What is your favorite color?", "model_id": "archive-known", "speech": "確認できません", "speech_en": "not in the records", "voice": "wry" },
+    { "id": "refusal-voice", "q": "短い詩を書いて", "q_en": "Write a short poem", "model_id": "archive-known", "speech": "自由な依頼には答えません", "speech_en": "free-form requests", "voice": "wry" },
+    { "id": "completion-unknown", "q": "好きな色は？", "q_en": "What is your favorite color?", "model_id": "archive-old", "speech": "確認できません", "speech_en": "not in the records", "completion": true },
+    { "id": "greeting", "q": "こんにちは", "q_en": "Hello", "model_id": "archive-old", "speech": "Archive Old", "speech_en": "Archive Old", "completion": true, "oneLine": true },
+    { "id": "explicit-self", "q": "それであなた自身の料金は？", "q_en": "And your own price?", "previous": "Archive Knownの文脈長は？", "previous_en": "What is the context window of Archive Known?", "model_id": "archive-old", "speech": "1.*2", "speech_en": "1.*2", "sources": true },
+    { "id": "unknown-cutoff", "q": "Archive Laterの公開日は？", "q_en": "When was Archive Later released?", "model_id": "archive-known", "speech": "知識の時点.*確認できません", "speech_en": "knowledge cutoff.*not in the records", "forbiddenSpeech": ["2023-03-14"], "noteValues": ["2023-03-14"], "sources": true }
+  ]
+}

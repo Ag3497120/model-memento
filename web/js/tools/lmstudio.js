@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -86,7 +87,7 @@ function chat(ctx, title, subtitle = '') {
   return el('main', { class: 'chat-main' }, S.thread(ctx, title, subtitle), input);
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.from;
   const mobile = ym === '2026-06';
@@ -215,4 +216,9 @@ function decorateMessages(root, ctx, v) {
   observer.observe(root, { childList: true, subtree: true });
   update();
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'lmstudio');
 }

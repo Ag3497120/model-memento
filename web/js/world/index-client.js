@@ -132,6 +132,7 @@ export function createWorldIndexClient({
   }
 
   async function loadManifest({ signal, refresh = false } = {}) {
+    checkAbort(signal);
     if (refresh) { manifestPromise = undefined; notablePromise = undefined; memory.clear(); }
     if (!manifestPromise) {
       manifestPromise = (async () => {
@@ -147,7 +148,6 @@ export function createWorldIndexClient({
         return data;
       })().catch(error => { manifestPromise = undefined; throw error; });
     }
-    checkAbort(signal);
     return manifestPromise;
   }
 

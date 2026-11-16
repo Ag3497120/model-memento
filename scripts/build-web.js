@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { metadataManifest, readDesignSources } from './capture-historical-screens.js';
 import { createEraIndex } from '../web/js/era/data.js';
+import { buildModuleVersion } from './check-module-version.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const home = process.env.MODEL_MEMENTO_HOME || path.join(os.homedir(), '.model-memento');
@@ -12,7 +13,8 @@ const out = path.join(root, 'web/data');
 const sourcesOnly = process.argv.includes('--sources-only') || process.env.MODEL_MEMENTO_SOURCES_ONLY === '1';
 const offline = process.argv.includes('--offline') || sourcesOnly;
 const read = async (p, fallback = null) => {
-  try { return JSON.parse(await fs.readFile(p, 'utf8')); } catch { return fallback; }
+  try { return JSON.parse(await fs.readFile(p, 'utf8')); }
+  catch (error) { if (error.code === 'ENOENT') return fallback; throw error; }
 };
 // 公開物に手元のフォルダー名（ユーザー名を含む）を残さない。
 const localPrefixes = [...new Set([root, home, os.homedir()].filter(Boolean))].sort((a, b) => b.length - a.length);
@@ -72,27 +74,29 @@ if (sourcesOnly) {
     designSpecs: Object.keys(capturedManifest.designSources).length, imagesCopied: 0, networkRequests: 0 }, null, 2));
   process.exit(0);
 }
+const requiredInputs = [
+  'data/curated/harness.json', 'data/curated/designs.json', 'data/curated/models-base.json',
+  'data/curated/roster.json', 'data/curated/models-updates.json', 'data/curated/closed-fallback.json',
+  'data/curated/memories.json', 'data/curated/instructions.json', 'data/curated/relay.json',
+  'data/curated/i18n/catalog-en.json', 'data/curated/editions/chat.json',
+  'data/curated/editions/ide-cli.json', 'data/curated/editions/tools-2026-11.json',
+  ...['versions', 'fonts', 'harness-sources', 'registries', 'availability'].map(name => `data/curated/r3/${name}.json`),
+];
+for (const input of requiredInputs) await fs.access(path.join(root, input));
 await fs.mkdir(path.join(root, 'web/lib'), { recursive: true });
 await fs.copyFile(path.join(root, 'lib/core.js'), path.join(root, 'web/lib/core.js'));
 const research = {};
 for (const name of ['versions', 'fonts', 'harness-sources', 'registries', 'availability']) {
-  research[name] = await read(path.join(root, `.work/r3/${name}.json`), await read(path.join(root, `data/curated/r3/${name}.json`), {}));
+  research[name] = await read(path.join(root, `data/curated/r3/${name}.json`), {});
 }
 const autoRegistries = await read(path.join(root, 'data/auto-sync/registries.json'), null);
 if (autoRegistries?.registries?.length) research.registries = autoRegistries;
 
-// 公開サイトはリポジトリのデータ（出典付きで監査したもの）を正とし、手元の ~/.model-memento は無いときの代わりにだけ使う
-const harness = await read(
-  path.join(root, 'data/curated/harness.json'),
-  await read(path.join(home, 'harness.json'), await read(path.join(root, 'site/data/harness.json'), { tools: [] }))
-);
+// Public builds use reviewed repository inputs, independent of the maintainer's archive.
+const harness = await read(path.join(root, 'data/curated/harness.json'));
+if (!Array.isArray(harness?.tools)) throw new TypeError('Missing committed harness input');
 const designs = new Map();
 for (const d of (await read(path.join(root, 'data/curated/designs.json'), { versions: [] })).versions || []) designs.set(d.id, d);
-for (const name of await fs.readdir(path.join(root, '.work/design-out')).catch(() => [])) {
-  if (!name.endsWith('.json')) continue;
-  const d = await read(path.join(root, '.work/design-out', name));
-  for (const v of d?.versions || []) designs.set(v.id, v);
-}
 const versions = new Map((research.versions.versions || []).map(v => [v.id, v]));
 const fonts = new Map((research.fonts.versions || []).map(v => [v.id, v]));
 const sources = new Map((research['harness-sources'].versions || []).map(v => [v.id, v]));
@@ -175,16 +179,15 @@ addTool('cherry-studio', 'Cherry Studio', 'desktop', [{
 }]);
 const cursor = tools.find(t => t.id === 'cursor');
 if (cursor && !cursor.versions.some(v => v.id.includes('2026'))) cursor.versions.push({ id: 'cursor-2026-11', from: '2026-11-06', surface: 'ide', platform: 'macos', name: 'Cursor', label: 'Cursor · 2026', available: [], sources: ['https://cursor.com/changelog'], features: ['Voice chat', 'Agents Window', 'IDE'], design: { distinctive: ['エージェントの音声会話。Agents Window と IDE。'], surface_note: '2026-11-06 changelogに基づく。細部の配置は近似。', models_available: [] }, harness: {}, fonts: {} });
-const editionPairs = [
-  ['.work/editions-chat.json', 'data/curated/editions/chat.json'],
-  ['.work/editions-ide-cli.json', 'data/curated/editions/ide-cli.json'],
-  ['.work/tools-2026-11.json', 'data/curated/editions/tools-2026-11.json'],
-  ['data/auto-sync/editions.json', null],
+const editionPaths = [
+  'data/curated/editions/chat.json',
+  'data/curated/editions/ide-cli.json',
+  'data/curated/editions/tools-2026-11.json',
+  'data/auto-sync/editions.json',
 ];
-for (const [primaryPath, fallbackPath] of editionPairs) {
-  let editionData = await read(path.join(root, primaryPath), null);
-  if (!editionData && fallbackPath) editionData = await read(path.join(root, fallbackPath), null);
-  const isAutoSyncSource = primaryPath === 'data/auto-sync/editions.json';
+for (const editionPath of editionPaths) {
+  const editionData = await read(path.join(root, editionPath), null);
+  const isAutoSyncSource = editionPath === 'data/auto-sync/editions.json';
   for (const [toolId, extraVersions] of Object.entries(editionData?.editions || {})) {
     const tool = tools.find(t => t.id === toolId);
     if (!tool || !Array.isArray(extraVersions)) continue;
@@ -215,6 +218,9 @@ for (const macToolId of ['claude-desktop', 'lm-studio', 'cursor', 'windsurf']) {
 }
 // R5 owns this directory. Read a complete index if available and never write to it.
 const index = await read(path.join(out, 'tools/index.json'));
+if (!Array.isArray(index?.tools) || !index.tools.length || index.count !== index.tools.length) {
+  throw new TypeError('Missing or incomplete committed web/data/tools/index.json');
+}
 let externalCount = 0;
 const detailShards = new Map();
 const layoutSnapshots = new Map();
@@ -333,15 +339,20 @@ function buildMilestoneVersions(id, name, archetype, created, pushed, repo, deta
 }
 
 for (const row of index?.tools || []) {
-  if (!Array.isArray(row) || !row[0] || !row[1]) continue;
+  if (!Array.isArray(row) || !row[0] || !row[1]) throw new TypeError('Invalid committed R5 tool row');
   const [id, name, repo, archetype, category, license, stars, created, pushed, lang, description, tier] = row;
   const existing = tools.find(t => t.id === id || t.id === coreRepos[(repo || '').toLowerCase()]);
   if (existing) { Object.assign(existing, { repo, license, description }); continue; }
   const detailPath = `data/tools/detail/${id.slice(0, 2)}.json`;
   const specPath = `data/tools/specs/${id}.json`;
-  if (!detailShards.has(detailPath)) detailShards.set(detailPath, await read(path.join(root, 'web', detailPath), {}));
+  if (!detailShards.has(detailPath)) {
+    const shard = await read(path.join(root, 'web', detailPath));
+    if (!shard) throw new TypeError(`Missing committed R5 detail shard: ${detailPath}`);
+    detailShards.set(detailPath, shard);
+  }
   const detail = detailShards.get(detailPath)[id];
   const spec = tier === 'B' ? await read(path.join(root, 'web', specPath)) : null;
+  if (tier === 'B' && !spec?.layout) throw new TypeError(`Missing committed R5 layout: ${specPath}`);
   if (spec?.layout) layoutSnapshots.set(id, spec);
   const effectiveTier = spec?.layout ? 'B' : 'C';
   tools.push({ id, name, repo, archetype, category, license, stars, created, pushed, lang, description,
@@ -370,22 +381,15 @@ for (const [sourcePath, shard] of detailShards) await fs.writeFile(path.join(out
 for (const [id, spec] of layoutSnapshots) await fs.writeFile(path.join(out, 'layouts', `${id}.json`), JSON.stringify(spec));
 // Profiles are resolved without importing server.js or writing to the user's archive.
 const { resolveVeraProfile } = await import('../web/lib/vera.js');
-const archived = await read(path.join(root, 'site/data/models.json'), await read(path.join(root, 'data/curated/models-base.json'), []));
-const profiles = [];
-for (const f of await fs.readdir(path.join(home, 'profiles')).catch(() => [])) {
-  if (!f.endsWith('.json')) continue;
-  const p = await read(path.join(home, 'profiles', f));
-  if (p?.id) profiles.push(p);
-}
-const roster = (await read(path.join(home, 'roster.json'), await read(path.join(root, 'data/curated/roster.json'), { models: [] }))).models || [];
+const archived = await read(path.join(root, 'data/curated/models-base.json'), []);
+const roster = (await read(path.join(root, 'data/curated/roster.json'), { models: [] })).models || [];
 const merged = new Map(archived.map(m => [m.id, m]));
-for (const p of profiles) merged.set(p.id, p);
 for (const r of roster) {
   const previous = merged.get(r.id);
   if (previous) { previous.release = r.released; previous.roster = r; continue; }
   merged.set(r.id, { ...r, release: r.released, roster: r, specs: { interface: r.interface, knowledge_cutoff: r.knowledge_cutoff }, traits: [], evidence: [], lifecycle: { events: r.released ? [{ date: r.released, type: 'released', label: r.name }] : [] } });
 }
-const modelUpdates2026 = await read(path.join(root, '.work/models-2026-11.json'), await read(path.join(root, 'data/curated/models-updates.json'), {}));
+const modelUpdates2026 = await read(path.join(root, 'data/curated/models-updates.json'), {});
 for (const [id, patch] of Object.entries(modelUpdates2026.curated_updates || {})) {
   const cur = merged.get(id);
   if (!cur) continue;
@@ -408,8 +412,7 @@ const models = raw.map(m => ({ ...resolveVeraProfile(m, { knownModels: raw }), r
 // Use closedCatalog with an isolated cache so all build writes stay in allowed paths.
 const isolated = offline ? null : await fs.mkdtemp(path.join(os.tmpdir(), 'memento-web-'));
 let closed, catalogFallback = false;
-const cachedModelsDev = (process.env.MODELSDEV_CACHE_FILE ? await read(process.env.MODELSDEV_CACHE_FILE) : null)
-  || await read(path.join(home, 'cache/modelsdev.json'));
+const cachedModelsDev = !offline && process.env.MODELSDEV_CACHE_FILE ? await read(process.env.MODELSDEV_CACHE_FILE) : null;
 try {
   if (offline) throw new Error('offline build: using saved closed catalog');
   await fs.mkdir(path.join(isolated, 'cache'), { recursive: true });
@@ -418,7 +421,7 @@ try {
   const { closedCatalog } = await import('../lib/catalog.js');
   closed = await closedCatalog();
 } catch (error) {
-  closed = await read(path.join(root, 'site/data/closed.json'), await read(path.join(root, 'data/curated/closed-fallback.json'), []));
+  closed = await read(path.join(root, 'data/curated/closed-fallback.json'), []);
   catalogFallback = true;
   console.warn('closedCatalog fallback:', error.message);
 } finally { if (isolated) await fs.rm(isolated, { recursive: true, force: true }); }
@@ -581,10 +584,18 @@ await write('catalog', { tools, sourceTools: (index?.tools || []).map(row => ({ 
 }
 await write('research', research);
 await write('counts', { at: research.registries.researched_at || at.slice(0, 10), registries: counts });
-await write('memories', await read(path.join(home, 'memories.json'), await read(path.join(root, 'data/curated/memories.json'), [])));
-await write('instructions', await read(path.join(home, 'harness-files.json'), await read(path.join(root, 'data/curated/instructions.json'), {})));
+await write('memories', await read(path.join(root, 'data/curated/memories.json'), []));
+await write('instructions', await read(path.join(root, 'data/curated/instructions.json'), {}));
 const manifest = { at, models: models.length, closed: closed.length, tools: tools.length, versions: tools.reduce((n, t) => n + t.versions.length, 0), tiers: Object.fromEntries(['A', 'B', 'C'].map(tier => [tier, tools.filter(t => t.tier === tier).length])), sourceRecords: capturedManifest.totalSources, vcrossVerified: Boolean(vcrossStatus?.ok), catalogFallback, externalCount, sourceTools: index?.count || 0, warnings: ['出典のURLと記録日時を掲載しています。現在の内容と過去の画面の細部は未確認です。', '非公式の再現です。配置は近似し、書体はシステム書体で代替しています。', ...(!index ? ['R5 index absent, archive fallback active'] : [])] };
 await write('manifest', manifest);
+// entrance: one payload is sufficient for all three exhibits before background loading.
+{
+  const { createFeaturedPayload } = await import('../web/js/entrance/featured.js');
+  const featured = createFeaturedPayload({ tools, models, closed, era: eraIndex, manifest });
+  await write('featured', featured);
+  console.log('featured:', JSON.stringify({ bytes: Buffer.byteLength(scrub(JSON.stringify(featured))),
+    tools: featured.catalog.tools.length, models: featured.models.length + featured.closed.length, editions: Object.keys(featured.era).length }));
+}
 await (await import('../lib/contrib/build.js')).buildPublicAppData({ root, out });
 // 中継の URL（未設定なら null で、ブラウザは中継を使わない）
 await write('relay', { url: process.env.MODEL_MEMENTO_RELAY_URL || (await read(path.join(root, 'data/curated/relay.json'), {})).url || null });
@@ -599,4 +610,5 @@ await write('relay', { url: process.env.MODEL_MEMENTO_RELAY_URL || (await read(p
   if (result && typeof result === 'object') console.log('persona-cards:', JSON.stringify(result).slice(0, 200));
 }
 await fs.writeFile(path.join(root, 'web/.nojekyll'), '');
+console.log('modules:', JSON.stringify(await buildModuleVersion({ web: path.join(root, 'web') })));
 console.log(JSON.stringify(manifest, null, 2));

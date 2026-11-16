@@ -1,6 +1,5 @@
-/* All palette values, measured sizes and radii are null in D1's specs.
-   Existing theme colors and base sizes are inherited. Relative spacing below
-   supports the specified region relationships; it is not a historical measurement. */
+/* D1 region rules inherit the host theme. The D2 section at the end supplies
+   explicitly approximate visual tokens; it does not fill unverified spec measurements. */
 
 /* spec: chatgpt-2024-10 regions; claude.ai-2024-06 regions; google-bard-gemini-2025-03 regions */
 .surface.d1 [hidden] { display: none !important; }
@@ -154,4 +153,270 @@
   .surface.d1 .d1-work-panel { flex-basis: 100%; }
   .surface.d1 .native-header { flex-wrap: wrap; }
   .surface.d1 .composer { margin-inline: .5em; }
+}
+
+/* D2 fidelity pass. See design/fidelity-d2.md for evidence and uncertainty.
+   Numbers below are reconstruction choices, not asserted historical measurements. */
+.surface.fidelity-d2 { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+.surface.fidelity-d2 .d2-recreation { font: 10px/1.5 system-ui, sans-serif; letter-spacing: normal; opacity: .65; white-space: nowrap; }
+.surface.fidelity-d2 :is(.d1-sources, .d2-sources) { font: 10px/1.5 system-ui, sans-serif; color: var(--muted); padding: 0; }
+.surface.fidelity-d2 :is(.d1-sources, .d2-sources) > summary { cursor: pointer; padding: 3px 0; }
+.surface.fidelity-d2 :is(.d1-sources, .d2-sources)[open] { max-height: 170px; overflow: auto; }
+.surface.fidelity-d2 .d2-fidelity-note { font: 11px/1.5 system-ui, sans-serif; margin: 8px 0; }
+.surface.fidelity-d2 .native-footnote { display: flex; justify-content: center; align-items: baseline; gap: 12px; padding: 6px 16px; margin: 0; flex: none; }
+.surface.fidelity-d2 .native-footnote:has(details[open]) { display: block; text-align: start; }
+.surface.fidelity-d2 :is(button, summary, select) { transition: background-color .12s ease, border-color .12s ease; }
+.surface.fidelity-d2 :is(button, summary, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.surface.fidelity-d2 .composer:focus-within { border-color: var(--muted); }
+.surface.fidelity-d2 .composer textarea:focus { outline: none; }
+.surface.fidelity-d2 :is(.d2-turn-actions, .d1-answer-actions) { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; margin-top: 12px; color: var(--muted); font: 12px/1.3 system-ui, sans-serif; }
+.surface.fidelity-d2 .d2-turn-actions button { min-width: 30px; min-height: 30px; padding: 5px; border: 0; border-radius: 6px; background: transparent; font-size: 14px; filter: grayscale(1); }
+.surface.fidelity-d2 .d2-turn-actions button[aria-pressed='true'] { background: var(--panel); color: var(--text); }
+.surface.fidelity-d2 .message.user .d2-turn-actions { opacity: 0; }
+.surface.fidelity-d2 .message.user:is(:hover, :focus-within) .d2-turn-actions { opacity: 1; }
+.surface.fidelity-d2 .message:is(.is-thinking, .is-streaming) .d2-turn-actions { display: none; }
+/* Neutral text and a generic progress dot preserve streaming without an emblem. */
+.surface.fidelity-d2 .fx-emblem,
+.surface.fidelity-d2 .fx-claude-tail { display: none !important; }
+.surface.fidelity-d2 .stream-fx-head { min-height: 18px; margin-bottom: 8px; gap: 7px; font: 12px/1.4 system-ui, sans-serif; color: var(--muted); }
+.surface.fidelity-d2 .stream-fx-head[data-fx-state='complete'] { display: none; }
+.surface.fidelity-d2 .stream-fx-head:is([data-fx-state='thinking'], [data-fx-state='streaming'])::before { content: ''; width: 6px; height: 6px; background: currentColor; border-radius: 50%; flex: none; animation: d2-working 1.2s ease-in-out infinite; }
+@keyframes d2-working { 50% { opacity: .25; } }
+
+/* ChatGPT: dark turn bands in the early editions, open white page thereafter. */
+.surface.chatgpt.fidelity-d2 { --bg: #fff !important; --panel: #f4f4f4 !important; --text: #171717 !important; --muted: #676767 !important; --border: #e5e5e5 !important; --accent: #212121 !important; background: var(--bg); color: var(--text); color-scheme: light; }
+.surface.chatgpt.fidelity-d2.classic { --bg: #343541 !important; --panel: #444654 !important; --text: #ececf1 !important; --muted: #b5b6c2 !important; --border: #565869 !important; --accent: #8e8ea0 !important; color-scheme: dark; }
+.surface.chatgpt.fidelity-d2 .native-sidebar { width: 252px; flex: 0 0 252px; padding: 16px 12px; background: #f9f9f9; border: 0; gap: 16px; font-size: 14px; }
+.surface.chatgpt.fidelity-d2.classic .native-sidebar { background: #202123; }
+.surface.chatgpt.fidelity-d2 .native-sidebar button { text-align: start; padding: 10px 12px; border: 0; border-radius: 8px; }
+.surface.chatgpt.fidelity-d2.classic .native-sidebar > button { border: 1px solid #565869; border-radius: 5px; }
+.surface.chatgpt.fidelity-d2 .native-sidebar nav { display: flex; flex-direction: column; gap: 4px; }
+.surface.chatgpt.fidelity-d2 .sidebar-title { font: 14px/1.4 system-ui, sans-serif; padding-inline: 12px; }
+.surface.chatgpt.fidelity-d2 .native-header { min-height: 58px; border: 0; padding: 10px 20px; gap: 12px; }
+.surface.chatgpt.fidelity-d2 .native-header > strong { font-size: 18px; font-weight: 500; }
+.surface.chatgpt.fidelity-d2 .native-header > button { order: 10; margin-inline-start: auto; font-size: 12px; border: 0; }
+.surface.chatgpt.fidelity-d2 .chat-main { padding: 0; gap: 0; }
+.surface.chatgpt.fidelity-d2 .thread { width: 100%; padding: 24px max(24px, calc((100% - 768px) / 2)); gap: 28px; }
+.surface.chatgpt.fidelity-d2 .empty-state { min-height: 120px; padding: 20px 0; }
+.surface.chatgpt.fidelity-d2 .empty-state h1 { font: 500 30px/1.3 system-ui, sans-serif; letter-spacing: -.6px; color: inherit; }
+.surface.chatgpt.fidelity-d2 .composer { width: calc(100% - 48px); max-width: 768px; margin: 12px auto 0; min-height: 56px; border: 1px solid var(--border); background: var(--panel); gap: 10px; box-shadow: none; }
+.surface.chatgpt.fidelity-d2 .composer textarea { font: 16px/1.6 system-ui, sans-serif; padding: 6px 0; }
+.surface.chatgpt.fidelity-d2 .composer .send { width: 32px; min-width: 32px; height: 32px; padding: 0; border-radius: 50%; background: #212121; color: #fff; border: 0; font-size: 22px; }
+.surface.chatgpt.fidelity-d2 .message { max-width: 100%; padding: 0; margin: 0; border: 0; background: transparent; font-size: 16px; line-height: 1.75; }
+.surface.chatgpt.fidelity-d2:not(.classic) .message.user { width: fit-content; align-self: flex-end; max-width: 80%; background: #f4f4f4; border-radius: 22px; padding: 10px 18px; }
+.surface.chatgpt.fidelity-d2 .message-label::before { content: none !important; }
+.surface.chatgpt.fidelity-d2:not(.classic) .message-label { display: none; }
+.surface.chatgpt.fidelity-d2.classic .thread { padding: 0; gap: 0; }
+.surface.chatgpt.fidelity-d2.classic .empty-state { padding: 30px; }
+.surface.chatgpt.fidelity-d2.classic .composer { border-radius: 6px !important; background: #40414f; box-shadow: 0 0 15px #0002; }
+.surface.chatgpt.fidelity-d2.classic .composer .send { border-radius: 4px; background: transparent; color: #b5b6c2; }
+.surface.chatgpt.fidelity-d2.classic .message-label { font-weight: 600; font-size: 12px; margin-bottom: 10px; }
+.surface.chatgpt.fidelity-d2 .chatgpt-2022-cols { max-width: 768px; width: calc(100% - 48px); margin: 20px auto; gap: 14px; order: 1; }
+.surface.chatgpt.fidelity-d2 .chatgpt-2022-cols .telemetry-card { border: 0; background: transparent; padding: 0; text-align: center; }
+.surface.chatgpt.fidelity-d2 .chatgpt-2022-cols h4 { font-size: 17px; font-weight: 500; }
+.surface.chatgpt.fidelity-d2 .chatgpt-2022-cols :is(button, p) { display: block; background: #3e3f4b; border: 0; border-radius: 6px; padding: 12px; font-size: 13px; line-height: 1.6; margin: 10px 0; width: 100%; }
+.surface.chatgpt.fidelity-d2.first-chatgpt .chat-main > .thread { order: 0; }
+.surface.chatgpt.fidelity-d2.first-chatgpt .chat-main > .composer { order: 2; }
+.surface.chatgpt.fidelity-d2.first-chatgpt .chat-main > footer { order: 3; }
+.surface.chatgpt.fidelity-d2:has(.message) .chatgpt-2022-cols { display: none; }
+.surface.chatgpt.fidelity-d2.chatgpt-macos .chat-main { background: var(--bg); }
+.surface.chatgpt.fidelity-d2.chatgpt-macos .macos-spotlight-card { background: #fff; border: 1px solid #ddd; box-shadow: 0 18px 60px #0002; border-radius: 16px; }
+
+/* Claude web and desktop: warm paper, quiet rail, serif conversation content. */
+.surface.claude.fidelity-d2:not(.terminal) { --bg: #faf9f5 !important; --panel: #f0eee6 !important; --text: #30302e !important; --muted: #73726c !important; --border: #d9d7ce !important; --accent: #b85c3d !important; background: var(--bg); color: var(--text); color-scheme: light; }
+.surface.claude.fidelity-d2:not(.terminal) :is(.native-sidebar, .macos-vibrancy-sidebar) { width: 228px; flex: 0 0 228px; padding: 18px 12px; border: 0; background: #f0eee6; font: 13px/1.5 system-ui, sans-serif; }
+.surface.claude.fidelity-d2 .sidebar-title { font: 14px/1.5 system-ui, sans-serif; padding: 6px 10px; }
+.surface.claude.fidelity-d2 :is(.native-sidebar, .macos-vibrancy-sidebar) button { text-align: start; border: 0; border-radius: 6px; padding: 9px 10px; }
+.surface.claude.fidelity-d2 .native-header { min-height: 52px; padding: 8px 20px; border: 0; }
+.surface.claude.fidelity-d2 .native-header > strong { font: 14px/1.4 system-ui, sans-serif; font-weight: 400; }
+.surface.claude.fidelity-d2 .native-header > button { order: 10; margin-inline-start: auto; font-size: 12px; border: 0; }
+.surface.claude.fidelity-d2 .chat-main { background: var(--bg); padding: 0; }
+.surface.claude.fidelity-d2 .thread { padding: 24px max(24px, calc((100% - 704px) / 2)); width: 100%; gap: 24px; }
+.surface.claude.fidelity-d2 .empty-state h1 { font: 400 38px/1.25 ui-serif, 'Noto Serif', 'Liberation Serif', serif; letter-spacing: -.8px; color: #30302e; }
+.surface.claude.fidelity-d2 .message { max-width: 100%; font: 17px/1.75 ui-serif, 'Noto Serif', 'Liberation Serif', serif; padding: 0; margin: 0; border: 0; background: transparent; }
+.surface.claude.fidelity-d2 .message-label { font: 12px/1.5 system-ui, sans-serif; color: var(--muted); margin-bottom: 8px; }
+.surface.claude.fidelity-d2 .message.user { max-width: 90%; align-self: flex-end; padding: 12px 18px; border-radius: 10px !important; font: 15px/1.6 system-ui, sans-serif; }
+.surface.claude.fidelity-d2 .composer { width: calc(100% - 48px); max-width: 704px; margin: 8px auto 0; min-height: 96px; padding: 16px !important; border: 1px solid var(--border); border-radius: 16px !important; background: #fff; box-shadow: 0 3px 12px #30302e0a; align-items: flex-start; gap: 10px; }
+.surface.claude.fidelity-d2 .composer textarea { font: 15px/1.6 system-ui, sans-serif; flex: 1 1 70%; padding: 2px 0; }
+.surface.claude.fidelity-d2 .composer .send { background: #b85c3d; border: 0; color: #fff; width: 30px; min-width: 30px; height: 30px; border-radius: 7px; padding: 0; font-size: 20px; }
+.surface.claude.fidelity-d2 .d1-composer-controls { width: calc(100% - 48px); max-width: 704px; margin: 0 auto; padding: 4px 0; font-size: 12px; }
+.surface.claude.fidelity-d2 .claude-2023-hero { background: transparent; border: 0; margin: 16px auto 0; }
+.surface.claude.fidelity-d2 .claude-2023-hero .rights-l1-avatar { display: none; }
+.surface.claude.fidelity-d2 .macos-vibrancy-window { margin: 0; border: 0; box-shadow: none; border-radius: 0; background: var(--bg); }
+.surface.claude.fidelity-d2.desktop { padding: 0; }
+.surface.claude.fidelity-d2 .era-artifact-pane { background: #fff; border-color: var(--border); }
+.surface.claude.fidelity-d2 .era-artifact-head { background: #faf9f5; font: 13px/1.5 system-ui, sans-serif; padding: 12px 16px; }
+
+/* Claude Code terminal: transcript rather than cards, thin rules around the prompt. */
+.surface.claude-code.fidelity-d2.terminal { --bg: #191919 !important; --panel: #242424 !important; --text: #e8e6df !important; --muted: #a19e96 !important; --border: #55534e !important; --accent: #d4977c !important; color-scheme: dark; background: var(--bg); color: var(--text); font: 13px/1.6 ui-monospace, monospace; padding: 24px; }
+.surface.claude-code.fidelity-d2.terminal .terminal-main { padding: 0; gap: 12px; }
+.surface.claude-code.fidelity-d2.terminal .boot { color: var(--text); font: inherit; line-height: 1.5; background: transparent; border: 0; padding: 0; margin: 0 0 16px; max-height: none; }
+.surface.claude-code.fidelity-d2.terminal:not(.d1-cc-v1) .boot { border-inline-start: 1px solid #d4977c; padding: 8px 14px; }
+.surface.claude-code.fidelity-d2.terminal .thread { padding: 0; gap: 16px; }
+.surface.claude-code.fidelity-d2.terminal .message { font: inherit; border: 0; background: transparent; border-radius: 0; padding: 0; margin: 0; max-width: none; }
+.surface.claude-code.fidelity-d2.terminal .message-label { display: none; }
+.surface.claude-code.fidelity-d2.terminal .message.user .answer-text::before { content: '> '; color: var(--muted); }
+.surface.claude-code.fidelity-d2.terminal .message.assistant .answer-text::before { content: '● '; color: var(--text); }
+.surface.claude-code.fidelity-d2.terminal .message.tool { border-inline-start: 1px solid var(--border); padding-inline-start: 3ch; }
+.surface.claude-code.fidelity-d2.terminal .composer { border: 0; border-block: 1px solid var(--border); border-radius: 0; background: transparent; box-shadow: none; margin: 8px 0 0; padding: 10px 0; }
+.surface.claude-code.fidelity-d2.terminal .composer textarea { font: inherit; }
+.surface.claude-code.fidelity-d2.terminal .composer .send { font: inherit; border: 0; background: transparent; color: var(--muted); padding: 4px 8px; }
+.surface.claude-code.fidelity-d2.terminal .terminal-status { font: 11px/1.5 ui-monospace, monospace; border: 0; margin: 0; padding: 0; color: var(--muted); }
+.surface.claude-code.fidelity-d2.terminal .d2-terminal-guidance:empty { display: none; }
+
+/* Bard / Gemini: cool rail, generous page, round composer and flat responses. */
+.surface.gemini.fidelity-d2 { --bg: #fff !important; --panel: #f0f4f9 !important; --text: #1f1f1f !important; --muted: #5f6368 !important; --border: #dfe3e7 !important; --accent: #1a73e8 !important; background: var(--bg); color: var(--text); color-scheme: light; }
+.surface.gemini.fidelity-d2 > .native-header { padding: 12px 24px; min-height: 64px; border: 0; }
+.surface.gemini.fidelity-d2 .native-header > strong { font: 400 20px/1.5 system-ui, sans-serif; }
+.surface.gemini.fidelity-d2 .native-header > button { font-size: 12px; border: 0; }
+.surface.gemini.fidelity-d2 .native-sidebar { flex: 0 0 232px; width: 232px; background: #f0f4f9; padding: 24px 12px; border: 0; font-size: 13px; }
+.surface.gemini.fidelity-d2 .native-sidebar button { border: 0; text-align: start; padding: 10px 14px; border-radius: 22px; }
+.surface.gemini.fidelity-d2 .native-sidebar > button { background: #e2e7eb; margin-bottom: 32px; }
+.surface.gemini.fidelity-d2 .native-sidebar h4 { font-size: 12px; margin: 12px 14px; font-weight: 500; }
+.surface.gemini.fidelity-d2 .chat-main { padding: 0; background: var(--bg); }
+.surface.gemini.fidelity-d2 .thread { width: 100%; padding: 24px max(24px, calc((100% - 760px) / 2)); gap: 28px; }
+.surface.gemini.fidelity-d2 .empty-state { text-align: start; align-items: flex-start; padding: 24px 0; }
+.surface.gemini.fidelity-d2 .empty-state h1 { font: 500 42px/1.2 system-ui, sans-serif; color: #4a74d0; letter-spacing: -1px; }
+.surface.gemini.fidelity-d2 .empty-state p { font-size: 30px; line-height: 1.3; color: #9a9ca2; margin-top: 8px; }
+.surface.gemini.fidelity-d2 .composer { width: calc(100% - 48px); max-width: 760px; min-height: 64px; margin: 8px auto 0; padding: 12px 20px; border: 0; border-radius: 32px; box-shadow: none; background: #f0f4f9; gap: 14px; }
+.surface.gemini.fidelity-d2 .composer textarea { font: 16px/1.6 system-ui, sans-serif; padding: 6px 0; }
+.surface.gemini.fidelity-d2 .composer .send { border: 0; background: transparent; color: #1f1f1f; font-size: 24px; padding: 0; width: 32px; min-width: 32px; height: 32px; }
+.surface.gemini.fidelity-d2 .message { border: 0; background: transparent; padding: 0; max-width: 100%; font-size: 16px; line-height: 1.75; }
+.surface.gemini.fidelity-d2 .message.user { align-self: flex-end; width: fit-content; max-width: 82%; padding: 12px 20px; background: #f0f4f9; border-radius: 20px; }
+.surface.gemini.fidelity-d2 .message-label { font-size: 12px; color: var(--muted); }
+.surface.gemini.fidelity-d2 .d1-composer-controls { width: calc(100% - 48px); max-width: 760px; margin: 0 auto; font-size: 12px; padding: 4px 0; }
+.surface.gemini.fidelity-d2 .era-starter-grid { order: 1; max-width: 760px; width: calc(100% - 48px); margin: 0 auto 30px; gap: 12px; }
+.surface.gemini.fidelity-d2 .era-starter-card { min-height: 128px; background: #f0f4f9; border: 0; border-radius: 12px; padding: 16px; }
+.surface.gemini.fidelity-d2 .chat-main > .thread { order: 0; }
+.surface.gemini.fidelity-d2 .chat-main > :is(.d1-composer-controls, .composer) { order: 2; }
+.surface.gemini.fidelity-d2 .chat-main > footer { order: 3; }
+.surface.gemini.fidelity-d2:has(.message) .era-starter-grid { display: none; }
+.surface.gemini.fidelity-d2.bard-era .empty-state h1 { font-size: 28px; letter-spacing: -.3px; color: var(--text); }
+.surface.gemini.fidelity-d2.bard-era .message.user { background: transparent; align-self: flex-start; padding: 0; }
+.surface.gemini.fidelity-d2.bard-era .composer { border: 1px solid var(--border); border-radius: 24px; background: #fff; }
+.surface.gemini.fidelity-d2.bard-era .d1-answer-actions :is(button, summary) { font-size: 12px; border: 0; padding: 6px; }
+@media (max-width: 760px) {
+  .surface.chatgpt.fidelity-d2 .native-sidebar,
+  .surface.claude.fidelity-d2:not(.terminal) :is(.native-sidebar, .macos-vibrancy-sidebar),
+  .surface.gemini.fidelity-d2 .native-sidebar { display: none; }
+  .surface:is(.chatgpt, .claude, .gemini).fidelity-d2 .thread { padding-inline: 18px; }
+  .surface:is(.chatgpt, .claude, .gemini).fidelity-d2 .composer { width: calc(100% - 28px); }
+  .surface.claude.fidelity-d2 .empty-state h1 { font-size: 30px; }
+  .surface.gemini.fidelity-d2 .empty-state h1 { font-size: 34px; }
+  .surface.gemini.fidelity-d2 .empty-state p { font-size: 24px; }
+  .surface.fidelity-d2 .message.user .d2-turn-actions { opacity: 1; }
+  .surface.claude-code.fidelity-d2.terminal { padding: 16px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .surface.fidelity-d2 *, .surface.fidelity-d2 *::before, .surface.fidelity-d2 *::after { animation: none !important; transition: none !important; }
+}
+.surface.chatgpt.fidelity-d2 .message.user .d2-turn-actions button { font-size: 0; }
+.surface.chatgpt.fidelity-d2 .message.user .d2-turn-actions button::before { content: '✎'; font: 14px/1 system-ui, sans-serif; }
+.surface.fidelity-d2 .d3-sources { font: 10px/1.5 system-ui, sans-serif; color: var(--muted); }
+.surface.claude.fidelity-d2:not(.terminal) .message.user { border-radius: 10px !important; }
+/* The shared stream helper's generated token/speed/diff figures are not product evidence. */
+.surface.fidelity-d2:is(.chatgpt, .claude, .claude-code, .cursor, .codex, .codex-macos, .gemini) .stream-fx-foot { display: none !important; }
+.surface.fidelity-d2.terminal .stream-fx-head { font-family: ui-monospace, monospace; }
+
+/* H1 hero exhibits. Evidence, approximated measurements and date gaps:
+   design/hero-audit.md. These selectors affect only the five audited editions. */
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 {
+  --bg: #fff !important; --panel: #f7f7f8 !important; --text: #343541 !important;
+  --muted: #6e6e80 !important; --border: #d9d9e3 !important; --accent: #343541 !important;
+  color-scheme: light;
+}
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .native-sidebar {
+  width: 260px; flex-basis: 260px; padding: 8px; background: #202123; color: #ececf1;
+}
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .native-sidebar > button {
+  min-height: 46px; background: transparent; border-color: #565869; color: inherit; font-weight: 400;
+}
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .sidebar-bottom { display: grid; gap: 4px; border-top: 1px solid #565869; padding-top: 8px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .sidebar-bottom a { color: inherit; text-decoration: none; padding: 12px; font-size: 13px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .thread { display: block; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .empty-state { min-height: 100%; padding: 44px 24px 64px; justify-content: center; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .empty-state h1 { font: 600 36px/1.2 system-ui, sans-serif; letter-spacing: normal; margin: 0 0 64px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols { width: 100%; max-width: 768px; max-height: none; padding: 0; overflow: visible; margin: 0; gap: 16px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols section { gap: 0; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .hero-column-icon { font: 30px/1 system-ui, sans-serif; height: 36px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols h2 { font: 400 18px/1.5 system-ui, sans-serif; margin: 10px 0 14px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols :is(button, p) {
+  display: flex; align-items: center; justify-content: center; min-height: 64px; width: 100%; margin: 0 0 8px; padding: 12px;
+  border: 0; border-radius: 6px; background: #f7f7f8; color: #343541; font: 14px/1.45 system-ui, sans-serif;
+}
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols button:hover { background: #e9e9ed; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .composer { background: #fff; min-height: 48px; padding: 8px 12px; border-color: #d9d9e3; box-shadow: 0 0 10px #00000018; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .composer .send { color: #8e8ea0; font-size: 18px; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .hero-research-footer { order: 3; padding: 12px 18px 0; text-align: center; color: #6e6e80; font: 11px/1.5 system-ui, sans-serif; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .hero-research-footer a { color: inherit; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chat-main > .native-footnote { order: 4; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .message { position: relative; padding: 24px max(24px, calc((100% - 672px) / 2)); border-bottom: 1px solid #d9d9e3; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .message.assistant { background: #f7f7f8; }
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .message-label { display: block; font-size: 0; height: 0; margin: 0; }
+/* Neutral blank squares deliberately replace the original avatars. */
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .message .message-label::before {
+  content: '' !important; display: block; position: absolute; left: max(8px, calc((100% - 752px) / 2)); top: 25px;
+  width: 24px; height: 24px; border: 1px solid #b5b5bd; border-radius: 2px; background: #e7e7eb;
+}
+.surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .message .rights-l3-role { display: none; }
+
+/* July 2023 Claude had a purple action, sans-serif cards and a pill composer. */
+.surface.claude.fidelity-d2.hero-claude-2023 {
+  --bg: #efede7 !important; --panel: #dfdace !important; --text: #242320 !important;
+  --muted: #7d7973 !important; --border: #d8d5ce !important; --accent: #5546a2 !important;
+}
+.surface.claude.fidelity-d2.hero-claude-2023 .chat-main { overflow-y: auto; }
+.surface.claude.fidelity-d2.hero-claude-2023 .thread { flex: none; padding: 68px 24px 0; overflow: visible; }
+.surface.claude.fidelity-d2.hero-claude-2023 .empty-state { min-height: 0; padding: 0; }
+.surface.claude.fidelity-d2.hero-claude-2023 .empty-state h1 { font: 500 54px/1.2 system-ui, sans-serif; letter-spacing: normal; margin: 0 0 46px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .composer {
+  flex-wrap: nowrap; width: calc(100% - 48px); max-width: 760px; min-height: 68px; margin: 0 auto;
+  border-radius: 32px !important; padding: 10px 14px !important; align-items: center; box-shadow: 0 3px 15px #24232014;
+}
+.surface.claude.fidelity-d2.hero-claude-2023 .composer textarea { flex: 1 1 0; font: 16px/1.6 system-ui, sans-serif; }
+.surface.claude.fidelity-d2.hero-claude-2023 .composer textarea::placeholder { color: #a4a09a; opacity: 1; }
+.surface.claude.fidelity-d2.hero-claude-2023 .composer .send { width: auto; height: 44px; padding: 0 18px; border-radius: 24px; font: 15px/1.4 system-ui, sans-serif; white-space: nowrap; background: #5546a2; }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-attachment { width: 38px; height: 38px; min-width: 38px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 14px; background: #efede7; }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-paperclip { width: 11px; height: 20px; border: 1.5px solid #4f4b45; border-radius: 6px; transform: rotate(40deg); }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-paperclip::after { content: ''; display: block; width: 4px; height: 13px; margin: 1px auto; border: 1px solid #4f4b45; border-top: 0; border-radius: 0 0 4px 4px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-claude-suggestions { width: calc(100% - 48px); max-width: 760px; margin: 46px auto 40px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-claude-suggestions h2 { font: 400 20px/1.5 system-ui, sans-serif; margin: 0 0 22px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .hero-claude-suggestions button { display: block; width: 100%; text-align: left; border-radius: 32px; border: 1px solid #d3cfc5; background: #dfdace; color: #242320; padding: 17px 28px; margin-bottom: 8px; font: 16px/1.4 system-ui, sans-serif; box-shadow: 0 2px 8px #2423200a; }
+.surface.claude.fidelity-d2.hero-claude-2023 .native-footnote { margin-top: auto; }
+.surface.claude.fidelity-d2.hero-claude-2023:has(.message) .hero-claude-suggestions { display: none; }
+.surface.claude.fidelity-d2.hero-claude-2023:has(.message) .thread { flex: 1; padding: 30px max(24px, calc((100% - 704px) / 2)); overflow: auto; }
+.surface.claude.fidelity-d2.hero-claude-2023:has(.message) .composer { border-radius: 16px !important; }
+.surface.claude.fidelity-d2.hero-claude-2023:has(.message) .composer .send { border-radius: 12px; padding: 0; width: 36px; height: 36px; font-size: 20px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .message,
+.surface.claude.fidelity-d2.hero-claude-2023 .message.assistant .answer-text { font: 16px/1.6 system-ui, sans-serif; }
+.surface.claude.fidelity-d2.hero-claude-2023 .message.assistant { padding: 14px; border: 1px solid #e2dfd8; border-radius: 12px; background: #fff; box-shadow: 0 1px 2px #00000008; }
+.surface.claude.fidelity-d2.hero-claude-2023 .message.user { background: #dfdace; }
+.surface.claude.fidelity-d2.hero-claude-2023 .message-label { display: none; }
+.surface.claude.fidelity-d2.hero-claude-2023 .d2-turn-actions { margin-top: 12px; }
+.surface.claude.fidelity-d2.hero-claude-2023 .d2-turn-actions button { font: 12px/1.4 system-ui, sans-serif; }
+
+/* V1 terminal output flows from the top; the prompt follows the tips. */
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 { --accent: #d97757 !important; padding: 24px; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .terminal-main { flex: 1; overflow-y: auto; display: block; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .hero-code-welcome { display: block; width: max-content; max-width: 100%; min-height: 0; overflow-x: auto; padding: 0; margin: 0 0 20px; text-align: left; white-space: pre; color: #d97757; font: inherit; line-height: 1.5; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .hero-code-tips { padding-left: 1ch; color: #aaa79f; margin-bottom: 20px; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .hero-code-tips p { margin: 0 0 10px; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .hero-code-tips ol { padding-left: 3ch; margin: 0; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .thread { flex: none; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .thread .empty-state { display: none; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .composer { border: 1px solid #66645e; border-radius: 10px; padding: 8px 12px; margin: 12px 0 4px; flex-wrap: nowrap; align-items: center; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .composer .prompt-glyph { color: #e8e6df; font: inherit; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .composer .send { display: none; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .terminal-status { display: flex; justify-content: space-between; gap: 12px; padding: 0 1ch; }
+.surface.claude-code.fidelity-d2.terminal.hero-code-v1 .hero-model-context { font-size: 10px; opacity: .7; }
+
+/* Narrow layouts are museum accommodations; historical breakpoints unverified. */
+@media (max-width: 760px) {
+  .surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .empty-state { padding: 30px 16px; }
+  .surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .empty-state h1 { margin-bottom: 36px; }
+  .surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols { gap: 8px; }
+  .surface.chatgpt.fidelity-d2.hero-chatgpt-2022 .chatgpt-2022-cols :is(button, p) { padding: 9px; font-size: 12px; }
+  .surface.claude.fidelity-d2.hero-claude-2023 .empty-state h1 { font-size: 40px; }
+  .surface.claude.fidelity-d2.hero-claude-2023 .composer .send { font-size: 12px; padding: 0 12px; }
+  .surface.claude-code.fidelity-d2.terminal.hero-code-v1 { padding: 16px; font-size: 12px; }
 }

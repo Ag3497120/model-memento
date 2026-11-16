@@ -171,7 +171,8 @@ export function createWorldScreen({ fetch: fetcher = globalThis.fetch,
       el('p', { id: 'world-search-help', class: 'world-muted' }, tr('名前や言葉では「主な記録」を探します。登録IDや作り手では、保存した全記録を対象にします。読み込んだ記録は通信せずに探せます。「登録先につないで探す」は検索時に通信し、Hugging Faceに対応します。', "Names and keywords search notable records. Registry IDs and makers search all saved records. Loaded records can be searched offline. Online search connects to Hugging Face when you search.")),
       form, searchStatus, searchResults), recordSlot);
   const dialog = el('dialog', { class: 'world-dialog', 'aria-labelledby': 'world-title' },
-    el('header', { class: 'world-header' }, el('h1', { id: 'world-title' }, tr('世界のモデル', "World models")),
+    el('header', { class: 'world-header chrome-dialog-header' }, el('div', { class: 'chrome-page-heading' },
+      el('p', { class: 'chrome-page-origin' }, 'Model Memento'), el('h1', { id: 'world-title' }, tr('世界のモデル', "World models"))),
       button(tr('閉じる', "Close"), () => dialog.close(), { 'aria-label': tr('世界のモデルを閉じる', "Close World models") })), content);
   document.body.append(dialog);
   dialog.addEventListener('close', () => {

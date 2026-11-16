@@ -442,6 +442,8 @@ try {
   await client.call('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] }, client.session);
   await client.call('Page.navigate', { url: base }, client.session);
   await until(() => client.evaluate('Boolean(window.museum && document.querySelector("[data-ready]"))'));
+  check('初回は2022年11月で年表を表示し、案内ダイアログを開かない', await client.evaluate('window.museum.state.version.id === "chatgpt-2022-11" && Boolean(document.querySelector("#memento-timeline input[type=range]")) && !document.querySelector("#chrome-hint[open]")'));
+  await client.evaluate('window.museum.loadAll()');
   await client.evaluate('document.querySelector("#chrome-hint[open]")?.close()');
   await client.evaluate('document.querySelector(".era-interstitial[open] button")?.click()');
   await client.evaluate('document.querySelector("[data-chrome-trigger=menu]").click()');
@@ -574,10 +576,11 @@ try {
   const engineNames = await client.evaluate('[...document.querySelectorAll("[data-native-model] option")].map(n=>n.textContent)');
   check('Playground 2020 の選択肢', !engineNames.some(n => /gpt-4|davinci-00|gpt-3.5|o1|gpt-5/i.test(n)), JSON.stringify(engineNames));
   await client.evaluate('window.museum.open("settings")');
-  check('設定ダイアログが表示される', await client.evaluate('document.querySelector("#settings").open'));
+  check('統合パネルの環境設定が表示される', await client.evaluate('document.querySelector("#chrome-dialog").open && document.querySelector("#chrome-dialog").dataset.chromeView === "preferences"'));
   await screenshot('settings-1440x900');
-  const tabs = await client.evaluate('[...document.querySelectorAll(".dialog-tabs button")].map(b=>b.textContent)');
-  check('全機能の入口', tabs.length === 9 && tabs.some(s => s.includes('投票')) && tabs.some(s => s.includes('指示')) && tabs.some(s => s.includes('カスタマイズ設計')));
+  await client.evaluate('document.querySelector("[data-chrome-trigger=menu]").click()');
+  const entries = await client.evaluate('[...document.querySelectorAll("#chrome-dialog [data-nav-id]")].map(b=>b.dataset.navId)');
+  check('統合パネルの全機能の入口', ['models', 'tools', 'blend', 'instructions', 'memories', 'votes', 'research', 'app', 'preferences', 'memento-about'].every(id => entries.includes(id)) && new Set(entries).size === entries.length);
   for (const tab of ['models', 'tools', 'blend', 'instructions', 'memories', 'votes', 'research', 'app']) {
     await client.evaluate(`window.museum.open(${JSON.stringify(tab)})`);
     check(`設定 ${tab} を開く`, await client.evaluate('document.querySelector(".dialog-body").textContent.length>20'));
@@ -586,7 +589,7 @@ try {
   await until(() => client.evaluate('document.querySelector(".allstar-pre")?.textContent?.includes("model-memento.blend-blueprint/v1")'));
   const blendBundle = await client.evaluate('document.querySelector(".allstar-pre")?.textContent || ""');
   check('カスタマイズ設計がAI自己改変用ブループリントを生成する', blendBundle.includes('"schema": "model-memento.blend-blueprint/v1"') && blendBundle.includes('"ui_source"') && blendBundle.includes('"control_sources"') && blendBundle.includes('"model_stack"'));
-  await client.evaluate('document.querySelector("#settings").close()');
+  await client.evaluate('document.querySelector("#chrome-dialog").close()');
   try {
     const hf = await client.evaluate('window.museum.openHF("openai-community/gpt2").then(m=>({id:m.id,tags:m.tags.length,card:m.card.length,base:m.base,spaces:m.spaces.length}))');
     check('HF を名前で直接開く', hf.id === 'openai-community/gpt2' && hf.tags > 0, JSON.stringify(hf));
@@ -601,12 +604,12 @@ try {
   const fableResearchText = await client.evaluate('document.querySelector(".dialog-body").textContent');
   check('Browser Fable 5.2 の下調べパネルに正しい2026-11情報', fableResearchText.includes('2026-11-09') && fableResearchText.includes('2026-06') && !/2024\s*年世代/.test(fableResearchText), fableResearchText.slice(0, 120));
   await screenshot('fable52-research-1440x900');
-  await client.evaluate('document.querySelector("#settings").close()');
+  await client.evaluate('document.querySelector("#chrome-dialog").close()');
   // Source links replace the image viewer. Exercise the ordinary chrome button.
   await client.evaluate('window.museum.selectTool("lm-studio", "lm-studio-2023-05")');
   await client.evaluate('document.querySelector("#chrome-hint[open]")?.close(); document.querySelector("[data-chrome-trigger=menu]").click(); document.querySelector("[data-nav-id=sources]").click()');
   await until(() => client.evaluate('Boolean(document.querySelector("#source-panel"))'));
-  check('出典ボタンが選択中の版の資料を開く', await client.evaluate('(() => { document.querySelector("[data-chrome-trigger=menu]").click(); const open = document.querySelector("[data-nav-id=sources]").getAttribute("aria-expanded") === "true"; document.querySelector("#chrome-dialog").close(); return open; })()'));
+  check('出典ボタンが選択中の版の資料を開く', await client.evaluate('(() => { document.querySelector("[data-chrome-trigger=menu]").click(); const open = document.querySelector("[data-nav-id=sources]").getAttribute("aria-pressed") === "true"; document.querySelector("#chrome-dialog").close(); return open; })()'));
   for (const [toolId, versionId] of [['lm-studio', 'lm-studio-2023-05'], ['claude-code', 'claude-code-2026-11'], ['cursor', 'cursor-2026-01-macos'], ['aider', 'aider-2026-11']]) {
     await client.evaluate(`window.museum.selectTool(${JSON.stringify(toolId)}, ${JSON.stringify(versionId)})`);
     await until(() => client.evaluate('Boolean(document.querySelector("#source-panel a"))'));

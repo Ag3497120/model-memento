@@ -80,8 +80,9 @@ function row(...children) {
 }
 
 function textBox(lines, width = 60) {
-  // spec: openai-codex-cli-2025-04 regions[0].contents: only that first box is 64 cells.
-  // Other startup boxes retain the earlier renderer's 60-cell arrangement.
+  // April's two boxes are both 64 cells in the original terminal-header source.
+  // https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-header.tsx
+  // Later welcome boxes use this reconstruction's responsive 60-cell default.
   const inner = width - 2;
   const fit = line => {
     let output = ''; let cells = 0;
@@ -162,7 +163,7 @@ function characterRule(top) {
     el('span', {}, top ? '╭' : '╰'), el('span', { class: 'd2-rule-fill' }, '─'.repeat(512)), el('span', {}, top ? '╮' : '╯'));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   if (v.id === 'openai-codex-macos-2025-10') {
     // spec: openai-codex-macos-2025-10 confidence; corrections[3]
@@ -170,10 +171,11 @@ export function render(ctx) {
     return root(v, 'codex-macos phase-2025-10', E.macosDesktopStage(ctx, {
       appName: 'Codex', menus: [], shortcut: '', wallpaper: 'sequoia',
       window: E.macosVibrancyWindow(ctx, {
-        title: tr('Codex · 未確認の記録', "Codex · Unverified record"), badge: 'unverified', newLabel: tr('新しい作業', "New task"),
+        title: 'Codex', badge: '', newLabel: tr('新しい作業', "New task"),
         sidebarItems: [{ label: '~/project', active: true }], toolbarItems: [], picker: null,
-        main: el('main', { class: 'chat-main' }, transcript(ctx, 'Codex', tr('2025年10月のmacOS版は未確認です。', "The October 2025 macOS edition is unverified.")), input(ctx, tr('依頼を入力', "Enter a request")), sources(v)),
-        inspector: el('aside', { class: 'era-artifact-pane' }, tr('変更の確認 · unverified', "Review changes · unverified"))
+        main: el('main', { class: 'chat-main' }, transcript(ctx, tr('どんな作業を進めますか？', 'What would you like to work on?')), input(ctx, tr('依頼を入力', "Enter a request")), sources(v),
+          el('p', { 'data-fidelity-note': '' }, tr('2025年10月のmacOS版は未確認です。', 'The October 2025 macOS edition is unverified.'))),
+        inspector: el('aside', { class: 'era-artifact-pane', hidden: true }, tr('変更の確認', 'Review changes'))
       })
     }));
   }
@@ -186,12 +188,13 @@ export function render(ctx) {
   let startup;
   if (early) {
     // spec: openai-codex-cli-2025-04 regions[0], regions[1], empty_state
-    startup = el('div', {}, textBox([tr(' Codex · 研究プレビュー', " Codex · Research preview"), tr(' 版番号: 未確認', " Version · unverified")], 64), textBox([
+    startup = el('div', {}, textBox([tr(' Codex · 研究プレビュー', " Codex · Research preview")], 64), textBox([
       tr(' セッション: この会話', " Session · This chat"), tr(' 作業フォルダー: ~/project', " Working directory · ~/project"), tr(' モデル: ', " Model · ") + model, tr(' 許可: suggest', " Approval · suggest")
-    ]));
+    ], 64), el('p', { 'data-fidelity-note': '' }, tr('版番号は未確認です。', 'The version number is unverified.')));
   } else if (june) {
     // spec: openai-codex-cli-2025-06 regions[0]; corrections[0]
-    startup = el('pre', { class: 'boot' }, tr('Codex 0.2.0 · 研究プレビュー\nセッション: この会話\n作業フォルダー: ~/project\nモデル: ', "Codex 0.2.0 · Research preview\nSession · This chat\nWorking directory · ~/project\nModel · ") + model + tr('\n接続先: 未確認\n許可: 未確認\n安全の設定: 未確認', "\nProvider · unverified\nApproval · unverified\nSafety settings · unverified"));
+    startup = el('div', {}, el('pre', { class: 'boot' }, tr('Codex 0.2.0 · 研究プレビュー\nセッション: この会話\n作業フォルダー: ~/project\nモデル: ', "Codex 0.2.0 · Research preview\nSession · This chat\nWorking directory · ~/project\nModel · ") + model),
+      el('p', { 'data-fidelity-note': '' }, tr('接続先・許可・安全の設定は未確認です。', 'Provider, approval, and safety settings are unverified.')));
   } else if (compact) {
     // spec: openai-codex-cli-2026-11 regions[0], empty_state; corrections[8]
     startup = el('pre', { class: 'boot' }, 'Codex v0.159.0\n  ~/project');
@@ -212,4 +215,22 @@ export function render(ctx) {
       sources(v)
     )
   );
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
+  return surface;
 }

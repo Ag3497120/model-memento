@@ -93,12 +93,15 @@ dialog.chrome-dialog {
   .chrome-dialog [aria-current="true"], .chrome-dialog [aria-pressed="true"] { outline: 2px solid Highlight; }
 }
 
-/* The app menu opens from the desktop menu bar. No permanent Memento strip. */
-dialog.chrome-dialog[data-chrome-view="menu"] { position: fixed; top: 36px; left: 10px; right: auto; bottom: auto; margin: 0; width: min(430px, calc(100vw - 20px)); max-height: calc(100dvh - 44px); border-radius: 6px; }
+/* The app menu and palette share the desktop menu bar trigger. */
+dialog.chrome-dialog[data-chrome-view="menu"] { width: min(700px, calc(100vw - 24px)); }
 .chrome-menu-edition { min-width: 0; display: grid; gap: 8px; border-block: 1px solid var(--chrome-border); padding: 12px 0; }
 .chrome-menu-edition p { margin: 0; }
 .chrome-more-menu > summary { cursor: pointer; padding: 6px 0; }
 .chrome-more-menu > .chrome-menu { margin-top: 8px; }
+.chrome-more-menu { grid-column: 1 / -1; }
+.chrome-more-menu > summary { font-weight: 600; min-height: 36px; }
+.chrome-more-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin-top: 12px; }
 .chrome-dialog h3 { font-size: 14px; margin: 0 0 8px; }
 .chrome-dialog .chrome-era-track { max-width: 100%; }
 .chrome-dialog .era-memento-line a { margin-right: 8px; }
@@ -124,7 +127,7 @@ header:has(> .screen-back) { display: flex; align-items: center; gap: 12px; }
 header:has(> .screen-back) > h1, header:has(> .screen-back) > h2, header:has(> .screen-back) > div { flex: 1; min-width: 0; }
 .chrome-dialog .chrome-menu-item { border: 0; background: transparent; color: inherit; cursor: pointer; }
 .chrome-dialog .chrome-menu-item:hover, .chrome-dialog .chrome-menu-item:focus-visible { background: color-mix(in srgb, var(--chrome-border) 45%, transparent); }
-.chrome-dialog .chrome-menu-item:focus-visible { outline: 2px solid var(--chrome-muted); outline-offset: -2px; }
+.chrome-dialog .chrome-menu-item:focus-visible { outline: 3px solid var(--chrome-accent); outline-offset: -3px; }
 /* 中身に合わせた高さ（height:auto だと上下0の配置で画面いっぱいに伸びる） */
 dialog.chrome-dialog { height: fit-content; }
 
@@ -134,4 +137,48 @@ dialog.chrome-dialog { height: fit-content; }
   background: transparent;
   text-decoration: underline;
   text-underline-offset: .15em;
+}
+
+/* One page shell for navigation, records and preferences. */
+.chrome-dialog-header { position: sticky; top: 0; z-index: 1; background: var(--chrome-bg, #fafaf8); flex-wrap: wrap; }
+.chrome-page-heading { flex: 1; min-width: 120px; }
+.chrome-page-heading h1, .chrome-page-heading h2 { overflow-wrap: anywhere; }
+.chrome-page-origin { margin: 0 0 2px; font-size: 11px; color: var(--chrome-muted, #58636c); }
+.chrome-dialog .chrome-page-origin { margin: 0 0 2px; }
+.chrome-dialog .chrome-dialog-header > .screen-back { max-width: 45%; white-space: normal; text-align: left; }
+.chrome-menu-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 28px; min-width: 0; }
+.chrome-menu-group + .chrome-menu-group { border: 0; padding: 0; }
+.chrome-menu-group { align-content: start; }
+.chrome-menu-group .chrome-menu-heading { padding-bottom: 7px; border-bottom: 1px solid var(--chrome-border); }
+.chrome-palette { display: grid; gap: 10px; min-width: 0; }
+.chrome-palette .chrome-field { font-weight: 600; }
+.chrome-palette input { min-height: 48px; font-weight: 400; }
+.chrome-search-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.chrome-search-filters select { flex: 1; min-width: 130px; }
+.chrome-palette .chrome-results { gap: 3px; max-height: min(52dvh, 420px); overflow: auto; padding: 3px; }
+.chrome-palette .chrome-result { display: grid; gap: 2px; padding: 10px 12px; border: 1px solid transparent; border-radius: 7px; cursor: pointer; }
+.chrome-palette .chrome-result:hover { background: var(--chrome-hover); }
+.chrome-palette .chrome-result[aria-selected="true"] { border-color: var(--chrome-accent); background: var(--chrome-hover); }
+.chrome-dialog .dialog-body { padding: 0; overflow: visible; color: var(--chrome-text); --accent: var(--chrome-accent); --border: var(--chrome-border); --bg: var(--chrome-bg); }
+.chrome-dialog:has(.dialog-body) { width: min(860px, calc(100vw - 24px)); }
+.chrome-dialog .dialog-body .record-card, .chrome-dialog .dialog-body input, .chrome-dialog .dialog-body select,
+.chrome-dialog .dialog-body textarea { background: var(--chrome-panel); color: var(--chrome-text); border-color: var(--chrome-border); }
+.chrome-dialog .dialog-body .small, .chrome-dialog .dialog-body .catalog-count,
+.chrome-dialog .dialog-body .record-card small { color: var(--chrome-muted); }
+.chrome-dialog .dialog-body .notice, .chrome-dialog .dialog-body pre { background: var(--chrome-hover); color: var(--chrome-text); }
+.chrome-dialog .dialog-body > .chrome-field + .chrome-field { margin-top: 20px; }
+.chrome-shortcuts { display: grid; grid-template-columns: max-content 1fr; gap: 14px 20px; margin: 0; }
+.chrome-shortcuts dt, .chrome-shortcuts dd { margin: 0; }
+.chrome-shortcuts kbd { font: 12px/1.5 ui-monospace, monospace; overflow-wrap: anywhere; }
+.chrome-welcome { display: grid; gap: 14px; }
+
+@media (max-width: 560px) {
+  .chrome-menu-sections { grid-template-columns: 1fr; gap: 20px; }
+  .chrome-shortcuts { grid-template-columns: 1fr; gap: 4px; }
+  .chrome-shortcuts dd { margin-bottom: 12px; }
+  .chrome-dialog .record-card { flex-wrap: wrap; }
+  .chrome-dialog .record-name { flex-basis: 100%; }
+}
+@media (forced-colors: active) {
+  .chrome-palette [aria-selected="true"] { outline: 2px solid Highlight; }
 }

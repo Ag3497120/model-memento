@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -109,7 +110,7 @@ function permissions(ctx) {
     el('label', {}, el('input', { type: 'checkbox' }), tr(' 通知する', " Notify me")));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   if (v.id === 'cline-formerly-claude-dev-2025-02') return marketplace(ctx, v);
   const ym = v.id.match(/\d{4}-\d{2}/)?.[0] || v.ym;
@@ -186,4 +187,9 @@ export function render(ctx) {
   return root(v, 'ide cline ' + (early ? 'claude-dev' : 'renamed') + ' phase-' + ym + ' d2-cline',
     row(el('span', {}, 'Visual Studio Code'), action(ctx, tr('設定', "Settings"), 'settings')),
     el('main', { class: 'cline-workspace' }, panel, !early ? S.explorer(ctx) : null, S.codeEditor(ctx)), sources(v));
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'cline');
 }

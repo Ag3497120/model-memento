@@ -1,0 +1,274 @@
+{
+  "schema": "memento.d4-verification.v1",
+  "files": [
+    "web/js/closure.js",
+    "web/js/persona/conversation.js",
+    "web/js/persona/era.js",
+    "web/js/persona/voice.js",
+    "web/js/persona/facts.js",
+    "web/js/persona/records.js",
+    "web/js/persona/render.js",
+    "web/js/persona/standin.js",
+    "web/js/cross/stereo.js",
+    "data/curated/personas/openai-gpt-2.json",
+    "data/curated/personas/openai-chatgpt-3.5-20221130.json",
+    "eval/persona/era-voice.json",
+    "eval/persona/era-voice-run.js",
+    "eval/cross/era-voice-run.js",
+    "eval/persona/after.json",
+    "eval/persona/d4-{ja,en}-{before,after}.json",
+    "eval/persona/d4-legacy-{before,after}.json",
+    "eval/cross/d4-{ja,en}-{before,after}.json",
+    "eval/cross/d4-legacy-{ja,en}-{before,after}.json",
+    "eval/persona/d4-focused.log",
+    "eval/persona/d4-npm-test.log",
+    "eval/persona/d4-navigation-check.log",
+    "eval/persona/d4-verification.json",
+    "test/persona-web/era-voice.test.js",
+    "test/persona-web/standin.test.js",
+    "test/cross/stereo.test.js",
+    "test/i18n/E2.test.js",
+    "design/persona-web.md"
+  ],
+  "commands": [
+    {
+      "command": "node --test test/persona/*.test.js test/persona-web/*.test.js test/cross/*.test.js test/i18n/E2.test.js",
+      "exit_code": 0,
+      "output": {
+        "tests": 144,
+        "pass": 144,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "output": {
+        "tests": 902,
+        "pass": 901,
+        "fail": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "command": "node eval/persona/era-voice-run.js [--english]",
+      "exit_code": 0
+    },
+    {
+      "command": "node eval/cross/era-voice-run.js [--english]",
+      "exit_code": 0
+    },
+    {
+      "command": "node eval/persona/run.js",
+      "exit_code": 0,
+      "output": {
+        "total": 126,
+        "answer_rate": {
+          "correct": 88,
+          "total": 106,
+          "percent": 83.02
+        },
+        "correct_value_rate": {
+          "correct": 52,
+          "total": 76,
+          "percent": 68.42
+        },
+        "correct_unknown_rate": {
+          "correct": 20,
+          "total": 20,
+          "percent": 100
+        },
+        "correct_all": {
+          "correct": 96,
+          "total": 126,
+          "percent": 76.19
+        }
+      }
+    },
+    {
+      "command": "node eval/cross/run.js [--english]",
+      "exit_code": 0
+    }
+  ],
+  "new_cases": {
+    "persona_ja": {
+      "before": {
+        "template": {
+          "correct": 1,
+          "total": 14
+        },
+        "normal": {
+          "correct": 1,
+          "total": 14
+        }
+      },
+      "after": {
+        "template": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        },
+        "normal": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        }
+      }
+    },
+    "persona_en": {
+      "before": {
+        "template": {
+          "correct": 1,
+          "total": 14
+        },
+        "normal": {
+          "correct": 1,
+          "total": 14
+        }
+      },
+      "after": {
+        "template": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        },
+        "normal": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        }
+      }
+    },
+    "cross_ja": {
+      "before": {
+        "cross": {
+          "correct": 1,
+          "total": 14
+        },
+        "cross_then_template": {
+          "correct": 1,
+          "total": 14
+        }
+      },
+      "after": {
+        "cross": {
+          "correct": 11,
+          "total": 14,
+          "failures": [
+            "unknown-voice",
+            "refusal-voice",
+            "completion-unknown"
+          ]
+        },
+        "cross_then_template": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        }
+      }
+    },
+    "cross_en": {
+      "before": {
+        "cross": {
+          "correct": 1,
+          "total": 14
+        },
+        "cross_then_template": {
+          "correct": 1,
+          "total": 14
+        }
+      },
+      "after": {
+        "cross": {
+          "correct": 11,
+          "total": 14,
+          "failures": [
+            "unknown-voice",
+            "refusal-voice",
+            "completion-unknown"
+          ]
+        },
+        "cross_then_template": {
+          "correct": 14,
+          "total": 14,
+          "failures": []
+        }
+      }
+    }
+  },
+  "legacy": {
+    "all_correctness_metrics_unchanged": true,
+    "input_hashes_unchanged": true,
+    "before": {
+      "total": 126,
+      "answer_rate": {
+        "correct": 88,
+        "total": 106,
+        "percent": 83.02
+      },
+      "correct_value_rate": {
+        "correct": 52,
+        "total": 76,
+        "percent": 68.42
+      },
+      "correct_unknown_rate": {
+        "correct": 20,
+        "total": 20,
+        "percent": 100
+      },
+      "correct_all": {
+        "correct": 96,
+        "total": 126,
+        "percent": 76.19
+      }
+    },
+    "after": {
+      "total": 126,
+      "answer_rate": {
+        "correct": 88,
+        "total": 106,
+        "percent": 83.02
+      },
+      "correct_value_rate": {
+        "correct": 52,
+        "total": 76,
+        "percent": 68.42
+      },
+      "correct_unknown_rate": {
+        "correct": 20,
+        "total": 20,
+        "percent": 100
+      },
+      "correct_all": {
+        "correct": 96,
+        "total": 126,
+        "percent": 76.19
+      }
+    }
+  },
+  "items": {
+    "era": "done in assigned engine and renderer; small-note app hook pending",
+    "voice": "done as sourced rendering rules; measured historical fidelity unverified",
+    "conversation": "partly: follow-ups, greeting API and completion form done; automatic model-switch hook outside file scope",
+    "honesty": "partly: deterministic answers sourced and unknowns preserved; app must honor relayAllowed for all unknowns",
+    "measurement": "done: frozen Japanese/English before/after cases and unchanged legacy metrics"
+  },
+  "reviewer_hooks": [
+    "app.js: show the sourced greeting from answer(\"Hello\"/\"こんにちは\") after model switch",
+    "app.js: render and persist speech/museumNote to use the semantic small note",
+    "app.js: require result.relayAllowed !== false before askRelay",
+    "Build owner: regenerate public persona data and cards with the existing build"
+  ],
+  "unverified": [
+    "Real browser rendering and automatic model-switch greeting",
+    "Deployed relay voice and relayAllowed enforcement until the app hook is added",
+    "Real-model output fidelity and perceived voice quality",
+    "Actual stand-in load, generation and Japanese quality",
+    "Independent re-verification of pre-existing model specifications"
+  ],
+  "earlier_failed_runs": [
+    "Unsupported note_en metadata was removed; catalogue schema now passes.",
+    "A daily-build fixture syntax failure and a navigation AbortError were observed in earlier shared-workspace runs. Final npm test passed; no files outside D4 scope were edited."
+  ]
+}

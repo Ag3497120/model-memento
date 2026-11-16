@@ -1,0 +1,207 @@
+{
+  "schema": "memento.cross-eval.v1",
+  "at": "2026-11-16",
+  "base": {
+    "questions": 102,
+    "template": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 9.52
+    },
+    "cross": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 0.54
+    },
+    "cross_flat": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 0.42
+    },
+    "cross_then_template": {
+      "answer_rate": 78.05,
+      "correct_value": 79.31,
+      "correct_unknown": 100,
+      "correct_all": 82.35,
+      "ms": 4.32
+    }
+  },
+  "paraphrase": {
+    "questions": 29,
+    "template": {
+      "answer_rate": 73.91,
+      "correct_value": 73.91,
+      "correct_unknown": 100,
+      "correct_all": 79.31,
+      "ms": 4.37
+    },
+    "cross": {
+      "answer_rate": 60.87,
+      "correct_value": 60.87,
+      "correct_unknown": 100,
+      "correct_all": 68.97,
+      "ms": 0.62
+    },
+    "cross_flat": {
+      "answer_rate": 60.87,
+      "correct_value": 60.87,
+      "correct_unknown": 100,
+      "correct_all": 68.97,
+      "ms": 0.43
+    },
+    "cross_then_template": {
+      "answer_rate": 82.61,
+      "correct_value": 82.61,
+      "correct_unknown": 100,
+      "correct_all": 86.21,
+      "ms": 4.43
+    }
+  },
+  "twoHop": [
+    {
+      "model": "claude-opus-5-5",
+      "q": "前のモデルはいつ公開された？",
+      "with_initial": "私の前のモデルはClaude Opus 4.6です。Claude Opus 4.6は2026-02-04に公開されました。",
+      "without_initial": "私の前のモデルはClaude Opus 4.6です。",
+      "layer2": {
+        "layer": 2,
+        "center": "claude-opus-4-6",
+        "query": "私の前のモデルはClaude Opus 4.6です。 前のモデルはいつ公開された？",
+        "trace": [
+          {
+            "center": "claude-opus-4-6",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4@20250514",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4-6-think",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 0.83,
+            "predicate": 1,
+            "score": 0.83,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4-6",
+            "chain": "family",
+            "arm": "DOWN",
+            "subject": 1,
+            "predicate": 0.5,
+            "score": 0.5,
+            "gap": false
+          },
+          {
+            "center": "claude-opus-4@20250514",
+            "chain": "family",
+            "arm": "DOWN",
+            "subject": 1,
+            "predicate": 0.5,
+            "score": 0.5,
+            "gap": false
+          }
+        ],
+        "lock": "LEFT"
+      }
+    },
+    {
+      "model": "gpt-3.5-turbo-0301",
+      "q": "後継はいつ公開された？",
+      "with_initial": "私の後継はgpt-3.5-turboです。GPT-3.5-turboは2023-03-01に公開されました。",
+      "without_initial": "私の後継はgpt-3.5-turboです。",
+      "layer2": {
+        "layer": 2,
+        "center": "gpt-3.5-turbo",
+        "query": "私の後継はgpt-3.5-turboです。 後継はいつ公開された？",
+        "trace": [
+          {
+            "center": "gpt-3.5-turbo",
+            "chain": "release",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          },
+          {
+            "center": "gpt-3.5-turbo",
+            "chain": "cutoff",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 0.33,
+            "score": 0.33,
+            "gap": false
+          },
+          {
+            "center": "gpt-3.5-turbo",
+            "chain": "status",
+            "arm": "LEFT",
+            "subject": 1,
+            "predicate": 0.17,
+            "score": 0.17,
+            "gap": false
+          }
+        ],
+        "lock": "LEFT"
+      }
+    },
+    {
+      "model": "gemini-1.0-pro",
+      "q": "後継の文脈長は？",
+      "with_initial": "私の後継はgemini-2.5-flashです。Gemini 2.5 Flashは一度に1,048,576トークン（文章を数える単位）まで読めます。",
+      "without_initial": "私の後継はgemini-2.5-flashです。",
+      "layer2": {
+        "layer": 2,
+        "center": "gemini-2.5-flash",
+        "query": "私の後継はgemini-2.5-flashです。 後継の文脈長は？",
+        "trace": [
+          {
+            "center": "gemini-2.5-flash",
+            "chain": "context",
+            "arm": "RIGHT",
+            "subject": 1,
+            "predicate": 1,
+            "score": 1,
+            "gap": false
+          }
+        ],
+        "lock": "RIGHT"
+      }
+    },
+    {
+      "model": "gpt-4-0314",
+      "q": "後継モデルはいつ出た？",
+      "with_initial": "私の後継はgpt-5 , or gpt-4.1 for latency-sensitive tasks that don’t require reasoningです。",
+      "without_initial": "私の後継はgpt-5 , or gpt-4.1 for latency-sensitive tasks that don’t require reasoningです。",
+      "layer2": null
+    }
+  ]
+}

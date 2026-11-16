@@ -9,6 +9,47 @@ const menu = (label, ...items) => el('details', { class: 'd1-menu' }, el('summar
 
 const modelSlot = () => el('span', { 'data-era-slot': 'top' });
 
+// H1: short launch-era UI labels, not the later greeting. Evidence and
+// launch-day/date uncertainties are itemized in design/hero-audit.md.
+function launchPage(ctx, december) {
+  const columns = [
+    ['Examples', '☼', [
+      'Explain quantum computing in simple terms',
+      "Got any creative ideas for a 10 year old’s birthday?",
+      'How do I make an HTTP request in Javascript?'
+    ]],
+    ['Capabilities', 'ϟ', [
+      'Remembers what user said earlier in the conversation',
+      'Allows user to provide follow-up corrections',
+      'Trained to decline inappropriate requests'
+    ]],
+    ['Limitations', '△', [
+      'May occasionally generate incorrect information',
+      'May occasionally produce harmful instructions or biased content',
+      'Limited knowledge of world and events after 2021'
+    ]]
+  ];
+  const log = S.thread(ctx, 'ChatGPT');
+  log.querySelector('.empty-state').append(el('div', { class: 'chatgpt-2022-cols' },
+    ...columns.map(([title, icon, items]) => el('section', {},
+      el('span', { class: 'hero-column-icon', 'aria-hidden': 'true' }, icon), el('h2', {}, title),
+      ...items.map(text => title === 'Examples'
+        ? button(`“${text}” →`, () => ctx.send(text)) : el('p', {}, text))))));
+  const footer = el('div', { class: 'hero-research-footer', lang: 'en' },
+    december ? link('ChatGPT Dec 15 Version', notes) : null,
+    december ? '. Free Research Preview.' : 'Free Research Preview: ChatGPT is optimized for dialogue.');
+  return el('div', { class: `surface chatgpt d1 classic first-chatgpt hero-chatgpt-2022${december ? ' d1-december' : ''}`, lang: 'en' },
+    el('aside', { class: 'native-sidebar' }, button('+ New chat', () => ctx.newChat()),
+      el('div', { class: 'sidebar-bottom' },
+        link('OpenAI Discord', 'https://discord.gg/openai'), link('Updates & FAQ', notes))),
+    el('div', { class: 'main-column' }, el('main', { class: 'chat-main' }, log,
+      S.composer(ctx, '', '', '➤'), footer,
+      el('footer', { class: 'native-footnote' }),
+      el('p', { 'data-fidelity-note': '' }, december
+        ? tr('12月15日の版表記。初期12月すべての画面が同じだったかは未確認です。', 'December 15 version label; its use throughout early December is unverified.')
+        : tr('記録日：2022-11-30。初日固有の版表記は未確認です。', 'Record date: 2022-11-30. A launch-day version label is unverified.')))));
+}
+
 function page(ctx, { cls = '', top = [], before = [], after = [], extra = [], sidebar = true, source = notes, glyph = '' } = {}) {
   const main = el('main', { class: 'chat-main' }, ...before,
     S.thread(ctx, tr('何をお手伝いしましょうか？', "How can I help?")), ...after,
@@ -36,22 +77,47 @@ function attachPane(surface, pane, label) {
   return surface;
 }
 
-function bandActions(surface) {
+function bandActions(surface, ctx) {
   // spec: chatgpt-2022-12 controls / conversation — editing and ratings belong to different turns.
   const thread = surface.querySelector('.thread');
   const decorate = () => {
-    for (const turn of thread.querySelectorAll('.message:not([data-d1-actions])')) {
+    for (const turn of thread.querySelectorAll('.message')) {
+      if (turn.hasAttribute('data-d1-actions')) continue;
       turn.setAttribute('data-d1-actions', '');
-      if (turn.classList.contains('user')) turn.append(button(tr('質問を編集', "Edit question"), () => {
+      const actions = el('div', { class: 'd2-turn-actions', role: 'group', 'aria-label': tr('メッセージの操作', 'Message actions') });
+      if (turn.classList.contains('user')) actions.append(button(tr('質問を編集', 'Edit question'), () => {
         const input = surface.querySelector('.composer textarea');
         input.value = turn.querySelector('.answer-text')?.textContent || '';
         input.focus();
-      }));
-      else turn.append(menu(tr('評価', "Feedback"), button(tr('役に立った', "Helpful"), () => turn.setAttribute('data-rating', 'helpful')),
-        button(tr('見直しが必要', "Needs review"), () => turn.setAttribute('data-rating', 'review'))));
+      }, { title: tr('質問を編集', 'Edit question'), 'aria-label': tr('質問を編集', 'Edit question') }));
+      else if (turn.classList.contains('assistant')) {
+        actions.append(button('⧉', async event => {
+          const control = event.currentTarget;
+          try {
+            if (!globalThis.navigator?.clipboard?.writeText) return;
+            await globalThis.navigator.clipboard.writeText(turn.querySelector('.answer-text')?.textContent || '');
+            control.textContent = '✓';
+          } catch { /* Clipboard permission is controlled by the browser. */ }
+        }, { title: tr('コピー', 'Copy'), 'aria-label': tr('回答をコピー', 'Copy response') }));
+        for (const [glyph, value, label] of [['👍', 'helpful', tr('役に立った', 'Helpful')], ['👎', 'review', tr('見直しが必要', 'Needs review')]]) {
+          actions.append(button(glyph, event => {
+            turn.setAttribute('data-rating', value);
+            for (const item of actions.querySelectorAll('[data-rating-choice]')) item.setAttribute('aria-pressed', String(item === event.currentTarget));
+          }, { 'data-rating-choice': value, 'aria-label': label, title: label, 'aria-pressed': 'false' }));
+        }
+        actions.append(button('↻', () => {
+          const questions = [...thread.querySelectorAll('.message.user')];
+          const index = [...thread.querySelectorAll('.message')].indexOf(turn);
+          const question = questions.filter(item => [...thread.querySelectorAll('.message')].indexOf(item) < index).at(-1);
+          const text = question?.querySelector('.answer-text')?.textContent;
+          if (text) ctx.send(text);
+        }, { title: tr('もう一度試す', 'Try again'), 'aria-label': tr('もう一度試す', 'Try again') }));
+      }
+      turn.append(actions);
     }
   };
-  if (typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(thread, { childList: true });
+  decorate();
+  if (typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(thread, { childList: true, subtree: true });
   return surface;
 }
 
@@ -84,18 +150,12 @@ function renderVersion(ctx) {
     return surface;
   }
   if (ym === '2022-11') {
-    // spec: chatgpt-2022-11 corrections / empty_state — retain three-column drawing, no prefilled history or stop button.
-    return page(ctx, { cls: 'classic first-chatgpt', sidebar: false, source: 'https://openai.com/index/chatgpt/',
-      before: [el('div', { class: 'chatgpt-2022-cols telemetry-strip' },
-        el('section', { class: 'telemetry-card' }, el('h4', {}, tr('質問の例', "Example questions")),
-          button(tr('AIの歴史を教えて', "Tell me about the history of AI"), () => ctx.send(tr('AIの歴史を教えて', "Tell me about the history of AI"))), button(tr('あなたは誰？', "Who are you?"), () => ctx.send(tr('あなたは誰？', "Who are you?")))),
-        el('section', { class: 'telemetry-card' }, el('h4', {}, tr('使い方', "How to use")), el('p', {}, tr('続けて質問したり、条件を加えたりできます。', "Ask follow-up questions or add requirements."))),
-        el('section', { class: 'telemetry-card' }, el('h4', {}, tr('気をつけること', "Things to keep in mind")), el('p', {}, tr('答えが正しいか、資料でも確かめてください。', "Check sources to verify the answer."))))] });
+    // spec: chatgpt-2022-11 empty_state; H1 sourced early research-preview layout.
+    return launchPage(ctx, false);
   }
   if (ym === '2022-12') {
     // spec: chatgpt-2022-12 regions / conversation / shape.input_shape — supported full-width turn bands, no fabricated history.
-    return bandActions(page(ctx, { cls: 'classic first-chatgpt d1-december', sidebar: false,
-      source: 'https://interfacelineage.com/chatgpt-chat-completions-ui' }));
+    return launchPage(ctx, true);
   }
   if (ym === '2023-03') {
     // spec: chatgpt-2023-03 controls / corrections — dropdown replaces tabs and fixed message cap.
@@ -188,8 +248,8 @@ function renderVersion(ctx) {
 }
 
 const specSources = {
-  "chatgpt-2022-11": ["https://openai.com/index/chatgpt/","https://arstechnica.com/information-technology/2022/12/openai-invites-everyone-to-test-new-ai-powered-chatbot-with-amusing-results/","https://interfacelineage.com/chatgpt-chat-completions-ui"], // spec: chatgpt-2022-11 sources
-  "chatgpt-2022-12": ["https://interfacelineage.com/chatgpt-chat-completions-ui","https://help.openai.com/en/articles/6825453-chatgpt-release-notes"], // spec: chatgpt-2022-12 sources
+  "chatgpt-2022-11": ["https://openai.com/index/chatgpt/","https://www.medrxiv.org/content/10.1101/2022.12.16.22283512v1.full.pdf","https://www.cs.cornell.edu/courses/cs4756/2023sp/assets/slides_notes/lec1_slides.pdf","https://interfacelineage.com/chatgpt-chat-completions-ui"], // spec: chatgpt-2022-11 sources
+  "chatgpt-2022-12": ["https://interfacelineage.com/chatgpt-chat-completions-ui","https://help.openai.com/en/articles/6825453-chatgpt-release-notes","https://www.medrxiv.org/content/10.1101/2022.12.16.22283512v1.full.pdf"], // spec: chatgpt-2022-12 sources
   "chatgpt-2023-03": ["https://openai.com/index/gpt-4-research/","https://help.openai.com/en/articles/6825453-chatgpt-release-notes","https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/"], // spec: chatgpt-2023-03 sources
   "chatgpt-2023-05": ["https://help.openai.com/en/articles/6825453-chatgpt-release-notes","https://openai.com/index/chatgpt-plugins/"], // spec: chatgpt-2023-05 sources
   "chatgpt-2023-07": ["https://help.openai.com/en/articles/6825453-chatgpt-release-notes","https://openai.com/index/chatgpt-plugins/","https://community.openai.com/t/chatgpt-4-missing-upload-button-solved-confusing-ui/300566"], // spec: chatgpt-2023-07 sources
@@ -212,7 +272,7 @@ const specSources = {
   "chatgpt-2026-11": ["https://help.openai.com/en/articles/20001530-getting-started-with-your-dot","https://help.openai.com/en/articles/6825453-chatgpt-release-notes","https://chatgpt.com/"], // spec: chatgpt-2026-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/chatgpt.json: V1 owns model controls; other/unverified positions stay unmarked.
   for (const input of surface.querySelectorAll('.composer textarea')) input.setAttribute('data-era-input', '');
@@ -236,5 +296,31 @@ export function render(ctx) {
       if (label.textContent === 'You') label.textContent = tr('あなた', "You");
     }
   }).observe(log, { childList: true });
+  return bandActions(surface, ctx);
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    if (ctx.version?.id === 'chatgpt-2022-11') {
+      // Museum-authored questions retained for the existing i18n interaction
+      // contract; they are explicitly separate from the historical Examples.
+      const prompts = [tr('AIの歴史を教えて', 'Tell me about the history of AI'), tr('あなたは誰？', 'Who are you?')];
+      disclosure.append(el('section', { class: 'hero-museum-prompts' },
+        el('p', {}, tr('Model Mementoの質問例（当時のUI文言ではありません）', 'Model Memento questions (not historical UI text)')),
+        ...prompts.map(text => button(text, () => ctx.send(text)))));
+    }
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

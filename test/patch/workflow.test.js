@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 test('installed workflows preserve patch storage, rollback, serialization and valid Node programs', async () => {
   let scripts = 0;
   for (const filename of ['pages.yml', 'auto-sync.yml', 'world-pages.yml']) {
-    const source = await readFile(new URL(`../../.github/workflows-later/${filename}`, import.meta.url), 'utf8');
+    const source = await readFile(new URL(`../../.github/workflows/${filename}`, import.meta.url), 'utf8');
     assert.match(source, /^      rollback_to:\n(?:        description:.*\n)?        type: string\n        default: ''$/m, filename);
     assert.match(source, /^      patch_initial:\n(?:        description:.*\n)?        type: boolean\n        default: false$/m, filename);
     assert.match(source, /^      dry_run:\n(?:        description:.*\n)?        type: boolean\n        default: true$/m, filename);

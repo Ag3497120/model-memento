@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import * as S from '../surface.js';
@@ -113,7 +114,7 @@ function menuBar(ctx, v) {
   return root(v, 'openclaw messenger d2-menubar', el('div', { class: 'd2-menubar-strip' }, el('span', {}, 'OpenClaw'), el('span', {}, tr('待機中', 'Idle'))), menu, voice, chat, sources(v));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   if (v.id.endsWith('2025-11')) return warelay(ctx, v);
   if (v.id === 'openclaw-2026-03-macos') return menuBar(ctx, v);
@@ -168,4 +169,9 @@ export function render(ctx) {
     });
   }
   return surface;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'openclaw');
 }

@@ -86,14 +86,14 @@ function characterRule(top) {
     el('span', {}, top ? '╭' : '╰'), el('span', { class: 'd2-rule-fill' }, '─'.repeat(512)), el('span', {}, top ? '╮' : '╯'));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const august = v.id === 'gemini-cli-2025-08';
   const modern = v.id >= 'gemini-cli-2026-03';
   // spec: gemini-cli-2025-06-25 empty_state; gemini-cli-2025-08 empty_state; gemini-cli-2025-10 empty_state; gemini-cli-2026-01 empty_state; gemini-cli-2026-03 empty_state; gemini-cli-2026-07 empty_state; gemini-cli-2026-11 empty_state
   const log = transcript(ctx, '', '');
   const welcome = el('pre', { class: 'boot era-terminal-welcome' },
-    tr('Gemini CLI\n作業の内容や質問を入力してください。\n/help 使い方\n参考表示 · 作業フォルダーは表示例です。', "Gemini CLI\nEnter a task or question.\n/help Usage\nReference view · Working directory is an example."));
+    tr('Gemini CLI\n作業の内容や質問を入力してください。\n/help 使い方', "Gemini CLI\nEnter a task or question.\n/help Usage"));
   // spec: gemini-cli-2025-06-25 regions[1], shape.input_shape; gemini-cli-2025-08 regions[1]; gemini-cli-2025-10 regions[1]; gemini-cli-2026-01 regions[1]; gemini-cli-2026-03 regions[1]; gemini-cli-2026-07 regions[1]; gemini-cli-2026-11 regions[1]
   const form = input(ctx, v.id === 'gemini-cli-2026-01' ? tr('依頼を入力 · ファイルは @相対パス', "Enter a request · Reference files with @relative/path") : tr('依頼を入力 · /help で使い方', "Enter a request · /help for usage"), '>');
   form.append(el('span', { 'data-era-slot': 'input-right' }));
@@ -109,11 +109,29 @@ export function render(ctx) {
   const contextSummary = august && (count || connectors) ? el('div', { class: 'd2-context-summary' }, tr('指示ファイル: ', "Instruction files · ") + count + tr(' · 接続先: ', " · Connectors · ") + connectors) : null;
   // spec: gemini-cli-2025-06-25 controls; gemini-cli-2025-08 controls; gemini-cli-2025-10 controls; gemini-cli-2026-01 controls; gemini-cli-2026-03 controls; gemini-cli-2026-07 controls; gemini-cli-2026-11 controls
   const command = v.id < 'gemini-cli-2025-10' ? tr('/theme 配色を選択', "/theme Choose colors") : tr('/model モデルの設定', "/model Model settings");
-  const footer = el('footer', { class: 'terminal-status' }, tr('~/project · モデル: ', "~/project · Model · ") + (ctx?.model?.name || tr('未選択', "Not selected")) + tr(' · 実行領域: 未確認', " · Sandbox · unverified"));
+  const footer = el('footer', { class: 'terminal-status' }, tr('~/project · モデル: ', "~/project · Model · ") + (ctx?.model?.name || tr('未選択', "Not selected")));
   // spec: gemini-cli-2025-06-25 regions; gemini-cli-2025-10 distinctive[3]; corrections[2], corrections[4], corrections[5], corrections[6]
   return root(v, 'terminal gemini-cli d2-cli ' + (august ? 'd2-gemini-framed-user' : modern ? 'd2-gemini-band-user' : 'd2-gemini-plain-user'),
     el('main', { class: 'terminal-main' }, welcome, log, contextSummary,
       el('p', { class: 'd2-key-hint' }, command + tr(' · ! 端末の命令 · Esc 実行を取り消す', " · ! Shell command · Esc Cancel execution")),
-      framed, footer, sources(v))
+      framed, footer, sources(v), el('p', { 'data-fidelity-note': '' }, tr('参考表示 · 作業フォルダーは表示例です。実行領域の設定は未確認です。', 'Reference view · The working directory is an example. Sandbox settings are unverified.')))
   );
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
+  return surface;
 }

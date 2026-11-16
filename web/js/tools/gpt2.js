@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, link } from '../dom.js';
 import { composer, thread } from '../surface.js';
@@ -36,7 +37,7 @@ const specSources = {
   "openai-gpt-2-2019-11": ["https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py","https://openai.com/index/gpt-2-1-5b-release/","https://raw.githubusercontent.com/openai/gpt-2/master/README.md"], // spec: openai-gpt-2-2019-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   const urls = specSources[ctx.version?.id] || [];
   surface.setAttribute('data-spec-version', ctx.version?.id || 'unverified');
@@ -49,4 +50,9 @@ export function render(ctx) {
     }
   }).observe(log, { childList: true });
   return surface;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'gpt2');
 }

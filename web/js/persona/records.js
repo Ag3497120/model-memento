@@ -24,7 +24,7 @@ export function publicURL(value) {
 }
 
 export const urls = values => [...new Set(values.map(v => publicURL(typeof v === 'string' ? v : v?.url)).filter(Boolean))];
-const key = value => String(value || '').normalize('NFKC').toLowerCase().replace(/^(?:openai|anthropic|google|hf):/, '').replace(/[^a-z0-9]/g, '');
+const key = value => String(value || '').normalize('NFKC').toLowerCase().replace(/\s*\(\d+(?:\.\d+)?[bm]\)/g, '').replace(/^(?:openai|anthropic|google|hf):/, '').replace(/[^a-z0-9]/g, '');
 let browserPersonas = [];
 let browserLinks = {};
 

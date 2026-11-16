@@ -1,78 +1,109 @@
-import { tr, pick } from '../i18n.js';
-import { el, button, link } from '../dom.js';
-import { activeAccents, sourceUrls } from './data.js';
+import { createTransitionScene, editionDate } from './transition-scene.js';
 
-export const transitionTiming = Object.freeze({ notice: 650, restart: 300, caption: 900, maximum: 2400 });
+// A short reading beat, a quiet change of frame, then the destination itself.
+export const transitionTiming = Object.freeze({ notice: 600, restart: 420, caption: 760, maximum: 2400 });
+
 export function isNewerVersion(from, to) {
-  const date = item => String(item?.era?.desktop?.date_shown || item?.version?.from || '');
-  return Boolean(from && to && from.tool.id === to.tool.id && from.version.id !== to.version.id && date(from) && date(to) && date(to) > date(from));
+  return Boolean(from?.tool?.id && from.tool.id === to?.tool?.id && from.version?.id !== to.version?.id
+    && editionDate(from) && editionDate(to) && editionDate(to) > editionDate(from));
 }
 
-export function createEraTransition({ host, reducedMotion = () => globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
+export function createEraTransition({ host, motionQuery = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)'),
+  reducedMotion = () => Boolean(motionQuery?.matches), eventTarget = globalThis.document,
   schedule = setTimeout, unschedule = clearTimeout } = {}) {
   let current = null;
   function cancel() { current?.finish(); }
+
   async function run({ from, to, swap }) {
     cancel();
-    if (!isNewerVersion(from, to)) { await swap(); return; }
-    const reduce = reducedMotion();
+    const changed = from?.version?.id && to?.version?.id
+      && (from.version.id !== to.version.id || from.tool?.id !== to.tool?.id);
+    // No caption, timer, focus change or transient DOM in reduced-motion mode.
+    if (!host || !changed || !editionDate(from) || !editionDate(to) || reducedMotion() || globalThis.document?.hidden) {
+      await swap(); return;
+    }
     return new Promise((resolve, reject) => {
       const timers = new Set();
-      let swapped = false, finished = false;
-      const card = el('section', { class: 'era-update-card', role: 'status', 'aria-live': 'polite', 'data-era-transition': 'notice' });
-      const content = el('div');
-      const skip = button(tr('演出をスキップ', "Skip transition"), () => { void change(true); });
+      const scene = createTransitionScene(from, to);
+      const { card, skip } = scene;
       const opener = globalThis.document?.activeElement;
-      card.append(content, skip); host.append(card);
-      card.addEventListener('keydown', event => {
-        if (event.key === 'Escape') { event.preventDefault(); void change(true); }
-      });
+      const events = eventTarget?.addEventListener ? eventTarget : card;
+      let swapped = false, renderComplete = false, finished = false, hidden = false, ownedFocus = false;
+
+      const later = (callback, ms) => {
+        const timer = schedule(() => { timers.delete(timer); callback(); }, ms);
+        timers.add(timer);
+      };
+      const isSource = event => event.target?.closest?.('a')?.closest?.('.era-update-card') === card;
+      function skipEvent(event) {
+        // Source links still perform their normal navigation. Other clicks and
+        // keys are consumed, so skipping cannot also send a prompt or navigate.
+        if (!isSource(event) || event.type === 'keydown') event.preventDefault();
+        event.stopImmediatePropagation();
+        void change(true);
+      }
+      function visibilityChanged() { if (globalThis.document?.hidden) void change(true); }
+      function motionChanged(event) { if (event.matches) void change(true); }
+      function closeVisual() {
+        if (hidden) return;
+        hidden = true;
+        for (const timer of timers) unschedule(timer);
+        timers.clear();
+        events.removeEventListener('keydown', skipEvent, true);
+        events.removeEventListener('click', skipEvent, true);
+        events.removeEventListener('visibilitychange', visibilityChanged);
+        motionQuery?.removeEventListener?.('change', motionChanged);
+        const active = globalThis.document?.activeElement;
+        ownedFocus = active === skip || active?.closest?.('.era-update-card') === card;
+        card.remove();
+      }
+      function restoreFocus() {
+        const doc = globalThis.document, active = doc?.activeElement;
+        const stillOurs = !active || active === skip || active === doc?.body || active.isConnected === false
+          || active.closest?.('.era-update-card') === card;
+        if (ownedFocus && stillOurs && !doc?.querySelector?.('dialog[open]')) {
+          const parent = host.parentElement || host.parentNode;
+          const target = parent?.querySelector('[data-era-input]') || (opener?.isConnected ? opener : null);
+          target?.focus();
+        }
+      }
       const job = { finish(error) {
         if (finished) return;
         finished = true;
-        for (const timer of timers) unschedule(timer);
-        const restoreFocus = globalThis.document?.activeElement === skip;
-        card.remove(); if (current === job) current = null;
-        if (restoreFocus && !globalThis.document?.querySelector?.('dialog[open]')) {
-          const target = host.parentElement?.querySelector('[data-era-input]') || (opener?.isConnected ? opener : null);
-          target?.focus();
-        }
+        closeVisual();
+        restoreFocus();
+        if (current === job) current = null;
         if (error) reject(error); else resolve();
       } };
       current = job;
-      const later = (callback, ms) => { const timer = schedule(() => { timers.delete(timer); callback(); }, ms); timers.add(timer); };
       async function change(skipping = false) {
         if (finished) return;
-        if (swapped) { if (skipping) job.finish(); return; }
+        // Removing the visual is synchronous, even if the renderer is slow.
+        if (skipping) closeVisual();
+        if (swapped) { if (skipping && renderComplete) job.finish(); return; }
         swapped = true;
         try {
           await swap();
+          renderComplete = true;
           if (finished) return;
-          if (skipping) { job.finish(); return; }
-          card.dataset.eraTransition = 'caption';
-          content.replaceChildren(el('p', {}, pick(to.era, 'trend') || tr('この版の画面の傾向は未確認です。', "Screen trends for this edition are unverified.")));
-          const urls = (to.era.trend || '').match(/https?:\/\/[^\s（）<>]+/g) || [];
-          content.append(el('span', { class: 'era-update-sources' }, sourceUrls(urls).map(url => link(tr('出典', "Sources"), url))));
-          later(job.finish, transitionTiming.caption);
+          if (hidden || globalThis.document?.querySelector?.('dialog[open]')) { job.finish(); return; }
+          scene.show('caption');
+          later(() => job.finish(), transitionTiming.caption);
         } catch (error) { job.finish(error); }
       }
-      // Bound the visual even if rendering or a network-backed import is slow.
-      later(() => { if (!swapped) void change(true); job.finish(); }, transitionTiming.maximum);
-      const accent = activeAccents(to.era).find(item => ['update-notice', "what's-new"].includes(item.kind));
-      if (reduce) {
-        // No restart or fading in reduced-motion mode, but retain the sourced caption.
-        card.dataset.eraTransition = 'caption';
-        void change();
-        return;
-      }
-      content.append(el('p', {}, pick(accent, 'text') || tr('新しい版を開きます。', "Opening the new edition.")),
-        el('small', {}, tr('Model Memento の更新演出です。', "Model Memento update animation.")),
-        el('span', { class: 'era-update-sources' }, accent ? sourceUrls(accent.sources).map(url => link(tr('出典', "Sources"), url)) : []));
+
+      host.append(card);
+      events.addEventListener('keydown', skipEvent, true);
+      events.addEventListener('click', skipEvent, true);
+      events.addEventListener('visibilitychange', visibilityChanged);
+      motionQuery?.addEventListener?.('change', motionChanged);
       skip.focus();
+      // Bound the visual, not the renderer's promise: late render failures must
+      // still reach the caller. Cancellation is allowed to settle an old job.
+      later(() => { void change(true); }, transitionTiming.maximum);
       later(() => {
         if (finished || swapped) return;
-        card.dataset.eraTransition = 'restart';
-        content.replaceChildren(el('p', {}, tr('画面を開き直しています…', "Reopening the screen…")));
+        scene.show('restart');
         later(() => { void change(); }, transitionTiming.restart);
       }, transitionTiming.notice);
     });

@@ -1,0 +1,5441 @@
+
+> model-memento@0.1.0 test
+> node test/app/run.js
+
+TAP version 13
+# Subtest: published command is executable and help/version work through an npm-style link from another directory
+ok 1 - published command is executable and help/version work through an npm-style link from another directory
+  ---
+  duration_ms: 205.584625
+  type: 'test'
+  ...
+# Subtest: CLI accepts only supported options and validates ports before starting anything
+ok 2 - CLI accepts only supported options and validates ports before starting anything
+  ---
+  duration_ms: 1.418959
+  type: 'test'
+  ...
+# Subtest: default launch requests a free loopback port, reports the assigned URL and closes on Ctrl+C
+ok 3 - default launch requests a free loopback port, reports the assigned URL and closes on Ctrl+C
+  ---
+  duration_ms: 0.785291
+  type: 'test'
+  ...
+# Subtest: an explicit port is retained, only --open opens the URL, and browser failure leaves the app usable
+ok 4 - an explicit port is retained, only --open opens the URL, and browser failure leaves the app usable
+  ---
+  duration_ms: 0.922375
+  type: 'test'
+  ...
+# Subtest: a second interrupt closes remaining connections while shutdown is pending
+ok 5 - a second interrupt closes remaining connections while shutdown is pending
+  ---
+  duration_ms: 0.246625
+  type: 'test'
+  ...
+# Subtest: Ctrl+C during binding closes as soon as listening completes without opening a browser
+ok 6 - Ctrl+C during binding closes as soon as listening completes without opening a browser
+  ---
+  duration_ms: 1.309375
+  type: 'test'
+  ...
+# Subtest: occupied or forbidden ports fail with Japanese guidance and remove signal handlers
+ok 7 - occupied or forbidden ports fail with Japanese guidance and remove signal handlers
+  ---
+  duration_ms: 0.604458
+  type: 'test'
+  ...
+# Subtest: browser opening uses fixed arguments without a shell on each supported platform
+ok 8 - browser opening uses fixed arguments without a shell on each supported platform
+  ---
+  duration_ms: 0.651958
+  type: 'test'
+  ...
+# Subtest: a real Node process exits cleanly on SIGINT with no browser or other tool started
+ok 9 - a real Node process exits cleanly on SIGINT with no browser or other tool started
+  ---
+  duration_ms: 77.918709
+  type: 'test'
+  ...
+# Subtest: static pages do not probe routes or render an admin entry point
+ok 10 - static pages do not probe routes or render an admin entry point
+  ---
+  duration_ms: 1.434334
+  type: 'test'
+  ...
+# Subtest: client sends only fixed job ids and CSRF headers, and rejects static HTML responses
+ok 11 - client sends only fixed job ids and CSRF headers, and rejects static HTML responses
+  ---
+  duration_ms: 20.481958
+  type: 'test'
+  ...
+# Subtest: client SSE closes after terminal state and detaches on screen close
+ok 12 - client SSE closes after terminal state and detaches on screen close
+  ---
+  duration_ms: 0.180792
+  type: 'test'
+  ...
+# Subtest: AI review writes beside each draft; human acceptance requires current contents and moves to curated
+ok 13 - AI review writes beside each draft; human acceptance requires current contents and moves to curated
+  ---
+  duration_ms: 295.06675
+  type: 'test'
+  ...
+# Subtest: schema, citations, unreachable sources, and changed content prevent acceptance
+ok 14 - schema, citations, unreachable sources, and changed content prevent acceptance
+  ---
+  duration_ms: 96.966875
+  type: 'test'
+  ...
+# Subtest: human rejection persists without deleting the original draft
+ok 15 - human rejection persists without deleting the original draft
+  ---
+  duration_ms: 137.39025
+  type: 'test'
+  ...
+# Subtest: malformed JSON and AI unavailability receive per-draft verdicts without losing other drafts
+ok 16 - malformed JSON and AI unavailability receive per-draft verdicts without losing other drafts
+  ---
+  duration_ms: 194.402833
+  type: 'test'
+  ...
+# Subtest: maintenance runs checks only in a new worktree, applies bounded AI proposals, checks again, and merges only on review
+ok 17 - maintenance runs checks only in a new worktree, applies bounded AI proposals, checks again, and merges only on review
+  ---
+  duration_ms: 174.746542
+  type: 'test'
+  ...
+# Subtest: failed recheck leaves a reviewable branch but disables merge
+ok 18 - failed recheck leaves a reviewable branch but disables merge
+  ---
+  duration_ms: 119.450541
+  type: 'test'
+  ...
+# Subtest: AI cannot write outside supplied tracked files
+ok 19 - AI cannot write outside supplied tracked files
+  ---
+  duration_ms: 72.121792
+  type: 'test'
+  ...
+# Subtest: non-git copies report unavailable without applying changes
+ok 20 - non-git copies report unavailable without applying changes
+  ---
+  duration_ms: 15.958917
+  type: 'test'
+  ...
+# Subtest: test discovery covers both test directories and browser tests without following links
+ok 21 - test discovery covers both test directories and browser tests without following links
+  ---
+  duration_ms: 13.463333
+  type: 'test'
+  ...
+# Subtest: local AI news summaries preserve source URLs and explicitly identify their headline basis
+ok 22 - local AI news summaries preserve source URLs and explicitly identify their headline basis
+  ---
+  duration_ms: 64.489792
+  type: 'test'
+  ...
+# Subtest: contribute exports only schema-valid new results without local paths or uploads
+ok 23 - contribute exports only schema-valid new results without local paths or uploads
+  ---
+  duration_ms: 308.84475
+  type: 'test'
+  ...
+# Subtest: missing news is unavailable and unknown contribution destination stays explicit
+ok 24 - missing news is unavailable and unknown contribution destination stays explicit
+  ---
+  duration_ms: 30.188542
+  type: 'test'
+  ...
+# Subtest: routes require loopback, exact host/origin, JSON, and per-instance CSRF token; bodies cannot select commands
+ok 25 - routes require loopback, exact host/origin, JSON, and per-instance CSRF token; bodies cannot select commands
+  ---
+  duration_ms: 50.440541
+  type: 'test'
+  ...
+# Subtest: SSE replays monotonically with Last-Event-ID and ends after the terminal state
+ok 26 - SSE replays monotonically with Last-Event-ID and ends after the terminal state
+  ---
+  duration_ms: 26.014
+  type: 'test'
+  ...
+# Subtest: live SSE receives new logs and cancellation, then removes its listener
+ok 27 - live SSE receives new logs and cancellation, then removes its listener
+  ---
+  duration_ms: 65.7245
+  type: 'test'
+  ...
+# Subtest: fixed quick job runs Node fixtures, keeps going on failure, reports missing scripts, and persists history
+ok 28 - fixed quick job runs Node fixtures, keeps going on failure, reports missing scripts, and persists history
+  ---
+  duration_ms: 238.984833
+  type: 'test'
+  ...
+# Subtest: all quick-job arguments are fixed, and enrichment uses server settings
+ok 29 - all quick-job arguments are fixed, and enrichment uses server settings
+  ---
+  duration_ms: 57.617958
+  type: 'test'
+  ...
+# Subtest: kind locks cover other runner instances, different kinds can run, and cancel releases the lock
+ok 30 - kind locks cover other runner instances, different kinds can run, and cancel releases the lock
+  ---
+  duration_ms: 89.58875
+  type: 'test'
+  ...
+# Subtest: job deadline aborts cooperative jobs and CI refuses to start
+ok 31 - job deadline aborts cooperative jobs and CI refuses to start
+  ---
+  duration_ms: 70.601334
+  type: 'test'
+  ...
+# Subtest: owned Node process supports cancellation, timeout, and output caps
+ok 32 - owned Node process supports cancellation, timeout, and output caps
+  ---
+  duration_ms: 76.800959
+  type: 'test'
+  ...
+# Subtest: safe file access rejects traversal, symlinks and hard links
+ok 33 - safe file access rejects traversal, symlinks and hard links
+  ---
+  duration_ms: 3.692125
+  type: 'test'
+  ...
+# Subtest: dead owner history is interrupted and its stale kind lease can be reused
+ok 34 - dead owner history is interrupted and its stale kind lease can be reused
+  ---
+  duration_ms: 33.562291
+  type: 'test'
+  ...
+# Subtest: bursty logs stay bounded and persist the final state after coalesced writes
+ok 35 - bursty logs stay bounded and persist the final state after coalesced writes
+  ---
+  duration_ms: 47.660083
+  type: 'test'
+  ...
+# Subtest: source check uses HEAD, pins DNS to a public address, discards bodies, and checks redirect targets
+ok 36 - source check uses HEAD, pins DNS to a public address, discards bodies, and checks redirect targets
+  ---
+  duration_ms: 27.772417
+  type: 'test'
+  ...
+# Subtest: private DNS, credentialed URLs, request budgets, and aborted jobs do not start requests
+ok 37 - private DNS, credentialed URLs, request budgets, and aborted jobs do not start requests
+  ---
+  duration_ms: 0.647459
+  type: 'test'
+  ...
+# Subtest: collect uses fixtures, caps models/day, queues news, changed guides, links and weekly trends
+ok 38 - collect uses fixtures, caps models/day, queues news, changed guides, links and weekly trends
+  ---
+  duration_ms: 187.744459
+  type: 'test'
+  ...
+# Subtest: collect keeps source fingerprints on failure and handles 304 without losing state
+ok 39 - collect keeps source fingerprints on failure and handles 304 without losing state
+  ---
+  duration_ms: 67.367958
+  type: 'test'
+  ...
+# Subtest: weekly digest is not due within seven days; model reservation resets on next day
+ok 40 - weekly digest is not due within seven days; model reservation resets on next day
+  ---
+  duration_ms: 23.04375
+  type: 'test'
+  ...
+# Subtest: a valid patch applies to a clean fixture and reports exact growth
+ok 41 - a valid patch applies to a clean fixture and reports exact growth
+  ---
+  duration_ms: 16.364875
+  type: 'test'
+  ...
+# Subtest: rejects out-of-allowlist paths, traversal, duplicate paths, hidden paths and no partial write
+ok 42 - rejects out-of-allowlist paths, traversal, duplicate paths, hidden paths and no partial write
+  ---
+  duration_ms: 7.320917
+  type: 'test'
+  ...
+# Subtest: rejects missing sources, HTTP sources, invalid summary and unknown fields
+ok 43 - rejects missing sources, HTTP sources, invalid summary and unknown fields
+  ---
+  duration_ms: 5.68875
+  type: 'test'
+  ...
+# Subtest: rejects rights violations, active markup, secrets and long copying
+ok 44 - rejects rights violations, active markup, secrets and long copying
+  ---
+  duration_ms: 6.794625
+  type: 'test'
+  ...
+# Subtest: rejects stale hashes, oversize growth, symlink parents and target/source mismatch
+ok 45 - rejects stale hashes, oversize growth, symlink parents and target/source mismatch
+  ---
+  duration_ms: 14.218166
+  type: 'test'
+  ...
+# Subtest: contribution label gates the same validator and never treats issue text as a command
+ok 46 - contribution label gates the same validator and never treats issue text as a command
+  ---
+  duration_ms: 5.488042
+  type: 'test'
+  ...
+# Subtest: MCP data reader exposes listed data files only; CLI plans contain no shell or installs
+ok 47 - MCP data reader exposes listed data files only; CLI plans contain no shell or installs
+  ---
+  duration_ms: 11.634333
+  type: 'test'
+  ...
+# Subtest: Claude result extraction requires the last successful structured result
+ok 48 - Claude result extraction requires the last successful structured result
+  ---
+  duration_ms: 0.204917
+  type: 'test'
+  ...
+# Subtest: persona traits require HTTPS evidence and the model identity stays bound to work
+ok 49 - persona traits require HTTPS evidence and the model identity stays bound to work
+  ---
+  duration_ms: 7.227834
+  type: 'test'
+  ...
+# Subtest: G1 publisher documents use their shared schema and collection detects changed nested sources
+ok 50 - G1 publisher documents use their shared schema and collection detects changed nested sources
+  ---
+  duration_ms: 18.500708
+  type: 'test'
+  ...
+# Subtest: build adapter validates maintained data and overlays only an exactly matching news URL
+ok 51 - build adapter validates maintained data and overlays only an exactly matching news URL
+  ---
+  duration_ms: 5.228959
+  type: 'test'
+  ...
+# Subtest: local loop uses a mocked CLI and validates in an isolated copy without changing original data
+ok 52 - local loop uses a mocked CLI and validates in an isolated copy without changing original data
+  ---
+  duration_ms: 87.232167
+  type: 'test'
+  ...
+# Subtest: model update additions must have a complete sourced schema and a scheduled model ID
+ok 53 - model update additions must have a complete sourced schema and a scheduled model ID
+  ---
+  duration_ms: 13.667875
+  type: 'test'
+  ...
+# Subtest: default landing creates numbered bot PR and writes only curated data plus deterministic notes
+ok 54 - default landing creates numbered bot PR and writes only curated data plus deterministic notes
+  ---
+  duration_ms: 92.225
+  type: 'test'
+  ...
+# Subtest: automerge uses non-force update and explicitly dispatches the existing pages workflow
+ok 55 - automerge uses non-force update and explicitly dispatches the existing pages workflow
+  ---
+  duration_ms: 6.682333
+  type: 'test'
+  ...
+# Subtest: stale default branch rejects before any remote mutation
+ok 56 - stale default branch rejects before any remote mutation
+  ---
+  duration_ms: 2.534167
+  type: 'test'
+  ...
+# Subtest: workflow YAML parses; daily upstream trigger, dispatch dry-run, kill switch and concurrency exist
+ok 57 - workflow YAML parses; daily upstream trigger, dispatch dry-run, kill switch and concurrency exist
+  ---
+  duration_ms: 0.833959
+  type: 'test'
+  ...
+# Subtest: only land has write permissions; collect/validate have no secrets; action pins and inputs are present
+ok 58 - only land has write permissions; collect/validate have no secrets; action pins and inputs are present
+  ---
+  duration_ms: 0.856125
+  type: 'test'
+  ...
+# Subtest: contribution workflow parses and calls the validator only behind the AI label
+ok 59 - contribution workflow parses and calls the validator only behind the AI label
+  ---
+  duration_ms: 3.041666
+  type: 'test'
+  ...
+# Subtest: small YAML parser rejects duplicate keys and malformed indentation
+ok 60 - small YAML parser rejects duplicate keys and malformed indentation
+  ---
+  duration_ms: 0.242917
+  type: 'test'
+  ...
+# Subtest: web build writes accepted aggregates and full runtime catalogs without publishing private state
+ok 61 - web build writes accepted aggregates and full runtime catalogs without publishing private state
+  ---
+  duration_ms: 208.195125
+  type: 'test'
+  ...
+# Subtest: model view displays basis, sources, last checks and patch, and keeps recreation disabled on a static site
+ok 62 - model view displays basis, sources, last checks and patch, and keeps recreation disabled on a static site
+  ---
+  duration_ms: 15.721209
+  type: 'test'
+  ...
+# Subtest: palette searches tool, dated edition, model and bilingual action tokens
+ok 63 - palette searches tool, dated edition, model and bilingual action tokens
+  ---
+  duration_ms: 1.2045
+  type: 'test'
+  ...
+# Subtest: navigation has six groups and preserves registration replacement, cleanup and app filtering
+ok 64 - navigation has six groups and preserves registration replacement, cleanup and app filtering
+  ---
+  duration_ms: 0.274417
+  type: 'test'
+  ...
+# Subtest: shared panel operates through the menu, palette, pages and keyboard in Japanese
+    # Subtest: one panel exposes each former settings page once in its hierarchy
+    ok 1 - one panel exposes each former settings page once in its hierarchy
+      ---
+      duration_ms: 254.523375
+      type: 'test'
+      ...
+    # Subtest: palette supports result movement, selection, no matches, IME and query restoration
+    ok 2 - palette supports result movement, selection, no matches, IME and query restoration
+      ---
+      duration_ms: 58.753583
+      type: 'test'
+      ...
+    # Subtest: search actions execute and model details return to the previous page
+    ok 3 - search actions execute and model details return to the previous page
+      ---
+      duration_ms: 56.466625
+      type: 'test'
+      ...
+    # Subtest: feature pages retain a back route and only one visible dialog
+    ok 4 - feature pages retain a back route and only one visible dialog
+      ---
+      duration_ms: 65.083375
+      type: 'test'
+      ...
+    # Subtest: arrows and Alt brackets step editions while text editing and modifiers keep their input behavior
+    ok 5 - arrows and Alt brackets step editions while text editing and modifiers keep their input behavior
+      ---
+      duration_ms: 33.827583
+      type: 'test'
+      ...
+    1..5
+ok 65 - shared panel operates through the menu, palette, pages and keyboard in Japanese
+  ---
+  duration_ms: 649.917542
+  type: 'test'
+  ...
+# Subtest: recipe-run accepts only fixed, minimal reports; rejects chat, extra fields and free-text failure data
+ok 66 - recipe-run accepts only fixed, minimal reports; rejects chat, extra fields and free-text failure data
+  ---
+  duration_ms: 37.089125
+  type: 'test'
+  ...
+# Subtest: accepted runs deduplicate one contributor per recipe/harness set/patch and retract edits
+ok 67 - accepted runs deduplicate one contributor per recipe/harness set/patch and retract edits
+  ---
+  duration_ms: 24.636458
+  type: 'test'
+  ...
+# Subtest: 120 accepted reports display eight tenths; partial and failed runs remain in denominator; threshold is 20
+ok 68 - 120 accepted reports display eight tenths; partial and failed runs remain in denominator; threshold is 20
+  ---
+  duration_ms: 92.189917
+  type: 'test'
+  ...
+# Subtest: basis labels distinguish direct sources and borrowed traits
+ok 69 - basis labels distinguish direct sources and borrowed traits
+  ---
+  duration_ms: 0.141542
+  type: 'test'
+  ...
+# Subtest: server.js app smoke: root, alias, legacy, features, all mounted modules, and local admin token
+ok 70 - server.js app smoke: root, alias, legacy, features, all mounted modules, and local admin token
+  ---
+  duration_ms: 283.252542
+  type: 'test'
+  ...
+# Subtest: published data is fetched lazily, cached by site, reused offline, and rejects traversal
+ok 71 - published data is fetched lazily, cached by site, reused offline, and rejects traversal
+  ---
+  duration_ms: 8.646791
+  type: 'test'
+  ...
+# Subtest: installed workflows have parseable Node programs and publish generated data without commits
+ok 72 - installed workflows have parseable Node programs and publish generated data without commits
+  ---
+  duration_ms: 1021.148666
+  type: 'test'
+  ...
+# Subtest: public address screening rejects loopback, private, metadata, reserved and mapped ranges
+ok 73 - public address screening rejects loopback, private, metadata, reserved and mapped ranges
+  ---
+  duration_ms: 4.021292
+  type: 'test'
+  ...
+# Subtest: production fetch refuses mixed public/private DNS results before connecting
+ok 74 - production fetch refuses mixed public/private DNS results before connecting
+  ---
+  duration_ms: 1.191125
+  type: 'test'
+  ...
+# Subtest: production DNS timeout is bounded without any network
+ok 75 - production DNS timeout is bounded without any network
+  ---
+  duration_ms: 14.669458
+  type: 'test'
+  ...
+# Subtest: stream caps count actual bytes, cancel excess input, reject compressed/invalid UTF-8
+ok 76 - stream caps count actual bytes, cancel excess input, reject compressed/invalid UTF-8
+  ---
+  duration_ms: 37.421333
+  type: 'test'
+  ...
+# Subtest: file caps include growth after stat; symlinks and hard links are refused
+ok 77 - file caps include growth after stat; symlinks and hard links are refused
+  ---
+  duration_ms: 21.881958
+  type: 'test'
+  ...
+# Subtest: dry-run prints a Japanese reply and performs zero writes, including with reply/output configured
+ok 78 - dry-run prints a Japanese reply and performs zero writes, including with reply/output configured
+  ---
+  duration_ms: 27.710833
+  type: 'test'
+  ...
+# Subtest: accepted event produces six exact artifact files; state and drafts stay outside public build input
+ok 79 - accepted event produces six exact artifact files; state and drafts stay outside public build input
+  ---
+  duration_ms: 37.249916
+  type: 'test'
+  ...
+# Subtest: rejection writes only generic reply, never advances prior state or echoes malicious payload
+ok 80 - rejection writes only generic reply, never advances prior state or echoes malicious payload
+  ---
+  duration_ms: 33.139417
+  type: 'test'
+  ...
+# Subtest: CLI accepts only event path and one dry-run switch; no attachment/out flags
+ok 81 - CLI accepts only event path and one dry-run switch; no attachment/out flags
+  ---
+  duration_ms: 0.57825
+  type: 'test'
+  ...
+# Subtest: credit endpoints expose only opt-in display names and counts; admin routes deny by default
+ok 82 - credit endpoints expose only opt-in display names and counts; admin routes deny by default
+  ---
+  duration_ms: 3.712875
+  type: 'test'
+  ...
+# Subtest: authorized admin reads queued drafts; malformed public artifacts return a generic failure
+ok 83 - authorized admin reads queued drafts; malformed public artifacts return a generic failure
+  ---
+  duration_ms: 1.584334
+  type: 'test'
+  ...
+# Subtest: one unconfirmed link waits; distinct GitHub accounts corroborate automatically across runs
+ok 84 - one unconfirmed link waits; distinct GitHub accounts corroborate automatically across runs
+  ---
+  duration_ms: 25.670417
+  type: 'test'
+  ...
+# Subtest: same account, other issue, edited display name or replay never counts as another person
+ok 85 - same account, other issue, edited display name or replay never counts as another person
+  ---
+  duration_ms: 18.957167
+  type: 'test'
+  ...
+# Subtest: older edited events cannot overwrite a newer accepted revision
+ok 86 - older edited events cannot overwrite a newer accepted revision
+  ---
+  duration_ms: 0.486167
+  type: 'test'
+  ...
+# Subtest: offset link timestamps normalize into valid UTC build artifacts
+ok 87 - offset link timestamps normalize into valid UTC build artifacts
+  ---
+  duration_ms: 34.181833
+  type: 'test'
+  ...
+# Subtest: CI can confirm a lone OK, broken or redirect report; it never follows redirects
+ok 88 - CI can confirm a lone OK, broken or redirect report; it never follows redirects
+  ---
+  duration_ms: 4.049084
+  type: 'test'
+  ...
+# Subtest: rate limits, auth failures, outages, timeouts, cross-host redirects and mismatches do not prove a reported state
+ok 89 - rate limits, auth failures, outages, timeouts, cross-host redirects and mismatches do not prove a reported state
+  ---
+  duration_ms: 2.152417
+  type: 'test'
+  ...
+# Subtest: conflicting reports wait unless CI confirms one state; that state alone gets credit
+ok 90 - conflicting reports wait unless CI confirms one state; that state alone gets credit
+  ---
+  duration_ms: 1.044042
+  type: 'test'
+  ...
+# Subtest: old reports expire and do not corroborate new reports
+ok 91 - old reports expire and do not corroborate new reports
+  ---
+  duration_ms: 0.386
+  type: 'test'
+  ...
+# Subtest: a fact is applied only after every source is re-fetched and matches its id, field and complete value
+ok 92 - a fact is applied only after every source is re-fetched and matches its id, field and complete value
+  ---
+  duration_ms: 3.580834
+  type: 'test'
+  ...
+# Subtest: one missing, conflicting, oversized, binary, redirected or mismatched source holds a fact
+ok 93 - one missing, conflicting, oversized, binary, redirected or mismatched source holds a fact
+  ---
+  duration_ms: 3.657375
+  type: 'test'
+  ...
+# Subtest: source matcher avoids unrelated values, embedded numbers, scripts and hidden HTML
+ok 94 - source matcher avoids unrelated values, embedded numbers, scripts and hidden HTML
+  ---
+  duration_ms: 1.238792
+  type: 'test'
+  ...
+# Subtest: verified conflicting facts for a field are held for resolution
+ok 95 - verified conflicting facts for a field are held for resolution
+  ---
+  duration_ms: 1.067208
+  type: 'test'
+  ...
+# Subtest: drafts and news only enter the review queue, never auto-publish or call sources
+ok 96 - drafts and news only enter the review queue, never auto-publish or call sources
+  ---
+  duration_ms: 2.962333
+  type: 'test'
+  ...
+# Subtest: credits are opt-in, omit account data, deduplicate replays, aggregate identical aliases, and retract on edit
+ok 97 - credits are opt-in, omit account data, deduplicate replays, aggregate identical aliases, and retract on edit
+  ---
+  duration_ms: 9.882916
+  type: 'test'
+  ...
+# Subtest: request budget fails closed and repeated sources are fetched once per run
+ok 98 - request budget fails closed and repeated sources are fetched once per run
+  ---
+  duration_ms: 1.009292
+  type: 'test'
+  ...
+# Subtest: state corruption, wrong HMAC key, forged fields, future receipts and capacity fail closed
+ok 99 - state corruption, wrong HMAC key, forged fields, future receipts and capacity fail closed
+  ---
+  duration_ms: 7.044167
+  type: 'test'
+  ...
+# Subtest: build mounting validates all entries before mutation and exposes only fixed fact/link callbacks
+ok 100 - build mounting validates all entries before mutation and exposes only fixed fact/link callbacks
+  ---
+  duration_ms: 7.638208
+  type: 'test'
+  ...
+# Subtest: all five kinds have strict, bounded schemas
+ok 101 - all five kinds have strict, bounded schemas
+  ---
+  duration_ms: 18.585416
+  type: 'test'
+  ...
+# Subtest: schema rejects missing declarations, wrong version, unknown fields, bad IDs and credit without opt-in
+ok 102 - schema rejects missing declarations, wrong version, unknown fields, bad IDs and credit without opt-in
+  ---
+  duration_ms: 1.499333
+  type: 'test'
+  ...
+# Subtest: source references must be unique, public, credential-free and from two hosts
+ok 103 - source references must be unique, public, credential-free and from two hosts
+  ---
+  duration_ms: 0.92
+  type: 'test'
+  ...
+# Subtest: URLs cannot smuggle credentials, local addresses, images, encodings or query data
+ok 104 - URLs cannot smuggle credentials, local addresses, images, encodings or query data
+  ---
+  duration_ms: 0.171709
+  type: 'test'
+  ...
+# Subtest: link timestamps and field-specific values are checked
+ok 105 - link timestamps and field-specific values are checked
+  ---
+  duration_ms: 1.072833
+  type: 'test'
+  ...
+# Subtest: personal data, paths, tokens, markup, prohibited assets and copied-code markers are screened
+ok 106 - personal data, paths, tokens, markup, prohibited assets and copied-code markers are screened
+  ---
+  duration_ms: 1.780791
+  type: 'test'
+  ...
+# Subtest: hostile JSON, deep structures, oversize and prototype fields fail without reflecting input
+ok 107 - hostile JSON, deep structures, oversize and prototype fields fail without reflecting input
+  ---
+  duration_ms: 0.519459
+  type: 'test'
+  ...
+# Subtest: runner issue/discussion bodies parse raw JSON or one exact fenced block
+ok 108 - runner issue/discussion bodies parse raw JSON or one exact fenced block
+  ---
+  duration_ms: 1.489833
+  type: 'test'
+  ...
+# Subtest: only creator edits, human accounts, public matching repo, supported actions and top-level subjects are accepted
+ok 109 - only creator edits, human accounts, public matching repo, supported actions and top-level subjects are accepted
+  ---
+  duration_ms: 8.238459
+  type: 'test'
+  ...
+# Subtest: hostile surrounding prose and commands never become attachment URLs or file paths
+ok 110 - hostile surrounding prose and commands never become attachment URLs or file paths
+  ---
+  duration_ms: 0.836458
+  type: 'test'
+  ...
+# Subtest: exact GitHub JSON attachment is capped, checked, and parsed without trusting its filename
+ok 111 - exact GitHub JSON attachment is capped, checked, and parsed without trusting its filename
+  ---
+  duration_ms: 12.843584
+  type: 'test'
+  ...
+# Subtest: event and body size limits are separate and missing config is closed
+ok 112 - event and body size limits are separate and missing config is closed
+  ---
+  duration_ms: 1.036459
+  type: 'test'
+  ...
+# Subtest: 経路の語句をつないで文を作り、使った事実と出典を返す
+ok 113 - 経路の語句をつないで文を作り、使った事実と出典を返す
+  ---
+  duration_ms: 49.228625
+  type: 'test'
+  ...
+# Subtest: 名前の断面が別のモデルに届けば、そのモデルを中心に答える
+ok 114 - 名前の断面が別のモデルに届けば、そのモデルを中心に答える
+  ---
+  duration_ms: 33.849042
+  type: 'test'
+  ...
+# Subtest: 途中で切れた経路は型付きの不明になる
+ok 115 - 途中で切れた経路は型付きの不明になる
+  ---
+  duration_ms: 13.512334
+  type: 'test'
+  ...
+# Subtest: 「あなた」は誰についての断面にだけ流れ、合意しなければ何も言わない
+ok 116 - 「あなた」は誰についての断面にだけ流れ、合意しなければ何も言わない
+  ---
+  duration_ms: 7.404083
+  type: 'test'
+  ...
+# Subtest: マトリョーシカ: 最初の問いを付けたときだけ第2層が付け足す
+ok 117 - マトリョーシカ: 最初の問いを付けたときだけ第2層が付け足す
+  ---
+  duration_ms: 19.734125
+  type: 'test'
+  ...
+# Subtest: fresh checkout builds with empty HOME, saved R5 inputs, relay and facts, offline and online
+ok 118 - fresh checkout builds with empty HOME, saved R5 inputs, relay and facts, offline and online
+  ---
+  duration_ms: 18991.79075
+  type: 'test'
+  ...
+# committed {"models":90,"closed":1638,"tools":5394,"versions":22470,"era":287,"guides":103,"facts":255}
+# empty HOME offline {"models":90,"closed":1638,"tools":5394,"versions":22470,"era":287,"guides":103,"facts":255}
+# rights {"ok":true,"files":2535,"bytes":99667349,"archiveBytesUpperBound":105544704}
+# empty HOME online {"models":90,"closed":1638,"tools":5394,"versions":22470,"era":287,"guides":103,"facts":255,"catalogFallback":true,"liveNetwork":false}
+# Subtest: module graph versions cover static and lazy imports and preserve import.meta.url directories
+ok 119 - module graph versions cover static and lazy imports and preserve import.meta.url directories
+  ---
+  duration_ms: 65.321125
+  type: 'test'
+  ...
+# Subtest: published module recovery verifies bytes, permits first deployment and rejects path traversal
+ok 120 - published module recovery verifies bytes, permits first deployment and rejects path traversal
+  ---
+  duration_ms: 74.29225
+  type: 'test'
+  ...
+# Subtest: all workflow actions have immutable pins and one scheduled entry owns the daily flow
+ok 121 - all workflow actions have immutable pins and one scheduled entry owns the daily flow
+  ---
+  duration_ms: 19.088875
+  type: 'test'
+  ...
+# Subtest: missing AI keys skip collection before checkout and never call an AI action
+ok 122 - missing AI keys skip collection before checkout and never call an AI action
+  ---
+  duration_ms: 69.010041
+  type: 'test'
+  ...
+# Subtest: waitlist is dismissible and once per session even if storage is unavailable
+ok 123 - waitlist is dismissible and once per session even if storage is unavailable
+  ---
+  duration_ms: 3.170041
+  type: 'test'
+  ...
+# Subtest: token-usage capacity is not misrepresented as a service admission queue
+ok 124 - token-usage capacity is not misrepresented as a service admission queue
+  ---
+  duration_ms: 0.470917
+  type: 'test'
+  ...
+# Subtest: known per-conversation cap appears at N sends, once, with a source
+ok 125 - known per-conversation cap appears at N sends, once, with a source
+  ---
+  duration_ms: 0.575083
+  type: 'test'
+  ...
+# Subtest: unknown quota never fabricates a historical count; trigger is labelled as a demo
+ok 126 - unknown quota never fabricates a historical count; trigger is labelled as a demo
+  ---
+  duration_ms: 13.13875
+  type: 'test'
+  ...
+# Subtest: rare errors never block or consume a send and appear at most once in a session
+ok 127 - rare errors never block or consume a send and appear at most once in a session
+  ---
+  duration_ms: 0.643
+  type: 'test'
+  ...
+# Subtest: beta/deprecation badges keep their sources; unsourced accents are not shown
+ok 128 - beta/deprecation badges keep their sources; unsourced accents are not shown
+  ---
+  duration_ms: 0.600083
+  type: 'test'
+  ...
+# Subtest: a sourced badge with a confirmed sidebar location uses that slot; publication notes stay in the frame
+ok 129 - a sourced badge with a confirmed sidebar location uses that slot; publication notes stay in the frame
+  ---
+  duration_ms: 1.374417
+  type: 'test'
+  ...
+# Subtest: real offline era build writes the exact version-keyed source data (all writes held in memory)
+ok 130 - real offline era build writes the exact version-keyed source data (all writes held in memory)
+  ---
+  duration_ms: 94.723792
+  type: 'test'
+  ...
+# Subtest: all source-era versions are indexed without dropping sourced fields or inventing defaults
+ok 131 - all source-era versions are indexed without dropping sourced fields or inventing defaults
+  ---
+  duration_ms: 4.144792
+  type: 'test'
+  ...
+# Subtest: bad schema and duplicate version ids fail the build instead of silently overwriting records
+ok 132 - bad schema and duplicate version ids fail the build instead of silently overwriting records
+  ---
+  duration_ms: 0.340209
+  type: 'test'
+  ...
+# Subtest: missing/wrong-tool data stays explicitly unverified
+ok 133 - missing/wrong-tool data stays explicitly unverified
+  ---
+  duration_ms: 0.129125
+  type: 'test'
+  ...
+# Subtest: Japanese clock is deterministic across host timezones; missing times are not fabricated
+ok 134 - Japanese clock is deterministic across host timezones; missing times are not fabricated
+  ---
+  duration_ms: 1.888875
+  type: 'test'
+  ...
+# Subtest: unsafe links and accents outside their dated window are excluded
+ok 135 - unsafe links and accents outside their dated window are excluded
+  ---
+  duration_ms: 0.403541
+  type: 'test'
+  ...
+# Subtest: memento retirement is sourced, scoped by its label and never confused with a deprecation notice
+ok 136 - memento retirement is sourced, scoped by its label and never confused with a deprecation notice
+  ---
+  duration_ms: 0.325959
+  type: 'test'
+  ...
+# Subtest: frame renders one plain app menu and the representative date; hide state survives rerender
+ok 137 - frame renders one plain app menu and the representative date; hide state survives rerender
+  ---
+  duration_ms: 4.196375
+  type: 'test'
+  ...
+# Subtest: web navigation filters app-only administration without losing other registrations
+ok 138 - web navigation filters app-only administration without losing other registrations
+  ---
+  duration_ms: 0.676334
+  type: 'test'
+  ...
+# Subtest: entry point has a desk/window and no permanent Memento bar, version strip or footer
+ok 139 - entry point has a desk/window and no permanent Memento bar, version strip or footer
+  ---
+  duration_ms: 5.961083
+  type: 'test'
+  ...
+# Subtest: every Japanese era display string has a complete English sibling
+ok 140 - every Japanese era display string has a complete English sibling
+  ---
+  duration_ms: 6.522708
+  type: 'test'
+  ...
+# Subtest: the version index preserves every English field and all original source records
+ok 141 - the version index preserves every English field and all original source records
+  ---
+  duration_ms: 0.862042
+  type: 'test'
+  ...
+# Subtest: Japanese official and researched persona values have sourced English equivalents
+ok 142 - Japanese official and researched persona values have sourced English equivalents
+  ---
+  duration_ms: 8.234125
+  type: 'test'
+  ...
+# Subtest: the era build rejects missing strings and incomplete or Japanese English arrays
+ok 143 - the era build rejects missing strings and incomplete or Japanese English arrays
+  ---
+  duration_ms: 217.0105
+  type: 'test'
+  ...
+# Subtest: dropdown uses the top slot and only the edition’s sourced options
+ok 144 - dropdown uses the top slot and only the edition’s sourced options
+  ---
+  duration_ms: 5.412583
+  type: 'test'
+  ...
+# Subtest: input-bar opens an in-screen panel and releases it on disposal
+ok 145 - input-bar opens an in-screen panel and releases it on disposal
+  ---
+  duration_ms: 1.037625
+  type: 'test'
+  ...
+# Subtest: slash choices sit above the prompt and support arrows, Enter, Escape and focus restoration
+ok 146 - slash choices sit above the prompt and support arrows, Enter, Escape and focus restoration
+  ---
+  duration_ms: 2.675375
+  type: 'test'
+  ...
+# Subtest: commands are captured before the normal composer and respect Japanese composition
+ok 147 - commands are captured before the normal composer and respect Japanese composition
+  ---
+  duration_ms: 0.416083
+  type: 'test'
+  ...
+# Subtest: the form submit path also consumes a pasted command before sending
+ok 148 - the form submit path also consumes a pasted command before sending
+  ---
+  duration_ms: 0.598334
+  type: 'test'
+  ...
+# Subtest: settings entrance opens a themed panel without nesting a select in a button
+ok 149 - settings entrance opens a themed panel without nesting a select in a button
+  ---
+  duration_ms: 0.5495
+  type: 'test'
+  ...
+# Subtest: a recorded search field filters only sourced choices and keyboard navigation skips hidden rows
+ok 150 - a recorded search field filters only sourced choices and keyboard navigation skips hidden rows
+  ---
+  duration_ms: 0.529791
+  type: 'test'
+  ...
+# Subtest: renderer palette, font and color scheme are resolved again when opening
+ok 151 - renderer palette, font and color scheme are resolved again when opening
+  ---
+  duration_ms: 0.935417
+  type: 'test'
+  ...
+# Subtest: CLI restart keeps the quit and restart stages inline and previews the selected command
+ok 152 - CLI restart keeps the quit and restart stages inline and previews the selected command
+  ---
+  duration_ms: 2.021958
+  type: 'test'
+  ...
+# Subtest: none and unknown locations keep unknown options explicit and never invent choices
+ok 153 - none and unknown locations keep unknown options explicit and never invent choices
+  ---
+  duration_ms: 0.588541
+  type: 'test'
+  ...
+# Subtest: source-less controls cannot submit options or consume commands
+ok 154 - source-less controls cannot submit options or consume commands
+  ---
+  duration_ms: 0.280959
+  type: 'test'
+  ...
+# Subtest: historical side-panel cycling preserves the recorded two-way control
+ok 155 - historical side-panel cycling preserves the recorded two-way control
+  ---
+  duration_ms: 0.170833
+  type: 'test'
+  ...
+# Subtest: restart keeps the documented script, flag syntax and additional browser argument
+ok 156 - restart keeps the documented script, flag syntax and additional browser argument
+  ---
+  duration_ms: 1.1595
+  type: 'test'
+  ...
+# Subtest: a mapped catalogue alias keeps the selected historical label across rerenders
+ok 157 - a mapped catalogue alias keeps the selected historical label across rerenders
+  ---
+  duration_ms: 0.188875
+  type: 'test'
+  ...
+# V5 terminal inventory: 89 spec versions rendered, 67 terminal surfaces checked.
+# V5 command inventory: 49 recorded slash-command editions checked.
+# Subtest: all ten terminal-capable renderers retain sourced startup content for every spec version
+ok 158 - all ten terminal-capable renderers retain sourced startup content for every spec version
+  ---
+  duration_ms: 242.255666
+  type: 'test'
+  ...
+# Subtest: Claude Code sparse editions show reference welcome text with edition-specific controls
+ok 159 - Claude Code sparse editions show reference welcome text with edition-specific controls
+  ---
+  duration_ms: 19.217166
+  type: 'test'
+  ...
+# Subtest: all sourced slash commands use each recorded label, including OpenCode /models and Ollama /load
+ok 160 - all sourced slash commands use each recorded label, including OpenCode /models and Ollama /load
+  ---
+  duration_ms: 123.462
+  type: 'test'
+  ...
+# Subtest: OpenCode Ctrl+O and Ctrl+P paths expose the recorded model step without fabricating candidates
+ok 161 - OpenCode Ctrl+O and Ctrl+P paths expose the recorded model step without fabricating candidates
+  ---
+  duration_ms: 4.321125
+  type: 'test'
+  ...
+# Subtest: OpenClaw opens its conversation and consumes /model within that conversation
+ok 162 - OpenClaw opens its conversation and consumes /model within that conversation
+  ---
+  duration_ms: 4.092292
+  type: 'test'
+  ...
+# V5 restart inventory: 12 recorded CLI-flag editions checked.
+# Subtest: Cursor keyboard and nested-menu flows keep the unverified position and unknown options visible
+ok 163 - Cursor keyboard and nested-menu flows keep the unverified position and unknown options visible
+  ---
+  duration_ms: 22.139417
+  type: 'test'
+  ...
+# Subtest: real CLI restarts stay inline, preserve their command and never send a chat message
+ok 164 - real CLI restarts stay inline, preserve their command and never send a chat message
+  ---
+  duration_ms: 20.868208
+  type: 'test'
+  ...
+# Subtest: record dates are validated without inventing a desktop date from the edition year
+ok 165 - record dates are validated without inventing a desktop date from the edition year
+  ---
+  duration_ms: 1.861666
+  type: 'test'
+  ...
+# Subtest: a multi-year passage changes only the two recorded dates and the frame in place
+ok 166 - a multi-year passage changes only the two recorded dates and the frame in place
+  ---
+  duration_ms: 3.405083
+  type: 'test'
+  ...
+# Subtest: recorded times remain recorded times, and short moves do not add a passage of years
+ok 167 - recorded times remain recorded times, and short moves do not add a passage of years
+  ---
+  duration_ms: 1.327833
+  type: 'test'
+  ...
+# Subtest: terminal, browser, known desktop and unknown OS records retain their own vocabulary
+ok 168 - terminal, browser, known desktop and unknown OS records retain their own vocabulary
+  ---
+  duration_ms: 0.273125
+  type: 'test'
+  ...
+# Subtest: release announcements stay explicitly identified as records with evidence and an honesty label in every phase
+ok 169 - release announcements stay explicitly identified as records with evidence and an honesty label in every phase
+  ---
+  duration_ms: 1.031792
+  type: 'test'
+  ...
+# Subtest: unsourced or out-of-period changes are not promoted to historical facts
+ok 170 - unsourced or out-of-period changes are not promoted to historical facts
+  ---
+  duration_ms: 0.731166
+  type: 'test'
+  ...
+# Subtest: the sourced trend is readable without raw URLs and retains its source link
+ok 171 - the sourced trend is readable without raw URLs and retains its source link
+  ---
+  duration_ms: 0.2575
+  type: 'test'
+  ...
+# Subtest: the historical update control is restricted to the pinned Cherry Studio edition and evidence
+ok 172 - the historical update control is restricted to the pinned Cherry Studio edition and evidence
+  ---
+  duration_ms: 18.475792
+  type: 'test'
+  ...
+# Subtest: all bundled dated editions create source-linked, logo-free scenes without fabricating commands
+ok 173 - all bundled dated editions create source-linked, logo-free scenes without fabricating commands
+  ---
+  duration_ms: 139.406625
+  type: 'test'
+  ...
+# Subtest: English uses translated record fields and functional controls
+ok 174 - English uses translated record fields and functional controls
+  ---
+  duration_ms: 78.941542
+  type: 'test'
+  ...
+# Subtest: normal travel orders record, frame change, destination and caption in 1780 ms
+ok 175 - normal travel orders record, frame change, destination and caption in 1780 ms
+  ---
+  duration_ms: 7.389041
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: Escape
+ok 176 - any key skips once during notice: Escape
+  ---
+  duration_ms: 1.189959
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: Enter
+ok 177 - any key skips once during notice: Enter
+  ---
+  duration_ms: 0.405583
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: Tab
+ok 178 - any key skips once during notice: Tab
+  ---
+  duration_ms: 0.976959
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: a
+ok 179 - any key skips once during notice: a
+  ---
+  duration_ms: 0.755792
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: Shift
+ok 180 - any key skips once during notice: Shift
+  ---
+  duration_ms: 0.369958
+  type: 'test'
+  ...
+# Subtest: any key skips once during notice: ArrowRight
+ok 181 - any key skips once during notice: ArrowRight
+  ---
+  duration_ms: 0.28825
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: Escape
+ok 182 - any key skips once during restart: Escape
+  ---
+  duration_ms: 0.504625
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: Enter
+ok 183 - any key skips once during restart: Enter
+  ---
+  duration_ms: 0.669125
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: Tab
+ok 184 - any key skips once during restart: Tab
+  ---
+  duration_ms: 0.479
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: a
+ok 185 - any key skips once during restart: a
+  ---
+  duration_ms: 0.233125
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: Shift
+ok 186 - any key skips once during restart: Shift
+  ---
+  duration_ms: 0.195833
+  type: 'test'
+  ...
+# Subtest: any key skips once during restart: ArrowRight
+ok 187 - any key skips once during restart: ArrowRight
+  ---
+  duration_ms: 0.582208
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: Escape
+ok 188 - any key skips once during caption: Escape
+  ---
+  duration_ms: 0.291541
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: Enter
+ok 189 - any key skips once during caption: Enter
+  ---
+  duration_ms: 0.409292
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: Tab
+ok 190 - any key skips once during caption: Tab
+  ---
+  duration_ms: 0.318584
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: a
+ok 191 - any key skips once during caption: a
+  ---
+  duration_ms: 0.325167
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: Shift
+ok 192 - any key skips once during caption: Shift
+  ---
+  duration_ms: 0.78625
+  type: 'test'
+  ...
+# Subtest: any key skips once during caption: ArrowRight
+ok 193 - any key skips once during caption: ArrowRight
+  ---
+  duration_ms: 0.370083
+  type: 'test'
+  ...
+# Subtest: click anywhere skips, consumes the click, and removes document listeners
+ok 194 - click anywhere skips, consumes the click, and removes document listeners
+  ---
+  duration_ms: 0.278875
+  type: 'test'
+  ...
+# Subtest: skip button uses the same immediate path
+ok 195 - skip button uses the same immediate path
+  ---
+  duration_ms: 0.278541
+  type: 'test'
+  ...
+# Subtest: a source click skips while retaining the link default action
+ok 196 - a source click skips while retaining the link default action
+  ---
+  duration_ms: 0.320625
+  type: 'test'
+  ...
+# Subtest: reduced motion swaps immediately without DOM, timers, listeners or focus change
+ok 197 - reduced motion swaps immediately without DOM, timers, listeners or focus change
+  ---
+  duration_ms: 0.111709
+  type: 'test'
+  ...
+# Subtest: the actual media-query preference is respected by default
+ok 198 - the actual media-query preference is respected by default
+  ---
+  duration_ms: 0.105917
+  type: 'test'
+  ...
+# Subtest: enabling reduced motion during travel ends it immediately and cleans up its listener
+ok 199 - enabling reduced motion during travel ends it immediately and cleans up its listener
+  ---
+  duration_ms: 0.215291
+  type: 'test'
+  ...
+# Subtest: backward and cross-tool travel use the same quiet sequence
+ok 200 - backward and cross-tool travel use the same quiet sequence
+  ---
+  duration_ms: 0.832167
+  type: 'test'
+  ...
+# Subtest: same edition, missing or invalid record dates bypass the transition
+ok 201 - same edition, missing or invalid record dates bypass the transition
+  ---
+  duration_ms: 0.121208
+  type: 'test'
+  ...
+# Subtest: the maximum closes a slow visual and still awaits the actual render
+ok 202 - the maximum closes a slow visual and still awaits the actual render
+  ---
+  duration_ms: 0.222667
+  type: 'test'
+  ...
+# Subtest: skipping an in-flight render removes the visual synchronously and never swaps twice
+ok 203 - skipping an in-flight render removes the visual synchronously and never swaps twice
+  ---
+  duration_ms: 0.199667
+  type: 'test'
+  ...
+# Subtest: cancel and replacement prevent stale swaps and captions
+ok 204 - cancel and replacement prevent stale swaps and captions
+  ---
+  duration_ms: 0.453166
+  type: 'test'
+  ...
+# Subtest: canceling a pending renderer does not resurrect its caption
+ok 205 - canceling a pending renderer does not resurrect its caption
+  ---
+  duration_ms: 0.932958
+  type: 'test'
+  ...
+# Subtest: render errors reach the caller and clean up, including after the visual deadline (false)
+ok 206 - render errors reach the caller and clean up, including after the visual deadline (false)
+  ---
+  duration_ms: 0.49175
+  type: 'test'
+  ...
+# Subtest: render errors reach the caller and clean up, including after the visual deadline (true)
+ok 207 - render errors reach the caller and clean up, including after the visual deadline (true)
+  ---
+  duration_ms: 2.046875
+  type: 'test'
+  ...
+# Subtest: skip restores focus to the destination input after rendering
+ok 208 - skip restores focus to the destination input after rendering
+  ---
+  duration_ms: 0.272416
+  type: 'test'
+  ...
+# Subtest: a destination modal keeps its focus and suppresses the arrival caption
+ok 209 - a destination modal keeps its focus and suppresses the arrival caption
+  ---
+  duration_ms: 0.65625
+  type: 'test'
+  ...
+# Subtest: hidden pages do not retain a delayed transition
+ok 210 - hidden pages do not retain a delayed transition
+  ---
+  duration_ms: 0.285125
+  type: 'test'
+  ...
+# Subtest: schema accepts real dates and rejects invalid dates, sources, chronology and long summaries
+ok 211 - schema accepts real dates and rejects invalid dates, sources, chronology and long summaries
+  ---
+  duration_ms: 1.474291
+  type: 'test'
+  ...
+# Subtest: collection has at least 80 distinct sourced guides and covers the harness registry
+ok 212 - collection has at least 80 distinct sourced guides and covers the harness registry
+  ---
+  duration_ms: 5.307708
+  type: 'test'
+  ...
+# Subtest: every summary is short, independently stored and has an original-source URL
+ok 213 - every summary is short, independently stored and has an original-source URL
+  ---
+  duration_ms: 1.452041
+  type: 'test'
+  ...
+# Subtest: legacy guide records remain valid and publish explicit unverified English fields
+ok 214 - legacy guide records remain valid and publish explicit unverified English fields
+  ---
+  duration_ms: 17.777875
+  type: 'test'
+  ...
+# Subtest: unresolved model, family, tool, technique and style references are reported
+ok 215 - unresolved model, family, tool, technique and style references are reported
+  ---
+  duration_ms: 14.900542
+  type: 'test'
+  ...
+# Subtest: trend dates are derived from dated evidence and never from the check date
+ok 216 - trend dates are derived from dated evidence and never from the check date
+  ---
+  duration_ms: 0.772084
+  type: 'test'
+  ...
+# Subtest: compact index stays under 600 KB, is deterministic, and refers to existing archives
+ok 217 - compact index stays under 600 KB, is deterministic, and refers to existing archives
+  ---
+  duration_ms: 30.314083
+  type: 'test'
+  ...
+# Subtest: builder writes only the requested output and check mode writes nothing
+ok 218 - builder writes only the requested output and check mode writes nothing
+  ---
+  duration_ms: 148.132792
+  type: 'test'
+  ...
+# Subtest: offline DOM fixture checks registration, error recovery, filters, timeline, safe cards and embedded guidance
+ok 219 - offline DOM fixture checks registration, error recovery, filters, timeline, safe cards and embedded guidance
+  ---
+  duration_ms: 75.427167
+  type: 'test'
+  ...
+# Subtest: search resolves company, Japanese technique, exact model ids, families and harness ids
+ok 220 - search resolves company, Japanese technique, exact model ids, families and harness ids
+  ---
+  duration_ms: 20.914458
+  type: 'test'
+  ...
+# Subtest: filters intersect and multiple query words must all match
+ok 221 - filters intersect and multiple query words must all match
+  ---
+  duration_ms: 4.1505
+  type: 'test'
+  ...
+# Subtest: all primary models have direct or identified maker references; other missing makers remain unverified
+ok 222 - all primary models have direct or identified maker references; other missing makers remain unverified
+  ---
+  duration_ms: 94.721333
+  type: 'test'
+  ...
+# Subtest: timeline uses publication or update date and excludes undated guides
+ok 223 - timeline uses publication or update date and excludes undated guides
+  ---
+  duration_ms: 0.234333
+  type: 'test'
+  ...
+# Subtest: E1 frame, deterministic clocks and unofficial notice render in English
+ok 224 - E1 frame, deterministic clocks and unofficial notice render in English
+  ---
+  duration_ms: 16.800416
+  type: 'test'
+  ...
+# Subtest: E1 era controls select English siblings while preserving Japanese placement parsing and fallback
+ok 225 - E1 era controls select English siblings while preserving Japanese placement parsing and fallback
+  ---
+  duration_ms: 3.948625
+  type: 'test'
+  ...
+# Subtest: E1 transitions use translated notices and trend captions
+ok 226 - E1 transitions use translated notices and trend captions
+  ---
+  duration_ms: 1.374375
+  type: 'test'
+  ...
+# Subtest: E1 generic screens and source panels use English inline text and sibling data
+ok 227 - E1 generic screens and source panels use English inline text and sibling data
+  ---
+  duration_ms: 20.61225
+  type: 'test'
+  ...
+# Subtest: E1 stream labels and report counts use English
+ok 228 - E1 stream labels and report counts use English
+  ---
+  duration_ms: 0.809375
+  type: 'test'
+  ...
+# Subtest: E1 model records and blend blueprints show English data and controls
+ok 229 - E1 model records and blend blueprints show English data and controls
+  ---
+  duration_ms: 20.561291
+  type: 'test'
+  ...
+# Subtest: E1 unified panel, palette, pages, welcome guide and language actions use normal entry points in English
+ok 230 - E1 unified panel, palette, pages, welcome guide and language actions use normal entry points in English
+  ---
+  duration_ms: 216.844542
+  type: 'test'
+  ...
+# Subtest: E2 uses the page language for first-person answers in both question languages
+ok 231 - E2 uses the page language for first-person answers in both question languages
+  ---
+  duration_ms: 20.840459
+  type: 'test'
+  ...
+# Subtest: E2 English axis pieces read naturally and preserve third-person subjects
+ok 232 - E2 English axis pieces read naturally and preserve third-person subjects
+  ---
+  duration_ms: 16.370916
+  type: 'test'
+  ...
+# Subtest: E2 retains both languages of intent patterns and renders English suggestions
+ok 233 - E2 retains both languages of intent patterns and renders English suggestions
+  ---
+  duration_ms: 0.205084
+  type: 'test'
+  ...
+# Subtest: E2 accepts ASCII facts and translated siblings, and abstains on Japanese-only details
+ok 234 - E2 accepts ASCII facts and translated siblings, and abstains on Japanese-only details
+  ---
+  duration_ms: 20.821834
+  type: 'test'
+  ...
+# Subtest: E2 unknown and free-form answers keep honesty and English labels
+ok 235 - E2 unknown and free-form answers keep honesty and English labels
+  ---
+  duration_ms: 6.756208
+  type: 'test'
+  ...
+# Subtest: E2 self-answer templates translate every supported intent
+ok 236 - E2 self-answer templates translate every supported intent
+  ---
+  duration_ms: 1.9425
+  type: 'test'
+  ...
+# Subtest: E2 English output questions and conversation memory retain their intended routes
+ok 237 - E2 English output questions and conversation memory retain their intended routes
+  ---
+  duration_ms: 585.266667
+  type: 'test'
+  ...
+# Subtest: E2 reviewed cards require English answers and continue checking citations and numbers
+ok 238 - E2 reviewed cards require English answers and continue checking citations and numbers
+  ---
+  duration_ms: 2.037958
+  type: 'test'
+  ...
+# Subtest: E2 persona renderer and guide fallback render English text
+ok 239 - E2 persona renderer and guide fallback render English text
+  ---
+  duration_ms: 0.701416
+  type: 'test'
+  ...
+# Subtest: E2 stand-in prompt and controls use English and keep the unofficial notice
+ok 240 - E2 stand-in prompt and controls use English and keep the unofficial notice
+  ---
+  duration_ms: 1.7515
+  type: 'test'
+  ...
+# Subtest: E2 archive summaries and search use English prose fields and source URLs
+ok 241 - E2 archive summaries and search use English prose fields and source URLs
+  ---
+  duration_ms: 6.428792
+  type: 'test'
+  ...
+# Subtest: E2 fixture covers at least 30 English questions through both normal entry paths
+ok 242 - E2 fixture covers at least 30 English questions through both normal entry paths
+  ---
+  duration_ms: 2028.244875
+  type: 'test'
+  ...
+# Subtest: D4 English era, voice and follow-ups use the same frozen cases as Japanese
+ok 243 - D4 English era, voice and follow-ups use the same frozen cases as Japanese
+  ---
+  duration_ms: 49.077125
+  type: 'test'
+  ...
+# E3 English inventory · 163 spec editions across 15 renderers
+# Subtest: E3 renders every assigned spec edition with English text and accessible labels
+ok 244 - E3 renders every assigned spec edition with English text and accessible labels
+  ---
+  duration_ms: 417.821042
+  type: 'test'
+  ...
+# Subtest: E3 example buttons send the displayed English requests
+ok 245 - E3 example buttons send the displayed English requests
+  ---
+  duration_ms: 8.558083
+  type: 'test'
+  ...
+# Subtest: E3 Antigravity controls update English notices and placeholders
+ok 246 - E3 Antigravity controls update English notices and placeholders
+  ---
+  duration_ms: 11.783167
+  type: 'test'
+  ...
+# Subtest: E3 DeepSeek search feedback and history controls remain English
+ok 247 - E3 DeepSeek search feedback and history controls remain English
+  ---
+  duration_ms: 2.454166
+  type: 'test'
+  ...
+# Subtest: E3 Cherry Studio translates option labels while retaining the CSS layout values
+ok 248 - E3 Cherry Studio translates option labels while retaining the CSS layout values
+  ---
+  duration_ms: 3.746708
+  type: 'test'
+  ...
+# Subtest: E3 Continue mode changes, stop feedback, and message controls are English
+ok 249 - E3 Continue mode changes, stop feedback, and message controls are English
+  ---
+  duration_ms: 4.55175
+  type: 'test'
+  ...
+# Subtest: E3 message decorations translate reasoning, tool details, counters, and roles
+ok 250 - E3 message decorations translate reasoning, tool details, counters, and roles
+  ---
+  duration_ms: 22.286458
+  type: 'test'
+  ...
+# Subtest: E3 permission examples and marketplace empty states update in English
+ok 251 - E3 permission examples and marketplace empty states update in English
+  ---
+  duration_ms: 6.581833
+  type: 'test'
+  ...
+# E4 English inventory · 124 spec editions across 14 renderers
+# Subtest: E4 renders every assigned spec edition with English screen text and placeholders
+ok 252 - E4 renders every assigned spec edition with English screen text and placeholders
+  ---
+  duration_ms: 328.064792
+  type: 'test'
+  ...
+# Subtest: E4 Gemini starter cards send English prompts and preserve historical English labels
+ok 253 - E4 Gemini starter cards send English prompts and preserve historical English labels
+  ---
+  duration_ms: 3.495333
+  type: 'test'
+  ...
+# Subtest: E4 terminal controls update English statuses and accessible labels
+ok 254 - E4 terminal controls update English statuses and accessible labels
+  ---
+  duration_ms: 26.248834
+  type: 'test'
+  ...
+# Subtest: E4 workflow and work-pane interactions stay in English
+ok 255 - E4 workflow and work-pane interactions stay in English
+  ---
+  duration_ms: 16.566666
+  type: 'test'
+  ...
+# Subtest: E4 translated choices still drive conditional controls and English example prompts
+ok 256 - E4 translated choices still drive conditional controls and English example prompts
+  ---
+  duration_ms: 7.261041
+  type: 'test'
+  ...
+# Subtest: E4 message decorations translate reasoning, tool details, roles, and approval controls
+ok 257 - E4 message decorations translate reasoning, tool details, roles, and approval controls
+  ---
+  duration_ms: 97.320042
+  type: 'test'
+  ...
+# Subtest: E4 auto-synced cards use sibling English labels and feature arrays through renderTool
+ok 258 - E4 auto-synced cards use sibling English labels and feature arrays through renderTool
+  ---
+  duration_ms: 2.458333
+  type: 'test'
+  ...
+# Subtest: combine renders English catalog choices, examples, editing, plan and confirmation through its normal entry point
+ok 259 - combine renders English catalog choices, examples, editing, plan and confirmation through its normal entry point
+  ---
+  duration_ms: 65.922875
+  type: 'test'
+  ...
+# Subtest: world renders English counts, arrivals, saved search and record details offline
+ok 260 - world renders English counts, arrivals, saved search and record details offline
+  ---
+  duration_ms: 12.1495
+  type: 'test'
+  ...
+# Subtest: guides publish bilingual fields and render English cards, filters and technique history
+ok 261 - guides publish bilingual fields and render English cards, filters and technique history
+  ---
+  duration_ms: 54.385959
+  type: 'test'
+  ...
+# Subtest: news keeps the original headline and hides its Japanese summary in English mode
+ok 262 - news keeps the original headline and hides its Japanese summary in English mode
+  ---
+  duration_ms: 4.701542
+  type: 'test'
+  ...
+# Subtest: admin labels, job descriptions and bilingual result fields render in English
+ok 263 - admin labels, job descriptions and bilingual result fields render in English
+  ---
+  duration_ms: 1.553167
+  type: 'test'
+  ...
+# Subtest: link status and patch validity remain independent of translated labels
+ok 264 - link status and patch validity remain independent of translated labels
+  ---
+  duration_ms: 0.392333
+  type: 'test'
+  ...
+# Subtest: English era data renders model instructions, notices, captions and desktop labels
+ok 265 - English era data renders model instructions, notices, captions and desktop labels
+  ---
+  duration_ms: 5.178042
+  type: 'test'
+  ...
+# Subtest: English labels and sourced persona trait values render without Japanese
+ok 266 - English labels and sourced persona trait values render without Japanese
+  ---
+  duration_ms: 3.29425
+  type: 'test'
+  ...
+# Subtest: Japanese remains the default for Node when no language override is set
+ok 267 - Japanese remains the default for Node when no language override is set
+  ---
+  duration_ms: 2.349959
+  type: 'test'
+  ...
+# Subtest: E7 English table has dated patterns, English translations and source URLs
+ok 268 - E7 English table has dated patterns, English translations and source URLs
+  ---
+  duration_ms: 2.182375
+  type: 'test'
+  ...
+# Subtest: E7 every Japanese display value in built catalog has an English sibling
+ok 269 - E7 every Japanese display value in built catalog has an English sibling
+  ---
+  duration_ms: 79.599708
+  type: 'test'
+  ...
+# Subtest: E7 every Japanese display value in built catalog-core has an English sibling
+ok 270 - E7 every Japanese display value in built catalog-core has an English sibling
+  ---
+  duration_ms: 40.199958
+  type: 'test'
+  ...
+# Subtest: E7 every Japanese display value in built catalog-extra has an English sibling
+ok 271 - E7 every Japanese display value in built catalog-extra has an English sibling
+  ---
+  duration_ms: 64.700583
+  type: 'test'
+  ...
+# Subtest: E7 catalog partitions retain the full catalog’s original text and English siblings
+ok 272 - E7 catalog partitions retain the full catalog’s original text and English siblings
+  ---
+  duration_ms: 160.361834
+  type: 'test'
+  ...
+# Subtest: E7 pick reads all five English fields and preserves Japanese mode
+ok 273 - E7 pick reads all five English fields and preserves Japanese mode
+  ---
+  duration_ms: 68.475958
+  type: 'test'
+  ...
+# Subtest: HEAD success, verified GET fallback, redirects and last-ok date
+ok 274 - HEAD success, verified GET fallback, redirects and last-ok date
+  ---
+  duration_ms: 21.764333
+  type: 'test'
+  ...
+# Subtest: 404/410 are gone only after GET; 403/429 blocked; 5xx counted and last-ok preserved
+ok 275 - 404/410 are gone only after GET; 403/429 blocked; 5xx counted and last-ok preserved
+  ---
+  duration_ms: 2.644125
+  type: 'test'
+  ...
+# Subtest: timeouts are failing, counted, and do not erase a previous success
+ok 276 - timeouts are failing, counted, and do not erase a previous success
+  ---
+  duration_ms: 12.552708
+  type: 'test'
+  ...
+# Subtest: robots longest rule, allow ties, specific user agent, percent encoding, wildcard and end anchor
+ok 277 - robots longest rule, allow ties, specific user agent, percent encoding, wildcard and end anchor
+  ---
+  duration_ms: 0.596958
+  type: 'test'
+  ...
+# Subtest: robots disallow/unavailability stops probes, including cross-host redirects
+ok 278 - robots disallow/unavailability stops probes, including cross-host redirects
+  ---
+  duration_ms: 1.88875
+  type: 'test'
+  ...
+# Subtest: private URLs, DNS results and redirect targets are never fetched
+ok 279 - private URLs, DNS results and redirect targets are never fetched
+  ---
+  duration_ms: 0.493167
+  type: 'test'
+  ...
+# Subtest: strict HTTP request budget and oldest-first rotation cover all finite inventory
+ok 280 - strict HTTP request budget and oldest-first rotation cover all finite inventory
+  ---
+  duration_ms: 18.605416
+  type: 'test'
+  ...
+# Subtest: Spaces runtime stage is separate from the page availability, and stale state is explicit
+ok 281 - Spaces runtime stage is separate from the page availability, and stale state is explicit
+  ---
+  duration_ms: 0.917458
+  type: 'test'
+  ...
+# Subtest: scheduler caps concurrency, serializes each host and obeys crawl-delay
+ok 282 - scheduler caps concurrency, serializes each host and obeys crawl-delay
+  ---
+  duration_ms: 10.353625
+  type: 'test'
+  ...
+# Subtest: missing prior schema is ignored and budget zero performs no requests
+ok 283 - missing prior schema is ignored and budget zero performs no requests
+  ---
+  duration_ms: 0.468792
+  type: 'test'
+  ...
+# Subtest: concurrent DNS lookups cannot overspend the shared request budget
+ok 284 - concurrent DNS lookups cannot overspend the shared request budget
+  ---
+  duration_ms: 1.463959
+  type: 'test'
+  ...
+# Subtest: Retry-After and crawl delays yield to the run deadline without marking uncompleted links checked
+ok 285 - Retry-After and crawl delays yield to the run deadline without marking uncompleted links checked
+  ---
+  duration_ms: 0.700667
+  type: 'test'
+  ...
+# Subtest: normal GET bodies are canceled rather than downloaded and robots allow rules merge across groups
+ok 286 - normal GET bodies are canceled rather than downloaded and robots allow rules merge across groups
+  ---
+  duration_ms: 0.697916
+  type: 'test'
+  ...
+# Subtest: collects design/persona/news/obtain URLs, generated real links, fragments and HTML entities
+ok 287 - collects design/persona/news/obtain URLs, generated real links, fragments and HTML entities
+  ---
+  duration_ms: 5.064542
+  type: 'test'
+  ...
+# Subtest: reads JSON, JSONL, compressed world shards/notable lists and HTML; excludes state and symlinks
+ok 288 - reads JSON, JSONL, compressed world shards/notable lists and HTML; excludes state and symlinks
+  ---
+  duration_ms: 29.817375
+  type: 'test'
+  ...
+# Subtest: CLI fixture run writes only artifact links-status.json and resumes previous results offline
+ok 289 - CLI fixture run writes only artifact links-status.json and resumes previous results offline
+  ---
+  duration_ms: 46.971125
+  type: 'test'
+  ...
+# Subtest: inventory mode performs no network/writes and invalid prior state fails without resetting rotation
+ok 290 - inventory mode performs no network/writes and invalid prior state fails without resetting rotation
+  ---
+  duration_ms: 15.730959
+  type: 'test'
+  ...
+# Subtest: world and legacy model forms produce sourced files-page links and text-only commands
+ok 291 - world and legacy model forms produce sourced files-page links and text-only commands
+  ---
+  duration_ms: 4.596375
+  type: 'test'
+  ...
+# Subtest: Ollama map refuses unsourced, duplicate, and shell-like ids
+ok 292 - Ollama map refuses unsourced, duplicate, and shell-like ids
+  ---
+  duration_ms: 0.228666
+  type: 'test'
+  ...
+# Subtest: official API and optional playground come from exact provider metadata
+ok 293 - official API and optional playground come from exact provider metadata
+  ---
+  duration_ms: 0.60675
+  type: 'test'
+  ...
+# Subtest: Spaces API filters exact model, running/sleeping, sorts likes, keeps SDK/hardware and facts only
+ok 294 - Spaces API filters exact model, running/sleeping, sorts likes, keeps SDK/hardware and facts only
+  ---
+  duration_ms: 18.456959
+  type: 'test'
+  ...
+# Subtest: Spaces paginate when high-liked results are stopped and never follow an arbitrary next URL
+ok 295 - Spaces paginate when high-liked results are stopped and never follow an arbitrary next URL
+  ---
+  duration_ms: 0.532291
+  type: 'test'
+  ...
+# Subtest: failed or disabled Spaces discovery is explicit and preserves usable links
+ok 296 - failed or disabled Spaces discovery is explicit and preserves usable links
+  ---
+  duration_ms: 0.413875
+  type: 'test'
+  ...
+# Subtest: Japanese status labels distinguish gone/failing/blocked and show last successful date
+ok 297 - Japanese status labels distinguish gone/failing/blocked and show last successful date
+  ---
+  duration_ms: 1.684166
+  type: 'test'
+  ...
+# Subtest: runtime paused/build-error differs from gone, and old runtime is not presented as current
+ok 298 - runtime paused/build-error differs from gone, and old runtime is not presented as current
+  ---
+  duration_ms: 0.118959
+  type: 'test'
+  ...
+# Subtest: lookup canonicalizes fragments; decoration uses safe text and leaves the actual destination intact
+ok 299 - lookup canonicalizes fragments; decoration uses safe text and leaves the actual destination intact
+  ---
+  duration_ms: 0.204875
+  type: 'test'
+  ...
+# Subtest: status loading degrades gracefully on missing/malformed/offline artifact
+ok 300 - status loading degrades gracefully on missing/malformed/offline artifact
+  ---
+  duration_ms: 14.486667
+  type: 'test'
+  ...
+# Subtest: curated sources cover all required groups and carry evidence and rights notes
+ok 301 - curated sources cover all required groups and carry evidence and rights notes
+  ---
+  duration_ms: 12.113583
+  type: 'test'
+  ...
+# Subtest: RSS metadata, CDATA, namespaces, relative links and feed dates; bodies never escape
+ok 302 - RSS metadata, CDATA, namespaces, relative links and feed dates; bodies never escape
+  ---
+  duration_ms: 7.071833
+  type: 'test'
+  ...
+# Subtest: Atom alternate links, original published dates, missing dates, arXiv version canonicalization
+ok 303 - Atom alternate links, original published dates, missing dates, arXiv version canonicalization
+  ---
+  duration_ms: 1.172833
+  type: 'test'
+  ...
+# Subtest: GitHub JSON and JSON Feed project only stable public metadata
+ok 304 - GitHub JSON and JSON Feed project only stable public metadata
+  ---
+  duration_ms: 2.052042
+  type: 'test'
+  ...
+# Subtest: arXiv relevance is filtered on title, never on copied abstracts
+ok 305 - arXiv relevance is filtered on title, never on copied abstracts
+  ---
+  duration_ms: 1.271208
+  type: 'test'
+  ...
+# Subtest: XML rejects HTML, malformed nesting, DTDs and deep documents
+ok 306 - XML rejects HTML, malformed nesting, DTDs and deep documents
+  ---
+  duration_ms: 0.428792
+  type: 'test'
+  ...
+# Subtest: document declarations inside CDATA article content are inert and never exported
+ok 307 - document declarations inside CDATA article content are inert and never exported
+  ---
+  duration_ms: 0.301834
+  type: 'test'
+  ...
+# Subtest: canonical links remove only tracking, and block credentials and local network targets
+ok 308 - canonical links remove only tracking, and block credentials and local network targets
+  ---
+  duration_ms: 0.15675
+  type: 'test'
+  ...
+# Subtest: ETag and Last-Modified conditional requests retain metadata after 304
+ok 309 - ETag and Last-Modified conditional requests retain metadata after 304
+  ---
+  duration_ms: 28.688625
+  type: 'test'
+  ...
+# Subtest: timeouts, response limits, redirects and request budgets are enforced offline
+ok 310 - timeouts, response limits, redirects and request budgets are enforced offline
+  ---
+  duration_ms: 18.202625
+  type: 'test'
+  ...
+# Subtest: budget cursor resumes at the next source, instead of starving later sources
+ok 311 - budget cursor resumes at the next source, instead of starving later sources
+  ---
+  duration_ms: 6.942917
+  type: 'test'
+  ...
+# Subtest: 429 Retry-After pauses the host, persists across runs, and resumes when due
+ok 312 - 429 Retry-After pauses the host, persists across runs, and resumes when due
+  ---
+  duration_ms: 3.692334
+  type: 'test'
+  ...
+# Subtest: failed/malformed responses preserve old items and do not accept new validators
+ok 313 - failed/malformed responses preserve old items and do not accept new validators
+  ---
+  duration_ms: 3.033625
+  type: 'test'
+  ...
+# Subtest: page hashes establish a baseline, ignore navigation and catch changes after 300 characters
+ok 314 - page hashes establish a baseline, ignore navigation and catch changes after 300 characters
+  ---
+  duration_ms: 1.651167
+  type: 'test'
+  ...
+# Subtest: dedupe preserves provenance, exact entity matching avoids partial names, summaries survive unchanged metadata
+ok 315 - dedupe preserves provenance, exact entity matching avoids partial names, summaries survive unchanged metadata
+  ---
+  duration_ms: 3.279333
+  type: 'test'
+  ...
+# Subtest: resumed input and state are whitelisted; unknown fields never persist
+ok 316 - resumed input and state are whitelisted; unknown fields never persist
+  ---
+  duration_ms: 0.880417
+  type: 'test'
+  ...
+# Subtest: injected local complete receives bounded context, returns at most two Japanese sentences and the AI label
+ok 317 - injected local complete receives bounded context, returns at most two Japanese sentences and the AI label
+  ---
+  duration_ms: 7.981542
+  type: 'test'
+  ...
+# Subtest: CI never calls AI even with explicit injection and ci:false; missing AI leaves news publishable
+ok 318 - CI never calls AI even with explicit injection and ci:false; missing AI leaves news publishable
+  ---
+  duration_ms: 1.521958
+  type: 'test'
+  ...
+# Subtest: invalid, English, overlong, three-sentence, injected HTML, and unavailable summaries are not published
+ok 319 - invalid, English, overlong, three-sentence, injected HTML, and unavailable summaries are not published
+  ---
+  duration_ms: 15.944584
+  type: 'test'
+  ...
+# Subtest: techniques create inert valid style drafts with sources and explicitly unverified claims
+ok 320 - techniques create inert valid style drafts with sources and explicitly unverified claims
+  ---
+  duration_ms: 2.506
+  type: 'test'
+  ...
+# Subtest: local technique extraction creates short Japanese instruction candidates only as sourced review drafts
+ok 321 - local technique extraction creates short Japanese instruction candidates only as sourced review drafts
+  ---
+  duration_ms: 1.981416
+  type: 'test'
+  ...
+# Subtest: batch technique extraction honors its AI budget and does not re-extract existing human drafts
+ok 322 - batch technique extraction honors its AI budget and does not re-extract existing human drafts
+  ---
+  duration_ms: 14.332542
+  type: 'test'
+  ...
+# Subtest: draft writes are idempotent, retain human edits, refuse catalog writes and symlinks
+ok 323 - draft writes are idempotent, retain human edits, refuse catalog writes and symlinks
+  ---
+  duration_ms: 20.515542
+  type: 'test'
+  ...
+# Subtest: draft file symlinks and traversal never overwrite another file
+ok 324 - draft file symlinks and traversal never overwrite another file
+  ---
+  duration_ms: 7.397917
+  type: 'test'
+  ...
+# Subtest: read-only route mounts without starting a server and strips bodies/private state
+ok 325 - read-only route mounts without starting a server and strips bodies/private state
+  ---
+  duration_ms: 1.18625
+  type: 'test'
+  ...
+# Subtest: CLI offline mode writes metadata-only public and resumable snapshots, and never starts AI
+ok 326 - CLI offline mode writes metadata-only public and resumable snapshots, and never starts AI
+  ---
+  duration_ms: 34.858125
+  type: 'test'
+  ...
+# Subtest: today and this week use Japanese calendar boundaries; future and undated dates are never invented
+ok 327 - today and this week use Japanese calendar boundaries; future and undated dates are never invented
+  ---
+  duration_ms: 19.240417
+  type: 'test'
+  ...
+# Subtest: invalid links and malformed records are omitted; malformed dates become unknown
+ok 328 - invalid links and malformed records are omitted; malformed dates become unknown
+  ---
+  duration_ms: 0.201791
+  type: 'test'
+  ...
+# Subtest: offline document renders filters, sources, labels, summaries and safe outbound links as text
+ok 329 - offline document renders filters, sources, labels, summaries and safe outbound links as text
+  ---
+  duration_ms: 7.949916
+  type: 'test'
+  ...
+# Subtest: loading errors, retry and published-static fallback work without a browser or server
+ok 330 - loading errors, retry and published-static fallback work without a browser or server
+  ---
+  duration_ms: 21.420709
+  type: 'test'
+  ...
+# Subtest: mount adds CSS once, stale requests do not overwrite newer results, and destroy detaches
+ok 331 - mount adds CSS once, stale requests do not overwrite newer results, and destroy detaches
+  ---
+  duration_ms: 3.013708
+  type: 'test'
+  ...
+# Subtest: Japanese labels use plain text and validate patch IDs
+ok 332 - Japanese labels use plain text and validate patch IDs
+  ---
+  duration_ms: 0.626042
+  type: 'test'
+  ...
+# Subtest: all labels share one request resolved relative to the module on nested Pages paths
+ok 333 - all labels share one request resolved relative to the module on nested Pages paths
+  ---
+  duration_ms: 16.071875
+  type: 'test'
+  ...
+# Subtest: offline failure shows unknown and supplied historical patch avoids fetching
+ok 334 - offline failure shows unknown and supplied historical patch avoids fetching
+  ---
+  duration_ms: 0.174458
+  type: 'test'
+  ...
+# Subtest: first publication writes the requested patch, notes, and Japanese summary
+ok 335 - first publication writes the requested patch, notes, and Japanese summary
+  ---
+  duration_ms: 98.6035
+  type: 'test'
+  ...
+# Subtest: diff covers addition, removal, changed facts, link state, recipes/styles and Vera
+ok 336 - diff covers addition, removal, changed facts, link state, recipes/styles and Vera
+  ---
+  duration_ms: 229.063625
+  type: 'test'
+  ...
+# Subtest: HTTP previous manifest and shards use an injected offline fetch with a site subpath
+ok 337 - HTTP previous manifest and shards use an injected offline fetch with a site subpath
+  ---
+  duration_ms: 177.729084
+  type: 'test'
+  ...
+# Subtest: object key order and repeated link polling do not create changes
+ok 338 - object key order and repeated link polling do not create changes
+  ---
+  duration_ms: 179.248417
+  type: 'test'
+  ...
+# Subtest: corrupt previous shards abort without writing a current patch and clean temporary files
+ok 339 - corrupt previous shards abort without writing a current patch and clean temporary files
+  ---
+  duration_ms: 79.075459
+  type: 'test'
+  ...
+# Subtest: duplicates, vanished inputs, traversal paths and network failure abort
+ok 340 - duplicates, vanished inputs, traversal paths and network failure abort
+  ---
+  duration_ms: 93.041959
+  type: 'test'
+  ...
+# Subtest: empty inventory and CLI bootstrap/history are supported
+ok 341 - empty inventory and CLI bootstrap/history are supported
+  ---
+  duration_ms: 25.341292
+  type: 'test'
+  ...
+# Subtest: world shards and tool version state match the world builder contract
+ok 342 - world shards and tool version state match the world builder contract
+  ---
+  duration_ms: 62.897958
+  type: 'test'
+  ...
+# Subtest: the executable CLI produces notes and reports invalid options with a nonzero exit
+ok 343 - the executable CLI produces notes and reports invalid options with a nonzero exit
+  ---
+  duration_ms: 149.487125
+  type: 'test'
+  ...
+# Subtest: valid gzip with a mismatched digest and an occupied build lock both abort
+ok 344 - valid gzip with a mismatched digest and an occupied build lock both abort
+  ---
+  duration_ms: 70.915334
+  type: 'test'
+  ...
+# Subtest: Vera metadata edits leave a zero score unchanged and numeric changes emit a delta
+ok 345 - Vera metadata edits leave a zero score unchanged and numeric changes emit a delta
+  ---
+  duration_ms: 108.613667
+  type: 'test'
+  ...
+# Subtest: missing optional names, unsourced string versions, and literal prototype keys are supported
+ok 346 - missing optional names, unsourced string versions, and literal prototype keys are supported
+  ---
+  duration_ms: 122.568083
+  type: 'test'
+  ...
+# Subtest: five newest deployed patches survive numerically, with live rollback and drafts protected
+ok 347 - five newest deployed patches survive numerically, with live rollback and drafts protected
+  ---
+  duration_ms: 1.123083
+  type: 'test'
+  ...
+# Subtest: release history pagination includes drafts and failed reservations
+ok 348 - release history pagination includes drafts and failed reservations
+  ---
+  duration_ms: 13.216625
+  type: 'test'
+  ...
+# Subtest: pruning deletes only old archive assets, preserving all number metadata and prepared drafts
+ok 349 - pruning deletes only old archive assets, preserving all number metadata and prepared drafts
+  ---
+  duration_ms: 0.671667
+  type: 'test'
+  ...
+# Subtest: draft preparation streams an archive and finalizes only when explicitly marked deployed
+ok 350 - draft preparation streams an archive and finalizes only when explicitly marked deployed
+  ---
+  duration_ms: 11.432875
+  type: 'test'
+  ...
+# Subtest: rollback downloads a prepared or deployed archive and checks its digest
+ok 351 - rollback downloads a prepared or deployed archive and checks its digest
+  ---
+  duration_ms: 16.755
+  type: 'test'
+  ...
+# Subtest: rollback rejects corrupt and missing archives without leaving a partial download
+ok 352 - rollback rejects corrupt and missing archives without leaving a partial download
+  ---
+  duration_ms: 6.162667
+  type: 'test'
+  ...
+# Subtest: numbers advance numerically within a UTC year and restart next year
+ok 353 - numbers advance numerically within a UTC year and restart next year
+  ---
+  duration_ms: 0.597958
+  type: 'test'
+  ...
+# Subtest: rollback and a failed reservation cannot cause number reuse
+ok 354 - rollback and a failed reservation cannot cause number reuse
+  ---
+  duration_ms: 1.736542
+  type: 'test'
+  ...
+# Subtest: invalid IDs, clock rollback, and exhausted numbers fail
+ok 355 - invalid IDs, clock rollback, and exhausted numbers fail
+  ---
+  duration_ms: 0.35225
+  type: 'test'
+  ...
+# Subtest: installed workflows preserve patch storage, rollback, serialization and valid Node programs
+ok 356 - installed workflows preserve patch storage, rollback, serialization and valid Node programs
+  ---
+  duration_ms: 808.218125
+  type: 'test'
+  ...
+# Subtest: numeric claims normalise commas, units and dates
+ok 357 - numeric claims normalise commas, units and dates
+  ---
+  duration_ms: 1.773875
+  type: 'test'
+  ...
+# Subtest: reviewed drafts need supported numeric claims and sources
+ok 358 - reviewed drafts need supported numeric claims and sources
+  ---
+  duration_ms: 1.078125
+  type: 'test'
+  ...
+# Subtest: cards are accepted only while their cited values still match
+ok 359 - cards are accepted only while their cited values still match
+  ---
+  duration_ms: 8.952209
+  type: 'test'
+  ...
+# Subtest: missing and malformed optional shards return no cards
+ok 360 - missing and malformed optional shards return no cards
+  ---
+  duration_ms: 0.359917
+  type: 'test'
+  ...
+# Subtest: a supported price draft includes the recorded unit
+ok 361 - a supported price draft includes the recorded unit
+  ---
+  duration_ms: 0.319625
+  type: 'test'
+  ...
+# Subtest: the builder writes shards, accepts reviewed drafts and drops invented dates
+ok 362 - the builder writes shards, accepts reviewed drafts and drops invented dates
+  ---
+  duration_ms: 59.926958
+  type: 'test'
+  ...
+# Subtest: a production check builds all notable cards without any output writes
+ok 363 - a production check builds all notable cards without any output writes
+  ---
+  duration_ms: 1070.503583
+  type: 'test'
+  ...
+# Subtest: generated sourced cards survive the browser catalog enrichment
+ok 364 - generated sourced cards survive the browser catalog enrichment
+  ---
+  duration_ms: 1663.042833
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: later-model
+ok 365 - D4 frozen Japanese case: later-model
+  ---
+  duration_ms: 24.297209
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: later-tool
+ok 366 - D4 frozen Japanese case: later-tool
+  ---
+  duration_ms: 5.1265
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: successor
+ok 367 - D4 frozen Japanese case: successor
+  ---
+  duration_ms: 3.745875
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: retirement
+ok 368 - D4 frozen Japanese case: retirement
+  ---
+  duration_ms: 2.288541
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: identity
+ok 369 - D4 frozen Japanese case: identity
+  ---
+  duration_ms: 5.157625
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: price-followup
+ok 370 - D4 frozen Japanese case: price-followup
+  ---
+  duration_ms: 8.831166
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: later-followup
+ok 371 - D4 frozen Japanese case: later-followup
+  ---
+  duration_ms: 2.440833
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: why
+ok 372 - D4 frozen Japanese case: why
+  ---
+  duration_ms: 2.553125
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: unknown-voice
+ok 373 - D4 frozen Japanese case: unknown-voice
+  ---
+  duration_ms: 1.595167
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: refusal-voice
+ok 374 - D4 frozen Japanese case: refusal-voice
+  ---
+  duration_ms: 2.019417
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: completion-unknown
+ok 375 - D4 frozen Japanese case: completion-unknown
+  ---
+  duration_ms: 1.072375
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: greeting
+ok 376 - D4 frozen Japanese case: greeting
+  ---
+  duration_ms: 1.241083
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: explicit-self
+ok 377 - D4 frozen Japanese case: explicit-self
+  ---
+  duration_ms: 4.948125
+  type: 'test'
+  ...
+# Subtest: D4 frozen Japanese case: unknown-cutoff
+ok 378 - D4 frozen Japanese case: unknown-cutoff
+  ---
+  duration_ms: 1.4375
+  type: 'test'
+  ...
+# Subtest: D4 cutoff precision includes the last calendar day and rejects invalid dates
+ok 379 - D4 cutoff precision includes the last calendar day and rejects invalid dates
+  ---
+  duration_ms: 2.169667
+  type: 'test'
+  ...
+# Subtest: D4 an unsourced cutoff never opens the time gate
+ok 380 - D4 an unsourced cutoff never opens the time gate
+  ---
+  duration_ms: 1.438542
+  type: 'test'
+  ...
+# Subtest: D4 reviewed cards cannot move a future retirement into speech
+ok 381 - D4 reviewed cards cannot move a future retirement into speech
+  ---
+  duration_ms: 2.712583
+  type: 'test'
+  ...
+# Subtest: D4 compound cross paths cannot leak a later retirement
+ok 382 - D4 compound cross paths cannot leak a later retirement
+  ---
+  duration_ms: 1.414417
+  type: 'test'
+  ...
+# Subtest: D4 matching a specific snapshot suppresses a shorter overlapping name
+ok 383 - D4 matching a specific snapshot suppresses a shorter overlapping name
+  ---
+  duration_ms: 0.2375
+  type: 'test'
+  ...
+# Subtest: D4 user assertions and museum notes never override the cutoff or inject model facts
+ok 384 - D4 user assertions and museum notes never override the cutoff or inject model facts
+  ---
+  duration_ms: 1.012541
+  type: 'test'
+  ...
+# Subtest: D4 follow-ups stop at a model switch and explicit self wins
+ok 385 - D4 follow-ups stop at a model switch and explicit self wins
+  ---
+  duration_ms: 3.224875
+  type: 'test'
+  ...
+# Subtest: D4 why cites a record without inventing a cause
+ok 386 - D4 why cites a record without inventing a cause
+  ---
+  duration_ms: 0.79
+  type: 'test'
+  ...
+# Subtest: D4 researched voices differ and every answer type keeps its sourced style
+ok 387 - D4 researched voices differ and every answer type keeps its sourced style
+  ---
+  duration_ms: 24.027
+  type: 'test'
+  ...
+# Subtest: D4 inherited and unsourced traits do not become a voice
+ok 388 - D4 inherited and unsourced traits do not become a voice
+  ---
+  duration_ms: 0.285417
+  type: 'test'
+  ...
+# Subtest: D4 GPT-2 uses completion form for an unfinished self-description
+ok 389 - D4 GPT-2 uses completion form for an unfinished self-description
+  ---
+  duration_ms: 10.406875
+  type: 'test'
+  ...
+# Subtest: D4 the museum note is separate DOM text and never interpreted as HTML
+ok 390 - D4 the museum note is separate DOM text and never interpreted as HTML
+  ---
+  duration_ms: 0.358042
+  type: 'test'
+  ...
+# Subtest: D4 an unsourced later record contributes no asserted name, date or value to the museum note
+ok 391 - D4 an unsourced later record contributes no asserted name, date or value to the museum note
+  ---
+  duration_ms: 1.430584
+  type: 'test'
+  ...
+# Subtest: D4 modern access links remain outside the role in refusals and access questions
+ok 392 - D4 modern access links remain outside the role in refusals and access questions
+  ---
+  duration_ms: 1.230583
+  type: 'test'
+  ...
+# Subtest: evaluation covers six models, self, other, unknown and generation questions
+ok 393 - evaluation covers six models, self, other, unknown and generation questions
+  ---
+  duration_ms: 5.840125
+  type: 'test'
+  ...
+# Subtest: correct-value scoring stays separate from new intent names
+ok 394 - correct-value scoring stays separate from new intent names
+  ---
+  duration_ms: 0.463083
+  type: 'test'
+  ...
+# Subtest: unknown scoring requires both an unknown kind and explicit uncertainty
+ok 395 - unknown scoring requires both an unknown kind and explicit uncertainty
+  ---
+  duration_ms: 0.489542
+  type: 'test'
+  ...
+# Subtest: いつ公開されたの？
+ok 396 - いつ公開されたの？
+  ---
+  duration_ms: 12.235834
+  type: 'test'
+  ...
+# Subtest: When were you released?
+ok 397 - When were you released?
+  ---
+  duration_ms: 2.653208
+  type: 'test'
+  ...
+# Subtest: 君はいつ公開された？
+ok 398 - 君はいつ公開された？
+  ---
+  duration_ms: 2.051667
+  type: 'test'
+  ...
+# Subtest: When did you launch?
+ok 399 - When did you launch?
+  ---
+  duration_ms: 2.51025
+  type: 'test'
+  ...
+# Subtest: コンテキスト長は？
+ok 400 - コンテキスト長は？
+  ---
+  duration_ms: 13.387458
+  type: 'test'
+  ...
+# Subtest: What is your context window?
+ok 401 - What is your context window?
+  ---
+  duration_ms: 2.819125
+  type: 'test'
+  ...
+# Subtest: this modelの文脈長は？
+ok 402 - this modelの文脈長は？
+  ---
+  duration_ms: 1.173167
+  type: 'test'
+  ...
+# Subtest: 一度に出せる長さは？
+ok 403 - 一度に出せる長さは？
+  ---
+  duration_ms: 3.5215
+  type: 'test'
+  ...
+# Subtest: How many tokens can you output?
+ok 404 - How many tokens can you output?
+  ---
+  duration_ms: 4.865542
+  type: 'test'
+  ...
+# Subtest: 誰が作ったの？
+ok 405 - 誰が作ったの？
+  ---
+  duration_ms: 1.503791
+  type: 'test'
+  ...
+# Subtest: Who created you?
+ok 406 - Who created you?
+  ---
+  duration_ms: 1.162375
+  type: 'test'
+  ...
+# Subtest: 知識はいつまで？
+ok 407 - 知識はいつまで？
+  ---
+  duration_ms: 2.382042
+  type: 'test'
+  ...
+# Subtest: What is your knowledge cutoff?
+ok 408 - What is your knowledge cutoff?
+  ---
+  duration_ms: 3.105417
+  type: 'test'
+  ...
+# Subtest: 料金は？
+ok 409 - 料金は？
+  ---
+  duration_ms: 2.507375
+  type: 'test'
+  ...
+# Subtest: What is your price?
+ok 410 - What is your price?
+  ---
+  duration_ms: 1.170042
+  type: 'test'
+  ...
+# Subtest: あなたの系列は？
+ok 411 - あなたの系列は？
+  ---
+  duration_ms: 2.19525
+  type: 'test'
+  ...
+# Subtest: 日本語は話せる？
+ok 412 - 日本語は話せる？
+  ---
+  duration_ms: 0.953375
+  type: 'test'
+  ...
+# Subtest: Which languages do you support?
+ok 413 - Which languages do you support?
+  ---
+  duration_ms: 1.632917
+  type: 'test'
+  ...
+# Subtest: 画像を読める？
+ok 414 - 画像を読める？
+  ---
+  duration_ms: 0.915792
+  type: 'test'
+  ...
+# Subtest: Are you multimodal?
+ok 415 - Are you multimodal?
+  ---
+  duration_ms: 0.806167
+  type: 'test'
+  ...
+# Subtest: もう引退したの？
+ok 416 - もう引退したの？
+  ---
+  duration_ms: 1.459125
+  type: 'test'
+  ...
+# Subtest: What is your status?
+ok 417 - What is your status?
+  ---
+  duration_ms: 0.954292
+  type: 'test'
+  ...
+# Subtest: 学習データはいつまで？
+ok 418 - 学習データはいつまで？
+  ---
+  duration_ms: 0.961167
+  type: 'test'
+  ...
+# Subtest: どこの会社が作ったの？
+ok 419 - どこの会社が作ったの？
+  ---
+  duration_ms: 0.86425
+  type: 'test'
+  ...
+# Subtest: 最大何トークン読める？
+ok 420 - 最大何トークン読める？
+  ---
+  duration_ms: 2.198
+  type: 'test'
+  ...
+# Subtest: 出力は何トークンまで？
+ok 421 - 出力は何トークンまで？
+  ---
+  duration_ms: 2.131959
+  type: 'test'
+  ...
+# Subtest: 無料なの？
+ok 422 - 無料なの？
+  ---
+  duration_ms: 0.827666
+  type: 'test'
+  ...
+# Subtest: いつまで使える？
+ok 423 - いつまで使える？
+  ---
+  duration_ms: 1.219875
+  type: 'test'
+  ...
+# Subtest: identity is concise and has no reconstructed speech
+ok 424 - identity is concise and has no reconstructed speech
+  ---
+  duration_ms: 1.010583
+  type: 'test'
+  ...
+# Subtest: unknown 後継モデルは？
+ok 425 - unknown 後継モデルは？
+  ---
+  duration_ms: 1.122292
+  type: 'test'
+  ...
+# Subtest: unknown What is your successor?
+ok 426 - unknown What is your successor?
+  ---
+  duration_ms: 1.209291
+  type: 'test'
+  ...
+# Subtest: unknown あなたの好きな食べ物は？
+ok 427 - unknown あなたの好きな食べ物は？
+  ---
+  duration_ms: 0.881166
+  type: 'test'
+  ...
+# Subtest: unknown 秘密の学習データを教えて
+ok 428 - unknown 秘密の学習データを教えて
+  ---
+  duration_ms: 0.423625
+  type: 'test'
+  ...
+# Subtest: unknown GPT-999の公開日は？
+ok 429 - unknown GPT-999の公開日は？
+  ---
+  duration_ms: 0.602667
+  type: 'test'
+  ...
+# Subtest: current weather offers a practical next step
+ok 430 - current weather offers a practical next step
+  ---
+  duration_ms: 0.434667
+  type: 'test'
+  ...
+# Subtest: a value without a record source stays unknown
+ok 431 - a value without a record source stays unknown
+  ---
+  duration_ms: 0.2045
+  type: 'test'
+  ...
+# Subtest: an explicitly empty recorded field stays unknown
+ok 432 - an explicitly empty recorded field stays unknown
+  ---
+  duration_ms: 3.896959
+  type: 'test'
+  ...
+# Subtest: other models and explicit lists retain their routes
+ok 433 - other models and explicit lists retain their routes
+  ---
+  duration_ms: 16.055875
+  type: 'test'
+  ...
+# Subtest: an unqualified history question stays with the selected model
+ok 434 - an unqualified history question stays with the selected model
+  ---
+  duration_ms: 2.072125
+  type: 'test'
+  ...
+# Subtest: predecessors and successors come from the selected record
+ok 435 - predecessors and successors come from the selected record
+  ---
+  duration_ms: 4.07725
+  type: 'test'
+  ...
+# Subtest: code and prose requests offer both routes
+ok 436 - code and prose requests offer both routes
+  ---
+  duration_ms: 6.227333
+  type: 'test'
+  ...
+# Subtest: only researched or official persona traits are used
+ok 437 - only researched or official persona traits are used
+  ---
+  duration_ms: 5.967792
+  type: 'test'
+  ...
+# Subtest: strengths use their own facts
+ok 438 - strengths use their own facts
+  ---
+  duration_ms: 1.07975
+  type: 'test'
+  ...
+# Subtest: real links are record-only HTTP links with an availability qualification
+ok 439 - real links are record-only HTTP links with an availability qualification
+  ---
+  duration_ms: 0.709125
+  type: 'test'
+  ...
+# Subtest: real Opus record resolves the reported regressions
+ok 440 - real Opus record resolves the reported regressions
+  ---
+  duration_ms: 651.557417
+  type: 'test'
+  ...
+# Subtest: partial and empty input contexts have a stable shape
+ok 441 - partial and empty input contexts have a stable shape
+  ---
+  duration_ms: 2.713167
+  type: 'test'
+  ...
+# Subtest: nothing is imported or loaded before explicit enable
+ok 442 - nothing is imported or loaded before explicit enable
+  ---
+  duration_ms: 6.878833
+  type: 'test'
+  ...
+# Subtest: missing WebGPU or required features does not load third-party code
+ok 443 - missing WebGPU or required features does not load third-party code
+  ---
+  duration_ms: 0.237083
+  type: 'test'
+  ...
+# Subtest: failed loads release resources and can be retried
+ok 444 - failed loads release resources and can be retried
+  ---
+  duration_ms: 0.961542
+  type: 'test'
+  ...
+# Subtest: concurrent enable waits for one shared load
+ok 445 - concurrent enable waits for one shared load
+  ---
+  duration_ms: 2.57775
+  type: 'test'
+  ...
+# Subtest: disposal during module import prevents a later model download
+ok 446 - disposal during module import prevents a later model download
+  ---
+  duration_ms: 3.757959
+  type: 'test'
+  ...
+# Subtest: empty model answers and long inputs have recoverable errors
+ok 447 - empty model answers and long inputs have recoverable errors
+  ---
+  duration_ms: 0.80725
+  type: 'test'
+  ...
+# Subtest: a truncated answer identifies the length limit
+ok 448 - a truncated answer identifies the length limit
+  ---
+  duration_ms: 0.404917
+  type: 'test'
+  ...
+# Subtest: an inherited persona does not enter the system prompt
+ok 449 - an inherited persona does not enter the system prompt
+  ---
+  duration_ms: 0.449166
+  type: 'test'
+  ...
+# Subtest: mount shows download size and real links before any click
+ok 450 - mount shows download size and real links before any click
+  ---
+  duration_ms: 0.95775
+  type: 'test'
+  ...
+# Subtest: optional guides load only when their module exists
+ok 451 - optional guides load only when their module exists
+  ---
+  duration_ms: 0.499375
+  type: 'test'
+  ...
+# Subtest: answer rendering uses text nodes and safe clickable sources
+ok 452 - answer rendering uses text nodes and safe clickable sources
+  ---
+  duration_ms: 0.265875
+  type: 'test'
+  ...
+# Subtest: D4 a stand-in never receives future successor or retirement records as role knowledge
+ok 453 - D4 a stand-in never receives future successor or retirement records as role knowledge
+  ---
+  duration_ms: 3.986666
+  type: 'test'
+  ...
+# Subtest: 60–80 curated personas validate and every populated trait has evidence
+ok 454 - 60–80 curated personas validate and every populated trait has evidence
+  ---
+  duration_ms: 48.090041
+  type: 'test'
+  ...
+# Subtest: catalog spans the requested eras and preserves weak evidence
+ok 455 - catalog spans the requested eras and preserves weak evidence
+  ---
+  duration_ms: 7.388792
+  type: 'test'
+  ...
+# Subtest: own researched persona wins over ancestry, without mutating the catalog
+ok 456 - own researched persona wins over ancestry, without mutating the catalog
+  ---
+  duration_ms: 6.247708
+  type: 'test'
+  ...
+# Subtest: aliases match exact names and HF prefixes, never arbitrary suffixes
+ok 457 - aliases match exact names and HF prefixes, never arbitrary suffixes
+  ---
+  duration_ms: 1.534667
+  type: 'test'
+  ...
+# Subtest: nearest ancestor is selected breadth first across multiple merged parents
+ok 458 - nearest ancestor is selected breadth first across multiple merged parents
+  ---
+  duration_ms: 11.008125
+  type: 'test'
+  ...
+# Subtest: equal distance merged parents are chosen deterministically
+ok 459 - equal distance merged parents are chosen deterministically
+  ---
+  duration_ms: 0.8105
+  type: 'test'
+  ...
+# Subtest: lineage works from base_model, card metadata, tags and maps
+ok 460 - lineage works from base_model, card metadata, tags and maps
+  ---
+  duration_ms: 2.409209
+  type: 'test'
+  ...
+# Subtest: cycles terminate, while diamond paths are not incorrectly called cycles
+ok 461 - cycles terminate, while diamond paths are not incorrectly called cycles
+  ---
+  duration_ms: 1.017
+  type: 'test'
+  ...
+# Subtest: depth and node budgets bound record lookups
+ok 462 - depth and node budgets bound record lookups
+  ---
+  duration_ms: 0.534167
+  type: 'test'
+  ...
+# Subtest: full supported depth can inherit very weak evidence without rounding to zero
+ok 463 - full supported depth can inherit very weak evidence without rounding to zero
+  ---
+  duration_ms: 4.151292
+  type: 'test'
+  ...
+# Subtest: lookup functions must be synchronous and do not enumerate the world index
+ok 464 - lookup functions must be synchronous and do not enumerate the world index
+  ---
+  duration_ms: 0.594709
+  type: 'test'
+  ...
+# Subtest: family heuristics are labelled inherited, with lower confidence and no invented cutoff
+ok 465 - family heuristics are labelled inherited, with lower confidence and no invented cutoff
+  ---
+  duration_ms: 12.36025
+  type: 'test'
+  ...
+# Subtest: unknown parents can still identify a family without claiming a verified relationship
+ok 466 - unknown parents can still identify a family without claiming a verified relationship
+  ---
+  duration_ms: 0.375292
+  type: 'test'
+  ...
+# Subtest: equal-looking ids in different registries do not become the same researched model
+ok 467 - equal-looking ids in different registries do not become the same researched model
+  ---
+  duration_ms: 0.322625
+  type: 'test'
+  ...
+# Subtest: unknown models and unrelated names remain neutral, including non-text registries
+ok 468 - unknown models and unrelated names remain neutral, including non-text registries
+  ---
+  duration_ms: 0.334417
+  type: 'test'
+  ...
+# Subtest: legacy researched Profiles are converted only through their cited traits
+ok 469 - legacy researched Profiles are converted only through their cited traits
+  ---
+  duration_ms: 0.683292
+  type: 'test'
+  ...
+# Subtest: duplicate ambiguous aliases fail instead of silently choosing a persona
+ok 470 - duplicate ambiguous aliases fail instead of silently choosing a persona
+  ---
+  duration_ms: 0.372917
+  type: 'test'
+  ...
+# Subtest: adapter yields a valid existing Profile without invented numeric limits or samples
+ok 471 - adapter yields a valid existing Profile without invented numeric limits or samples
+  ---
+  duration_ms: 35.881958
+  type: 'test'
+  ...
+# Subtest: prompt creation delegates to the supplied existing builder with provenance and disclosure
+ok 472 - prompt creation delegates to the supplied existing builder with provenance and disclosure
+  ---
+  duration_ms: 1.539958
+  type: 'test'
+  ...
+# Subtest: actual emulator prompt builder accepts the adapter in isolation
+ok 473 - actual emulator prompt builder accepts the adapter in isolation
+  ---
+  duration_ms: 2.640459
+  type: 'test'
+  ...
+# Subtest: streamed and returned replies always carry a recreation notice
+ok 474 - streamed and returned replies always carry a recreation notice
+  ---
+  duration_ms: 1.257041
+  type: 'test'
+  ...
+# Subtest: non-streaming responses and refusals also preserve the notice
+ok 475 - non-streaming responses and refusals also preserve the notice
+  ---
+  duration_ms: 0.424375
+  type: 'test'
+  ...
+# Subtest: callers cannot replace mandatory disclosure corrections
+ok 476 - callers cannot replace mandatory disclosure corrections
+  ---
+  duration_ms: 0.362417
+  type: 'test'
+  ...
+# Subtest: invalid personas fail before the emulator is invoked
+ok 477 - invalid personas fail before the emulator is invoked
+  ---
+  duration_ms: 0.749667
+  type: 'test'
+  ...
+# Subtest: every trait has a URL, provenance and confidence, or is explicitly unknown
+ok 478 - every trait has a URL, provenance and confidence, or is explicitly unknown
+  ---
+  duration_ms: 4.609375
+  type: 'test'
+  ...
+# Subtest: invalid sources, unsupported basis, missing notes and invalid confidence are rejected
+ok 479 - invalid sources, unsupported basis, missing notes and invalid confidence are rejected
+  ---
+  duration_ms: 0.643458
+  type: 'test'
+  ...
+# Subtest: unknown values cannot carry manufactured evidence
+ok 480 - unknown values cannot carry manufactured evidence
+  ---
+  duration_ms: 0.15325
+  type: 'test'
+  ...
+# Subtest: inherited or unknown personas cannot call traits researched
+ok 481 - inherited or unknown personas cannot call traits researched
+  ---
+  duration_ms: 0.399459
+  type: 'test'
+  ...
+# Subtest: strict versioning, cutoff shape, interface and identifiers
+ok 482 - strict versioning, cutoff shape, interface and identifiers
+  ---
+  duration_ms: 1.708833
+  type: 'test'
+  ...
+# Subtest: planned fake adapter starts a stdio bridge: initialize, list and exact shell-metacharacter task/result
+ok 483 - planned fake adapter starts a stdio bridge: initialize, list and exact shell-metacharacter task/result
+  ---
+  duration_ms: 205.718625
+  type: 'test'
+  ...
+# Subtest: file input keeps option-like tasks out of argv, uses private workspace files, and removes them after the reply
+ok 484 - file input keeps option-like tasks out of argv, uses private workspace files, and removes them after the reply
+  ---
+  duration_ms: 261.571
+  type: 'test'
+  ...
+# Subtest: temporary task files and role locks are removed on every failure path
+    # Subtest: nonzero exit
+    ok 1 - nonzero exit
+      ---
+      duration_ms: 165.720667
+      type: 'test'
+      ...
+    # Subtest: output cap
+    ok 2 - output cap
+      ---
+      duration_ms: 134.772625
+      type: 'test'
+      ...
+    # Subtest: timeout
+    ok 3 - timeout
+      ---
+      duration_ms: 920.421125
+      type: 'test'
+      ...
+    # Subtest: cancellation
+    ok 4 - cancellation
+      ---
+      duration_ms: 166.438334
+      type: 'test'
+      ...
+    # Subtest: EOF
+    ok 5 - EOF
+      ---
+      duration_ms: 141.170625
+      type: 'test'
+      ...
+    # Subtest: missing executable
+    ok 6 - missing executable
+      ---
+      duration_ms: 78.274875
+      type: 'test'
+      ...
+    1..6
+ok 485 - temporary task files and role locks are removed on every failure path
+  ---
+  duration_ms: 1608.082125
+  type: 'test'
+  ...
+# Subtest: file input refuses a symlinked helper directory before writing a task or starting a process
+ok 486 - file input refuses a symlinked helper directory before writing a task or starting a process
+  ---
+  duration_ms: 31.861875
+  type: 'test'
+  ...
+# Subtest: task length, missing task, extra inputs, unknown tool and malformed JSON are rejected without starting a helper
+ok 487 - task length, missing task, extra inputs, unknown tool and malformed JSON are rejected without starting a helper
+  ---
+  duration_ms: 174.225625
+  type: 'test'
+  ...
+# Subtest: only one run per role, including separate bridge processes sharing the role config
+ok 488 - only one run per role, including separate bridge processes sharing the role config
+  ---
+  duration_ms: 160.2635
+  type: 'test'
+  ...
+# Subtest: timeout kills the helper and descendants and releases the role for another request
+ok 489 - timeout kills the helper and descendants and releases the role for another request
+  ---
+  duration_ms: 1677.8455
+  type: 'test'
+  ...
+# Subtest: stdout and stderr output caps kill the helper and never expose its logs
+ok 490 - stdout and stderr output caps kill the helper and never expose its logs
+  ---
+  duration_ms: 184.344583
+  type: 'test'
+  ...
+# Subtest: output cap counts UTF-8 bytes and permits an answer exactly at the cap
+ok 491 - output cap counts UTF-8 bytes and permits an answer exactly at the cap
+  ---
+  duration_ms: 132.9
+  type: 'test'
+  ...
+# Subtest: EOF cancels an in-flight helper, and the bridge exits
+ok 492 - EOF cancels an in-flight helper, and the bridge exits
+  ---
+  duration_ms: 97.488917
+  type: 'test'
+  ...
+# Subtest: nonzero exit and missing executable return Japanese errors without helper stderr
+ok 493 - nonzero exit and missing executable return Japanese errors without helper stderr
+  ---
+  duration_ms: 134.916125
+  type: 'test'
+  ...
+# Subtest: environment references expand at execution, cwd/PWD select project, and no key value is stored
+ok 494 - environment references expand at execution, cwd/PWD select project, and no key value is stored
+  ---
+  duration_ms: 97.532917
+  type: 'test'
+  ...
+# Subtest: a missing credential reference fails before starting a helper
+ok 495 - a missing credential reference fails before starting a helper
+  ---
+  duration_ms: 52.755125
+  type: 'test'
+  ...
+# Subtest: an oversized MCP frame stops the bridge and its in-flight helper
+ok 496 - an oversized MCP frame stops the bridge and its in-flight helper
+  ---
+  duration_ms: 107.660834
+  type: 'test'
+  ...
+# Subtest: JSON event adapter returns only its final message through the subprocess bridge
+ok 497 - JSON event adapter returns only its final message through the subprocess bridge
+  ---
+  duration_ms: 95.515083
+  type: 'test'
+  ...
+# Subtest: documented JSON result parsers exclude tool/reasoning events and reject unsuccessful or missing final results
+ok 498 - documented JSON result parsers exclude tool/reasoning events and reject unsuccessful or missing final results
+  ---
+  duration_ms: 0.484416
+  type: 'test'
+  ...
+# Subtest: invalid timeouts, caps, transports and escaping configuration locations are refused
+ok 499 - invalid timeouts, caps, transports and escaping configuration locations are refused
+  ---
+  duration_ms: 11.036459
+  type: 'test'
+  ...
+# Subtest: all documented headless adapters produce private helper homes and bridge plans without starting harnesses
+ok 500 - all documented headless adapters produce private helper homes and bridge plans without starting harnesses
+  ---
+  duration_ms: 51.203666
+  type: 'test'
+  ...
+# Subtest: claude-code headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 501 - claude-code headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 198.236666
+  type: 'test'
+  ...
+# Subtest: codex headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 502 - codex headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 198.616416
+  type: 'test'
+  ...
+# Subtest: gemini-cli headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 503 - gemini-cli headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 198.771167
+  type: 'test'
+  ...
+# Subtest: openclaw headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 504 - openclaw headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 191.450208
+  type: 'test'
+  ...
+# Subtest: hermes headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 505 - hermes headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 193.162416
+  type: 'test'
+  ...
+# Subtest: opencode headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 506 - opencode headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 192.718208
+  type: 'test'
+  ...
+# Subtest: pi headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 507 - pi headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 189.792625
+  type: 'test'
+  ...
+# Subtest: aider headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+ok 508 - aider headless preserves option-like and multiline tasks byte-for-byte through a strict fake CLI
+  ---
+  duration_ms: 193.417
+  type: 'test'
+  ...
+# Subtest: future native delegation takes priority; a tool-only native server cannot masquerade as delegation
+ok 509 - future native delegation takes priority; a tool-only native server cannot masquerade as delegation
+  ---
+  duration_ms: 12.76225
+  type: 'test'
+  ...
+# Subtest: eight MCP conductors serialize the bridge in their own configuration format
+ok 510 - eight MCP conductors serialize the bridge in their own configuration format
+  ---
+  duration_ms: 27.958583
+  type: 'test'
+  ...
+# Subtest: repeated real helper harnesses keep their configs separate and never receive helper connection definitions
+ok 511 - repeated real helper harnesses keep their configs separate and never receive helper connection definitions
+  ---
+  duration_ms: 18.687208
+  type: 'test'
+  ...
+# Subtest: schema rejects unknown keys, invalid ids, excessive lengths and excessive actor/tool counts
+ok 512 - schema rejects unknown keys, invalid ids, excessive lengths and excessive actor/tool counts
+  ---
+  duration_ms: 5.084875
+  type: 'test'
+  ...
+# Subtest: validates every harness, provider, exact model, tool, style and skin id
+ok 513 - validates every harness, provider, exact model, tool, style and skin id
+  ---
+  duration_ms: 31.788
+  type: 'test'
+  ...
+# Subtest: loads empty catalogs, dynamically imports added adapters and skips invalid entries with reasons
+ok 514 - loads empty catalogs, dynamically imports added adapters and skips invalid entries with reasons
+  ---
+  duration_ms: 74.291708
+  type: 'test'
+  ...
+# Subtest: plan passes MCP references to the adapter, deduplicates style files, and contains a Japanese PLAN
+ok 515 - plan passes MCP references to the adapter, deduplicates style files, and contains a Japanese PLAN
+  ---
+  duration_ms: 32.438625
+  type: 'test'
+  ...
+# Subtest: coalesces adapter copies of a style while preserving its exact text and restrictive permissions
+ok 516 - coalesces adapter copies of a style while preserving its exact text and restrictive permissions
+  ---
+  duration_ms: 20.621042
+  type: 'test'
+  ...
+# Subtest: rejects absolute paths, parent traversal, Windows paths and conflicting file targets before writing
+ok 517 - rejects absolute paths, parent traversal, Windows paths and conflicting file targets before writing
+  ---
+  duration_ms: 22.013583
+  type: 'test'
+  ...
+# Subtest: apply requires explicit confirmation, preserves project/, supports retry and refuses a different workspace
+ok 518 - apply requires explicit confirmation, preserves project/, supports retry and refuses a different workspace
+  ---
+  duration_ms: 62.003583
+  type: 'test'
+  ...
+# Subtest: refuses workspace, ancestor, project, target and dangling symlinks
+ok 519 - refuses workspace, ancestor, project, target and dangling symlinks
+  ---
+  duration_ms: 22.211958
+  type: 'test'
+  ...
+# Subtest: preflights existing files, preserves content on failure and serializes concurrent applications
+ok 520 - preflights existing files, preserves content on failure and serializes concurrent applications
+  ---
+  duration_ms: 56.284167
+  type: 'test'
+  ...
+# Subtest: restores already replaced files when a later rename fails
+ok 521 - restores already replaced files when a later rename fails
+  ---
+  duration_ms: 32.979541
+  type: 'test'
+  ...
+# Subtest: CLI list, validate, plan and launch print results without writing and apply requires a TTY
+ok 522 - CLI list, validate, plan and launch print results without writing and apply requires a TTY
+  ---
+  duration_ms: 61.624792
+  type: 'test'
+  ...
+# Subtest: CLI applies only after the Japanese TTY confirmation
+ok 523 - CLI applies only after the Japanese TTY confirmation
+  ---
+  duration_ms: 58.367875
+  type: 'test'
+  ...
+# Subtest: shipped MCP entries contain source URLs and environment names only
+ok 524 - shipped MCP entries contain source URLs and environment names only
+  ---
+  duration_ms: 36.106417
+  type: 'test'
+  ...
+# Loaded 9 harnesses, 6 providers, 11 MCP entries, 17 styles.
+# Subtest: four shipped examples resolve available catalog ids and plan with a temporary style when the guide catalog is pending
+ok 525 - four shipped examples resolve available catalog ids and plan with a temporary style when the guide catalog is pending
+  ---
+  duration_ms: 77.268083
+  type: 'test'
+  ...
+# Subtest: valid AI recipe uses the injected completion contract and a minimal catalog
+ok 526 - valid AI recipe uses the injected completion contract and a minimal catalog
+  ---
+  duration_ms: 55.968458
+  type: 'test'
+  ...
+# Subtest: a suggested bridge helper composes without a manual handoff
+ok 527 - a suggested bridge helper composes without a manual handoff
+  ---
+  duration_ms: 33.818334
+  type: 'test'
+  ...
+# Subtest: unknown catalog IDs and unknown instruction formats are rejected with reasons
+ok 528 - unknown catalog IDs and unknown instruction formats are rejected with reasons
+  ---
+  duration_ms: 80.939542
+  type: 'test'
+  ...
+# Subtest: extra keys are rejected instead of stripped
+ok 529 - extra keys are rejected instead of stripped
+  ---
+  duration_ms: 20.090834
+  type: 'test'
+  ...
+# Subtest: shell text, paths, URLs, and non-Japanese prose never survive display fields
+ok 530 - shell text, paths, URLs, and non-Japanese prose never survive display fields
+  ---
+  duration_ms: 756.775291
+  type: 'test'
+  ...
+# Subtest: mixed AI results preserve valid candidates and matching explanations
+ok 531 - mixed AI results preserve valid candidates and matching explanations
+  ---
+  duration_ms: 23.758125
+  type: 'test'
+  ...
+# Subtest: duplicates are dropped and at most three valid recipes are returned
+ok 532 - duplicates are dropped and at most three valid recipes are returned
+  ---
+  duration_ms: 18.100292
+  type: 'test'
+  ...
+# Subtest: garbage, refusal, empty responses, malformed envelopes, and failures fall back offline
+ok 533 - garbage, refusal, empty responses, malformed envelopes, and failures fall back offline
+  ---
+  duration_ms: 95.840125
+  type: 'test'
+  ...
+# Subtest: unavailable AI never imports or calls a real backend
+ok 534 - unavailable AI never imports or calls a real backend
+  ---
+  duration_ms: 21.749541
+  type: 'test'
+  ...
+# Subtest: fallback matches Japanese and English wishes, including the move away from chain-of-thought
+ok 535 - fallback matches Japanese and English wishes, including the move away from chain-of-thought
+  ---
+  duration_ms: 151.821291
+  type: 'test'
+  ...
+# Subtest: fallback manual notes describe instruction setup rather than helper handoff
+ok 536 - fallback manual notes describe instruction setup rather than helper handoff
+  ---
+  duration_ms: 6.247417
+  type: 'test'
+  ...
+# Subtest: installed IDs, sets, detection arrays, and records are supported without inspecting binaries
+ok 537 - installed IDs, sets, detection arrays, and records are supported without inspecting binaries
+  ---
+  duration_ms: 50.696583
+  type: 'test'
+  ...
+# Subtest: core-valid but unsupported model, MCP, frontend, and helper role combinations are dropped
+ok 538 - core-valid but unsupported model, MCP, frontend, and helper role combinations are dropped
+  ---
+  duration_ms: 49.773667
+  type: 'test'
+  ...
+# Subtest: native instruction formats avoid conflicting generated imports
+ok 539 - native instruction formats avoid conflicting generated imports
+  ---
+  duration_ms: 54.319541
+  type: 'test'
+  ...
+# Subtest: every style loads through the core catalog and has sourced bilingual templates
+ok 540 - every style loads through the core catalog and has sourced bilingual templates
+  ---
+  duration_ms: 9.781666
+  type: 'test'
+  ...
+# Subtest: all 17 style templates compose with installed compatible harnesses without writes
+ok 541 - all 17 style templates compose with installed compatible harnesses without writes
+  ---
+  duration_ms: 1207.158833
+  type: 'test'
+  ...
+# Subtest: invalid wishes fail before calling completion
+ok 542 - invalid wishes fail before calling completion
+  ---
+  duration_ms: 0.350125
+  type: 'test'
+  ...
+# Subtest: 進行役の計画に実際の YAML 設定と読み取り専用の AGENTS.md を含める
+ok 543 - 進行役の計画に実際の YAML 設定と読み取り専用の AGENTS.md を含める
+  ---
+  duration_ms: 1.50025
+  type: 'test'
+  ...
+# Subtest: 選んだ二つの MCP 接続を未確認と報告し、架空の設定を作らない
+ok 544 - 選んだ二つの MCP 接続を未確認と報告し、架空の設定を作らない
+  ---
+  duration_ms: 0.255375
+  type: 'test'
+  ...
+# Subtest: ファイルは作業場所の中だけを指し、引数はシェルの文字列にしない
+ok 545 - ファイルは作業場所の中だけを指し、引数はシェルの文字列にしない
+  ---
+  duration_ms: 0.534208
+  type: 'test'
+  ...
+# Subtest: ACP、補助役への委任、skills の未確認部分を報告する
+ok 546 - ACP、補助役への委任、skills の未確認部分を報告する
+  ---
+  duration_ms: 0.14975
+  type: 'test'
+  ...
+# Subtest: 補助役や確認役を黙って独立した進行役として起動しない
+ok 547 - 補助役や確認役を黙って独立した進行役として起動しない
+  ---
+  duration_ms: 0.249084
+  type: 'test'
+  ...
+# Subtest: OpenAI 互換接続の URL はカタログから取り、秘密の値は保存しない
+ok 548 - OpenAI 互換接続の URL はカタログから取り、秘密の値は保存しない
+  ---
+  duration_ms: 1.108208
+  type: 'test'
+  ...
+# Subtest: 互換接続のモデル名にある提供元の名前空間を取り除かない
+ok 549 - 互換接続のモデル名にある提供元の名前空間を取り除かない
+  ---
+  duration_ms: 0.396209
+  type: 'test'
+  ...
+# Subtest: 未確認の提供元の接続先を無視して既定のサービスへ接続しない
+ok 550 - 未確認の提供元の接続先を無視して既定のサービスへ接続しない
+  ---
+  duration_ms: 0.180959
+  type: 'test'
+  ...
+# Subtest: OpenAI、Gemini、Ollama のモデル名を対応する引数に写す
+ok 551 - OpenAI、Gemini、Ollama のモデル名を対応する引数に写す
+  ---
+  duration_ms: 0.740459
+  type: 'test'
+  ...
+# Subtest: カタログ外のモデル、危険なモデル名、認証情報入り URL を起動しない
+ok 552 - カタログ外のモデル、危険なモデル名、認証情報入り URL を起動しない
+  ---
+  duration_ms: 0.499084
+  type: 'test'
+  ...
+# Subtest: スタイルのパスを転用せず、本文がなければ未作成の指示書を参照しない
+ok 553 - スタイルのパスを転用せず、本文がなければ未作成の指示書を参照しない
+  ---
+  duration_ms: 0.391541
+  type: 'test'
+  ...
+# Subtest: which が何も返さなければ起動せず installed: false を返す
+ok 554 - which が何も返さなければ起動せず installed: false を返す
+  ---
+  duration_ms: 0.118625
+  type: 'test'
+  ...
+# Subtest: which の未検出表現と例外でも installed: false を返す
+ok 555 - which の未検出表現と例外でも installed: false を返す
+  ---
+  duration_ms: 0.132542
+  type: 'test'
+  ...
+# Subtest: desktop metadata distinguishes hosted models from external provider connections
+ok 556 - desktop metadata distinguishes hosted models from external provider connections
+  ---
+  duration_ms: 0.939666
+  type: 'test'
+  ...
+# Subtest: conductor gets two stdio servers in native project MCP JSON and the rendered AGENTS.md
+ok 557 - conductor gets two stdio servers in native project MCP JSON and the rendered AGENTS.md
+  ---
+  duration_ms: 1.5115
+  type: 'test'
+  ...
+# Subtest: output paths stay in the workspace and launching never contains recipe or shell text
+ok 558 - output paths stay in the workspace and launching never contains recipe or shell text
+  ---
+  duration_ms: 0.382083
+  type: 'test'
+  ...
+# Subtest: plan is deterministic, accepts frozen inputs, and never edits context definitions
+ok 559 - plan is deterministic, accepts frozen inputs, and never edits context definitions
+  ---
+  duration_ms: 0.73075
+  type: 'test'
+  ...
+# Subtest: undocumented config relocation, model automation, desktop ACP and headless execution are explicit
+ok 560 - undocumented config relocation, model automation, desktop ACP and headless execution are explicit
+  ---
+  duration_ms: 0.749375
+  type: 'test'
+  ...
+# Subtest: helper role cannot overwrite the conductor files or silently launch a desktop helper
+ok 561 - helper role cannot overwrite the conductor files or silently launch a desktop helper
+  ---
+  duration_ms: 0.113916
+  type: 'test'
+  ...
+# Subtest: missing or malformed catalog MCP entries are unsupported, without leaking extra fields
+ok 562 - missing or malformed catalog MCP entries are unsupported, without leaking extra fields
+  ---
+  duration_ms: 0.294709
+  type: 'test'
+  ...
+# Subtest: no tools produces no unnecessary MCP file and provider credentials are not serialized
+ok 563 - no tools produces no unnecessary MCP file and provider credentials are not serialized
+  ---
+  duration_ms: 0.299292
+  type: 'test'
+  ...
+# Subtest: instruction content is required; unsafe destinations and oversized UTF-8 text are not copied
+ok 564 - instruction content is required; unsafe destinations and oversized UTF-8 text are not copied
+  ---
+  duration_ms: 1.1975
+  type: 'test'
+  ...
+# Subtest: relative workspace roots are rejected before a plan is produced
+ok 565 - relative workspace roots are rejected before a plan is produced
+  ---
+  duration_ms: 0.559167
+  type: 'test'
+  ...
+# Subtest: detect with an empty fake which reports not installed without starting a process
+ok 566 - detect with an empty fake which reports not installed without starting a process
+  ---
+  duration_ms: 0.170625
+  type: 'test'
+  ...
+# Subtest: detect can report an injected launcher while leaving the desktop version unverified
+ok 567 - detect can report an injected launcher while leaving the desktop version unverified
+  ---
+  duration_ms: 0.090208
+  type: 'test'
+  ...
+# Subtest: conductor emits documented MCP JSON, isolated settings, AGENTS.md and its CLAUDE.md import
+ok 568 - conductor emits documented MCP JSON, isolated settings, AGENTS.md and its CLAUDE.md import
+  ---
+  duration_ms: 1.609542
+  type: 'test'
+  ...
+# Subtest: plan is deterministic and pure, and all write descriptions stay inside the workspace
+ok 569 - plan is deterministic and pure, and all write descriptions stay inside the workspace
+  ---
+  duration_ms: 0.912667
+  type: 'test'
+  ...
+# Subtest: argv consists of individual arguments and contains no shell or recipe free text
+ok 570 - argv consists of individual arguments and contains no shell or recipe free text
+  ---
+  duration_ms: 0.331292
+  type: 'test'
+  ...
+# Subtest: ACP frontend and cross-harness helpers are explicitly reported without inventing a native ACP flag
+ok 571 - ACP frontend and cross-harness helpers are explicitly reported without inventing a native ACP flag
+  ---
+  duration_ms: 0.169417
+  type: 'test'
+  ...
+# Subtest: a helper role does not accidentally write conductor config or launch a conductor
+ok 572 - a helper role does not accidentally write conductor config or launch a conductor
+  ---
+  duration_ms: 0.370417
+  type: 'test'
+  ...
+# Subtest: unknown models, provider protocols, and endpoints cannot become command arguments or URLs
+ok 573 - unknown models, provider protocols, and endpoints cannot become command arguments or URLs
+  ---
+  duration_ms: 0.355916
+  type: 'test'
+  ...
+# Subtest: Ollama uses its documented Anthropic-compatible local endpoint and a catalog model
+ok 574 - Ollama uses its documented Anthropic-compatible local endpoint and a catalog model
+  ---
+  duration_ms: 0.324459
+  type: 'test'
+  ...
+# Subtest: provider modules and fully qualified catalog model ids are accepted without importing them
+ok 575 - provider modules and fully qualified catalog model ids are accepted without importing them
+  ---
+  duration_ms: 0.11075
+  type: 'test'
+  ...
+# Subtest: missing MCP definitions, unsupported transports, and literal credentials are not silently emitted
+ok 576 - missing MCP definitions, unsupported transports, and literal credentials are not silently emitted
+  ---
+  duration_ms: 0.462084
+  type: 'test'
+  ...
+# Subtest: missing or mismatched styles and unrecognized instruction ids are reported
+ok 577 - missing or mismatched styles and unrecognized instruction ids are reported
+  ---
+  duration_ms: 0.420459
+  type: 'test'
+  ...
+# Subtest: workspace-relative rendered style files and Claude-specific instructions are combined
+ok 578 - workspace-relative rendered style files and Claude-specific instructions are combined
+  ---
+  duration_ms: 0.150375
+  type: 'test'
+  ...
+# Subtest: relative or NUL-containing workspace paths are refused before planning
+ok 579 - relative or NUL-containing workspace paths are refused before planning
+  ---
+  duration_ms: 0.216042
+  type: 'test'
+  ...
+# Subtest: detect with a fake which returning nothing reports installed false without a process
+ok 580 - detect with a fake which returning nothing reports installed false without a process
+  ---
+  duration_ms: 0.098833
+  type: 'test'
+  ...
+# Subtest: metadata cites primary sources and makes the separate ACP bridge explicit
+ok 581 - metadata cites primary sources and makes the separate ACP bridge explicit
+  ---
+  duration_ms: 0.049
+  type: 'test'
+  ...
+# Subtest: conductor plan produces native TOML for two MCP servers and AGENTS.md
+ok 582 - conductor plan produces native TOML for two MCP servers and AGENTS.md
+  ---
+  duration_ms: 1.537959
+  type: 'test'
+  ...
+# Subtest: all planned files and config home stay inside workspace; recipe prose cannot become paths or commands
+ok 583 - all planned files and config home stay inside workspace; recipe prose cannot become paths or commands
+  ---
+  duration_ms: 0.344375
+  type: 'test'
+  ...
+# Subtest: argv consists of separate executable arguments, including a path with spaces
+ok 584 - argv consists of separate executable arguments, including a path with spaces
+  ---
+  duration_ms: 0.3755
+  type: 'test'
+  ...
+# Subtest: plan is deterministic and does not mutate frozen inputs
+ok 585 - plan is deterministic and does not mutate frozen inputs
+  ---
+  duration_ms: 1.045917
+  type: 'test'
+  ...
+# Subtest: reports ACP frontend, foreign instruction format, and external helpers as unsupported
+ok 586 - reports ACP frontend, foreign instruction format, and external helpers as unsupported
+  ---
+  duration_ms: 0.50975
+  type: 'test'
+  ...
+# Subtest: helper role cannot overwrite conductor instructions or configuration
+ok 587 - helper role cannot overwrite conductor instructions or configuration
+  ---
+  duration_ms: 0.097583
+  type: 'test'
+  ...
+# Subtest: direct Anthropic provider is unsupported with no fallback model launch
+ok 588 - direct Anthropic provider is unsupported with no fallback model launch
+  ---
+  duration_ms: 0.144584
+  type: 'test'
+  ...
+# Subtest: model choices must resolve to a trusted catalog record
+ok 589 - model choices must resolve to a trusted catalog record
+  ---
+  duration_ms: 0.061542
+  type: 'test'
+  ...
+# Subtest: custom endpoint uses Responses TOML and a key name; compatibility remains unverified
+ok 590 - custom endpoint uses Responses TOML and a key name; compatibility remains unverified
+  ---
+  duration_ms: 0.475583
+  type: 'test'
+  ...
+# Subtest: Ollama has an explicit local provider and catalog model argument
+ok 591 - Ollama has an explicit local provider and catalog model argument
+  ---
+  duration_ms: 0.416083
+  type: 'test'
+  ...
+# Subtest: missing MCP and unsupported environment renaming are reported without made-up configuration
+ok 592 - missing MCP and unsupported environment renaming are reported without made-up configuration
+  ---
+  duration_ms: 0.154125
+  type: 'test'
+  ...
+# Subtest: TOML escapes catalog strings instead of creating extra configuration tables
+ok 593 - TOML escapes catalog strings instead of creating extra configuration tables
+  ---
+  duration_ms: 0.078084
+  type: 'test'
+  ...
+# Subtest: style targets are mapped to a fixed AGENTS.md path and unknown styles are reported
+ok 594 - style targets are mapped to a fixed AGENTS.md path and unknown styles are reported
+  ---
+  duration_ms: 0.1015
+  type: 'test'
+  ...
+# Subtest: workspace must be an absolute path supplied by the core
+ok 595 - workspace must be an absolute path supplied by the core
+  ---
+  duration_ms: 0.344875
+  type: 'test'
+  ...
+# Subtest: detect with an empty fake which returns installed false without starting Codex
+ok 596 - detect with an empty fake which returns installed false without starting Codex
+  ---
+  duration_ms: 0.122125
+  type: 'test'
+  ...
+# Subtest: detect handles a failed executable lookup
+ok 597 - detect handles a failed executable lookup
+  ---
+  duration_ms: 0.063334
+  type: 'test'
+  ...
+# Subtest: metadata links capability claims to official documentation and source
+ok 598 - metadata links capability claims to official documentation and source
+  ---
+  duration_ms: 0.044917
+  type: 'test'
+  ...
+# Subtest: 進行役のMCP設定、AGENTS.md、モデルと起動引数を作成する
+ok 599 - 進行役のMCP設定、AGENTS.md、モデルと起動引数を作成する
+  ---
+  duration_ms: 1.88
+  type: 'test'
+  ...
+# Subtest: 計画は入力を変更せず、ファイルや環境変数の保存先は作業フォルダー内に収まる
+ok 600 - 計画は入力を変更せず、ファイルや環境変数の保存先は作業フォルダー内に収まる
+  ---
+  duration_ms: 0.687708
+  type: 'test'
+  ...
+# Subtest: ACPを選んだときは文書にある--acpで起動する
+ok 601 - ACPを選んだときは文書にある--acpで起動する
+  ---
+  duration_ms: 0.183291
+  type: 'test'
+  ...
+# Subtest: 未確認の補助役連携と画面・指示ファイルは対応外に挙げる
+ok 602 - 未確認の補助役連携と画面・指示ファイルは対応外に挙げる
+  ---
+  duration_ms: 0.238708
+  type: 'test'
+  ...
+# Subtest: カタログにないモデルや別のAPI形式を黙って既定モデルに置き換えない
+ok 603 - カタログにないモデルや別のAPI形式を黙って既定モデルに置き換えない
+  ---
+  duration_ms: 1.134
+  type: 'test'
+  ...
+# Subtest: MCPの不足や鍵の直書きは報告し、設定に秘密の値を書き出さない
+ok 604 - MCPの不足や鍵の直書きは報告し、設定に秘密の値を書き出さない
+  ---
+  duration_ms: 0.1715
+  type: 'test'
+  ...
+# Subtest: 指示文がないときは作ったと偽らず、不明な保存先を利用しない
+ok 605 - 指示文がないときは作ったと偽らず、不明な保存先を利用しない
+  ---
+  duration_ms: 0.343417
+  type: 'test'
+  ...
+# Subtest: GEMINI.mdと本文のみのスタイルも固定の保存先に書く
+ok 606 - GEMINI.mdと本文のみのスタイルも固定の保存先に書く
+  ---
+  duration_ms: 0.093417
+  type: 'test'
+  ...
+# Subtest: whichが何も返さなければ未導入と報告し、起動しない
+ok 607 - whichが何も返さなければ未導入と報告し、起動しない
+  ---
+  duration_ms: 0.391167
+  type: 'test'
+  ...
+# Subtest: 確認した機能と日付には公式の出典がある
+ok 608 - 確認した機能と日付には公式の出典がある
+  ---
+  duration_ms: 0.469375
+  type: 'test'
+  ...
+# Subtest: conductor receives native config with both selected MCP servers and the style AGENTS.md
+ok 609 - conductor receives native config with both selected MCP servers and the style AGENTS.md
+  ---
+  duration_ms: 1.464792
+  type: 'test'
+  ...
+# Subtest: plan is pure and all output paths stay in the workspace
+ok 610 - plan is pure and all output paths stay in the workspace
+  ---
+  duration_ms: 0.875209
+  type: 'test'
+  ...
+# Subtest: argv contains individual arguments and no recipe text or shell command
+ok 611 - argv contains individual arguments and no recipe text or shell command
+  ---
+  duration_ms: 0.155209
+  type: 'test'
+  ...
+# Subtest: ACP frontend uses the documented separate subcommand with the same home
+ok 612 - ACP frontend uses the documented separate subcommand with the same home
+  ---
+  duration_ms: 0.19
+  type: 'test'
+  ...
+# Subtest: native provider kinds map to Hermes provider names
+ok 613 - native provider kinds map to Hermes provider names
+  ---
+  duration_ms: 1.834542
+  type: 'test'
+  ...
+# Subtest: compatible endpoint stores the catalog URL and credential name, never its value
+ok 614 - compatible endpoint stores the catalog URL and credential name, never its value
+  ---
+  duration_ms: 0.407959
+  type: 'test'
+  ...
+# Subtest: Ollama uses its compatible endpoint and preserves a colon in the catalog model id
+ok 615 - Ollama uses its compatible endpoint and preserves a colon in the catalog model id
+  ---
+  duration_ms: 0.292125
+  type: 'test'
+  ...
+# Subtest: catalog endpoint overrides are preserved and Anthropic endpoints use the Messages format
+ok 616 - catalog endpoint overrides are preserved and Anthropic endpoints use the Messages format
+  ---
+  duration_ms: 0.230542
+  type: 'test'
+  ...
+# Subtest: missing catalog model does not launch a different model or accept recipe text as configuration
+ok 617 - missing catalog model does not launch a different model or accept recipe text as configuration
+  ---
+  duration_ms: 0.39725
+  type: 'test'
+  ...
+# Subtest: unsupported parts are explicit and helper/reviewer roles produce no launch or files
+ok 618 - unsupported parts are explicit and helper/reviewer roles produce no launch or files
+  ---
+  duration_ms: 0.442792
+  type: 'test'
+  ...
+# Subtest: style filenames cannot escape or overwrite config and missing style is reported
+ok 619 - style filenames cannot escape or overwrite config and missing style is reported
+  ---
+  duration_ms: 0.173542
+  type: 'test'
+  ...
+# Subtest: malformed MCP definitions and incompatible endpoints are reported
+ok 620 - malformed MCP definitions and incompatible endpoints are reported
+  ---
+  duration_ms: 0.11
+  type: 'test'
+  ...
+# Subtest: detect with a fake which returning nothing reports installed false
+ok 621 - detect with a fake which returning nothing reports installed false
+  ---
+  duration_ms: 0.100417
+  type: 'test'
+  ...
+# Subtest: detect treats a failed executable lookup as unavailable
+ok 622 - detect treats a failed executable lookup as unavailable
+  ---
+  duration_ms: 0.057
+  type: 'test'
+  ...
+# Subtest: metadata provides official sources for advertised capabilities
+ok 623 - metadata provides official sources for advertised capabilities
+  ---
+  duration_ms: 0.131416
+  type: 'test'
+  ...
+# Subtest: conductor plan emits native config, two selected MCP servers, and the style AGENTS.md
+ok 624 - conductor plan emits native config, two selected MCP servers, and the style AGENTS.md
+  ---
+  duration_ms: 2.404041
+  type: 'test'
+  ...
+# Subtest: all planned files, config paths, and runtime homes stay inside the workspace
+ok 625 - all planned files, config paths, and runtime homes stay inside the workspace
+  ---
+  duration_ms: 1.016125
+  type: 'test'
+  ...
+# Subtest: launch and ACP commands contain literal argv entries without shell wrappers
+ok 626 - launch and ACP commands contain literal argv entries without shell wrappers
+  ---
+  duration_ms: 0.304208
+  type: 'test'
+  ...
+# Subtest: ACP frontend starts its prerequisite Gateway and leaves editor setup manual
+ok 627 - ACP frontend starts its prerequisite Gateway and leaves editor setup manual
+  ---
+  duration_ms: 0.841833
+  type: 'test'
+  ...
+# Subtest: helper orchestration, unsupported instruction files, and unknown frontends are reported
+ok 628 - helper orchestration, unsupported instruction files, and unknown frontends are reported
+  ---
+  duration_ms: 0.228417
+  type: 'test'
+  ...
+# Subtest: using OpenClaw as a helper returns no misleading runnable plan
+ok 629 - using OpenClaw as a helper returns no misleading runnable plan
+  ---
+  duration_ms: 0.081041
+  type: 'test'
+  ...
+# Subtest: missing or malformed MCP catalog entries are reported and never fabricated
+ok 630 - missing or malformed MCP catalog entries are reported and never fabricated
+  ---
+  duration_ms: 0.130958
+  type: 'test'
+  ...
+# Subtest: MCP credentials must be environment references, never inline secrets
+ok 631 - MCP credentials must be environment references, never inline secrets
+  ---
+  duration_ms: 0.229209
+  type: 'test'
+  ...
+# Subtest: OpenAI-compatible provider uses catalog endpoint and a key reference
+ok 632 - OpenAI-compatible provider uses catalog endpoint and a key reference
+  ---
+  duration_ms: 0.509708
+  type: 'test'
+  ...
+# Subtest: Ollama uses the native API and preserves tagged model names
+ok 633 - Ollama uses the native API and preserves tagged model names
+  ---
+  duration_ms: 0.48925
+  type: 'test'
+  ...
+# Subtest: native OpenAI stays on OpenClaw and Gemini maps to its documented google provider
+ok 634 - native OpenAI stays on OpenClaw and Gemini maps to its documented google provider
+  ---
+  duration_ms: 0.182167
+  type: 'test'
+  ...
+# Subtest: unknown providers and models do not silently launch a different default model
+ok 635 - unknown providers and models do not silently launch a different default model
+  ---
+  duration_ms: 0.205458
+  type: 'test'
+  ...
+# Subtest: untrusted style paths never become proposed file paths
+ok 636 - untrusted style paths never become proposed file paths
+  ---
+  duration_ms: 0.149584
+  type: 'test'
+  ...
+# Subtest: plan is deterministic without mutating its inputs and rejects nonabsolute workspace paths
+ok 637 - plan is deterministic without mutating its inputs and rejects nonabsolute workspace paths
+  ---
+  duration_ms: 0.33975
+  type: 'test'
+  ...
+# Subtest: detect returns installed false when a fake which finds nothing
+ok 638 - detect returns installed false when a fake which finds nothing
+  ---
+  duration_ms: 0.114041
+  type: 'test'
+  ...
+# Subtest: capability metadata supplies official evidence and a documentation verification date
+ok 639 - capability metadata supplies official evidence and a documentation verification date
+  ---
+  duration_ms: 0.122875
+  type: 'test'
+  ...
+# Subtest: conductor produces native V2 MCP config and the selected AGENTS.md without side effects
+ok 640 - conductor produces native V2 MCP config and the selected AGENTS.md without side effects
+  ---
+  duration_ms: 4.1315
+  type: 'test'
+  ...
+# Subtest: recipe prose never becomes a path, URL, environment value, or shell command
+ok 641 - recipe prose never becomes a path, URL, environment value, or shell command
+  ---
+  duration_ms: 0.594834
+  type: 'test'
+  ...
+# Subtest: reports unsupported helper coordination, instruction formats and front ends
+ok 642 - reports unsupported helper coordination, instruction formats and front ends
+  ---
+  duration_ms: 0.532542
+  type: 'test'
+  ...
+# Subtest: helper/reviewer invocation returns no misleading conductor command or overlapping files
+ok 643 - helper/reviewer invocation returns no misleading conductor command or overlapping files
+  ---
+  duration_ms: 0.391958
+  type: 'test'
+  ...
+# Subtest: ACP launch uses the documented acp subcommand with workspace environment
+ok 644 - ACP launch uses the documented acp subcommand with workspace environment
+  ---
+  duration_ms: 0.955291
+  type: 'test'
+  ...
+# Subtest: uses catalog provider endpoints, package mappings and key names without storing keys
+ok 645 - uses catalog provider endpoints, package mappings and key names without storing keys
+  ---
+  duration_ms: 1.207334
+  type: 'test'
+  ...
+# Subtest: unconfirmed model/provider choices cannot launch a silent fallback model
+ok 646 - unconfirmed model/provider choices cannot launch a silent fallback model
+  ---
+  duration_ms: 0.591125
+  type: 'test'
+  ...
+# Subtest: missing or malformed MCP catalog entries are omitted and reported
+ok 647 - missing or malformed MCP catalog entries are omitted and reported
+  ---
+  duration_ms: 0.408709
+  type: 'test'
+  ...
+# Subtest: style paths cannot escape the workspace; missing and duplicate AGENTS.md are reported
+ok 648 - style paths cannot escape the workspace; missing and duplicate AGENTS.md are reported
+  ---
+  duration_ms: 1.024125
+  type: 'test'
+  ...
+# Subtest: relative workspace paths are rejected without writing files
+ok 649 - relative workspace paths are rejected without writing files
+  ---
+  duration_ms: 0.825458
+  type: 'test'
+  ...
+# Subtest: detect with an empty fake which reports not installed without launching anything
+ok 650 - detect with an empty fake which reports not installed without launching anything
+  ---
+  duration_ms: 0.163459
+  type: 'test'
+  ...
+# Subtest: metadata cites installation, config, instructions, models, subagents and ACP evidence
+ok 651 - metadata cites installation, config, instructions, models, subagents and ACP evidence
+  ---
+  duration_ms: 0.057041
+  type: 'test'
+  ...
+# Subtest: metadata cites current upstream and distinguishes stock capabilities
+ok 652 - metadata cites current upstream and distinguishes stock capabilities
+  ---
+  duration_ms: 0.726083
+  type: 'test'
+  ...
+# Subtest: conductor plan emits two stdio MCP servers, style AGENTS.md and literal argv
+ok 653 - conductor plan emits two stdio MCP servers, style AGENTS.md and literal argv
+  ---
+  duration_ms: 1.519167
+  type: 'test'
+  ...
+# Subtest: all output paths and config/session homes remain under workspace; plan writes nothing
+ok 654 - all output paths and config/session homes remain under workspace; plan writes nothing
+  ---
+  duration_ms: 0.584334
+  type: 'test'
+  ...
+# Subtest: OpenAI-compatible config uses trusted endpoint and an environment reference only
+ok 655 - OpenAI-compatible config uses trusted endpoint and an environment reference only
+  ---
+  duration_ms: 0.809958
+  type: 'test'
+  ...
+# Subtest: Ollama config retains the colon in a catalog model ID and uses its documented dummy key
+ok 656 - Ollama config retains the colon in a catalog model ID and uses its documented dummy key
+  ---
+  duration_ms: 0.367833
+  type: 'test'
+  ...
+# Subtest: native provider names map to pi names without losing the selected catalog model
+ok 657 - native provider names map to pi names without losing the selected catalog model
+  ---
+  duration_ms: 0.252458
+  type: 'test'
+  ...
+# Subtest: ACP, helper orchestration and unsupported instruction formats are reported
+ok 658 - ACP, helper orchestration and unsupported instruction formats are reported
+  ---
+  duration_ms: 0.37325
+  type: 'test'
+  ...
+# Subtest: unknown or injected model selections cannot become argv or model config
+ok 659 - unknown or injected model selections cannot become argv or model config
+  ---
+  duration_ms: 0.322667
+  type: 'test'
+  ...
+# Subtest: unknown MCP entries, conflicting server names and pi command-valued env are rejected
+ok 660 - unknown MCP entries, conflicting server names and pi command-valued env are rejected
+  ---
+  duration_ms: 0.372708
+  type: 'test'
+  ...
+# Subtest: style files use only the fixed AGENTS.md path and missing styles are reported
+ok 661 - style files use only the fixed AGENTS.md path and missing styles are reported
+  ---
+  duration_ms: 0.586833
+  type: 'test'
+  ...
+# Subtest: detect with a fake which returning nothing reports not installed
+ok 662 - detect with a fake which returning nothing reports not installed
+  ---
+  duration_ms: 0.170625
+  type: 'test'
+  ...
+# Subtest: detect handles a missing-path error without starting a process
+ok 663 - detect handles a missing-path error without starting a process
+  ---
+  duration_ms: 0.067042
+  type: 'test'
+  ...
+# Subtest: detect runs only --version on the injected executable (Node fixture, not pi)
+ok 664 - detect runs only --version on the injected executable (Node fixture, not pi)
+  ---
+  duration_ms: 36.709417
+  type: 'test'
+  ...
+# Subtest: leader-reviewer embeds the bridge in the conductor MCP file and applies private helper configurations
+ok 665 - leader-reviewer embeds the bridge in the conductor MCP file and applies private helper configurations
+  ---
+  duration_ms: 110.541875
+  type: 'test'
+  ...
+# Subtest: a helper without documented headless execution stays manual and retains standalone files alongside the leader
+ok 666 - a helper without documented headless execution stays manual and retains standalone files alongside the leader
+  ---
+  duration_ms: 39.076541
+  type: 'test'
+  ...
+# Subtest: mixed helpers retain bridge files and manual files without a blanket handoff warning
+ok 667 - mixed helpers retain bridge files and manual files without a blanket handoff warning
+  ---
+  duration_ms: 30.15075
+  type: 'test'
+  ...
+# Subtest: every MCP conductor serializes the bridge using its native config format
+ok 668 - every MCP conductor serializes the bridge using its native config format
+  ---
+  duration_ms: 79.892791
+  type: 'test'
+  ...
+# Subtest: OpenClaw and Hermes bridges keep private homes, models, empty MCP definitions and sourced setup notes
+ok 669 - OpenClaw and Hermes bridges keep private homes, models, empty MCP definitions and sourced setup notes
+  ---
+  duration_ms: 31.07175
+  type: 'test'
+  ...
+# Subtest: same-harness helpers use distinct config homes and never recurse into one another
+ok 670 - same-harness helpers use distinct config homes and never recurse into one another
+  ---
+  duration_ms: 14.948208
+  type: 'test'
+  ...
+# Subtest: real provider metadata reaches helper server, fallback helper and conductor (including Map catalogs)
+ok 671 - real provider metadata reaches helper server, fallback helper and conductor (including Map catalogs)
+  ---
+  duration_ms: 4.483291
+  type: 'test'
+  ...
+# Subtest: missing client support and unsupported helper models produce manual plans
+ok 672 - missing client support and unsupported helper models produce manual plans
+  ---
+  duration_ms: 9.993208
+  type: 'test'
+  ...
+# Subtest: helper role collisions and malformed or escaping server descriptions fail before writing
+ok 673 - helper role collisions and malformed or escaping server descriptions fail before writing
+  ---
+  duration_ms: 4.916125
+  type: 'test'
+  ...
+# Subtest: only documented server adapters export asMcpServer
+ok 674 - only documented server adapters export asMcpServer
+  ---
+  duration_ms: 0.302333
+  type: 'test'
+  ...
+# Subtest: public exports exist and every catalog tool and adapter has an explicit route
+ok 675 - public exports exist and every catalog tool and adapter has an explicit route
+  ---
+  duration_ms: 146.260292
+  type: 'test'
+  ...
+# Subtest: GitHub latest contains only Mac arm64 or explicit universal Mac assets
+ok 676 - GitHub latest contains only Mac arm64 or explicit universal Mac assets
+  ---
+  duration_ms: 4.513417
+  type: 'test'
+  ...
+# Subtest: an empty Mac asset list preserves the publisher release link
+ok 677 - an empty Mac asset list preserves the publisher release link
+  ---
+  duration_ms: 1.13375
+  type: 'test'
+  ...
+# Subtest: GitHub token is sent only to GitHub API and is never included in output or cache
+ok 678 - GitHub token is sent only to GitHub API and is never included in output or cache
+  ---
+  duration_ms: 1.431209
+  type: 'test'
+  ...
+# Subtest: GITHUB_TOKEN from the environment is honoured without changing the environment
+ok 679 - GITHUB_TOKEN from the environment is honoured without changing the environment
+  ---
+  duration_ms: 0.770208
+  type: 'test'
+  ...
+# Subtest: npm and PyPI versions come from their official JSON responses
+ok 680 - npm and PyPI versions come from their official JSON responses
+  ---
+  duration_ms: 0.495792
+  type: 'test'
+  ...
+# Subtest: wrong package names and invalid JSON never become a confirmed latest version
+ok 681 - wrong package names and invalid JSON never become a confirmed latest version
+  ---
+  duration_ms: 0.8225
+  type: 'test'
+  ...
+# Subtest: brew, official pages, web entries and unknown ids need no fetch or process
+ok 682 - brew, official pages, web entries and unknown ids need no fetch or process
+  ---
+  duration_ms: 0.189792
+  type: 'test'
+  ...
+# Subtest: unverified publisher identity remains visible after a successful API response
+ok 683 - unverified publisher identity remains visible after a successful API response
+  ---
+  duration_ms: 0.681375
+  type: 'test'
+  ...
+# Subtest: release history has dates and page links, includes marked previews, and drops drafts
+ok 684 - release history has dates and page links, includes marked previews, and drops drafts
+  ---
+  duration_ms: 1.037167
+  type: 'test'
+  ...
+# Subtest: history uses requested pages and never follows a foreign pagination URL
+ok 685 - history uses requested pages and never follows a foreign pagination URL
+  ---
+  duration_ms: 0.480167
+  type: 'test'
+  ...
+# Subtest: a selected tag is encoded and does not use another version on failure
+ok 686 - a selected tag is encoded and does not use another version on failure
+  ---
+  duration_ms: 0.564334
+  type: 'test'
+  ...
+# Subtest: a full 24-hour cache hit works across client instances and expires at the boundary
+ok 687 - a full 24-hour cache hit works across client instances and expires at the boundary
+  ---
+  duration_ms: 0.858583
+  type: 'test'
+  ...
+# Subtest: cached release data omits prose and never contains credentials
+ok 688 - cached release data omits prose and never contains credentials
+  ---
+  duration_ms: 0.390291
+  type: 'test'
+  ...
+# Subtest: expired data is visibly stale when a service is unavailable
+ok 689 - expired data is visibly stale when a service is unavailable
+  ---
+  duration_ms: 0.51575
+  type: 'test'
+  ...
+# Subtest: 404 does not resurrect a deleted release from stale cache
+ok 690 - 404 does not resurrect a deleted release from stale cache
+  ---
+  duration_ms: 0.528667
+  type: 'test'
+  ...
+# Subtest: cache read/write failures do not hide official links or a successful response
+ok 691 - cache read/write failures do not hide official links or a successful response
+  ---
+  duration_ms: 0.430708
+  type: 'test'
+  ...
+# Subtest: corrupt and future-dated cache entries are replaced with fetched data
+ok 692 - corrupt and future-dated cache entries are replaced with fetched data
+  ---
+  duration_ms: 1.592875
+  type: 'test'
+  ...
+# Subtest: a stalled fetch or JSON body has a deadline and its signal is aborted
+ok 693 - a stalled fetch or JSON body has a deadline and its signal is aborted
+  ---
+  duration_ms: 12.857917
+  type: 'test'
+  ...
+# Subtest: invalid options fail before fetching, and absent history is explicit
+ok 694 - invalid options fail before fetching, and absent history is explicit
+  ---
+  duration_ms: 5.634375
+  type: 'test'
+  ...
+# Subtest: malformed and redirected release links do not become download links
+ok 695 - malformed and redirected release links do not become download links
+  ---
+  duration_ms: 1.202709
+  type: 'test'
+  ...
+# Subtest: 必要な6社があり、提供元とモデルのIDが重複しない
+ok 696 - 必要な6社があり、提供元とモデルのIDが重複しない
+  ---
+  duration_ms: 0.95625
+  type: 'test'
+  ...
+# Subtest: anthropic.js は契約に沿う meta と出典・確認日を公開する
+ok 697 - anthropic.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 6.045041
+  type: 'test'
+  ...
+# Subtest: deepseek.js は契約に沿う meta と出典・確認日を公開する
+ok 698 - deepseek.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 1.611958
+  type: 'test'
+  ...
+# Subtest: gemini.js は契約に沿う meta と出典・確認日を公開する
+ok 699 - gemini.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 1.026083
+  type: 'test'
+  ...
+# Subtest: ollama.js は契約に沿う meta と出典・確認日を公開する
+ok 700 - ollama.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 2.10475
+  type: 'test'
+  ...
+# Subtest: openai.js は契約に沿う meta と出典・確認日を公開する
+ok 701 - openai.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 0.8855
+  type: 'test'
+  ...
+# Subtest: openrouter.js は契約に沿う meta と出典・確認日を公開する
+ok 702 - openrouter.js は契約に沿う meta と出典・確認日を公開する
+  ---
+  duration_ms: 1.437583
+  type: 'test'
+  ...
+# Subtest: 提供元の定義は通信・環境変数の読み取り・処理の実行を含まない
+ok 703 - 提供元の定義は通信・環境変数の読み取り・処理の実行を含まない
+  ---
+  duration_ms: 0.781708
+  type: 'test'
+  ...
+# Subtest: 秘密のキー値を持たず、環境変数の名前だけを持つ
+ok 704 - 秘密のキー値を持たず、環境変数の名前だけを持つ
+  ---
+  duration_ms: 1.514916
+  type: 'test'
+  ...
+# Subtest: DeepSeekのAnthropic形式の接続先を主なOpenAI形式と区別できる
+ok 705 - DeepSeekのAnthropic形式の接続先を主なOpenAI形式と区別できる
+  ---
+  duration_ms: 0.342458
+  type: 'test'
+  ...
+# Subtest: ローカルOllamaには秘密のキー名もクラウドのモデル指定も含めない
+ok 706 - ローカルOllamaには秘密のキー名もクラウドのモデル指定も含めない
+  ---
+  duration_ms: 0.199042
+  type: 'test'
+  ...
+# Subtest: the relay shards facts exactly like the site build
+ok 707 - the relay shards facts exactly like the site build
+  ---
+  duration_ms: 0.528583
+  type: 'test'
+  ...
+# Subtest: claims treat 1,000,000 / 1M / 100万 and written dates alike
+ok 708 - claims treat 1,000,000 / 1M / 100万 and written dates alike
+  ---
+  duration_ms: 0.863208
+  type: 'test'
+  ...
+# Subtest: the check passes only answers built from the cited facts
+ok 709 - the check passes only answers built from the cited facts
+  ---
+  duration_ms: 0.81075
+  type: 'test'
+  ...
+# Subtest: the prompt carries only the published facts and treats the question as data
+ok 710 - the prompt carries only the published facts and treats the question as data
+  ---
+  duration_ms: 0.146834
+  type: 'test'
+  ...
+# Subtest: a checked answer goes back to an allowed site, with the facts read from the site
+ok 711 - a checked answer goes back to an allowed site, with the facts read from the site
+  ---
+  duration_ms: 19.854042
+  type: 'test'
+  ...
+# rejected unsupported-number {"answer":"私は2019年に公開されました。","keys":["release"]}
+# Subtest: made-up numbers, other sites and too many requests fall back
+ok 712 - made-up numbers, other sites and too many requests fall back
+  ---
+  duration_ms: 6.707875
+  type: 'test'
+  ...
+# Subtest: D2 chatgpt: every edition stays logo-free and keeps its source disclosure
+ok 713 - D2 chatgpt: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 90.242583
+  type: 'test'
+  ...
+# Subtest: D2 claude: every edition stays logo-free and keeps its source disclosure
+ok 714 - D2 claude: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 62.55225
+  type: 'test'
+  ...
+# Subtest: D2 claude-code: every edition stays logo-free and keeps its source disclosure
+ok 715 - D2 claude-code: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 41.763
+  type: 'test'
+  ...
+# Subtest: D2 claude-desktop: every edition stays logo-free and keeps its source disclosure
+ok 716 - D2 claude-desktop: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 31.218458
+  type: 'test'
+  ...
+# Subtest: D2 cursor: every edition stays logo-free and keeps its source disclosure
+ok 717 - D2 cursor: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 39.92425
+  type: 'test'
+  ...
+# Subtest: D2 codex: every edition stays logo-free and keeps its source disclosure
+ok 718 - D2 codex: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 27.936667
+  type: 'test'
+  ...
+# Subtest: D2 gemini: every edition stays logo-free and keeps its source disclosure
+ok 719 - D2 gemini: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 36.236083
+  type: 'test'
+  ...
+# Subtest: D2 gemini-cli: every edition stays logo-free and keeps its source disclosure
+ok 720 - D2 gemini-cli: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 13.307166
+  type: 'test'
+  ...
+# Subtest: D2 opencode: every edition stays logo-free and keeps its source disclosure
+ok 721 - D2 opencode: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 18.567334
+  type: 'test'
+  ...
+# Subtest: D2 copilot: every edition stays logo-free and keeps its source disclosure
+ok 722 - D2 copilot: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 28.284959
+  type: 'test'
+  ...
+# Subtest: D2 windsurf: every edition stays logo-free and keeps its source disclosure
+ok 723 - D2 windsurf: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 41.664042
+  type: 'test'
+  ...
+# Subtest: D2 playground: every edition stays logo-free and keeps its source disclosure
+ok 724 - D2 playground: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 31.468542
+  type: 'test'
+  ...
+# Subtest: D2 antigravity: every edition stays logo-free and keeps its source disclosure
+ok 725 - D2 antigravity: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 16.571084
+  type: 'test'
+  ...
+# D2 model entry inventory: 54 sourced edition controls mounted.
+# Subtest: D2 deepseek: every edition stays logo-free and keeps its source disclosure
+ok 726 - D2 deepseek: every edition stays logo-free and keeps its source disclosure
+  ---
+  duration_ms: 8.180208
+  type: 'test'
+  ...
+# Subtest: D2 priority renderers keep every sourced model-switch entry functional
+ok 727 - D2 priority renderers keep every sourced model-switch entry functional
+  ---
+  duration_ms: 93.845333
+  type: 'test'
+  ...
+# Subtest: D2 chat actions survive repeated stream updates and rate only their own answer
+ok 728 - D2 chat actions survive repeated stream updates and rate only their own answer
+  ---
+  duration_ms: 5.857625
+  type: 'test'
+  ...
+# Subtest: D2 August Cursor Composer toggle is mounted and preserves its separate Chat input
+ok 729 - D2 August Cursor Composer toggle is mounted and preserves its separate Chat input
+  ---
+  duration_ms: 2.796042
+  type: 'test'
+  ...
+# Subtest: D2 priority streams transition from thinking to text to completion without media
+ok 730 - D2 priority streams transition from thinking to text to completion without media
+  ---
+  duration_ms: 10.506084
+  type: 'test'
+  ...
+# Subtest: D2 April Codex draws both sourced startup boxes at 64 terminal cells
+ok 731 - D2 April Codex draws both sourced startup boxes at 64 terminal cells
+  ---
+  duration_ms: 0.969375
+  type: 'test'
+  ...
+# D3 model inventory: 126 editions, 70 sourced slots, 24 slash-command flows.
+# Subtest: D3 aider: all editions and streaming DOM contain no image or SVG artwork
+ok 732 - D3 aider: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 90.288833
+  type: 'test'
+  ...
+# Subtest: D3 bing: all editions and streaming DOM contain no image or SVG artwork
+ok 733 - D3 bing: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 169.261375
+  type: 'test'
+  ...
+# Subtest: D3 cherry-studio: all editions and streaming DOM contain no image or SVG artwork
+ok 734 - D3 cherry-studio: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 56.513708
+  type: 'test'
+  ...
+# Subtest: D3 cline: all editions and streaming DOM contain no image or SVG artwork
+ok 735 - D3 cline: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 139.287208
+  type: 'test'
+  ...
+# Subtest: D3 continue: all editions and streaming DOM contain no image or SVG artwork
+ok 736 - D3 continue: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 82.975167
+  type: 'test'
+  ...
+# Subtest: D3 gpt2: all editions and streaming DOM contain no image or SVG artwork
+ok 737 - D3 gpt2: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 9.147208
+  type: 'test'
+  ...
+# Subtest: D3 hermes-agent: all editions and streaming DOM contain no image or SVG artwork
+ok 738 - D3 hermes-agent: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 103.646375
+  type: 'test'
+  ...
+# Subtest: D3 huggingchat: all editions and streaming DOM contain no image or SVG artwork
+ok 739 - D3 huggingchat: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 82.961833
+  type: 'test'
+  ...
+# Subtest: D3 lmstudio: all editions and streaming DOM contain no image or SVG artwork
+ok 740 - D3 lmstudio: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 71.564167
+  type: 'test'
+  ...
+# Subtest: D3 n8n: all editions and streaming DOM contain no image or SVG artwork
+ok 741 - D3 n8n: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 53.127333
+  type: 'test'
+  ...
+# Subtest: D3 ollama: all editions and streaming DOM contain no image or SVG artwork
+ok 742 - D3 ollama: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 19.44975
+  type: 'test'
+  ...
+# Subtest: D3 openclaw: all editions and streaming DOM contain no image or SVG artwork
+ok 743 - D3 openclaw: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 60.747709
+  type: 'test'
+  ...
+# Subtest: D3 openwebui: all editions and streaming DOM contain no image or SVG artwork
+ok 744 - D3 openwebui: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 65.270333
+  type: 'test'
+  ...
+# Subtest: D3 pi-coding-agent: all editions and streaming DOM contain no image or SVG artwork
+ok 745 - D3 pi-coding-agent: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 51.3235
+  type: 'test'
+  ...
+# Subtest: D3 zed: all editions and streaming DOM contain no image or SVG artwork
+ok 746 - D3 zed: all editions and streaming DOM contain no image or SVG artwork
+  ---
+  duration_ms: 61.775417
+  type: 'test'
+  ...
+# Subtest: D3 retains the sourced edition model slots and slash-command interception
+ok 747 - D3 retains the sourced edition model slots and slash-command interception
+  ---
+  duration_ms: 223.604541
+  type: 'test'
+  ...
+# Subtest: D3 n8n model subnode opens settings without becoming a sequential output
+ok 748 - D3 n8n model subnode opens settings without becoming a sequential output
+  ---
+  duration_ms: 3.5625
+  type: 'test'
+  ...
+# Subtest: D3 code gutters preserve code text and file selection after a transcript update
+ok 749 - D3 code gutters preserve code text and file selection after a transcript update
+  ---
+  duration_ms: 13.805375
+  type: 'test'
+  ...
+# Subtest: D3 Open WebUI response actions retry the real preceding question once
+ok 750 - D3 Open WebUI response actions retry the real preceding question once
+  ---
+  duration_ms: 3.07
+  type: 'test'
+  ...
+# Subtest: D3 GPT-2 keeps a terminal prompt and warns before empty input clears
+ok 751 - D3 GPT-2 keeps a terminal prompt and warns before empty input clears
+  ---
+  duration_ms: 1.130834
+  type: 'test'
+  ...
+# Subtest: queue accepts published items, raw records and new versions, deduplicates by version
+ok 752 - queue accepts published items, raw records and new versions, deduplicates by version
+  ---
+  duration_ms: 1.434458
+  type: 'test'
+  ...
+# Subtest: tool discovery worker's memento.enrich-tool.v1 queue is accepted
+ok 753 - tool discovery worker's memento.enrich-tool.v1 queue is accepted
+  ---
+  duration_ms: 0.112333
+  type: 'test'
+  ...
+# Subtest: dry run limits work without importing a backend, checking sources, or writing
+ok 754 - dry run limits work without importing a backend, checking sources, or writing
+  ---
+  duration_ms: 0.253292
+  type: 'test'
+  ...
+# Subtest: model facts preserve curated names and only source-backed values
+ok 755 - model facts preserve curated names and only source-backed values
+  ---
+  duration_ms: 24.141625
+  type: 'test'
+  ...
+# Subtest: invented URL is dropped together with dependent facts and lifecycle references
+ok 756 - invented URL is dropped together with dependent facts and lifecycle references
+  ---
+  duration_ms: 2.148833
+  type: 'test'
+  ...
+# Subtest: a reachable page does not rescue a fact without its own citation
+ok 757 - a reachable page does not rescue a fact without its own citation
+  ---
+  duration_ms: 1.246333
+  type: 'test'
+  ...
+# Subtest: literal citation URLs retain balanced parentheses and query characters
+ok 758 - literal citation URLs retain balanced parentheses and query characters
+  ---
+  duration_ms: 2.533667
+  type: 'test'
+  ...
+# Subtest: tools produce a design draft in the existing shape and a local adapter TODO
+ok 759 - tools produce a design draft in the existing shape and a local adapter TODO
+  ---
+  duration_ms: 3.741708
+  type: 'test'
+  ...
+# Subtest: unsupported design details become unknown while keeping the spec shape
+ok 760 - unsupported design details become unknown while keeping the spec shape
+  ---
+  duration_ms: 1.751791
+  type: 'test'
+  ...
+# Subtest: HEAD 405 falls back to GET, cancels its body, and caches duplicate checks
+ok 761 - HEAD 405 falls back to GET, cancels its body, and caches duplicate checks
+  ---
+  duration_ms: 1.5165
+  type: 'test'
+  ...
+# Subtest: redirect targets are validated before making a new request
+ok 762 - redirect targets are validated before making a new request
+  ---
+  duration_ms: 0.625666
+  type: 'test'
+  ...
+# Subtest: private literals, private DNS and policy-restricted hosts are never fetched
+ok 763 - private literals, private DNS and policy-restricted hosts are never fetched
+  ---
+  duration_ms: 0.532375
+  type: 'test'
+  ...
+# Subtest: 429 stops that registry for the rest of the run without retrying
+ok 764 - 429 stops that registry for the rest of the run without retrying
+  ---
+  duration_ms: 0.142875
+  type: 'test'
+  ...
+# Subtest: request limits count HEAD, GET and redirects together across a registry
+ok 765 - request limits count HEAD, GET and redirects together across a registry
+  ---
+  duration_ms: 1.035333
+  type: 'test'
+  ...
+# Subtest: per-registry delay is respected without real sleeping in tests
+ok 766 - per-registry delay is respected without real sleeping in tests
+  ---
+  duration_ms: 0.17925
+  type: 'test'
+  ...
+# Subtest: network errors are logged as unverified; an explicit abort is propagated
+ok 767 - network errors are logged as unverified; an explicit abort is propagated
+  ---
+  duration_ms: 0.379375
+  type: 'test'
+  ...
+# Subtest: run processes at most max items, lazily loads once, and only saves drafts
+ok 768 - run processes at most max items, lazily loads once, and only saves drafts
+  ---
+  duration_ms: 1.695958
+  type: 'test'
+  ...
+# Subtest: backend and validation failures save only a short failure draft and continue
+ok 769 - backend and validation failures save only a short failure draft and continue
+  ---
+  duration_ms: 3.63275
+  type: 'test'
+  ...
+# Subtest: fenced JSON and backend-observed URLs are checked, including on invalid JSON
+ok 770 - fenced JSON and backend-observed URLs are checked, including on invalid JSON
+  ---
+  duration_ms: 1.35475
+  type: 'test'
+  ...
+# Subtest: API actors, negative limits, root citation pointers and copied asset fields are rejected
+ok 771 - API actors, negative limits, root citation pointers and copied asset fields are rejected
+  ---
+  duration_ms: 0.963958
+  type: 'test'
+  ...
+# Subtest: published queue fetch is bounded and uses the injected public fetch
+ok 772 - published queue fetch is bounded and uses the injected public fetch
+  ---
+  duration_ms: 4.085292
+  type: 'test'
+  ...
+# Subtest: CLI help, dry-run, and CI guard never load the real backend
+ok 773 - CLI help, dry-run, and CI guard never load the real backend
+  ---
+  duration_ms: 0.405625
+  type: 'test'
+  ...
+# Subtest: CLI parser handles local/remote queues and strictly validates limits
+ok 774 - CLI parser handles local/remote queues and strictly validates limits
+  ---
+  duration_ms: 0.234292
+  type: 'test'
+  ...
+# Subtest: writer confines even hostile item IDs to data/drafts with exclusive private files
+ok 775 - writer confines even hostile item IDs to data/drafts with exclusive private files
+  ---
+  duration_ms: 0.81275
+  type: 'test'
+  ...
+# Subtest: writer rejects symlink directories and cleans up a failed write
+ok 776 - writer rejects symlink directories and cleans up a failed write
+  ---
+  duration_ms: 0.180792
+  type: 'test'
+  ...
+# Subtest: CLI has strict modes, budget and paths
+ok 777 - CLI has strict modes, budget and paths
+  ---
+  duration_ms: 1.052042
+  type: 'test'
+  ...
+# Subtest: promotion boundaries, explicit maker/tracked choices and NSFW
+ok 778 - promotion boundaries, explicit maker/tracked choices and NSFW
+  ---
+  duration_ms: 0.184792
+  type: 'test'
+  ...
+# Subtest: external sorting uses multiple passes, streaming arrays handle split UTF-8 and quoting
+ok 779 - external sorting uses multiple passes, streaming arrays handle split UTF-8 and quoting
+  ---
+  duration_ms: 79.755416
+  type: 'test'
+  ...
+# Subtest: dynamic discovery imports every registry and ignores helpers, no registry directory is safe
+ok 780 - dynamic discovery imports every registry and ignores helpers, no registry directory is safe
+  ---
+  duration_ms: 5.105166
+  type: 'test'
+  ...
+# Subtest: full build publishes hashes, author arrays, deduplicated new arrivals, notable and compact facts only
+ok 781 - full build publishes hashes, author arrays, deduplicated new arrivals, notable and compact facts only
+  ---
+  duration_ms: 51.157125
+  type: 'test'
+  ...
+# Subtest: remote delta needs no old local shards: keeps absent models, updates facts, detects exact new IDs, removes NSFW
+ok 782 - remote delta needs no old local shards: keeps absent models, updates facts, detects exact new IDs, removes NSFW
+  ---
+  duration_ms: 141.816375
+  type: 'test'
+  ...
+# Subtest: request budget is independently enforced; cursor and scan watermark resume
+ok 783 - request budget is independently enforced; cursor and scan watermark resume
+  ---
+  duration_ms: 53.553125
+  type: 'test'
+  ...
+# Subtest: count-only policy prevents listing, and Ollama makes zero requests
+ok 784 - count-only policy prevents listing, and Ollama makes zero requests
+  ---
+  duration_ms: 7.645292
+  type: 'test'
+  ...
+# Subtest: registry object cursors with done/complete reset for a fresh scan and cumulative exclusions are not double counted
+ok 785 - registry object cursors with done/complete reset for a fresh scan and cumulative exclusions are not double counted
+  ---
+  duration_ms: 21.850791
+  type: 'test'
+  ...
+# Subtest: a mixed API registry cannot contact the listing service whose terms forbid copying
+ok 786 - a mixed API registry cannot contact the listing service whose terms forbid copying
+  ---
+  duration_ms: 3.167334
+  type: 'test'
+  ...
+# Subtest: tool arrivals, versions, enrichment queue and source cursors join the same publication
+ok 787 - tool arrivals, versions, enrichment queue and source cursors join the same publication
+  ---
+  duration_ms: 28.583292
+  type: 'test'
+  ...
+# Subtest: failed registry and corrupt old shard cannot replace a published artifact
+ok 788 - failed registry and corrupt old shard cannot replace a published artifact
+  ---
+  duration_ms: 26.418667
+  type: 'test'
+  ...
+# Subtest: client fetches one hash shard, exact case and registry, authors including prototype keys, dates and offline notable
+ok 789 - client fetches one hash shard, exact case and registry, authors including prototype keys, dates and offline notable
+  ---
+  duration_ms: 48.98875
+  type: 'test'
+  ...
+# Subtest: client persists cached publications across instances, accepts HTTP-decoded gzip and retries after failures
+ok 790 - client persists cached publications across instances, accepts HTTP-decoded gzip and retries after failures
+  ---
+  duration_ms: 28.600583
+  type: 'test'
+  ...
+# Subtest: live search delegates existing registry arguments only online and respects disabled services
+ok 791 - live search delegates existing registry arguments only online and respects disabled services
+  ---
+  duration_ms: 0.506959
+  type: 'test'
+  ...
+# Subtest: current real registry modules build from fake API responses and start a second delta scan
+ok 792 - current real registry modules build from fake API responses and start a second delta scan
+  ---
+  duration_ms: 100.460917
+  type: 'test'
+  ...
+# Subtest: registry credentials are supplied only to the module and never published
+ok 793 - registry credentials are supplied only to the module and never published
+  ---
+  duration_ms: 22.581083
+  type: 'test'
+  ...
+# Subtest: 4400000 synthetic records stay below 2 GiB RSS (opt-in offline benchmark)
+ok 794 - 4400000 synthetic records stay below 2 GiB RSS (opt-in offline benchmark) # SKIP
+  ---
+  duration_ms: 0.66025
+  type: 'test'
+  ...
+# Subtest: compact facts round-trip unknowns, Unicode, URL overrides and fixed enums
+ok 795 - compact facts round-trip unknowns, Unicode, URL overrides and fixed enums
+  ---
+  duration_ms: 2.138583
+  type: 'test'
+  ...
+# Subtest: cold lookup is exactly two fetches; offset references stay correct after replacements and removals
+ok 796 - cold lookup is exactly two fetches; offset references stay correct after replacements and removals
+  ---
+  duration_ms: 409.876792
+  type: 'test'
+  ...
+# Subtest: weekly full crawl resumes its budget checkpoint and completed state resets for the next delta
+ok 797 - weekly full crawl resumes its budget checkpoint and completed state resets for the next delta
+  ---
+  duration_ms: 61.0145
+  type: 'test'
+  ...
+# Subtest: author differences preserve negative shard changes, gaps and pagination through skipped groups
+ok 798 - author differences preserve negative shard changes, gaps and pagination through skipped groups
+  ---
+  duration_ms: 877.352125
+  type: 'test'
+  ...
+# Subtest: hf: a later NSFW flag removes the model from every published view without double-counting
+ok 799 - hf: a later NSFW flag removes the model from every published view without double-counting
+  ---
+  duration_ms: 20.980125
+  type: 'test'
+  ...
+# Subtest: modelscope: a later NSFW flag removes the model from every published view without double-counting
+ok 800 - modelscope: a later NSFW flag removes the model from every published view without double-counting
+  ---
+  duration_ms: 20.43525
+  type: 'test'
+  ...
+# Subtest: civitai: a later NSFW flag removes the model from every published view without double-counting
+ok 801 - civitai: a later NSFW flag removes the model from every published view without double-counting
+  ---
+  duration_ms: 20.078125
+  type: 'test'
+  ...
+# Subtest: api: a later NSFW flag removes the model from every published view without double-counting
+ok 802 - api: a later NSFW flag removes the model from every published view without double-counting
+  ---
+  duration_ms: 26.243125
+  type: 'test'
+  ...
+# Subtest: legacy records migrate on the next delta; an oversized result cannot replace a publication
+ok 803 - legacy records migrate on the next delta; an oversized result cannot replace a publication
+  ---
+  duration_ms: 22.2865
+  type: 'test'
+  ...
+# Subtest: one queue location connects the builder, discovery and local enrichment without invoking a backend
+ok 804 - one queue location connects the builder, discovery and local enrichment without invoking a backend
+  ---
+  duration_ms: 6.635583
+  type: 'test'
+  ...
+# Subtest: HF: sampled names/facts, cursor pagination, minimal fields and pace
+ok 805 - HF: sampled names/facts, cursor pagination, minimal fields and pace
+  ---
+  duration_ms: 17.948083
+  type: 'test'
+  ...
+# Subtest: HF: budget counts requests and JSON checkpoint resumes at next cursor
+ok 806 - HF: budget counts requests and JSON checkpoint resumes at next cursor
+  ---
+  duration_ms: 1.182417
+  type: 'test'
+  ...
+# Subtest: HF: count uses one aggregate, never enumerates, and unknown is null
+ok 807 - HF: count uses one aggregate, never enumerates, and unknown is null
+  ---
+  duration_ms: 0.980917
+  type: 'test'
+  ...
+# Subtest: ModelScope: sampled mapping, 50-item pages, resume and aggregate count
+ok 808 - ModelScope: sampled mapping, 50-item pages, resume and aggregate count
+  ---
+  duration_ms: 2.024333
+  type: 'test'
+  ...
+# Subtest: ModelScope: pagination stays partial at the documented 3000-result cap
+ok 809 - ModelScope: pagination stays partial at the documented 3000-result cap
+  ---
+  duration_ms: 0.517916
+  type: 'test'
+  ...
+# Subtest: hf: delta is inclusive, stops at older update, filters restricted/private
+ok 810 - hf: delta is inclusive, stops at older update, filters restricted/private
+  ---
+  duration_ms: 0.6415
+  type: 'test'
+  ...
+# Subtest: hf: zero budget makes no requests, including after a saved retry
+ok 811 - hf: zero budget makes no requests, including after a saved retry
+  ---
+  duration_ms: 0.200708
+  type: 'test'
+  ...
+# Subtest: hf: 429 Retry-After backoff retries same page within request budget
+ok 812 - hf: 429 Retry-After backoff retries same page within request budget
+  ---
+  duration_ms: 0.331708
+  type: 'test'
+  ...
+# Subtest: hf: exhausted 429 budget persists waiting time across resume
+ok 813 - hf: exhausted 429 budget persists waiting time across resume
+  ---
+  duration_ms: 0.592958
+  type: 'test'
+  ...
+# Subtest: hf: missing 429 headers use bounded exponential backoff
+ok 814 - hf: missing 429 headers use bounded exponential backoff
+  ---
+  duration_ms: 1.333084
+  type: 'test'
+  ...
+# Subtest: hf: headerless backoff survives JSON checkpoint and resets on success
+ok 815 - hf: headerless backoff survives JSON checkpoint and resets on success
+  ---
+  duration_ms: 1.353334
+  type: 'test'
+  ...
+# Subtest: hf: RateLimit reset and stricter policy are respected
+ok 816 - hf: RateLimit reset and stricter policy are respected
+  ---
+  duration_ms: 0.636958
+  type: 'test'
+  ...
+# Subtest: hf: request spacing is start-to-start, not latency plus interval
+ok 817 - hf: request spacing is start-to-start, not latency plus interval
+  ---
+  duration_ms: 0.838417
+  type: 'test'
+  ...
+# Subtest: hf: successful responses also honor exhausted or scarce remaining quota
+ok 818 - hf: successful responses also honor exhausted or scarce remaining quota
+  ---
+  duration_ms: 0.63925
+  type: 'test'
+  ...
+# Subtest: hf: malformed ids are skipped without leaking text or losing checkpoint
+ok 819 - hf: malformed ids are skipped without leaking text or losing checkpoint
+  ---
+  duration_ms: 0.386958
+  type: 'test'
+  ...
+# Subtest: hf: HTTP, network and malformed response failures retain checkpoint
+ok 820 - hf: HTTP, network and malformed response failures retain checkpoint
+  ---
+  duration_ms: 0.775208
+  type: 'test'
+  ...
+# Subtest: hf: invalid options reject without network access
+ok 821 - hf: invalid options reject without network access
+  ---
+  duration_ms: 0.773708
+  type: 'test'
+  ...
+# Subtest: modelscope: delta is inclusive, stops at older update, filters restricted/private
+ok 822 - modelscope: delta is inclusive, stops at older update, filters restricted/private
+  ---
+  duration_ms: 0.658917
+  type: 'test'
+  ...
+# Subtest: modelscope: zero budget makes no requests, including after a saved retry
+ok 823 - modelscope: zero budget makes no requests, including after a saved retry
+  ---
+  duration_ms: 0.100375
+  type: 'test'
+  ...
+# Subtest: modelscope: 429 Retry-After backoff retries same page within request budget
+ok 824 - modelscope: 429 Retry-After backoff retries same page within request budget
+  ---
+  duration_ms: 0.245459
+  type: 'test'
+  ...
+# Subtest: modelscope: exhausted 429 budget persists waiting time across resume
+ok 825 - modelscope: exhausted 429 budget persists waiting time across resume
+  ---
+  duration_ms: 0.345208
+  type: 'test'
+  ...
+# Subtest: modelscope: missing 429 headers use bounded exponential backoff
+ok 826 - modelscope: missing 429 headers use bounded exponential backoff
+  ---
+  duration_ms: 0.2815
+  type: 'test'
+  ...
+# Subtest: modelscope: headerless backoff survives JSON checkpoint and resets on success
+ok 827 - modelscope: headerless backoff survives JSON checkpoint and resets on success
+  ---
+  duration_ms: 0.241
+  type: 'test'
+  ...
+# Subtest: modelscope: RateLimit reset and stricter policy are respected
+ok 828 - modelscope: RateLimit reset and stricter policy are respected
+  ---
+  duration_ms: 0.228417
+  type: 'test'
+  ...
+# Subtest: modelscope: request spacing is start-to-start, not latency plus interval
+ok 829 - modelscope: request spacing is start-to-start, not latency plus interval
+  ---
+  duration_ms: 0.271208
+  type: 'test'
+  ...
+# Subtest: modelscope: successful responses also honor exhausted or scarce remaining quota
+ok 830 - modelscope: successful responses also honor exhausted or scarce remaining quota
+  ---
+  duration_ms: 0.403833
+  type: 'test'
+  ...
+# Subtest: modelscope: malformed ids are skipped without leaking text or losing checkpoint
+ok 831 - modelscope: malformed ids are skipped without leaking text or losing checkpoint
+  ---
+  duration_ms: 2.99725
+  type: 'test'
+  ...
+# Subtest: modelscope: HTTP, network and malformed response failures retain checkpoint
+ok 832 - modelscope: HTTP, network and malformed response failures retain checkpoint
+  ---
+  duration_ms: 0.393709
+  type: 'test'
+  ...
+# Subtest: modelscope: invalid options reject without network access
+ok 833 - modelscope: invalid options reject without network access
+  ---
+  duration_ms: 0.420208
+  type: 'test'
+  ...
+# Subtest: HF: unsafe and repeating continuation links cannot escape the registry
+ok 834 - HF: unsafe and repeating continuation links cannot escape the registry
+  ---
+  duration_ms: 0.65075
+  type: 'test'
+  ...
+# Subtest: HF: counts bucket boundaries and missing facts without guessing
+ok 835 - HF: counts bucket boundaries and missing facts without guessing
+  ---
+  duration_ms: 0.30675
+  type: 'test'
+  ...
+# Subtest: Kaggle: policy disables listing/delta/resume and leaves count unverified
+ok 836 - Kaggle: policy disables listing/delta/resume and leaves count unverified
+  ---
+  duration_ms: 0.15825
+  type: 'test'
+  ...
+# Subtest: 全モジュールに契約の公開情報と根拠URLがある
+ok 837 - 全モジュールに契約の公開情報と根拠URLがある
+  ---
+  duration_ms: 1.430708
+  type: 'test'
+  ...
+# Subtest: ollama: 規約で止めた一覧と不明な総数はゼロ件と扱わず、通信しない
+ok 838 - ollama: 規約で止めた一覧と不明な総数はゼロ件と扱わず、通信しない
+  ---
+  duration_ms: 4.966334
+  type: 'test'
+  ...
+# Subtest: ngc: 規約で止めた一覧と不明な総数はゼロ件と扱わず、通信しない
+ok 839 - ngc: 規約で止めた一覧と不明な総数はゼロ件と扱わず、通信しない
+  ---
+  duration_ms: 0.66725
+  type: 'test'
+  ...
+# Subtest: Civitai: 認証情報がなければAPIを使わない
+ok 840 - Civitai: 認証情報がなければAPIを使わない
+  ---
+  duration_ms: 0.745917
+  type: 'test'
+  ...
+# Subtest: Civitai: 公式文書の応答例の成人向け区分を数だけにする
+ok 841 - Civitai: 公式文書の応答例の成人向け区分を数だけにする
+  ---
+  duration_ms: 13.64325
+  type: 'test'
+  ...
+# Subtest: Civitai: モデル単位の許可フィールドだけを出力し、各フラグで除外する
+ok 842 - Civitai: モデル単位の許可フィールドだけを出力し、各フラグで除外する
+  ---
+  duration_ms: 0.991166
+  type: 'test'
+  ...
+# Subtest: Civitai: 取得回数の上限で止め、保存した続き位置から安全条件を保って再開する
+ok 843 - Civitai: 取得回数の上限で止め、保存した続き位置から安全条件を保って再開する
+  ---
+  duration_ms: 0.913709
+  type: 'test'
+  ...
+# Subtest: Civitai: 1回の実行で次ページへ進む際も要求間隔を守り重複を除く
+ok 844 - Civitai: 1回の実行で次ページへ進む際も要求間隔を守り重複を除く
+  ---
+  duration_ms: 0.730125
+  type: 'test'
+  ...
+# Subtest: Civitai: since があっても古い先頭だけで止めず、日付不明も残す
+ok 845 - Civitai: since があっても古い先頭だけで止めず、日付不明も残す
+  ---
+  duration_ms: 0.770375
+  type: 'test'
+  ...
+# Subtest: Civitai: 利用数の区分の境界、不明値、許可状態を保つ
+ok 846 - Civitai: 利用数の区分の境界、不明値、許可状態を保つ
+  ---
+  duration_ms: 2.640834
+  type: 'test'
+  ...
+# Subtest: Civitai: 旧式nextPageでもURLを再構成し、外部URL・循環・深いページは拒否する
+ok 847 - Civitai: 旧式nextPageでもURLを再構成し、外部URL・循環・深いページは拒否する
+  ---
+  duration_ms: 2.1135
+  type: 'test'
+  ...
+# Subtest: civitai: budget=0、完了済み、次回日時より前には要求をしない
+ok 848 - civitai: budget=0、完了済み、次回日時より前には要求をしない
+  ---
+  duration_ms: 0.312708
+  type: 'test'
+  ...
+# Subtest: civitai: 429を要求回数に含め、Retry-Afterの日時まで再試行を延期する
+ok 849 - civitai: 429を要求回数に含め、Retry-Afterの日時まで再試行を延期する
+  ---
+  duration_ms: 0.405333
+  type: 'test'
+  ...
+# Subtest: civitai: 不正な応答・HTTP失敗・通信失敗でも未完了の状態を返す
+ok 850 - civitai: 不正な応答・HTTP失敗・通信失敗でも未完了の状態を返す
+  ---
+  duration_ms: 0.497166
+  type: 'test'
+  ...
+# Subtest: api: budget=0、完了済み、次回日時より前には要求をしない
+ok 851 - api: budget=0、完了済み、次回日時より前には要求をしない
+  ---
+  duration_ms: 0.330542
+  type: 'test'
+  ...
+# Subtest: api: 429を要求回数に含め、Retry-Afterの日時まで再試行を延期する
+ok 852 - api: 429を要求回数に含め、Retry-Afterの日時まで再試行を延期する
+  ---
+  duration_ms: 5.607
+  type: 'test'
+  ...
+# Subtest: api: 不正な応答・HTTP失敗・通信失敗でも未完了の状態を返す
+ok 853 - api: 不正な応答・HTTP失敗・通信失敗でも未完了の状態を返す
+  ---
+  duration_ms: 0.3685
+  type: 'test'
+  ...
+# Subtest: Civitai: countはサーバーの安全条件付き総数だけを返し、不明値を0にしない
+ok 854 - Civitai: countはサーバーの安全条件付き総数だけを返し、不明値を0にしない
+  ---
+  duration_ms: 0.470625
+  type: 'test'
+  ...
+# Subtest: API: 実際の公開一覧から提供元別モデルIDを作り、OpenRouterに直接接続しない
+ok 855 - API: 実際の公開一覧から提供元別モデルIDを作り、OpenRouterに直接接続しない
+  ---
+  duration_ms: 2.267167
+  type: 'test'
+  ...
+# Subtest: API: 同じモデルを異なる提供元が掲載していても別IDとし、説明を保存しない
+ok 856 - API: 同じモデルを異なる提供元が掲載していても別IDとし、説明を保存しない
+  ---
+  duration_ms: 2.021625
+  type: 'test'
+  ...
+# Subtest: API: 差分は日付で選び、日付の精度不明・不正な行・成人向けフラグを扱う
+ok 857 - API: 差分は日付で選び、日付の精度不明・不正な行・成人向けフラグを扱う
+  ---
+  duration_ms: 2.885834
+  type: 'test'
+  ...
+# Subtest: API: Retry-Afterがなければ待機時間を段階的に長くし、countは不明を返す
+ok 858 - API: Retry-Afterがなければ待機時間を段階的に長くし、countは不明を返す
+  ---
+  duration_ms: 0.262167
+  type: 'test'
+  ...
+# Subtest: API: 取得済みの完了状態と除外数を保持し、新しいsinceでは取り直す
+ok 859 - API: 取得済みの完了状態と除外数を保持し、新しいsinceでは取り直す
+  ---
+  duration_ms: 1.466083
+  type: 'test'
+  ...
+# Subtest: Civitai: 新しいsinceでは前の続き位置を引き継がず、先頭から安全条件付きで取得する
+ok 860 - Civitai: 新しいsinceでは前の続き位置を引き継がず、先頭から安全条件付きで取得する
+  ---
+  duration_ms: 0.267667
+  type: 'test'
+  ...
+# Subtest: classifier requires a tool function; noise cannot pass just by saying AI/MCP
+ok 861 - classifier requires a tool function; noise cannot pass just by saying AI/MCP
+  ---
+  duration_ms: 2.519333
+  type: 'test'
+  ...
+# Subtest: repository star, OSI, fork, archive gates are enforced locally
+ok 862 - repository star, OSI, fork, archive gates are enforced locally
+  ---
+  duration_ms: 0.399667
+  type: 'test'
+  ...
+# Subtest: trimmed live samples parse without retaining descriptions or release prose
+ok 863 - trimmed live samples parse without retaining descriptions or release prose
+  ---
+  duration_ms: 16.794917
+  type: 'test'
+  ...
+# Subtest: PyPI stable highest version excludes prereleases, empty and entirely yanked releases
+ok 864 - PyPI stable highest version excludes prereleases, empty and entirely yanked releases
+  ---
+  duration_ms: 0.841583
+  type: 'test'
+  ...
+# Subtest: GitHub releases choose latest published stable metadata, never release text
+ok 865 - GitHub releases choose latest published stable metadata, never release text
+  ---
+  duration_ms: 0.340125
+  type: 'test'
+  ...
+# Subtest: new GitHub tool: discovery, release, artifact and enrichment; no state mutation
+ok 866 - new GitHub tool: discovery, release, artifact and enrichment; no state mutation
+  ---
+  duration_ms: 17.535625
+  type: 'test'
+  ...
+# Subtest: bootstrapping a tool already in the catalog does not queue it as a new tool
+ok 867 - bootstrapping a tool already in the catalog does not queue it as a new tool
+  ---
+  duration_ms: 1.524042
+  type: 'test'
+  ...
+# Subtest: npm keyword discovery verifies package metadata and dist-tags, with unknown stars null
+ok 868 - npm keyword discovery verifies package metadata and dist-tags, with unknown stars null
+  ---
+  duration_ms: 9.977417
+  type: 'test'
+  ...
+# Subtest: PyPI RSS keyword discovery uses JSON facts; since filters old candidates
+ok 869 - PyPI RSS keyword discovery uses JSON facts; since filters old candidates
+  ---
+  duration_ms: 1.694791
+  type: 'test'
+  ...
+# Subtest: tracked tools bypass discovery license/stars gate and queue only a later major
+ok 870 - tracked tools bypass discovery license/stars gate and queue only a later major
+  ---
+  duration_ms: 5.971084
+  type: 'test'
+  ...
+# Subtest: tracked GitHub repo without releases has unknown version; later major is queued
+ok 871 - tracked GitHub repo without releases has unknown version; later major is queued
+  ---
+  duration_ms: 3.917542
+  type: 'test'
+  ...
+# Subtest: npm pages resume with an offset and package repo links deduplicate tool identities
+ok 872 - npm pages resume with an offset and package repo links deduplicate tool identities
+  ---
+  duration_ms: 1.398167
+  type: 'test'
+  ...
+# Subtest: untrackable tools and truncated GitHub searches report uncertainty explicitly
+ok 873 - untrackable tools and truncated GitHub searches report uncertainty explicitly
+  ---
+  duration_ms: 0.942084
+  type: 'test'
+  ...
+# Subtest: new package evidence cannot use a search keyword to override missing licensing or an unrelated exact package
+ok 874 - new package evidence cannot use a search keyword to override missing licensing or an unrelated exact package
+  ---
+  duration_ms: 1.788125
+  type: 'test'
+  ...
+# Subtest: package candidates linked to archived repositories or forks are rejected before publication
+ok 875 - package candidates linked to archived repositories or forks are rejected before publication
+  ---
+  duration_ms: 1.815875
+  type: 'test'
+  ...
+# Subtest: one-request budgets resume GitHub pagination and eventually finish dependent work
+ok 876 - one-request budgets resume GitHub pagination and eventually finish dependent work
+  ---
+  duration_ms: 3.1055
+  type: 'test'
+  ...
+# Subtest: 429 backoff persists Retry-After, retains work and does not retry early
+ok 877 - 429 backoff persists Retry-After, retains work and does not retry early
+  ---
+  duration_ms: 0.685334
+  type: 'test'
+  ...
+# Subtest: offline and malformed responses preserve retry jobs and respect zero/per-registry budgets
+ok 878 - offline and malformed responses preserve retry jobs and respect zero/per-registry budgets
+  ---
+  duration_ms: 0.306875
+  type: 'test'
+  ...
+# Subtest: request pacing and primary rate-limit reset are honored without real waits
+ok 879 - request pacing and primary rate-limit reset are honored without real waits
+  ---
+  duration_ms: 0.319958
+  type: 'test'
+  ...
+# Subtest: tracked adapter metadata is read without evaluating JavaScript or install commands
+ok 880 - tracked adapter metadata is read without evaluating JavaScript or install commands
+  ---
+  duration_ms: 28.206666
+  type: 'test'
+  ...
+# Subtest: script entrypoint can be imported without running the CLI or making network calls
+ok 881 - script entrypoint can be imported without running the CLI or making network calls
+  ---
+  duration_ms: 1.599208
+  type: 'test'
+  ...
+# Subtest: static summaries and keyed server metadata preserve model ids and source URLs
+ok 882 - static summaries and keyed server metadata preserve model ids and source URLs
+  ---
+  duration_ms: 1.349708
+  type: 'test'
+  ...
+# Subtest: missing or invented ids cannot pass the draft checks
+ok 883 - missing or invented ids cannot pass the draft checks
+  ---
+  duration_ms: 0.430375
+  type: 'test'
+  ...
+# Subtest: mixed helper handoffs use each role from the plan, retaining the tool and manual reason
+ok 884 - mixed helper handoffs use each role from the plan, retaining the tool and manual reason
+  ---
+  duration_ms: 0.198334
+  type: 'test'
+  ...
+# Subtest: static, old, missing and mismatched plans keep helper handoffs neutral
+ok 885 - static, old, missing and mismatched plans keep helper handoffs neutral
+  ---
+  duration_ms: 0.232334
+  type: 'test'
+  ...
+# Subtest: a write needs a preview and a separate confirmation and can be consumed only once
+ok 886 - a write needs a preview and a separate confirmation and can be consumed only once
+  ---
+  duration_ms: 0.342917
+  type: 'test'
+  ...
+# Subtest: editing, cancelling, or invalidating a plan prevents a stale confirmation
+ok 887 - editing, cancelling, or invalidating a plan prevents a stale confirmation
+  ---
+  duration_ms: 0.114584
+  type: 'test'
+  ...
+# Subtest: static suggestions are three distinct, editable copies ranked by the wish
+ok 888 - static suggestions are three distinct, editable copies ranked by the wish
+  ---
+  duration_ms: 0.664584
+  type: 'test'
+  ...
+# Subtest: screen links resolve catalog ids, known local aliases and exact repositories only
+ok 889 - screen links resolve catalog ids, known local aliases and exact repositories only
+  ---
+  duration_ms: 0.135791
+  type: 'test'
+  ...
+# Subtest: requests use same-origin JSON; missing routes and HTML are recognized as static hosting
+ok 890 - requests use same-origin JSON; missing routes and HTML are recognized as static hosting
+  ---
+  duration_ms: 14.479167
+  type: 'test'
+  ...
+# Subtest: server, network, malformed JSON and timeout failures stay failures with Japanese messages
+ok 891 - server, network, malformed JSON and timeout failures stay failures with Japanese messages
+  ---
+  duration_ms: 5.605
+  type: 'test'
+  ...
+1..891
+# tests 902
+# suites 0
+# pass 901
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 19876.624459

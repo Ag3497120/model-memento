@@ -19,9 +19,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  collect:
+  keys:
     if: >-
       vars.AI_MAINTAIN != 'off' &&
+      (github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) ||
+       github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == github.event.repository.default_branch &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      available: ${{ steps.keys.outputs.available }}
+    steps:
+      - id: keys
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          await fs.appendFile(process.env.GITHUB_OUTPUT, 'available=' + Boolean(process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY) + '\n');
+          NODE
+
+  collect:
+    needs: keys
+    if: >-
+      vars.AI_MAINTAIN != 'off' && needs.keys.outputs.available == 'true' &&
       (github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) ||
        github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.head_branch == github.event.repository.default_branch &&

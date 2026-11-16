@@ -29,7 +29,7 @@ jobs:
     # 手動実行も既定ブランチに限定する。呼出元で読取りから公開まで直列化する。
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && inputs.rollback_to == ''
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ inputs.mode == 'full' && 180 || 45 }}
+    timeout-minutes: ${{ inputs.mode == 'full' && 240 || 90 }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -37,18 +37,18 @@ jobs:
       WORLD_MODE: ${{ inputs.mode }}
       WORLD_DRY_RUN: ${{ inputs.dry_run }}
       # この一つのリポジトリ変数に、末尾 /world を含まない公開サイトURLを設定する。
-      WORLD_SITE_URL: ${{ vars.WORLD_SITE_URL }}
+      WORLD_SITE_URL: ${{ vars.WORLD_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
       # 合計ではなく各登録先の上限。規約で禁止された登録先はモジュール側で停止する。
       WORLD_REQUEST_BUDGET: ${{ inputs.mode == 'full' && '10000' || '20' }}
       WORLD_TOOLS_BUDGET: '20'
     steps:
       - name: ソースを読む
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
           cache: npm
@@ -56,9 +56,53 @@ jobs:
       - name: 固定された依存関係をCI内だけで準備
         run: npm ci --ignore-scripts --no-audit --no-fund
 
+      - name: 日次の入力と版付きモジュールの予備を読む
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .daily-cache
+          key: daily-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            daily-published-v1-
+
+      - name: 前回成功した収集の入力を戻す
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import { siteCounts } from './scripts/check-build-inputs.js';
+          await fs.mkdir('.daily-out', { recursive: true });
+          await fs.writeFile('.daily-out/baseline.json', JSON.stringify(await siteCounts('web')));
+          const read = async file => fs.readFile(file, 'utf8').then(JSON.parse).catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
+          let cached = await read('.daily-cache/auto-sync/sync-report.json');
+          const committed = await read('data/auto-sync/sync-report.json');
+          try {
+            const response = await fetch(new URL('data/daily-inputs.json', process.env.WORLD_SITE_URL.replace(/\/?$/, '/')), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+            if (response.ok) {
+              const text = await response.text();
+              if (Buffer.byteLength(text) > 10000000) throw new Error('Daily inputs exceed size limit');
+              const published = JSON.parse(text);
+              if (published.schema !== 'memento.daily-inputs.v1') throw new Error('Invalid daily inputs');
+              const report = published.files?.['sync-report.json'];
+              if (Date.parse(report?.at) > Date.parse(cached?.at || committed?.at || 0)) {
+                await fs.mkdir('.daily-cache/auto-sync', { recursive: true });
+                for (const name of ['models.json', 'editions.json', 'discoveries.json', 'registries.json', 'sync-report.json', 'vcross-status.json']) {
+                  if (published.files[name]) await fs.writeFile('.daily-cache/auto-sync/' + name, JSON.stringify(published.files[name]));
+                }
+                cached = report;
+              }
+            } else if (response.status !== 404) throw new Error('Cannot read published daily inputs');
+          } catch (error) {
+            if (!cached) throw error;
+            console.warn('Using cached daily inputs');
+          }
+          if (cached && Date.parse(cached.at) > Date.parse(committed?.at || 0)) await fs.cp('.daily-cache/auto-sync', 'data/auto-sync', { recursive: true });
+          NODE
+
+      - name: 公開済みモジュールを内容のハッシュと照合して残す
+        run: node scripts/check-module-version.js --web web --retain "$WORLD_SITE_URL" --fallback .daily-cache/modules
+
       - name: 前回公開できた状態を予備から読む
         id: cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .world-cache
           key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
@@ -103,9 +147,8 @@ jobs:
               if (!valid(manifest)) throw new Error('予備の形式が違います。');
               state = cached; source = 'cache';
             } catch {
-              // A network failure must not erase an established index. Only an explicit
-              // full run against a genuinely absent manifest may create the first index.
-              if (process.env.WORLD_MODE !== 'full' || status !== 404) throw new Error('前回の一覧も予備も読めません。初回は公開URLを確認し、fullで実行してください。通信障害の場合は再実行してください。');
+              // A network failure must not erase an established index. A genuinely absent manifest may create the first index.
+              if (status !== 404) throw new Error('前回の一覧も予備も読めません。公開URLを確認し、通信障害の場合は再実行してください。');
               manifest = null; source = 'bootstrap';
             }
           }
@@ -124,10 +167,6 @@ jobs:
 
       - name: 更新番号と差分をオフラインで検査
         run: node --test test/patch/*.test.js
-
-      - name: サイトを保存済みのデータから組み立てる
-        timeout-minutes: 10
-        run: npm run build:web -- --offline
 
       - name: モデルとツールの索引を組み立てる
         timeout-minutes: ${{ inputs.mode == 'full' && 150 || 25 }}
@@ -158,7 +197,8 @@ jobs:
             if (url.origin === 'https://api.github.com') headers.set('Authorization', 'Bearer ' + process.env.GITHUB_TOKEN);
             return fetch(input, { ...options, headers });
           };
-          const toolDiscovery = options => discoverTools({ ...options,
+          let discovered;
+          const toolDiscovery = async options => discovered = await discoverTools({ ...options,
             since: options.since ? new Date(Date.parse(options.since) - 86400000).toISOString() : null,
             budget: { maxRequests: max * 3, perRegistry: { github: max, npm: max, pypi: max }, now: now.toISOString() }
           });
@@ -169,29 +209,27 @@ jobs:
           });
           if (result.manifestBytes > 10_000_000) throw new Error('公開一覧が10 MBを超えています。新着履歴の保存方法を見直してください。');
           console.log(JSON.stringify({ manifest: result.manifestPath, ...result.manifest.stats, publishedBytes: result.publishedBytes, tools: result.manifest.tools?.stats }));
+          const discoveryFile = 'data/auto-sync/discoveries.json';
+          const prior = JSON.parse(await fs.readFile(discoveryFile, 'utf8'));
+          const tools = new Map(prior.tools.map(tool => [tool.repo?.toLowerCase() || tool.id, tool]));
+          for (const record of discovered?.records || []) {
+            const repo = record.repo;
+            if (!repo || !record.sources?.length) continue;
+            const archetype = { 'coding-agent': 'terminal', 'ai-editor': 'ide', 'chat-app': 'web-chat', 'mcp-server': 'mcp-server' }[record.kind] || 'framework';
+            tools.set(repo.toLowerCase(), { id: repo.toLowerCase().replace('/', '--'), name: record.name, repo,
+              archetype, category: record.kind, license: record.license, stars: record.stars,
+              created: null, pushed: null, firstSeen: record.first_seen, sources: record.sources,
+              releases: record.latest?.version ? [[record.latest.version, record.latest.date]] : [], autoSynced: true });
+          }
+          await fs.writeFile(discoveryFile, JSON.stringify({ updated_at: now.toISOString(), tools: [...tools.values()] }));
           await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, 'モデルとツールの索引を組み立てました。完全な収録かどうかは登録先ごとの状態を確認してください。\n');
           NODE
 
-      - name: 公開フォルダーをまとめる
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs/promises';
-          import path from 'node:path';
-          const out = path.join(process.env.RUNNER_TEMP, 'pages');
-          await fs.rm(out, { recursive: true, force: true });
-          await fs.cp('web', out, { recursive: true, dereference: false });
-          await fs.rm(path.join(out, 'world'), { recursive: true, force: true });
-          await fs.cp('.world-out/world', path.join(out, 'world'), { recursive: true, dereference: false });
-          // The only enrichment queue is world/data/enrich-queue.json.
-          NODE
-
-      - name: 検査済み寄稿の次回入力を読む
-        uses: actions/cache/restore@v4
-        with:
-          path: .contrib-cache
-          key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: |
-            contrib-state-v1-
+      - name: ツールの公開版を上限内で確認する
+        timeout-minutes: 10
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/sync-upstream.js --targets editions --limit 20
 
       - name: 公開済みの日次確認を引き継ぐ
         run: |
@@ -199,10 +237,16 @@ jobs:
           import fs from 'node:fs/promises';
           import path from 'node:path';
           const site = new URL(process.env.WORLD_SITE_URL.replace(/\/?$/, '/'));
-          const out = path.join(process.env.RUNNER_TEMP, 'pages');
+          const out = path.resolve('web');
           for (const [remote, local] of [['links-status.json', path.join(out, 'links-status.json')], ['data/news-snapshot.json', '.daily-out/news/snapshot.json'], ['data/contrib/build-input.json', path.join(out, 'data/contrib/build-input.json')], ['data/contrib/credits.json', path.join(out, 'data/contrib/credits.json')]]) {
             const response = await fetch(new URL(remote, site), { redirect: 'error', signal: AbortSignal.timeout(20000) });
-            if (response.status === 404) continue;
+            if (response.status === 404) {
+              if (remote === 'data/news-snapshot.json') {
+                await fs.mkdir(path.dirname(local), { recursive: true });
+                await fs.copyFile('web/data/news-snapshot.json', local).catch(error => { if (error.code !== 'ENOENT') throw error; });
+              }
+              continue;
+            }
             if (!response.ok) throw new Error('公開済みの日次確認を読み込めません。');
             const text = await response.text();
             if (Buffer.byteLength(text) > 32000000) throw new Error('日次確認が大きすぎます。');
@@ -216,6 +260,40 @@ jobs:
         timeout-minutes: 10
         run: node scripts/news-fetch.js --out .daily-out/news --budget 60
 
+      - name: リンクを日次の上限内で確認する
+        timeout-minutes: 16
+        run: node scripts/check-links.js --artifact web --input data/curated --input data/auto-sync --input recipes/catalog --input .daily-out/news --budget 500 --request-budget 5000 --concurrency 4 --host-delay-ms 1000 --timeout-ms 15000 --max-run-ms 900000
+
+      - name: 保存済みの入力と最新の提供元一覧からサイトを組み立てる
+        timeout-minutes: 10
+        run: npm run build:web
+
+      - name: 公開フォルダーをまとめる
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          const out = path.resolve('.daily-out/pages');
+          await fs.rm(out, { recursive: true, force: true });
+          await fs.cp('web', out, { recursive: true, dereference: false });
+          await fs.rm(path.join(out, 'world'), { recursive: true, force: true });
+          await fs.cp('.world-out/world', path.join(out, 'world'), { recursive: true, dereference: false });
+          const files = {};
+          for (const name of ['models.json', 'editions.json', 'discoveries.json', 'registries.json', 'sync-report.json', 'vcross-status.json']) {
+            files[name] = JSON.parse(await fs.readFile(path.join('data/auto-sync', name), 'utf8'));
+          }
+          await fs.writeFile(path.join(out, 'data/daily-inputs.json'), JSON.stringify({ schema: 'memento.daily-inputs.v1', files }));
+          // The only enrichment queue is world/data/enrich-queue.json.
+          NODE
+
+      - name: 検査済み寄稿の次回入力を読む
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .contrib-cache
+          key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            contrib-state-v1-
+
       - name: 軽量アプリ用の公開データと利用集計をまとめる
         run: |
           node --input-type=module <<'NODE'
@@ -228,7 +306,7 @@ jobs:
           import { validateBuildInput, validateCredits } from './lib/contrib/artifacts.js';
           import { validateState, buildArtifacts } from './lib/contrib/intake.js';
           import { createPublicFetcher } from './lib/contrib/fetch.js';
-          const out = path.join(process.env.RUNNER_TEMP, 'pages');
+          const out = path.resolve('.daily-out/pages');
           const read = file => fs.readFile(file, 'utf8').then(JSON.parse);
           const write = async (rel, value) => { const file = path.join(out, rel); await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(value) + '\n'); };
           const catalog = await loadCatalog();
@@ -263,10 +341,6 @@ jobs:
           PATCH_INITIAL: ${{ inputs.patch_initial }}
           MEMENTO_CONTRIB_KEY: ${{ secrets.MEMENTO_CONTRIB_KEY }}
 
-      - name: リンクを日次の上限内で確認する
-        timeout-minutes: 16
-        run: node scripts/check-links.js --artifact "$RUNNER_TEMP/pages" --input data/curated --input recipes/catalog --budget 500 --request-budget 5000 --concurrency 4 --host-delay-ms 1000 --timeout-ms 15000 --max-run-ms 900000
-
       - name: 更新番号と日本語の変更記録を付ける
         id: patch
         env:
@@ -280,11 +354,11 @@ jobs:
           import { patchReleases } from './lib/patch/releases.js';
           const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
           const history = await store.history();
-          const initial = process.env.PATCH_INITIAL === 'true';
+          const initial = process.env.PATCH_INITIAL === 'true' || history.length === 0;
           if (initial && history.length) throw new Error('保存済みの更新があります。初回の指定を外してください。');
           const historyFile = path.join(process.env.RUNNER_TEMP, 'patch-history.json');
           await fs.writeFile(historyFile, JSON.stringify(history));
-          const args = ['--new', path.join(process.env.RUNNER_TEMP, 'pages'), '--history', historyFile];
+          const args = ['--new', path.resolve('.daily-out/pages'), '--history', historyFile];
           if (initial) args.push('--initial');
           else args.push('--previous', process.env.WORLD_SITE_URL);
           const result = await run(args);
@@ -292,12 +366,26 @@ jobs:
           await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, result.summary);
           NODE
 
+      - name: 入力の件数と中継の事実と全モジュールの版を検査する
+        run: |
+          node scripts/check-build-inputs.js --web .daily-out/pages --reference .daily-out/baseline.json
+          node scripts/check-module-version.js --web .daily-out/pages
+
       - name: 画像・ロゴ・公開容量の検査
-        run: node scripts/check-rights.js "$RUNNER_TEMP/pages"
+        run: node scripts/check-rights.js .daily-out/pages
+
+      - name: 試行を含む検査済みの公開物を保存する
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: daily-site
+          path: .daily-out/pages
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 1
 
       - name: 公開するフォルダー全体を保存用にまとめる
         if: ${{ !inputs.dry_run }}
-        run: tar --create --gzip --file="$RUNNER_TEMP/patch-site.tar.gz" --directory="$RUNNER_TEMP/pages" .
+        run: tar --create --gzip --file="$RUNNER_TEMP/patch-site.tar.gz" --directory=.daily-out/pages .
 
       - name: 更新番号を予約して公開物を保存する
         if: ${{ !inputs.dry_run }}
@@ -308,27 +396,27 @@ jobs:
           import fs from 'node:fs/promises';
           import path from 'node:path';
           import { patchReleases } from './lib/patch/releases.js';
-          const patch = JSON.parse(await fs.readFile(path.join(process.env.RUNNER_TEMP, 'pages/data/patch.json'), 'utf8'));
+          const patch = JSON.parse(await fs.readFile(path.resolve('.daily-out/pages/data/patch.json'), 'utf8'));
           const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
           await store.prepare({ patch, archive: path.join(process.env.RUNNER_TEMP, 'patch-site.tar.gz'), sha: process.env.GITHUB_SHA });
           NODE
 
       - name: Pagesを準備
         if: ${{ !inputs.dry_run }}
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
       - name: 検査済みのサイトを渡す
         if: ${{ !inputs.dry_run }}
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: ${{ runner.temp }}/pages
+          path: .daily-out/pages
           retention-days: 1
 
       - name: Pagesに公開
         if: ${{ !inputs.dry_run }}
         id: deployment
         timeout-minutes: 10
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
         with:
           timeout: '540000'
 
@@ -370,10 +458,37 @@ jobs:
       - name: 公開成功後だけ予備を保存
         if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
         continue-on-error: true
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .world-cache
           key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: 公開できた日次入力とモジュールだけを予備にまとめる
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          const out = path.resolve('.daily-out/pages');
+          await fs.rm('.daily-cache', { recursive: true, force: true });
+          await fs.mkdir('.daily-cache/modules/data', { recursive: true });
+          await fs.cp('data/auto-sync', '.daily-cache/auto-sync', { recursive: true });
+          const manifest = JSON.parse(await fs.readFile(path.join(out, 'data/module-version.json'), 'utf8'));
+          await fs.copyFile(path.join(out, 'data/module-version.json'), '.daily-cache/modules/data/module-version.json');
+          for (const generation of manifest.generations) for (const file of generation.files) {
+            const target = path.join('.daily-cache/modules', file.path);
+            await fs.mkdir(path.dirname(target), { recursive: true });
+            await fs.copyFile(path.join(out, file.path), target);
+          }
+          NODE
+
+      - name: 公開成功後だけ日次入力の予備を保存する
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        continue-on-error: true
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .daily-cache
+          key: daily-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: 実行結果を記録
         if: always()
@@ -398,12 +513,12 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: 確認用のソースを読む
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
 
       - name: Node.jsを準備
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
 
@@ -435,8 +550,8 @@ jobs:
 
       - name: 保存した公開物を展開する
         run: |
-          mkdir -p "$RUNNER_TEMP/pages"
-          tar --extract --gzip --no-same-owner --no-same-permissions --file="$RUNNER_TEMP/patch-site.tar.gz" --directory="$RUNNER_TEMP/pages"
+          mkdir -p .daily-out/pages
+          tar --extract --gzip --no-same-owner --no-same-permissions --file="$RUNNER_TEMP/patch-site.tar.gz" --directory=.daily-out/pages
 
       - name: 更新番号と公開物を検査する
         run: |
@@ -445,30 +560,30 @@ jobs:
           import path from 'node:path';
           import { parsePatchId } from './lib/patch/version.js';
           parsePatchId(process.env.ROLLBACK_TO);
-          const root = path.join(process.env.RUNNER_TEMP, 'pages/data');
+          const root = path.resolve('.daily-out/pages/data');
           const patch = JSON.parse(await fs.readFile(path.join(root, 'patch.json'), 'utf8'));
           const manifest = JSON.parse(await fs.readFile(path.join(root, 'patch-manifest.json'), 'utf8'));
           if (patch.id !== process.env.ROLLBACK_TO || manifest.patch?.id !== patch.id) throw new Error('保存物の更新番号が一致しません。');
           await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, '更新 ' + patch.id + ' の保存物を確認しました。\n');
           NODE
-          node scripts/check-rights.js "$RUNNER_TEMP/pages"
+          node scripts/check-rights.js .daily-out/pages
 
       - name: Pagesを準備
         if: ${{ !inputs.dry_run }}
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
       - name: 保存済みのサイトを渡す
         if: ${{ !inputs.dry_run }}
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
-          path: ${{ runner.temp }}/pages
+          path: .daily-out/pages
           retention-days: 1
 
       - name: 指定した更新をPagesに公開
         if: ${{ !inputs.dry_run }}
         id: deployment
         timeout-minutes: 10
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
         with:
           timeout: '540000'
 
@@ -489,13 +604,13 @@ jobs:
           import path from 'node:path';
           await fs.rm('.world-cache', { recursive: true, force: true });
           await fs.mkdir('.world-cache', { recursive: true });
-          await fs.cp(path.join(process.env.RUNNER_TEMP, 'pages/world'), '.world-cache/world', { recursive: true, dereference: false });
+          await fs.cp('.daily-out/pages/world', '.world-cache/world', { recursive: true, dereference: false });
           NODE
 
       - name: 戻した状態を予備に保存
         if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
         continue-on-error: true
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .world-cache
           key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}

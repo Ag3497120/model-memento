@@ -11,8 +11,6 @@ const history = 'https://raw.githubusercontent.com/anthropics/claude-code/main/C
 const terminalWelcome = {
   '2025-02': [tr('依頼、実行内容、返答をこの端末に表示します。', "Requests, tool activity, and responses appear in this terminal."), tr('道具の実行には確認を設定できます。', "You can require confirmation before tools run."), tr('起動時の文面と枠の配置は未確認です。', "Startup wording and frame layout are unverified.")],
   '2025-04': [tr('依頼を入力して作業を始めます。', "Enter a request to start a task."), tr('会話と実行結果が順に続きます。', "Conversation and execution results appear in sequence."), tr('4月固有の起動時の配置は未確認です。', "The April startup layout is unverified.")],
-  '2025-05': [tr('作業フォルダーと操作案内に続いて入力を待ちます。', "The working directory and usage hints appear before the input prompt."), tr('/help 操作の一覧', "/help List commands"), tr('1.0.27の投稿例を参考にしています。5月初日の文面は未確認です。', "Based on a posted example of 1.0.27. Wording from the first day in May is unverified.")],
-  '2025-07': [tr('1.0系の端末会話', "1.0-series terminal chat"), tr('依頼と道具の出力が順に続きます。', "Requests and tool output appear in sequence."), tr('当日の起動案内と /agents の提供時期は未確認です。', "Startup guidance for that date and the availability date of /agents are unverified.")],
   '2025-09': [tr('2.0系の端末会話', "2.0-series terminal chat"), tr('/rewind 前の状態へ戻す · Ctrl+R 依頼の履歴を検索', "/rewind Restore an earlier state · Ctrl+R Search request history"), tr('当日の起動枠の配置は未確認です。', "The startup frame layout for that date is unverified.")],
   '2025-11': [tr('会話から作業を始めます。', "Start tasks from the conversation."), tr('Desktopでは複数の作業を扱えます。', "Desktop supports multiple tasks."), tr('当日のDesktopの配置は未確認です。この端末は参考表示です。', "The Desktop layout for that date is unverified. This terminal is a reference view.")],
   '2025-12': [tr('コードと会話をこの端末に表示します。', "Code and conversation appear in this terminal."), tr('/theme 配色 · Ctrl+T コードの色分け', "/theme Color theme · Ctrl+T Syntax highlighting"), tr('起動時の文面は未確認です。', "Startup wording is unverified.")],
@@ -29,10 +27,37 @@ function terminal(ctx, { boot = null, top = null, source = history, cls = '', gl
   const model = ctx.model?.name || tr('未選択', "Not selected");
   return el('div', { class: `surface terminal claude-code d1 phase-${editionTag(ctx).ym} ${cls}` },
     terminalBody(ctx, boot || ['Claude Code', welcome[0], welcome[1]].join('\n'), {
-      top: el('div', { class: 'era-terminal-welcome' }, el('p', {}, tr('参考表示 · ', "Reference view · ") + welcome[2]), top),
-      glyph, placeholder: tr('依頼を入力', "Enter a request"), status: tr(`モデル ${model} · 入力待ち（参考表示）`, `Model ${model} · Awaiting input (reference view)`)
+      top: el('div', { class: 'd2-terminal-guidance' }, el('p', { class: 'era-terminal-welcome', 'data-fidelity-note': '' }, tr('参考表示 · ', "Reference view · ") + welcome[2]), top),
+      glyph, placeholder: tr('依頼を入力', "Enter a request"), status: tr(`モデル ${model} · ? 操作の一覧`, `Model ${model} · ? for shortcuts`)
     }),
     el('footer', { class: 'native-footnote' }, link(tr('この版の資料', "Sources for this edition"), source)));
+}
+
+function terminalV1(ctx, { preview = false } = {}) {
+  // H1: literal terminal cells, with the prohibited welcome mark omitted.
+  // June/July 1.0 captures establish the layout, not the exact May GA day.
+  // preview: the Feb–Apr 2025 research preview used the same panel with "research preview" in the title
+  // (wording reported in launch-week articles and issues; exact first-day text unverified).
+  const july = editionTag(ctx).ym === '2025-07';
+  const lines = [preview ? ' Welcome to Claude Code research preview!' : ' Welcome to Claude Code!', '', '   /help for help, /status for your current setup', '', '   cwd: ~/project'];
+  const width = 51;
+  const panel = ['╭' + '─'.repeat(width) + '╮', ...lines.map(line => '│' + line.padEnd(width) + '│'), '╰' + '─'.repeat(width) + '╯'].join('\n');
+  const reference = el('section', { class: 'era-terminal-welcome', 'data-fidelity-note': '' },
+    el('pre', { class: 'boot' }, tr('1.0系の端末会話の参考表示：初日固有の文面・配色は未確認です。\ncwdは例のパスです。', 'Reference view of the 1.0-series terminal: exact first-day wording and colors are unverified.\ncwd is an example path.')),
+    el('p', {}, tr('cwdは例のパスです。/agents の提供開始日は未確認です。', 'cwd is an example path. The availability date of /agents is unverified.')));
+  const model = ctx.model?.name || tr('未選択', 'Not selected');
+  return el('div', { class: `surface terminal claude-code d1 d1-cc-v1 hero-code-v1 phase-${editionTag(ctx).ym}`, lang: 'en' },
+    el('main', { class: 'terminal-main' },
+      el('pre', { class: 'empty-state hero-code-welcome' }, panel),
+      el('section', { class: 'hero-code-tips' }, el('p', {}, 'Tips for getting started:'),
+        el('ol', {},
+          el('li', {}, july ? 'Run /init to create a CLAUDE.md file with instructions for Claude' : 'Ask Claude to create a new app or clone a repository'),
+          el('li', {}, 'Use Claude to help with file analysis, editing, bash commands and git'),
+          el('li', {}, 'Be as specific as you would with another engineer for the best results'))),
+      thread(ctx, ''), composer(ctx, '', '>', '↵'),
+      el('footer', { class: 'terminal-status' }, el('span', {}, '? for shortcuts'),
+        el('span', { class: 'hero-model-context', 'aria-label': tr('Model Mementoで選択したモデル', 'Model Memento selected model') }, tr(`モデル ${model}`, `Model ${model}`)))),
+    reference, el('footer', { class: 'native-footnote' }));
 }
 
 function permissions() {
@@ -83,22 +108,19 @@ function renderVersion(ctx) {
   }
   if (ym === '2025-02') {
     // spec: claude-code-2025-02 regions / corrections — terminal only, no CLAUDE.md panel or fixed three-button approval card.
-    return terminal(ctx, { source: 'https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996' });
+    return terminalV1(ctx, { preview: true });
   }
   if (ym === '2025-04') {
     // spec: claude-code-2025-04 corrections — remove unverified permanent hierarchy loader, keep terminal drawing.
-    return terminal(ctx);
+    return terminalV1(ctx, { preview: true });
   }
   if (ym === '2025-05') {
-    // spec: claude-code-2025-05 regions / conversation / shape.input_shape — 1.0.27 example, distinct from exact GA day.
-    return terminal(ctx, { cls: 'd1-cc-v1', boot: tr('╭──────────────────────────╮\n│ Claude Code              │\n│ 作業フォルダ: ~/project  │\n╰──────────────────────────╯', "╭──────────────────────────╮\n│ Claude Code              │\n│ Work folder: ~/project   │\n╰──────────────────────────╯"), glyph: '>',
-      top: el('div', {}, el('p', {}, tr('1.0.27の参考表示です。5月初日の形は未確認です。', "Reference view of 1.0.27. The layout from the first day in May is unverified.")),
-        el('p', {}, tr('/help で操作の一覧', "/help to list commands")), menu(tr('道具の実行内容（表示例）', "Tool activity (example)"), el('pre', {}, tr('⏺ ファイルを読む\n  ⎿ 読み取った内容', "⏺ Read file\n  ⎿ File contents")))),
-      source: 'https://github.com/anthropics/claude-code/issues/2097' });
+    // spec: claude-code-2025-05 regions / conversation / shape.input_shape.
+    return terminalV1(ctx);
   }
   if (ym === '2025-07') {
     // spec: claude-code-2025-07 corrections — no permanent Hooks/Commands/Subagents dashboard.
-    return terminal(ctx);
+    return terminalV1(ctx);
   }
   if (ym === '2025-09') {
     // spec: claude-code-2025-09 regions / controls — terminal 2.0 plus separate IDE example, no October web or November desktop modes.
@@ -145,8 +167,8 @@ function renderVersion(ctx) {
 const specSources = {
   "claude-code-2025-02": ["https://www.anthropic.com/news/claude-3-7-sonnet","https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996"], // spec: claude-code-2025-02 sources
   "claude-code-2025-04": ["https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md","https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996"], // spec: claude-code-2025-04 sources
-  "claude-code-2025-05": ["https://www.anthropic.com/news/claude-4","https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md","https://github.com/anthropics/claude-code/issues/2097"], // spec: claude-code-2025-05 sources
-  "claude-code-2025-07": ["https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md","https://github.com/anthropics/claude-code/issues/2097"], // spec: claude-code-2025-07 sources
+  "claude-code-2025-05": ["https://www.anthropic.com/news/claude-4","https://github.com/anthropics/claude-code/issues/1601","https://github.com/anthropics/claude-code/issues/2097","https://github.com/anthropics/skills/blob/main/skills/brand-guidelines/SKILL.md"], // spec: claude-code-2025-05 sources
+  "claude-code-2025-07": ["https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md","https://github.com/anthropics/claude-code/issues/4514","https://github.com/anthropics/claude-code/issues/1601","https://github.com/anthropics/skills/blob/main/skills/brand-guidelines/SKILL.md"], // spec: claude-code-2025-07 sources
   "claude-code-2025-09": ["https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously","https://www.anthropic.com/news/claude-sonnet-4-5","https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"], // spec: claude-code-2025-09 sources
   "claude-code-2025-10": ["https://claude.com/resources/articles/claude-code-on-the-web","https://code.claude.com/docs/en/claude-code-on-the-web"], // spec: claude-code-2025-10 sources
   "claude-code-2025-11": ["https://www.anthropic.com/news/claude-opus-4-5","https://simonwillison.net/2026/Jan/12/claude-cowork/"], // spec: claude-code-2025-11 sources
@@ -159,7 +181,7 @@ const specSources = {
   "claude-code-2026-11": ["https://github.com/anthropics/claude-code/releases/tag/v2.1.325","https://code.claude.com/docs/en/fullscreen","https://code.claude.com/docs/en/terminal-config"], // spec: claude-code-2026-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/claude-code.json: V1 listens for /model on the prompt; no permanent picker.
   for (const input of surface.querySelectorAll('.composer textarea')) input.setAttribute('data-era-input', '');
@@ -178,5 +200,23 @@ export function render(ctx) {
       if (label.textContent === 'You') label.textContent = tr('あなた', "You");
     }
   }).observe(log, { childList: true });
+  return surface;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

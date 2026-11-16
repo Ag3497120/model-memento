@@ -69,7 +69,7 @@ function chat(ctx, title, subtitle = '') {
   return el('main', { class: 'chat-main' }, S.thread(ctx, title, subtitle), S.composer(ctx, tr('メッセージを入力', "Enter a message"), '', tr('送信', "Send")));
 }
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const v = edition(ctx);
   const ym = v.from;
   // spec: continue-2023-06 regions; continue-2024-05 regions; continue-2024-11 regions
@@ -177,4 +177,101 @@ function decorateMessages(root, ctx, v) {
   observer.observe(root, { childList: true, subtree: true });
   update();
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'continue');
+}
+
+// Shared by the D3 renderers. Kept in an owned module because this task may not
+// add shared host files. No model controls or host message data are replaced.
+export function finishFidelity(surface, ctx, tool) {
+  surface.classList.add('d3-fidelity');
+  surface.setAttribute('data-d3-tool', tool);
+  if (!surface.hasAttribute('data-spec-version')) surface.setAttribute('data-spec-version', surface.getAttribute('data-spec') || ctx?.version?.id || 'unverified');
+  let disclosure = surface.querySelector('.d1-sources,.d2-sources,.d3-sources,.d4-record-note details');
+  if (!disclosure) {
+    disclosure = el('details', {}, el('summary', {}, tr('この版の資料', 'Sources for this edition')));
+    const urls = surface.getAttribute('data-spec-source') || surface.getAttribute('data-source-url') || '';
+    for (const url of urls.split(/\s+/).filter(Boolean)) disclosure.append(link(tr('資料', 'Source'), url));
+    (surface.querySelector('main') || surface).append(disclosure);
+  }
+  disclosure.classList.add('d3-fidelity-sources');
+  if (tool === 'openwebui' && /(?:2024-09|2025|2026)/.test(surface.getAttribute('data-spec-version'))) {
+    disclosure.append(link(tr('回答の操作の資料', 'Response actions source'), 'https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/ResponseMessage.svelte'));
+  }
+  disclosure.before(el('small', { class: 'd3-recreation', 'data-recreation-label': '' }, tr('再現', 'Recreation')));
+  disclosure.append(el('p', { class: 'd3-evidence-note' }, tr('配置は資料をもとに再現しています。根拠のない寸法・余白・日付ごとの細部は未確認です。', 'Layout is recreated from the linked references. Dimensions, spacing, and date-specific details without direct evidence are unverified.')));
+  for (const note of surface.querySelectorAll('.era-terminal-reference,.d3-unverified,.d4-record-note .d4-status')) {
+    // Keep startup text available to the terminal inventory while moving it
+    // out of the main display. The selector also works with the offline DOM.
+    if (note.closest('details') !== disclosure) disclosure.append(note);
+  }
+  for (const boot of surface.querySelectorAll('.boot')) {
+    const lines = boot.textContent.split('\n');
+    const uncertain = lines.filter(line => /参考表示|Reference view|unverified|未確認|確認資料/.test(line));
+    if (uncertain.length) {
+      boot.textContent = lines.filter(line => !uncertain.includes(line)).join('\n');
+      disclosure.append(el('p', {}, uncertain.join('\n')));
+    }
+  }
+  for (const hint of surface.querySelectorAll('.d2-key-hint')) {
+    if (/unverified|未確認/.test(hint.textContent)) disclosure.append(hint);
+  }
+  if (tool === 'bing') {
+    for (const note of surface.querySelectorAll('p.native-footnote')) disclosure.append(note);
+  }
+  const productNames = new Set(['Aider', 'Bing Chat', 'Microsoft Copilot', 'Cherry Studio', 'Cline', 'Claude Dev', 'Continue', 'HuggingChat', 'LM Studio', 'Bionic', 'Ollama', 'Open WebUI', 'Zed']);
+  for (const title of surface.querySelectorAll('h1,strong')) {
+    if (productNames.has(title.textContent)) title.setAttribute('data-d3-product-name', '');
+  }
+  const decorateCode = () => {
+    for (const code of surface.querySelectorAll('.code-content')) {
+      if (code.querySelector('.d3-code-line')) continue;
+      const lines = code.textContent.split('\n');
+      code.replaceChildren(...lines.map((line, index) => el('span', { class: 'd3-code-line', 'data-line': index + 1 }, line + (index < lines.length - 1 ? '\n' : ''))));
+    }
+  };
+  decorateCode();
+  if (typeof MutationObserver !== 'function') return surface;
+  const update = () => {
+    decorateCode();
+    // The shared host can append streaming chrome after render(). Strip it at
+    // the renderer boundary rather than retaining third-party visual marks.
+    for (const chrome of surface.querySelectorAll('.stream-fx-head,.stream-fx-foot')) chrome.remove();
+    for (const log of surface.querySelectorAll('.thread')) {
+      const busy = Boolean(log.querySelector('.message.is-thinking,.message.is-streaming'));
+      const value = String(busy);
+      if (log.getAttribute('aria-busy') !== value) log.setAttribute('aria-busy', value);
+    }
+    for (const message of surface.querySelectorAll('.message.assistant')) {
+      if (!message.querySelector('.d3-generation-label')) message.append(el('span', { class: 'd3-generation-label' }, tr('回答を作っています…', 'Generating…')));
+      // Open WebUI's response toolbar is evidenced by ResponseMessage.svelte
+      // at v0.3.21. Retrying uses an actual preceding question, never filler.
+      if (tool === 'openwebui' && /(?:2024-09|2025|2026)/.test(surface.getAttribute('data-spec-version')) && !message.querySelector('.d3-answer-actions')) {
+        const actions = el('div', { class: 'd3-answer-actions', 'aria-label': tr('回答の操作', 'Answer actions') });
+        const copy = button(tr('コピー', 'Copy'), async () => {
+          const text = message.querySelector('.answer-text')?.textContent || '';
+          try {
+            await globalThis.navigator?.clipboard?.writeText(text);
+            copy.textContent = tr('コピーしました', 'Copied');
+          } catch { copy.textContent = tr('コピーできませんでした', 'Could not copy'); }
+        }, { disabled: typeof globalThis.navigator?.clipboard?.writeText !== 'function' });
+        const retry = button(tr('再生成', 'Regenerate'), () => {
+          const messages = [...surface.querySelectorAll('.message')];
+          const question = messages.slice(0, messages.indexOf(message)).reverse().find(node => node.classList.contains('user'));
+          const text = question?.querySelector('.answer-text')?.textContent;
+          if (text) ctx?.send?.(text);
+        });
+        const positive = button('👍', () => ctx?.open?.('votes'), { 'aria-label': tr('よい回答', 'Good answer'), title: tr('回答を評価', 'Rate answer') });
+        const negative = button('👎', () => ctx?.open?.('votes'), { 'aria-label': tr('よくない回答', 'Poor answer'), title: tr('回答を評価', 'Rate answer') });
+        actions.append(copy, positive, negative, retry);
+        message.append(actions);
+      }
+    }
+  };
+  new MutationObserver(update).observe(surface, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+  update();
+  return surface;
 }

@@ -11,7 +11,8 @@ function page(ctx, { cls = '', title = 'Gemini', before = [], controls = [], top
     el('div', { class: 'sidebar-bottom' }, button(tr('設定', 'Settings'), () => ctx.open('settings')), button(tr('利用履歴', 'Activity'), () => ctx.open('memories')), button(tr('ヘルプ', 'Help'), () => ctx.open('app'))));
   return el('div', { class: `surface gemini d1 ${cls}` }, S.header(ctx, title, top, tr('設定', 'Settings')),
     el('div', { class: 'surface-row' }, side, el('main', { class: 'chat-main' }, ...before,
-      S.thread(ctx, tr('何をお手伝いしましょうか？', 'How can I help?')), el('div', { class: 'd1-composer-controls' }, ...controls),
+      S.thread(ctx, cls.includes('bard-era') ? tr('何をお手伝いしましょうか？', 'How can I help?') : tr('こんにちは', 'Hello'),
+        cls.includes('bard-era') ? '' : tr('今日は何をしましょうか？', 'What would you like to do today?')), el('div', { class: 'd1-composer-controls' }, ...controls),
       S.composer(ctx, tr('メッセージを入力', 'Enter a message'), glyph, '↑'), el('footer', { class: 'native-footnote' }, link(tr('この版の資料', 'Sources for this version'), source)))));
 }
 
@@ -19,10 +20,15 @@ function answerControls(surface, ctx, phase) {
   // spec: google-bard-gemini-2023-03 controls — drafts/search belong near answers, not above an empty conversation.
   const thread = surface.querySelector('.thread');
   const decorate = () => {
-    for (const turn of thread.querySelectorAll('.message.assistant:not([data-d1-actions])')) {
+    for (const turn of thread.querySelectorAll('.message.assistant')) {
+      if (turn.hasAttribute('data-d1-actions')) continue;
       turn.setAttribute('data-d1-actions', '');
       const actions = el('div', { class: 'd1-answer-actions' },
         menu(tr('別の下書き', 'Other drafts'), button(tr('別案を見る', 'View another draft'), () => ctx.open('research'))), button(tr('Googleで検索', 'Search Google'), () => ctx.open('research')));
+      for (const [glyph, value, label] of [['👍', 'helpful', tr('役に立った', 'Helpful')], ['👎', 'review', tr('見直しが必要', 'Needs review')]]) actions.append(button(glyph, event => {
+        turn.setAttribute('data-rating', value);
+        for (const item of actions.querySelectorAll('[data-rating-choice]')) item.setAttribute('aria-pressed', String(item === event.currentTarget));
+      }, { 'data-rating-choice': value, 'aria-label': label, title: label, 'aria-pressed': 'false' }));
       if (phase >= '2023-07') {
         // spec: google-bard-gemini-2023-07 controls — read aloud at answer top-right; adjustment beside ratings.
         turn.prepend(el('div', { class: 'd1-answer-top' }, button(tr('読み上げ', 'Read aloud'), () => ctx.open('tools'))));
@@ -35,7 +41,8 @@ function answerControls(surface, ctx, phase) {
       turn.append(actions);
     }
   };
-  if (typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(thread, { childList: true });
+  decorate();
+  if (typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(thread, { childList: true, subtree: true });
   return surface;
 }
 
@@ -152,7 +159,7 @@ const specSources = {
   "google-bard-gemini-2026-11": ["https://support.google.com/gemini/answer/18617127?hl=en","https://www.androidcentral.com/apps-software/ai/google-is-upgrading-gemini-with-memory-summary-heres-how-to-find-out-what-your-assistant-knows-about-you","https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/","https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"], // spec: google-bard-gemini-2026-11 sources
 };
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const surface = renderVersion(ctx);
   // design/era/google-bard-gemini.json: the model menu moves from the header to the input.
   for (const input of surface.querySelectorAll('.composer textarea')) input.setAttribute('data-era-input', '');
@@ -182,5 +189,43 @@ export function render(ctx) {
       if (label.textContent === 'You') label.textContent = tr('あなた', 'You');
     }
   }).observe(log, { childList: true });
+  if (!surface.classList.contains('bard-era')) {
+    // Modern responses use the same local rating controls without Bard's drafts/search row.
+    const decorate = () => {
+      for (const turn of surface.querySelectorAll('.message.assistant')) {
+        if (turn.hasAttribute('data-d1-actions')) continue;
+        turn.setAttribute('data-d1-actions', '');
+        const actions = el('div', { class: 'd2-turn-actions', role: 'group', 'aria-label': tr('回答の操作', 'Response actions') });
+        actions.append(button('⧉', async () => {
+          try { await globalThis.navigator?.clipboard?.writeText(turn.querySelector('.answer-text')?.textContent || ''); } catch { /* Browser permission. */ }
+        }, { 'aria-label': tr('回答をコピー', 'Copy response'), title: tr('コピー', 'Copy') }));
+        for (const [glyph, value, label] of [['👍', 'helpful', tr('役に立った', 'Helpful')], ['👎', 'review', tr('見直しが必要', 'Needs review')]]) actions.append(button(glyph, event => {
+          turn.setAttribute('data-rating', value);
+          for (const item of actions.querySelectorAll('[data-rating-choice]')) item.setAttribute('aria-pressed', String(item === event.currentTarget));
+        }, { 'data-rating-choice': value, 'aria-label': label, title: label, 'aria-pressed': 'false' }));
+        turn.append(actions);
+      }
+    };
+    decorate();
+    if (typeof MutationObserver !== 'undefined') new MutationObserver(decorate).observe(surface.querySelector('.thread'), { childList: true, subtree: true });
+  }
+  return surface;
+}
+
+// D2: provenance stays available without occupying the conversation's first view.
+export function render(ctx) {
+  const surface = renderScreen(ctx);
+  surface.classList.add('fidelity-d2');
+  const disclosure = surface.querySelector('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details');
+  if (disclosure) {
+    for (const note of surface.querySelectorAll('p.native-footnote, .era-terminal-reference, [data-fidelity-note]')) {
+      if (!note.closest('.d1-sources, .d2-sources, .d3-sources, .d4-record-note details')) disclosure.append(note);
+    }
+    for (const note of surface.querySelectorAll('.empty-state p')) {
+      if (/unverified|未確認/.test(note.textContent)) disclosure.append(note);
+    }
+    disclosure.before(el('small', { class: 'd2-recreation' }, tr('再現', 'Recreation')));
+    disclosure.append(el('p', { class: 'd2-fidelity-note' }, tr('配置・色・寸法は近似です。正確な値は未確認です。', 'Layout, colors, and dimensions are approximations; exact values are unverified.')));
+  }
   return surface;
 }

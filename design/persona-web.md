@@ -123,3 +123,73 @@ correct_all 108/126 / correct_value_rate 64/76 / correct_unknown_rate 20/20
 ## Web版での役の進め方
 
 自己質問には出典のある記録から即答し、足りない項目を明示する。文章やコードを新しく作る依頼には、容量を見て選ぶ小さな代役と、本物を試す入口を示す。代役の回答を常に識別できる表示にする。現在の天気や未記録の私的な情報には、確認できない旨と確認先を返す。静的な記録からは、本物の未収録の発言や現在の情報を生成できない。
+
+## D4: speaking from the model's era (2026-11-16)
+
+The public `answer()` and `crossAnswer()` paths now check time before using cards or reading a cross path. A sourced cutoff is an interval: a month includes its actual last calendar day. An absent or unsourced cutoff stays unknown. The model can identify itself and report its own recorded specifications; knowledge of other entities must pass the cutoff check. Its own release is allowed as self-knowledge. Later retirement/history events, successors and predecessors are kept outside the role. A second check examines every used fact so that a compound cross answer or a reviewed card cannot add a later event after the first routing check.
+
+An answer can carry `speech`, `museumNote: { text, facts, sources }`, `eraBlocked`, `relayAllowed`, and `voice`. The existing `text`, `kind`, and `facts` remain usable. `text` includes a bilingual “Museum note (outside the role)” label, so the current text renderer still distinguishes archive material. `renderPersonaAnswer()` additionally puts the note in an `aside > small` using text nodes. Date precision and missing evidence are handled without inferring a launch date from a model name. A tool's first recorded edition is explicitly described as an edition, not its launch.
+
+`kind` continues to describe the recorded topic (`self_successor`, `self_status`, `model_lookup`), even when `eraBlocked` is true. This preserves existing callers and prevents the app's `kind === 'unknown'` relay fallback from replacing a known era refusal. The old aggregate benchmarks count values in museum notes as correct recorded values; they do **not** measure whether speech stayed in its era. The new benchmark scores `speech` and `museumNote` separately.
+
+The voice renderer applies once to cards, cross answers, self answers, unknowns, free-form refusals, memory and archive responses. It accepts only researched personas with a sourced official/researched trait. Completion format, conversational phrasing, restrained wit, detailed paragraph layout and sourced numbered formatting are rendering choices based on those traits. They are not quotations or claims of measured fidelity. Unverified voice traits stay plain. No model is made to repeat an unsupported catchphrase. Failures or fabricated facts described in a trait are never deliberately reproduced.
+
+Source checks performed for this change:
+
+- GPT-2's next-word and continuation interface: [OpenAI's February 2019 description](https://openai.com/index/better-language-models/). Its end-of-2017 training-data cutoff: [official GPT-2 model card](https://github.com/openai/gpt-2/blob/master/model_card.md). The curated alias now covers the site's `gpt-2-1.5b`; the browser matcher also handles a parameter-count suffix in a display name.
+- Original ChatGPT's dialogue behavior, excessive verbosity and repeated language-model descriptions: [November 2022 launch article](https://openai.com/index/chatgpt/). The added self-description is a short authored paraphrase, not a model quotation. It applies to the original persona, not automatically to a later snapshot.
+- Claude's early conversational, detailed-answer descriptions: [Anthropic's March 2023 launch article](https://www.anthropic.com/news/introducing-claude). These were selected partner reports; they are not an independent measurement.
+- Early Grok's intended wit: [official announcement](https://x.ai/news/grok). This is a design intention, not a claim that the base Grok-1 weights have the chat product's voice.
+
+The catalogue's existing cohort `reviewed_at` stamp is retained because its current catalogue test requires that exact stamp. The two added trait notes explicitly record the 2026-11-16 source check. Full persona re-review is unverified. Other existing model specifications were not independently re-researched.
+
+Follow-ups use recent **user-authored** subjects, never names or values extracted from an assistant's museum note. “And the price?” keeps the previous model, explicit “your own” returns to the selected model, successor follow-ups follow the sourced relationship, and “why?” cites the relevant record while leaving an undocumented cause unknown. A `model_id` boundary ends this carry-over; the current app already clears messages on a model switch. No conversation state is stored globally. `modelGreeting(model, context)` returns one line, and `answer('Hello', context)` / `answer('こんにちは', context)` return a sourced greeting result. An unfinished self-description for a completion model produces a labelled continuation from recorded identity facts, rather than a chat greeting.
+
+The optional stand-in prompt excludes current access, retirement and successor facts from role knowledge. Recorded future-entity questions receive the same deterministic era answer before a generation request is made. No real stand-in engine was loaded or run; these paths were checked with an offline fake engine.
+
+### Evaluation and remaining integration
+
+`eval/persona/era-voice.json` was written before implementation and before its first run. It has 14 paired Japanese/English cases with synthetic records for era, voice, follow-ups, unknown cutoffs, greeting and completion behavior. Synthetic specifications make this a routing/evidence test, not third-party factual research. Four immutable before snapshots retain the fixture hash, source hashes, responses and facts. After snapshots must match the frozen fixture hash. The legacy input hashes matched between the captured D4 before and after runs.
+
+| Evaluation | Japanese before → after | English before → after |
+| --- | --- | --- |
+| New template path | 1/14 → 14/14 | 1/14 → 14/14 |
+| New normal / cross-then-template path | 1/14 → 14/14 | 1/14 → 14/14 |
+| New standalone cross path | 1/14 → 11/14 | 1/14 → 11/14 |
+| Legacy persona, all criteria | 96/126 → 96/126 | not a separate legacy set |
+| Legacy cross base, all criteria | 82.35% → 82.35% | 100% → 100% (40 questions) |
+| Legacy cross paraphrases, normal path | 86.21% → 86.21% | not a separate legacy set |
+
+Standalone cross intentionally returns null for personal unknowns and free-form requests when its subject/predicate sections do not agree. Those three cases are completed by the normal fallback. The new report leaves those misses visible. Every legacy correctness, answer, value and unknown rate was preserved; latency is separately reported and was not treated as a correctness score. The older 108/126 result above this section is historical: the actual D4 starting copy scored 96/126. Its old free-form expectations, missing fields and missing evidence were not silently rewritten.
+
+Commands used (all offline Node evaluation; no app, server, agent, external tool or real model launched):
+
+```text
+node eval/persona/era-voice-run.js --capture-before
+node eval/persona/era-voice-run.js --english --capture-before
+node eval/persona/era-voice-run.js --cross --capture-before
+node eval/persona/era-voice-run.js --cross --english --capture-before
+node eval/persona/era-voice-run.js
+node eval/persona/era-voice-run.js --english
+node eval/cross/era-voice-run.js
+node eval/cross/era-voice-run.js --english
+node eval/persona/run.js
+node eval/cross/run.js
+node eval/cross/run.js --english
+node --test test/persona/*.test.js test/persona-web/*.test.js test/cross/*.test.js test/i18n/E2.test.js
+npm test
+```
+
+The final exact counts and command outcomes are in `eval/persona/d4-verification.json`; raw final test output is in `eval/persona/d4-focused.log` and `eval/persona/d4-npm-test.log`. Earlier failed runs caught and corrected an unsupported `note_en` field in my additions. No build was run directly against the shared output directories. The full test suite runs its own build fixtures.
+
+Three small app hooks remain outside D4's allowed files:
+
+1. In `selectModel`, show a sourced greeting after assigning the selected model and resetting messages. For example, take `const intro = answer(tr('こんにちは', 'Hello'), closureContext())` and create the initial assistant message from `intro.speech`, `intro.facts`, and `intro.kind` before rendering. The current switch handler does not call the greeting API, so automatic on-switch greeting is **partly done**.
+2. After streaming, use `renderPersonaAnswer(view.text, result)` (and for restored messages preserve `speech` and `museumNote`) to render the small note semantically. The fallback text label already works; the separate small-note rendering is unverified in a real browser.
+3. Change the relay fallback condition to `result.kind === 'unknown' && result.relayAllowed !== false`. The closure now explicitly marks unsupported/unknown answers as `relayAllowed: false`. Specific era refusals already avoid the existing fallback because they retain a non-unknown topic kind. The relay source/prompt/checker and `app.js` were not edited. A deployed relay's voice and enforcement for every unknown question remain **unverified** until the owner of those files connects this flag.
+
+The build owner should regenerate public persona data and persona cards using the existing build after merging the curated changes. Screenshots, browser rendering, live relay behavior, perceived model fidelity, Japanese quality of an actual stand-in and real historical-model outputs are all **unverified**. The benchmark establishes deterministic evidence and routing behavior, not a claim that the real model would have emitted these sentences.
+
+Final verification on this copy: focused persona/cross/English/schema suite **144 tests, 144 pass, 0 fail**; `npm test` **902 tests, 901 pass, 0 fail, 1 skipped** (exit 0). Earlier full runs also exposed a daily-build fixture syntax failure and a navigation `AbortError` after a test ended; those files were not edited by D4. The final run passed after the shared workspace changed. Final legacy correctness metrics and all captured legacy input hashes were checked for equality. After-snapshot source hashes were also checked against the final code.
+
+Current access links are kept in museum notes for both real-access questions and free-form refusals. They are not presented as an old model's contemporary knowledge.

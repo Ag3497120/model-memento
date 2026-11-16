@@ -93,14 +93,6 @@ const keyOf = id => String(id || '').toLowerCase()
 const nameKey = n => String(n || '').replace(/\s*\((latest|free|us|eu|global|apac|india|japan|fast|thinking)\)$/i, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const isWrapper = (id, name) => /^duo-chat|^agentic|^~|--/i.test(id) || /\blatest\b/i.test(name ?? '') || /\((claude|gpt|gemini|grok|llama)[^)]*\)$/i.test(name ?? '');
 
-function summarizeReleaseBody(body = '', max = 3) {
-  const headingNoise = /^(new features|bug fixes|documentation|highlights|changelog|improvements|other changes|contributors|install)$/i;
-  const lines = String(body || '')
-    .split(/\r?\n/)
-    .map(l => l.replace(/^[#*\-\s>+`]+/, '').trim())
-    .filter(l => l.length >= 16 && l.length <= 120 && !headingNoise.test(l) && !/^http/i.test(l) && !/^full changelog/i.test(l) && !/^what's changed/i.test(l));
-  return lines.slice(0, max);
-}
 
 const report = {
   at: NOW,
@@ -289,7 +281,6 @@ if (TARGETS.has('editions')) {
         const vid = `${toolId}-${tagSlug}`;
         if (knownIds.has(vid)) continue;
         knownIds.add(vid);
-        const features = summarizeReleaseBody(rel.body, 3);
         const entry = {
           id: vid,
           from: relDate,
@@ -298,7 +289,8 @@ if (TARGETS.has('editions')) {
           label: `${rel.tag_name} (${relDate})`,
           available: tool.versions?.at(-1)?.available || [],
           sources: [rel.html_url || `https://github.com/${cfg.repo}/releases`],
-          features: features.length ? features : [`Upstream release ${rel.tag_name}`],
+          features: [`公開版 ${rel.tag_name}`],
+          features_en: [`Release ${rel.tag_name}`],
           autoSynced: true,
           design: {
             surface: cfg.surface,

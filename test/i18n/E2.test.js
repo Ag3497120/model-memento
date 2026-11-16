@@ -60,10 +60,13 @@ test('E2 English axis pieces read naturally and preserve third-person subjects',
   assert.match(crossAnswer('Who made you?', context).text, /^I was made by Fixture Vendor\./);
   const other = { ...model, id: 'other-fixture', name: 'Other Fixture' };
   const result = crossAnswer('When was Other Fixture released?', { ...context, models: [model, other] });
-  assert.equal(result.text, 'Other Fixture was released on 2024-01-02.');
+  assert.match(result.speech, /knowledge ends at 2023-12/);
+  assert.doesNotMatch(result.speech, /2024-01-02/);
+  assert.match(result.museumNote.text, /2024-01-02/);
   const status = crossAnswer('Are you retired?', context);
-  assert.match(status.text, /I am recorded as retired/);
-  assert.match(status.text, /2025-02-03/);
+  assert.match(status.speech, /do not know about a later retirement yet/);
+  assert.match(status.museumNote.text, /recorded as retired/);
+  assert.match(status.museumNote.text, /2025-02-03/);
   noJapanese(status.text);
 });
 
@@ -213,6 +216,24 @@ test('E2 fixture covers at least 30 English questions through both normal entry 
       for (const value of q.expected.values) assert.ok(normalized.includes(value.toLowerCase()), `${q.id} ${value}`);
       if (q.expected.firstPerson) assert.match(result.text, /\b(?:I|My)\b/i);
       if (q.expected.sourcesRequired) assert.ok(result.facts.some(f => f.sources?.length), q.id);
+    }
+  }
+});
+
+test('D4 English era, voice and follow-ups use the same frozen cases as Japanese', async () => {
+  const fixture = JSON.parse(await readFile(new URL('../../eval/persona/era-voice.json', import.meta.url), 'utf8'));
+  for (const q of fixture.questions) {
+    const ctx = { ...fixture, model: fixture.models.find(m => m.id === q.model_id) };
+    if (q.previous_en) ctx.messages = [{ role: 'user', content: q.previous_en }, { role: 'assistant', content: answer(q.previous_en, ctx).text }];
+    for (const noCross of [false, true]) {
+      const result = answer(q.q_en, { ...ctx, noCross });
+      const speech = result.speech || result.text;
+      assert.match(speech, new RegExp(q.speech_en, 'is'), q.id);
+      for (const value of q.forbiddenSpeech || []) assert.ok(!speech.includes(value), q.id);
+      for (const value of q.noteValues || []) assert.ok(result.museumNote.text.replace(/(?<=\d),(?=\d)/g, '').includes(value), q.id);
+      if (q.completion) assert.match(speech, /^Continuation:/);
+      if (q.voice === 'wry') assert.match(speech, /^Well\./);
+      noJapanese(result.text);
     }
   }
 });

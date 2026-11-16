@@ -270,3 +270,52 @@
   .surface.d4 .d4-secondary-status { display: none; }
   .surface.d4 .d4-record-note { padding: 4px 10px; font-size: 10px; }
 }
+
+/* D3 owns Hermes and Pi here. Do not affect D4's Antigravity renderer.
+   Pixel spacing below is an unverified reconstruction choice.
+   CLI structure: https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/website/docs/user-guide/cli.md
+   Pi input/status: https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/interactive-mode.ts */
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d4-header { min-height: 34px; padding: 6px 16px; gap: 12px; border-bottom: 1px solid var(--d4-border); }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d4-product-name { font: 12px/1.5 system-ui, sans-serif; }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d4-header small { color: var(--d4-muted); font-size: 10px; }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d4-record-note { padding: 4px 12px; border-top: 0; }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d3-recreation { display: inline; padding: 0; margin-right: 10px; }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d3-fidelity-sources { display: inline-block; vertical-align: top; padding: 0; max-width: 100%; }
+.surface.d4.d3-fidelity:is(.hermes-agent,.pi-coding-agent) .d3-fidelity-sources[open] { display: block; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] { font: 13px/1.55 ui-monospace, monospace; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .terminal-main { padding: 12px 18px 0; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .d4-boot { margin: 0 0 10px; padding: 12px 16px; border: 1px solid var(--d4-border); border-radius: 0; max-width: 76ch; font: inherit; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .era-terminal-welcome { font: 11px/1.6 ui-monospace, monospace; margin: 4px 0 10px; color: var(--d4-muted); }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .thread { padding: 0; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .message { padding: 10px 0; border-bottom: 0; font: inherit; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .message.assistant .message-label::before { content: none; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .message-label { font: 11px/1.6 ui-monospace, monospace; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .composer { margin: 8px 0; padding: 10px 0; border-inline: 0; border-radius: 0; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .composer textarea { font: inherit; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .composer .send { display: none; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .d4-session-status { margin: 4px 0 8px; font: 10px/1.5 ui-monospace, monospace; gap: 4px 14px; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=cli] .d4-toolbar { padding: 4px 0; font-size: 11px; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=tui] { font: 13px/1.6 ui-monospace, monospace; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=tui] .d4-tui-boot { border: 1px solid var(--d4-border); padding: 10px 14px; }
+.surface.d4.d3-fidelity.hermes-agent[data-display=tui] .composer { border-radius: 0; border-inline: 0; margin: 8px 16px; }
+.surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .d4-rail { font-size: 12px; flex-basis: 210px; gap: 8px; padding: 18px 12px; }
+.surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .thread { padding: 24px max(24px,calc((100% - 760px)/2)); }
+.surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .composer { width: calc(100% - 40px); max-width: 760px; margin: 10px auto; border-radius: 14px; min-height: 80px; }
+.surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .d4-toolbar { max-width: 760px; width: 100%; margin: 0 auto; font-size: 11px; }
+.surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .message.assistant { background: transparent; border: 0; padding: 18px 0; }
+.surface.d4.d3-fidelity.pi-coding-agent { font: 13px/1.6 ui-monospace, monospace; }
+.surface.d4.d3-fidelity.pi-coding-agent .d4-pi-boot { padding: 14px 18px; }
+.surface.d4.d3-fidelity.pi-coding-agent .d4-pi-boot p { margin: 0 0 4px; }
+.surface.d4.d3-fidelity.pi-coding-agent .thread { padding: 0 18px; }
+.surface.d4.d3-fidelity.pi-coding-agent .message { padding: 10px 14px; margin: 8px 0; font: inherit; }
+.surface.d4.d3-fidelity.pi-coding-agent .message-label { font: 10px/1.5 ui-monospace, monospace; margin-bottom: 6px; }
+.surface.d4.d3-fidelity.pi-coding-agent .d4-pi-settings { font: 11px/1.5 ui-monospace, monospace; padding: 4px 18px; color: var(--d4-muted); }
+.surface.d4.d3-fidelity.pi-coding-agent .composer { margin: 8px 18px 4px; padding: 12px 0; border-radius: 0; }
+.surface.d4.d3-fidelity.pi-coding-agent .composer textarea { min-height: 42px; font: inherit; }
+.surface.d4.d3-fidelity.pi-coding-agent .composer .send { display: none; }
+.surface.d4.d3-fidelity.pi-coding-agent .d4-session-status { font: 10px/1.5 ui-monospace, monospace; margin: 4px 18px 10px; gap: 4px 18px; }
+@media (max-width: 600px) {
+  .surface.d4.d3-fidelity.hermes-agent[data-display=cli] .terminal-main { padding-inline: 12px; }
+  .surface.d4.d3-fidelity.hermes-agent:is([data-display=desktop],[data-display=web]) .d4-rail { flex-basis: auto; }
+  .surface.d4.d3-fidelity.pi-coding-agent .d4-header small { display: none; }
+}

@@ -8,7 +8,7 @@ const pick = id => ({ ...context, model: [...context.models, ...context.closed].
 
 test('経路の語句をつないで文を作り、使った事実と出典を返す', () => {
   const r = crossAnswer('君っていつ生まれたの？', pick('claude-opus-5-5'));
-  assert.equal(r.text, '私は2026-09-22に公開されました。');
+  assert.equal(r.speech || r.text, '私は2026-09-22に公開されました。');
   assert.equal(r.kind, 'self_release');
   assert.ok(r.sources.length > 0);
 });
@@ -34,7 +34,7 @@ test('マトリョーシカ: 最初の問いを付けたときだけ第2層が�
   const ctx = pick('claude-opus-5-5');
   const withInitial = crossAnswer('前のモデルはいつ公開された？', ctx, { includeInitial: true });
   const without = crossAnswer('前のモデルはいつ公開された？', ctx, { includeInitial: false });
-  assert.match(withInitial.text, /Claude Opus 4\.6は2026-02-04に公開されました。$/);
-  assert.equal(without.text, '私の前のモデルはClaude Opus 4.6です。');
+  assert.match(withInitial.speech || withInitial.text, /Claude Opus 4\.6は2026-02-04に公開されました。$/);
+  assert.equal(without.speech || without.text, '私の前のモデルはClaude Opus 4.6です。');
   assert.equal(withInitial.layers.length, 2);
 });

@@ -1,3 +1,4 @@
+import { finishFidelity } from './continue.js';
 import { tr } from '../i18n.js';
 import { el, button, link } from '../dom.js';
 import { composer, thread } from '../surface.js';
@@ -10,7 +11,7 @@ const tags = {
 };
 const sourceAt = (tag, path) => `https://github.com/NousResearch/hermes-agent/blob/${tag}/${path}`;
 
-export function render(ctx) {
+function renderScreen(ctx) {
   const { ym, id } = editionTag(ctx);
   // These three spec records describe different surfaces, not replacements for the catalog's CLI records.
   const display = id === 'hermes-agent-2026-05' ? 'tui' : id === 'hermes-agent-2026-06' ? 'desktop' : id === 'hermes-agent-2026-11' ? 'web' : 'cli';
@@ -133,4 +134,9 @@ export function render(ctx) {
     preview.append(el('details', {}, el('summary', {}, tr('端末', 'Terminal')), el('p', {}, tr('実際のコマンドは実行できません。', 'Actual commands cannot be run.'))));
   }
   return root;
+}
+
+// D3 keeps the host's message engine and edition model slots intact.
+export function render(ctx) {
+  return finishFidelity(renderScreen(ctx), ctx, 'hermes-agent');
 }

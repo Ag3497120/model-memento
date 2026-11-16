@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process';
 
 test('installed workflows have parseable Node programs and publish generated data without commits', async () => {
   let scripts = 0;
-  const directory = new URL('../../.github/workflows-later/', import.meta.url);
+  const directory = new URL('../../.github/workflows/', import.meta.url);
   for (const name of (await fs.readdir(directory)).filter(file => /\.ya?ml$/.test(file))) {
     const source = await fs.readFile(new URL(name, directory), 'utf8');
     assert.doesNotMatch(source, /\t/); assert.doesNotMatch(source, /git\s+(?:add|commit|push)\b/);

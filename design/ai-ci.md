@@ -1,12 +1,13 @@
 # AI による日次保守
 
-既存の収集・組み立て・公開処理はそのまま動かす。AI は資料の変更案だけを返す。
+収集・組み立て・公開の現在の手順と設定は [daily.md](daily.md) に記載する。AI は資料の変更案だけを返す。
 既定は人が確認する PR。直接反映は管理者が明示して選ぶ。
 
 ```text
 auto-sync.yml（日次の決まった処理）→ world-pages.yml → 公開済みデータ
   ↓ 成功した workflow_run、既定ブランチ、同じリポジトリだけ
 ai-maintain.yml（全体を ai-maintain の同時実行グループで直列化）
+  keys [秘密の有無だけを確認、鍵がなければ後続を見送る]
   collect [読取りのみ、AIなし、秘密なし]
     公開済み一覧＋保存済みの確認状態＋リポジトリの資料
     → ai-input（ai-work.json、sources/*.json、本文のない state.json）
@@ -26,8 +27,9 @@ ai-maintain.yml（全体を ai-maintain の同時実行グループで直列化�
 ## 設定する名前
 
 秘密は `ANTHROPIC_API_KEY` または `OPENAI_API_KEY`。両方あれば前者を選ぶ。
-どちらもなければ AI を呼ばず、検証・反映も見送る。秘密の有無は ai ジョブ内で判定する。
-GitHub の `if` には秘密を直接置けないため、鍵のない場合にも ai ジョブの準備までは動く。
+どちらもなければ keys ジョブだけで成功し、収集・AI・検証・反映を見送る。
+GitHub の `if` には秘密を直接置けないため、keys の真偽の出力で後続を制御する。
+Without either key, only the presence check runs and all maintenance jobs are skipped.
 [GitHub の秘密の扱い](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#using-secrets-in-a-workflow)
 
 リポジトリ変数は `AI_MAINTAIN`、`AI_AUTOMERGE`、既存の `WORLD_SITE_URL`。
@@ -105,7 +107,7 @@ Claude は8ターン・3米ドルまでを CLI 引数で指定。Codex は読取
 Codex の CLI も `0.169.0` に固定した。
 [CLI の公開版](https://github.com/openai/codex/releases/tag/rust-v0.169.0)
 Claude action 内部の CLI とその内部依存はこの変更では固定できていない。
-既存の contrib-intake.yml の action の版は今回変更していないため、この作業では **unverified**。
+contrib-intake.yml と日次公開の固定版も確認済みで、出典は [daily.md](daily.md) に記載する。
 
 ## 制限できる道具と残る危険
 

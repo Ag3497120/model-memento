@@ -1,4 +1,5 @@
-/* D2 renderer styles. Only confirmed palette entries below override host tokens.
+/* D2 renderer styles. Earlier spec tokens and the explicitly approximate fidelity
+   section at the end are distinguished in design/fidelity-d2.md.
    A // spec marker inside a CSS comment is an audit pointer, not CSS syntax. */
 
 /* // spec: openai-codex-cli-2025-04 typography.free_fallback; opencode-2025-06 typography.free_fallback; aider-2023-05 typography.free_fallback; gemini-cli-2025-06-25 typography.free_fallback */
@@ -852,3 +853,97 @@
 @media (min-width: 851px) {
   .surface.d2.d2-opencode-v1:is([data-spec='opencode-2025-10'], [data-spec='opencode-2026-04']) .d2-opencode-side { display: block; }
 }
+
+/* D2 fidelity refinements. Palette/spacing values are approximations; sources and
+   the complete edition audit are in design/fidelity-d2.md. No product emblems. */
+.surface.cursor.fidelity-d2 { --bg: #1e1e1e !important; --panel: #252526 !important; --text: #d4d4d4 !important; --muted: #979797 !important; --border: #333 !important; --accent: #80b9ec !important; background: var(--bg) !important; color: var(--text); color-scheme: dark; font: 13px/1.5 system-ui, sans-serif !important; }
+.surface.cursor.fidelity-d2 > .d2-controls { height: 38px; min-height: 38px; padding: 4px 12px; border-bottom: 1px solid #333; background: #181818; gap: 10px; }
+.surface.cursor.fidelity-d2 > .d2-controls > span:first-child { font: 12px/1.4 system-ui, sans-serif; margin-inline-end: auto; }
+.surface.cursor.fidelity-d2 :is(.ide-workspace, .cursor-codemirror) { display: flex; min-height: 0; flex: 1; }
+.surface.cursor.fidelity-d2 .d2-activity-bar { width: 44px; flex: 0 0 44px; display: flex; flex-direction: column; align-items: center; padding-block: 8px; gap: 8px; background: #181818; border-right: 1px solid #2b2b2b; }
+.surface.cursor.fidelity-d2 .d2-activity-bar button { font: 22px/1.2 system-ui, sans-serif; width: 36px; height: 36px; border: 0; padding: 4px; color: #a6a6a6; }
+.surface.cursor.fidelity-d2 .d2-activity-bar button:last-child { margin-top: auto; }
+.surface.cursor.fidelity-d2 .explorer { width: 170px; flex: 0 0 170px; padding: 12px 8px; background: #181818; border-right: 1px solid #333; font-size: 12px; }
+.surface.cursor.fidelity-d2 .explorer strong { font-size: 10px; font-weight: 500; letter-spacing: .6px; }
+.surface.cursor.fidelity-d2 .explorer button { border: 0; border-radius: 0; padding: 4px 12px; }
+.surface.cursor.fidelity-d2 .explorer button.is-active { background: #303031; }
+.surface.cursor.fidelity-d2 .editor { background: #1e1e1e; border: 0; flex: 1; min-width: 0; }
+.surface.cursor.fidelity-d2 .editor-tab { height: 36px; padding: 9px 16px; background: #252526; border-bottom: 1px solid #333; font-size: 12px; }
+.surface.cursor.fidelity-d2 .code-content { padding: 18px 0; color: #c6d7e3; font: 12px/1.8 ui-monospace, monospace !important; }
+.surface.cursor.fidelity-d2 .d2-code-line { display: block; white-space: pre; min-height: 1.8em; }
+.surface.cursor.fidelity-d2 .d2-code-line::before { content: attr(data-line); display: inline-block; width: 4ch; margin-right: 3ch; text-align: right; color: #858585; user-select: none; }
+.surface.cursor.fidelity-d2 .integrated-terminal { background: #181818; border-top: 1px solid #333; padding: 10px 16px; min-height: 100px; font: 11px/1.6 ui-monospace, monospace; }
+.surface.cursor.fidelity-d2 .integrated-terminal > div { font: 10px/1.4 system-ui, sans-serif; margin-bottom: 12px; }
+.surface.cursor.fidelity-d2 .agent-panel { flex: 0 0 34%; width: 34%; min-width: 270px; background: #181818; border-left: 1px solid #333; }
+.surface.cursor.fidelity-d2 .panel-header { min-height: 36px; padding: 8px 12px; font: 12px/1.5 system-ui, sans-serif; background: #181818; border-bottom: 1px solid #333; }
+.surface.cursor.fidelity-d2 .agent-panel > .d2-controls { padding: 6px 10px; gap: 4px; }
+.surface.cursor.fidelity-d2 .agent-panel .thread { padding: 16px; gap: 20px; }
+.surface.cursor.fidelity-d2 .empty-state { align-items: flex-start; text-align: start; justify-content: center; padding: 12px 0; }
+.surface.cursor.fidelity-d2 .empty-state h1 { font: 500 21px/1.3 system-ui, sans-serif; color: #dedede; letter-spacing: -.4px; }
+.surface.cursor.fidelity-d2 .empty-state p { font: 12px/1.6 system-ui, sans-serif; max-width: 28ch; color: #979797; }
+.surface.cursor.fidelity-d2 .composer { display: flex; flex-wrap: wrap; margin: 10px; padding: 10px 12px; border: 1px solid #414141; border-radius: 10px; background: #252526; box-shadow: none; gap: 6px; }
+.surface.cursor.fidelity-d2 .composer textarea { flex: 1 1 80%; font: 12px/1.6 system-ui, sans-serif; min-height: 42px; }
+.surface.cursor.fidelity-d2 :is(button, select, summary) { font-size: 11px; border-color: #3b3b3b; border-radius: 5px; padding: 5px 7px; }
+.surface.cursor.fidelity-d2 .composer .send { font-size: 0; margin-inline-start: auto; width: 25px; min-width: 25px; height: 25px; padding: 0; background: #d4d4d4; color: #171717; border: 0; }
+.surface.cursor.fidelity-d2 .composer .send::after { content: '↑'; font: 17px/1 system-ui, sans-serif; }
+.surface.cursor.fidelity-d2 .composer .d2-voice-send { font-size: 12px; }
+.surface.cursor.fidelity-d2 .composer .d2-voice-send::after { content: none; }
+.surface.cursor.fidelity-d2 .message { max-width: 100%; padding: 0; border: 0; background: transparent; font: 13px/1.65 system-ui, sans-serif; }
+.surface.cursor.fidelity-d2 .message.user { background: #262626; border: 1px solid #353535; padding: 10px 12px; border-radius: 8px; }
+.surface.cursor.fidelity-d2 .message-label { font-size: 10px; color: #979797; }
+.surface.cursor.fidelity-d2 .cursor-cmdi-overlay { min-width: 0; width: min(520px, 94%); height: 70%; left: 3%; bottom: 16px; background: #202020; border: 1px solid #505050; border-radius: 10px; box-shadow: 0 12px 40px #0007; overflow: hidden; }
+.surface.cursor.fidelity-d2 .agent-list { width: 210px; flex: 0 0 210px; padding: 18px 12px; background: #181818; border-right: 1px solid #333; }
+.surface.cursor.fidelity-d2 :is(.d2-cursor-agents, .cursor-2026-workspace) > .agent-panel { flex: 1; width: auto; min-width: 0; border: 0; }
+.surface.cursor.fidelity-d2 .d2-cursor-optional { width: 30%; min-width: 180px; border-left: 1px solid #333; background: #1e1e1e; }
+.surface.cursor.fidelity-d2 .d2-cursor-optional .d2-review { border: 0; border-bottom: 1px solid #333; padding: 12px; }
+.surface.cursor.fidelity-d2 .d2-cursor-web { max-width: 1000px; width: 100%; margin-inline: auto; }
+.surface.cursor.fidelity-d2 .d2-cursor-web .agent-panel { width: 100%; flex: 1; border: 0; }
+.surface.cursor.fidelity-d2 > .d2-sources { padding: 0 12px 5px; }
+.surface.cursor.fidelity-d2 > .d2-recreation { padding: 0 12px; }
+
+/* Codex: release-specific text boxes and prompt geometry remain separate. */
+.surface.codex.fidelity-d2.terminal { --bg: #151515 !important; --panel: #242424 !important; --text: #dedede !important; --muted: #959595 !important; --border: #676767 !important; --accent: #94c5e8 !important; background: var(--bg) !important; color: var(--text); color-scheme: dark; padding: 24px; font: 13px/1.6 ui-monospace, monospace !important; }
+.surface.codex.fidelity-d2 .terminal-main { padding: 0; gap: 12px; }
+.surface.codex.fidelity-d2 .boot { font: inherit; color: inherit; margin: 0 0 12px; max-height: none; line-height: 1.5; }
+.surface.codex.fidelity-d2 .d2-command-hint { font: inherit; color: var(--muted); margin: 0 0 16px; }
+.surface.codex.fidelity-d2 .thread { padding: 0; gap: 18px; }
+.surface.codex.fidelity-d2 .message { font: inherit; padding: 0; margin: 0; }
+.surface.codex.fidelity-d2 .composer { border-radius: 0; border: 0; box-shadow: none; background: transparent; padding: 8px 0; margin: 0; gap: 1ch; }
+.surface.codex.fidelity-d2 .composer textarea { font: inherit; min-height: 24px; }
+.surface.codex.fidelity-d2 .d2-character-input .composer { border-inline: 1px solid #676767; padding-inline: 1ch; }
+.surface.codex.fidelity-d2 .d2-character-rule { color: #676767; }
+.surface.codex.fidelity-d2 .composer .send { color: #959595; font-size: 11px; padding: 2px 5px; }
+.surface.codex.fidelity-d2.d2-codex-band .composer { background: #242424; padding: 10px 1ch; }
+.surface.codex.fidelity-d2 .terminal-status { border: 0; color: #959595; padding: 0; font: 11px/1.5 ui-monospace, monospace; }
+.surface.codex.fidelity-d2 .d2-sources { margin-top: 4px; }
+.surface.codex-macos.fidelity-d2 { background: #fafafa; color: #242424; }
+.surface.codex-macos.fidelity-d2 .macos-sidebar-badge:empty { display: none; }
+@media (max-width: 900px) {
+  .surface.cursor.fidelity-d2 .explorer { width: 130px; flex-basis: 130px; }
+  .surface.cursor.fidelity-d2 .d2-cursor-optional { display: none; }
+}
+@media (max-width: 760px) {
+  .surface.cursor.fidelity-d2 :is(.ide-workspace, .cursor-codemirror) { flex-direction: column; }
+  .surface.cursor.fidelity-d2 :is(.explorer, .d2-activity-bar, .agent-list) { display: none; }
+  .surface.cursor.fidelity-d2 .agent-panel { width: 100%; flex: 1; min-width: 0; border: 0; }
+  .surface.cursor.fidelity-d2 .ide-workspace > .editor { height: 160px; flex: 0 0 160px; }
+  .surface.cursor.fidelity-d2 .cursor-codemirror > .editor { height: 160px; flex: 0 0 160px; }
+  .surface.codex.fidelity-d2.terminal { padding: 16px; font-size: 12px !important; }
+}
+.surface.codex-macos.fidelity-d2.d2-desktop { --bg: #fafafa !important; --panel: #f1f1f1 !important; --text: #242424 !important; --muted: #737373 !important; --border: #e0e0e0 !important; --accent: #242424 !important; color-scheme: light; font: 13px/1.5 system-ui, sans-serif !important; }
+.surface.codex-macos.fidelity-d2 .d2-project-list { width: 230px; flex: 0 0 230px; padding: 24px 14px; gap: 12px; background: #f1f1f1; border: 0; }
+.surface.codex-macos.fidelity-d2 .d2-project-list > span { font: 14px/1.5 system-ui, sans-serif; margin-bottom: 20px; }
+.surface.codex-macos.fidelity-d2 .d2-project-list button { text-align: start; padding: 8px 10px; border: 0; border-radius: 6px; }
+.surface.codex-macos.fidelity-d2 .d2-project-list strong { font-size: 11px; font-weight: 500; color: #737373; }
+.surface.codex-macos.fidelity-d2 .chat-main { padding: 24px max(24px, calc((100% - 760px) / 2)); background: #fafafa; }
+.surface.codex-macos.fidelity-d2 .thread { padding: 20px 0; }
+.surface.codex-macos.fidelity-d2 .empty-state h1 { font: 500 28px/1.3 system-ui, sans-serif; letter-spacing: -.5px; }
+.surface.codex-macos.fidelity-d2 .empty-state p { font-size: 13px; }
+.surface.codex-macos.fidelity-d2 .composer { flex-wrap: wrap; padding: 14px; min-height: 96px; border: 1px solid #d9d9d9; border-radius: 16px; background: #fff; box-shadow: 0 2px 8px #00000006; margin: 12px 0; }
+.surface.codex-macos.fidelity-d2 .composer textarea { flex: 1 1 80%; font: 14px/1.6 system-ui, sans-serif; }
+.surface.codex-macos.fidelity-d2 .composer .send { border: 0; border-radius: 50%; background: #242424; color: #fff; width: 30px; height: 30px; min-width: 30px; padding: 0; font-size: 0; }
+.surface.codex-macos.fidelity-d2 .composer .send::after { content: '↑'; font: 18px/1 system-ui, sans-serif; }
+.surface.codex-macos.fidelity-d2 .d2-review { padding: 8px 0; border: 0; color: #737373; font-size: 12px; }
+.surface.codex-macos.fidelity-d2 .message { max-width: 100%; background: transparent; border: 0; padding: 0; font: 14px/1.7 system-ui, sans-serif; }
+.surface.codex-macos.fidelity-d2 .message.user { width: fit-content; margin-inline-start: auto; border-radius: 16px; padding: 10px 16px; background: #eee; }
+@media (max-width: 760px) { .surface.codex-macos.fidelity-d2 .d2-project-list { display: none; } .surface.codex-macos.fidelity-d2 .chat-main { padding: 16px; } }
