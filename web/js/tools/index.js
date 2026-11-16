@@ -45,6 +45,8 @@ import * as w5_iofficeai__aionui from './iofficeai--aionui.js';
 import * as w5_vxcontrol__pentagi from './vxcontrol--pentagi.js';
 import * as w5_browser_use__browser_use from './browser-use--browser-use.js';
 import * as w5_tinyhumansai__openhuman from './tinyhumansai--openhuman.js';
+import * as w6_codewhale_hq__codewhale from './codewhale-hq--codewhale.js';
+import * as w6_1panel_dev__maxkb from './1panel-dev--maxkb.js';
 import * as chatgpt from './chatgpt.js';
 import * as playground from './playground.js';
 import * as claude from './claude.js';
@@ -100,6 +102,8 @@ const renderers = {
   'n8n': n8n,
   'ollama': ollama,
   'zed': zed,
+  'codewhale-hq--codewhale': w6_codewhale_hq__codewhale,
+  '1panel-dev--maxkb': w6_1panel_dev__maxkb,
   'paperclipai--paperclip': w5_paperclipai__paperclip,
   'bytedance--deer-flow': w5_bytedance__deer_flow,
   'pingdotgg--t3code': w5_pingdotgg__t3code,

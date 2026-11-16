@@ -16,25 +16,30 @@
         {
           "name": "sidebar",
           "position": "left",
-          "size": "220–500px resizable; initial width unverified",
+          "size": "280px initial, 220–500px resizable",
           "contents_en": [
-            "Header, search, grouping controls, worktree list, bottom toolbar."
+            "Worktrees, Search..., All, PR Status, Repo, and empty worktree list."
           ],
           "sources": [
             "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/index.tsx",
+            "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/store/slices/ui.ts",
             "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SidebarHeader.tsx",
             "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SearchBar.tsx",
             "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/GroupControls.tsx",
-            "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/WorktreeList.tsx",
-            "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SidebarToolbar.tsx"
+            "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/WorktreeList.tsx"
           ]
         },
         {
           "name": "landing",
           "position": "main",
-          "size": "flexible; content max-width 32rem",
+          "size": "Centered; maximum content width 32rem; shortcut list maximum width 20rem",
           "contents_en": [
-            "Empty landing with Add Repo, Create Worktree and keyboard shortcut rows."
+            "Add a repository to get started.",
+            "Add Repo",
+            "Create Worktree",
+            "Create worktree",
+            "Move up worktree",
+            "Move down worktree"
           ],
           "sources": [
             "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
@@ -63,59 +68,94 @@
           "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/GroupControls.tsx"
         },
         {
+          "label": "No worktrees found",
+          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/WorktreeList.tsx"
+        },
+        {
           "label": "Add Repo",
-          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SidebarToolbar.tsx"
+          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
         },
         {
           "label": "Create Worktree",
           "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Create worktree",
+          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move up worktree",
+          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move down worktree",
+          "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
         }
       ],
       "empty_state": {
-        "text": "No worktrees found",
-        "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/WorktreeList.tsx"
+        "text": "Add a repository to get started.",
+        "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
       },
-      "palette": null,
-      "composer": null,
-      "model_picker": null,
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "foreground": "#0a0a0a",
+          "sidebar": "#fafafa",
+          "secondary": "#f5f5f5",
+          "muted": "#737373",
+          "border": "#e5e5e5"
+        },
+        "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/assets/main.css",
+        "selection_en": "The root light theme is represented; startup theme preference unverified."
+      },
+      "composer": {
+        "where_en": "The shown no-project landing has no composer. Active workspace composer unverified.",
+        "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+      },
+      "model_picker": {
+        "where_en": "No model picker is present in the pictured landing. Location and steps elsewhere unverified.",
+        "source": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+      },
       "sources": [
         "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/index.tsx",
+        "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/store/slices/ui.ts",
         "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SidebarHeader.tsx",
         "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SearchBar.tsx",
         "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/GroupControls.tsx",
         "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/WorktreeList.tsx",
-        "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/SidebarToolbar.tsx",
-        "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+        "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx",
+        "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/assets/main.css"
       ],
       "unverified": [
-        "Default theme values and initial sidebar width",
-        "Active workspace and composer layout",
-        "Model picker location and steps"
+        "Startup theme preference",
+        "Active workspace composer and model picker",
+        "Product behavior for a particular installation",
+        "Browser rendering of the exhibit"
       ]
     },
     {
       "id": "stablyai--orca-2026-10-1",
       "from": "2026-10-30",
       "to": null,
-      "source_ref": "1c6ac8c",
-      "source_selection": "Release page identifies commit 1c6ac8c; https://github.com/stablyai/orca/releases/tag/v1.4.245",
+      "source_ref": "1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3",
+      "source_selection": "Catalog release commit; https://github.com/stablyai/orca/releases/tag/v1.4.245",
       "regions": [
         {
           "name": "sidebar",
           "position": "left",
-          "size": "220–500px resizable; initial width unverified",
+          "size": "Resizable; initial width unverified",
           "contents_en": [
-            "Sidebar shell and conditional navigation entries."
+            "Search, Automations and Orca Mobile navigation are conditional on settings."
           ],
           "sources": [
-            "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/index.tsx",
-            "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx"
+            "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/index.tsx",
+            "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx"
           ]
         },
         {
           "name": "landing",
           "position": "main",
-          "size": "centered content, max-width 32rem",
+          "size": "Centered; maximum content width 32rem; shortcut list maximum width 20rem",
           "contents_en": [
             "Add a project to get started.",
             "Add project",
@@ -124,38 +164,88 @@
             "Move down workspace"
           ],
           "sources": [
-            "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/Landing.tsx"
+            "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
           ]
         }
       ],
       "controls": [
         {
-          "label": "Artifacts",
-          "source": "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx"
-        },
-        {
-          "label": "Skills",
-          "source": "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx"
+          "label": "Search",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx"
         },
         {
           "label": "Automations",
-          "source": "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx"
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx"
+        },
+        {
+          "label": "Orca Mobile",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx"
+        },
+        {
+          "label": "Add project",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Create workspace",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move up workspace",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move down workspace",
+          "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
         }
       ],
-      "empty_state": null,
-      "palette": null,
-      "composer": null,
-      "model_picker": null,
+      "empty_state": {
+        "text": "Add a project to get started.",
+        "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "foreground": "#0a0a0a",
+          "sidebar": "#f5f5f5",
+          "secondary": "#f5f5f5",
+          "muted": "#737373",
+          "border": "#e5e5e5"
+        },
+        "source": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/assets/main.css",
+        "selection_en": "The root light theme is represented; startup theme preference unverified."
+      },
+      "composer": {
+        "where_en": "The landing has no composer. In native chat, a rounded composer contains an editor and an action row with Attach file, a permission picker, model/options picker, dictation, and Send or Stop; visibility depends on session state.",
+        "sources": [
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerField.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerActions.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatSessionOptionPickers.tsx"
+        ]
+      },
+      "model_picker": {
+        "where_en": "In native chat, a session-dependent model/options pill is on the right side of the composer action row. Open the pill and select an available model; choices and availability depend on the session. It is absent from the pictured landing.",
+        "sources": [
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerField.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerActions.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatSessionOptionPickers.tsx"
+        ]
+      },
       "sources": [
-        "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/index.tsx",
-        "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx",
-        "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/Landing.tsx"
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/index.tsx",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/assets/main.css",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerField.tsx",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerActions.tsx",
+        "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatSessionOptionPickers.tsx"
       ],
       "unverified": [
-        "Default theme values and initial sidebar width",
-        "Active workspace and composer layout",
-        "Model picker location and steps",
-        "Visibility defaults of conditional navigation entries"
+        "Startup theme preference",
+        "Native-chat composer appearance in the running app and session-specific model choices",
+        "Product behavior for a particular installation",
+        "Browser rendering of the exhibit",
+        "Initial sidebar width",
+        "Shortcut key bindings and which conditional navigation items appear in a particular installation"
       ]
     },
     {
@@ -163,14 +253,14 @@
       "from": "2026-11-15",
       "to": null,
       "source_ref": "8728a3260052cb71b4d005dde2dbc7657a21a682",
-      "source_selection": "Catalog record commit.",
+      "source_selection": "Catalog record commit; https://github.com/stablyai/orca/commit/8728a3260052cb71b4d005dde2dbc7657a21a682",
       "regions": [
         {
           "name": "sidebar",
           "position": "left",
-          "size": "220–500px resizable; initial width unverified",
+          "size": "Resizable; initial width unverified",
           "contents_en": [
-            "Sidebar shell and conditional navigation entries."
+            "Search, Automations and Orca Mobile navigation are conditional on settings."
           ],
           "sources": [
             "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/index.tsx",
@@ -180,7 +270,7 @@
         {
           "name": "landing",
           "position": "main",
-          "size": "centered content, max-width 32rem",
+          "size": "Centered; maximum content width 32rem; shortcut list maximum width 20rem",
           "contents_en": [
             "Add a project to get started.",
             "Add project",
@@ -189,38 +279,79 @@
             "Move down workspace"
           ],
           "sources": [
-            "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+            "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx",
+            "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/landing-layout.tsx"
           ]
         }
       ],
       "controls": [
         {
-          "label": "Artifacts",
-          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
-        },
-        {
-          "label": "Skills",
+          "label": "Search",
           "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
         },
         {
           "label": "Automations",
           "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
+        },
+        {
+          "label": "Orca Mobile",
+          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
+        },
+        {
+          "label": "Add project",
+          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Create workspace",
+          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move up workspace",
+          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+        },
+        {
+          "label": "Move down workspace",
+          "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
         }
       ],
-      "empty_state": null,
-      "palette": null,
-      "composer": null,
-      "model_picker": null,
+      "empty_state": {
+        "text": "Add a project to get started.",
+        "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "foreground": "#0a0a0a",
+          "sidebar": "#f5f5f5",
+          "secondary": "#f5f5f5",
+          "muted": "#696969",
+          "border": "#e5e5e5"
+        },
+        "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/assets/main.css",
+        "selection_en": "The root light theme is represented; startup theme preference unverified."
+      },
+      "composer": {
+        "where_en": "The shown no-project landing has no composer. Active workspace composer unverified.",
+        "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+      },
+      "model_picker": {
+        "where_en": "No model picker is present in the pictured landing. Location and steps elsewhere unverified.",
+        "source": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+      },
       "sources": [
         "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/index.tsx",
         "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx",
-        "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+        "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx",
+        "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/landing-layout.tsx",
+        "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/assets/main.css"
       ],
       "unverified": [
-        "Default theme values and initial sidebar width",
-        "Active workspace and composer layout",
-        "Model picker location and steps",
-        "Visibility defaults of conditional navigation entries"
+        "Startup theme preference",
+        "Active workspace composer and model picker",
+        "Product behavior for a particular installation",
+        "Browser rendering of the exhibit",
+        "Initial sidebar width",
+        "Shortcut key bindings and which conditional navigation items appear in a particular installation"
       ]
     }
   ]

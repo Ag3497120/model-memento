@@ -1,0 +1,664 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "codewhale-hq--codewhale",
+  "name": "Codewhale",
+  "vendor": "codewhale-hq",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "codewhale-hq--codewhale-2026-01-0",
+      "from": "2026-01-20",
+      "to": null,
+      "tag": "v0.1.0",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "one-row header and footer; flexible transcript; composer height varies",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/ui.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/app.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none in the main terminal layout",
+          "size": null,
+          "contents": [
+            "The main layout is vertical. https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message or /help for commands...",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "default",
+        "dark": {
+          "surface": "#0b1526",
+          "composer": "#121c2e",
+          "prompt": "#6aaef2"
+        },
+        "light": {},
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/palette.rs"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "The transcript is empty when history is empty; successful key setup inserts a welcome message.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/app.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs)",
+        "After API-key setup, a welcome message names the model and workspace (https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/app.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/ui.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/tui/app.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.1.0/src/palette.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Palette and theme mapping."
+        }
+      ],
+      "confidence": 0.7,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-05-1",
+      "from": "2026-05-31",
+      "to": null,
+      "tag": "v0.8.48",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/ui.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": "hidden below 100 terminal columns",
+          "contents": [
+            "Conditional sidebar width and layout: https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/localization.rs"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {
+          "surface": "#0a1120",
+          "composer": "#162238",
+          "text": "#f6f2e8",
+          "accent": "#f6c453"
+        },
+        "light": {},
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/palette.rs"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "A centered block near the top shows version, model, /model to switch and directory.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs)",
+        "The welcome block includes /model to switch and directory (https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/localization.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.48/crates/tui/src/palette.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Palette and theme mapping."
+        }
+      ],
+      "confidence": 0.7,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-06-2",
+      "from": "2026-06-30",
+      "to": null,
+      "tag": "v0.8.66",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/ui.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": "hidden below 64 terminal columns",
+          "contents": [
+            "Conditional sidebar width and layout: https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {
+          "surface": "#0a1120",
+          "composer": "#162238",
+          "text": "#f6f2e8",
+          "accent": "#f6c453"
+        },
+        "light": {},
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/palette.rs"
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "A centered block near the top shows version, model, /model to switch and directory.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs)",
+        "The welcome block includes /model to switch and directory (https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.8.66/crates/tui/src/palette.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Palette and theme mapping."
+        }
+      ],
+      "confidence": 0.7,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-07-3",
+      "from": "2026-07-31",
+      "to": null,
+      "tag": "v0.9.3",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/ui.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/underwater.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": "hidden below 60 terminal columns",
+          "contents": [
+            "Conditional sidebar width and layout: https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Write a task or use /.",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {},
+        "light": {},
+        "source": null
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "Centered workspace, branch, MCP count, Fleet and help hints; mascot omitted.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/underwater.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/widgets/mod.rs)",
+        "The idle state centers workspace context and omits mascot art in this recreation (https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/underwater.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.3/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        }
+      ],
+      "confidence": 0.55,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-08-4",
+      "from": "2026-08-23",
+      "to": null,
+      "tag": "v0.9.11",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/ui.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/underwater.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": null,
+          "contents": [
+            "Visibility, placement and runtime content: unverified for this depiction; https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {},
+        "light": {},
+        "source": null
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "Centered product name, workspace, branch, MCP count and prompt; mascot omitted where present.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/underwater.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/widgets/mod.rs)",
+        "The idle state centers workspace context and omits mascot art in this recreation (https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/underwater.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/ui.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.9.11/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        }
+      ],
+      "confidence": 0.55,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-2026-09-5",
+      "from": "2026-09-22",
+      "to": null,
+      "tag": "v0.10.0",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/underwater.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": null,
+          "contents": [
+            "Visibility, placement and runtime content: unverified for this depiction; https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/localization/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {},
+        "light": {},
+        "source": null
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "Centered product name, workspace, branch, MCP count and prompt; mascot omitted where present.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/underwater.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs)",
+        "The idle state centers workspace context and omits mascot art in this recreation (https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/underwater.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/localization/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.0/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        }
+      ],
+      "confidence": 0.55,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    },
+    {
+      "id": "codewhale-hq--codewhale-record",
+      "from": "2026-10-24",
+      "to": null,
+      "tag": "v0.10.2",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "full terminal",
+          "size": "transcript above bottom composer; exact dimensions vary with terminal size",
+          "contents": [
+            "Terminal layout: https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs",
+            "Idle state: https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/underwater.rs"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "right when enabled",
+          "size": null,
+          "contents": [
+            "Visibility, placement and runtime content: unverified for this depiction; https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/ui.rs"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Type a message…",
+          "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/localization/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "default_theme": "unverified",
+        "dark": {},
+        "light": {},
+        "source": null
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": {
+        "text": "Centered product name, workspace, branch, MCP count and prompt; mascot omitted where present.",
+        "source": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/underwater.rs"
+      },
+      "distinctive": [
+        "Terminal transcript and composer (https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs)",
+        "The idle state centers workspace context and omits mascot art in this recreation (https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/underwater.rs)."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Terminal layout and responsive behavior."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/widgets/mod.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Transcript and composer rendering."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/localization/locales/en.json",
+          "kind": "source",
+          "date": null,
+          "shows": "English input wording."
+        },
+        {
+          "url": "https://github.com/codewhale-hq/Codewhale/blob/v0.10.2/crates/tui/src/tui/underwater.rs",
+          "kind": "source",
+          "date": null,
+          "shows": "Idle or welcome state."
+        }
+      ],
+      "confidence": 0.55,
+      "limitations": "The selected tag is recorded in the catalog draft; its closest-date correspondence is unverified. Terminal size, runtime state, example workspace, exact initial configuration, and later default theme are unverified. The mascot and marks are omitted. The screenshot was not inspected."
+    }
+  ]
+}

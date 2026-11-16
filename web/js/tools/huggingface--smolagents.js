@@ -27,11 +27,15 @@ function example(i) {
   const tokens = i < 5 ? 'Input-tokens: 0 | Output-tokens: 0' : 'Input tokens: 0 | Output tokens: 0';
   return el('div', { class: 'empty-state smol-example' },
     el('small', {}, tr('表示例', 'Example output')),
+    el('p', { class: 'smol-card' }, 'What is 2 + 2?'),
+    i >= 5 ? el('p', {}, el('strong', {}, 'Planning step')) : null,
     early ? null : el('p', {}, 'Step 1'),
-    el('div', { class: 'smol-card' }, 'Used tool ', early ? 'code interpreter' : 'python_interpreter'),
-    el('div', { class: 'smol-card' }, early ? 'Execution logs:' : 'Execution Logs'),
-    early ? el('div', { class: 'smol-card' }, 'Error') : null,
+    early ? el('div', { class: 'smol-card' }, el('strong', {}, 'Error'), el('pre', {}, "NameError: name 'total' is not defined")) : null,
+    el('div', { class: 'smol-card' }, el('strong', {}, 'Used tool ', early ? 'code interpreter' : 'python_interpreter'),
+      el('pre', {}, 'print(2 + 2)')),
+    early ? el('pre', { class: 'smol-card' }, '4') : el('div', { class: 'smol-card' }, 'Execution Logs', el('pre', {}, '4')),
     el('p', {}, el('strong', {}, 'Final answer:')),
+    el('p', {}, '4'),
     early ? null : el('p', { class: 'smol-metrics' }, `Step 1 | ${tokens} | Duration: 0`));
 }
 
@@ -46,6 +50,7 @@ export function render(ctx) {
     el('style', {}, css),
     el('div', { class: 'smol-layout' },
       sidebar ? el('aside', { class: 'smol-request' }, el('h2', {}, 'Agent interface'),
+        el('p', {}, 'smolagents: use tools and execute steps to complete tasks.'),
         el('h3', {}, 'Your request'), input(ctx, 'sidebar'),
         el('div', { class: 'smol-powered' }, i < 6 ? 'Powered by: huggingface/smolagents' : 'Powered by smolagents')) : null,
       modern ? el('aside', { class: 'smol-history' }, button('New chat', () => ctx?.newChat?.())) : null,

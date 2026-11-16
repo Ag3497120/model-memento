@@ -28,6 +28,7 @@ const css = `
 .goose-exhibit .goose-recent p { color:#878787; font-size:14px; }
 .goose-exhibit .goose-landing { flex:1; display:flex; align-items:center; justify-content:center; padding:24px; }
 .goose-exhibit .goose-center { width:100%; max-width:672px; }
+.goose-exhibit .goose-center.wide { max-width:768px; }
 .goose-exhibit .goose-clock { font-size:60px; font-weight:300; line-height:1.1; letter-spacing:-2px; }
 .goose-exhibit .goose-clock small { font-size:24px; color:#878787; letter-spacing:0; }
 .goose-exhibit .goose-hello { margin:4px 0 24px; font-size:20px; color:#878787; }
@@ -36,7 +37,7 @@ const css = `
 .goose-exhibit .composer { display:flex; align-items:center; gap:8px; padding:0; background:transparent; border:0; box-shadow:none; }
 .goose-exhibit .composer textarea { resize:none; flex:1; min-height:50px; border:0; outline:0; background:transparent; font:14px system-ui,sans-serif; color:inherit; }
 .goose-exhibit .composer .send { border:0; border-radius:50%; width:34px; height:34px; background:#3f434b; color:white; }
-.goose-exhibit .goose-bottom { display:flex; align-items:center; gap:16px; color:#878787; font-size:12px; }
+.goose-exhibit .goose-bottom { display:flex; align-items:center; gap:12px; color:#878787; font-size:12px; }
 .goose-exhibit .goose-bottom button:not(.send) { border:0; background:transparent; color:#878787; font-size:12px; padding:4px; }
 .goose-exhibit .goose-bottom .send { margin-left:auto; border:0; border-radius:50%; width:34px; height:34px; background:#e3e6ea; color:#3f434b; }
 .goose-exhibit .thread { min-height:0; flex:0; padding:0; }
@@ -68,7 +69,7 @@ export function render(ctx) {
       items.map((label, i) => button(label, () => { if (i === 0) ctx.newChat?.(); }, { ...(i ? { disabled: true } : {}) })),
       dashboard ? null : el('div', { class: 'muted', style: 'padding:16px 12px' }, 'Chats', el('p', {}, 'No recent chats')),
       button('Settings', () => ctx.open?.('settings'), { class: 'goose-settings' }), slot('settings'));
-    const bar = el('div', { class: 'goose-bottom' }, slot('input-left'), el('span', {}, 'Extensions'), button('Attach file', () => {}, { disabled: true }));
+    const bar = el('div', { class: 'goose-bottom' }, slot('input-left'), dashboard ? button('autonomous', () => {}, { disabled: true }) : null, button('Extensions', () => {}, { disabled: true }), button('Attach file', () => {}, { disabled: true }));
     if (!dashboard) bar.append(form.querySelector('.send'));
     const input = el('div', { class: `goose-input${dashboard ? '' : ' card'}` }, form, bar);
     if (dashboard) {
@@ -83,13 +84,13 @@ export function render(ctx) {
       const hour = now.getHours();
       const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
       const time = `${(hour % 12) || 12}:${String(now.getMinutes()).padStart(2, '0')}`;
-      screen = el('div', { class: 'goose-window' }, nav, el('main', { class: 'chat-main goose-content' }, el('div', { class: 'goose-landing' }, el('div', { class: 'goose-center' }, el('div', { class: 'goose-clock' }, time, ' ', el('small', {}, hour < 12 ? 'AM' : 'PM')), el('p', { class: 'goose-hello' }, greeting), conversation, input))));
+      screen = el('div', { class: 'goose-window' }, nav, el('main', { class: 'chat-main goose-content' }, el('div', { class: 'goose-landing' }, el('div', { class: `goose-center${index >= 7 ? ' wide' : ''}` }, el('div', { class: 'goose-clock' }, time, ' ', el('small', {}, hour < 12 ? 'AM' : 'PM')), el('p', { class: 'goose-hello' }, greeting), conversation, input))));
     }
   }
-  const paths = early ? ['src/goose/cli/prompt/goose_prompt_session.py', 'src/goose/cli/session.py', 'README.md'] : ['ui/desktop/src/components/Hub.tsx', 'ui/desktop/src/components/Layout/AppLayout.tsx', 'ui/desktop/src/hooks/useNavigationItems.ts', ...(dashboard ? ['ui/desktop/src/components/sessions/SessionsInsights.tsx', 'ui/desktop/src/components/common/Greeting.tsx'] : ['ui/desktop/src/components/Layout/NavigationPanel.tsx', 'ui/desktop/src/components/ChatInputCard.tsx']), 'ui/desktop/src/components/ChatInput.tsx', 'ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx', 'ui/desktop/src/theme/theme-tokens.ts'];
-  return el('div', { class: 'surface goose-exhibit' }, el('style', {}, css), screen,
+  const paths = early ? ['src/goose/cli/main.py', 'src/goose/cli/prompt/goose_prompt_session.py', 'src/goose/cli/session.py', 'README.md'] : ['ui/desktop/src/components/Hub.tsx', 'ui/desktop/src/components/Layout/AppLayout.tsx', 'ui/desktop/src/hooks/useNavigationItems.ts', ...(dashboard ? ['ui/desktop/src/components/sessions/SessionsInsights.tsx', 'ui/desktop/src/components/common/Greeting.tsx', 'ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx', 'ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx'] : ['ui/desktop/src/components/Layout/NavigationPanel.tsx', 'ui/desktop/src/components/ChatInputCard.tsx', 'ui/desktop/src/utils/keyboardShortcuts.ts']), 'ui/desktop/src/components/ChatInput.tsx', 'ui/desktop/src/components/settings/models/bottom_bar/ModelsBottomBar.tsx', 'ui/desktop/src/theme/theme-tokens.ts'];
+  return el('div', { class: 'surface goose-exhibit', 'data-spec-version': id }, el('style', {}, css), screen,
     el('div', { class: 'goose-meta' }, el('small', { 'data-recreation-label': '' }, tr('再現', 'Recreation')),
       el('details', {}, el('summary', {}, tr('出典と再現の限界', 'Sources and limits')),
-        el('p', {}, tr('操作、端末色、細かな寸法は一部未確認です。アイコンとロゴは省略しています。', 'Some interactions, terminal colors and fine measurements are unverified. Icons and logos are omitted.')),
+        el('p', {}, tr('操作、端末色、細かな寸法、利用可能なモデルは一部未確認です。明色はシステム設定に応じた表示の一例です。アイコンとロゴは省略しています。', 'Some interactions, terminal colors, fine measurements and available models are unverified. The light theme is one system-dependent appearance. Icons and logos are omitted.')),
         paths.map((path, i) => el('div', {}, link(`${tr('出典', 'Source')} ${i + 1}: ${path}`, base(ref) + path))))));
 }

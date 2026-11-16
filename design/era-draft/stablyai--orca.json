@@ -8,20 +8,22 @@
         "where": "other",
         "label": "unverified",
         "steps": [
-          "モデル選択の位置と手順は未確認です。"
+          "表示中の初期画面にモデル選択はありません。作業中のモデル選択の位置と手順は未確認です。"
         ],
         "steps_en": [
-          "The location and steps for model selection are unverified."
+          "The displayed landing has no model picker. The location and steps in a workspace are unverified."
         ],
         "options": [],
         "default": null,
-        "sources": []
+        "sources": [
+          "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx"
+        ]
       },
       "accents": [],
       "desktop": {
         "os": "unverified",
-        "app_shell": "デスクトップ画面",
-        "app_shell_en": "Desktop interface",
+        "app_shell": "サイドバーと中央の開始画面",
+        "app_shell_en": "Sidebar and centered landing screen",
         "date_shown": "2026-03-21",
         "sources": [
           {
@@ -30,45 +32,86 @@
             "shows": "サイドバーの構成。",
             "shows_en": "Sidebar structure.",
             "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/Landing.tsx",
+            "date": null,
+            "shows": "開始画面の文言と配置。",
+            "shows_en": "Landing labels and layout.",
+            "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/assets/main.css",
+            "date": null,
+            "shows": "ライトテーマの色。初期テーマは未確認。",
+            "shows_en": "Light theme colors. Startup theme is unverified.",
+            "kind": "source"
           }
         ]
       },
-      "trend": "作業ツリーの検索、グループ化、一覧を備えるサイドバー。 https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/index.tsx",
-      "trend_en": "The sidebar contains worktree search, grouping and list sections. https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/index.tsx"
+      "trend": "作業ツリーの検索とグループ化を備えるサイドバー。 https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/GroupControls.tsx",
+      "trend_en": "The sidebar has worktree search and grouping. https://github.com/stablyai/orca/blob/v1.0.12/src/renderer/src/components/sidebar/GroupControls.tsx"
     },
     {
       "id": "stablyai--orca-2026-10-1",
       "model_switch": {
         "where": "other",
-        "label": "unverified",
+        "label": "Model",
         "steps": [
-          "モデル選択の位置と手順は未確認です。"
+          "この開始画面にはモデル選択がありません。ネイティブチャットでは入力欄右側のモデル表示を開いて選びます。選択肢はセッションに依存し、既定値は未確認です。"
         ],
         "steps_en": [
-          "The location and steps for model selection are unverified."
+          "The landing has no model picker. In native chat, open the model pill at the right of the composer and choose an option. Choices depend on the session; the default is unverified."
         ],
         "options": [],
         "default": null,
-        "sources": []
+        "sources": [
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerField.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatComposerActions.tsx",
+          "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/native-chat/NativeChatSessionOptionPickers.tsx"
+        ],
+        "workspace_where": "ネイティブチャットの入力欄の操作列右側。表示はセッションに依存します。",
+        "workspace_where_en": "On the right of the native-chat composer action row; visibility depends on the session.",
+        "workspace_steps": [
+          "モデルの表示を開き、利用可能な選択肢を選びます。選択肢はセッションに依存します。"
+        ],
+        "workspace_steps_en": [
+          "Open the model pill and choose an available option; choices depend on the session."
+        ]
       },
       "accents": [],
       "desktop": {
         "os": "unverified",
-        "app_shell": "デスクトップ画面",
-        "app_shell_en": "Desktop interface",
+        "app_shell": "サイドバーと中央の開始画面",
+        "app_shell_en": "Sidebar and centered landing screen",
         "date_shown": "2026-10-30",
         "sources": [
           {
-            "url": "https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/index.tsx",
+            "url": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/index.tsx",
             "date": null,
             "shows": "サイドバーの構成。",
             "shows_en": "Sidebar structure.",
             "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx",
+            "date": null,
+            "shows": "開始画面の文言と配置。",
+            "shows_en": "Landing labels and layout.",
+            "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/assets/main.css",
+            "date": null,
+            "shows": "ライトテーマの色。初期テーマは未確認。",
+            "shows_en": "Light theme colors. Startup theme is unverified.",
+            "kind": "source"
           }
         ]
       },
-      "trend": "サイドバーに条件付きのナビゲーション項目がある。 https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx",
-      "trend_en": "The sidebar includes conditional navigation entries. https://github.com/stablyai/orca/blob/1c6ac8c/src/renderer/src/components/sidebar/SidebarNav.tsx"
+      "trend": "プロジェクトとワークスペースを使う開始画面と条件付きナビゲーション。 https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx",
+      "trend_en": "The landing uses projects and workspaces, alongside conditional navigation. https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/Landing.tsx https://github.com/stablyai/orca/blob/1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3/src/renderer/src/components/sidebar/SidebarNav.tsx"
     },
     {
       "id": "stablyai--orca-record",
@@ -76,20 +119,22 @@
         "where": "other",
         "label": "unverified",
         "steps": [
-          "モデル選択の位置と手順は未確認です。"
+          "表示中の初期画面にモデル選択はありません。作業中のモデル選択の位置と手順は未確認です。"
         ],
         "steps_en": [
-          "The location and steps for model selection are unverified."
+          "The displayed landing has no model picker. The location and steps in a workspace are unverified."
         ],
         "options": [],
         "default": null,
-        "sources": []
+        "sources": [
+          "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx"
+        ]
       },
       "accents": [],
       "desktop": {
         "os": "unverified",
-        "app_shell": "デスクトップ画面",
-        "app_shell_en": "Desktop interface",
+        "app_shell": "サイドバーと中央の開始画面",
+        "app_shell_en": "Sidebar and centered landing screen",
         "date_shown": "2026-11-15",
         "sources": [
           {
@@ -98,11 +143,25 @@
             "shows": "サイドバーの構成。",
             "shows_en": "Sidebar structure.",
             "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx",
+            "date": null,
+            "shows": "開始画面の文言と配置。",
+            "shows_en": "Landing labels and layout.",
+            "kind": "source"
+          },
+          {
+            "url": "https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/assets/main.css",
+            "date": null,
+            "shows": "ライトテーマの色。初期テーマは未確認。",
+            "shows_en": "Light theme colors. Startup theme is unverified.",
+            "kind": "source"
           }
         ]
       },
-      "trend": "サイドバーに条件付きのナビゲーション項目がある。 https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx",
-      "trend_en": "The sidebar includes conditional navigation entries. https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
+      "trend": "プロジェクトとワークスペースを使う開始画面と条件付きナビゲーション。 https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx",
+      "trend_en": "The landing uses projects and workspaces, alongside conditional navigation. https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/Landing.tsx https://github.com/stablyai/orca/blob/8728a3260052cb71b4d005dde2dbc7657a21a682/src/renderer/src/components/sidebar/SidebarNav.tsx"
     }
   ]
 }

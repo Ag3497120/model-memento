@@ -26,7 +26,7 @@ export function render(ctx) {
   if (isV2) sources.push('views/chat/component/HistoryPanel.vue');
   const disclosure = el('details', { class: 'd2-sources' }, el('summary', {}, tr('この版の資料', 'Sources for this edition')),
     ...sources.map((path, i) => link(tr(`資料 ${i + 1}`, `Source ${i + 1}`), source(ref, path))),
-    el('p', {}, tr('アプリ名と冒頭文は設定により変わります。回答後の操作は表示例です。寸法、設定条件と細部は一部未確認です。モデルは管理画面で選択します。', 'Application names and prologues are configurable. Response actions are disabled examples. Some dimensions, settings and details are unverified. Model selection is in application administration.')),
+    el('p', {}, tr('アプリ名と冒頭文は設定により変わります。投票は表示例のみ変わり、他の回答操作は無効です。寸法、設定条件と細部は一部未確認です。モデルは管理画面で選択します。', 'Application names and prologues are configurable. Voting changes only the displayed example; other response actions are disabled. Some dimensions, settings and details are unverified. Model selection is in application administration.')),
     early ? el('p', {}, tr('この版のチャットは中国語のソースです。', 'This edition’s chat source is in Chinese.')) : null,
     el('span', { 'data-era-slot': 'settings' }));
   const side = early ? null : el('aside', { class: 'mk-side' },
@@ -34,7 +34,7 @@ export function render(ctx) {
     button('+ New Chat', () => ctx?.newChat?.(), { class: 'mk-new' }),
     el('div', { class: 'mk-history' }, el('span', {}, 'Chat History'), isV2 ? button('×', () => {}, { title: 'Clear Chat', 'aria-label': 'Clear Chat', disabled: true }) : null),
     el('div', { class: 'mk-empty' }, 'No Chat History'), el('div', { class: 'mk-current' }, 'New Chat'));
-  if (isV2) {
+  if (!early) {
     const toggle = button('‹', () => {
       const collapsed = side.classList.toggle('is-collapsed');
       toggle.textContent = collapsed ? '›' : '‹';
@@ -43,14 +43,23 @@ export function render(ctx) {
     side.append(toggle);
   }
   const responseActions = early ? ['重新生成', '复制', '赞同', '反对'] : ['Regenerate Response', 'Copy', 'Like', 'Dislike'];
-  const actions = el('div', { class: 'mk-actions' }, ...responseActions.map(label => button(label, () => {}, { disabled: true })));
+  const actions = el('div', { class: 'mk-actions' }, ...responseActions.map((label, i) => {
+    if (i < 2) return button(label, () => {}, { disabled: true });
+    const undo = early ? (i === 2 ? '取消赞同' : '取消反对') : (i === 2 ? 'Unlike' : 'Undo Dislike');
+    const vote = button(label, () => {
+      const active = vote.getAttribute('aria-pressed') === 'true';
+      vote.setAttribute('aria-pressed', String(!active));
+      vote.textContent = active ? label : undo;
+    }, { 'aria-pressed': 'false' });
+    return vote;
+  }));
   const canExportPDF = isV2 && index >= 5;
   const exportMenu = early ? null : el('div', { class: 'mk-export' },
     el('details', {}, el('summary', {}, 'Export Chat History'),
       ...['Export Markdown', 'Export HTML', ...(canExportPDF ? ['Export PDF'] : [])].map(label => button(label, () => {}, { disabled: true }))));
   const main = el('main', { class: 'mk-main' }, el('header', { class: 'mk-head' }, early ? 'MaxKB' : 'New Chat', exportMenu),
     el('div', { class: 'mk-center' }, thread(ctx, ''), actions, el('div', { class: 'mk-compose' }, form)));
-  return el('div', { class: `surface maxkb-v11${early ? ' mk-early' : lts ? ' mk-lts' : ' mk-v2'}`, lang: early ? 'zh-CN' : 'en', 'data-spec': ctx?.version?.id || '' },
+  return el('div', { class: `surface maxkb-v11${early ? ' mk-early' : lts ? ' mk-lts' : ' mk-v2'}`, lang: early ? 'zh-CN' : 'en', 'data-spec': ctx?.version?.id || '', 'data-spec-version': ctx?.version?.id || '' },
     el('style', {}, css), lts ? el('header', { class: 'mk-lts-header' }, 'MaxKB') : null, el('div', { class: 'mk-screen' }, side, main),
     el('footer', { class: 'mk-foot' }, el('small', { 'data-recreation-label': '' }, tr('再現', 'Recreation')), disclosure));
 }

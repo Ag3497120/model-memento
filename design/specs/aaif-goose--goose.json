@@ -15,14 +15,23 @@
           "position": "terminal flow",
           "size": null,
           "contents": [
-            "端末の G❯ は #00AEAE。 (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+            "端末の G❯ は #00AEAE。 (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)",
+            "新しいセッションは入力プロンプトで始まる。端末背景色は未確認。 (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/session.py)"
           ],
           "contents_en": [
-            "The terminal prompt G❯ is #00AEAE. (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)"
+            "The terminal prompt G❯ is #00AEAE. (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py)",
+            "A new session begins at the input prompt. Terminal background color is unverified. (https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/session.py)"
           ]
         }
       ],
-      "controls": [],
+      "controls": [
+        {
+          "name": "prompt",
+          "label": "G❯",
+          "position": "terminal flow",
+          "source": "https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/prompt/goose_prompt_session.py"
+        }
+      ],
       "conversation": {
         "user": null,
         "assistant": null,
@@ -88,6 +97,13 @@
           "shows": "セッションの入出力。",
           "shows_en": "Session input and output.",
           "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v0.9.0/src/goose/cli/main.py",
+          "date": null,
+          "shows": "セッション開始コマンド。",
+          "shows_en": "Session start command.",
+          "kind": "source"
         }
       ],
       "confidence": 0.8
@@ -102,10 +118,10 @@
           "position": "left",
           "size": "200px condensed; resizable; expanded defaults to 30%",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: Home, Chat, Recipes, Apps, Scheduler, Extensions, Settings。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: Home, Chat, Recipes, Apps, Scheduler, Extensions, Settings. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/hooks/useNavigationItems.ts)"
           ]
         },
         {
@@ -113,10 +129,12 @@
           "position": "main",
           "size": "insights min-height 45vh; composer max-height 50vh",
           "contents": [
-            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)",
+            "挨拶、Total sessions、Total tokens、Recent chats、See all、No recent chat sessions found. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/sessions/SessionsInsights.tsx)"
           ],
           "contents_en": [
-            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)",
+            "Greeting, Total sessions, Total tokens, Recent chats, See all, and No recent chat sessions found. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/sessions/SessionsInsights.tsx)"
           ]
         }
       ],
@@ -138,6 +156,12 @@
           "label": "Attach file",
           "position": "input-bar",
           "source": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "mode",
+          "label": "autonomous",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx"
         }
       ],
       "conversation": {
@@ -182,10 +206,14 @@
       },
       "empty_state": "What would you like to work on? / No recent chat sessions found.",
       "distinctive": [
-        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx)",
+        "入力欄にモードを表示する。auto の初期表示は autonomous。設定により変わる。 (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx, https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx)"
       ],
       "distinctive_en": [
-        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)"
+        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/ChatInput.tsx)",
+        "The input bar shows the mode; the initial auto state displays autonomous and may change with configuration. (https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx, https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -263,6 +291,20 @@
           "shows": "ナビゲーションの幅。",
           "shows_en": "Navigation width.",
           "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx",
+          "date": null,
+          "shows": "入力欄のモード選択。",
+          "shows_en": "Mode selector in the input bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.29.0/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx",
+          "date": null,
+          "shows": "モード名。",
+          "shows_en": "Mode labels.",
+          "kind": "source"
         }
       ],
       "confidence": 0.85
@@ -277,10 +319,10 @@
           "position": "left",
           "size": "200px condensed; resizable; expanded defaults to 30%",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: Home, Chat, Recipes, Skills, Apps, Scheduler, Extensions, Settings。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: Home, Chat, Recipes, Skills, Apps, Scheduler, Extensions, Settings. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/hooks/useNavigationItems.ts)"
           ]
         },
         {
@@ -288,10 +330,12 @@
           "position": "main",
           "size": "insights min-height 45vh; composer max-height 50vh",
           "contents": [
-            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+            "統計と最近の会話の下に入力欄。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)",
+            "挨拶、Total sessions、Total tokens、Recent chats、See all、No recent chat sessions found. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/sessions/SessionsInsights.tsx)"
           ],
           "contents_en": [
-            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+            "Insights and recent chats above the composer. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)",
+            "Greeting, Total sessions, Total tokens, Recent chats, See all, and No recent chat sessions found. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/sessions/SessionsInsights.tsx)"
           ]
         }
       ],
@@ -313,6 +357,12 @@
           "label": "Attach file",
           "position": "input-bar",
           "source": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx"
+        },
+        {
+          "name": "mode",
+          "label": "autonomous",
+          "position": "input-bar",
+          "source": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx"
         }
       ],
       "conversation": {
@@ -357,10 +407,14 @@
       },
       "empty_state": "What would you like to work on? / No recent chat sessions found.",
       "distinctive": [
-        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+        "統計カードと最近の会話。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx)",
+        "入力欄にモードを表示する。auto の初期表示は autonomous。設定により変わる。 (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx, https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx)"
       ],
       "distinctive_en": [
-        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)"
+        "Statistics cards and recent chats. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/ChatInput.tsx)",
+        "The input bar shows the mode; the initial auto state displays autonomous and may change with configuration. (https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx, https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -438,6 +492,20 @@
           "shows": "ナビゲーションの幅。",
           "shows_en": "Navigation width.",
           "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/bottom_menu/BottomMenuModeSelection.tsx",
+          "date": null,
+          "shows": "入力欄のモード選択。",
+          "shows_en": "Mode selector in the input bar.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/aaif-goose/goose/blob/v1.33.1/ui/desktop/src/components/settings/mode/ModeSelectionItem.tsx",
+          "date": null,
+          "shows": "モード名。",
+          "shows_en": "Mode labels.",
+          "kind": "source"
         }
       ],
       "confidence": 0.85
@@ -452,10 +520,12 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
@@ -463,10 +533,12 @@
           "position": "main",
           "size": "max-width 42rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 42rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 42rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -532,10 +604,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.36.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -620,10 +694,12 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
@@ -631,10 +707,12 @@
           "position": "main",
           "size": "max-width 42rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 42rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 42rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -700,10 +778,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.39.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -788,10 +868,12 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
@@ -799,10 +881,12 @@
           "position": "main",
           "size": "max-width 42rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 42rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 42rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -868,10 +952,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.45.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -956,10 +1042,12 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
@@ -967,10 +1055,12 @@
           "position": "main",
           "size": "max-width 42rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 42rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 42rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -1036,10 +1126,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.48.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -1124,21 +1216,25 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
           "name": "home",
           "position": "main",
-          "size": "max-width 42rem",
+          "size": "max-width 48rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 48rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 48rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -1204,10 +1300,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.52.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -1292,21 +1390,25 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
           "name": "home",
           "position": "main",
-          "size": "max-width 42rem",
+          "size": "max-width 48rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 48rem の入力カード。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 48rem maximum width. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -1372,10 +1474,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/v1.57.0/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
@@ -1460,21 +1564,25 @@
           "position": "left",
           "size": "240px default",
           "contents": [
-            "項目はソースを参照。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "ナビゲーション: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Chats と空の履歴を表示する。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ],
           "contents_en": [
-            "Navigation items are listed in the source. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)"
+            "Navigation: New Chat, Recipes, Skills, Apps, Scheduler, Extensions, Session History, Settings. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/hooks/useNavigationItems.ts)",
+            "Shows Chats and an empty history. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Layout/NavigationPanel.tsx)"
           ]
         },
         {
           "name": "home",
           "position": "main",
-          "size": "max-width 42rem",
+          "size": "max-width 48rem",
           "contents": [
-            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+            "時刻、挨拶、中央の入力カード。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)",
+            "時刻、時間帯別の挨拶、最大幅 48rem の入力カード。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
           ],
           "contents_en": [
-            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+            "Clock and greeting above a centered composer card. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)",
+            "Clock, time-dependent greeting, and a composer card with a 48rem maximum width. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
           ]
         }
       ],
@@ -1540,10 +1648,12 @@
       },
       "empty_state": "Good morning / Good afternoon / Good evening",
       "distinctive": [
-        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+        "時刻と挨拶を入力欄の上に表示。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)",
+        "入力欄の下にモデルと拡張機能の操作、ファイル添付。 (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "distinctive_en": [
-        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)"
+        "Clock and greeting above the composer. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/Hub.tsx)",
+        "Model and extensions controls and file attachment below the input. (https://github.com/aaif-goose/goose/blob/2365bc5e898a38133c373eef2d1357416acd66e2/ui/desktop/src/components/ChatInput.tsx)"
       ],
       "must_not_copy": [
         "ロゴ、画像、専用フォント、長い引用"
