@@ -1,0 +1,1980 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "enricoros--big-agi",
+  "name": "big-AGI",
+  "vendor": "enricoros",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "enricoros--big-agi-2023-11-0",
+      "from": "2023-11-19",
+      "to": null,
+      "source_ref": "v1.5.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "125px desktop tiles in v1.5.0; other exact sizes unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "YouTube persona creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /imagine · drop text files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /imagine · drop text files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": null,
+          "level1": null,
+          "level2": null,
+          "body": "#9FA6AD",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        },
+        "dark": {
+          "surface": "#131318",
+          "level1": "#09090D",
+          "level2": "#25252D",
+          "body": null
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/applayout/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.5.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2023-11-1",
+      "from": "2023-11-28",
+      "to": null,
+      "source_ref": "v1.6.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "125px desktop tiles in v1.5.0; other exact sizes unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "YouTube persona creator",
+            "YouTube persona creator (conditional lab setting)"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /imagine · drop text files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /imagine · drop text files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": null,
+          "level1": null,
+          "level2": null,
+          "body": "#9FA6AD",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        },
+        "dark": {
+          "surface": "#131318",
+          "level1": "#09090D",
+          "level2": "#25252D",
+          "body": null
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/applayout/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.6.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2023-12-2",
+      "from": "2023-12-28",
+      "to": null,
+      "source_ref": "v1.9.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "125px desktop tiles in v1.5.0; other exact sizes unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /draw · drop text files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /draw · drop text files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        },
+        "dark": {
+          "surface": "#171A1C",
+          "level1": "#0B0D0E",
+          "level2": "#171A1C",
+          "body": "#000000"
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/applayout/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.9.0/src/apps/chat/components/applayout/ChatDrawerItems.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2024-01-3",
+      "from": "2024-01-26",
+      "to": null,
+      "source_ref": "v1.12.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "125px desktop tiles in v1.5.0; other exact sizes unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /draw · drop files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/applayout/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /draw · drop files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/applayout/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/applayout/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.12.0/src/apps/chat/components/applayout/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2024-02-4",
+      "from": "2024-02-08",
+      "to": null,
+      "source_ref": "v1.13.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /draw · drop files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /draw · drop files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.13.0/src/apps/chat/components/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2024-03-5",
+      "from": "2024-03-06",
+      "to": null,
+      "source_ref": "v1.14.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /react · /draw · drop files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /react · /draw · drop files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.14.0/src/apps/chat/components/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2024-04-6",
+      "from": "2024-04-10",
+      "to": null,
+      "source_ref": "v1.15.1",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /beam · /draw · drop files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatBarDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /beam · /draw · drop files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": null,
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatBarDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatBarDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.15.1/src/apps/chat/components/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2024-05-7",
+      "from": "2024-05-09",
+      "to": null,
+      "source_ref": "v1.16.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Chat · /beam · /draw · drop files...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatBarDropdowns.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Chat · /beam · /draw · drop files...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatBarDropdowns.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatBarDropdowns.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v1.16.0/src/apps/chat/components/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2025-10-8",
+      "from": "2025-10-28",
+      "to": null,
+      "source_ref": "v2.0.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.0/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2025-11-9",
+      "from": "2025-11-24",
+      "to": null,
+      "source_ref": "v2.0.1",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.1/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2025-12-10",
+      "from": "2025-12-01",
+      "to": null,
+      "source_ref": "v2.0.2",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.2/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2026-02-11",
+      "from": "2026-02-02",
+      "to": null,
+      "source_ref": "v2.0.3",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.3/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2026-03-12",
+      "from": "2026-03-25",
+      "to": null,
+      "source_ref": "v2.0.4",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.4/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2026-05-13",
+      "from": "2026-05-13",
+      "to": null,
+      "source_ref": "v2.0.5",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.0.5/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-2026-08-14",
+      "from": "2026-08-21",
+      "to": null,
+      "source_ref": "v2.1.0",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": null
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/common/app.theme.ts",
+          "note": "Source theme fallbacks where checked; default color-scheme choice and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.0/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    },
+    {
+      "id": "enricoros--big-agi-record",
+      "from": "2026-10-27",
+      "to": null,
+      "source_ref": "v2.1.3",
+      "source_selection": "Release tag named by catalog; deployed configuration and exact release-day build are unverified.",
+      "regions": [
+        {
+          "name": "persona selector",
+          "position": "center",
+          "size": "7rem tiles in v1.16.0 and v2.0.0; exact size for other tags unverified",
+          "contents": [
+            "AI Persona",
+            "Default",
+            "Developer",
+            "Scientist",
+            "Catalyst",
+            "Executive",
+            "Designer",
+            "Custom",
+            "Persona Creator"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/data.ts"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Desktop text and insertion controls occupy 9/12 columns, send pane 3/12; textarea uses 5 rows in the ordinary desktop state.",
+          "contents": [
+            "Type · drop files · /react...",
+            "Chat",
+            "Call"
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/composer/Composer.tsx"
+          ]
+        },
+        {
+          "name": "navigation",
+          "position": "left and top",
+          "size": "unverified",
+          "contents": [
+            "Conversation drawer and top model/persona controls."
+          ],
+          "sources": [
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/AppChat.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/layout-drawer/ChatDrawer.tsx",
+            "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "Type · drop files · /react...",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/composer/Composer.tsx"
+        },
+        {
+          "label": "AI Persona",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+        },
+        {
+          "label": "Default",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/data.ts"
+        }
+      ],
+      "palette": {
+        "light": {
+          "surface": "#FBFCFE",
+          "level1": "#F0F4F8",
+          "level2": "#DDE7EE",
+          "body": "#CDD7E1",
+          "accent": "#D5EC31"
+        },
+        "source": {
+          "url": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/common/app.theme.ts",
+          "note": "Theme fallback backgrounds and accent palette; which controls use accent, the default color scheme, and resolved CSS variables are unverified."
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "free_fallback": "Helvetica, Arial, sans-serif",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/common/app.theme.ts"
+      },
+      "empty_state": {
+        "text": "AI Persona",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx"
+      },
+      "model_switch": {
+        "where": "top-dropdown",
+        "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx"
+      },
+      "distinctive": [
+        {
+          "fact": "Persona tiles are displayed when an existing conversation has no messages.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/ChatMessageList.tsx"
+        },
+        {
+          "fact": "The desktop composer has a separate action column.",
+          "source": "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/composer/Composer.tsx"
+        }
+      ],
+      "unverified": [
+        "Default light/dark mode, deployment configuration, model choices, exact drawer width, exact accent RGB and per-viewport geometry.",
+        "Some buttons are museum approximations and route to existing panels."
+      ],
+      "sources": [
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/AppChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/composer/Composer.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/persona-selector/PersonaSelector.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/data.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/common/app.theme.ts",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/layout-bar/ChatBarChat.tsx",
+        "https://github.com/enricoros/big-AGI/blob/v2.1.3/src/apps/chat/components/layout-drawer/ChatDrawer.tsx"
+      ]
+    }
+  ]
+}

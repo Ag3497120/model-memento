@@ -1,0 +1,944 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "ai-shifu--chatall",
+  "versions": [
+    {
+      "id": "ai-shifu--chatall-2023-04-0",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Send to:",
+        "steps": [
+          "Select bot icons beside Send to:; ChatGPT model selection is in its settings."
+        ],
+        "steps_en": [
+          "Select bot icons beside Send to:; ChatGPT model selection is in its settings."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/BotSettings/ChatGPTBotSettings.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "ChatGPT model setting.",
+            "shows_en": "ChatGPT model setting."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2023-04-17",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Alpha: no chat drawer; blank message grid, composer and six bot icons. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue)",
+      "trend_en": "Alpha: no chat drawer; blank message grid, composer and six bot icons. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2023-09-1",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/store/index.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2023-09-30",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2023-10-2",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2023-10-30",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2023-11-3",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2023-11-28",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2023-12-4",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2023-12-17",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-01-5",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-01-31",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-02-6",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-02-09",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue)",
+      "trend_en": "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-03-7",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-03-25",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "The footer adds Enable All and Disable All to its bot actions. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)",
+      "trend_en": "The footer adds Enable All and Disable All to its bot actions. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-04-8",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-04-24",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-05-9",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-05-15",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-06-10",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-06-02",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-07-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-07-04",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2024-10-12",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2024-10-08",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-2025-03-13",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2025-03-16",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)"
+    },
+    {
+      "id": "ai-shifu--chatall-record",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose your favorite AI bots",
+        "steps": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "steps_en": [
+          "Open the bot chooser at the right of Send to:, select favorites, and toggle the favorites in the footer."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot selection alongside the composer.",
+            "shows_en": "Bot selection alongside the composer."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/BotsMenu.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Bot chooser or initial bot list.",
+            "shows_en": "Bot chooser or initial bot list."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/store/chats.js",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          },
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json",
+            "kind": "repository",
+            "date": null,
+            "shows": "Default bot classes and English names.",
+            "shows_en": "Default bot classes and English names."
+          }
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "Desktop",
+        "app_shell": "Electron",
+        "app_shell_en": "Electron",
+        "date_shown": "2025-05-22",
+        "sources": [
+          {
+            "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue",
+            "kind": "repository",
+            "date": null,
+            "shows": "Application interface.",
+            "shows_en": "Application interface."
+          }
+        ]
+      },
+      "trend": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)",
+      "trend_en": "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)"
+    }
+  ]
+}

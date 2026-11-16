@@ -67,7 +67,16 @@
       "note": "資料で示された入出力形式です。chat は対話、completion は文章の続きを書く形式です。"
     },
     "quirks": [],
-    "failure_modes": [],
+    "failure_modes": [
+      {
+        "value": "Anthropicの事実に関する質問の評価では、誤った答えも出した。",
+        "source": "https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/ModelCardClaude3.pdf",
+        "basis": "official",
+        "confidence": 0.85,
+        "note": "公式の限られた質問を使った評価です。",
+        "value_en": "In Anthropic’s factual-question evaluations, the model also gave incorrect answers."
+      }
+    ],
     "typical_strengths": [
       {
         "value": "分析、文章作成、コード生成、日本語を含む多言語の会話。",

@@ -1,0 +1,682 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "plandex-ai--plandex",
+  "name": "Plandex",
+  "vendor": "Plandex",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "plandex-ai--plandex-2024-03-0",
+      "from": "2024-03-14",
+      "to": "2025-03-27",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のヘルプは Usage、Help、Getting Started、Key Commands を縦に表示。 (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+          ],
+          "contents_en": [
+            "Terminal help stacks Usage, Help, Getting Started and Key Commands. (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "plandex tell",
+          "description": "引数または外部エディタで依頼を渡す。 (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/cmd/tell.go)",
+          "description_en": "Pass a prompt as an argument or through an external editor. (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/cmd/tell.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ヘルプの見出しにANSIの緑・マゼンタを使用。 (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+      ],
+      "distinctive_en": [
+        "ANSI green and magenta help headings. (https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/term/help.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/cli%2Fv0.7.0/app/cli/cmd/tell.go",
+          "kind": "source",
+          "date": null,
+          "shows": "依頼引数と外部エディタ。",
+          "shows_en": "Prompt argument and external editor."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    },
+    {
+      "id": "plandex-ai--plandex-2025-03-1",
+      "from": "2025-03-27",
+      "to": "2025-04-30",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のREPLは歓迎表示、コマンド案内、モード表示、入力の順。幅は端末に依存。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "The REPL stacks its welcome, command guidance, mode indicators and input; width depends on the terminal. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "REPL",
+          "description": "入力行から送信し、enter または複数行時の \\send を使う。画面上の送信ボタンはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)",
+          "description_en": "Submit from the prompt using enter, or \\send in multiline mode; there is no on-screen send button. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "青い歓迎表示、マゼンタのモード表示とシアンのコマンド案内。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+      ],
+      "distinctive_en": [
+        "Blue welcome, magenta mode labels and cyan command guidance. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/repl.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.0.3/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    },
+    {
+      "id": "plandex-ai--plandex-2025-04-2",
+      "from": "2025-04-30",
+      "to": "2025-05-27",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のREPLは歓迎表示、コマンド案内、モード表示、入力の順。幅は端末に依存。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "The REPL stacks its welcome, command guidance, mode indicators and input; width depends on the terminal. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "REPL",
+          "description": "入力行から送信し、enter または複数行時の \\send を使う。画面上の送信ボタンはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)",
+          "description_en": "Submit from the prompt using enter, or \\send in multiline mode; there is no on-screen send button. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "青い歓迎表示、マゼンタのモード表示とシアンのコマンド案内。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+      ],
+      "distinctive_en": [
+        "Blue welcome, magenta mode labels and cyan command guidance. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/repl.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.0%2B1/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    },
+    {
+      "id": "plandex-ai--plandex-2025-05-3",
+      "from": "2025-05-27",
+      "to": "2025-06-08",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のREPLは歓迎表示、コマンド案内、モード表示、入力の順。幅は端末に依存。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "The REPL stacks its welcome, command guidance, mode indicators and input; width depends on the terminal. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "REPL",
+          "description": "入力行から送信し、enter または複数行時の \\send を使う。画面上の送信ボタンはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)",
+          "description_en": "Submit from the prompt using enter, or \\send in multiline mode; there is no on-screen send button. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "青い歓迎表示、マゼンタのモード表示とシアンのコマンド案内。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+      ],
+      "distinctive_en": [
+        "Blue welcome, magenta mode labels and cyan command guidance. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/repl.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.6%2B1/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    },
+    {
+      "id": "plandex-ai--plandex-2025-06-4",
+      "from": "2025-06-08",
+      "to": "2025-07-16",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のREPLは歓迎表示、コマンド案内、モード表示、入力の順。幅は端末に依存。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "The REPL stacks its welcome, command guidance, mode indicators and input; width depends on the terminal. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "REPL",
+          "description": "入力行から送信し、enter または複数行時の \\send を使う。画面上の送信ボタンはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)",
+          "description_en": "Submit from the prompt using enter, or \\send in multiline mode; there is no on-screen send button. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "青い歓迎表示、マゼンタのモード表示とシアンのコマンド案内。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+      ],
+      "distinctive_en": [
+        "Blue welcome, magenta mode labels and cyan command guidance. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/repl.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.1.8/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    },
+    {
+      "id": "plandex-ai--plandex-record",
+      "from": "2025-07-16",
+      "to": null,
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "端末のREPLは歓迎表示、コマンド案内、モード表示、入力の順。幅は端末に依存。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "The REPL stacks its welcome, command guidance, mode indicators and input; width depends on the terminal. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "none",
+          "size": null,
+          "contents": [
+            "端末への逐次出力で、Webのサイドバーはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+          ],
+          "contents_en": [
+            "Sequential terminal output, without a web sidebar. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "name": "REPL",
+          "description": "入力行から送信し、enter または複数行時の \\send を使う。画面上の送信ボタンはない。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)",
+          "description_en": "Submit from the prompt using enter, or \\send in multiline mode; there is no on-screen send button. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal line"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "青い歓迎表示、マゼンタのモード表示とシアンのコマンド案内。 (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+      ],
+      "distinctive_en": [
+        "Blue welcome, magenta mode labels and cyan command guidance. (https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go)"
+      ],
+      "must_not_copy": [
+        "ロゴ、画像、アイコン、専用フォント"
+      ],
+      "must_not_copy_en": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/repl.go",
+          "kind": "source",
+          "date": null,
+          "shows": "端末の出力、文字列、ANSI色。",
+          "shows_en": "Terminal output, strings and ANSI colors."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/set_model.go",
+          "kind": "source",
+          "date": null,
+          "shows": "モデル切替の手順。",
+          "shows_en": "Model selection flow."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/cmd/root.go",
+          "kind": "source",
+          "date": null,
+          "shows": "コマンドの入口。",
+          "shows_en": "Command entry point."
+        },
+        {
+          "url": "https://github.com/plandex-ai/plandex/blob/server%2Fv2.2.1/app/cli/version.txt",
+          "kind": "source",
+          "date": null,
+          "shows": "同じタグのCLI版番号。",
+          "shows_en": "CLI version at the same tag."
+        }
+      ],
+      "confidence": 0.8,
+      "notes": "端末パレットのRGB、寸法、実際の利用者状態は未確認。2024年はヘルプの例、2025年はTellモードの例。 計画・自動モード・モデルの表は利用者の状態に依存するため省略。展示の入力欄とモデル案内は簡略表示。",
+      "notes_en": "Exact terminal palette RGB, dimensions and actual user state are unverified. The 2024 view is help; 2025 is a Tell-mode example. Plan, auto-mode and model tables depend on user state and are omitted. The exhibit input and model guidance are simplified."
+    }
+  ]
+}

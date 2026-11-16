@@ -56,13 +56,22 @@
       "note": "未確認です。固有の話し方としては扱いません。"
     },
     "interface": {
-      "value": null,
-      "source": null,
-      "basis": "family-default",
-      "confidence": 0,
-      "note": "未確認です。固有の話し方としては扱いません。"
+      "value": "chat",
+      "source": "https://huggingface.co/zai-org/GLM-4.7",
+      "basis": "researched",
+      "confidence": 0.85,
+      "note": "出典に対話形式の利用例があります。提供環境によって使い方は異なります。"
     },
-    "quirks": [],
+    "quirks": [
+      {
+        "value": "考える過程を会話の途中で保持する設定や、質問ごとに考える方式を切り替える設定がある。",
+        "source": "https://huggingface.co/zai-org/GLM-4.7",
+        "basis": "official",
+        "confidence": 0.82,
+        "note": "提供元の説明です。保持機能の利用には対応する環境と設定が必要です。",
+        "value_en": "Supports retaining reasoning across turns and controlling thinking per turn."
+      }
+    ],
     "failure_modes": [],
     "typical_strengths": [
       {

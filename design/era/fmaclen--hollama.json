@@ -1,0 +1,558 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "fmaclen--hollama",
+  "versions": [
+    {
+      "id": "fmaclen--hollama-2024-07-0",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Model",
+        "steps": [
+          "新しいセッションの入力欄上部でModelを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose Model above the prompt in a new session."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/lib/components/FieldModels.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "左に280pxの履歴、右は入力40%と履歴60%の分割表示。 (https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte)",
+      "trend_en": "A 280px history sidebar and a 40/60 prompt-to-transcript split. (https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2024-07-01",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2024-10-1",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2024-10-28",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2024-11-2",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2024-11-29",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2024-12-3",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2024-12-19",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-01-4",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-01-26",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-02-5",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-02-22",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-03-6",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-03-30",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-05-7",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "ナビゲーション、セッション一覧、下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/Section.svelte)",
+      "trend_en": "Navigation and session list beside a bottom composer with model selector. (https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/Section.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-05-14",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-06-8",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "展開したサイドバーと下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/CollapsibleSidebar.svelte)",
+      "trend_en": "Expanded sidebar and a bottom composer with a model selector. (https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/CollapsibleSidebar.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-06-09",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-07-9",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "展開したサイドバーと下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/CollapsibleSidebar.svelte)",
+      "trend_en": "Expanded sidebar and a bottom composer with a model selector. (https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/CollapsibleSidebar.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-07-20",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-2025-10-10",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "展開したサイドバーと下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/CollapsibleSidebar.svelte)",
+      "trend_en": "Expanded sidebar and a bottom composer with a model selector. (https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/CollapsibleSidebar.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2025-10-12",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fmaclen--hollama-record",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Available models",
+        "steps": [
+          "入力欄上部のAvailable modelsからモデルを選ぶ。"
+        ],
+        "steps_en": [
+          "Choose a model from Available models above the prompt."
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/FieldSelectModel.svelte",
+            "date": null,
+            "shows": "モデル選択欄。",
+            "shows_en": "Model selection control."
+          },
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション内の選択欄の位置。",
+            "shows_en": "Location of the selector in the session."
+          }
+        ]
+      },
+      "accents": [],
+      "trend": "展開したサイドバーと下部のモデル選択付き入力欄。 (https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/CollapsibleSidebar.svelte)",
+      "trend_en": "Expanded sidebar and a bottom composer with a model selector. (https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/CollapsibleSidebar.svelte)",
+      "desktop": {
+        "os": "browser",
+        "app_shell": "ブラウザー内のチャット画面",
+        "app_shell_en": "Browser chat screen",
+        "date_shown": "2026-10-30",
+        "sources": [
+          {
+            "url": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte",
+            "date": null,
+            "shows": "セッション画面。",
+            "shows_en": "Session screen."
+          }
+        ]
+      }
+    }
+  ]
+}

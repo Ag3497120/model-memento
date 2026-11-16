@@ -1944,15 +1944,18 @@
         "schema": "memento.persona-card.v1",
         "model_id": "amazon.nova-2-lite-v1:0",
         "q": "苦手なことは？",
-        "a_ja": "私の限界として、When reasoning is enabled, the reasoning content in the response is redactedという記録があります。",
+        "a_ja": "私の限界として、動画中の物の位置や距離を正確に捉える課題は苦手なことがある。When reasoning is enabled, the reasoning content in the response is redactedという記録があります。",
         "kind": "self_weaknesses",
         "fact_keys": [
+          "persona.failure_modes.0",
           "persona.quirks.0"
         ],
         "fact_values": {
+          "persona.failure_modes.0": "動画中の物の位置や距離を正確に捉える課題は苦手なことがある。",
           "persona.quirks.0": "When reasoning is enabled, the reasoning content in the response is redacted."
         },
         "sources": [
+          "https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-multimodal-models.html",
           "https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-converse-api.html"
         ],
         "written_by": "record-template",

@@ -4,7 +4,7 @@
   "name": "DeepSeek R1（初期版）",
   "family": "deepseek",
   "aliases": [],
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-16",
   "traits": {
     "tone": {
       "value": null,
@@ -14,11 +14,12 @@
       "note": "未確認です。固有の話し方としては扱いません。"
     },
     "verbosity": {
-      "value": null,
-      "source": null,
-      "basis": "family-default",
-      "confidence": 0,
-      "note": "未確認です。固有の話し方としては扱いません。"
+      "value": "METR の課題では、考える過程が長く、同じ検討を繰り返すことがあった。",
+      "source": "https://metr.org/evaluations/deepseek-r1-report/",
+      "basis": "researched",
+      "confidence": 0.8,
+      "note": "自律作業の限定的な評価での観察です。最終回答の長さを示すものではありません。",
+      "value_en": "In METR’s tasks, reasoning traces were often lengthy and sometimes repetitive."
     },
     "formatting_habits": {
       "value": null,
@@ -72,7 +73,16 @@
         "value_en": "Trained to review answers and try multiple approaches."
       }
     ],
-    "failure_modes": [],
+    "failure_modes": [
+      {
+        "value": "METR の評価では、道具の呼び出しを誤ったり、結果を作り出したりすることがあった。",
+        "source": "https://metr.org/evaluations/deepseek-r1-report/",
+        "basis": "researched",
+        "confidence": 0.8,
+        "note": "自律作業の限定的な評価での観察です。すべての利用場面に当てはまるとは限りません。",
+        "value_en": "In METR’s evaluation, it sometimes called tools incorrectly or invented tool results."
+      }
+    ],
     "typical_strengths": [
       {
         "value": "数学、コード、論理を必要とする問題。",

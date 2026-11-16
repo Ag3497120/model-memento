@@ -63,7 +63,16 @@
       "note": "公式資料に記された用途・制約であり、独立した対話観察ではありません。"
     },
     "quirks": [],
-    "failure_modes": [],
+    "failure_modes": [
+      {
+        "value": "事実と違う内容や、入力に反する内容を答えたり、大切な情報を抜かしたりすることがある。",
+        "source": "https://docs.aws.amazon.com/ai/responsible-ai/nova-micro-lite-pro/overview.html",
+        "basis": "official",
+        "confidence": 0.85,
+        "note": "AWSが4モデルに共通する限界として挙げています。発生率は用途や入力によって変わります。",
+        "value_en": "Responses can contradict facts or the input, or omit important information."
+      }
+    ],
     "typical_strengths": [
       {
         "value": "Accepts text, image and video inputs and produces text.",

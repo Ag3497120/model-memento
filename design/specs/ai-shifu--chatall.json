@@ -1,0 +1,2599 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "ai-shifu--chatall",
+  "name": "ChatALL",
+  "vendor": "ai-shifu",
+  "kind": "chat-desktop",
+  "versions": [
+    {
+      "id": "ai-shifu--chatall-2023-04-0",
+      "from": "2023-04-17",
+      "to": "2023-09-30",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "68px 32px margins, 16px grid gap",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "single-row textarea, up to 8.5 rows",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": null,
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/main.js",
+          "note": "Alpha background from https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; light primary from https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/main.js. Other tokens unverified."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Alpha: no chat drawer; blank message grid, composer and six bot icons. (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue)",
+        "English placeholder: Send a message... (https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json)"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.0.0-alpha/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2023-09-1",
+      "from": "2023-09-30",
+      "to": "2023-10-30",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/store/index.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.50.73/src/store/index.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2023-10-2",
+      "from": "2023-10-30",
+      "to": "2023-11-28",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.51.78/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2023-11-3",
+      "from": "2023-11-28",
+      "to": "2023-12-17",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.53.81/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2023-12-4",
+      "from": "2023-12-17",
+      "to": "2024-01-31",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.54.83/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-01-5",
+      "from": "2024-01-31",
+      "to": "2024-02-09",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.86/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-02-6",
+      "from": "2024-02-09",
+      "to": "2024-03-25",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Drawer, blank conversation and favorite bot menu alongside the bottom composer. (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/ChatDrawer/ChatDrawer.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.58.88/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-03-7",
+      "from": "2024-03-25",
+      "to": "2024-04-24",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "The footer adds Enable All and Disable All to its bot actions. (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.63.97/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-04-8",
+      "from": "2024-04-24",
+      "to": "2024-05-15",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.77.102/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-05-9",
+      "from": "2024-05-15",
+      "to": "2024-06-02",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.79.105/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-06-10",
+      "from": "2024-06-02",
+      "to": "2024-07-04",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.80.106/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-07-11",
+      "from": "2024-07-04",
+      "to": "2024-10-08",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.82.107/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2024-10-12",
+      "from": "2024-10-08",
+      "to": "2025-03-16",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.83.108/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-2025-03-13",
+      "from": "2025-03-16",
+      "to": "2025-05-22",
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.84.109/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "ai-shifu--chatall-record",
+      "from": "2025-05-22",
+      "to": null,
+      "regions": [
+        {
+          "name": "Header",
+          "position": "top",
+          "size": "16px padding; 24px column icons",
+          "contents": [
+            "Column controls and settings. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)"
+          ]
+        },
+        {
+          "name": "Conversation",
+          "position": "center",
+          "size": "2rem padding",
+          "contents": [
+            "Message grid with no messages initially. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Messages/ChatMessages.vue)"
+          ]
+        },
+        {
+          "name": "Chat drawer",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "New Chat and chat history. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/ChatDrawer/ChatDrawer.vue)"
+          ]
+        },
+        {
+          "name": "Composer and bot chooser",
+          "position": "bottom",
+          "size": "textarea minimum width 390px; 8px 16px footer padding; favorite bot icons 36px",
+          "contents": [
+            "Input and Send to: followed by bot selection. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Single Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue"
+        },
+        {
+          "label": "Double Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue"
+        },
+        {
+          "label": "Triple Column",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue"
+        },
+        {
+          "label": "Settings",
+          "where": "header",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue"
+        },
+        {
+          "label": "Send to:",
+          "where": "footer",
+          "purpose": "English label or text replacement for icon. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue"
+        },
+        {
+          "label": "Choose your favorite AI bots",
+          "where": "footer menu",
+          "purpose": "Favorite chooser. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/BotsMenu.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#212121",
+          "muted": null,
+          "accent": "#062AAA",
+          "border": null,
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#1a1a20",
+          "panel": "#292a2d",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": "#ececf1",
+          "border": null,
+          "user_bubble": "#222329"
+        },
+        "source": {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/main.js",
+          "note": "Light and dark tokens; system theme resolves through https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/theme.js."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Solo auto-growing textarea"
+      },
+      "empty_state": "Empty message grid; no greeting is rendered. https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Messages/ChatMessages.vue",
+      "distinctive": [
+        "Bot actions include Enable All, Disable All and Remove All. (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue; https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)",
+        "English placeholder: Type a message. (Shift+Enter to add a new line) (https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json)",
+        "Bot names replace artwork and show a subset of source default favorites; labels from https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json; default classes from https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/store/chats.js."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/App.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Application shell and layout",
+          "shows_en": "Application shell and layout"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Messages/ChatMessages.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Message grid and empty list",
+          "shows_en": "Message grid and empty list"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/i18n/locales/en.json",
+          "kind": "repository",
+          "date": null,
+          "shows": "English labels",
+          "shows_en": "English labels"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/main.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Theme tokens",
+          "shows_en": "Theme tokens"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/FooterBar.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Composer and bot controls",
+          "shows_en": "Composer and bot controls"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/Footer/BotsMenu.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Favorite bot menu",
+          "shows_en": "Favorite bot menu"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/components/ChatDrawer/ChatDrawer.vue",
+          "kind": "repository",
+          "date": null,
+          "shows": "Chat drawer",
+          "shows_en": "Chat drawer"
+        },
+        {
+          "url": "https://github.com/ai-shifu/ChatALL/blob/v1.85.110/src/store/chats.js",
+          "kind": "repository",
+          "date": null,
+          "shows": "Default favorite bot classes.",
+          "shows_en": "Default favorite bot classes."
+        }
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

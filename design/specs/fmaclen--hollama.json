@@ -1,0 +1,965 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "fmaclen--hollama",
+  "name": "hollama",
+  "vendor": "fmaclen",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "fmaclen--hollama-2024-07-0",
+      "from": "2024-07-01",
+      "to": null,
+      "source_ref": "0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4",
+      "source_selection": "Catalog release tag 0.0.2 (2024-07); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "280px",
+          "contents": [
+            "A 280px session list with Settings, New session and No sessions in history. https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte",
+            "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "40% prompt / 60% messages",
+          "contents": [
+            "The new session uses a 40% prompt pane and a 60% message pane; Model is above a large Prompt textarea and Send button. https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte",
+            "No sessions in history; Write a prompt to start a new session; No model selected. https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte",
+            "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "source": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/lib/components/FieldModels.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte"
+        },
+        {
+          "label": "Send",
+          "source": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96.1%)",
+          "text": "hsl(0 0% 3.9%)",
+          "muted": "hsl(0 0% 45.1%)",
+          "accent": "hsl(0 0% 9%)",
+          "border": "hsl(0 0% 89.8%)"
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/[id]/+page.svelte",
+        "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/lib/components/FieldModels.svelte",
+        "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/0073ca5ba6c00bb4ca1efc8b1983a1d74e39aef4/src/app.pcss"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2024-10-1",
+      "from": "2024-10-28",
+      "to": null,
+      "source_ref": "6b52e23c277bcce333db7ad5cfa38e82988beeb5",
+      "source_selection": "Catalog release tag 0.20.0 (2024-10); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte",
+            "Write literally anything; Write a prompt to start a new session; No sessions. https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/6b52e23c277bcce333db7ad5cfa38e82988beeb5/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2024-11-2",
+      "from": "2024-11-29",
+      "to": null,
+      "source_ref": "9914980a43f5af747c0fa629e164568a5347e4b2",
+      "source_selection": "Catalog release tag 0.23.2 (2024-11); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer also has a knowledge attachment control. https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/9914980a43f5af747c0fa629e164568a5347e4b2/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2024-12-3",
+      "from": "2024-12-19",
+      "to": null,
+      "source_ref": "a710a532efe4e0b15236c54ff3d0a1216b0425cc",
+      "source_selection": "Catalog release tag 0.24.0 (2024-12); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer also has a knowledge attachment control. https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/a710a532efe4e0b15236c54ff3d0a1216b0425cc/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-01-4",
+      "from": "2025-01-26",
+      "to": null,
+      "source_ref": "4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5",
+      "source_selection": "Catalog release tag 0.25.1 (2025-01); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer also has a knowledge attachment control. https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/4b59bb8dda9addeb95358a5c9b5ffacbe95b39a5/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-02-5",
+      "from": "2025-02-22",
+      "to": null,
+      "source_ref": "84d365b8d109269cb64127d3306900664652e5c7",
+      "source_selection": "Catalog release tag 0.27.0 (2025-02); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer also has a knowledge attachment control. https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/84d365b8d109269cb64127d3306900664652e5c7/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-03-6",
+      "from": "2025-03-30",
+      "to": null,
+      "source_ref": "6c3f431732c2536591362b61ff83b33588bccfce",
+      "source_selection": "Catalog release tag 0.31.0 (2025-03); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer also has a knowledge attachment control. https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/6c3f431732c2536591362b61ff83b33588bccfce/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-05-7",
+      "from": "2025-05-14",
+      "to": null,
+      "source_ref": "2d2c4170601e00f75b01efd8b104265630816193",
+      "source_selection": "Catalog release tag 0.33.0 (2025-05); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "1fr of 1:4 section grid, minimum 320px",
+          "contents": [
+            "A left navigation rail and a session list in a 1:4 grid with a 320px minimum list width. https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/Section.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/Section.svelte",
+            "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer has knowledge and image attachment controls. https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/lib/components/Section.svelte",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/2d2c4170601e00f75b01efd8b104265630816193/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-06-8",
+      "from": "2025-06-09",
+      "to": null,
+      "source_ref": "7b5e3308c1ef2603a68476a7859d22dee7a7a87d",
+      "source_selection": "Catalog release tag 0.34.0 (2025-06); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "384px at large viewport",
+          "contents": [
+            "Expanded sidebar is 384px at large widths, with Sessions and Knowledge tabs, New session, No sessions and footer navigation. https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/CollapsibleSidebar.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/CollapsibleSidebar.svelte",
+            "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer has knowledge and image attachment controls. https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/lib/components/CollapsibleSidebar.svelte",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/7b5e3308c1ef2603a68476a7859d22dee7a7a87d/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-07-9",
+      "from": "2025-07-20",
+      "to": null,
+      "source_ref": "776e500fb5ccb65422dcecba68ef6fce4b9588f5",
+      "source_selection": "Catalog release tag 0.35.1 (2025-07); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "384px at large viewport",
+          "contents": [
+            "Expanded sidebar is 384px at large widths, with Sessions and Knowledge tabs, New session, No sessions and footer navigation. https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/CollapsibleSidebar.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/CollapsibleSidebar.svelte",
+            "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer has knowledge and image attachment controls. https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/lib/components/CollapsibleSidebar.svelte",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/776e500fb5ccb65422dcecba68ef6fce4b9588f5/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-2025-10-10",
+      "from": "2025-10-12",
+      "to": null,
+      "source_ref": "78c63850fa9fdb3dc4ce447c6b0e86c3af926123",
+      "source_selection": "Catalog release tag 0.35.4 (2025-10); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "384px at large viewport",
+          "contents": [
+            "Expanded sidebar is 384px at large widths, with Sessions and Knowledge tabs, New session, No sessions and footer navigation. https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/CollapsibleSidebar.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/CollapsibleSidebar.svelte",
+            "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer has knowledge and image attachment controls. https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts",
+            "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/lib/components/CollapsibleSidebar.svelte",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/i18n/en/index.ts",
+        "https://github.com/fmaclen/hollama/blob/78c63850fa9fdb3dc4ce447c6b0e86c3af926123/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    },
+    {
+      "id": "fmaclen--hollama-record",
+      "from": "2026-10-30",
+      "to": null,
+      "source_ref": "6c0e40db551682c5a0694ef9d61d73cddce98620",
+      "source_selection": "Catalog release tag 0.37.0 (2026-10); whether that exact build was deployed on the catalog date is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "384px at large viewport",
+          "contents": [
+            "Expanded sidebar is 384px at large widths, with Sessions and Knowledge tabs, New session, No sessions and footer navigation. https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/CollapsibleSidebar.svelte"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/CollapsibleSidebar.svelte",
+            "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/+layout.svelte"
+          ]
+        },
+        {
+          "name": "session",
+          "position": "main",
+          "size": "remaining width; bottom composer",
+          "contents": [
+            "The bottom composer contains the model selector, Messages and Controls, a textarea and Run. https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte",
+            "The composer has knowledge and image attachment controls. https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json",
+            "Messages and Controls switch the history region; Controls includes System prompt, Model options, Temperature and Runtime options. https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Controls.svelte https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json"
+          ],
+          "sources": [
+            "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte",
+            "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json",
+            "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Controls.svelte"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Available models",
+          "source": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/FieldSelectModel.svelte"
+        },
+        {
+          "label": "New session",
+          "source": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json"
+        },
+        {
+          "label": "Run",
+          "source": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "source": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 96%)",
+          "text": "hsl(0 0% 5%)",
+          "muted": "hsl(0 0% 50%)",
+          "accent": "hsl(14 80% 60%)",
+          "border": null
+        },
+        "source": "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/app.pcss"
+      },
+      "unverified": [
+        "Exact deployed build on the catalog date, connected model names, and pixel-level rendering."
+      ],
+      "sources": [
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/+layout.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Prompt.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/FieldSelectModel.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/lib/components/CollapsibleSidebar.svelte",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/app.pcss",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/messages/en.json",
+        "https://github.com/fmaclen/hollama/blob/6c0e40db551682c5a0694ef9d61d73cddce98620/src/routes/sessions/[id]/Controls.svelte"
+      ]
+    }
+  ]
+}

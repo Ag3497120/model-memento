@@ -1,0 +1,1732 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "khoj-ai--khoj",
+  "name": "Khoj",
+  "vendor": "khoj-ai",
+  "kind": "web-chat",
+  "versions": [
+    {
+      "id": "khoj-ai--khoj-2022-08-0",
+      "from": "2022-08-15",
+      "to": null,
+      "source_ref": "2647e6b",
+      "source_selection": "Release commit from the v0.1.5-alpha release page.",
+      "regions": [
+        {
+          "name": "search",
+          "position": "center",
+          "size": "min(70vw, 100%)",
+          "contents": [
+            "中央の検索欄と種別選択。 https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+          ],
+          "contents_en": [
+            "Centered query field, content-type selector and Regenerate. https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Org",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        },
+        {
+          "label": "Markdown",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        },
+        {
+          "label": "Ledger",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        },
+        {
+          "label": "Music",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        },
+        {
+          "label": "Image",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        },
+        {
+          "label": "Regenerate",
+          "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+      },
+      "palette": {
+        "light": {
+          "bg": "#eee",
+          "panel": "#eee",
+          "text": "#888",
+          "muted": "#888",
+          "accent": null,
+          "border": "#ccc",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html",
+          "note": "Search page CSS."
+        }
+      },
+      "typography": {
+        "ui_named": "Roboto, Karma, Segoe UI",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 5,
+        "density": null,
+        "input_shape": "text input",
+        "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+      },
+      "empty_state": {
+        "title": null,
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html",
+        "conditional": "Empty results container; configured search types determine options."
+      },
+      "distinctive": [
+        "検索欄と種別選択を中央に置く。 https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+      ],
+      "distinctive_en": [
+        "Centered search input and content-type selector. https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2647e6b/src/interface/web/index.html",
+          "date": null,
+          "shows": "検索画面の構造、文字列、色。",
+          "shows_en": "Search page structure, strings, and colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-06-1",
+      "from": "2025-06-28",
+      "to": null,
+      "source_ref": "1.42.7",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/1.42.7/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-07-2",
+      "from": "2025-07-31",
+      "to": null,
+      "source_ref": "2.0.0-beta.11",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.11/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-08-3",
+      "from": "2025-08-31",
+      "to": null,
+      "source_ref": "2.0.0-beta.15",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.15/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-09-4",
+      "from": "2025-09-16",
+      "to": null,
+      "source_ref": "2.0.0-beta.16",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.16/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-11-5",
+      "from": "2025-11-30",
+      "to": null,
+      "source_ref": "2.0.0-beta.21",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.21/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2025-12-6",
+      "from": "2025-12-29",
+      "to": null,
+      "source_ref": "2.0.0-beta.23",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.23/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2026-01-7",
+      "from": "2026-01-02",
+      "to": null,
+      "source_ref": "2.0.0-beta.24",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.24/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-2026-02-8",
+      "from": "2026-02-22",
+      "to": null,
+      "source_ref": "2.0.0-beta.25",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/2.0.0-beta.25/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "khoj-ai--khoj-record",
+      "from": "2026-11-15",
+      "to": null,
+      "source_ref": "ae229ca894c0b80ad84664afcfdde523b5e87057",
+      "source_selection": "Catalog release tag or specified record commit; exact deployed build is unverified.",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": "16rem",
+          "contents": [
+            "左側のナビゲーションと会話一覧。 https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "contents_en": [
+            "Left navigation and conversation list; shared sidebar width 16rem. https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/components/ui/sidebar.tsx"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+            "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/components/ui/sidebar.tsx"
+          ]
+        },
+        {
+          "name": "home",
+          "position": "main",
+          "size": "max 768px",
+          "contents": [
+            "中央の挨拶、入力欄と提案カード。 https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "contents_en": [
+            "Centered greeting, composer and suggestion cards. https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ],
+          "sources": [
+            "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx",
+            "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+            "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/suggestions/suggestionsData.ts"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "New",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Home",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Agents",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Automations",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Search",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+        },
+        {
+          "label": "Research Mode",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+        },
+        {
+          "label": "Show All",
+          "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null,
+        "streaming_en": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx"
+      },
+      "palette": {
+        "light": {
+          "bg": "hsl(0 0% 100%)",
+          "panel": "hsl(0 0% 98%)",
+          "text": "hsl(224 71.4% 4.1%)",
+          "muted": "hsl(220 8.9% 46.1%)",
+          "accent": "hsl(24.6 95% 53.1%)",
+          "border": "hsl(220 13% 91%)",
+          "user_bubble": null
+        },
+        "dark": null,
+        "source": {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/globals.css",
+          "note": "Light theme variables; runtime theme can differ."
+        }
+      },
+      "typography": {
+        "ui_named": "Noto Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "rounded textarea",
+        "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx"
+      },
+      "empty_state": {
+        "title": "What would you like to get done?",
+        "assistant": null,
+        "source": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx",
+        "conditional": "One of several randomized greetings; initial three suggestions."
+      },
+      "distinctive": [
+        "会話ホームに挨拶、入力欄、提案カードと左ナビゲーションを置く。 https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "distinctive_en": [
+        "Chat home with greeting, composer, suggestion cards and left navigation. https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx"
+      ],
+      "must_not_copy": [
+        "ロゴ、アイコン、画像、専用フォント。"
+      ],
+      "must_not_copy_en": [
+        "Logos, icons, images and proprietary fonts."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/page.tsx",
+          "date": null,
+          "shows": "ホーム画面と挨拶。",
+          "shows_en": "Home layout and greeting.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/appSidebar/appSidebar.tsx",
+          "date": null,
+          "shows": "ナビゲーション。",
+          "shows_en": "Navigation labels.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/components/ui/sidebar.tsx",
+          "date": null,
+          "shows": "サイドバーの幅。",
+          "shows_en": "Sidebar width.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/chatInputArea/chatInputArea.tsx",
+          "date": null,
+          "shows": "入力欄と操作。",
+          "shows_en": "Composer and controls.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/components/suggestions/suggestionsData.ts",
+          "date": null,
+          "shows": "提案カード。",
+          "shows_en": "Suggestion cards.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/settings/page.tsx",
+          "date": null,
+          "shows": "設定内のモデル選択。",
+          "shows_en": "Model selection in settings.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/khoj-ai/khoj/blob/ae229ca894c0b80ad84664afcfdde523b5e87057/src/interface/web/app/globals.css",
+          "date": null,
+          "shows": "テーマの色。",
+          "shows_en": "Theme colors.",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

@@ -1,0 +1,994 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "transformeroptimus--superagi",
+  "name": "SuperAGI",
+  "vendor": "TransformerOptimus",
+  "kind": "agent",
+  "versions": [
+    {
+      "id": "transformeroptimus--superagi-2023-05-0",
+      "from": "2023-05-24",
+      "to": "2023-05-29",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal flow",
+          "size": null,
+          "contents": [
+            "目標入力に続き、反復とGoals・Toolsを表示する。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/agent_prompt_to_print_builder.py)"
+          ],
+          "contents_en": [
+            "Goal prompt in test.py; colored welcome, iteration and generated Goals/Tools headings follow. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/agent_prompt_to_print_builder.py)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter your Goals seperated by ',':",
+          "where": "terminal",
+          "purpose": "Comma-separated goal input. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals entered at the prompt. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py)",
+        "assistant": "Iteration output includes Goals and Tools headings. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": "monospace",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "terminal input"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "端末の目標入力と色付きの反復出力。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/run.sh",
+          "date": null,
+          "shows": "run.sh",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py",
+          "date": null,
+          "shows": "test.py",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py",
+          "date": null,
+          "shows": "superagi/agent/super_agi.py",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/agent_prompt_to_print_builder.py",
+          "date": null,
+          "shows": "superagi/agent/agent_prompt_to_print_builder.py",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.82,
+      "distinctive_en": [
+        "Terminal prompt and colored iteration output. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-05-1",
+      "from": "2023-05-29",
+      "to": "2023-06-23",
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Rail Agents, Tools. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "full width",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Add agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Add agent",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "暗いダッシュボードに全幅のエージェント作成フォームとToolsの欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "Dark dashboard with a full-width agent creation form and Tools rail. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-06-2",
+      "from": "2023-06-23",
+      "to": "2023-07-28",
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Rail Agents, Tools. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "centered Bootstrap col-6, 25px 20px padding",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Instructions, Cancel and Create and Run. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Create and Run",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "作成フォームが中央の半幅になり、任意のInstructionsが加わる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "Agent creation moves to a centered half-width column and adds optional Instructions. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-07-3",
+      "from": "2023-07-28",
+      "to": "2023-08-29",
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Rail Agents, Toolkits, APM, Knowledge. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "centered Bootstrap col-6, 25px 20px padding",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Instructions, Cancel and Create and Run. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Create and Run",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "左の欄にToolkits、APM、Knowledgeが並び、作成メニューに予約実行が加わる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "Toolkits, APM and Knowledge appear in the rail; the create menu offers scheduling. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-08-4",
+      "from": "2023-08-29",
+      "to": "2023-09-27",
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Rail Agents, Toolkits, APM, Knowledge, Models. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "centered Bootstrap col-6, 25px 20px padding",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Instructions, Cancel and Create and Run. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Create and Run",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "左の欄にModelsが加わり、Knowledge Search利用時に知識を選べる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css",
+          "date": null,
+          "shows": "gui/pages/_app.css",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "Models appears in the rail and knowledge selection is available when using Knowledge Search. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-09-5",
+      "from": "2023-09-27",
+      "to": "2024-01-16",
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Rail Agents, Toolkits, APM, Knowledge, Models. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "centered Bootstrap col-6, 25px 20px padding",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Instructions, Cancel and Create and Run. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Create and Run",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "条件付きのテンプレートメニューから公開を選べる作成フォーム。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css",
+          "date": null,
+          "shows": "gui/pages/_app.css",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "The creation form includes template publishing in its conditional template menu. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    },
+    {
+      "id": "transformeroptimus--superagi-record",
+      "from": "2024-01-16",
+      "to": null,
+      "regions": [
+        {
+          "name": "navigation rail",
+          "position": "left",
+          "size": "6.5vw",
+          "contents": [
+            "左側のナビゲーション欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Rail Agents, Toolkits, APM, Knowledge, Models. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/SideBar.js; https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "workspace",
+          "position": "right",
+          "size": "93.5vw; top bar 6.5vh",
+          "contents": [
+            "上部バーと作業領域。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css)"
+          ],
+          "contents_en": [
+            "Project shell and top bar. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css)"
+          ]
+        },
+        {
+          "name": "agent creation",
+          "position": "workspace tab",
+          "size": "centered Bootstrap col-6, 25px 20px padding",
+          "contents": [
+            "エージェントの名前、説明、目標、モデル、道具の設定。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+          ],
+          "contents_en": [
+            "Name, Description, Goals, Model and Tools; Instructions, Cancel and Create and Run. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+          ]
+        },
+        {
+          "name": "agents list",
+          "position": "left of workspace",
+          "size": null,
+          "contents": [
+            "エージェント一覧と空状態。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/Agents.js)"
+          ],
+          "contents_en": [
+            "Agents, + Create Agent, No Agents found. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/Agents.js)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Model",
+          "where": "agent creation form",
+          "purpose": "Select the agent model. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+        },
+        {
+          "label": "Create and Run",
+          "where": "agent creation form",
+          "purpose": "Submit the agent. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+        }
+      ],
+      "conversation": {
+        "user": "Goals in an agent creation form. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": null,
+        "dark": {
+          "bg": "#1B192C",
+          "panel": "#2F2C40",
+          "text": "#FFFFFF",
+          "muted": null,
+          "accent": null,
+          "border": "#33303F",
+          "user_bubble": null
+        },
+        "source": {
+          "bg": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css",
+          "panel": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/Dashboard.module.css",
+          "text": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/Dashboard.module.css",
+          "border": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": null,
+        "input_shape": "agent creation form"
+      },
+      "empty_state": "No Agents found (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/Agents.js)",
+      "distinctive": [
+        "条件付きのテンプレートメニューから公開を選べる作成フォーム。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+      ],
+      "must_not_copy": [
+        "Logos, images, icons and proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.js",
+          "date": null,
+          "shows": "gui/pages/_app.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/SideBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/SideBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/TopBar.js",
+          "date": null,
+          "shows": "gui/pages/Dashboard/TopBar.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Dashboard/Dashboard.module.css",
+          "date": null,
+          "shows": "gui/pages/Dashboard/Dashboard.module.css",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/Agents.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/Agents.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js",
+          "date": null,
+          "shows": "gui/pages/Content/Agents/AgentCreate.js",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css",
+          "date": null,
+          "shows": "gui/pages/_app.css",
+          "kind": "source"
+        }
+      ],
+      "confidence": 0.83,
+      "distinctive_en": [
+        "The creation form includes template publishing in its conditional template menu. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+      ]
+    }
+  ]
+}

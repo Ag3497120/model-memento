@@ -1,0 +1,310 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "transformeroptimus--superagi",
+  "versions": [
+    {
+      "id": "transformeroptimus--superagi-2023-05-0",
+      "model_switch": {
+        "where": "none",
+        "label": "gpt-4",
+        "steps": [
+          "モデルはtest.pyで固定され、画面内での選択は示されない。"
+        ],
+        "options": [],
+        "default": "gpt-4",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/test.py",
+            "date": null,
+            "shows": "Hard-coded gpt-4 in the startup script.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "The model is fixed in test.py; no in-session selector is shown."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal",
+        "date_shown": "2023-05-24",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py",
+            "date": null,
+            "shows": "Terminal output.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "端末の目標入力と色付きの反復出力。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py)",
+      "trend_en": "Terminal prompt and colored iteration output. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.1/superagi/agent/super_agi.py)"
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-05-1",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [
+          "gpt-3.5-turbo",
+          "gpt-4"
+        ],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2023-05-29",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/_app.js",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "暗いダッシュボードに全幅のエージェント作成フォームとToolsの欄。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/SideBar.js)",
+      "trend_en": "Dark dashboard with a full-width agent creation form and Tools rail. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.2/gui/pages/Dashboard/SideBar.js)"
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-06-2",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo",
+          "gpt-3.5-turbo-16k"
+        ],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2023-06-23",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/_app.js",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "作成フォームが中央の半幅になり、任意のInstructionsが加わる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)",
+      "trend_en": "Agent creation moves to a centered half-width column and adds optional Instructions. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.6/gui/pages/Content/Agents/AgentCreate.js)"
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-07-3",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2023-07-28",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/_app.js",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "左の欄にToolkits、APM、Knowledgeが並び、作成メニューに予約実行が加わる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/SideBar.js)",
+      "trend_en": "Toolkits, APM and Knowledge appear in the rail; the create menu offers scheduling. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.9/gui/pages/Dashboard/SideBar.js)"
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-08-4",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo",
+          "gpt-3.5-turbo-16k"
+        ],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2023-08-29",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/_app.css",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "左の欄にModelsが加わり、Knowledge Search利用時に知識を選べる。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/SideBar.js)",
+      "trend_en": "Models appears in the rail and knowledge selection is available when using Knowledge Search. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Content/Agents/AgentCreate.js) (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.11/gui/pages/Dashboard/SideBar.js)"
+    },
+    {
+      "id": "transformeroptimus--superagi-2023-09-5",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo",
+          "gpt-3.5-turbo-16k"
+        ],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2023-09-27",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/_app.css",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "条件付きのテンプレートメニューから公開を選べる作成フォーム。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)",
+      "trend_en": "The creation form includes template publishing in its conditional template menu. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.13/gui/pages/Content/Agents/AgentCreate.js)"
+    },
+    {
+      "id": "transformeroptimus--superagi-record",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "Model",
+        "steps": [
+          "Create new agentを開く。",
+          "フォーム内のModelを選ぶ。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo",
+          "gpt-3.5-turbo-16k"
+        ],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js",
+            "date": null,
+            "shows": "Model dropdown and initial values in agent creation.",
+            "kind": "source"
+          }
+        ],
+        "steps_en": [
+          "Open Create new agent.",
+          "Choose Model in the form."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "web",
+        "app_shell": "browser",
+        "date_shown": "2024-01-16",
+        "sources": [
+          {
+            "url": "https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/_app.css",
+            "date": null,
+            "shows": "Dashboard shell.",
+            "kind": "source"
+          }
+        ]
+      },
+      "trend": "条件付きのテンプレートメニューから公開を選べる作成フォーム。 (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)",
+      "trend_en": "The creation form includes template publishing in its conditional template menu. (https://github.com/TransformerOptimus/SuperAGI/blob/v0.0.14/gui/pages/Content/Agents/AgentCreate.js)"
+    }
+  ]
+}

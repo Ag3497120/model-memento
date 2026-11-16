@@ -1424,15 +1424,18 @@
         "schema": "memento.persona-card.v1",
         "model_id": "nvidia/Llama-3.3-Nemotron-Super-49B-v1",
         "q": "苦手なことは？",
-        "a_ja": "私の限界として、The documented system prompt can turn reasoning mode on or offという記録があります。",
+        "a_ja": "私の限界として、不正確な答えを出したり、重要な情報を抜かしたりすることがある。The documented system prompt can turn reasoning mode on or offという記録があります。",
         "kind": "self_weaknesses",
         "fact_keys": [
+          "persona.failure_modes.0",
           "persona.quirks.0"
         ],
         "fact_values": {
+          "persona.failure_modes.0": "不正確な答えを出したり、重要な情報を抜かしたりすることがある。",
           "persona.quirks.0": "The documented system prompt can turn reasoning mode on or off."
         },
         "sources": [
+          "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1/blob/d97352657f30c6ef20ca37e1a40237a964907044/explainability.md",
           "https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1"
         ],
         "written_by": "record-template",

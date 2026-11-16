@@ -49,11 +49,11 @@
       "note": "未確認です。固有の話し方としては扱いません。"
     },
     "knowledge_cutoff": {
-      "value": null,
-      "source": null,
-      "basis": "family-default",
-      "confidence": 0,
-      "note": "未確認です。固有の話し方としては扱いません。"
+      "value": "2024-06",
+      "source": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+      "basis": "official",
+      "confidence": 0.92,
+      "note": "Microsoftによる公開データの最終時点です。追加学習や外部情報は含みません。"
     },
     "interface": {
       "value": "chat",
@@ -63,7 +63,16 @@
       "note": "公式資料に記された用途・制約であり、独立した対話観察ではありません。"
     },
     "quirks": [],
-    "failure_modes": [],
+    "failure_modes": [
+      {
+        "value": "道具を呼び出す場面で、存在しない関数名やURLを作ることがある。",
+        "source": "https://huggingface.co/microsoft/Phi-4-mini-instruct",
+        "basis": "official",
+        "confidence": 0.85,
+        "note": "Microsoftの安全性評価で報告された事例です。全ての利用環境での発生率は分かりません。",
+        "value_en": "When calling tools, it can invent function names or URLs."
+      }
+    ],
     "typical_strengths": [
       {
         "value": "The model is intended for reasoning tasks, especially math and logic.",

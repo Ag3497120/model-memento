@@ -19,6 +19,21 @@ import * as w3_openinterpreter__openinterpreter from './openinterpreter--openint
 import * as w3_sourcegraph__cody_public_snapshot from './sourcegraph--cody-public-snapshot.js';
 import * as w3_farion1231__cc_switch from './farion1231--cc-switch.js';
 import * as w3_huggingface__smolagents from './huggingface--smolagents.js';
+import * as w4_enricoros__big_agi from './enricoros--big-agi.js';
+import * as w4_khoj_ai__khoj from './khoj-ai--khoj.js';
+import * as w4_mudler__localai from './mudler--localai.js';
+import * as w4_kochava_studios__witsy from './kochava-studios--witsy.js';
+import * as w4_thinkinaixyz__deepchat from './thinkinaixyz--deepchat.js';
+import * as w4_plandex_ai__plandex from './plandex-ai--plandex.js';
+import * as w4_antonosika__gpt_engineer from './antonosika--gpt-engineer.js';
+import * as w4_reworkd__agentgpt from './reworkd--agentgpt.js';
+import * as w4_transformeroptimus__superagi from './transformeroptimus--superagi.js';
+import * as w4_foundationagents__metagpt from './foundationagents--metagpt.js';
+import * as w4_infiniflow__ragflow from './infiniflow--ragflow.js';
+import * as w4_fmaclen__hollama from './fmaclen--hollama.js';
+import * as w4_gluonfield__enchanted from './gluonfield--enchanted.js';
+import * as w4_n4ze3m__page_assist from './n4ze3m--page-assist.js';
+import * as w4_ai_shifu__chatall from './ai-shifu--chatall.js';
 import * as chatgpt from './chatgpt.js';
 import * as playground from './playground.js';
 import * as claude from './claude.js';
@@ -74,6 +89,21 @@ const renderers = {
   'n8n': n8n,
   'ollama': ollama,
   'zed': zed,
+  'enricoros--big-agi': w4_enricoros__big_agi,
+  'khoj-ai--khoj': w4_khoj_ai__khoj,
+  'mudler--localai': w4_mudler__localai,
+  'kochava-studios--witsy': w4_kochava_studios__witsy,
+  'thinkinaixyz--deepchat': w4_thinkinaixyz__deepchat,
+  'plandex-ai--plandex': w4_plandex_ai__plandex,
+  'antonosika--gpt-engineer': w4_antonosika__gpt_engineer,
+  'reworkd--agentgpt': w4_reworkd__agentgpt,
+  'transformeroptimus--superagi': w4_transformeroptimus__superagi,
+  'foundationagents--metagpt': w4_foundationagents__metagpt,
+  'infiniflow--ragflow': w4_infiniflow__ragflow,
+  'fmaclen--hollama': w4_fmaclen__hollama,
+  'gluonfield--enchanted': w4_gluonfield__enchanted,
+  'n4ze3m--page-assist': w4_n4ze3m__page_assist,
+  'ai-shifu--chatall': w4_ai_shifu__chatall,
   'stackblitz--bolt.new': w3_stackblitz__bolt_new,
   'kilo-org--kilocode': w3_kilo_org__kilocode,
   'codota--tabnine': w3_codota__tabnine,

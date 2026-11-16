@@ -1,0 +1,914 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "reworkd--agentgpt",
+  "name": "AgentGPT",
+  "vendor": "Reworkd",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "reworkd--agentgpt-2023-04-0",
+      "from": "2023-04-09",
+      "to": "2023-04-19",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "288px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/Drawer.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 1024px",
+          "contents": [
+            "Centered name and goal inputs beneath a dark rounded console, with a 288px drawer. (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/ChatWindow.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Name and Goal fields and deploy controls. (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Name",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "Deploy Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "New Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/Drawer.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#2b2b2b to #1f1f1f",
+          "panel": "#18181b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "rgba(255,255,255,0.2)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/layout/default.tsx",
+          "note": "Background from layout; zinc-900 panel and white border from https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/ChatWindow.tsx."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 24,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx)"
+      },
+      "empty_state": "Create an agent by adding a name / goal, and hitting deploy! (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/ChatWindow.tsx)",
+      "distinctive": [
+        "Centered name and goal inputs beneath a dark rounded console, with a 288px drawer. (https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/ChatWindow.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2023-04-09",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2023-04-09",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/components/Drawer.tsx",
+          "kind": "repository",
+          "date": "2023-04-09",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/layout/default.tsx",
+          "kind": "repository",
+          "date": "2023-04-09",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.1.0-beta/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2023-04-09",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "reworkd--agentgpt-2023-04-1",
+      "from": "2023-04-19",
+      "to": "2023-05-31",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "288px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/Drawer.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 1024px",
+          "contents": [
+            "The console adds an API key notice, a stop button and model selection in Settings. (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/ChatWindow.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Name and Goal fields and deploy controls. (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Name",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "Deploy Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/SettingsDialog.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#2b2b2b to #1f1f1f",
+          "panel": "#18181b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "rgba(255,255,255,0.2)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/layout/default.tsx",
+          "note": "Background from layout; zinc-900 panel and white border from https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/ChatWindow.tsx."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx)"
+      },
+      "empty_state": "Create an agent by adding a name / goal, and hitting deploy! (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/ChatWindow.tsx)",
+      "distinctive": [
+        "The console adds an API key notice, a stop button and model selection in Settings. (https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/ChatWindow.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/Drawer.tsx",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/layout/default.tsx",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.2.0-beta/src/components/SettingsDialog.tsx",
+          "kind": "repository",
+          "date": "2023-04-19",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "reworkd--agentgpt-2023-05-2",
+      "from": "2023-05-31",
+      "to": "2023-06-29",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "288px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/drawer/Drawer.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 1280px",
+          "contents": [
+            "A 320px task panel and example agents accompany the console; Tools sits beside Name. (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/console/ChatWindow.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Name and Goal fields and deploy controls. (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx)."
+          ]
+        },
+        {
+          "name": "tasks",
+          "position": "right of console",
+          "size": "320px",
+          "contents": [
+            "Current tasks and empty message (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/TaskWindow.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Name",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Deploy Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/dialog/SettingsDialog.tsx"
+        },
+        {
+          "label": "Current tasks",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/TaskWindow.tsx"
+        },
+        {
+          "label": "Tools",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#2b2b2b to #1f1f1f",
+          "panel": "#18181b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "rgba(255,255,255,0.2)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/layout/default.tsx",
+          "note": "Background from layout; zinc-900 panel and white border from https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/console/ChatWindow.tsx."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx)"
+      },
+      "empty_state": "Create an agent by adding a name / goal, and hitting deploy! (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/console/ChatWindow.tsx)",
+      "distinctive": [
+        "A 320px task panel and example agents accompany the console; Tools sits beside Name. (https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/TaskWindow.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/console/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/drawer/Drawer.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/layout/default.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/dialog/SettingsDialog.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.6.0-beta/next/src/components/TaskWindow.tsx",
+          "kind": "repository",
+          "date": "2023-05-31",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "reworkd--agentgpt-2023-06-3",
+      "from": "2023-06-29",
+      "to": "2023-07-18",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "240px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/layout/sidebar.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 1280px",
+          "contents": [
+            "The task panel narrows to 256px; the settings dialog has become a settings page. (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/console/ChatWindow.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Name and Goal fields and deploy controls. (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx)."
+          ]
+        },
+        {
+          "name": "tasks",
+          "position": "right of console",
+          "size": "256px",
+          "contents": [
+            "Current tasks and empty message (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/TaskWindow.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Name",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Deploy Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/settings.tsx"
+        },
+        {
+          "label": "Current tasks",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/TaskWindow.tsx"
+        },
+        {
+          "label": "Tools",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#2b2b2b to #1f1f1f",
+          "panel": "#18181b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "rgba(255,255,255,0.2)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/layout/sidebar.tsx",
+          "note": "Background from layout; zinc-900 panel and white border from https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/console/ChatWindow.tsx."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx)"
+      },
+      "empty_state": "Create an agent by adding a name / goal, and hitting deploy! (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/console/ChatWindow.tsx)",
+      "distinctive": [
+        "The task panel narrows to 256px; the settings dialog has become a settings page. (https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/TaskWindow.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/console/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/layout/sidebar.tsx",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/pages/settings.tsx",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.9.0-beta/next/src/components/TaskWindow.tsx",
+          "kind": "repository",
+          "date": "2023-06-29",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "reworkd--agentgpt-2023-07-4",
+      "from": "2023-07-18",
+      "to": "2026-11-15",
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "256px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/LeftSidebar.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 1280px",
+          "contents": [
+            "Tasks move into a separate right sidebar; a running agent gains a chat input. (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/console/ChatWindow.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Name and Goal fields and deploy controls. (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx)."
+          ]
+        },
+        {
+          "name": "tasks",
+          "position": "right sidebar",
+          "size": "256px",
+          "contents": [
+            "Current tasks and empty message (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/TaskSidebar.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Name",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Deploy Agent",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/settings.tsx"
+        },
+        {
+          "label": "Current tasks",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/TaskSidebar.tsx"
+        },
+        {
+          "label": "Tools",
+          "source": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#2b2b2b to #1f1f1f",
+          "panel": "#18181b",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": "rgba(255,255,255,0.2)",
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/layout/dashboard.tsx",
+          "note": "Background from layout; zinc-900 panel and white border from https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/console/ChatWindow.tsx."
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx)"
+      },
+      "empty_state": "Create an agent by adding a name / goal, and hitting deploy! (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/console/ChatWindow.tsx)",
+      "distinctive": [
+        "Tasks move into a separate right sidebar; a running agent gains a chat input. (https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/TaskSidebar.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/console/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/LeftSidebar.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/layout/dashboard.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/pages/settings.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/drawer/TaskSidebar.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/v.0.10.0-beta/next/src/components/console/ExampleAgents.tsx",
+          "kind": "repository",
+          "date": "2023-07-18",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "reworkd--agentgpt-record",
+      "from": "2026-11-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "navigation",
+          "position": "left",
+          "size": "256px",
+          "contents": [
+            "Drawer, help and navigation (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/drawer/LeftSidebar.tsx)."
+          ]
+        },
+        {
+          "name": "main",
+          "position": "center",
+          "size": "max-width 768px",
+          "contents": [
+            "The initial landing screen becomes a light, goal-only layout with three example cards and a gradient play button. (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx).",
+            "Plain title and business automation banner (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/AppTitle.tsx)."
+          ]
+        },
+        {
+          "name": "input",
+          "position": "below main content",
+          "size": null,
+          "contents": [
+            "Goal textarea, tools and play. (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx)."
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Goal",
+          "source": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx"
+        },
+        {
+          "label": "Tools",
+          "source": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx"
+        },
+        {
+          "label": "TravelGPT",
+          "source": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ExampleAgents.tsx"
+        },
+        {
+          "label": "CalculusGPT",
+          "source": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ExampleAgents.tsx"
+        },
+        {
+          "label": "HustleGPT",
+          "source": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ExampleAgents.tsx"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#d7dbdf to #f1f3f5",
+          "panel": "#fbfcfd",
+          "text": "#11181c",
+          "muted": "#687076",
+          "accent": "#02fcf1 to #a02bfe",
+          "border": "#d7dbdf",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/tailwind.config.cjs",
+          "note": "Slate tokens in theme; layout and gradient button: https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/layout/dashboard.tsx https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 16,
+        "density": null,
+        "input_shape": "Name/goal fields (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx)"
+      },
+      "empty_state": "Three example cards (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ExampleAgents.tsx)",
+      "distinctive": [
+        "The initial landing screen becomes a light, goal-only layout with three example cards and a gradient play button. (https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/pages/index.tsx; https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx)"
+      ],
+      "must_not_copy": [
+        "logos, marks, product icons, proprietary fonts"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/pages/index.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ChatWindow.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/drawer/LeftSidebar.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/layout/dashboard.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/styles/globals.css",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/pages/settings.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/index/landing.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/console/ExampleAgents.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/tailwind.config.cjs",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/public/locales/en/indexPage.json",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Versioned UI source; record date is catalog metadata."
+        },
+        {
+          "url": "https://github.com/reworkd/AgentGPT/blob/18b073ab05b2902e1d052c3d2799786d8623b5e5/next/src/components/AppTitle.tsx",
+          "kind": "repository",
+          "date": "2026-11-15",
+          "shows": "Title and banner at recorded commit; date is catalog metadata."
+        }
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

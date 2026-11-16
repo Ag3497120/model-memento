@@ -1,0 +1,911 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "gluonfield--enchanted",
+  "name": "Enchanted",
+  "vendor": "gluonfield",
+  "kind": "native-chat",
+  "versions": [
+    {
+      "id": "gluonfield--enchanted-2023-12-0",
+      "from": "2023-12-22",
+      "to": "2024-01-29",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "iOS centered header and conversation",
+          "size": "Header icons 22 points; other width unverified",
+          "contents": [
+            "iOS chat: centered model menu, Start new conversation, Message, and a sidebar with Settings. (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/Components/ModelSelectorView.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "Menu reveals sidebar",
+          "size": "unverified",
+          "contents": [
+            "Settings and conversation history (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Start new conversation (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift)",
+      "distinctive": [
+        "iOS chat: centered model menu, Start new conversation, Message, and a sidebar with Settings. (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Sidebar/SidebarView.swift)",
+        "Settings contains OLLAMA, Ollama server URI, APP, Vibrations and Save. (https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Settings/SettingsView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/ChatView.swift",
+          "kind": "repository",
+          "date": "2023-12-22",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Chat/Components/ModelSelectorView.swift",
+          "kind": "repository",
+          "date": "2023-12-22",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2023-12-22",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.1.0/Enchanted/UI/Views/Settings/SettingsView.swift",
+          "kind": "repository",
+          "date": "2023-12-22",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-2024-01-1",
+      "from": "2024-01-29",
+      "to": "2024-02-18",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "iOS centered header and conversation",
+          "size": "Header icons 22 points; other width unverified",
+          "contents": [
+            "iOS chat retains the centered menu and empty state; editing an earlier message is added. (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/Components/ModelSelectorView.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "Menu reveals sidebar",
+          "size": "unverified",
+          "contents": [
+            "Settings and conversation history (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Start new conversation (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift)",
+      "distinctive": [
+        "iOS chat retains the centered menu and empty state; editing an earlier message is added. (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift; https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Sidebar/SidebarView.swift)",
+        "Settings contains OLLAMA, Ollama server URI, APP, Vibrations and Save. (https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Settings/SettingsView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/ChatView.swift",
+          "kind": "repository",
+          "date": "2024-01-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Chat/Components/ModelSelectorView.swift",
+          "kind": "repository",
+          "date": "2024-01-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2024-01-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.3.2/Enchanted/UI/Views/Settings/SettingsView.swift",
+          "kind": "repository",
+          "date": "2024-01-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-2024-02-2",
+      "from": "2024-02-18",
+      "to": "2024-03-11",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "macOS detail pane with toolbar",
+          "size": "Input max width 800 points; split sidebar width unverified",
+          "contents": [
+            "macOS NavigationSplitView with sidebar, toolbar model menu, centered greeting and four sample prompt cards; input max width 800 points. (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left split column",
+          "size": "unverified",
+          "contents": [
+            "Settings and conversation history (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Enchanted, How can I help you today?, four shuffled sample cards (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/Models/SamplePrompt.swift)",
+      "distinctive": [
+        "macOS NavigationSplitView with sidebar, toolbar model menu, centered greeting and four sample prompt cards; input max width 800 points. (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift)",
+        "Prompt cards use 15-point spacing, 15-point padding, 10-point corner radius and a 700-point maximum grid width. (https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/Models/SamplePrompt.swift",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json",
+          "kind": "repository",
+          "date": "2024-02-18",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-2024-03-3",
+      "from": "2024-03-11",
+      "to": "2024-04-29",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "macOS detail pane with toolbar",
+          "size": "Input max width 800 points; split sidebar width unverified",
+          "contents": [
+            "The macOS sidebar adds Completions and Shortcuts above Settings. (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left split column",
+          "size": "unverified",
+          "contents": [
+            "Completions, Shortcuts, Settings (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/ChatView_macOS.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Enchanted, How can I help you today?, four shuffled sample cards (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/Models/SamplePrompt.swift)",
+      "distinctive": [
+        "The macOS sidebar adds Completions and Shortcuts above Settings. (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Sidebar/SidebarView.swift)",
+        "Prompt cards use 15-point spacing, 15-point padding, 10-point corner radius and a 700-point maximum grid width. (https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/ChatView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/Models/SamplePrompt.swift",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.5.5/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json",
+          "kind": "repository",
+          "date": "2024-03-11",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-2024-04-4",
+      "from": "2024-04-29",
+      "to": "2024-05-27",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "macOS detail pane with toolbar",
+          "size": "Input max width 800 points; split sidebar width unverified",
+          "contents": [
+            "The split view, greeting, four prompt cards and sidebar actions continue. (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left split column",
+          "size": "unverified",
+          "contents": [
+            "Completions, Shortcuts, Settings (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/ChatView_macOS.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Enchanted, How can I help you today?, four shuffled sample cards (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/Models/SamplePrompt.swift)",
+      "distinctive": [
+        "The split view, greeting, four prompt cards and sidebar actions continue. (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Sidebar/SidebarView.swift)",
+        "Prompt cards use 15-point spacing, 15-point padding, 10-point corner radius and a 700-point maximum grid width. (https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/ChatView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/Models/SamplePrompt.swift",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.6.3/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json",
+          "kind": "repository",
+          "date": "2024-04-29",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-2024-05-5",
+      "from": "2024-05-27",
+      "to": "2026-06-15",
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "macOS detail pane with toolbar",
+          "size": "Input max width 800 points; split sidebar width unverified",
+          "contents": [
+            "The macOS toolbar includes Enchanted; the sidebar actions and greeting continue. (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left split column",
+          "size": "unverified",
+          "contents": [
+            "Completions, Shortcuts, Settings (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Enchanted, How can I help you today?, four shuffled sample cards (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/Models/SamplePrompt.swift)",
+      "distinctive": [
+        "The macOS toolbar includes Enchanted; the sidebar actions and greeting continue. (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift)",
+        "Prompt cards use 15-point spacing, 15-point padding, 10-point corner radius and a 700-point maximum grid width. (https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/ChatView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/Models/SamplePrompt.swift",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.7.0/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json",
+          "kind": "repository",
+          "date": "2024-05-27",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "gluonfield--enchanted-record",
+      "from": "2026-06-15",
+      "to": null,
+      "regions": [
+        {
+          "name": "conversation and toolbar",
+          "position": "macOS detail pane with toolbar",
+          "size": "Input max width 800 points; split sidebar width unverified",
+          "contents": [
+            "The greeting line is removed; four prompt cards have a 96-point minimum content height and composer controls overlay the text field. (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift)"
+          ]
+        },
+        {
+          "name": "sidebar",
+          "position": "left split column",
+          "size": "unverified",
+          "contents": [
+            "Completions, Shortcuts, Settings (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Sidebar/SidebarView.swift)"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "bottom",
+          "size": "Text field minimum height 40 points; rounded border radius 20 points",
+          "contents": [
+            "Message; recording, image selection when supported and send/stop controls. (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Message",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift"
+        },
+        {
+          "label": "Settings",
+          "source": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Sidebar/SidebarView.swift"
+        }
+      ],
+      "conversation": {
+        "user": "Message (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift)",
+        "assistant": "Conversation message list (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/ChatView_macOS.swift)",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#e5e5ea",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#2c2c2e",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "system": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json"
+        },
+        "note": "Most colors use OS semantic values; exact rendered values vary by system. The light reconstruction is approximate. (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json)"
+      },
+      "typography": {
+        "ui_named": "system",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 20,
+        "density": "unverified",
+        "input_shape": "rounded"
+      },
+      "empty_state": "Enchanted and four shuffled sample cards; no greeting line (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/Models/SamplePrompt.swift)",
+      "distinctive": [
+        "The greeting line is removed; four prompt cards have a 96-point minimum content height and composer controls overlay the text field. (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/ChatView_macOS.swift; https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift; https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Sidebar/SidebarView.swift)",
+        "Prompt cards use 15-point spacing, 15-point padding, 10-point corner radius and a 700-point maximum grid width. (https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift)"
+      ],
+      "must_not_copy": [
+        "Product artwork, logo, proprietary typefaces or original icons"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/ChatView_macOS.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/ToolbarView_macOS.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Sidebar/SidebarView.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/macOS/Chat/Components/InputFields_macOS.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/UI/Shared/Chat/Components/EmptyConversaitonView.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/Models/SamplePrompt.swift",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        },
+        {
+          "url": "https://github.com/gluonfield/enchanted/blob/v1.8.2/Enchanted/Assets.xcassets/Colors/gray5Custom.colorset/Contents.json",
+          "kind": "repository",
+          "date": "2026-06-15",
+          "shows": "Tagged SwiftUI source or color asset"
+        }
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

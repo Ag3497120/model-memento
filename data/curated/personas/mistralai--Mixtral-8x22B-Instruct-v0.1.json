@@ -4,7 +4,7 @@
   "name": "Mixtral 8x22B Instruct v0.1",
   "family": "mistral",
   "aliases": [],
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-16",
   "traits": {
     "tone": {
       "value": null,
@@ -64,7 +64,16 @@
       "note": "資料で示された入出力形式です。chat は対話、completion は文章の続きを書く形式です。"
     },
     "quirks": [],
-    "failure_modes": [],
+    "failure_modes": [
+      {
+        "value": "公式モデルカードは、出力を管理する仕組みを備えていないと説明している。",
+        "value_en": "The official model card states that it has no moderation mechanisms.",
+        "source": "https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1/blob/8a64e670168a352f8b451b77a7efd18143e4c875/README.md",
+        "basis": "official",
+        "confidence": 0.8,
+        "note": "モデル本体についての公式説明です。提供先が別途行う管理は含みません。"
+      }
+    ],
     "typical_strengths": []
   },
   "resolution": {
