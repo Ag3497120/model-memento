@@ -1,0 +1,649 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "open-webui",
+  "versions": [
+    {
+      "id": "open-webui-2023-10",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話を始める前に、中央上部のModel欄から接続先のモデルを選ぶ。",
+          "会話が始まると欄が使えなくなるため、左の新しい会話からやり直して選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+            "date": "2023-10-08",
+            "shows": "最初の画面。上部のModel欄にSelect a model。候補は接続したOllamaから取得し、会話開始後は選択欄を無効にする。モデル未選択の送信時はModel not selectedを出す。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+            "date": "2023-10-08",
+            "shows": "最初の画面。上部のModel欄にSelect a model。候補は接続したOllamaから取得し、会話開始後は選択欄を無効にする。モデル未選択の送信時はModel not selectedを出す。"
+          }
+        ],
+        "steps_en": [
+          "Before starting a chat, choose a provider's model in the top-center Model field.",
+          "The field is disabled once chat starts. Open a new chat on the left to choose again."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "モデルを選んでください",
+          "when": "2023-10-08..2023-10-08",
+          "where": "モデルを選ばず送信したときの一時的なエラー表示。原文はModel not selected。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+              "date": "2023-10-08",
+              "shows": "最初の画面。上部のModel欄にSelect a model。候補は接続したOllamaから取得し、会話開始後は選択欄を無効にする。モデル未選択の送信時はModel not selectedを出す。"
+            }
+          ],
+          "text_en": "Choose a model",
+          "where_en": "Temporary error when sending without a model, labeled Model not selected."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-10-08",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+            "date": "2023-10-08",
+            "shows": "最初の画面。上部のModel欄にSelect a model。候補は接続したOllamaから取得し、会話開始後は選択欄を無効にする。モデル未選択の送信時はModel not selectedを出す。"
+          }
+        ]
+      },
+      "trend": "上のモデル欄を会話開始後に固定する、単純な会話画面になっている（出典：https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "A simple chat screen locks the top model field after conversation starts. (https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2024-02",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話本文の上部、固定ヘッダーのすぐ下の選択欄からモデルを選ぶ。",
+          "必要なら追加の空欄で別モデルを選ぶ。",
+          "発言があると既存の選択欄は無効になるため、変更するには新しい会話を開く。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/routes/(app)/+page.svelte",
+            "date": "2024-02-23",
+            "shows": "v0.1.102。モデル選択は会話本文の上部で、固定ヘッダーの直下。会話に発言があると、空の追加欄以外の選択を無効にする。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2024-02-23",
+            "shows": "通常のselect要素を使うモデル選択器。候補は接続先から取得し、複数モデルを追加できる。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2024-02-23",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Choose a model above the chat body, just below the fixed header.",
+          "Use an additional empty field to choose another model if needed.",
+          "Existing selectors become disabled after a message. Open a new chat to change models."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "既定のモデルを保存しました",
+          "when": "2024-02-23..2024-02-23",
+          "where": "Set as defaultを成功させたときの一時表示。原文はDefault model updated。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/lib/components/chat/ModelSelector.svelte",
+              "date": "2024-02-23",
+              "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+            }
+          ],
+          "text_en": "Default model saved",
+          "where_en": "Temporary confirmation after Set as default succeeds, labeled Default model updated."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-02-23",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/routes/(app)/+page.svelte",
+            "date": "2024-02-23",
+            "shows": "v0.1.102。モデル選択は会話本文の上部で、固定ヘッダーの直下。会話に発言があると、空の追加欄以外の選択を無効にする。"
+          }
+        ]
+      },
+      "trend": "ヘッダーの下のモデル欄を会話開始後に固定し、追加の欄で複数モデルを選ぶ（出典：https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/routes/(app)/+page.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Model fields below the header lock after chat starts, with extra fields for multiple models. (https://github.com/open-webui/open-webui/blob/4a47833f838088a0309edad2f85ff247b2ad6e00/src/routes/(app)/+page.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2024-09",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話上部のモデル名を開き、使えるモデルから選ぶ。",
+          "複数を比べる場合はモデルの追加操作から選択欄を増やす。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/layout/Navbar.svelte",
+            "date": "2024-09-07",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2024-09-07",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name at the top of the chat and choose an available model.",
+          "Use the add-model action to add selectors for comparison."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデルを追加",
+          "when": "2024-09-08..2024-09-08",
+          "where": "上部のモデル選択の隣にあるAdd Modelの補助表示。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/chat/ModelSelector.svelte",
+              "date": "2024-09-07",
+              "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+            },
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/layout/Navbar.svelte",
+              "date": "2024-09-07",
+              "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+            }
+          ],
+          "text_en": "Add a model",
+          "where_en": "Add Model helper text beside the top model selector."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-09-08",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/layout/Navbar.svelte",
+            "date": "2024-09-07",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          }
+        ]
+      },
+      "trend": "上部に複数のモデルを並べて選ぶ作りが見られる（出典：https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/layout/Navbar.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Multiple models can be selected side by side at the top. (https://github.com/open-webui/open-webui/blob/50db51ebe08c018bf46acfaf55985ff998da50bc/src/lib/components/layout/Navbar.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2025-04",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話上部のモデル名を開き、使えるモデルから選ぶ。",
+          "複数を比べる場合はモデルの追加操作から選択欄を増やす。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/layout/Navbar.svelte",
+            "date": "2025-04-01",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2025-04-01",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name at the top of the chat and choose an available model.",
+          "Use the add-model action to add selectors for comparison."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "既定にする",
+          "when": "2025-04-01..2025-04-01",
+          "where": "上部の選択器の下にあるSet as default。表示条件がある小さい操作で、全画面共通のメニューではない。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/chat/ModelSelector.svelte",
+              "date": "2025-04-01",
+              "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+            },
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/layout/Navbar.svelte",
+              "date": "2025-04-01",
+              "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+            }
+          ],
+          "text_en": "Set as default",
+          "where_en": "Set as default below the top selector, shown conditionally."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-04-01",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/layout/Navbar.svelte",
+            "date": "2025-04-01",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          }
+        ]
+      },
+      "trend": "会話ヘッダーにモデル選択と既定の保存をまとめる（出典：https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/layout/Navbar.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "The chat header groups model selection and saving a default. (https://github.com/open-webui/open-webui/blob/04799f1f95f958674d35ba4854ef62754a4d332e/src/lib/components/layout/Navbar.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2025-09",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話上部のモデル名を開き、使えるモデルから選ぶ。",
+          "複数を比べる場合はモデルの追加操作から選択欄を増やす。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/Navbar.svelte",
+            "date": "2025-09-17",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2025-09-17",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name at the top of the chat and choose an available model.",
+          "Use the add-model action to add selectors for comparison."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "添付や道具を追加",
+          "when": "2025-09-17..2025-09-17",
+          "where": "入力部の＋から開く追加操作。短い機能説明で、更新バナーではない。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/MessageInput.svelte",
+              "date": "2025-09-17",
+              "shows": "入力欄の追加操作を持つ。同じ版のソースだけを使い、11月版の配置を9月へ遡らせない。"
+            }
+          ],
+          "text_en": "Add attachments or tools",
+          "where_en": "Additional actions opened from + in the input. Brief feature description."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-09-17",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/Navbar.svelte",
+            "date": "2025-09-17",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          }
+        ]
+      },
+      "trend": "上のモデル選択と下の追加操作に、会話の設定を分けて置く（出典：https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/Navbar.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Chat settings are split between top model selection and lower add actions. (https://github.com/open-webui/open-webui/blob/dddd1e44f37e0b489d10abbc21667e16d62722f6/src/lib/components/chat/Navbar.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2025-11",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "会話上部のモデル名を開き、使えるモデルから選ぶ。",
+          "複数を比べる場合はモデルの追加操作から選択欄を増やす。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/Navbar.svelte",
+            "date": "2025-11-06",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2025-11-06",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name at the top of the chat and choose an available model.",
+          "Use the add-model action to add selectors for comparison."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデルを追加",
+          "when": "2025-11-06..2025-11-06",
+          "where": "会話上部の選択器にある追加操作。比較の固定モデル数は設定しない。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/ModelSelector.svelte",
+              "date": "2025-11-06",
+              "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+            },
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/Navbar.svelte",
+              "date": "2025-11-06",
+              "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+            }
+          ],
+          "text_en": "Add a model",
+          "where_en": "Add action in the top chat selector. Keep the comparison model count variable."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-11-06",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/Navbar.svelte",
+            "date": "2025-11-06",
+            "shows": "ModelSelectorを画面上部の固定された会話ヘッダーに置く。"
+          }
+        ]
+      },
+      "trend": "上部のモデル選択を保ち、入力部に追加の操作をまとめる（出典：https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/Navbar.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "The top model selector remains while additional actions gather in the input. (https://github.com/open-webui/open-webui/blob/e85c7f79310f351672fe967a102396b6f3f5e88b/src/lib/components/chat/Navbar.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2026-07",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "文章入力部の操作列にあるモデル名を開き、使えるモデルから選ぶ。",
+          "候補と既定は接続先や権限に依存する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-07-27",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2026-07-27",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name in the text input toolbar and choose an available model.",
+          "Options and defaults depend on the provider and permissions."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "左欄の幅を変更",
+          "when": "2026-07-27..2026-07-27",
+          "where": "左の会話一覧の端を動かす操作。常設の説明文という意味ではなく、操作の短い言い換え。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/layout/Sidebar.svelte",
+              "date": "2026-07-27",
+              "shows": "左欄の幅を変える操作とフォルダの一覧を実装する。"
+            }
+          ],
+          "text_en": "Resize the sidebar",
+          "where_en": "Drag the edge of the chat sidebar to resize it."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-07-27",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-07-27",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          }
+        ]
+      },
+      "trend": "モデル選択を入力部へ寄せ、左の一覧の幅も調整できる作りになる（出典：https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/chat/MessageInput.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Model selection moves toward the input, with a resizable left sidebar. (https://github.com/open-webui/open-webui/blob/f9590b8017199e56d5e953657e6498e3cef1d246/src/lib/components/chat/MessageInput.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2026-10",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "文章入力部の操作列にあるモデル名を開き、使えるモデルから選ぶ。",
+          "候補と既定は接続先や権限に依存する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-10-10",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2026-10-10",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name in the text input toolbar and choose an available model.",
+          "Options and defaults depend on the provider and permissions."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "使える道具を選ぶ",
+          "when": "2026-10-10..2026-10-10",
+          "where": "文章入力部の道具選択。利用可能な道具と権限がある場合に限る。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/MessageInput.svelte",
+              "date": "2026-10-10",
+              "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+            }
+          ],
+          "text_en": "Choose available tools",
+          "where_en": "Tool selector in the text input, shown when tools and permissions are available."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-10-10",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-10-10",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          }
+        ]
+      },
+      "trend": "入力部にモデルと道具の操作を集める（出典：https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/MessageInput.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Model and tool controls gather in the input. (https://github.com/open-webui/open-webui/blob/15818d88fd7bde1b73de33590f50d15d21e8d7c1/src/lib/components/chat/MessageInput.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    },
+    {
+      "id": "open-webui-2026-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデルを選ぶ（Select a model）",
+        "steps": [
+          "文章入力部の操作列にあるモデル名を開き、使えるモデルから選ぶ。",
+          "候補と既定は接続先や権限に依存する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-11-03",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          },
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/ModelSelector.svelte",
+            "date": "2026-11-03",
+            "shows": "モデル選択器の固定ソース。候補は管理者の接続先と利用者の権限で変わる。Select a model、Add Model、Set as defaultなどの操作は表示条件による。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name in the text input toolbar and choose an available model.",
+          "Options and defaults depend on the provider and permissions."
+        ],
+        "label_en": "Select a model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "作業タブ",
+          "when": "2026-11-03..2026-11-03",
+          "where": "会話上部のTabs操作。会話や選択した端末がある場合など、条件により表示される。",
+          "sources": [
+            {
+              "url": "https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/Navbar.svelte",
+              "date": "2026-11-03",
+              "shows": "上部のTabs操作と表示条件、作業欄のタブを確認する。"
+            }
+          ],
+          "text_en": "Task tabs",
+          "where_en": "Tabs at the top of chat, shown conditionally for chats or selected terminals."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-03",
+        "sources": [
+          {
+            "url": "https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/MessageInput.svelte",
+            "date": "2026-11-03",
+            "shows": "ModelSelectorを文章入力部の操作列に置く。2026年版へ以前の上部選択器を流用しない。"
+          }
+        ]
+      },
+      "trend": "入力部でモデルを選び、別の作業を上のタブで開く作りになる（出典：https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/MessageInput.svelte）。",
+      "unverified": [
+        "接続先の全候補と固定の既定モデルはunverified。空のoptionsは候補なしを意味しない",
+        "ブラウザー名、OSの版、全利用者の配布日はunverified"
+      ],
+      "trend_en": "Models are chosen in the input, with other tasks opened in top tabs. (https://github.com/open-webui/open-webui/blob/c38885a1a737da4968f157092f304f3b5481d0bf/src/lib/components/chat/MessageInput.svelte)",
+      "unverified_en": [
+        "unverified (all provider options and a fixed default). Empty options leaves available candidates unspecified.",
+        "unverified (browser name, OS version and rollout dates for all users)."
+      ]
+    }
+  ]
+}

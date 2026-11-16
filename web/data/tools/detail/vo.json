@@ -1,0 +1,3471 @@
+{
+  "voideditor--void": {
+    "topics": [
+      "chatgpt",
+      "claude",
+      "copilot",
+      "cursor",
+      "developer-tools",
+      "editor",
+      "llm",
+      "open-source",
+      "openai",
+      "visual-studio-code",
+      "vscode",
+      "vscode-extension"
+    ],
+    "homepage": "https://voideditor.com",
+    "archived": true,
+    "commit": "b3166e7ef2aefbdfeb139445fdf248a561b85d4d",
+    "classification_basis": "Canonical primary-product rule for voideditor/void; repository description and README are retained as evidence",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2025-01-19"
+      ],
+      [
+        "v1.0.2",
+        "2025-03-22"
+      ],
+      [
+        "v1.3.4",
+        "2025-04-15"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/vs/workbench/common/theme.ts",
+        "src/vs/workbench/browser/style.ts",
+        "src/vs/editor/common/editorTheme.ts",
+        "src/vs/editor/common/model/tokens.ts",
+        "src/vs/platform/theme/common/theme.ts",
+        "cli/src/util/input.rs",
+        "cli/src/bin/code/main.rs",
+        "src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/Sidebar.tsx",
+        "src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "cli/src/commands/context.rs",
+        "src/typings/editContext.d.ts",
+        "src/vs/base/browser/contextmenu.ts",
+        "src/vs/workbench/common/contextkeys.ts",
+        "src/vs/workbench/contrib/chat/common/tools/tools.ts",
+        "src/vs/workbench/contrib/void/common/prompt/prompts.ts",
+        "src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+        "src/cli.ts",
+        "src/main.ts",
+        "cli/src/util/io.rs",
+        "cli/src/commands.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/editFileTool.ts"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "font_ui": "-apple-system, BlinkMacSystemFont, sans-serif",
+      "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/media/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "font_ui",
+        "value": "-apple-system, BlinkMacSystemFont, sans-serif",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/media/style.css",
+        "line": 12
+      }
+    ],
+    "strings": [
+      "Result",
+      "Provider Name",
+      "Model Name",
+      "Models",
+      "Local Providers",
+      "Main Providers",
+      "Feature Options",
+      "General",
+      "MCP",
+      "All Settings",
+      "Override model defaults",
+      "Cancel",
+      "Save",
+      "Add a model",
+      "Transferring",
+      "An absolute path to the file to edit, or the URI of a untitled, not yet named, file, such as",
+      "io::Result",
+      "Option",
+      "Poll",
+      "mpsc::UnboundedReceiver"
+    ],
+    "string_evidence": [
+      {
+        "text": "Result",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/input.rs",
+        "line": 41,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Provider Name",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 539,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Model Name",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 553,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Models",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1039,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Local Providers",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1040,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Main Providers",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1041,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Feature Options",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1042,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "General",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1043,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "MCP",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1044,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "All Settings",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 1045,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Override model defaults",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 334,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Cancel",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 356,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Save",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 362,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Add a model",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 595,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Transferring",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "line": 912,
+        "kind": "visible-text"
+      },
+      {
+        "text": "An absolute path to the file to edit, or the URI of a untitled, not yet named, file, such as",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+        "line": 63,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "io::Result",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs",
+        "line": 38,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Option",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs",
+        "line": 79,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Poll",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs",
+        "line": 89,
+        "kind": "visible-text"
+      },
+      {
+        "text": "mpsc::UnboundedReceiver",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs",
+        "line": 122,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/voideditor/void",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/README.md",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/package.json",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/Cargo.toml",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/extensions/theme-defaults/package.json",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/remote/package.json",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/common/theme.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/style.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/editor/common/editorTheme.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/editor/common/model/tokens.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/platform/theme/common/theme.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/extensions/markdown-math/preview-styles/index.css",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/input.rs",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/bin/code/main.rs",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/Sidebar.tsx",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/commands/context.rs",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/typings/editContext.d.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/base/browser/contextmenu.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/common/contextkeys.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/tools.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/common/prompt/prompts.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/cli.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/main.ts",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/commands.rs",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/media/style.css",
+      "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/styles.css",
+      "https://api.github.com/repos/voideditor/void/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/package.json"
+      },
+      {
+        "path": "cli/Cargo.toml",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/Cargo.toml"
+      },
+      {
+        "path": "extensions/theme-defaults/package.json",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/extensions/theme-defaults/package.json"
+      },
+      {
+        "path": "remote/package.json",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/remote/package.json"
+      },
+      {
+        "path": "src/vs/workbench/common/theme.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/common/theme.ts"
+      },
+      {
+        "path": "src/vs/workbench/browser/style.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/style.ts"
+      },
+      {
+        "path": "src/vs/editor/common/editorTheme.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/editor/common/editorTheme.ts"
+      },
+      {
+        "path": "src/vs/editor/common/model/tokens.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/editor/common/model/tokens.ts"
+      },
+      {
+        "path": "src/vs/platform/theme/common/theme.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/platform/theme/common/theme.ts"
+      },
+      {
+        "path": "extensions/markdown-math/preview-styles/index.css",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/extensions/markdown-math/preview-styles/index.css"
+      },
+      {
+        "path": "cli/src/util/input.rs",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/input.rs"
+      },
+      {
+        "path": "cli/src/bin/code/main.rs",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/bin/code/main.rs"
+      },
+      {
+        "path": "src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/Sidebar.tsx",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/sidebar-tsx/Sidebar.tsx"
+      },
+      {
+        "path": "src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/void-settings-tsx/Settings.tsx"
+      },
+      {
+        "path": "cli/src/commands/context.rs",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/commands/context.rs"
+      },
+      {
+        "path": "src/typings/editContext.d.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/typings/editContext.d.ts"
+      },
+      {
+        "path": "src/vs/base/browser/contextmenu.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/base/browser/contextmenu.ts"
+      },
+      {
+        "path": "src/vs/workbench/common/contextkeys.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/common/contextkeys.ts"
+      },
+      {
+        "path": "src/vs/workbench/contrib/chat/common/tools/tools.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/tools.ts"
+      },
+      {
+        "path": "src/vs/workbench/contrib/void/common/prompt/prompts.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/common/prompt/prompts.ts"
+      },
+      {
+        "path": "src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/editFileTool.ts"
+      },
+      {
+        "path": "src/cli.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/cli.ts"
+      },
+      {
+        "path": "src/main.ts",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/main.ts"
+      },
+      {
+        "path": "cli/src/util/io.rs",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/util/io.rs"
+      },
+      {
+        "path": "cli/src/commands.rs",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/cli/src/commands.rs"
+      },
+      {
+        "path": "src/vs/workbench/browser/media/style.css",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/browser/media/style.css"
+      },
+      {
+        "path": "src/vs/workbench/contrib/void/browser/react/src/styles.css",
+        "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/void/browser/react/src/styles.css"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:claude stars:10000..29999 fork:false",
+      "topic:copilot stars:10000..29999 fork:false",
+      "topic:openai stars:10000..29999 fork:false",
+      "topic:chatgpt stars:10000..29999 fork:false",
+      "seed:Void"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=20, theme=1.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Canonical primary-product rule for voideditor/void; repository description and README are retained as evidence",
+    "repository_id": 855528273,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.884Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+          "source": "https://github.com/voideditor/void/blob/b3166e7ef2aefbdfeb139445fdf248a561b85d4d/src/vs/workbench/contrib/chat/common/tools/editFileTool.ts",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "voyager-crew--voyager": {
+    "topics": [
+      "ai-studio",
+      "browser-extension",
+      "bun",
+      "chat-management",
+      "chatgpt",
+      "chrome-extension",
+      "claude-ai",
+      "deepseek",
+      "dsh",
+      "edge-addon",
+      "firefox-addons",
+      "gemini",
+      "safari-extension"
+    ],
+    "homepage": "https://voyager.nagi.fun/en",
+    "archived": false,
+    "commit": "44043578411df812f35e80b0f92da7537c0cb784",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.2.2",
+        "2025-10-05"
+      ],
+      [
+        "v1.3.8",
+        "2026-03-29"
+      ],
+      [
+        "v1.3.9",
+        "2026-04-05"
+      ],
+      [
+        "v1.4.0",
+        "2026-04-18"
+      ],
+      [
+        "v1.4.1",
+        "2026-04-23"
+      ],
+      [
+        "v1.4.2",
+        "2026-04-23"
+      ],
+      [
+        "v1.4.3",
+        "2026-05-02"
+      ],
+      [
+        "v1.4.4",
+        "2026-05-15"
+      ],
+      [
+        "v1.4.5",
+        "2026-05-19"
+      ],
+      [
+        "v1.4.6",
+        "2026-05-21"
+      ],
+      [
+        "v1.4.7",
+        "2026-05-28"
+      ],
+      [
+        "v1.4.8",
+        "2026-06-06"
+      ],
+      [
+        "v1.4.9",
+        "2026-06-10"
+      ],
+      [
+        "v1.4.10-beta.1",
+        "2026-06-10"
+      ],
+      [
+        "v1.5.0",
+        "2026-06-16"
+      ],
+      [
+        "v1.5.1",
+        "2026-06-21"
+      ],
+      [
+        "v1.5.2",
+        "2026-06-25"
+      ],
+      [
+        "v1.5.3",
+        "2026-06-27"
+      ],
+      [
+        "v1.5.4",
+        "2026-07-02"
+      ],
+      [
+        "issue-798-sidebar-hitguard-test",
+        "2026-07-03"
+      ],
+      [
+        "v1.5.5",
+        "2026-07-09"
+      ],
+      [
+        "v1.5.6",
+        "2026-07-13"
+      ],
+      [
+        "v1.5.7",
+        "2026-07-16"
+      ],
+      [
+        "v1.6.0",
+        "2026-07-18"
+      ],
+      [
+        "v1.7.0",
+        "2026-07-31"
+      ],
+      [
+        "v1.7.1",
+        "2026-08-07"
+      ],
+      [
+        "v1.8.0",
+        "2026-08-26"
+      ],
+      [
+        "v1.8.1",
+        "2026-08-26"
+      ],
+      [
+        "v1.8.2",
+        "2026-08-30"
+      ],
+      [
+        "v1.8.3",
+        "2026-09-07"
+      ],
+      [
+        "v1.9.0",
+        "2026-09-17"
+      ],
+      [
+        "v2.0.0",
+        "2026-10-14"
+      ],
+      [
+        "v2.0.1",
+        "2026-10-17"
+      ],
+      [
+        "v2.1.0",
+        "2026-10-18"
+      ],
+      [
+        "v2.1.1",
+        "2026-10-19"
+      ],
+      [
+        "v2.2.0",
+        "2026-10-20"
+      ],
+      [
+        "v2.2.1",
+        "2026-10-24"
+      ],
+      [
+        "v2.3.0",
+        "2026-10-31"
+      ],
+      [
+        "v2.3.1",
+        "2026-11-02"
+      ],
+      [
+        "v2.3.2",
+        "2026-11-12"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/core/ui/themeVariables.ts",
+        "src/pages/popup/utils/brandTheme.ts",
+        "src/pages/content/prompt/slashTheme.ts",
+        "src/pages/content/platformTheme/index.ts",
+        "docs/.vitepress/theme/index.ts",
+        "src/components/ui/input.tsx",
+        "src/core/utils/extensionContext.ts",
+        "src/pages/content/fork/forkContext.ts",
+        "src/pages/content/panelShell/context.ts",
+        "src/core/gemini/selectors/projectKeys.ts",
+        "src/pages/content/prompt/index.ts",
+        "src/pages/content/prompt/pageScheme.ts",
+        "src/pages/content/prompt/promptBall.ts",
+        "src/core/index.ts",
+        "src/pages/panel/index.tsx",
+        "src/pages/popup/index.tsx",
+        "src/pages/panel/create/CreationReview.tsx",
+        "src/pages/content/platformTheme/scheme.ts",
+        "src/pages/content/prompt/promptThemeToggle.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/gpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "text": "oklch(1 0 0)",
+      "accent": "#5f8f55",
+      "font_ui": "-apple-system",
+      "font_mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/tokens.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "text",
+        "key": "--gv-ui-danger-fg",
+        "value": "oklch(1 0 0)",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/tokens.css",
+        "line": 22
+      },
+      {
+        "token": "accent",
+        "key": "DEFAULT_ACCENT",
+        "value": "#5f8f55",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/platformTheme/index.ts",
+        "line": 73
+      },
+      {
+        "token": "font_ui",
+        "value": "-apple-system",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/index.css",
+        "line": 2
+      },
+      {
+        "token": "font_mono",
+        "value": "ui-monospace, SFMono-Regular, Menlo, monospace",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/create.css",
+        "line": 155
+      }
+    ],
+    "strings": [
+      "Voyager",
+      "Extension name",
+      "Extension description",
+      "Timeline style",
+      "Timeline visual style label",
+      "Nodes",
+      "Classic timeline node style",
+      "Compact",
+      "Compact timeline index style",
+      "Ruler",
+      "Scroll mode",
+      "Features",
+      "Panel tab that lists the features of the site being viewed",
+      "Sites",
+      "Panel tab that lists the sites Voyager can reach",
+      "Create",
+      "Installing…",
+      "Voyager panel",
+      "Hide",
+      "Tooltip of the floating button satellite that hides the floating button",
+      "Hide floating button",
+      "Undo",
+      "Manage prompts…",
+      "Voyager panel…",
+      "Expand text",
+      "Button that expands collapsed long content",
+      "Collapse text",
+      "Button that collapses expanded long content",
+      "Site check",
+      "Label of the small floating button that opens Voyager's site check panel"
+    ],
+    "string_evidence": [
+      {
+        "text": "Voyager",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Extension name",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Extension description",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Timeline style",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Timeline visual style label",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Nodes",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 15,
+        "kind": "i18n"
+      },
+      {
+        "text": "Classic timeline node style",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 16,
+        "kind": "i18n"
+      },
+      {
+        "text": "Compact",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Compact timeline index style",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 20,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ruler",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 23,
+        "kind": "i18n"
+      },
+      {
+        "text": "Scroll mode",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+        "line": 31,
+        "kind": "i18n"
+      },
+      {
+        "text": "Features",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Panel tab that lists the features of the site being viewed",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sites",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Panel tab that lists the sites Voyager can reach",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Create",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Installing…",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+        "line": 75,
+        "kind": "i18n"
+      },
+      {
+        "text": "Voyager panel",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Hide",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Tooltip of the floating button satellite that hides the floating button",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Hide floating button",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Undo",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Manage prompts…",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 23,
+        "kind": "i18n"
+      },
+      {
+        "text": "Voyager panel…",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+        "line": 27,
+        "kind": "i18n"
+      },
+      {
+        "text": "Expand text",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Button that expands collapsed long content",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Collapse text",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Button that collapses expanded long content",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Site check",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/siteCheck/messages/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Label of the small floating button that opens Voyager's site check panel",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/siteCheck/messages/en.json",
+        "line": 4,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/voyager-crew/voyager",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/README.md",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/.github/contributing/en/getting-started.md",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/.github/contributing/zh/getting-started.md",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/package.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/packages/bridge-protocol/package.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/packages/create-voyager-plugin/package.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/tokens.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/themeVariables.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/utils/brandTheme.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/slashTheme.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/platformTheme/index.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/docs/.vitepress/theme/index.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/index.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/library/index.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/siteCheck/messages/en.json",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/components/ui/input.tsx",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/utils/extensionContext.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/fork/forkContext.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/context.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/gemini/selectors/projectKeys.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/index.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/pageScheme.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/promptBall.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/index.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/index.tsx",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/index.tsx",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/create/CreationReview.tsx",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/panel.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/rows.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/fontSize.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/sync.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/create.css",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/platformTheme/scheme.ts",
+      "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/promptThemeToggle.ts",
+      "https://api.github.com/repos/voyager-crew/voyager/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/README.md"
+      },
+      {
+        "path": ".github/contributing/en/getting-started.md",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/.github/contributing/en/getting-started.md"
+      },
+      {
+        "path": ".github/contributing/zh/getting-started.md",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/.github/contributing/zh/getting-started.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/package.json"
+      },
+      {
+        "path": "packages/bridge-protocol/package.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/packages/bridge-protocol/package.json"
+      },
+      {
+        "path": "packages/create-voyager-plugin/package.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/packages/create-voyager-plugin/package.json"
+      },
+      {
+        "path": "src/core/ui/tokens.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/tokens.css"
+      },
+      {
+        "path": "src/core/ui/themeVariables.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/ui/themeVariables.ts"
+      },
+      {
+        "path": "src/pages/popup/utils/brandTheme.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/utils/brandTheme.ts"
+      },
+      {
+        "path": "src/pages/content/prompt/slashTheme.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/slashTheme.ts"
+      },
+      {
+        "path": "src/pages/content/platformTheme/index.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/platformTheme/index.ts"
+      },
+      {
+        "path": "docs/.vitepress/theme/index.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/docs/.vitepress/theme/index.ts"
+      },
+      {
+        "path": "src/pages/popup/index.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/index.css"
+      },
+      {
+        "path": "src/pages/library/index.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/library/index.css"
+      },
+      {
+        "path": "src/locales/en/messages.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/locales/en/messages.json"
+      },
+      {
+        "path": "src/pages/panel/messages/en.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/messages/en.json"
+      },
+      {
+        "path": "src/pages/content/panelShell/messages/en.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/messages/en.json"
+      },
+      {
+        "path": "src/features/plugins/verbs/collapse/messages/en.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/collapse/messages/en.json"
+      },
+      {
+        "path": "src/features/plugins/verbs/siteCheck/messages/en.json",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/features/plugins/verbs/siteCheck/messages/en.json"
+      },
+      {
+        "path": "src/components/ui/input.tsx",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/components/ui/input.tsx"
+      },
+      {
+        "path": "src/core/utils/extensionContext.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/utils/extensionContext.ts"
+      },
+      {
+        "path": "src/pages/content/fork/forkContext.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/fork/forkContext.ts"
+      },
+      {
+        "path": "src/pages/content/panelShell/context.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/panelShell/context.ts"
+      },
+      {
+        "path": "src/core/gemini/selectors/projectKeys.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/gemini/selectors/projectKeys.ts"
+      },
+      {
+        "path": "src/pages/content/prompt/index.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/index.ts"
+      },
+      {
+        "path": "src/pages/content/prompt/pageScheme.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/pageScheme.ts"
+      },
+      {
+        "path": "src/pages/content/prompt/promptBall.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/promptBall.ts"
+      },
+      {
+        "path": "src/core/index.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/core/index.ts"
+      },
+      {
+        "path": "src/pages/panel/index.tsx",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/index.tsx"
+      },
+      {
+        "path": "src/pages/popup/index.tsx",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/popup/index.tsx"
+      },
+      {
+        "path": "src/pages/panel/create/CreationReview.tsx",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/create/CreationReview.tsx"
+      },
+      {
+        "path": "src/pages/panel/styles/panel.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/panel.css"
+      },
+      {
+        "path": "src/pages/panel/styles/rows.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/rows.css"
+      },
+      {
+        "path": "src/pages/panel/styles/fontSize.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/fontSize.css"
+      },
+      {
+        "path": "src/pages/panel/styles/sync.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/sync.css"
+      },
+      {
+        "path": "src/pages/panel/styles/create.css",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/panel/styles/create.css"
+      },
+      {
+        "path": "src/pages/content/platformTheme/scheme.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/platformTheme/scheme.ts"
+      },
+      {
+        "path": "src/pages/content/prompt/promptThemeToggle.ts",
+        "source": "https://github.com/voyager-crew/voyager/blob/44043578411df812f35e80b0f92da7537c0cb784/src/pages/content/prompt/promptThemeToggle.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:15.023Z",
+      "source_count": 10,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / other",
+    "repository_id": 1069943001,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voltagent--voltagent": {
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "ai-agents-framework",
+      "aiagentframework",
+      "chatbots",
+      "chatgpt",
+      "framework",
+      "javascript",
+      "llm",
+      "llm-observability",
+      "mcp",
+      "multiagent",
+      "nodejs",
+      "observability",
+      "open-source",
+      "openai",
+      "rag",
+      "tts",
+      "typescript"
+    ],
+    "homepage": "https://voltagent.dev",
+    "archived": false,
+    "commit": "e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "@voltagent/supabase@0.1.1",
+        "2025-04-22"
+      ],
+      [
+        "@voltagent/serverless-hono@2.0.11",
+        "2026-04-22"
+      ],
+      [
+        "@voltagent/server-hono@2.0.10",
+        "2026-04-22"
+      ],
+      [
+        "@voltagent/server-hono@2.0.11",
+        "2026-04-22"
+      ],
+      [
+        "@voltagent/server-hono@2.0.12",
+        "2026-04-22"
+      ],
+      [
+        "@voltagent/server-core@2.1.15",
+        "2026-04-23"
+      ],
+      [
+        "@voltagent/core@2.7.2",
+        "2026-04-23"
+      ],
+      [
+        "@voltagent/core@2.7.3",
+        "2026-04-25"
+      ],
+      [
+        "@voltagent/server-core@2.1.16",
+        "2026-04-25"
+      ],
+      [
+        "@voltagent/server-hono@2.0.13",
+        "2026-04-25"
+      ],
+      [
+        "@voltagent/sdk@2.0.3",
+        "2026-04-28"
+      ],
+      [
+        "@voltagent/core@2.7.4",
+        "2026-04-28"
+      ],
+      [
+        "@voltagent/sandbox-blaxel@2.1.0",
+        "2026-05-11"
+      ],
+      [
+        "@voltagent/core@2.7.5",
+        "2026-05-22"
+      ],
+      [
+        "@voltagent/server-core@2.1.17",
+        "2026-05-25"
+      ],
+      [
+        "@voltagent/server-elysia@2.0.9",
+        "2026-05-31"
+      ],
+      [
+        "@voltagent/server-hono@2.0.14",
+        "2026-05-31"
+      ],
+      [
+        "@voltagent/core@2.7.6",
+        "2026-05-31"
+      ],
+      [
+        "@voltagent/serverless-hono@2.0.12",
+        "2026-05-31"
+      ],
+      [
+        "@voltagent/server-core@2.1.18",
+        "2026-05-31"
+      ],
+      [
+        "@voltagent/core@2.7.7",
+        "2026-06-08"
+      ],
+      [
+        "@voltagent/core@2.8.0",
+        "2026-06-23"
+      ],
+      [
+        "@voltagent/sandbox-blaxel@2.1.1",
+        "2026-07-01"
+      ],
+      [
+        "@voltagent/sandbox-e2b@2.0.3",
+        "2026-07-01"
+      ],
+      [
+        "@voltagent/core@2.8.1",
+        "2026-07-01"
+      ],
+      [
+        "@voltagent/sandbox-daytona@2.0.3",
+        "2026-07-01"
+      ],
+      [
+        "@voltagent/server-core@2.1.19",
+        "2026-07-01"
+      ],
+      [
+        "@voltagent/core@2.9.0",
+        "2026-07-08"
+      ],
+      [
+        "@voltagent/server-core@2.1.20",
+        "2026-08-03"
+      ],
+      [
+        "@voltagent/core@2.9.2",
+        "2026-08-03"
+      ],
+      [
+        "@voltagent/docs-mcp@2.0.3",
+        "2026-08-03"
+      ],
+      [
+        "@voltagent/mcp-server@2.1.0",
+        "2026-08-03"
+      ],
+      [
+        "@voltagent/postgres@2.1.3",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/ag-ui@1.0.8",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/evals@2.0.5",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/core@2.10.0",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/mcp-server@2.2.0",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/voltagent-memory@1.0.5",
+        "2026-08-27"
+      ],
+      [
+        "@voltagent/core@2.11.0",
+        "2026-09-28"
+      ],
+      [
+        "@voltagent/core@2.11.1",
+        "2026-11-04"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "npm create voltagent-app@latest",
+    "install_evidence": [
+      {
+        "command": "npm create voltagent-app@latest",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/README.md",
+        "line": 80
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "website/src/theme/TOC/index.js",
+        "website/src/theme/Tag/index.js",
+        "website/src/theme/Root.tsx",
+        "examples/with-nextjs/app/layout.tsx",
+        "examples/with-chat-sdk/app/layout.tsx",
+        "examples/with-assistant-ui/app/layout.tsx",
+        "examples/with-copilotkit/client/src/App.tsx",
+        "examples/with-copilotkit/client/src/main.tsx",
+        "examples/with-nextjs/app/page.tsx",
+        "examples/with-chat-sdk/app/page.tsx",
+        "packages/core/src/context-keys.ts",
+        "packages/libsql/src/memory-core.ts",
+        "packages/core/src/workflow/context.ts",
+        "packages/core/src/agent/context-keys.ts",
+        "packages/core/src/tool/index.ts",
+        "packages/core/src/tool/toolkit.ts",
+        "tools/core/src/index.ts",
+        "packages/cli/src/index.ts",
+        "packages/rag/src/index.ts",
+        "examples/with-nextjs-resumable-stream/components/ai-elements/web-preview.tsx",
+        "examples/next-js-chatbot-starter-template/components/ai-elements/web-preview.tsx",
+        "website/src/pages/index.tsx",
+        "examples/with-mcp-elicitation/go-server/main.go",
+        "packages/rag/src/utils/tokenizer.ts",
+        "packages/rag/src/chunkers/token-chunker.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "packages/core/src/tool/index.ts",
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "packages/core/src/tool/index.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/index.ts"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Table of Contents",
+      "Nuxt VoltAgent Demo",
+      "A demo of the VoltAgent framework powered by Nuxt, Nuxt UI, and OpenAI.",
+      "GitHub",
+      "VoltAgent",
+      "Star on GitHub",
+      "Built with",
+      "Nuxt",
+      "VoltAgent Calculator",
+      "AI-powered calculation made simple",
+      "VoltAgent + Chat SDK Slack Bot",
+      "Slack bot example powered by Chat SDK transport and VoltAgent reasoning.",
+      "assistant-ui Starter App",
+      "Generated by create-assistant-ui",
+      "Your Assistant",
+      "Weather in San Francisco",
+      "What",
+      "Weather in New York",
+      "Tell me about the weather in New York.",
+      "Weather in Tokyo",
+      "How",
+      "Supervisor Agent with Sub-Agents",
+      "Watch how the supervisor delegates tasks to specialized agents",
+      "Built with Next.js and VoltAgent",
+      "This example exposes a webhook endpoint at",
+      "suspended",
+      "Promise",
+      "ToolExecutionResult",
+      "VoltAgent CLI - CLI tool for update checks",
+      "Enter URL..."
+    ],
+    "string_evidence": [
+      {
+        "text": "Table of Contents",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/TOC/index.js",
+        "line": 55,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Nuxt VoltAgent Demo",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 14,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "A demo of the VoltAgent framework powered by Nuxt, Nuxt UI, and OpenAI.",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 15,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "GitHub",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 80,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "VoltAgent",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 47,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Star on GitHub",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 57,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Built with",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 71,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Nuxt",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+        "line": 72,
+        "kind": "visible-text"
+      },
+      {
+        "text": "VoltAgent Calculator",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/layout.tsx",
+        "line": 16,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "AI-powered calculation made simple",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/layout.tsx",
+        "line": 17,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "VoltAgent + Chat SDK Slack Bot",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/layout.tsx",
+        "line": 5,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Slack bot example powered by Chat SDK transport and VoltAgent reasoning.",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/layout.tsx",
+        "line": 6,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "assistant-ui Starter App",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-assistant-ui/app/layout.tsx",
+        "line": 16,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Generated by create-assistant-ui",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-assistant-ui/app/layout.tsx",
+        "line": 17,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Your Assistant",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 49,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Weather in San Francisco",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 53,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "What",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 54,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Weather in New York",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 57,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Tell me about the weather in New York.",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 58,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Weather in Tokyo",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 61,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "How",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+        "line": 62,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Supervisor Agent with Sub-Agents",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/page.tsx",
+        "line": 20,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Watch how the supervisor delegates tasks to specialized agents",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/page.tsx",
+        "line": 21,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Built with Next.js and VoltAgent",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/page.tsx",
+        "line": 29,
+        "kind": "visible-text"
+      },
+      {
+        "text": "This example exposes a webhook endpoint at",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/page.tsx",
+        "line": 5,
+        "kind": "visible-text"
+      },
+      {
+        "text": "suspended",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/libsql/src/memory-core.ts",
+        "line": 1317,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Promise",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/libsql/src/memory-core.ts",
+        "line": 76,
+        "kind": "visible-text"
+      },
+      {
+        "text": "ToolExecutionResult",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/index.ts",
+        "line": 219,
+        "kind": "visible-text"
+      },
+      {
+        "text": "VoltAgent CLI - CLI tool for update checks",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/cli/src/index.ts",
+        "line": 26,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Enter URL...",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs-resumable-stream/components/ai-elements/web-preview.tsx",
+        "line": 141,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/VoltAgent/voltagent",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/README.md",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/package.json",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/core/package.json",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/cli/package.json",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/e2e/package.json",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/css/variables.css",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/TOC/index.js",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/Tag/index.js",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/globals.css",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/globals.css",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/Root.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/layout.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/layout.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-assistant-ui/app/layout.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/main.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/page.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/page.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/context-keys.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/libsql/src/memory-core.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/workflow/context.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/context-keys.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/README.md",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/index.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/toolkit.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/core/src/index.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/cli/src/index.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/index.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs-resumable-stream/components/ai-elements/web-preview.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/next-js-chatbot-starter-template/components/ai-elements/web-preview.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/pages/index.tsx",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/pages/index.vue",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-mcp-elicitation/go-server/main.go",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/utils/tokenizer.ts",
+      "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/chunkers/token-chunker.ts",
+      "https://api.github.com/repos/VoltAgent/voltagent/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/package.json"
+      },
+      {
+        "path": "tools/core/package.json",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/core/package.json"
+      },
+      {
+        "path": "packages/cli/package.json",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/cli/package.json"
+      },
+      {
+        "path": "packages/e2e/package.json",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/e2e/package.json"
+      },
+      {
+        "path": "website/src/css/variables.css",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/css/variables.css"
+      },
+      {
+        "path": "website/src/theme/TOC/index.js",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/TOC/index.js"
+      },
+      {
+        "path": "website/src/theme/Tag/index.js",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/Tag/index.js"
+      },
+      {
+        "path": "examples/with-nextjs/app/globals.css",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/globals.css"
+      },
+      {
+        "path": "examples/with-chat-sdk/app/globals.css",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/globals.css"
+      },
+      {
+        "path": "website/src/theme/Root.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/theme/Root.tsx"
+      },
+      {
+        "path": "examples/with-nuxt/app/app.vue",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/app.vue"
+      },
+      {
+        "path": "examples/with-nextjs/app/layout.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/layout.tsx"
+      },
+      {
+        "path": "examples/with-chat-sdk/app/layout.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/layout.tsx"
+      },
+      {
+        "path": "examples/with-assistant-ui/app/layout.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-assistant-ui/app/layout.tsx"
+      },
+      {
+        "path": "examples/with-copilotkit/client/src/App.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/App.tsx"
+      },
+      {
+        "path": "examples/with-copilotkit/client/src/main.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-copilotkit/client/src/main.tsx"
+      },
+      {
+        "path": "examples/with-nextjs/app/page.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs/app/page.tsx"
+      },
+      {
+        "path": "examples/with-chat-sdk/app/page.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-chat-sdk/app/page.tsx"
+      },
+      {
+        "path": "packages/core/src/context-keys.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/context-keys.ts"
+      },
+      {
+        "path": "packages/libsql/src/memory-core.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/libsql/src/memory-core.ts"
+      },
+      {
+        "path": "packages/core/src/workflow/context.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/workflow/context.ts"
+      },
+      {
+        "path": "packages/core/src/agent/context-keys.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/context-keys.ts"
+      },
+      {
+        "path": "tools/README.md",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/README.md"
+      },
+      {
+        "path": "packages/core/src/tool/index.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/index.ts"
+      },
+      {
+        "path": "packages/core/src/tool/toolkit.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/toolkit.ts"
+      },
+      {
+        "path": "tools/core/src/index.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/tools/core/src/index.ts"
+      },
+      {
+        "path": "packages/cli/src/index.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/cli/src/index.ts"
+      },
+      {
+        "path": "packages/rag/src/index.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/index.ts"
+      },
+      {
+        "path": "examples/with-nextjs-resumable-stream/components/ai-elements/web-preview.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nextjs-resumable-stream/components/ai-elements/web-preview.tsx"
+      },
+      {
+        "path": "examples/next-js-chatbot-starter-template/components/ai-elements/web-preview.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/next-js-chatbot-starter-template/components/ai-elements/web-preview.tsx"
+      },
+      {
+        "path": "website/src/pages/index.tsx",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/src/pages/index.tsx"
+      },
+      {
+        "path": "examples/with-nuxt/app/pages/index.vue",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-nuxt/app/pages/index.vue"
+      },
+      {
+        "path": "examples/with-mcp-elicitation/go-server/main.go",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/examples/with-mcp-elicitation/go-server/main.go"
+      },
+      {
+        "path": "packages/rag/src/utils/tokenizer.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/utils/tokenizer.ts"
+      },
+      {
+        "path": "packages/rag/src/chunkers/token-chunker.ts",
+        "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/rag/src/chunkers/token-chunker.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:10000..29999 fork:false",
+      "topic:mcp stars:10000..29999 fork:false",
+      "topic:openai stars:10000..29999 fork:false",
+      "topic:chatgpt stars:10000..29999 fork:false",
+      "topic:ai-agents stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=30, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / framework",
+    "repository_id": 967530387,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.870Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "packages/core/src/tool/index.ts",
+          "source": "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/index.ts",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "volcengine--minecontext": {
+    "topics": [
+      "agent",
+      "context-engineering",
+      "electron",
+      "embedding-models",
+      "javascript",
+      "memory",
+      "proactive-ai",
+      "python",
+      "python3",
+      "rag",
+      "react",
+      "typescript",
+      "vector-database",
+      "vision-language-model"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "171c7a9ea8091e326ddcf0f10718aa1b58c83c65",
+    "classification_basis": "package dependencies include Electron / Tauri and README describes a chat application",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "0.1.0",
+        "2025-09-30"
+      ],
+      [
+        "0.1.1",
+        "2025-10-11"
+      ],
+      [
+        "0.1.2",
+        "2025-10-15"
+      ],
+      [
+        "0.1.3",
+        "2025-10-24"
+      ],
+      [
+        "0.1.4",
+        "2025-11-01"
+      ],
+      [
+        "0.1.5",
+        "2025-11-14"
+      ],
+      [
+        "0.1.6",
+        "2025-11-18"
+      ],
+      [
+        "v0.1.7",
+        "2025-12-25"
+      ],
+      [
+        "v0.1.8",
+        "2026-01-28"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install -e .",
+    "install_evidence": [
+      {
+        "command": "pip install -e .",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/README.md",
+        "line": 407
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "frontend/src/renderer/src/App.tsx",
+        "frontend/src/renderer/src/main.tsx",
+        "opencontext/server/routes/settings.py",
+        "frontend/src/renderer/src/components/ui/input.tsx",
+        "frontend/src/renderer/src/pages/settings/settings.tsx",
+        "hook-opencontext.py",
+        "opencontext/models/context.py",
+        "opencontext/server/opencontext.py",
+        "opencontext/server/routes/context.py",
+        "opencontext/tools/base.py",
+        "opencontext/tools/tools_executor.py",
+        "opencontext/tools/tool_definitions.py",
+        "opencontext/cli.py",
+        "frontend/src/main/index.ts",
+        "frontend/src/preload/index.ts",
+        "frontend/src/renderer/src/components/ai-elements/web-preview.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#f8f9fa",
+      "font_ui": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+      "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/web/static/css/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "background-color",
+        "value": "#f8f9fa",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/web/static/css/style.css",
+        "line": 4
+      },
+      {
+        "token": "font_ui",
+        "value": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/web/static/css/style.css",
+        "line": 3
+      }
+    ],
+    "strings": [
+      "Cannot be empty",
+      "Model name",
+      "A VLM model with visual understanding capabilities is required.",
+      "Base URL",
+      "Enter your base URL",
+      "API Key",
+      "please select",
+      "--host",
+      "--port",
+      "--config",
+      "--reload",
+      "Host to bind to",
+      "Port to bind to",
+      "Configuration file path",
+      "Enable auto-reload for development",
+      "--workers",
+      "Available commands",
+      "Start OpenContext server",
+      "Host address (overrides config file)",
+      "Port number (overrides config file)",
+      "Number of worker processes (default: 1)",
+      "Enter URL...",
+      "Preview",
+      "No console output"
+    ],
+    "string_evidence": [
+      {
+        "text": "Cannot be empty",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 42,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Model name",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 45,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "A VLM model with visual understanding capabilities is required.",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 46,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Base URL",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 57,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Enter your base URL",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 58,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "API Key",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 69,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "please select",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+        "line": 149,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--host",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 279,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--port",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 280,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--config",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 282,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--reload",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 284,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "Host to bind to",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 279,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Port to bind to",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 281,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Configuration file path",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 283,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Enable auto-reload for development",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+        "line": 285,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--workers",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 162,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "Available commands",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 151,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Start OpenContext server",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 155,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Host address (overrides config file)",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 159,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Port number (overrides config file)",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 161,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Number of worker processes (default: 1)",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+        "line": 163,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Enter URL...",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ai-elements/web-preview.tsx",
+        "line": 119,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Preview",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ai-elements/web-preview.tsx",
+        "line": 139,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "No console output",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ai-elements/web-preview.tsx",
+        "line": 179,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/volcengine/MineContext",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/README.md",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/package.json",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/pyproject.toml",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/package.json",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/externals/python/window_capture/requirements.txt",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/web/static/css/style.css",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/assets/base.css",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/Sidebar/index.css",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/App.tsx",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/main.tsx",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/routes/settings.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ui/input.tsx",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/hook-opencontext.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/models/context.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/routes/context.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/base.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/tools_executor.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/tool_definitions.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/main/index.ts",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/preload/index.ts",
+      "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ai-elements/web-preview.tsx",
+      "https://api.github.com/repos/volcengine/MineContext/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/package.json"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/pyproject.toml"
+      },
+      {
+        "path": "frontend/package.json",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/package.json"
+      },
+      {
+        "path": "frontend/externals/python/window_capture/requirements.txt",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/externals/python/window_capture/requirements.txt"
+      },
+      {
+        "path": "opencontext/web/static/css/style.css",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/web/static/css/style.css"
+      },
+      {
+        "path": "frontend/src/renderer/src/assets/base.css",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/assets/base.css"
+      },
+      {
+        "path": "frontend/src/renderer/src/components/Sidebar/index.css",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/Sidebar/index.css"
+      },
+      {
+        "path": "frontend/src/renderer/src/App.tsx",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/App.tsx"
+      },
+      {
+        "path": "frontend/src/renderer/src/main.tsx",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/main.tsx"
+      },
+      {
+        "path": "opencontext/server/routes/settings.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/routes/settings.py"
+      },
+      {
+        "path": "frontend/src/renderer/src/components/ui/input.tsx",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ui/input.tsx"
+      },
+      {
+        "path": "frontend/src/renderer/src/pages/settings/settings.tsx",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/pages/settings/settings.tsx"
+      },
+      {
+        "path": "hook-opencontext.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/hook-opencontext.py"
+      },
+      {
+        "path": "opencontext/models/context.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/models/context.py"
+      },
+      {
+        "path": "opencontext/server/opencontext.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/opencontext.py"
+      },
+      {
+        "path": "opencontext/server/routes/context.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/server/routes/context.py"
+      },
+      {
+        "path": "opencontext/tools/base.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/base.py"
+      },
+      {
+        "path": "opencontext/tools/tools_executor.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/tools_executor.py"
+      },
+      {
+        "path": "opencontext/tools/tool_definitions.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/tool_definitions.py"
+      },
+      {
+        "path": "opencontext/cli.py",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/cli.py"
+      },
+      {
+        "path": "frontend/src/main/index.ts",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/main/index.ts"
+      },
+      {
+        "path": "frontend/src/preload/index.ts",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/preload/index.ts"
+      },
+      {
+        "path": "frontend/src/renderer/src/components/ai-elements/web-preview.tsx",
+        "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/frontend/src/renderer/src/components/ai-elements/web-preview.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:17.352Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "package dependencies include Electron / Tauri and README describes a chat application",
+    "repository_id": 1007681088,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.884Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "opencontext/tools/base.py",
+          "source": "https://github.com/volcengine/MineContext/blob/171c7a9ea8091e326ddcf0f10718aa1b58c83c65/opencontext/tools/base.py",
+          "verified": false
+        }
+      ]
+    }
+  },
+  "voocel--ainovel-cli": {
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "go",
+      "llm",
+      "novel",
+      "openai"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "e05771e136ea32363ca073f88281f46abb8373c0",
+    "classification_basis": "go.mod declares a TUI library",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2026-03-22"
+      ],
+      [
+        "v0.0.2",
+        "2026-03-26"
+      ],
+      [
+        "v0.0.3",
+        "2026-03-30"
+      ],
+      [
+        "v0.1.0",
+        "2026-04-13"
+      ],
+      [
+        "v0.1.2",
+        "2026-04-20"
+      ],
+      [
+        "v0.2.0",
+        "2026-04-24"
+      ],
+      [
+        "v0.3.0",
+        "2026-05-03"
+      ],
+      [
+        "v0.3.1",
+        "2026-05-05"
+      ],
+      [
+        "v0.4.0",
+        "2026-05-24"
+      ],
+      [
+        "v0.4.1",
+        "2026-05-29"
+      ],
+      [
+        "v0.4.2",
+        "2026-06-04"
+      ],
+      [
+        "v0.4.3",
+        "2026-06-06"
+      ],
+      [
+        "v0.4.5",
+        "2026-06-09"
+      ],
+      [
+        "v0.5.0",
+        "2026-06-14"
+      ],
+      [
+        "v0.5.1",
+        "2026-06-18"
+      ],
+      [
+        "v0.5.2",
+        "2026-06-20"
+      ],
+      [
+        "v0.5.3",
+        "2026-06-26"
+      ],
+      [
+        "v0.5.4",
+        "2026-06-26"
+      ],
+      [
+        "v0.5.5",
+        "2026-06-28"
+      ],
+      [
+        "v0.6.0",
+        "2026-06-30"
+      ],
+      [
+        "v0.6.1",
+        "2026-07-03"
+      ],
+      [
+        "v0.6.2",
+        "2026-07-04"
+      ],
+      [
+        "v0.6.3",
+        "2026-07-04"
+      ],
+      [
+        "v0.7.0",
+        "2026-07-14"
+      ],
+      [
+        "v0.7.1",
+        "2026-07-15"
+      ],
+      [
+        "v0.7.2",
+        "2026-07-17"
+      ],
+      [
+        "v0.7.3",
+        "2026-07-19"
+      ],
+      [
+        "v0.7.4",
+        "2026-07-26"
+      ],
+      [
+        "v0.7.5",
+        "2026-08-02"
+      ],
+      [
+        "v0.7.6",
+        "2026-08-17"
+      ],
+      [
+        "v0.7.7",
+        "2026-08-25"
+      ],
+      [
+        "v0.7.8",
+        "2026-09-02"
+      ],
+      [
+        "v0.7.9",
+        "2026-09-04"
+      ],
+      [
+        "v0.7.10",
+        "2026-10-15"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "go install github.com/voocel/ainovel-cli/cmd/ainovel-cli@latest / docker run --rm -it \\ / docker run --rm \\",
+    "install_evidence": [
+      {
+        "command": "go install github.com/voocel/ainovel-cli/cmd/ainovel-cli@latest",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/README.md",
+        "line": 204
+      },
+      {
+        "command": "docker run --rm -it \\",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/README.md",
+        "line": 242
+      },
+      {
+        "command": "docker run --rm \\",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/README.md",
+        "line": 248
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "internal/entry/tui/theme.go",
+        "cmd/ainovel-cli/main.go",
+        "internal/utils/input.go",
+        "internal/entry/tui/app.go",
+        "internal/entry/tui/input.go",
+        "internal/entry/tui/layout.go",
+        "internal/diag/rules_flow.go",
+        "internal/store/user_rules.go",
+        "internal/diag/rules_context.go",
+        "internal/diag/rules_quality.go",
+        "internal/tools/save_book.go",
+        "internal/store/io.go",
+        "internal/entry/tui/commands.go",
+        "internal/domain/review.go",
+        "internal/tools/save_review.go"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/voocel/ainovel-cli",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/README.md",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/go.mod",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/theme.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/cmd/ainovel-cli/main.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/utils/input.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/app.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/input.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/layout.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_flow.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/store/user_rules.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_context.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_quality.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/assets/prompts/editor.md",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/assets/prompts/writer.md",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/tools/save_book.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/store/io.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/commands.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/domain/review.go",
+      "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/tools/save_review.go",
+      "https://api.github.com/repos/voocel/ainovel-cli/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/README.md"
+      },
+      {
+        "path": "go.mod",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/go.mod"
+      },
+      {
+        "path": "internal/entry/tui/theme.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/theme.go"
+      },
+      {
+        "path": "cmd/ainovel-cli/main.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/cmd/ainovel-cli/main.go"
+      },
+      {
+        "path": "internal/utils/input.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/utils/input.go"
+      },
+      {
+        "path": "internal/entry/tui/app.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/app.go"
+      },
+      {
+        "path": "internal/entry/tui/input.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/input.go"
+      },
+      {
+        "path": "internal/entry/tui/layout.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/layout.go"
+      },
+      {
+        "path": "internal/diag/rules_flow.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_flow.go"
+      },
+      {
+        "path": "internal/store/user_rules.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/store/user_rules.go"
+      },
+      {
+        "path": "internal/diag/rules_context.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_context.go"
+      },
+      {
+        "path": "internal/diag/rules_quality.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/diag/rules_quality.go"
+      },
+      {
+        "path": "assets/prompts/editor.md",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/assets/prompts/editor.md"
+      },
+      {
+        "path": "assets/prompts/writer.md",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/assets/prompts/writer.md"
+      },
+      {
+        "path": "internal/tools/save_book.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/tools/save_book.go"
+      },
+      {
+        "path": "internal/store/io.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/store/io.go"
+      },
+      {
+        "path": "internal/entry/tui/commands.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/entry/tui/commands.go"
+      },
+      {
+        "path": "internal/domain/review.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/domain/review.go"
+      },
+      {
+        "path": "internal/tools/save_review.go",
+        "source": "https://github.com/voocel/ainovel-cli/blob/e05771e136ea32363ca073f88281f46abb8373c0/internal/tools/save_review.go"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "go.mod declares a TUI library",
+    "repository_id": 1175231820,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voidenhq--voiden": {
+    "topics": [
+      "api-client",
+      "automation",
+      "bruno-alternative",
+      "cli",
+      "curl-alternative",
+      "graphql",
+      "http-client",
+      "insomnia-alternative",
+      "markdown",
+      "mcp-client",
+      "mcp-tools",
+      "offline-first",
+      "openapi",
+      "openapi3",
+      "opensource",
+      "postman-alternative",
+      "rest-api",
+      "scripting",
+      "testing",
+      "websocket"
+    ],
+    "homepage": "https://voiden.md",
+    "archived": false,
+    "commit": "9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.4.6",
+        "2026-04-16"
+      ],
+      [
+        "v1.5.0",
+        "2026-04-23"
+      ],
+      [
+        "v1.6.0",
+        "2026-04-30"
+      ],
+      [
+        "v1.6.1",
+        "2026-05-05"
+      ],
+      [
+        "v1.6.2",
+        "2026-05-12"
+      ],
+      [
+        "v1.6.3",
+        "2026-05-26"
+      ],
+      [
+        "v2.0.0-beta.1",
+        "2026-05-26"
+      ],
+      [
+        "v2.0.1-beta.1",
+        "2026-06-03"
+      ],
+      [
+        "v2.0.1",
+        "2026-06-10"
+      ],
+      [
+        "v2.1.0",
+        "2026-06-23"
+      ],
+      [
+        "v2.1.1",
+        "2026-06-25"
+      ],
+      [
+        "v2.2.0",
+        "2026-07-10"
+      ],
+      [
+        "v2.2.1",
+        "2026-07-10"
+      ],
+      [
+        "v2.2.2",
+        "2026-07-17"
+      ],
+      [
+        "v2.3.0-beta.1",
+        "2026-07-31"
+      ],
+      [
+        "v2.3.0-beta.2",
+        "2026-09-02"
+      ],
+      [
+        "v2.3.0-beta.3",
+        "2026-09-10"
+      ],
+      [
+        "v2.3.0-beta.4",
+        "2026-09-10"
+      ],
+      [
+        "v2.3.0",
+        "2026-09-22"
+      ],
+      [
+        "v2.3.1",
+        "2026-10-01"
+      ],
+      [
+        "v2.3.2",
+        "2026-10-09"
+      ],
+      [
+        "v2.3.3-beta.1",
+        "2026-10-13"
+      ],
+      [
+        "v2.3.3",
+        "2026-10-21"
+      ],
+      [
+        "v2.3.4",
+        "2026-10-22"
+      ],
+      [
+        "v2.4.0-beta.1",
+        "2026-10-27"
+      ],
+      [
+        "v2.4.0-beta.2",
+        "2026-11-02"
+      ],
+      [
+        "v2.4.0",
+        "2026-11-04"
+      ],
+      [
+        "v2.4.1-beta.1",
+        "2026-11-11"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "brew install voiden / brew install voiden@beta / brew install voidenhq/voiden/voiden",
+    "install_evidence": [
+      {
+        "command": "brew install voiden",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/README.md",
+        "line": 132
+      },
+      {
+        "command": "brew install voiden@beta",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/README.md",
+        "line": 137
+      },
+      {
+        "command": "brew install voidenhq/voiden/voiden",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/README.md",
+        "line": 173
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "apps/ui/src/utils/themeLoader.ts",
+        "apps/electron/src/main/variables.ts",
+        "apps/electron/src/main/ipc/themes.ts",
+        "apps/electron/src/preload/api/themes.ts",
+        "apps/ui/src/main.tsx",
+        "apps/ui/src/core/components/ui/input.tsx",
+        "apps/ui/src/core/components/ui/sidebar.tsx",
+        "apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "apps/ui/src/core/git/repoContext.ts",
+        "apps/electron/src/main/ipc/project.ts",
+        "apps/electron/src/main/projectUtils.ts",
+        "apps/electron/src/main/ipc/contextMenus.ts",
+        "apps/ui/src/core/tools/toolCapabilityRegistry.ts",
+        "apps/electron/src/cli.ts",
+        "apps/electron/src/main.ts",
+        "apps/ui/src/core/layout/components/BinaryFilePreview.tsx",
+        "apps/ui/src/routes/index.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Promise",
+      "Failed to sync themes",
+      "Toggle Sidebar",
+      "Runtime Variables (Void Block)",
+      "How It Works",
+      "process.",
+      "won't resolve.",
+      "Capture Expressions",
+      "How to Use",
+      "Add a Runtime Variables block after your request",
+      "Example",
+      "Copy",
+      "planServedTools(): Promise",
+      "This file could not be read."
+    ],
+    "string_evidence": [
+      {
+        "text": "Promise",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/variables.ts",
+        "line": 11,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Failed to sync themes",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/themes.ts",
+        "line": 79,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Toggle Sidebar",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/components/ui/sidebar.tsx",
+        "line": 253,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Runtime Variables (Void Block)",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 10,
+        "kind": "visible-text"
+      },
+      {
+        "text": "How It Works",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 19,
+        "kind": "visible-text"
+      },
+      {
+        "text": "process.",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 25,
+        "kind": "visible-text"
+      },
+      {
+        "text": "won't resolve.",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 26,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Capture Expressions",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 31,
+        "kind": "visible-text"
+      },
+      {
+        "text": "How to Use",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 40,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Add a Runtime Variables block after your request",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 42,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Example",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "line": 61,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Copy",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/contextMenus.ts",
+        "line": 22,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "planServedTools(): Promise",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/tools/toolCapabilityRegistry.ts",
+        "line": 33,
+        "kind": "visible-text"
+      },
+      {
+        "text": "This file could not be read.",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/layout/components/BinaryFilePreview.tsx",
+        "line": 21,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/VoidenHQ/voiden",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/README.md",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/package.json",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/package.json",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/package.json",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/packages/executors/package.json",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/utils/themeLoader.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/variables.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/themes.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/preload/api/themes.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/main.tsx",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/components/ui/input.tsx",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/components/ui/sidebar.tsx",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/git/repoContext.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/project.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/projectUtils.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/contextMenus.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/tools/toolCapabilityRegistry.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/cli.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main.ts",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/layout/components/BinaryFilePreview.tsx",
+      "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/routes/index.tsx",
+      "https://api.github.com/repos/VoidenHQ/voiden/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/package.json"
+      },
+      {
+        "path": "apps/ui/package.json",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/package.json"
+      },
+      {
+        "path": "apps/electron/package.json",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/package.json"
+      },
+      {
+        "path": "packages/executors/package.json",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/packages/executors/package.json"
+      },
+      {
+        "path": "apps/ui/src/utils/themeLoader.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/utils/themeLoader.ts"
+      },
+      {
+        "path": "apps/electron/src/main/variables.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/variables.ts"
+      },
+      {
+        "path": "apps/electron/src/main/ipc/themes.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/themes.ts"
+      },
+      {
+        "path": "apps/electron/src/preload/api/themes.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/preload/api/themes.ts"
+      },
+      {
+        "path": "apps/ui/src/main.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/main.tsx"
+      },
+      {
+        "path": "apps/ui/src/core/components/ui/input.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/components/ui/input.tsx"
+      },
+      {
+        "path": "apps/ui/src/core/components/ui/sidebar.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/components/ui/sidebar.tsx"
+      },
+      {
+        "path": "apps/ui/src/core/editors/voiden/nodes/help.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/editors/voiden/nodes/help.tsx"
+      },
+      {
+        "path": "apps/ui/src/core/git/repoContext.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/git/repoContext.ts"
+      },
+      {
+        "path": "apps/electron/src/main/ipc/project.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/project.ts"
+      },
+      {
+        "path": "apps/electron/src/main/projectUtils.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/projectUtils.ts"
+      },
+      {
+        "path": "apps/electron/src/main/ipc/contextMenus.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main/ipc/contextMenus.ts"
+      },
+      {
+        "path": "apps/ui/src/core/tools/toolCapabilityRegistry.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/tools/toolCapabilityRegistry.ts"
+      },
+      {
+        "path": "apps/electron/src/cli.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/cli.ts"
+      },
+      {
+        "path": "apps/electron/src/main.ts",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/electron/src/main.ts"
+      },
+      {
+        "path": "apps/ui/src/core/layout/components/BinaryFilePreview.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/core/layout/components/BinaryFilePreview.tsx"
+      },
+      {
+        "path": "apps/ui/src/routes/index.tsx",
+        "source": "https://github.com/VoidenHQ/voiden/blob/9b0a06bf8af98f8897774fcaa0d2ba3a852ae7c1/apps/ui/src/routes/index.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp-client stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=14, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "repository_id": 980905149,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voine--chatwaifu_mobile": {
+    "topics": [
+      "android",
+      "chatgpt",
+      "compose",
+      "lipsync",
+      "live2d",
+      "sherpa",
+      "vits"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "14092ac66c2afd51de06bb126fd102cec869eb8e",
+    "classification_basis": "Topics, README introduction, language (C++) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2023-02-19"
+      ],
+      [
+        "v1.1.0",
+        "2023-02-20"
+      ],
+      [
+        "v1.1.1",
+        "2023-02-22"
+      ],
+      [
+        "v1.1.2",
+        "2023-02-23"
+      ],
+      [
+        "v1.2.0",
+        "2023-02-26"
+      ],
+      [
+        "v1.3.0",
+        "2023-03-04"
+      ],
+      [
+        "v1.4.0",
+        "2023-03-05"
+      ],
+      [
+        "v1.4.1",
+        "2023-03-05"
+      ],
+      [
+        "v1.4.2",
+        "2023-03-06"
+      ],
+      [
+        "v2.0.0",
+        "2023-05-12"
+      ],
+      [
+        "v2.0.1",
+        "2023-05-25"
+      ],
+      [
+        "v2.0.2",
+        "2023-06-18"
+      ],
+      [
+        "v2.0.3",
+        "2023-06-19"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/Voine/ChatWaifu_Mobile",
+      "https://github.com/Voine/ChatWaifu_Mobile/blob/14092ac66c2afd51de06bb126fd102cec869eb8e/README.md",
+      "https://api.github.com/repos/Voine/ChatWaifu_Mobile/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/Voine/ChatWaifu_Mobile/blob/14092ac66c2afd51de06bb126fd102cec869eb8e/README.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (C++) → framework / other",
+    "repository_id": 603770379,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "volcengine--searchcli": {
+    "topics": [
+      "agent-tools",
+      "ai-agents",
+      "ai-search",
+      "ai-search-engine",
+      "automation",
+      "cli",
+      "command-line-tool",
+      "conversational-search",
+      "information-retrieval",
+      "rag",
+      "recommendation",
+      "recommendation-system",
+      "retrieval",
+      "search-cli",
+      "search-engine",
+      "semantic-search",
+      "typescript",
+      "volcengine"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/volcengine/SearchCLI",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:rag stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1232681444,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voidful--textrl": {
+    "topics": [
+      "chatgpt",
+      "controlled-nlg",
+      "gpt-2",
+      "gpt-3",
+      "language-model",
+      "nlg",
+      "nlp",
+      "pytorch",
+      "reinforcement-learning",
+      "rlhf"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/voidful/TextRL",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 349008051,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voltagent--official-design-md": {
+    "topics": [
+      "ai-agents",
+      "design-md",
+      "design-system",
+      "design-tokens",
+      "frontend",
+      "llm",
+      "markdown",
+      "ui"
+    ],
+    "homepage": "https://getdesign.md/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (unknown) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/VoltAgent/official-design-md",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1282360547,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vorojar--folio-ocr": {
+    "topics": [
+      "abbyy-alternative",
+      "batch-ocr",
+      "book-digitization",
+      "document-ocr",
+      "document-processing",
+      "glm-ocr",
+      "layout-detection",
+      "local-ai",
+      "markdown-export",
+      "ocr",
+      "offline",
+      "ollama",
+      "pdf-ocr",
+      "privacy"
+    ],
+    "homepage": "https://vorojar.github.io/Folio-OCR/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vorojar/Folio-OCR",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ollama stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1151867743,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voxos-ai--bolna": {
+    "topics": [
+      "anyscale",
+      "chatgpt-api",
+      "claude-3-sonnet",
+      "deepgram",
+      "elevenlabs",
+      "fastapi",
+      "gpt-4o",
+      "llama3",
+      "llm",
+      "mistral",
+      "openai",
+      "perplexity-api",
+      "polly",
+      "telephony",
+      "twilio",
+      "voice-assistant",
+      "websocket-chat",
+      "websockets",
+      "whisper",
+      "xtts"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/voxos-ai/bolna",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:openai stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 731056335,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "voltagent--official-mcp-servers": {
+    "topics": [
+      "ai-tools",
+      "awesome-list",
+      "claude",
+      "claude-code",
+      "codex",
+      "cursor",
+      "mcp",
+      "mcp-server",
+      "mcp-servers",
+      "model-context-protocol"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (unknown) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/VoltAgent/official-mcp-servers",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1399413068,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "voska--hass-mcp": {
+    "topics": [
+      "ai",
+      "anthropic",
+      "claude",
+      "home-assistant",
+      "home-automation",
+      "homeassistant",
+      "llm",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "python",
+      "smart-home"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/voska/hass-mcp",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 949564493,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "vortico--flama": {
+    "topics": [
+      "anthropic",
+      "asgi",
+      "chatbot",
+      "domain-driven-design",
+      "generative-ai",
+      "inference",
+      "llm",
+      "llm-serving",
+      "machine-learning",
+      "mcp",
+      "mlops",
+      "mlx",
+      "model-context-protocol",
+      "model-serving",
+      "ollama",
+      "openai-api",
+      "python",
+      "rust",
+      "vllm",
+      "web-framework"
+    ],
+    "homepage": "https://flama.dev",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vortico/flama",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ollama stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 150608956,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vortiago--mcp-outline": {
+    "topics": [
+      "fastmcp",
+      "mcp",
+      "mcp-server",
+      "outline",
+      "streamable-http"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Vortiago/mcp-outline",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false",
+      "topic:mcp stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 953087223,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "pi-coding-agent",
+  "versions": [
+    {
+      "id": "earendil-works--pi-2025-12-0",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.12.0/packages/coding-agent/README.md",
+            "date": "2025-12-02",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v0.12.0",
+            "date": "2025-12-02",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Shift+Tab で考える量を変更",
+          "when": "2025-12-02..2025-12-02",
+          "where": "入力中のキー操作。考える量に対応するモデルで使う。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.12.0/packages/coding-agent/README.md",
+              "date": "2025-12-02",
+              "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v0.12.0",
+              "date": "2025-12-02",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Change reasoning effort with Shift+Tab",
+          "where_en": "Keyboard shortcut while typing, for models supporting reasoning effort."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-12-02",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.12.0/packages/coding-agent/README.md",
+            "date": "2025-12-02",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の通常の履歴に会話を積み、モデル選択を入力欄から開く設計である（https://raw.githubusercontent.com/earendil-works/pi/v0.12.0/packages/coding-agent/README.md）。",
+      "trend_en": "Conversation builds in normal terminal scrollback, with model selection opened from the input. (https://raw.githubusercontent.com/earendil-works/pi/v0.12.0/packages/coding-agent/README.md)"
+    },
+    {
+      "id": "earendil-works--pi-2026-06-1",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.80.3/packages/coding-agent/README.md",
+            "date": "2026-06-30",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3",
+            "date": "2026-06-30",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "左右の余白を調整",
+          "when": "2026-06-30..2026-06-30",
+          "where": "設定の outputPad。入力・回答・考えている内容の左右に付く余白。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.80.3/packages/coding-agent/docs/settings.md",
+              "date": "2026-06-30",
+              "shows": "outputPad は横の余白を0または1文字分にする設定。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3",
+              "date": "2026-06-30",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Adjust horizontal padding",
+          "where_en": "The outputPad setting controls horizontal padding for input, replies and reasoning."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-06-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.80.3/packages/coding-agent/README.md",
+            "date": "2026-06-30",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "通常の端末履歴を使いながら、会話の左右の余白を調整できる設計である（https://raw.githubusercontent.com/earendil-works/pi/v0.80.3/packages/coding-agent/docs/settings.md）。",
+      "trend_en": "Normal terminal scrollback supports configurable horizontal chat padding. (https://raw.githubusercontent.com/earendil-works/pi/v0.80.3/packages/coding-agent/docs/settings.md)"
+    },
+    {
+      "id": "earendil-works--pi-2026-07-2",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.83.0/packages/coding-agent/README.md",
+            "date": "2026-07-29",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v0.83.0",
+            "date": "2026-07-29",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+L でモデル一覧",
+          "when": "2026-07-29..2026-07-29",
+          "where": "端末の入力中。上部の常設ボタンではなく選択一覧を開く。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.83.0/packages/coding-agent/README.md",
+              "date": "2026-07-29",
+              "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v0.83.0",
+              "date": "2026-07-29",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Open the model list with Ctrl+L",
+          "where_en": "Opens the selection list while typing in the terminal."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-07-29",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.83.0/packages/coding-agent/README.md",
+            "date": "2026-07-29",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "下部の入力欄からキー操作でモデルや表示を切り替える設計である（https://raw.githubusercontent.com/earendil-works/pi/v0.83.0/packages/coding-agent/README.md）。",
+      "trend_en": "Keyboard shortcuts from the bottom input switch models and display modes. (https://raw.githubusercontent.com/earendil-works/pi/v0.83.0/packages/coding-agent/README.md)"
+    },
+    {
+      "id": "earendil-works--pi-2026-08-3",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。",
+          "選択中に Ctrl+S を押すと、起動時の既定として保存できる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.84.4/packages/coding-agent/README.md",
+            "date": "2026-08-28",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4",
+            "date": "2026-08-28",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select.",
+          "While selecting, press Ctrl+S to save it as the startup default."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+S で起動時のモデルを保存",
+          "when": "2026-08-28..2026-08-28",
+          "where": "モデルを選ぶ一覧の中で押すキー。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.84.4/packages/coding-agent/README.md",
+              "date": "2026-08-28",
+              "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4",
+              "date": "2026-08-28",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Save the startup model with Ctrl+S",
+          "where_en": "Keyboard shortcut inside model selection."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-08-28",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.84.4/packages/coding-agent/README.md",
+            "date": "2026-08-28",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "通常の履歴表示を既定とし、全画面表示も選べる設計である（https://raw.githubusercontent.com/earendil-works/pi/v0.84.4/packages/coding-agent/README.md）。",
+      "trend_en": "Normal scrollback is the default, with full-screen display available. (https://raw.githubusercontent.com/earendil-works/pi/v0.84.4/packages/coding-agent/README.md)"
+    },
+    {
+      "id": "earendil-works--pi-2026-09-4",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.99.2/packages/coding-agent/docs/usage.md",
+            "date": "2026-09-30",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v0.99.2",
+            "date": "2026-09-30",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "端末に合わせた配色",
+          "when": "2026-09-30..2026-09-30",
+          "where": "設定の theme は system が既定。全画面表示はまだ既定でない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.99.2/packages/coding-agent/docs/settings.md",
+              "date": "2026-09-30",
+              "shows": "theme の既定は system、tuiMode の既定は regular。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v0.99.2",
+              "date": "2026-09-30",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Terminal-aware colors",
+          "where_en": "The theme setting defaults to system. Full-screen mode is still opt-in."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-09-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v0.99.2/packages/coding-agent/docs/usage.md",
+            "date": "2026-09-30",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の配色に追従しながら、通常の履歴表示と全画面表示を選べる設計である（https://raw.githubusercontent.com/earendil-works/pi/v0.99.2/packages/coding-agent/docs/settings.md）。",
+      "trend_en": "Colors follow the terminal, with a choice of normal scrollback or full-screen display. (https://raw.githubusercontent.com/earendil-works/pi/v0.99.2/packages/coding-agent/docs/settings.md)"
+    },
+    {
+      "id": "earendil-works--pi-2026-10-5",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.0.0/packages/coding-agent/docs/usage.md",
+            "date": "2026-10-01",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+            "date": "2026-10-01",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "全画面表示が既定に",
+          "when": "2026-10-01..2026-10-01",
+          "where": "会話を端末内で動かし、入力欄と状態欄を下端に残す。これは機能変更の要約で、常設バナーではない。",
+          "sources": [
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+              "date": "2026-10-01",
+              "shows": "v1.0.0 は全画面表示を既定に変更。"
+            }
+          ],
+          "text_en": "Full-screen mode by default",
+          "where_en": "Chat runs within the terminal, keeping input and status at the bottom. Summary of the behavior change."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-10-01",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.0.0/packages/coding-agent/docs/usage.md",
+            "date": "2026-10-01",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "会話だけを動かし、入力欄と状態欄を下端に残す全画面表示が既定になる（https://github.com/earendil-works/pi/releases/tag/v1.0.0）。",
+      "trend_en": "Full-screen display becomes the default, scrolling chat while keeping input and status at the bottom. (https://github.com/earendil-works/pi/releases/tag/v1.0.0)"
+    },
+    {
+      "id": "earendil-works--pi-2026-10-6",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.4.0/packages/coding-agent/docs/usage.md",
+            "date": "2026-10-21",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+            "date": "2026-10-21",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+O で実行結果を開閉",
+          "when": "2026-10-21..2026-10-21",
+          "where": "端末の会話中。長い道具の結果を広げたり縮めたりする。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.4.0/packages/coding-agent/docs/usage.md",
+              "date": "2026-10-21",
+              "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+              "date": "2026-10-21",
+              "shows": "固定版の公開日。"
+            }
+          ],
+          "text_en": "Expand or collapse tool output with Ctrl+O",
+          "where_en": "Expand or collapse long tool output during terminal chat."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-10-21",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.4.0/packages/coding-agent/docs/usage.md",
+            "date": "2026-10-21",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "入力欄と状態欄を下端に残し、道具の長い結果を開閉する設計である（https://raw.githubusercontent.com/earendil-works/pi/v1.4.0/packages/coding-agent/docs/usage.md）。",
+      "trend_en": "Input and status stay at the bottom, with expandable long tool output. (https://raw.githubusercontent.com/earendil-works/pi/v1.4.0/packages/coding-agent/docs/usage.md)"
+    },
+    {
+      "id": "earendil-works--pi-record",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力するか Ctrl+L を押す。",
+          "入力欄から開く一覧で提供元やモデル名を探し、選択する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.5.2/packages/coding-agent/docs/usage.md",
+            "date": "2026-11-10",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/earendil-works/pi/releases/tag/v1.5.2",
+            "date": "2026-11-10",
+            "shows": "固定版の公開日。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input or press Ctrl+L.",
+          "Open the list from the input, search by provider or model name, and select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Continue / Fork / Cancel",
+          "when": "2026-11-10..2026-11-10",
+          "where": "元の作業フォルダーが見つからない会話を再開するときに出る選択肢。",
+          "sources": [
+            {
+              "url": "https://github.com/earendil-works/pi/releases/tag/v1.5.2",
+              "date": "2026-11-10",
+              "shows": "v1.5.2 は元のフォルダーがない会話に Fork を追加。"
+            }
+          ],
+          "where_en": "Option when resuming a chat whose original working folder is missing."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-11-10",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.5.2/packages/coding-agent/docs/usage.md",
+            "date": "2026-11-10",
+            "shows": "固定版のモデル選択、キー操作、端末表示。候補は認証済み提供元と追加設定で変わるため、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "全画面の会話表示を保ち、作業場所を失った会話にも選択肢を出す設計である（https://github.com/earendil-works/pi/releases/tag/v1.5.2）。",
+      "trend_en": "Full-screen chat remains, with recovery choices when a chat's working folder is missing. (https://github.com/earendil-works/pi/releases/tag/v1.5.2)"
+    }
+  ]
+}

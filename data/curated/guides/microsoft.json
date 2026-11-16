@@ -1,0 +1,192 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Microsoft",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-prompting",
+      "publisher": "Microsoft",
+      "kind": "prompting-guide",
+      "title": "Microsoft の指示文の工夫",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "GPT-4"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "依頼を具体化し、根拠となる資料と答えの形を伝えます。考えるモデルには別の注意があります。",
+          "when_ja": "基本的な指示文を見直すとき。",
+          "summary_en": "Make the task specific and provide supporting references and the answer format, checking separate guidance for reasoning models.",
+          "when_en": "When revising a basic prompt."
+        }
+      ],
+      "sources": [
+        "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Microsoft prompting techniques"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-vs-instructions",
+      "publisher": "Microsoft",
+      "kind": "agent-instructions-file",
+      "title": "VS Code の共通の指示",
+      "url": "https://code.visualstudio.com/docs/agent-customization/custom-instructions",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "github-copilot-vs-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "instruction-file",
+          "summary_ja": "何度も伝える約束を Markdown の指示ファイルに保存し、新しい会話で効果を確かめます。",
+          "when_ja": "同じプロジェクトで繰り返し作業するとき。",
+          "summary_en": "Save recurring conventions in Markdown instruction files and check their effect in a new conversation.",
+          "when_en": "When repeatedly working in the same project."
+        }
+      ],
+      "sources": [
+        "https://code.visualstudio.com/docs/agent-customization/custom-instructions"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Shared instructions in VS Code"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-prompt-files",
+      "publisher": "Microsoft",
+      "kind": "agent-instructions-file",
+      "title": "VS Code の呼び出せる指示文",
+      "url": "https://code.visualstudio.com/docs/agent-customization/prompt-files",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "github-copilot-vs-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "reuse",
+          "summary_ja": "繰り返す仕事を指示文のファイルにまとめ、会話から呼び出します。",
+          "when_ja": "テストや雛形作成など同じ手順を何度も頼むとき。",
+          "summary_en": "Store recurring tasks in prompt files and invoke them from chat.",
+          "when_en": "When repeating procedures such as tests or scaffolding."
+        }
+      ],
+      "sources": [
+        "https://code.visualstudio.com/docs/agent-customization/prompt-files"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Reusable prompt files in VS Code"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-copilot-tips",
+      "publisher": "Microsoft",
+      "kind": "prompting-guide",
+      "title": "Copilot への目的・背景・資料・答え方",
+      "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "bing-chat-microsoft-copilot"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "目的、背景、参照する資料、期待する答え方をそろえて伝えます。",
+          "when_ja": "日々の文書や調べ物を頼むとき。",
+          "summary_en": "Provide the goal, background, reference material and expected answer style together.",
+          "when_en": "When requesting everyday writing or research."
+        }
+      ],
+      "sources": [
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Give Copilot a goal, context, sources and format"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-copilot-instructions-release",
+      "publisher": "Microsoft",
+      "kind": "release-notes-on-prompting",
+      "title": "Copilot の指示ファイルが標準で読み込まれる変更",
+      "url": "https://github.blog/changelog/2024-10-29-multi-file-editing-code-review-custom-instructions-and-more-for-github-copilot-in-vs-code-october-release-v0-22/",
+      "published": "2024-10-29",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "github-copilot-vs-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "instruction-file",
+          "summary_ja": "この版では、ファイルに保存した共通の指示の読み込みが標準で有効になる変更が案内されました。",
+          "when_ja": "Copilot の指示ファイルの変化を調べるとき。",
+          "summary_en": "This release announced that loading shared instructions from files would be enabled by default.",
+          "when_en": "When tracing changes to Copilot instruction files."
+        }
+      ],
+      "sources": [
+        "https://github.blog/changelog/2024-10-29-multi-file-editing-code-review-custom-instructions-and-more-for-github-copilot-in-vs-code-october-release-v0-22/"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Copilot instruction files enabled by default"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "microsoft-test-instructions-release",
+      "publisher": "Microsoft",
+      "kind": "release-notes-on-prompting",
+      "title": "Copilot のテスト作成に約束を渡す変更",
+      "url": "https://github.blog/changelog/2024-10-03-streamlined-coding-debugging-and-testing-with-github-copilot-chat-in-vs-code/",
+      "published": "2024-10-03",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "github-copilot-vs-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "test",
+          "summary_ja": "テストを作るときの約束を設定やファイルで渡す機能が、実験機能として案内されました。",
+          "when_ja": "テスト作成の指示がどう変わったか調べるとき。",
+          "summary_en": "The announcement introduced experimental support for test-generation conventions supplied through settings or files.",
+          "when_en": "When tracing changes to test-generation instructions."
+        }
+      ],
+      "sources": [
+        "https://github.blog/changelog/2024-10-03-streamlined-coding-debugging-and-testing-with-github-copilot-chat-in-vs-code/"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Copilot test-generation instructions"
+    }
+  ]
+}

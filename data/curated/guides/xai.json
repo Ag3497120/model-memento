@@ -1,0 +1,68 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "xAI",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "xai-text-practices",
+      "publisher": "xAI",
+      "kind": "best-practices",
+      "title": "Grok の考える設定と評価",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/best-practices",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "grok"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "reasoning-effort",
+          "summary_ja": "考える強さを明示し、使った設定も結果と一緒に記録して比較します。",
+          "when_ja": "Grok の回答を設定ごとに比べたいとき。",
+          "summary_en": "Set reasoning effort explicitly and record settings with results for comparison.",
+          "when_en": "When comparing Grok answers across settings."
+        }
+      ],
+      "sources": [
+        "https://docs.x.ai/developers/model-capabilities/text/best-practices"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Grok thinking settings and evaluation"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "xai-reasoning",
+      "publisher": "xAI",
+      "kind": "model-notes",
+      "title": "Grok の会話で考えた情報を保つ",
+      "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "grok"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "context-selection",
+          "summary_ja": "会話を自分で管理する場合は、返された暗号化済みの思考項目も変えずに引き継ぎます。",
+          "when_ja": "API で長い会話を続ける仕組みを作るとき。",
+          "summary_en": "When managing conversation history yourself, pass back encrypted reasoning items unchanged.",
+          "when_en": "When building long-running API conversations."
+        }
+      ],
+      "sources": [
+        "https://docs.x.ai/developers/model-capabilities/text/reasoning"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Preserve Grok reasoning conversation state"
+    }
+  ]
+}

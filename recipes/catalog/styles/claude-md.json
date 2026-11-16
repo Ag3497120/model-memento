@@ -1,0 +1,78 @@
+{
+  "schema": "memento.style.v1",
+  "id": "claude-md",
+  "name": "Claude Code 用の指示書を置く",
+  "plain": "CLAUDE.md という文章のファイルに、作業の約束をまとめます。",
+  "when": "Claude Code で同じ約束を繰り返し使いたいとき。",
+  "since": "2025-04",
+  "popularized_by": [
+    "Anthropic の開発手順ガイド"
+  ],
+  "since_basis": "公開資料で確認できる年月です。発明や普及の開始年月を示すものではありません。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n変更前に近くの説明とコードを読み、既存の書き方に合わせてください。作業を必要な範囲に絞り、実際に行った確認と未確認の点を日本語で報告してください。\n\n# English\n\nRead nearby documentation and code before editing. Follow existing conventions, keep changes scoped, and report actual checks and unverified points in Japanese.\n"
+    },
+    {
+      "path": "project/CLAUDE.md",
+      "content": "# 日本語\n\n変更前に近くの説明とコードを読み、既存の書き方に合わせてください。作業を必要な範囲に絞り、実際に行った確認と未確認の点を日本語で報告してください。\n\n# English\n\nRead nearby documentation and code before editing. Follow existing conventions, keep changes scoped, and report actual checks and unverified points in Japanese.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "native",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://www.anthropic.com/research/claude-code-best-practices",
+    "https://code.claude.com/docs/en/memory",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

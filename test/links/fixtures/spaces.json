@@ -1,0 +1,11 @@
+[
+  {"id":"demo/running","models":["Qwen/Qwen2.5-7B-Instruct"],"likes":30,"sdk":"gradio","runtime":{"stage":"RUNNING","hardware":{"current":"t4-small","requested":"t4-small"}}},
+  {"id":"demo/sleeping","models":["Qwen/Qwen2.5-7B-Instruct"],"likes":90,"sdk":"docker","runtime":{"stage":"SLEEPING","hardware":{"current":null,"requested":"cpu-basic"}}},
+  {"id":"demo/paused","models":["Qwen/Qwen2.5-7B-Instruct"],"likes":500,"sdk":"gradio","runtime":{"stage":"PAUSED"}},
+  {"id":"demo/broken","models":["Qwen/Qwen2.5-7B-Instruct"],"likes":700,"runtime":{"stage":"BUILD_ERROR"}},
+  {"id":"demo/wrong-model","models":["Qwen/Qwen2.5-7B"],"likes":900,"runtime":{"stage":"RUNNING"}},
+  {"id":"demo/no-proof","likes":999,"runtime":{"stage":"RUNNING"}},
+  {"id":"demo/private","private":true,"models":["Qwen/Qwen2.5-7B-Instruct"],"likes":999,"runtime":{"stage":"RUNNING"}},
+  {"id":"demo/disabled","disabled":true,"models":["Qwen/Qwen2.5-7B-Instruct"],"likes":999,"runtime":{"stage":"RUNNING"}},
+  {"id":"../bad","models":["Qwen/Qwen2.5-7B-Instruct"],"likes":999,"runtime":{"stage":"RUNNING"}}
+]

@@ -1,0 +1,26 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "plan-then-act",
+  "name": "先に段取りを見せてから進める",
+  "plain": "いきなり作らず、まず「こう進めます」という段取りを見せます。あなたが OK を押してから作ります。",
+  "good_for": ["code", "delegate"],
+  "seen_in": ["Claude Code", "OpenAI Codex CLI", "OpenCode", "Cline (formerly Claude Dev)", "Cursor", "Windsurf"],
+  "placeholder": "例: 家計簿を付ける小さなページを作りたい",
+  "steps": [
+    {
+      "id": "plan",
+      "label": "段取り",
+      "show": "list",
+      "system": "You plan work for a non-technical person. Reply only with a numbered list of 3 to 6 short steps, in the language of the request. Each step is one plain sentence saying what will be made or changed. No code yet.",
+      "prompt": "{{input}}"
+    },
+    {
+      "id": "do",
+      "label": "作ったもの",
+      "gate": "この段取りで進める",
+      "show": "text",
+      "system": "You carry out an approved plan. Follow the steps in order and produce the result. If the result is code, give one complete file in a fenced block, then two plain sentences on how to use it. Use the language of the request for all prose.",
+      "prompt": "Request:\n{{input}}\n\nApproved plan:\n{{step:plan}}"
+    }
+  ]
+}

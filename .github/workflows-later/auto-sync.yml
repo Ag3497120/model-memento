@@ -1,0 +1,47 @@
+name: 世界の新着と全件索引を更新
+
+on:
+  schedule:
+    # UTC。日曜日は全件、それ以外は新着。時刻の重複を避ける。
+    - cron: '17 3 * * 1-6'
+    - cron: '17 3 * * 0'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'delta: 新着、full: 全件を確認'
+        type: choice
+        options: [delta, full]
+        default: delta
+      rollback_to:
+        description: '保存した更新番号に戻す。例 26.47。空欄なら新しく公開'
+        type: string
+        default: ''
+      patch_initial:
+        description: '更新番号を導入する最初の一回だけ指定する'
+        type: boolean
+        default: false
+      dry_run:
+        description: '検査と組み立てだけ行い、公開と状態の保存をしない'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# ソース更新の公開と同じ組。状態の読取りから公開までを直列にする。
+concurrency:
+  group: world-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    uses: ./.github/workflows/world-pages.yml
+    secrets:
+      MEMENTO_CONTRIB_KEY: ${{ secrets.MEMENTO_CONTRIB_KEY }}
+    with:
+      mode: ${{ github.event.schedule == '17 3 * * 0' && 'full' || inputs.mode || 'delta' }}
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+      rollback_to: ${{ inputs.rollback_to || '' }}
+      patch_initial: ${{ inputs.patch_initial || false }}

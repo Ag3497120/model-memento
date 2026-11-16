@@ -1,0 +1,157 @@
+/* All palette values, measured sizes and radii are null in D1's specs.
+   Existing theme colors and base sizes are inherited. Relative spacing below
+   supports the specified region relationships; it is not a historical measurement. */
+
+/* spec: chatgpt-2024-10 regions; claude.ai-2024-06 regions; google-bard-gemini-2025-03 regions */
+.surface.d1 [hidden] { display: none !important; }
+.surface.d1 { position: relative; }
+.surface.d1:has(> .native-sidebar) { flex-direction: row; }
+.surface.d1 .d1-optional-split { flex: 1; min-height: 0; min-width: 0; }
+.surface.d1 .d1-optional-split > .chat-main,
+.surface.d1 .d1-optional-split > .terminal-main { flex: 1; min-width: 0; }
+.surface.d1 .d1-document {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  padding: 1em;
+  border-inline-start: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+}
+.surface.d1 .d1-document > header { display: flex; flex-wrap: wrap; align-items: center; gap: .5em; }
+.surface.d1 .d1-document [contenteditable] { min-height: 8em; white-space: pre-wrap; }
+.surface.d1 .d1-document textarea { display: block; width: 100%; min-height: 8em; }
+.surface.d1 .d1-full-document { position: absolute; inset: 0; z-index: 5; }
+.surface.d1 .d1-menu { min-width: 0; overflow-wrap: anywhere; }
+.surface.d1 .d1-menu > summary { cursor: pointer; padding: .4em; }
+.surface.d1 .d1-menu[open] > :not(summary) { margin: .3em; }
+.surface.d1 .native-header .d1-menu[open] {
+  position: relative;
+  z-index: 3;
+  background: var(--panel);
+}
+.surface.d1 .d1-composer-controls,
+.surface.d1 .d1-actions,
+.surface.d1 .d1-answer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5em; }
+.surface.d1 .d1-composer-controls:empty { display: none; }
+.surface.d1 .composer { flex-wrap: wrap; }
+.surface.d1 .composer textarea { flex: 1; min-width: 0; }
+.surface.d1 .d1-sources { text-align: start; overflow-wrap: anywhere; }
+.surface.d1 .d1-sources a { display: inline-block; margin-inline-end: 1em; }
+.surface.d1 .d1-sources[open] { max-height: 8em; overflow: auto; }
+.surface.d1 .d1-field { display: flex; flex-direction: column; margin: .5em; }
+.surface.d1 .d1-field textarea { min-height: 5em; }
+
+/* spec: claude.ai-2023-07 typography.free_fallback / must_not_copy; applies to all D1 product names */
+.surface.d1 .native-header > strong,
+.surface.d1 .sidebar-title,
+.surface.d1 .macos-toolbar-title,
+.surface.d1 .macos-spotlight-head > strong,
+.surface.d1 .claude-2023-hero > strong {
+  font-family: system-ui, sans-serif;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+/* spec: chatgpt-2022-12 conversation — inherit existing alternating full-width band colors. */
+.surface.chatgpt.d1.d1-december .message { max-width: 100%; border-radius: 0; margin: 0; }
+/* spec: chatgpt-2024-11 conversation.assistant — no assistant icon. */
+.surface.chatgpt.d1.d1-no-assistant-icon .message.assistant .message-label::before,
+.surface.chatgpt.d1.d1-no-assistant-icon .message.assistant .stream-fx-head { display: none !important; }
+/* spec: openai-playground-2020-08 regions / conversation / shape.input_shape */
+.surface.playground.d1 .d1-completion-editor {
+  display: block;
+  white-space: pre-wrap;
+  margin: 1em;
+  border: 1px solid var(--border);
+  padding: 1em;
+  outline-offset: .2em;
+}
+.surface.playground.d1 .d1-completion-editor:empty::before { content: attr(data-placeholder); color: var(--muted); }
+.surface.playground.d1 .d1-completion-editor .message,
+.surface.playground.d1 .d1-completion-editor .answer-text {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+}
+.surface.playground.d1 .d1-completion-editor .message-label,
+.surface.playground.d1 .d1-completion-editor .stream-fx-head,
+.surface.playground.d1 .d1-completion-editor .fact-notes { display: none; }
+.surface.playground.d1 .d1-completion-submit { min-height: 0; border: 0; padding: 0; box-shadow: none; background: transparent; }
+.surface.playground.d1 .d1-completion-submit button { margin-inline-start: 1em; }
+/* spec: openai-playground-2025-03 regions.position=null — retain old settings-left arrangement. */
+.surface.playground.d1.edition-2025 .playground-main { order: 1; }
+/* spec: openai-playground-2024-10 regions — Realtime navigation remains separate from chat-mode tabs. */
+.surface.playground.d1 .prompt-library { flex-wrap: wrap; }
+
+/* spec: openai-gpt-2-2019-02 regions / conversation / shape.input_shape; also 2019-05, 2019-08, 2019-11 */
+.surface.gpt2.d1 .thread { flex: 0 1 auto; counter-reset: d1-sample; overflow: visible; }
+.surface.gpt2.d1 .terminal-main { display: block; overflow: auto; }
+.surface.gpt2.d1 .composer,
+.surface.claude-code.d1.d1-cc-v1 .composer {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}
+.surface.gpt2.d1 .message { display: block; max-width: none; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; }
+.surface.gpt2.d1 .message-label,
+.surface.gpt2.d1 .stream-fx-head,
+.surface.gpt2.d1 .fact-notes { display: none !important; }
+.surface.gpt2.d1 .message.user::before { content: 'Model prompt >>> '; }
+.surface.gpt2.d1 .message.user .answer-text { display: inline; }
+.surface.gpt2.d1 .message.assistant { counter-increment: d1-sample; white-space: pre-wrap; }
+.surface.gpt2.d1 .message.assistant::before { content: '======================================== SAMPLE ' counter(d1-sample) ' ========================================'; display: block; white-space: pre; }
+.surface.gpt2.d1 .message.assistant::after { content: '================================================================================'; display: block; white-space: pre; }
+/* spec: openai-gpt-2-2019-02 conversation.streaming — reveal completed sample, not a typing animation. */
+.surface.gpt2.d1 .message.assistant:not(.is-complete) { display: none; }
+.surface.gpt2.d1 .answer-text::after { content: none !important; }
+
+/* spec: claude-desktop-2026-05 regions; claude-code-2026-04-macos regions — user-arranged panes, no fixed IDE pairing. */
+.surface.d1 .d1-workspace { display: flex; flex-wrap: wrap; flex: 1; min-height: 0; min-width: 0; overflow: auto; }
+.surface.d1 .d1-work-panel { display: flex; flex-direction: column; flex: 1 1 40%; min-width: 0; min-height: 12em; border: 1px solid var(--border); }
+.surface.d1 .d1-work-panel > header { display: flex; flex-wrap: wrap; gap: .3em; align-items: center; }
+.surface.d1 .d1-work-panel > textarea { flex: 1; min-width: 0; width: 100%; }
+.surface.d1 .d1-work-panel > .chat-main { min-height: 16em; }
+.surface.d1 .d1-work-panel pre,
+.surface.claude-code.d1 .d1-menu pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+/* spec: claude-desktop-2026-01 regions — right task details remain distinct from the center conversation. */
+.surface.claude.desktop.d1 > .macos-vibrancy-window { flex: 1; min-width: 0; min-height: 0; }
+.surface.claude.desktop.d1 .macos-window-main { min-width: 0; }
+.surface.claude.desktop.d1.d1-cowork .task-context { overflow: auto; }
+
+/* spec: bing-chat-microsoft-copilot-2023-05 regions — history on right. */
+.surface.bing.d1 .d1-right-history { border-inline-start: 1px solid var(--border); border-inline-end: 0; }
+/* spec: bing-chat-microsoft-copilot-2024-02 regions — horizontal suggestion cards. */
+.surface.bing.d1 .d1-scroll-cards { display: flex; flex-wrap: nowrap; overflow-x: auto; }
+.surface.bing.d1 .d1-scroll-cards > * { flex: 1 0 45%; }
+/* spec: bing-chat-microsoft-copilot-2024-03 regions / conversation — two Notebook regions, input left/output right. */
+.surface.bing.d1 .d1-notebook-input,
+.surface.bing.d1 .d1-notebook-output { display: flex; flex-direction: column; flex: 1; min-width: 0; min-height: 0; }
+.surface.bing.d1 .d1-notebook-input .composer { flex: 1; align-items: stretch; }
+.surface.bing.d1 .d1-notebook-input textarea { min-height: 10em; }
+.surface.bing.d1.d1-notebook .message.user { display: none; }
+/* spec: bing-chat-microsoft-copilot-2024-10 shape.density=airy — qualitative extra breathing room, not sourced dimensions. */
+.surface.bing.d1.d1-airy .chat-main { gap: 1em; }
+
+/* spec: google-bard-gemini-2023-07 controls — read aloud at the answer's upper right. */
+.surface.gemini.d1 .d1-answer-top { display: flex; justify-content: flex-end; }
+/* spec: google-bard-gemini-2024-12 shape.input_shape — thin outlined long rounded input; exact radius unverified. */
+.surface.gemini.d1.d1-rounded-input .composer { border-radius: 999em; border-width: 1px; }
+
+/* spec: chatgpt-2024-10 regions; claude-desktop-2026-01 regions; google-bard-gemini-2025-03 regions
+   Narrow-screen stacking is a reconstruction accommodation, not a sourced historical breakpoint. */
+@media (max-width: 600px) {
+  .surface.d1 .d1-optional-split,
+  .surface.d1.d1-notebook > .era-split-pane { flex-direction: column; overflow: auto; }
+  .surface.d1 .d1-document { flex-basis: auto; border-inline-start: 0; border-block-start: 1px solid var(--border); }
+  .surface.d1 .d1-work-panel { flex-basis: 100%; }
+  .surface.d1 .native-header { flex-wrap: wrap; }
+  .surface.d1 .composer { margin-inline: .5em; }
+}

@@ -1,0 +1,303 @@
+{
+  "id": "vstorm-co--pydantic-deepagents",
+  "version": "650b592b6acc",
+  "from": "2026-11-15",
+  "surface": "terminal",
+  "layout": {
+    "t": "col",
+    "label": "chat.py",
+    "c": [
+      {
+        "t": "toolbar",
+        "label": "DeepHeader"
+      },
+      {
+        "t": "col",
+        "label": "Vertical",
+        "c": [
+          {
+            "t": "thread",
+            "label": "MessageList"
+          },
+          {
+            "t": "panel",
+            "label": "ForkTabsWidget"
+          },
+          {
+            "t": "col",
+            "label": "Vertical",
+            "c": [
+              {
+                "t": "panel",
+                "label": "ForkOverviewWidget"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "t": "statusline",
+        "label": "StatusBar"
+      },
+      {
+        "t": "col",
+        "label": "Vertical",
+        "c": [
+          {
+            "t": "col",
+            "label": "Vertical",
+            "c": [
+              {
+                "t": "panel",
+                "label": "SubagentsWidget"
+              },
+              {
+                "t": "panel",
+                "label": "ForkBadgeWidget"
+              },
+              {
+                "t": "panel",
+                "label": "TodosWidget"
+              },
+              {
+                "t": "panel",
+                "label": "QueuedWidget"
+              }
+            ]
+          },
+          {
+            "t": "composer",
+            "label": "InputArea"
+          }
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "accent": "#d98e48",
+    "text": "#e9e1d4",
+    "bg": "#0c0a07",
+    "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/styles/themes.py"
+  },
+  "strings": {
+    "s1": "Deep Agent CLI — AI coding assistant powered by pydantic-ai.",
+    "s2": "Show version and exit.",
+    "s3": "Enable Logfire tracing",
+    "s4": "Model to use (default: from config)",
+    "s5": "[bold]Context Usage[/bold]",
+    "s6": "[bold]Session Usage[/bold]",
+    "s7": "Compact now",
+    "s8": "[dim]Esc to close[/dim]",
+    "s9": "[dim]Enter to save · Esc to cancel[/dim]",
+    "s10": "[bold]Add MCP server[/bold]",
+    "s11": "[dim]Enter in the last field to add · Esc to cancel[/dim]",
+    "s12": "[dim]Loading diff…[/dim]",
+    "s13": "[dim]Esc or q to close[/dim]"
+  },
+  "behaviors": {
+    "commands": [
+      "/model",
+      "/theme",
+      "/compact",
+      "/diff",
+      "/help",
+      "/settings",
+      "/cost",
+      "/tokens",
+      "/quit",
+      "/exit",
+      "/clear",
+      "/undo"
+    ],
+    "model_picker": "slash-model"
+  },
+  "mobile": "none",
+  "sources": [
+    "https://github.com/vstorm-co/pydantic-deepagents",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/docs/installation.md",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/docs/cli/getting-started.md",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/pyproject.toml",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/deepresearch/pyproject.toml",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/styles/themes.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/app.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/tui.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/main.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/deepresearch/src/deepresearch/app.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/examples/full_app/app.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/examples/security_gate/main.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/local_context.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/pydantic_deep/instructions.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/modals/context_view.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/pydantic_deep/prompts/builder.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/pydantic_deep/prompts/__init__.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/pydantic_deep/prompts/fragments.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/commands.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/modals/mcp_view.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/modals/diff_view.py",
+    "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/modals/help_view.py",
+    "https://api.github.com/repos/vstorm-co/pydantic-deepagents/releases"
+  ],
+  "provenance": {
+    "commit": "650b592b6accd7dc994226abbaa0cf717527e457",
+    "snapshot_at": "2026-11-15",
+    "layout_path": "apps/cli/screens/chat.py",
+    "layout_evidence": [
+      {
+        "component": "DeepHeader",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 295,
+        "type": "toolbar"
+      },
+      {
+        "component": "Vertical",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 296,
+        "type": "col"
+      },
+      {
+        "component": "MessageList",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 297,
+        "type": "thread"
+      },
+      {
+        "component": "ForkTabsWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 298,
+        "type": "panel"
+      },
+      {
+        "component": "Vertical",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 299,
+        "type": "col"
+      },
+      {
+        "component": "ForkOverviewWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 300,
+        "type": "panel"
+      },
+      {
+        "component": "StatusBar",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 301,
+        "type": "statusline"
+      },
+      {
+        "component": "Vertical",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 307,
+        "type": "col"
+      },
+      {
+        "component": "Vertical",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 308,
+        "type": "col"
+      },
+      {
+        "component": "SubagentsWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 309,
+        "type": "panel"
+      },
+      {
+        "component": "ForkBadgeWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 310,
+        "type": "panel"
+      },
+      {
+        "component": "TodosWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 311,
+        "type": "panel"
+      },
+      {
+        "component": "QueuedWidget",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 312,
+        "type": "panel"
+      },
+      {
+        "component": "InputArea",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 313,
+        "type": "composer"
+      }
+    ],
+    "behavior_evidence": [
+      {
+        "value": "/model",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md",
+        "line": 284
+      },
+      {
+        "value": "/theme",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md",
+        "line": 305
+      },
+      {
+        "value": "/compact",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md",
+        "line": 305
+      },
+      {
+        "value": "/diff",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md",
+        "line": 594
+      },
+      {
+        "field": "model_picker",
+        "value": "flag",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/README.md"
+      },
+      {
+        "value": "/help",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/app.py",
+        "line": 745
+      },
+      {
+        "value": "/settings",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/app.py",
+        "line": 748
+      },
+      {
+        "value": "/cost",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 544
+      },
+      {
+        "value": "/tokens",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 544
+      },
+      {
+        "value": "/quit",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 544
+      },
+      {
+        "value": "/exit",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/screens/chat.py",
+        "line": 544
+      },
+      {
+        "value": "/clear",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/commands.py",
+        "line": 852
+      },
+      {
+        "value": "/undo",
+        "source": "https://github.com/vstorm-co/pydantic-deepagents/blob/650b592b6accd7dc994226abbaa0cf717527e457/apps/cli/commands.py",
+        "line": 853
+      }
+    ],
+    "method": "Observed component outline in source order. Conditional branches may coexist in this static outline.",
+    "mobile": "Terminal reconstruction.",
+    "stream": "Unmeasured; omitted."
+  }
+}

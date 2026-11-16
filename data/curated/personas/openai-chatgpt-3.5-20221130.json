@@ -1,0 +1,116 @@
+{
+  "schema": "memento.persona.v1",
+  "model_id": "openai:chatgpt-3.5-20221130",
+  "name": "ChatGPT 3.5（2022年公開版）",
+  "family": "gpt",
+  "aliases": [
+    "chatgpt-3.5-20221130",
+    "chatgpt-3.5",
+    "chatgpt-2022"
+  ],
+  "reviewed_at": "2026-11-15",
+  "traits": {
+    "tone": {
+      "value": "対話を続け、間違いを認めたり、質問の前提を問い直したりするよう調整された。",
+      "source": "https://openai.com/index/chatgpt/",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "Tuned to sustain dialogue, acknowledge mistakes and question a prompt's assumptions."
+    },
+    "verbosity": {
+      "value": "説明が長くなりすぎ、同じ言い回しを重ねることがある。",
+      "source": "https://openai.com/index/chatgpt/",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "May give overly long explanations and repeat phrases."
+    },
+    "formatting_habits": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "refusal_style": {
+      "value": "不適切な依頼を断るように調整されているが、一貫しない場合がある。",
+      "source": "https://openai.com/index/chatgpt/",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "Tuned to refuse inappropriate requests, with inconsistent results possible."
+    },
+    "humour": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "self_description": {
+      "value": "OpenAI が訓練した言語モデルだという説明を繰り返しがち。",
+      "source": "https://openai.com/index/chatgpt/",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "Tends to repeat that it is a language model trained by OpenAI."
+    },
+    "knowledge_cutoff": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "interface": {
+      "value": "chat",
+      "source": "https://openai.com/index/chatgpt/",
+      "basis": "official",
+      "confidence": 0.9,
+      "note": "資料で示された入出力形式です。chat は対話、completion は文章の続きを書く形式です。"
+    },
+    "quirks": [
+      {
+        "value": "あいまいな質問でも聞き返さず、意図を推測して答えがち。",
+        "source": "https://openai.com/index/chatgpt/",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Tends to infer intent and answer ambiguous questions without asking for clarification."
+      }
+    ],
+    "failure_modes": [
+      {
+        "value": "もっともらしく聞こえる誤った答えを作ることがある。",
+        "source": "https://openai.com/index/chatgpt/",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "May generate plausible-sounding incorrect answers."
+      }
+    ],
+    "typical_strengths": [
+      {
+        "value": "前の発言を踏まえた質問のやり取り。",
+        "source": "https://openai.com/index/chatgpt/",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Follow-up questions grounded in earlier messages."
+      }
+    ]
+  },
+  "resolution": {
+    "kind": "researched",
+    "ancestor": null,
+    "path": [
+      "openai:chatgpt-3.5-20221130"
+    ],
+    "method": "own",
+    "warnings": [
+      "空欄の話し方は未確認です。公開資料の説明だけで人格全体が分かるわけではありません。"
+    ],
+    "links": []
+  }
+}

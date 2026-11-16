@@ -1,0 +1,1447 @@
+{
+  "cytostack--openwolf": {
+    "topics": [
+      "agent-memory",
+      "anthropic",
+      "claude-ai",
+      "claude-code",
+      "cli",
+      "codex",
+      "context-engineering",
+      "developer-tools",
+      "middleware",
+      "observability",
+      "open-source",
+      "openai",
+      "opencode",
+      "token-optimization"
+    ],
+    "homepage": "https://openwolf.com",
+    "archived": false,
+    "commit": "8568f41aa8a985a496314c3ea313ff1ee2b66483",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v2.0.0",
+        "2026-07-14"
+      ],
+      [
+        "v2.0.1",
+        "2026-07-14"
+      ],
+      [
+        "v2.0.4",
+        "2026-08-18"
+      ],
+      [
+        "v2.0.5",
+        "2026-08-19"
+      ],
+      [
+        "v2.1.0",
+        "2026-08-19"
+      ],
+      [
+        "v2.2.0",
+        "2026-08-20"
+      ],
+      [
+        "v2.3.0",
+        "2026-08-20"
+      ],
+      [
+        "v2.4.0",
+        "2026-08-20"
+      ],
+      [
+        "v2.4.1",
+        "2026-08-20"
+      ],
+      [
+        "v2.5.1",
+        "2026-08-29"
+      ],
+      [
+        "v2.5.0",
+        "2026-08-29"
+      ],
+      [
+        "v2.5.2",
+        "2026-09-15"
+      ],
+      [
+        "v2.5.3",
+        "2026-10-19"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npm install -g openwolf",
+    "install_evidence": [
+      {
+        "command": "npm install -g openwolf",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/README.md",
+        "line": 62
+      }
+    ],
+    "instruction_files": [
+      "CLAUDE.md",
+      "AGENTS.md",
+      "GEMINI.md"
+    ],
+    "instruction_evidence": [
+      {
+        "name": "CLAUDE.md",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/daemon/context-audit.ts",
+        "path": "src/daemon/context-audit.ts",
+        "line": 39,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      },
+      {
+        "name": "AGENTS.md",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/agents/index.ts",
+        "path": "src/agents/index.ts",
+        "line": 88,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      },
+      {
+        "name": "GEMINI.md",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/agents/index.ts",
+        "path": "src/agents/index.ts",
+        "line": 88,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      }
+    ],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/dashboard/app/hooks/useTheme.ts",
+        "docs/.vitepress/theme/index.ts",
+        "src/dashboard/app/App.tsx",
+        "src/dashboard/app/main.tsx",
+        "src/dashboard/app/components/layout/Layout.tsx",
+        "src/cli/memory-review.ts",
+        "src/cli/memory-migrate.ts",
+        "src/daemon/context-audit.ts",
+        "src/hooks/memory-archive.ts",
+        "src/cli/index.ts",
+        "src/agents/index.ts",
+        "src/dashboard/app/components/panels/ProjectOverview.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#f7f8fa",
+      "text": "#101010",
+      "accent": "#d71921",
+      "font_ui": "Space Grotesk, system-ui, -apple-system, sans-serif",
+      "font_mono": "Space Mono, JetBrains Mono, monospace",
+      "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--bg-base",
+        "value": "#f7f8fa",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+        "line": 11
+      },
+      {
+        "token": "text",
+        "key": "--text-primary",
+        "value": "#101010",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+        "line": 17
+      },
+      {
+        "token": "accent",
+        "key": "--accent",
+        "value": "#d71921",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+        "line": 21
+      },
+      {
+        "token": "font_ui",
+        "value": "Space Grotesk, system-ui, -apple-system, sans-serif",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+        "line": 6
+      },
+      {
+        "token": "font_mono",
+        "value": "Space Mono, JetBrains Mono, monospace",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+        "line": 7
+      }
+    ],
+    "strings": [
+      "OPENWOLF",
+      "Dashboard token rejected.",
+      "openwolf dashboard",
+      "--all",
+      "--json",
+      "--check",
+      "--yes",
+      "--file",
+      "--dry-run",
+      "--list",
+      "--status",
+      "Token-conscious AI brain for Claude Code projects",
+      "Initialize .wolf/ in current project",
+      "Force full anatomy rescan",
+      "unknown",
+      "Indexed files",
+      "Recorded reads",
+      "Recorded writes",
+      "Bug records",
+      "Recorded token usage",
+      "Input tokens",
+      "Output tokens",
+      "Cached input tokens",
+      "Command output shortened",
+      "estimated tokens"
+    ],
+    "string_evidence": [
+      {
+        "text": "OPENWOLF",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/App.tsx",
+        "line": 51,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Dashboard token rejected.",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/App.tsx",
+        "line": 63,
+        "kind": "visible-text"
+      },
+      {
+        "text": "openwolf dashboard",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/App.tsx",
+        "line": 66,
+        "kind": "visible-text"
+      },
+      {
+        "text": "--all",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 54,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--json",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 55,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--check",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 61,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--yes",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 80,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--file",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 93,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--dry-run",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 188,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--list",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 190,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--status",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 202,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "Token-conscious AI brain for Claude Code projects",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 39,
+        "kind": "native-ui-output"
+      },
+      {
+        "text": "Initialize .wolf/ in current project",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 44,
+        "kind": "native-ui-output"
+      },
+      {
+        "text": "Force full anatomy rescan",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+        "line": 60,
+        "kind": "native-ui-output"
+      },
+      {
+        "text": "unknown",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 18,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Indexed files",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 21,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Recorded reads",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 22,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Recorded writes",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 23,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Bug records",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 24,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Recorded token usage",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 28,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Input tokens",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 31,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Output tokens",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 32,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Cached input tokens",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 33,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Command output shortened",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 40,
+        "kind": "visible-text"
+      },
+      {
+        "text": "estimated tokens",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "line": 41,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/cytostack/openwolf",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/README.md",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/getting-started.md",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/package.json",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/package.json",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/hooks/useTheme.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/.vitepress/theme/index.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/App.tsx",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/main.tsx",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/layout/Layout.tsx",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/memory-review.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/memory-migrate.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/daemon/context-audit.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/hooks/memory-archive.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/agents/index.ts",
+      "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx",
+      "https://api.github.com/repos/cytostack/openwolf/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/README.md"
+      },
+      {
+        "path": "docs/getting-started.md",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/getting-started.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/package.json"
+      },
+      {
+        "path": "docs/package.json",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/package.json"
+      },
+      {
+        "path": "src/dashboard/app/hooks/useTheme.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/hooks/useTheme.ts"
+      },
+      {
+        "path": "docs/.vitepress/theme/index.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/docs/.vitepress/theme/index.ts"
+      },
+      {
+        "path": "src/dashboard/app/styles/globals.css",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/styles/globals.css"
+      },
+      {
+        "path": "src/dashboard/app/App.tsx",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/App.tsx"
+      },
+      {
+        "path": "src/dashboard/app/main.tsx",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/main.tsx"
+      },
+      {
+        "path": "src/dashboard/app/components/layout/Layout.tsx",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/layout/Layout.tsx"
+      },
+      {
+        "path": "src/cli/memory-review.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/memory-review.ts"
+      },
+      {
+        "path": "src/cli/memory-migrate.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/memory-migrate.ts"
+      },
+      {
+        "path": "src/daemon/context-audit.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/daemon/context-audit.ts"
+      },
+      {
+        "path": "src/hooks/memory-archive.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/hooks/memory-archive.ts"
+      },
+      {
+        "path": "src/cli/index.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/cli/index.ts"
+      },
+      {
+        "path": "src/agents/index.ts",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/agents/index.ts"
+      },
+      {
+        "path": "src/dashboard/app/components/panels/ProjectOverview.tsx",
+        "source": "https://github.com/cytostack/openwolf/blob/8568f41aa8a985a496314c3ea313ff1ee2b66483/src/dashboard/app/components/panels/ProjectOverview.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:20.459Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / memory",
+    "repository_id": 1182594286,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyb3rmx--qu1cksc0pe": {
+    "topics": [
+      "all-in-one",
+      "apk",
+      "elf",
+      "exe",
+      "linux",
+      "malware",
+      "malware-analysis",
+      "mcp",
+      "mcp-server",
+      "osx",
+      "packer",
+      "python3",
+      "ransomware",
+      "security-tools",
+      "static-analysis",
+      "strings",
+      "suspicious-files",
+      "termux",
+      "threat-analysis",
+      "windows"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "180d44f44725bbce0296dc5346554fcf8852bbb2",
+    "classification_basis": "Topics, README introduction, language (YARA) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "pip install \"mcp>=2.0.0\" / docker run -it --rm -v $(pwd):/data qu1cksc0pe:latest --file /data/suspicious_file --analyze",
+    "install_evidence": [
+      {
+        "command": "pip install \"mcp>=2.0.0\"",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/README.md",
+        "line": 48
+      },
+      {
+        "command": "docker run -it --rm -v $(pwd):/data qu1cksc0pe:latest --file /data/suspicious_file --analyze",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/README.md",
+        "line": 198
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "Modules/android_memory.py",
+        "Modules/dynamic_memory.py",
+        "tools/audit_yara_rules.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/gpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#05070b",
+      "text": "#e7edf7",
+      "accent": "#63d5ff",
+      "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--bg-0",
+        "value": "#05070b",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css",
+        "line": 3
+      },
+      {
+        "token": "text",
+        "key": "--text",
+        "value": "#e7edf7",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css",
+        "line": 7
+      },
+      {
+        "token": "accent",
+        "key": "--accent",
+        "value": "#63d5ff",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css",
+        "line": 9
+      }
+    ],
+    "strings": [
+      "running",
+      "stopped",
+      "compiled",
+      "error",
+      "Write full JSON audit",
+      "--root",
+      "--output"
+    ],
+    "string_evidence": [
+      {
+        "text": "running",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/dynamic_memory.py",
+        "line": 380,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "stopped",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/dynamic_memory.py",
+        "line": 397,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "compiled",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+        "line": 38,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "error",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+        "line": 53,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Write full JSON audit",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+        "line": 72,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--root",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+        "line": 71,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--output",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+        "line": 72,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/CYB3RMX/Qu1cksc0pe",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/README.md",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/requirements.txt",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/android_memory.py",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/dynamic_memory.py",
+      "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py",
+      "https://api.github.com/repos/CYB3RMX/Qu1cksc0pe/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/README.md"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/requirements.txt"
+      },
+      {
+        "path": "webui/static/style.css",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/webui/static/style.css"
+      },
+      {
+        "path": "Modules/android_memory.py",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/android_memory.py"
+      },
+      {
+        "path": "Modules/dynamic_memory.py",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/Modules/dynamic_memory.py"
+      },
+      {
+        "path": "tools/audit_yara_rules.py",
+        "source": "https://github.com/CYB3RMX/Qu1cksc0pe/blob/180d44f44725bbce0296dc5346554fcf8852bbb2/tools/audit_yara_rules.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false",
+      "topic:mcp-server stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=7, theme=3.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (YARA) → mcp-server / protocol-mcp",
+    "repository_id": 216032884,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyberark--fuzzyai": {
+    "topics": [
+      "ai",
+      "ai-red-team",
+      "fuzzing",
+      "jailbreak",
+      "jailbreaking",
+      "llm",
+      "llm-evaluation",
+      "llm-security",
+      "llms",
+      "security"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Jupyter Notebook) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyberark/FuzzyAI",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:llm-evaluation stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 897865415,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyberkaida--reverse-engineering-assistant": {
+    "topics": [
+      "assistant",
+      "binaryninja",
+      "ghidra",
+      "llm",
+      "mcp",
+      "mcp-server",
+      "reverse-engineering"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2",
+    "classification_basis": "Topics, README introduction, language (Java) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v2024-05-06",
+        "2024-05-06"
+      ],
+      [
+        "v2024-07-11",
+        "2024-07-11"
+      ],
+      [
+        "v4.0.0",
+        "2025-06-02"
+      ],
+      [
+        "v4.1.0",
+        "2025-06-19"
+      ],
+      [
+        "v4.1.1",
+        "2025-06-28"
+      ],
+      [
+        "v4.2.0",
+        "2025-07-28"
+      ],
+      [
+        "v4.3.0",
+        "2025-08-08"
+      ],
+      [
+        "v4.4.0",
+        "2025-09-13"
+      ],
+      [
+        "v4.5.0",
+        "2025-09-20"
+      ],
+      [
+        "v5.0.0",
+        "2025-10-11"
+      ],
+      [
+        "v6.0.0",
+        "2025-11-09"
+      ],
+      [
+        "v6.0.1",
+        "2025-11-16"
+      ],
+      [
+        "v7.0.0",
+        "2025-12-14"
+      ],
+      [
+        "v7.1.0",
+        "2026-01-05"
+      ],
+      [
+        "v7.1.1",
+        "2026-01-07"
+      ],
+      [
+        "v7.2.0a",
+        "2026-03-15"
+      ],
+      [
+        "v7.2.0",
+        "2026-03-29"
+      ],
+      [
+        "v7.2.1",
+        "2026-04-07"
+      ],
+      [
+        "v7.3.0",
+        "2026-06-13"
+      ],
+      [
+        "v7.3.1",
+        "2026-09-03"
+      ],
+      [
+        "v7.3.2",
+        "2026-11-13"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "uv tool install reverse-engineering-assistant",
+    "install_evidence": [
+      {
+        "command": "uv tool install reverse-engineering-assistant",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/README.md",
+        "line": 143
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/reva_cli/project_manager.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "src/main/java/reva/tools/CLAUDE.md",
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "src/main/java/reva/tools/CLAUDE.md",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/main/java/reva/tools/CLAUDE.md"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/cyberkaida/reverse-engineering-assistant",
+      "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/README.md",
+      "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/pyproject.toml",
+      "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/reva_cli/project_manager.py",
+      "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/main/java/reva/tools/CLAUDE.md",
+      "https://api.github.com/repos/cyberkaida/reverse-engineering-assistant/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/pyproject.toml"
+      },
+      {
+        "path": "src/reva_cli/project_manager.py",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/reva_cli/project_manager.py"
+      },
+      {
+        "path": "src/main/java/reva/tools/CLAUDE.md",
+        "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/main/java/reva/tools/CLAUDE.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Java) → mcp-server / protocol-mcp",
+    "repository_id": 680027364,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:08.721Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "src/main/java/reva/tools/CLAUDE.md",
+          "source": "https://github.com/cyberkaida/reverse-engineering-assistant/blob/4d2fc5b4c5f4ce00d95f0bd6bdf0c64b67e65fc2/src/main/java/reva/tools/CLAUDE.md",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "cyrusagents--cyrus": {
+    "topics": [
+      "agent",
+      "ai",
+      "claude",
+      "claudecode",
+      "codex",
+      "cursor",
+      "engineer",
+      "gemini",
+      "github",
+      "linear",
+      "opencode",
+      "slack"
+    ],
+    "homepage": "https://atcyrus.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyrusagents/cyrus",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 969263461,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyfrin--aderyn": {
+    "topics": [
+      "mcp-server",
+      "rust",
+      "solidity",
+      "static-code-analyzer"
+    ],
+    "homepage": "https://aderyn.cyfrin.io/overview",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Cyfrin/aderyn",
+      "https://api.github.com/licenses/gpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 683427841,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cygnux-labs--tracekit": {
+    "topics": [
+      "agent-security",
+      "ai-agents",
+      "ai-safety",
+      "audit-log",
+      "audit-trail",
+      "certificate-transparency",
+      "claude-code",
+      "guardrails",
+      "langchain",
+      "langgraph",
+      "llm",
+      "llm-security",
+      "mcp",
+      "observability",
+      "openai-agents",
+      "provenance",
+      "python",
+      "tamper-evident",
+      "transparency-log",
+      "typescript"
+    ],
+    "homepage": "https://cygnuxlabs.com/tracekit",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Cygnux-Labs/Tracekit",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1389096530,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyanheads--obsidian-mcp-server": {
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "bun",
+      "cyanheads",
+      "knowledge-base",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "note-taking",
+      "obsidian",
+      "obsidian-md",
+      "obsidian-vault",
+      "pkm",
+      "stdio",
+      "streamable-http",
+      "typescript"
+    ],
+    "homepage": "https://www.npmjs.com/package/obsidian-mcp-server",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/obsidian-mcp-server",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false",
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:model-context-protocol stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 921418273,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyproxio--mcp-for-security": {
+    "topics": [
+      "ai-assistants",
+      "ai-security",
+      "cybersecurity",
+      "hacking-tools",
+      "mcp",
+      "mcp-ai",
+      "mcp-pentest",
+      "mcp-security",
+      "model-context-protocol",
+      "pentesting",
+      "security-automation",
+      "security-integrations",
+      "security-testing",
+      "security-tools",
+      "web-security"
+    ],
+    "homepage": "https://cyprox.io",
+    "archived": true,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyproxio/mcp-for-security",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:500..999 fork:false",
+      "topic:model-context-protocol stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 959903176,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyanheads--atlas-mcp-server": {
+    "topics": [
+      "ai-agents",
+      "cyanheads",
+      "deep-research",
+      "graph-database",
+      "knowledge-management",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "neo4j",
+      "project-management",
+      "task-management",
+      "typescript"
+    ],
+    "homepage": "https://www.npmjs.com/package/atlas-mcp-server",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/atlas-mcp-server",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 904031977,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cybersunil--llmvault": {
+    "topics": [
+      "agent-security",
+      "ai-security",
+      "ai-security-tool",
+      "artificial-intelligence",
+      "ctf",
+      "docker",
+      "genai",
+      "good-first-issue",
+      "large-language-models",
+      "llm-security",
+      "llm-security-testing",
+      "owasp",
+      "owasp-llm-top-10",
+      "penetration-testing",
+      "prompt-injection",
+      "python",
+      "rag",
+      "red-team",
+      "up-for-grabs",
+      "vulnerable-lab"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/CyberSunil/LLMVault",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1301372808,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyberdesk-hq--cyberdesk": {
+    "topics": [
+      "ai-agents",
+      "computer-use",
+      "fastapi",
+      "hono",
+      "kubernetes",
+      "nextjs",
+      "terraform",
+      "virtual-machine"
+    ],
+    "homepage": "https://cyberdesk.io",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyberdesk-hq/cyberdesk",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:computer-use stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 964194851,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cyberchitta--llm-context.py": {
+    "topics": [
+      "claude-desktop",
+      "cli",
+      "coding",
+      "model-context-protocol",
+      "tools"
+    ],
+    "homepage": "https://www.cyberchitta.cc/articles/llm-ctx-why.html",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyberchitta/llm-context.py",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:model-context-protocol stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 789457378,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cy-s3c--burpmcp-ultra": {
+    "topics": [
+      "bug-bounty",
+      "burpsuite",
+      "claude",
+      "kotlin",
+      "mcp",
+      "model-context-protocol",
+      "pentesting",
+      "security-tools"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Kotlin) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Cy-S3c/BurpMCP-Ultra",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1200192516,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyanheads--model-context-protocol-resources": {
+    "topics": [
+      "ai-agents",
+      "ai-development",
+      "cyanheads",
+      "developer-guides",
+      "llm-tools",
+      "mcp",
+      "mcp-servers",
+      "model-context-protocol",
+      "model-context-protocol-servers"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (unknown) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/model-context-protocol-resources",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:model-context-protocol stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 895124092,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyanheads--git-mcp-server": {
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "cyanheads",
+      "developer-tools",
+      "git",
+      "git-tools",
+      "llm-tools",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "typescript",
+      "version-control"
+    ],
+    "homepage": "https://www.npmjs.com/package/@cyanheads/git-mcp-server",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/git-mcp-server",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:mcp-server stars:150..299 fork:false",
+      "topic:model-context-protocol stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 904190702,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyanheads--pubmed-mcp-server": {
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "bioinformatics",
+      "biomedical",
+      "citations",
+      "cyanheads",
+      "e-utilities",
+      "europe-pmc",
+      "full-text",
+      "mcp",
+      "mcp-server",
+      "mesh",
+      "model-context-protocol",
+      "ncbi",
+      "open-access",
+      "pubmed",
+      "pubmed-api",
+      "typescript",
+      "unpaywall"
+    ],
+    "homepage": "https://www.npmjs.com/package/@cyanheads/pubmed-mcp-server",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/pubmed-mcp-server",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:model-context-protocol stars:150..299 fork:false",
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 989369124,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "cyanheads--mcp-ts-core": {
+    "topics": [
+      "agent-native",
+      "ai",
+      "cloudflare-workers",
+      "cyanheads",
+      "framework",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "opentelemetry",
+      "typescript"
+    ],
+    "homepage": "https://www.npmjs.com/package/@cyanheads/mcp-ts-core",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/cyanheads/mcp-ts-core",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:model-context-protocol stars:150..299 fork:false",
+      "topic:mcp-server stars:150..299 fork:false",
+      "topic:mcp stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 951694053,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

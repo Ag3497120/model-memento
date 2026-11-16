@@ -1,0 +1,106 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Cohere",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "cohere-effective",
+      "publisher": "Cohere",
+      "kind": "prompting-guide",
+      "title": "Command へ見出しと具体例で伝える",
+      "url": "https://docs.cohere.com/docs/crafting-effective-prompts",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "Cohere"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "delimiters",
+          "summary_ja": "指示と資料を見出しで分け、答え方は具体例で伝えます。",
+          "when_ja": "文章の種類が混ざる依頼。",
+          "summary_en": "Separate instructions and references with headings and show examples of the desired answer.",
+          "when_en": "When a request mixes several types of text."
+        },
+        {
+          "technique_id": "examples",
+          "summary_ja": "欲しい答えの形を例で示します。",
+          "when_ja": "回答の形式を揃えたいとき。",
+          "summary_en": "Demonstrate the desired answer format with examples.",
+          "when_en": "When making answer formats consistent."
+        }
+      ],
+      "sources": [
+        "https://docs.cohere.com/docs/crafting-effective-prompts"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Use headings and examples with Command"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "cohere-advanced",
+      "publisher": "Cohere",
+      "kind": "prompting-guide",
+      "title": "Command の仕事を段階に分ける",
+      "url": "https://docs.cohere.com/docs/advanced-prompt-engineering-techniques",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "Cohere"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "decompose",
+          "summary_ja": "大きな仕事を複数の依頼に分け、各段階の出力を次へ渡します。",
+          "when_ja": "一度の依頼で複数の判断を求めているとき。",
+          "summary_en": "Break a large task into several requests and pass each stage’s output to the next.",
+          "when_en": "When one request asks for several decisions."
+        }
+      ],
+      "sources": [
+        "https://docs.cohere.com/docs/advanced-prompt-engineering-techniques"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Split Command tasks into stages"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "cohere-tutorial",
+      "publisher": "Cohere",
+      "kind": "cookbook",
+      "title": "Command の会話を試して直す",
+      "url": "https://docs.cohere.com/docs/text-generation-tutorial",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "Cohere"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "role",
+          "summary_ja": "共通の役割や背景を伝え、会話の例を使って応答を調整します。",
+          "when_ja": "会話形式の使い方を実例で学ぶとき。",
+          "summary_en": "Provide a shared role and context, then use conversation examples to refine responses.",
+          "when_en": "When learning conversational usage through examples."
+        }
+      ],
+      "sources": [
+        "https://docs.cohere.com/docs/text-generation-tutorial"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Test and refine Command conversations"
+    }
+  ]
+}

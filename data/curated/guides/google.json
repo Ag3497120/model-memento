@@ -1,0 +1,364 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Google",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-prompting",
+      "publisher": "Google",
+      "kind": "prompting-guide",
+      "title": "Gemini の指示の基本",
+      "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gemini"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "google-bard-gemini"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "求める仕事を具体的に書き、実際の応答を見ながら指示を直します。",
+          "when_ja": "何を頼めばよいか整理したいとき。",
+          "summary_en": "Describe the task specifically and revise instructions using actual responses.",
+          "when_en": "When clarifying what to ask for."
+        },
+        {
+          "technique_id": "examples",
+          "summary_ja": "必要な答えの形を、具体例を使って伝えます。",
+          "when_ja": "文章だけの説明では答え方が揃わないとき。",
+          "summary_en": "Use concrete examples to demonstrate the desired answer format.",
+          "when_en": "When prose instructions produce inconsistent answers."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/prompting-strategies"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Gemini prompting basics"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-system",
+      "publisher": "Google",
+      "kind": "system-prompt-advice",
+      "title": "Gemini の共通の指示",
+      "url": "https://ai.google.dev/gemini-api/docs/system-instructions",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gemini"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "google-bard-gemini"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "role",
+          "summary_ja": "system instruction（会話全体に渡す指示）で、役割や応答の方針を設定します。",
+          "when_ja": "複数の質問で共通の振る舞いを保ちたいとき。",
+          "summary_en": "Use system instructions to define a role and response policy across the conversation.",
+          "when_en": "When maintaining shared behavior across several questions."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/system-instructions"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Gemini shared instructions"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-long-context",
+      "publisher": "Google",
+      "kind": "prompting-guide",
+      "title": "長い資料の後に質問を置く",
+      "url": "https://ai.google.dev/gemini-api/docs/long-context",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gemini"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "google-bard-gemini"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "long-context",
+          "summary_ja": "長い資料を先に置き、その内容についての質問を後ろに置きます。",
+          "when_ja": "多くの資料をまとめて読ませるとき。",
+          "summary_en": "Place long reference material first, followed by questions about its contents.",
+          "when_en": "When asking the model to read many documents together."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/long-context"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Put questions after long references"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-thinking",
+      "publisher": "Google",
+      "kind": "model-notes",
+      "title": "Gemini の考える設定",
+      "url": "https://ai.google.dev/gemini-api/docs/thinking",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gemini"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "google-bard-gemini"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "reasoning-effort",
+          "summary_ja": "モデルの考える設定を調整し、回答までの時間と出力の上限にも注意します。",
+          "when_ja": "難しい依頼に使う時間を調整したいとき。",
+          "summary_en": "Adjust the model’s thinking settings while accounting for response time and output limits.",
+          "when_en": "When adjusting time spent on a difficult request."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/thinking"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Gemini thinking settings"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-structured",
+      "publisher": "Google",
+      "kind": "prompting-guide",
+      "title": "Gemini の決まった形式の回答",
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gemini"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "google-bard-gemini"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "output-format",
+          "summary_ja": "必要な項目と説明を指定し、受け取った値が目的に合うかも確かめます。",
+          "when_ja": "回答を決まった項目で扱いたいとき。",
+          "summary_en": "Specify required fields and descriptions, then check that the returned values suit the task.",
+          "when_en": "When processing answers through fixed fields."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemini-api/docs/structured-output"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Gemini structured answers"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-gemma-format",
+      "publisher": "Google",
+      "kind": "model-notes",
+      "title": "Gemma の会話形式",
+      "url": "https://ai.google.dev/gemma/docs/core/prompt-structure",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "gemma-1-2b-7b"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "conversation-format",
+          "summary_ja": "Gemma の会話には専用の区切りと役割の表記があります。使う版の形式を確認します。",
+          "when_ja": "モデルへ直接会話を渡す仕組みを作るとき。",
+          "summary_en": "Gemma uses dedicated conversation boundaries and role markers, so check the format for your version.",
+          "when_en": "When building a system that passes conversations directly to the model."
+        }
+      ],
+      "sources": [
+        "https://ai.google.dev/gemma/docs/core/prompt-structure"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Gemma conversation format"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-gemini-md",
+      "publisher": "Google",
+      "kind": "agent-instructions-file",
+      "title": "Gemini CLI の GEMINI.md",
+      "url": "https://geminicli.com/docs/cli/gemini-md/",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "gemini-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "gemini-file",
+          "summary_ja": "GEMINI.md に共有する背景や作業の約束を書き、必要なら関連ファイルを参照します。",
+          "when_ja": "毎回同じプロジェクトの説明をしているとき。",
+          "summary_en": "Write shared context and conventions in GEMINI.md, referencing related files when needed.",
+          "when_en": "When you keep explaining the same project context."
+        }
+      ],
+      "sources": [
+        "https://geminicli.com/docs/cli/gemini-md/"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "GEMINI.md in Gemini CLI"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-cli-system",
+      "publisher": "Google",
+      "kind": "system-prompt-advice",
+      "title": "Gemini CLI のシステム指示を置き換える",
+      "url": "https://geminicli.com/docs/cli/system-prompt/",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "gemini-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "role",
+          "summary_ja": "システム指示を置き換える前に、標準の指示に含まれる安全面と作業手順を確認します。",
+          "when_ja": "標準の役割設定を大きく変える必要があるとき。",
+          "summary_en": "Review the default safety guidance and procedures before replacing the system instructions.",
+          "when_en": "When you need to substantially change the default role."
+        }
+      ],
+      "sources": [
+        "https://geminicli.com/docs/cli/system-prompt/"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Replace Gemini CLI system instructions"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-cli-extensions",
+      "publisher": "Google",
+      "kind": "agent-instructions-file",
+      "title": "Gemini CLI の拡張に手順をまとめる",
+      "url": "https://geminicli.com/docs/extensions/reference/",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "gemini-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "拡張に Skills や別の担当役の定義を含めて、作業手順をまとめられます。",
+          "when_ja": "複数の作業環境で同じ手順を使いたいとき。",
+          "summary_en": "Extensions can bundle Skills and definitions for separate agents.",
+          "when_en": "When using the same procedures across environments."
+        }
+      ],
+      "sources": [
+        "https://geminicli.com/docs/extensions/reference/"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Package procedures in Gemini CLI extensions"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-antigravity-rules",
+      "publisher": "Google",
+      "kind": "agent-instructions-file",
+      "title": "Antigravity のルール",
+      "url": "https://www.antigravity.google/docs/rules-workflows?tab=ide",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "antigravity"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "scoped-rules",
+          "summary_ja": "守る条件はルールに、複数段階の仕事の手順は Skills に分けます。",
+          "when_ja": "常に守る約束と、必要なときだけ使う手順を整理するとき。",
+          "summary_en": "Use rules for constraints and Skills for multistage task procedures.",
+          "when_en": "When organizing ongoing conventions and on-demand procedures."
+        }
+      ],
+      "sources": [
+        "https://www.antigravity.google/docs/rules-workflows?tab=ide"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Antigravity rules"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "google-antigravity-workflows",
+      "publisher": "Google",
+      "kind": "release-notes-on-prompting",
+      "title": "Antigravity の Workflows から Skills へ",
+      "url": "https://antigravity.google/docs/ide/workflows?app=antigravity-ide",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "antigravity"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "公式資料は Workflows から Agent Skills への移行を案内しています。",
+          "when_ja": "以前作った繰り返しの作業手順を見直すとき。",
+          "summary_en": "The official documentation describes migrating Workflows to Agent Skills.",
+          "when_en": "When revisiting previously saved recurring workflows."
+        }
+      ],
+      "sources": [
+        "https://antigravity.google/docs/ide/workflows?app=antigravity-ide"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Move Antigravity Workflows to Skills"
+    }
+  ]
+}

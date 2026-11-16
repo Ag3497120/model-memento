@@ -1,0 +1,1526 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "cursor",
+  "name": "Cursor",
+  "vendor": "Anysphere",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "cursor-2023-03",
+      "from": "2023-03",
+      "to": "2023-04",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "CodeMirrorを使った初期の編集面"
+          ]
+        },
+        {
+          "name": "チャット",
+          "position": null,
+          "size": null,
+          "contents": [
+            "AIとの会話。位置と入力欄の形は未確認"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ログイン",
+          "where": null,
+          "purpose": "AIを使う前にログインする"
+        },
+        {
+          "label": "APIキー",
+          "where": null,
+          "purpose": "自分のOpenAI APIキーを設定する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "VS Code系へ移る前の独自エディタ",
+        "0.1.12でチャットの表示を整理",
+        "AI利用時のログインとAPIキー設定"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-1-12",
+          "kind": "changelog",
+          "date": "2023-03-30",
+          "shows": "controls・distinctive: AI利用にログインが必要。APIキーを設定可能。チャットの見た目を整理したとの記述。ペイン位置・色・寸法は示さない。"
+        },
+        {
+          "url": "https://cursor.com/changelog/0-2-0",
+          "kind": "changelog",
+          "date": "2023-04-06",
+          "shows": "regions・distinctive: CodeMirrorベースからVSCodiumの派生版へ移行。一般的なコードエディタにAI機能を加えた段階との説明。正確なパネル配置は示さない。"
+        },
+        {
+          "url": "https://web.archive.org/web/20230304142714id_/https://www.cursor.so/",
+          "kind": "archive",
+          "date": "2023-03-04",
+          "shows": "当時のログイン前の紹介ページ。コード編集・理解・生成を案内。アプリ内部の配置・配色の証拠には使わない。"
+        }
+      ],
+      "confidence": 0.43
+    },
+    {
+      "id": "cursor-2023-04",
+      "from": "2023-04",
+      "to": "2023-10",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "VSCodiumを土台にしたコードエディタ"
+          ]
+        },
+        {
+          "name": "AI機能",
+          "position": null,
+          "size": null,
+          "contents": [
+            "コードの編集・生成・会話。正確なペイン配置は未確認"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "0.2.0でエディタの土台を変更",
+        "一般的なコード編集機能とAIを同じアプリに配置",
+        "当時の紹介文でも編集・生成・会話を案内"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-2-0",
+          "kind": "changelog",
+          "date": "2023-04-06",
+          "shows": "regions・distinctive: CodeMirrorベースからVSCodiumの派生版へ移行。一般的なコードエディタにAI機能を加えた段階との説明。正確なパネル配置は示さない。"
+        },
+        {
+          "url": "https://web.archive.org/web/20230406140435id_/https://www.cursor.so/",
+          "kind": "archive",
+          "date": "2023-04-06",
+          "shows": "ログイン前の紹介ページ。コードを書く・編集する・会話する機能を案内。アプリの寸法や空画面は確認できない。"
+        }
+      ],
+      "confidence": 0.51
+    },
+    {
+      "id": "cursor-2023-10",
+      "from": "2023-10",
+      "to": "2024-03",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルの編集"
+          ]
+        },
+        {
+          "name": "チャット",
+          "position": null,
+          "size": null,
+          "contents": [
+            "コード全体への質問",
+            "文書やファイルの参照"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Cmd+Kによる指示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "索引の設定",
+          "where": "Moreタブ",
+          "purpose": "検索用の索引と除外ファイルを設定する"
+        },
+        {
+          "label": "変更を依頼",
+          "where": "チャットの/edit",
+          "purpose": "短いファイル全体の変更を依頼する"
+        },
+        {
+          "label": "変更履歴を参照",
+          "where": "チャットの@git",
+          "purpose": "コミットやPRについて質問する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話でコード全体や文書を参照",
+        "Moreタブに索引の設定",
+        "ターミナルでもCmd+Kを使う"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-12-0",
+          "kind": "changelog",
+          "date": "2023-10-01",
+          "shows": "controls・distinctive: Moreタブの索引設定、ターミナルのCmd+K、チャットの@gitと/edit。索引の初登場ではなく改良。"
+        },
+        {
+          "url": "https://cursor.com/changelog/0-12-1-0-12-3",
+          "kind": "changelog",
+          "date": "2023-10-05",
+          "shows": "distinctive: 索引80%以上でコード全体への質問を利用。inline GPT-4を一時停止。常時表示の索引メーターは記載しない。"
+        },
+        {
+          "url": "https://web.archive.org/web/20231001053249id_/https://www.cursor.sh/",
+          "kind": "archive",
+          "date": "2023-10-01",
+          "shows": "regions・distinctiveの範囲: コード全体への質問、文書・定義・ファイル参照、編集・生成を当時の紹介文で確認。ログイン前の宣伝ページであり、アプリの色やペイン位置は採らない。"
+        }
+      ],
+      "confidence": 0.64
+    },
+    {
+      "id": "cursor-2024-03",
+      "from": "2024-03",
+      "to": "2024-07",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "コードと薄い補完候補"
+          ]
+        },
+        {
+          "name": "編集面内の会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "編集中の場所からAIへ質問"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "コードのメモ",
+          "where": "記号の上",
+          "purpose": "Shiftを押してAI Notesを使う"
+        },
+        {
+          "label": "設定",
+          "where": "3月20日以降は右上の歯車",
+          "purpose": "モデルなどの設定を開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "コード上のAI Notes",
+        "編集面内の会話の改善",
+        "月の途中でMoreから歯車の設定へ変更"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-29-x",
+          "kind": "changelog",
+          "date": "2024-03-01",
+          "shows": "controls・distinctive: 記号上でShiftを押すAI Notes、編集面内の会話を改善。正確な吹き出し・余白は示さない。"
+        },
+        {
+          "url": "https://cursor.com/changelog/0-30-x",
+          "kind": "changelog",
+          "date": "2024-03-20",
+          "shows": "controls・distinctive: 右上の歯車へ設定を移動しMoreタブを廃止。モデルはSettings > Modelsで有効化。3月15日より後の月内更新として区別する。"
+        },
+        {
+          "url": "https://web.archive.org/web/20240302052055id_/https://cursor.sh/",
+          "kind": "archive",
+          "date": "2024-03-02",
+          "shows": "ログイン前のページは題名しか本文取得できなかった。アプリ内部の情報は採用しない。"
+        }
+      ],
+      "confidence": 0.5
+    },
+    {
+      "id": "cursor-2024-07",
+      "from": "2024-07",
+      "to": "2024-08",
+      "regions": [
+        {
+          "name": "チャット",
+          "position": null,
+          "size": null,
+          "contents": [
+            "回答文とコード枠"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "適用された変更"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "適用",
+          "where": "回答のコード枠。原文Apply",
+          "purpose": "提案をファイルへ反映する"
+        },
+        {
+          "label": "文書の再読込",
+          "where": "設定のFeatures > Docs",
+          "purpose": "参照文書を再び検索できる状態にする"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "回答中のコード枠に適用操作を置く",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "回答のコード枠から直接Apply",
+        "小さなファイルではすぐに変更を表示",
+        "設定に文書の再索引操作"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-36-x",
+          "kind": "changelog",
+          "date": "2024-07-03",
+          "shows": "controls・conversation・distinctive: 回答のコード枠にApply。小さなファイルなら変更をすぐ表示。設定のFeatures > Docsで文書を再索引。"
+        },
+        {
+          "url": "https://web.archive.org/web/20240901052136id_/https://www.cursor.com/",
+          "kind": "archive",
+          "date": "2024-09-01",
+          "shows": "会話・Tab予測・自然言語編集を紹介。ログイン前の宣伝ページであり、動画のフレームや画面画像を使わず、浮遊Composerの寸法は確認しない。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "cursor-2024-08",
+      "from": "2024-08",
+      "to": "2024-11",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "コードと次の変更の予測"
+          ]
+        },
+        {
+          "name": "チャット",
+          "position": null,
+          "size": null,
+          "contents": [
+            "刷新された会話表示"
+          ]
+        },
+        {
+          "name": "Composer",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "Cmd+Iで開く浮遊Composer。初期位置と寸法は未確認"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Composerを開く",
+          "where": "Cmd+I",
+          "purpose": "複数の編集依頼を扱う"
+        },
+        {
+          "label": "共通の指示",
+          "where": "Composer Projects",
+          "purpose": "複数のComposerで指示を共有する"
+        },
+        {
+          "label": "すべて受け入れる",
+          "where": "ComposerのAccept All",
+          "purpose": "提案された変更をまとめて受け入れる。当月の再現手順で確認"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "移動できる浮遊Composer内の指示欄。具体的な寸法と半径は未確認"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "刷新されたチャットと浮遊Composer",
+        "Cmd+Iで開き、Accept Allで変更を受け入れる",
+        "Composer Projectsと新しいTab予測"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-40-x",
+          "kind": "changelog",
+          "date": "2024-08-22",
+          "shows": "controls・distinctive: チャット表示を刷新。Cmd+IのComposerがPro/Businessで既定で有効。Composer Projectsで指示を共有。Tabの予測モデルを更新。浮遊窓の位置や半径は文章にない。"
+        },
+        {
+          "url": "https://web.archive.org/web/20240901052136id_/https://www.cursor.com/",
+          "kind": "archive",
+          "date": "2024-09-01",
+          "shows": "会話・Tab予測・自然言語編集を紹介。ログイン前の宣伝ページであり、動画のフレームや画面画像を使わず、浮遊Composerの寸法は確認しない。"
+        },
+        {
+          "url": "https://forum.cursor.com/t/when-editing-composers-code-and-then-accepting-any-follow-up-requests-will-fail/10960",
+          "kind": "official-doc",
+          "date": "2024-08-22",
+          "shows": "regions・controls・distinctive: 公式サポートフォーラムの利用者自身の再現手順でfloating Composer windowとAccept Allを確認し、担当者Ian Huangが修正予定と返信。公式説明書ではなく当月の一次体験と応答。正確なビルド番号・寸法・初期位置は不明。"
+        },
+        {
+          "url": "https://forum.cursor.com/t/move-chat-to-bottom/33619",
+          "kind": "official-doc",
+          "date": "2024-12-10",
+          "shows": "補助確認: サポート担当の返信で0.43.xが浮遊窓を外しサイドバーに移したと説明。当年8月の寸法を確定する証拠にはしない。"
+        }
+      ],
+      "confidence": 0.76
+    },
+    {
+      "id": "cursor-2024-11",
+      "from": "2024-11",
+      "to": "2025-02",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイル内の差分"
+          ]
+        },
+        {
+          "name": "Composerサイドバー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "編集依頼と応答",
+            "文脈のファイル候補を小枠で表示"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Agentが使うコマンド実行面"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "推奨する文脈",
+          "where": "チャットまたはComposerの@Recommended",
+          "purpose": "関係するコードを探す"
+        },
+        {
+          "label": "Agentを選ぶ",
+          "where": "Composer。12月の説明書で確認",
+          "purpose": "文脈の選択とコマンド実行をAIへ任せる"
+        }
+      ],
+      "conversation": {
+        "user": "ファイルなどの文脈を小枠で添える。12月の説明書で操作を確認",
+        "assistant": "Composerの提案をコード側の差分として確認する",
+        "tool_calls": "初期Agentが文脈を探し、ターミナルを使う。呼出し行の厳密な装飾は未確認",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Composerがサイドバーへ移動",
+        "変更をファイル内の差分で確認",
+        "初期Agentと@Recommended"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-43-x",
+          "kind": "changelog",
+          "date": "2024-11-24",
+          "shows": "regions・controls・conversation・distinctive: Composerをサイドバーへ移しインライン差分を表示。初期Agentは文脈の選択とターミナル利用に対応。ファイルの候補を小さい枠で示し、@Recommendedを追加。"
+        },
+        {
+          "url": "https://web.archive.org/web/20241211165120id_/https://docs.cursor.com/composer/overview",
+          "kind": "archive",
+          "date": "2024-12-11",
+          "shows": "regions・controls・conversation: 12月11日の公式説明書。Agent/Normal、文脈を示す小枠、差分の受入・拒否、履歴。PaneとEditorの配置を選べる。11月24日の完全な画面写真ではないため、後日に確認した操作として扱う。"
+        },
+        {
+          "url": "https://web.archive.org/web/20250106043515id_/https://docs.cursor.com/chat/overview",
+          "kind": "archive",
+          "date": "2025-01-06",
+          "shows": "conversation: 年明けの公式説明書では、質問を編集して再実行し、回答のコード枠を適用できる。AI欄は主サイドバーの反対側。11月や2月19日の固定画面の証明には使わない。"
+        }
+      ],
+      "confidence": 0.77
+    },
+    {
+      "id": "cursor-2025-02",
+      "from": "2025-02",
+      "to": "2025-03",
+      "regions": [
+        {
+          "name": "AI作業面",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Chat・Composer・Agentの導線を統合"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "コードと変更の差分"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "where": "統合されたAI作業面",
+          "purpose": "既定のAgentで編集を依頼する"
+        },
+        {
+          "label": "文脈を追加",
+          "where": "@メニュー",
+          "purpose": "必要な情報を添える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Agentが既定の統合された画面",
+        "新しい既定テーマと簡素な@メニュー",
+        "ルール適用の目印"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-46-x",
+          "kind": "changelog",
+          "date": "2025-02-19",
+          "shows": "regions・controls・distinctive: Agentを既定にしChat/Composer/Agentの導線を統合。新しい既定テーマと@メニュー。ルール適用の目印。自動のWeb検索と道具の実行。色の数値は公開文にない。"
+        },
+        {
+          "url": "https://web.archive.org/web/20241211165120id_/https://docs.cursor.com/composer/overview",
+          "kind": "archive",
+          "date": "2024-12-11",
+          "shows": "regions・controls・conversation: 12月11日の公式説明書。Agent/Normal、文脈を示す小枠、差分の受入・拒否、履歴。PaneとEditorの配置を選べる。11月24日の完全な画面写真ではないため、後日に確認した操作として扱う。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "cursor-2025-03",
+      "from": "2025-03",
+      "to": "2025-06",
+      "regions": [
+        {
+          "name": "会話タブ",
+          "position": null,
+          "size": null,
+          "contents": [
+            "複数の会話をタブで切り替える"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "各会話による変更"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "質問",
+          "where": "モード選択のAsk",
+          "purpose": "コードを自動検索して質問に答える"
+        },
+        {
+          "label": "手動編集",
+          "where": "モード選択のManual",
+          "purpose": "以前のEditに相当する編集を行う"
+        },
+        {
+          "label": "新しいタブ",
+          "where": "会話タブ。0.48.3ではCmd+T",
+          "purpose": "別の会話を始める"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "複数の会話タブ",
+        "Agent・Ask・Manualと独自モード",
+        "Askから@Codebaseを除去"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/0-48-x",
+          "kind": "changelog",
+          "date": "2025-03-23",
+          "shows": "regions・controls・distinctive: 会話タブを導入。Agent/Askと独自モード、EditをManualへ改称。Askの自動検索により@Codebaseを除去。"
+        },
+        {
+          "url": "https://web.archive.org/web/20250106043515id_/https://docs.cursor.com/chat/overview",
+          "kind": "archive",
+          "date": "2025-01-06",
+          "shows": "conversation: 年明けの公式説明書では、質問を編集して再実行し、回答のコード枠を適用できる。AI欄は主サイドバーの反対側。11月や2月19日の固定画面の証明には使わない。"
+        }
+      ],
+      "confidence": 0.72
+    },
+    {
+      "id": "cursor-2025-06",
+      "from": "2025-06",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "Agentの依頼と進行",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ブラウザから作業を開始・確認"
+          ]
+        },
+        {
+          "name": "変更の確認",
+          "position": null,
+          "size": null,
+          "contents": [
+            "変更のレビューとPR操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "追加で指示",
+          "where": "Agentの作業画面",
+          "purpose": "作業結果について続けて依頼する"
+        },
+        {
+          "label": "デスクトップで開く",
+          "where": "Agentの作業画面",
+          "purpose": "作業をCursorアプリへ引き継ぐ"
+        },
+        {
+          "label": "PRを作成・統合",
+          "where": "Webの作業結果",
+          "purpose": "コード変更をレビューして反映する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ブラウザとスマホのPWAからAgentを操作",
+        "完了後の変更確認と追加指示",
+        "デスクトップへの引継ぎ"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://forum.cursor.com/t/introducing-cursor-on-web-mobile/111183",
+          "kind": "official-doc",
+          "date": "2025-06-30",
+          "shows": "regions・controls・distinctive: 公式告知。Webとスマホのブラウザ/PWAでAgentを起動・確認し、変更のレビュー、追加指示、デスクトップへの引継ぎ、PR作成・統合ができる。画面内の固定3列やBugBotカードは確認できない。"
+        },
+        {
+          "url": "https://cursor.com/changelog/1-0",
+          "kind": "changelog",
+          "date": "2025-06-04",
+          "shows": "背景情報のみ: デスクトップ1.0のBackground AgentとBugBot。これをWeb版の常設ボタンや独立パネルの証拠にしない。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "cursor-2025-10",
+      "from": "2025-10",
+      "to": "2026-01",
+      "regions": [
+        {
+          "name": "Agent一覧",
+          "position": "sidebar",
+          "size": null,
+          "contents": [
+            "Agentと計画"
+          ]
+        },
+        {
+          "name": "会話と進行",
+          "position": "main",
+          "size": null,
+          "contents": [
+            "選んだAgentへの指示"
+          ]
+        },
+        {
+          "name": "変更のレビュー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "複数ファイルの変更をまとめて確認"
+          ]
+        },
+        {
+          "name": "ブラウザ",
+          "position": null,
+          "size": null,
+          "contents": [
+            "エディタ内にWeb表示を埋め込み、要素を指示へ添える"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "音声入力",
+          "where": "Agentへの入力",
+          "purpose": "話した内容を文字の依頼にする"
+        },
+        {
+          "label": "要素を指定",
+          "where": "内蔵ブラウザ",
+          "purpose": "画面の要素をAgentへの文脈にする"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Agentと計画を並べるサイドバー",
+        "複数Agentの作業と一括の差分レビュー",
+        "内蔵ブラウザ",
+        "Composerというモデルが登場"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/2-0",
+          "kind": "changelog",
+          "date": "2025-10-29",
+          "shows": "regions・controls・distinctive: Agentと計画のサイドバー、最大8並列、複数ファイルの差分レビュー、内蔵ブラウザ、音声による文字入力。ファイル・フォルダ参照は文中の小枠。"
+        },
+        {
+          "url": "https://cursor.com/blog/2-0",
+          "kind": "blog",
+          "date": "2025-10-29",
+          "shows": "regions・distinctive: ファイルよりAgentを中心にした新画面。従来IDEへ戻れる。複数Agent、レビュー、ブラウザの説明。Composerは新しいモデル名でもある。"
+        },
+        {
+          "url": "https://www.infoworld.com/article/4081431/cursor-2-0-adds-coding-model-ui-for-parallel-agents.html",
+          "kind": "press",
+          "date": "2025-10-29",
+          "shows": "独立報道で2.0と並列Agent向け画面の公開を照合。記事の写真はアプリアイコンの写真で、画面内部の配色や寸法には使わない。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "cursor-2026-01-macos",
+      "from": "2026-01",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "Agent一覧",
+          "position": "sidebar",
+          "size": null,
+          "contents": [
+            "Agentと計画"
+          ]
+        },
+        {
+          "name": "作業面",
+          "position": "main",
+          "size": null,
+          "contents": [
+            "選んだ配置に応じて会話・編集・ブラウザを表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "配置を切り替え",
+          "where": "Cmd+Option+Tab",
+          "purpose": "agent・editor・zen・browserの配置を切り替える"
+        },
+        {
+          "label": "ファイル一覧",
+          "where": "上部のリポジトリ名",
+          "purpose": "ファイル一覧を表示する"
+        },
+        {
+          "label": "その他の操作",
+          "where": "会話のMore Actions",
+          "purpose": "会話の表示や位置を変える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "4つの既定レイアウト",
+        "会話パネル内に新規Agentの操作",
+        "上部のリポジトリ名からファイル一覧"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/2-3",
+          "kind": "changelog",
+          "date": "2025-12-22",
+          "shows": "regions・controls・distinctive: agent/editor/zen/browserの4配置、配置を切り替えるCmd+Option+Tab、上部のリポジトリ名からファイル一覧、新規Agentの印をパネル内へ移動、More Actions。1月20日固有の新リリースを証明するものではない。"
+        },
+        {
+          "url": "https://cursor.com/blog/2-0",
+          "kind": "blog",
+          "date": "2025-10-29",
+          "shows": "regions・distinctive: ファイルよりAgentを中心にした新画面。従来IDEへ戻れる。複数Agent、レビュー、ブラウザの説明。Composerは新しいモデル名でもある。"
+        }
+      ],
+      "confidence": 0.68
+    },
+    {
+      "id": "cursor-2026-04",
+      "from": "2026-04",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "Agent一覧",
+          "position": "sidebar",
+          "size": null,
+          "contents": [
+            "複数リポジトリのローカル・クラウドAgent"
+          ]
+        },
+        {
+          "name": "Agentの作業面",
+          "position": "main",
+          "size": null,
+          "contents": [
+            "会話・進行・差分レビュー"
+          ]
+        },
+        {
+          "name": "ファイルとブラウザ",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイル表示と内蔵ブラウザ。固定の3列とは断定しない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agents Windowを開く",
+          "where": "コマンド一覧",
+          "purpose": "Agent用の独立した窓を開く"
+        },
+        {
+          "label": "IDEを開く",
+          "where": "コマンド一覧",
+          "purpose": "従来のコードエディタへ戻る"
+        },
+        {
+          "label": "画面の要素を指定",
+          "where": "ブラウザのDesign Mode",
+          "purpose": "変更したい場所を直接指示する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Agent用の独立した窓",
+        "複数リポジトリと実行場所を一覧",
+        "IDEと同時に開ける",
+        "差分レビューとブラウザ内の要素指定"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/blog/cursor-3",
+          "kind": "blog",
+          "date": "2026-04-02",
+          "shows": "regions・controls・distinctive: 複数リポジトリを扱う独立したAgents Window。ローカルとクラウドのAgentをサイドバーで一覧。差分レビュー、ファイル表示、内蔵ブラウザ。IDEへ戻れる。"
+        },
+        {
+          "url": "https://cursor.com/changelog/3-0",
+          "kind": "changelog",
+          "date": "2026-04-02",
+          "shows": "regions・controls・distinctive: Agents WindowとIDEを同時に開ける。Design Modeでブラウザ内の要素を指定。IDE側にも会話を並べるタブ。"
+        },
+        {
+          "url": "https://cursor.com/docs/agent/agents-window",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "controls: 現行の説明書。Open Agents Window/Open IDEの操作。2026-11-15に取得。4月2日の全レイアウトや寸法を遡って決める用途には使わない。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "cursor-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "Agentの作業面",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話と進行"
+          ]
+        },
+        {
+          "name": "入力と通話操作",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "送信・停止・音声通話・音声による文字入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "音声通話を開始",
+          "where": "空の入力欄の送信位置。原文Start voice chat",
+          "purpose": "待機中のAgentと話す"
+        },
+        {
+          "label": "音声を文字にする",
+          "where": "通話ボタン横のマイク",
+          "purpose": "依頼文を声で入力する"
+        },
+        {
+          "label": "停止",
+          "where": "Agentの作業中は送信位置",
+          "purpose": "進行中の作業を止める"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "Agentが待機中で入力が空なら、通常の送信位置に音声通話の波形ボタンが現れる。初回歓迎文は未確認。",
+      "distinctive": [
+        "音声通話と音声による文字入力が別の操作",
+        "待機中の入力欄で波形ボタンを表示",
+        "クラウドAgentから共有リンク付きアプリを作成"
+      ],
+      "must_not_copy": [
+        "製品のロゴ・アプリアイコン・独自の印",
+        "公式画面・宣伝画像・壁紙",
+        "ブランドの文字組み・同梱書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/voice-chat",
+          "kind": "changelog",
+          "date": "2026-11-06",
+          "shows": "controls・empty_state・distinctive: 何も入力しておらずAgentが待機中なら、送信位置に音声通話開始の波形ボタン。その横は文字入力用のマイク。作業中はStopを表示。"
+        },
+        {
+          "url": "https://cursor.com/docs/agent/voice-chat",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "controls・empty_state: 現行の通話説明書。Start voice chatは送信位置、隣のマイクは音声を文字にする操作。待機・入力の有無でボタンが変わる。2026-11-15取得。"
+        },
+        {
+          "url": "https://cursor.com/changelog/build-live-apps",
+          "kind": "changelog",
+          "date": "2026-11-05",
+          "shows": "distinctive: クラウドAgentへアプリ作成を依頼し、公開時に名前を選んで共有リンクを得る。専用の常設プレビュー列・カード寸法は示さない。"
+        }
+      ],
+      "confidence": 0.78
+    }
+  ],
+  "corrections": [
+    "cursor-2023-03をVS Code系の画面として扱わない。CodeMirrorからの移行は2023-04-06。描画コードの初期版にあるCopilot++/Cursor Tab常設表示も3月の出典では未確認。https://cursor.com/changelog/0-2-0",
+    "cursor-2023-10の索引は10月12日の初導入とは確認できない。0.12.0は10月1日で、索引の改良を説明している。描画コードの常設メーター・件数・top-12はunverified。https://cursor.com/changelog/0-12-0",
+    "cursor-2024-03のApply Diffという固定ラベルやボタン位置は未確認。今回直接確認したApplyの公式説明は7月3日の0.36。3月15日へ遡って描かない。https://cursor.com/changelog/0-36-x",
+    "0.40の公式本文に加え、8月22日の再現手順と担当者の返信から浮遊ComposerとAccept Allを確認。中央上に固定する位置、寸法、複数ファイル用バーの外観はunverified。https://cursor.com/changelog/0-40-x https://forum.cursor.com/t/when-editing-composers-code-and-then-accepting-any-follow-up-requests-will-fail/10960",
+    "0.43のComposerはサイドバーだが、固定で右と断定しない。12月の説明書はPane/Editorの変更を説明する。https://web.archive.org/web/20241211165120id_/https://docs.cursor.com/composer/overview",
+    "2025-06のWeb/PWAは独立した画面。描画コードのBugBot専用欄、Ubuntuの常設状態欄、PWA接続表示、3列配置はunverified。https://forum.cursor.com/t/introducing-cursor-on-web-mobile/111183",
+    "2026-01を2.0の初公開や独立のMission Control製品名として扱わない。12月22日の2.3で4配置を確認。描画コードの進行中/レビュー準備完了の固定区分やDOM表示枠の位置はunverified。https://cursor.com/changelog/2-3",
+    "Cursor 3の公開日は4月15日ではなく4月2日。Agents WindowとIDEを分ける。https://cursor.com/changelog/3-0",
+    "2026-11の告知は音声通話11月6日・Live Apps11月5日。2.0の音声機能は文字起こしであり、同じ操作にしない。https://cursor.com/changelog/voice-chat https://cursor.com/changelog/build-live-apps",
+    "カタログの固定色と現行Webサイトの書体をアプリの確定値として転用しない。0.46は既定テーマの変更を説明するが色の値は示さない。本仕様ではCursor全版の色・書体・角丸をnullにする。https://cursor.com/changelog/0-46-x",
+    "2025年10月の最大8並列は上限であり、常時8 Worktreesという表示がある証拠ではない。描画例の固定件数として扱わない。https://cursor.com/changelog/2-0",
+    "2026年4月のAgents Windowは確認できるが、Multi-Repo Canvasという固定名称、右の専用Diffカード、Composer / 4.7の状態表示はunverified。https://cursor.com/changelog/3-0 https://cursor.com/blog/cursor-3",
+    "2026年11月の音声通話開始は別の右パネル上部の大ボタンではなく、待機中で入力が空の時の送信位置にある。300-Repo API、Grok Voice: Ready、Live URL Ready等の常設状態バーはunverified。https://cursor.com/docs/agent/voice-chat https://cursor.com/changelog/voice-chat"
+  ]
+}

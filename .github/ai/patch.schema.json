@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "changes"],
+  "properties": {
+    "schema": { "type": "string", "enum": ["memento.ai-patch.v1"] },
+    "changes": {
+      "type": "array", "maxItems": 24,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "beforeSha256", "content"],
+        "properties": {
+          "path": { "type": "string", "maxLength": 200 },
+          "beforeSha256": { "type": ["string", "null"] },
+          "content": { "type": "string", "maxLength": 300000 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "memento.style.v1",
+  "id": "skills",
+  "name": "繰り返す手順をまとめる",
+  "plain": "技能の手順書をフォルダーにまとめ、必要なときに読んで使います。",
+  "when": "同じ確認や文書作りを何度も頼むとき。",
+  "since": "2025-10",
+  "popularized_by": [
+    "Anthropic Agent Skills"
+  ],
+  "since_basis": "公開資料で確認できる年月です。発明や普及の開始年月を示すものではありません。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n結果を確認するときは、.claude/skills/check-result/SKILL.md の手順を読んで使ってください。自動で見つからない場合も、その手順書を読んでから確認してください。\n\n# English\n\nWhen checking a result, read and follow .claude/skills/check-result/SKILL.md. If automatic discovery is unavailable, read that procedure explicitly before checking.\n"
+    },
+    {
+      "path": "project/.claude/skills/check-result/SKILL.md",
+      "content": "---\nname: check-result\ndescription: 作業の結果と確認漏れを調べるときに使う手順。\n---\n\n# 日本語\n\n元の依頼と変更点を読み比べ、期待する動作、失敗する場合、確認漏れを調べてください。実行した確認の結果と未確認の点を分けて報告してください。\n\n# English\n\nCompare the original request and changes. Check expected behaviour, failure cases, and verification gaps. Report actual check results separately from unverified points.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "native",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory",
+      "https://code.claude.com/docs/en/skills"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+    "https://code.claude.com/docs/en/skills",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://code.claude.com/docs/en/memory",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

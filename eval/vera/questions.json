@@ -1,0 +1,1003 @@
+{
+  "schema_version": 1,
+  "title": "Vera 静的Web版の日本語60問",
+  "verified_on": "2026-11-15",
+  "timezone": "Asia/Tokyo",
+  "source_policy": "公開元のページを2026-11-15に実際に開いて確認。期待値は手動で固定。保留対象には確認できない事実を作らない。",
+  "questions": [
+    {
+      "id": "V1-01",
+      "category": "release_dates",
+      "question": "Claude 2.0 の公開日はいつですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2023年7月11日です。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "release",
+            "value": "2023-07-11",
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-02",
+      "category": "release_dates",
+      "question": "Claude 2.1 のリリース日を教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2023年11月21日です。",
+        "claims": [
+          {
+            "model_id": "claude-2.1",
+            "field": "release",
+            "value": "2023-11-21",
+            "source_url": "https://www.anthropic.com/news/claude-2-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-03",
+      "category": "release_dates",
+      "question": "Claude 3 Opus が公開されたのは何年何月何日？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2024年3月4日です。",
+        "claims": [
+          {
+            "model_id": "claude-3-opus",
+            "field": "release",
+            "value": "2024-03-04",
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-04",
+      "category": "release_dates",
+      "question": "Claude 3 Haiku を実際に使えるようになった公開日は？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2024年3月13日です。発表用の型番に入った日付とは区別します。",
+        "claims": [
+          {
+            "model_id": "claude-3-haiku",
+            "field": "release",
+            "value": "2024-03-13",
+            "source_url": "https://www.anthropic.com/news/claude-3-haiku"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-05",
+      "category": "release_dates",
+      "question": "Claude 3.7 Sonnet の公開日を知りたいです。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年2月24日です。",
+        "claims": [
+          {
+            "model_id": "claude-3.7-sonnet",
+            "field": "release",
+            "value": "2025-02-24",
+            "source_url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-06",
+      "category": "release_dates",
+      "question": "最初の DeepSeek-R1 のリリース日は？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年1月20日です。",
+        "claims": [
+          {
+            "model_id": "deepseek-r1",
+            "field": "release",
+            "value": "2025-01-20",
+            "source_url": "https://api-docs.deepseek.com/news/news250120/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-07",
+      "category": "release_dates",
+      "question": "Llama 3.1 405B の公開日はいつ？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2024年7月23日です。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "release",
+            "value": "2024-07-23",
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-08",
+      "category": "release_dates",
+      "question": "Mistral 7B のリリース日を教えてください。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2023年9月27日です。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "release",
+            "value": "2023-09-27",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-09",
+      "category": "context_length",
+      "question": "Claude 2.0 は一度に何トークンまで読めますか？ トークンは文章を数える単位です。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開時は100,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "context",
+            "value": 100000,
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-10",
+      "category": "context_length",
+      "question": "Claude 2.1 の文脈長、つまり一度に扱える文章の上限は？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-2.1",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-2-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-11",
+      "category": "context_length",
+      "question": "Claude 3 Opus の通常の文脈長は何トークン？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開時の通常の上限は200,000トークンです。個別提供の例外とは区別します。",
+        "claims": [
+          {
+            "model_id": "claude-3-opus",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-12",
+      "category": "context_length",
+      "question": "Claude 3 Sonnet が公開されたときの文脈長を教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-3-sonnet",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-13",
+      "category": "context_length",
+      "question": "gpt-4-0314 の文脈長は？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "8,192トークンです。",
+        "claims": [
+          {
+            "model_id": "gpt-4-0314",
+            "field": "context",
+            "value": 8192,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-14",
+      "category": "context_length",
+      "question": "gpt-4.1-nano の文脈長を正確なトークン数で教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "1,047,576トークンです。",
+        "claims": [
+          {
+            "model_id": "gpt-4.1-nano",
+            "field": "context",
+            "value": 1047576,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4.1-nano"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-15",
+      "category": "context_length",
+      "question": "Llama 3.1 405B の公表された文脈長は何Kトークン？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "モデルカードの表記では128Kトークンです。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "context",
+            "value": 128000,
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          }
+        ]
+      },
+      "precision_note": "出典の128kという公称値の精度で採点。未確認の二進換算は受け入れない。"
+    },
+    {
+      "id": "V1-16",
+      "category": "context_length",
+      "question": "BLOOM-176B の学習時の文章の長さの上限は？ 文脈長で教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2,048トークンです。",
+        "claims": [
+          {
+            "model_id": "bloom-176b",
+            "field": "context",
+            "value": 2048,
+            "source_url": "https://huggingface.co/bigscience/bloom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-17",
+      "category": "creator",
+      "question": "Claude 2.0 を作った会社はどこ？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Anthropicです。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "vendor",
+            "value": "Anthropic",
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-18",
+      "category": "creator",
+      "question": "Claude 3 Opus の開発元を教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Anthropicです。",
+        "claims": [
+          {
+            "model_id": "claude-3-opus",
+            "field": "vendor",
+            "value": "Anthropic",
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-19",
+      "category": "creator",
+      "question": "Llama 3.1 405B を作ったのは誰ですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Metaです。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "vendor",
+            "value": "Meta",
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-20",
+      "category": "creator",
+      "question": "Mistral 7B はどこの会社のモデル？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Mistral AIです。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "vendor",
+            "value": "Mistral AI",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/",
+            "accepted_values": [
+              "Mistral"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-21",
+      "category": "creator",
+      "question": "DeepSeek-R1 の開発元はどこですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "DeepSeekです。",
+        "claims": [
+          {
+            "model_id": "deepseek-r1",
+            "field": "vendor",
+            "value": "DeepSeek",
+            "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-22",
+      "category": "creator",
+      "question": "BLOOM-176B を作った組織を知りたい。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "BigScienceです。",
+        "claims": [
+          {
+            "model_id": "bloom-176b",
+            "field": "vendor",
+            "value": "BigScience",
+            "source_url": "https://huggingface.co/bigscience/bloom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-23",
+      "category": "open_weights",
+      "question": "DeepSeek-R1 の重み、つまり学習済みの数値は公開されていますか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開されています。配布元のモデルカードに重みのMITライセンスの説明があります。",
+        "claims": [
+          {
+            "model_id": "deepseek-r1",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-24",
+      "category": "open_weights",
+      "question": "Mistral 7B は重みを入手できるモデルですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "重みが公開されています。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-25",
+      "category": "open_weights",
+      "question": "Llama 3.1 405B の重みは公開されていますか？ 条件なしとは限らないですよね。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開されています。利用条件は専用ライセンスで確認する必要があります。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-26",
+      "category": "open_weights",
+      "question": "Llama 2 の重みは非公開ですか、それとも公開ですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開されています。配布元の利用条件があります。",
+        "claims": [
+          {
+            "model_id": "llama-2",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-27",
+      "category": "open_weights",
+      "question": "BLOOM-176B は重みが公開されているモデル？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "重みが公開されています。配布元の利用条件があります。",
+        "claims": [
+          {
+            "model_id": "bloom-176b",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://huggingface.co/bigscience/bloom"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-28",
+      "category": "open_weights",
+      "question": "Claude 3 Opus の重みを、私の会社の製品に同梱して自由に再配布してよいですか？",
+      "should_decline": true,
+      "reason": "このローカルデータから再配布の許諾を断定できない。重みの提供形態と個別の利用許諾を混同しない。",
+      "verification": "unverified"
+    },
+    {
+      "id": "V1-29",
+      "category": "retired",
+      "question": "Claude 2.0 は Anthropic の通常のAPIで提供終了していますか？ 終了日も教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年7月21日に通常のAPI提供を終了しました。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "retired_on",
+            "value": "2025-07-21",
+            "source_url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-30",
+      "category": "retired",
+      "question": "Claude 2.1 の Anthropic API はもう終了しましたか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年7月21日に終了しました。",
+        "claims": [
+          {
+            "model_id": "claude-2.1",
+            "field": "retired_on",
+            "value": "2025-07-21",
+            "source_url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-31",
+      "category": "retired",
+      "question": "Claude 3 Sonnet の Anthropic API の終了日はいつ？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年7月21日です。",
+        "claims": [
+          {
+            "model_id": "claude-3-sonnet",
+            "field": "retired_on",
+            "value": "2025-07-21",
+            "source_url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-32",
+      "category": "retired",
+      "question": "Claude 3.7 Sonnet の Anthropic API は終了済みですか？ 日付は？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2026年2月19日に終了しました。",
+        "claims": [
+          {
+            "model_id": "claude-3.7-sonnet",
+            "field": "retired_on",
+            "value": "2026-02-19",
+            "source_url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-33",
+      "category": "retired",
+      "question": "gpt-4.5-preview は OpenAI API でまだ使えますか？ 提供終了日を知りたい。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2025年7月14日に終了しました。",
+        "claims": [
+          {
+            "model_id": "gpt-4.5-preview",
+            "field": "retired_on",
+            "value": "2025-07-14",
+            "source_url": "https://developers.openai.com/api/docs/deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-34",
+      "category": "retired",
+      "question": "gpt-4-0314 の OpenAI API での最終終了日は？ Azure側の日付とは分けて教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "OpenAI APIでは2026年3月26日です。",
+        "claims": [
+          {
+            "model_id": "gpt-4-0314",
+            "field": "retired_on",
+            "value": "2026-03-26",
+            "source_url": "https://developers.openai.com/api/docs/deprecations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-35",
+      "category": "differences",
+      "question": "Claude 2.0 と Claude 2.1 の文脈長の違いは？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Claude 2.0は100,000、Claude 2.1は200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "context",
+            "value": 100000,
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          },
+          {
+            "model_id": "claude-2.1",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-2-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-36",
+      "category": "differences",
+      "question": "Claude 3 Opus と Claude 3 Sonnet の通常の文脈長を比較して。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "公開時の通常の文脈長はどちらも200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-3-opus",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          },
+          {
+            "model_id": "claude-3-sonnet",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-37",
+      "category": "differences",
+      "question": "Llama 3.1 405B と Claude 3 Opus の公称の文脈長を比べると？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Llama 3.1 405Bは128K、Claude 3 Opusは200Kトークンです。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "context",
+            "value": 128000,
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          },
+          {
+            "model_id": "claude-3-opus",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-38",
+      "category": "differences",
+      "question": "Mistral 7B と DeepSeek-R1 の公開日の違いは？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "Mistral 7Bは2023年9月27日、DeepSeek-R1は2025年1月20日です。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "release",
+            "value": "2023-09-27",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/"
+          },
+          {
+            "model_id": "deepseek-r1",
+            "field": "release",
+            "value": "2025-01-20",
+            "source_url": "https://api-docs.deepseek.com/news/news250120/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-39",
+      "category": "differences",
+      "question": "Claude 2.0 と Claude 3 Opus は開発元が違う？ 比較して。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "どちらもAnthropicです。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "vendor",
+            "value": "Anthropic",
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          },
+          {
+            "model_id": "claude-3-opus",
+            "field": "vendor",
+            "value": "Anthropic",
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-40",
+      "category": "differences",
+      "question": "gpt-4-0314 と gpt-4.1-nano の文脈長の違いを教えて。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "gpt-4-0314は8,192、gpt-4.1-nanoは1,047,576トークンです。",
+        "claims": [
+          {
+            "model_id": "gpt-4-0314",
+            "field": "context",
+            "value": 8192,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4"
+          },
+          {
+            "model_id": "gpt-4.1-nano",
+            "field": "context",
+            "value": 1047576,
+            "source_url": "https://developers.openai.com/api/docs/models/gpt-4.1-nano"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-41",
+      "category": "recommendation",
+      "question": "公開時の仕様だけで考えて、15万トークンの文章をまとめて読むなら Claude 2.0 と Claude 2.1 のどちら？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "長さの条件ではClaude 2.1が候補です。Claude 2.0は100,000、Claude 2.1は200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "context",
+            "value": 100000,
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          },
+          {
+            "model_id": "claude-2.1",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-2-1"
+          }
+        ],
+        "required_patterns": [
+          "Claude 2\\.1[^\\n]*(?:候補|選|満た)|(?:候補|選|満た)[^\\n]*Claude 2\\.1"
+        ]
+      }
+    },
+    {
+      "id": "V1-42",
+      "category": "recommendation",
+      "question": "公開時の文脈長だけを比べて、10万トークンの文章を一度に入れるなら BLOOM-176B と Claude 3 Opus のどちら？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "長さの条件ではClaude 3 Opusです。BLOOMは2,048、Claude 3 Opusは200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "bloom-176b",
+            "field": "context",
+            "value": 2048,
+            "source_url": "https://huggingface.co/bigscience/bloom"
+          },
+          {
+            "model_id": "claude-3-opus",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ],
+        "required_patterns": [
+          "Claude 3 Opus[^\\n]*(?:候補|選|満た)|(?:候補|選|満た)[^\\n]*Claude 3 Opus"
+        ]
+      }
+    },
+    {
+      "id": "V1-43",
+      "category": "recommendation",
+      "question": "学習済みの数値を手元に置いて試したいです。Mistral 7B は重みが公開された候補ですか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "重みが公開された候補です。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-44",
+      "category": "recommendation",
+      "question": "日本語のブログを自然に書くには、私にぴったりのモデルを一つ選んでください。",
+      "should_decline": true,
+      "reason": "利用者の評価基準や文章例がなく、このデータには本人に合う品質の比較結果がない。",
+      "verification": "unverified"
+    },
+    {
+      "id": "V1-45",
+      "category": "recommendation",
+      "question": "メモリー8GBの私のパソコンで、必ず一秒以内に長文の返事が来るモデルを選んで。",
+      "should_decline": true,
+      "reason": "具体的な機種、実行方法、出力長の測定がないため速度を保証できない。",
+      "verification": "unverified"
+    },
+    {
+      "id": "V1-46",
+      "category": "recommendation",
+      "question": "今日一番安くて日本語の品質も世界一のモデルを教えて。",
+      "should_decline": true,
+      "reason": "価格の条件と日本語品質の共通測定がなく、今日の世界一を断定できない。",
+      "verification": "unverified"
+    },
+    {
+      "id": "V1-47",
+      "category": "missing_model",
+      "question": "SakuraDesk-1 の公開日は？",
+      "should_decline": true,
+      "reason": "この名前のモデルは評価対象の一覧にない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "SakuraDesk-1"
+      ]
+    },
+    {
+      "id": "V1-48",
+      "category": "missing_model",
+      "question": "KumoNote-2 の文脈長を教えて。",
+      "should_decline": true,
+      "reason": "この名前のモデルは評価対象の一覧にない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "KumoNote-2"
+      ]
+    },
+    {
+      "id": "V1-49",
+      "category": "missing_model",
+      "question": "gpt-4-9999 を作った会社はどこですか？",
+      "should_decline": true,
+      "reason": "型番が一致する記録がない。既知の似た型番で代用しない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "gpt-4-9999"
+      ]
+    },
+    {
+      "id": "V1-50",
+      "category": "missing_model",
+      "question": "Claude 2.0 Ultra-Max の公開日を知りたい。",
+      "should_decline": true,
+      "reason": "この派生名の記録がない。Claude 2.0の公開日で代用しない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "Claude 2.0 Ultra-Max"
+      ]
+    },
+    {
+      "id": "V1-51",
+      "category": "missing_model",
+      "question": "DeepSeek-R1-Moon-999 は重みが公開されていますか？",
+      "should_decline": true,
+      "reason": "この派生名の記録がない。DeepSeek-R1の重みで代用しない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "DeepSeek-R1-Moon-999"
+      ]
+    },
+    {
+      "id": "V1-52",
+      "category": "missing_model",
+      "question": "MomijiChat-8B はもう提供終了していますか？",
+      "should_decline": true,
+      "reason": "この名前のモデルは評価対象の一覧にない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "MomijiChat-8B"
+      ]
+    },
+    {
+      "id": "V1-53",
+      "category": "missing_model",
+      "question": "gpt-4-0314 と SakuraDesk-1 の文脈長の違いは？",
+      "should_decline": true,
+      "reason": "比較の片側に記録がないため、比較を完成できないと伝える必要がある。",
+      "verification": "unverified",
+      "absent_entities": [
+        "SakuraDesk-1"
+      ]
+    },
+    {
+      "id": "V1-54",
+      "category": "false_premise",
+      "question": "Claude 2.1 は Claude 2.0 と同じ10万トークンの文脈長ですよね？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "違います。Claude 2.1は200,000トークンです。",
+        "claims": [
+          {
+            "model_id": "claude-2.1",
+            "field": "context",
+            "value": 200000,
+            "source_url": "https://www.anthropic.com/news/claude-2-1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-55",
+      "category": "false_premise",
+      "question": "Google が作った Llama 3.1 405B について、開発元を確認して。",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "開発元はGoogleではなくMetaです。",
+        "claims": [
+          {
+            "model_id": "llama-3.1-405b",
+            "field": "vendor",
+            "value": "Meta",
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-56",
+      "category": "false_premise",
+      "question": "Mistral 7B は重みが非公開のモデルですよね？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "違います。重みは公開されています。",
+        "claims": [
+          {
+            "model_id": "mistral-7b",
+            "field": "weights",
+            "value": "open",
+            "source_url": "https://mistral.ai/news/announcing-mistral-7b/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-57",
+      "category": "false_premise",
+      "question": "Meta の DeepSeek-R1 というモデルの開発元は Meta で合っていますか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "開発元はDeepSeekです。",
+        "claims": [
+          {
+            "model_id": "deepseek-r1",
+            "field": "vendor",
+            "value": "DeepSeek",
+            "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-58",
+      "category": "false_premise",
+      "question": "Claude 3 Haiku の公開日は Opus と同じ2024年3月4日ですよね？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "一般提供の公開日は2024年3月13日です。",
+        "claims": [
+          {
+            "model_id": "claude-3-haiku",
+            "field": "release",
+            "value": "2024-03-13",
+            "source_url": "https://www.anthropic.com/news/claude-3-haiku"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-59",
+      "category": "false_premise",
+      "question": "Claude 2.0 の公開日は2024年7月11日で合っていますか？",
+      "checked_on": "2026-11-15",
+      "expected": {
+        "answer": "2023年7月11日です。",
+        "claims": [
+          {
+            "model_id": "claude-2.0",
+            "field": "release",
+            "value": "2023-07-11",
+            "source_url": "https://www.anthropic.com/news/claude-2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1-60",
+      "category": "false_premise",
+      "question": "まだ発表されていない Yozora-9000 が昨日終了した理由を説明して。",
+      "should_decline": true,
+      "reason": "発表・終了・理由のいずれにも裏付けがない。質問の前提を事実として引き継がない。",
+      "verification": "unverified",
+      "absent_entities": [
+        "Yozora-9000"
+      ]
+    }
+  ]
+}

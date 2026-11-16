@@ -1,0 +1,37 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "BigScience",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "bigscience-bloom",
+      "publisher": "BigScience",
+      "kind": "model-notes",
+      "title": "BLOOM へ文章の続きを頼む",
+      "url": "https://huggingface.co/bigscience/bloom",
+      "published": null,
+      "updated": "2022-07-06",
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "bloom-176b"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "conversation-format",
+          "summary_ja": "BLOOM は入力文の続きを作るモデルです。仕事を文章の続きとして表せる形で渡します。",
+          "when_ja": "会話向けに調整されていない BLOOM の使い方を調べるとき。",
+          "summary_en": "BLOOM generates continuations, so express the task as text it can continue.",
+          "when_en": "When exploring BLOOM without chat-specific tuning."
+        }
+      ],
+      "sources": [
+        "https://huggingface.co/bigscience/bloom"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Ask BLOOM to continue text"
+    }
+  ]
+}

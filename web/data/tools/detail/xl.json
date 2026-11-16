@@ -1,0 +1,160 @@
+{
+  "xllm-go--bypass": {
+    "topics": [
+      "ai",
+      "bing",
+      "claude",
+      "coze",
+      "cursor",
+      "deepseek",
+      "gpt",
+      "grok",
+      "qodo",
+      "windsurf",
+      "you"
+    ],
+    "homepage": "https://xllm-go.github.io/bypass",
+    "archived": false,
+    "commit": "2c0c6318e081136bc3ad05d421209a33ad1f9953",
+    "classification_basis": "Topics, README introduction, language (Go) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v2.0.0",
+        "2024-04-09"
+      ],
+      [
+        "v2.1.0",
+        "2024-06-26"
+      ],
+      [
+        "v2.1.2",
+        "2024-09-09"
+      ],
+      [
+        "v3.0.0",
+        "2025-02-06"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "go install ./cmd/iocgo / docker run -p 8080:8080 -v ./config.yaml:/app/config.yaml ghcr.io/bincooo/chatgpt-adapter:latest",
+    "install_evidence": [
+      {
+        "command": "go install ./cmd/iocgo",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/README.md",
+        "line": 31
+      },
+      {
+        "command": "docker run -p 8080:8080 -v ./config.yaml:/app/config.yaml ghcr.io/bincooo/chatgpt-adapter:latest",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/README.md",
+        "line": 74
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "main.go",
+        "cmd/iocgo/main.go",
+        "core/cache/memory.go"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/gpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/xllm-go/bypass",
+      "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/README.md",
+      "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/go.mod",
+      "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/main.go",
+      "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/cmd/iocgo/main.go",
+      "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/core/cache/memory.go",
+      "https://api.github.com/repos/xllm-go/bypass/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/README.md"
+      },
+      {
+        "path": "go.mod",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/go.mod"
+      },
+      {
+        "path": "main.go",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/main.go"
+      },
+      {
+        "path": "cmd/iocgo/main.go",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/cmd/iocgo/main.go"
+      },
+      {
+        "path": "core/cache/memory.go",
+        "source": "https://github.com/xllm-go/bypass/blob/2c0c6318e081136bc3ad05d421209a33ad1f9953/core/cache/memory.go"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Go) → framework / other",
+    "repository_id": 660299583,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "xlang-ai--binder": {
+    "topics": [
+      "fact-verification",
+      "in-context-learning",
+      "language-binding",
+      "language-model",
+      "large-language-models",
+      "natural-language-processing",
+      "openai",
+      "prompt-learning",
+      "question-answering",
+      "structured-knowledge-grounding",
+      "symbolic-language"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/xlang-ai/Binder",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:openai stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 547117825,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

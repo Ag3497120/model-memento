@@ -1,0 +1,68 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "MiniMax",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "minimax-tools",
+      "publisher": "MiniMax",
+      "kind": "best-practices",
+      "title": "MiniMax の道具と考えた情報の引き継ぎ",
+      "url": "https://platform.minimax.io/docs/guides/text-m3-function-call.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "minimax"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "tool-contract",
+          "summary_ja": "道具を使う会話では、思考項目の有無を確認し、返された応答を丸ごと履歴へ戻します。",
+          "when_ja": "MiniMax-M3.1-Flash に道具を使わせるとき。",
+          "summary_en": "Check whether thinking fields are present and return the complete response to the conversation history during tool use.",
+          "when_en": "When using tools with MiniMax-M3.1-Flash."
+        }
+      ],
+      "sources": [
+        "https://platform.minimax.io/docs/guides/text-m3-function-call.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Preserve MiniMax tool and thinking responses"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "minimax-cache",
+      "publisher": "MiniMax",
+      "kind": "best-practices",
+      "title": "MiniMax の共通部分を再利用する",
+      "url": "https://platform.minimax.io/docs/api-reference/text-prompt-caching.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "minimax"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "reuse",
+          "summary_ja": "何度も使う指示や資料の共通部分を保ち、再利用の設定を確認します。",
+          "when_ja": "同じ背景で会話を繰り返す API を作るとき。",
+          "summary_en": "Keep recurring instruction and reference prefixes consistent and check reuse settings.",
+          "when_en": "When building an API integration that repeats shared context."
+        }
+      ],
+      "sources": [
+        "https://platform.minimax.io/docs/api-reference/text-prompt-caching.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Reuse shared MiniMax context"
+    }
+  ]
+}

@@ -1,0 +1,1193 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "gemini-cli",
+  "name": "Gemini CLI",
+  "vendor": "Google",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "gemini-cli-2025-06-25",
+      "from": "2025-06",
+      "to": "2025-08",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/theme",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/themes.md）",
+          "purpose": "配色を矢印で選んで確定する（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/themes.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>の灰色の文字行（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FAFAFA",
+          "panel": null,
+          "text": "#3C3C43",
+          "muted": "#B7BECC",
+          "accent": "#8B5CF6",
+          "border": "#3B82F6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": "#CDD6F4",
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#89B4FA",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "light.text": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "dark.text": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>の灰色の文字行（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/Footer.tsx）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/themes.md",
+          "kind": "official-doc",
+          "date": "2025-06-25",
+          "shows": "固定コミットの操作説明。/themeで候補を開き、矢印で選び確定。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "利用者の発言は>付き。枠のない文字の行。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "下部にフォルダー・モデル・実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-25",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-cli-open-source-ai-agent/",
+          "kind": "blog",
+          "date": "2025-06-25",
+          "shows": "端末上の対話として公開。Webアプリとは別。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "gemini-cli-2025-08",
+      "from": "2025-08",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        },
+        {
+          "name": "読み込んだ情報",
+          "position": null,
+          "size": null,
+          "contents": [
+            "指示ファイルや接続先がある時に件数を表示。狭い時は複数行（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/ContextSummaryDisplay.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/theme",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/themes.md）",
+          "purpose": "配色を矢印で選んで確定する（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/themes.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>の発言を文字による丸い枠で囲む（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FAFAFA",
+          "panel": null,
+          "text": "#3C3C43",
+          "muted": "#97A0B0",
+          "accent": "#8B5CF6",
+          "border": "#3B82F6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": "#CDD6F4",
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#89B4FA",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "light.text": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "dark.text": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>の発言を文字による丸い枠で囲む（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/Footer.tsx）",
+        "指示ファイルと接続先の件数を条件付きで表示（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/ContextSummaryDisplay.tsx）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/themes.md",
+          "kind": "official-doc",
+          "date": "2025-08-14",
+          "shows": "固定コミットの操作説明。/themeで候補を開き、矢印で選び確定。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "利用者の発言は>付きの丸い枠。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "下部にフォルダー・モデル・実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/ContextSummaryDisplay.tsx",
+          "kind": "oss-source",
+          "date": "2025-08-14",
+          "shows": "Using:に指示ファイル、開いているファイル、MCP（外部の道具をつなぐ仕組み）の件数。何もない時は出さない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "gemini-cli-2025-10",
+      "from": "2025-10",
+      "to": "2026-01",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/theme",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/docs/cli/themes.md）",
+          "purpose": "配色を矢印で選んで確定する（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/docs/cli/themes.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>の文字行。外側の丸い枠はない（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FAFAFA",
+          "panel": null,
+          "text": null,
+          "muted": "#97A0B0",
+          "accent": "#8B5CF6",
+          "border": "#3B82F6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": null,
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#89B4FA",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>の文字行。外側の丸い枠はない（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Footer.tsx）",
+        "進捗・読み込んだ情報・入力を縦に置く（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Composer.tsx）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/docs/cli/themes.md",
+          "kind": "official-doc",
+          "date": "2025-10-15",
+          "shows": "固定コミットの操作説明。/themeで候補を開き、矢印で選び確定。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "利用者の発言は>付き。枠のない文字の行。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "下部にフォルダー・モデル・実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Composer.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "進捗、読み込み情報、入力欄を縦に配置。Headlessの常設ボタン列ではない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "gemini-cli-2026-01",
+      "from": "2026-01",
+      "to": "2026-03",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/docs/cli/commands.md）",
+          "purpose": "モデルの設定画面を開く（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/docs/cli/commands.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>の文字行。外側の丸い枠はない（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FAFAFA",
+          "panel": null,
+          "text": null,
+          "muted": "#97A0B0",
+          "accent": "#8B5CF6",
+          "border": "#3B82F6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E2E",
+          "panel": null,
+          "text": null,
+          "muted": "#6C7086",
+          "accent": "#CBA6F7",
+          "border": "#89B4FA",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>の文字行。外側の丸い枠はない（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/Footer.tsx）",
+        "画像の貼り付けは本文の@相対パスになる。画像専用の常設カードとは確認できない（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/docs/cli/commands.md",
+          "kind": "official-doc",
+          "date": "2026-01-22",
+          "shows": "固定コミットの操作説明。モデル・設定・会話再開等の入口。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "利用者の発言は>付き。枠のない文字の行。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "下部にフォルダー・モデル・実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2026-01-22",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "gemini-cli-2026-03",
+      "from": "2026-03",
+      "to": "2026-07",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/docs/reference/commands.md）",
+          "purpose": "モデルの設定画面を開く（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/docs/reference/commands.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#E4E4E4",
+          "text": "#000000",
+          "muted": "#5F5F5F",
+          "accent": "#5F00FF",
+          "border": "#5F5F5F",
+          "user_bubble": "#FAFAFA"
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#5F5F5F",
+          "text": "#FFFFFF",
+          "muted": "#AFAFAF",
+          "accent": "#D7AFFF",
+          "border": "#878787",
+          "user_bubble": "#5F5F5F"
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.panel": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.text": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "light.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.panel": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.text": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "dark.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/Footer.tsx）",
+        "入力欄と発言に別の背景色を定義。端末・設定で適用が変わる（https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/docs/reference/commands.md",
+          "kind": "official-doc",
+          "date": "2026-03-20",
+          "shows": "固定コミットの操作説明。モデル・設定・会話再開等の入口。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "利用者の発言は>付き。背景色の適用は設定等の条件付き。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "設定できる下部の情報行。フォルダー、モデル、使用量、安全な実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-20",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "gemini-cli-2026-07",
+      "from": "2026-07",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/docs/reference/commands.md）",
+          "purpose": "モデルの設定画面を開く（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/docs/reference/commands.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#E4E4E4",
+          "text": "#000000",
+          "muted": "#5F5F5F",
+          "accent": "#5F00FF",
+          "border": "#5F5F5F",
+          "user_bubble": "#FAFAFA"
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#5F5F5F",
+          "text": "#FFFFFF",
+          "muted": "#AFAFAF",
+          "accent": "#D7AFFF",
+          "border": "#878787",
+          "user_bubble": "#5F5F5F"
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.panel": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.text": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "light.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.panel": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.text": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "dark.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/Footer.tsx）",
+        "入力欄と発言に別の背景色を定義。端末・設定で適用が変わる（https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/docs/reference/commands.md",
+          "kind": "official-doc",
+          "date": "2026-07-15",
+          "shows": "固定コミットの操作説明。モデル・設定・会話再開等の入口。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "利用者の発言は>付き。背景色の適用は設定等の条件付き。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "設定できる下部の情報行。フォルダー、モデル、使用量、安全な実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2026-07-15",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        },
+        {
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "kind": "blog",
+          "date": "2026-05-19",
+          "shows": "6月18日から個人プラン等をAntigravity CLIへ移行する案内。常設バナーの形の根拠ではない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "gemini-cli-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の発言と返答を縦に並べる（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+            "道具の実行を会話内のまとまりにする（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字による丸い枠で囲む。>で通常の依頼、!で端末の命令を入力する（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/InputPrompt.tsx）"
+          ]
+        },
+        {
+          "name": "情報行",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "フォルダー、モデル、安全な実行領域などの情報。内容と並びは版・設定・幅で異なる（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Footer.tsx）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄に入力する命令（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/docs/reference/commands.md）",
+          "purpose": "モデルの設定画面を開く（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/docs/reference/commands.md）"
+        },
+        {
+          "label": "Esc",
+          "where": "動作中の案内（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/LoadingIndicator.tsx）",
+          "purpose": "実行を取り消す（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+        }
+      ],
+      "conversation": {
+        "user": "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "assistant": "返答は接頭記号と本文を分けて表示。製品の星形記号は再描画で使わず、普通の文字で「回答」と示す（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/GeminiMessage.tsx）",
+        "tool_calls": "道具の実行を会話内でまとめ、端末の結果などを表示（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx）",
+        "streaming": "動作中の表示に経過時間とEscの案内。細かな動きの速さは未確認（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/LoadingIndicator.tsx）"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#E4E4E4",
+          "text": "#000000",
+          "muted": "#5F5F5F",
+          "accent": "#5F00FF",
+          "border": "#5F5F5F",
+          "user_bubble": "#FAFAFA"
+        },
+        "dark": {
+          "bg": "#000000",
+          "panel": "#5F5F5F",
+          "text": "#FFFFFF",
+          "muted": "#AFAFAF",
+          "accent": "#D7AFFF",
+          "border": "#878787",
+          "user_bubble": "#5F5F5F"
+        },
+        "source": {
+          "light.bg": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.panel": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.text": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.muted": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.accent": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.border": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "light.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.bg": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.panel": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.text": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.muted": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.accent": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.border": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "dark.user_bubble": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で丸い角を表す枠。CSSの角丸半径に置き換えない（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/InputPrompt.tsx）"
+      },
+      "empty_state": "最初に短い使い方と/helpの案内。バナーの文字絵はコピーしない（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Tips.tsx）",
+      "distinctive": [
+        "端末の文字による入力枠（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/InputPrompt.tsx）",
+        "先頭が>。設定が有効な場合、発言の行にテーマの背景色が付く（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+        "下部のモデル・実行領域などの状態表示（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Footer.tsx）",
+        "入力欄と発言に別の背景色を定義。端末・設定で適用が変わる（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts）"
+      ],
+      "must_not_copy": [
+        "Geminiの文字絵バナー、GoogleやGeminiのロゴ、返答のブランド用星形記号",
+        "任意表示される動物の顔やマスコット",
+        "元コードの大きなまとまり。ここには設計の事実と色番号だけを記録する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/docs/reference/commands.md",
+          "kind": "official-doc",
+          "date": "2026-11-01",
+          "shows": "固定コミットの操作説明。モデル・設定・会話再開等の入口。公開日ではなく対象コミットの日付。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/InputPrompt.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "入力欄の文字による丸い枠・接頭記号・補完。2026-01には画像貼り付けを@相対パスへ変える実装。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "利用者の発言は>付き。背景色の適用は設定等の条件付き。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/GeminiMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "返答用の接頭記号と本文の領域。記号はブランド要素としてコピーしない。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/messages/ToolGroupMessage.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "道具の実行を会話内のまとまりとして描く。枠やシェル出力の条件分岐。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/LoadingIndicator.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "待機・実行表示、経過時間、Escによる取消案内。幅による表示分岐がある。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Footer.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "設定できる下部の情報行。フォルダー、モデル、使用量、安全な実行領域の状態など。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/themes/theme.ts",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "Default / Default Lightの宣言色。bgはBackground値、panelはInputBackground、mutedはGray、accentはAccentPurple。2025年のborderは入力枠のAccentBlue、2026-03以降はDarkGray。Foregroundが空文字の版はtextをnullにした。"
+        },
+        {
+          "url": "https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Tips.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-01",
+          "shows": "開始時の短い使い方と/helpの案内。"
+        },
+        {
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "kind": "blog",
+          "date": "2026-05-19",
+          "shows": "6月18日から個人プラン等をAntigravity CLIへ移行する案内。常設バナーの形の根拠ではない。"
+        }
+      ],
+      "confidence": 0.84
+    }
+  ],
+  "corrections": [
+    "描画コードの文字絵バナーはコピーしない。配色名は文字絵を再利用する許可ではない（https://github.com/google-gemini/gemini-cli/blob/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/cli/src/ui/components/InputPrompt.tsx）",
+    "2025年8月のGitHub Actionsはリポジトリ上の別の利用形態。CLI内の常設のPR例・ツリー図・バッジの根拠は unverified。実装には件数の情報行がある（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/ContextSummaryDisplay.tsx）",
+    "2025年10月のHeadless・MCP用ボタン列は unverified。対話入力と状態行を用いる（https://github.com/google-gemini/gemini-cli/blob/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/Composer.tsx）",
+    "2026年1月の画像貼り付けは@相対パスを本文へ挿入する。@clipboard-imageピルや画面寸法の常設表は unverified（https://github.com/google-gemini/gemini-cli/blob/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/InputPrompt.tsx）",
+    "2026年3月にToken Heatmapを常設する根拠は unverified。/stats heatmapの追加を確認できる公開記録は2026年11月10日のv0.69.0-preview.0（https://github.com/google-gemini/gemini-cli/releases/tag/v0.69.0-preview.0）",
+    "移行告知は2026年5月19日公開で6月18日の対象利用者への変更を記す。7月版の常設バナー・専用のmacOSウィンドウバー・Sandbox Bridgeボタンは unverified（https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/）",
+    "2026年11月のRestore Snapshot / Discardカードや常設の容量計は unverified。実装で確認できるのは設定可能な情報行（https://github.com/google-gemini/gemini-cli/blob/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/Footer.tsx）",
+    "2025年8月の利用者の発言には枠がある。10月・2026年1月は枠のない行。全時期を同じ吹き出しにしない（https://github.com/google-gemini/gemini-cli/blob/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/cli/src/ui/components/messages/UserMessage.tsx）",
+    "色はDefault / Default Lightという選べるテーマの宣言値。OSの端末全体が常にこの背景色になるという断定ではない。2025年10月と2026年1月の既定文字色は空文字のためnull。",
+    "カタログの各日付に近い固定コミットを参照した。配布済みの版番号との一致、Gemini 4各モデルの利用可否、@file:line、クラッシュ復旧表示、MCP OAuth接続バッジは unverified。"
+  ]
+}

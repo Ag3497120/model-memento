@@ -1,0 +1,461 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "antigravity",
+  "name": "Google Antigravity",
+  "vendor": "Google",
+  "kind": "agent-app",
+  "versions": [
+    {
+      "id": "antigravity-2025-11",
+      "from": "2025-11",
+      "to": "2026-05",
+      "regions": [
+        {
+          "name": "エディター画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "コード編集、入力候補、行内の命令。横の支援パネルで会話（https://antigravity.google/blog/introducing-google-antigravity）"
+          ]
+        },
+        {
+          "name": "エージェントの管理画面",
+          "position": null,
+          "size": null,
+          "contents": [
+            "エディターとは別ウィンドウ。複数の作業場所の進み具合を管理（https://antigravity.google/blog/introducing-google-antigravity）",
+            "受信箱と横のパネルで進捗に気付ける（https://antigravity.google/blog/introducing-google-antigravity）"
+          ]
+        },
+        {
+          "name": "成果物",
+          "position": null,
+          "size": null,
+          "contents": [
+            "作業一覧、実装の計画、完了時の説明などを読む（https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "コメント",
+          "where": "成果物の文書や画像上（https://antigravity.google/blog/introducing-google-antigravity）",
+          "purpose": "確認した箇所に指示を返す（https://antigravity.google/blog/introducing-google-antigravity）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "成果物を出し、そこへ直接コメントして作業を修正できる（https://www.theverge.com/news/822833/google-antigravity-ide-coding-agent-gemini-3-pro）",
+        "tool_calls": "個別の操作をタスク単位のまとまりにして表示（https://antigravity.google/blog/introducing-google-antigravity）",
+        "streaming": "高い粒度の要約と進み具合を示す。文字が出る速度は未確認（https://antigravity.google/blog/introducing-google-antigravity）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, sans-serif; コードは ui-monospace, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "エディター画面と管理画面が別のウィンドウ（https://antigravity.google/blog/introducing-google-antigravity）",
+        "受信箱で複数の作業の進捗を追う（https://antigravity.google/blog/introducing-google-antigravity）",
+        "成果物に直接コメントする（https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/）"
+      ],
+      "must_not_copy": [
+        "Google Antigravityのロゴ、アプリのアイコン、ブランド用の文字装飾",
+        "公式の画面画像、ブラウザーの録画、紹介動画のコマ、作例の画像",
+        "Googleの書体ファイル。名前だけを記録し再描画ではシステム書体を使う"
+      ],
+      "sources": [
+        {
+          "url": "https://antigravity.google/blog/introducing-google-antigravity",
+          "kind": "blog",
+          "date": "2025-11-18",
+          "shows": "エディターと管理画面を別ウィンドウに分ける。タスク単位の道具表示・成果物・受信箱・文書へのコメント。画像や動画のコマは取得せず本文と代替説明だけを参照。"
+        },
+        {
+          "url": "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/",
+          "kind": "blog",
+          "date": "2025-11-20",
+          "shows": "2種類の画面、コード・端末・ブラウザーをまたぐ作業、成果物の確認と直接のコメント。"
+        },
+        {
+          "url": "https://www.theverge.com/news/822833/google-antigravity-ide-coding-agent-gemini-3-pro",
+          "kind": "press",
+          "date": "2025-11-18",
+          "shows": "同日の記事本文でエディターと管理画面の2種類、成果物への直接のコメントを確認。記事の画像は取得しない。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "antigravity-2026-05",
+      "from": "2026-05",
+      "to": "2026-10",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "プロジェクト・状態・新しさで会話をまとめる。プロジェクトに属さない会話は別の区分（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+          ]
+        },
+        {
+          "name": "会話と成果物",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "コードエディターを必須にしない独立した会話中心の画面（https://antigravity.google/blog/introducing-google-antigravity-2）"
+          ]
+        },
+        {
+          "name": "音声入力",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文字入力欄の横にマイク。音声を編集可能な文字にする（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "プロジェクトを選ばずに使える入口（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+          "purpose": "単独の会話を始める（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+        },
+        {
+          "label": "新しい作業コピー",
+          "where": "会話の開始時（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+          "purpose": "元のファイルと分けて作業する（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+        },
+        {
+          "label": "音声入力",
+          "where": "文字入力欄の横（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+          "purpose": "発話を文字に変え、送る前に編集する（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+        },
+        {
+          "label": "/schedule",
+          "where": "入力欄（https://antigravity.google/blog/introducing-google-antigravity-2）",
+          "purpose": "一回または定期的な作業を登録する（https://antigravity.google/blog/introducing-google-antigravity-2）"
+        }
+      ],
+      "conversation": {
+        "user": "文字入力のほか、マイクで文字起こしした内容を送る前に直せる（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+        "assistant": "成果物を表示して内容への直接の指示を受ける（https://antigravity.google/blog/introducing-google-antigravity-2）",
+        "tool_calls": "長い操作や小分けした仕事を裏で進め、その報告を主な会話の進捗に戻す（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, sans-serif; コードは ui-monospace, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "IDEから独立したデスクトップアプリ（https://antigravity.google/blog/introducing-google-antigravity-2）",
+        "左列をプロジェクトや状態で整理（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+        "単独の会話を別区分に置く（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+        "マイクで文字起こししてから送る（https://antigravity.google/blog/google-io-2026-feature-deep-dive）"
+      ],
+      "must_not_copy": [
+        "Google Antigravityのロゴ、アプリのアイコン、ブランド用の文字装飾",
+        "公式の画面画像、ブラウザーの録画、紹介動画のコマ、作例の画像",
+        "Googleの書体ファイル。名前だけを記録し再描画ではシステム書体を使う"
+      ],
+      "sources": [
+        {
+          "url": "https://antigravity.google/blog/introducing-google-antigravity-2",
+          "kind": "blog",
+          "date": "2026-05-19",
+          "shows": "独立した2.0デスクトップアプリ。複数フォルダーのプロジェクト、定期作業、入力欄横の音声文字起こし。旧IDEは別。"
+        },
+        {
+          "url": "https://antigravity.google/blog/google-io-2026-feature-deep-dive",
+          "kind": "blog",
+          "date": "2026-05-19",
+          "shows": "左列をプロジェクト・状態・新しさで整理。単独の会話を別区分へ。新しい作業コピーと音声入力の入口。"
+        },
+        {
+          "url": "https://codelabs.developers.google.com/getting-started-google-antigravity",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の操作手順。左のプロジェクトと左下設定を説明。更新済み資料なので5月初日の正確な全配置の証拠にはしない。2026-11-15閲覧。"
+        }
+      ],
+      "confidence": 0.79
+    },
+    {
+      "id": "antigravity-2026-10",
+      "from": "2026-10",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "横パネルと並べて会話を続ける（https://antigravity.google/docs/changelog?tab=hub）"
+          ]
+        },
+        {
+          "name": "成果物などの一覧",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "Overviewに成果物・変更ファイル・リンク・追加資料をまとめる（https://antigravity.google/docs/changelog?tab=hub）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "概要を開く",
+          "where": "会話の上部の概要ボタン（https://antigravity.google/docs/changelog?tab=hub）",
+          "purpose": "会話で作ったものを一覧する（https://antigravity.google/docs/changelog?tab=hub）"
+        },
+        {
+          "label": "横パネルを最大化",
+          "where": "横パネル（https://antigravity.google/docs/changelog?tab=hub）",
+          "purpose": "会話の幅を狭めず、上に重ねて大きく表示（https://antigravity.google/docs/changelog?tab=hub）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, sans-serif; コードは ui-monospace, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話の横のOverviewを刷新（https://antigravity.google/docs/changelog?tab=hub）",
+        "成果物・変更ファイル・リンク・資料の入口を一か所に置く（https://antigravity.google/docs/changelog?tab=hub）",
+        "最大化したパネルは会話の上に重なる（https://antigravity.google/docs/changelog?tab=hub）"
+      ],
+      "must_not_copy": [
+        "Google Antigravityのロゴ、アプリのアイコン、ブランド用の文字装飾",
+        "公式の画面画像、ブラウザーの録画、紹介動画のコマ、作例の画像",
+        "Googleの書体ファイル。名前だけを記録し再描画ではシステム書体を使う"
+      ],
+      "sources": [
+        {
+          "url": "https://antigravity.google/docs/changelog?tab=hub",
+          "kind": "changelog",
+          "date": "2026-10-15",
+          "shows": "2.24.0の項目。Overviewに成果物・変更ファイル・リンク・追加資料をまとめる横パネルへの刷新。最大化は会話の上に重なる。"
+        },
+        {
+          "url": "https://antigravity.google/docs/side-panel/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のOverview・タブ・分割の説明。10月15日からの全仕様とは断定せず、更新履歴が明示する構成だけを採用。2026-11-15閲覧。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "antigravity-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "設定は左列の下にある（https://antigravity.google/docs/settings/）"
+          ]
+        },
+        {
+          "name": "開始画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "上に挨拶、入力欄は下に固定（https://antigravity.google/docs/changelog?tab=hub）"
+          ]
+        },
+        {
+          "name": "概要と横パネル",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "会話から資料・成果物などをタブで開く。用途の設定によって項目を省く（https://antigravity.google/docs/side-panel/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "画面の用途",
+          "where": "設定→一般（https://antigravity.google/docs/settings/）",
+          "purpose": "文章や調査向けとソフトウェア開発向けの構成を切り替える。個人アカウント向け（https://antigravity.google/docs/settings/）"
+        },
+        {
+          "label": "文字サイズ",
+          "where": "設定→外観（https://antigravity.google/docs/changelog?tab=hub）",
+          "purpose": "12・14・16pxから選ぶ。11月9日の追加（https://antigravity.google/docs/changelog?tab=hub）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "文章や調査向けの構成では返答と成果物を中心に表示（https://antigravity.google/docs/settings/）",
+        "tool_calls": "開発向けは実行手順を開閉できる。文章や調査向けでは説明を簡潔にする（https://antigravity.google/docs/settings/）",
+        "streaming": "文章や調査向けでは進捗の行を動作中に出し、返答が終わると消す（https://antigravity.google/docs/settings/）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "Google Sans",
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, sans-serif; コードは ui-monospace, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "会話開始前は上に挨拶、下に入力欄。正確な挨拶文は未確認（https://antigravity.google/docs/changelog?tab=hub）",
+      "distinctive": [
+        "未選択時の既定テーマがOnyxになる（https://antigravity.google/docs/changelog?tab=hub）",
+        "既定の画面用書体がGoogle Sansになる（https://antigravity.google/docs/changelog?tab=hub）",
+        "文章や調査向けと開発向けの構成を切り替える（https://antigravity.google/docs/settings/）",
+        "入力欄を下に固定した開始画面（https://antigravity.google/docs/changelog?tab=hub）"
+      ],
+      "must_not_copy": [
+        "Google Antigravityのロゴ、アプリのアイコン、ブランド用の文字装飾",
+        "公式の画面画像、ブラウザーの録画、紹介動画のコマ、作例の画像",
+        "Googleの書体ファイル。名前だけを記録し再描画ではシステム書体を使う"
+      ],
+      "sources": [
+        {
+          "url": "https://antigravity.google/docs/changelog?tab=hub",
+          "kind": "changelog",
+          "date": "2026-11-03",
+          "shows": "2.29.0: 開始画面は上に挨拶・下に入力。既定OnyxテーマとGoogle Sans。2.30.0: 用途別の構成。2.31.0（11月9日）: 12/14/16pxの文字サイズ。累積の更新履歴なので節の日付を区別。"
+        },
+        {
+          "url": "https://antigravity.google/docs/settings/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2.30.0以降の仕事用・ソフトウェア開発用の構成。設定は左下、個人アカウントで切替。2026-11-15閲覧。"
+        },
+        {
+          "url": "https://antigravity.google/docs/side-panel/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の横パネル。資料・成果物・差分・端末・別の会話・Webページをタブで開く。仕事用の構成は一部の項目を省く。2026-11-15閲覧。"
+        }
+      ],
+      "confidence": 0.82
+    }
+  ],
+  "corrections": [
+    "カタログにid=antigravityは存在しなかった。.work/design-out/antigravity.jsonと専用描画ファイルも存在しなかった。認証用プラグインやSDKを本体と取り違えない。",
+    "2025年11月版はエディターと管理画面を別ウィンドウにする。最初から独立した2.0アプリとして描かない（https://antigravity.google/blog/introducing-google-antigravity）",
+    "2026年5月19日の2.0はIDEを必須にしない独立アプリ。旧IDEも別に提供される（https://antigravity.google/blog/introducing-google-antigravity-2）",
+    "5月の音声入力は文字起こしで、送信前に直せる。11月の会話型音声モードと同じ表示にしない（https://antigravity.google/blog/google-io-2026-feature-deep-dive）",
+    "現在のOverviewのすべての項目や新しい文字サイズを2025年11月へ遡らせない。2.24.0、2.29.0、2.30.0、2.31.0の節を区別（https://antigravity.google/docs/changelog?tab=hub）",
+    "Google Sansは2026年11月の既定変更として確認。初期版の書体としては unverified（https://antigravity.google/docs/changelog?tab=hub）",
+    "現行IDEのWorked forやAccept allは別のIDE用画面。アプリの開始画面や2025年の初日へそのまま転用しない（https://antigravity.google/docs/ide/agent-side-panel/）",
+    "ライト・ダークの色番号、Onyxの正確な色、各領域の幅、角丸、過去の書体とコード用書体は unverified。VS Code由来という一般論から既定色を補わない。"
+  ]
+}

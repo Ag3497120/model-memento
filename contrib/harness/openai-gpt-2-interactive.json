@@ -1,0 +1,24 @@
+{
+  "name": "openai/gpt-2 の対話スクリプト",
+  "vendor": "OpenAI",
+  "kind": "cli",
+  "github": "openai/gpt-2",
+  "homepage": "https://github.com/openai/gpt-2",
+  "versions": [
+    {
+      "label": "interactive_conditional_samples.py",
+      "from": "2019-02",
+      "to": "2020-06",
+      "surface": "terminal",
+      "layout": { "sidebar": "none", "model_picker": false, "tool_calls": false, "side_panel": "none", "diff_view": false, "input": "prompt-line" },
+      "theme": { "mode": "dark", "bg": "#0c0c0c", "panel": "#1a1a1a", "text": "#d0d0d0", "muted": "#8a8a8a", "accent": "#7fd17f", "user_bg": "#0c0c0c", "assistant_bg": "#0c0c0c", "font": "mono" },
+      "prompt_glyph": "Model prompt >>>",
+      "model_switch": { "where": "cli-flag", "label": "--model_name", "steps": "スクリプトを終了し、--model_name=774M のように大きさを指定して起動し直す" },
+      "mobile": { "support": "none", "note": "手元の Python で動かすスクリプトで、スマホからは使えない" },
+      "welcome": "Python で公開リポジトリのスクリプトを動かし、書き出しの文章を入れると続きが何本か出てくる。チャットの画面はまだない。",
+      "features": ["重みを落として手元の Python で動かす", "書き出しの文章を入れると、続きを複数本サンプリングして表示する", "会話ではなく、文章の続きを書く"],
+      "models": ["GPT-2"],
+      "sources": ["https://github.com/openai/gpt-2", "https://github.com/openai/gpt-2/blob/master/src/interactive_conditional_samples.py"]
+    }
+  ]
+}

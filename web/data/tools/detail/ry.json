@@ -1,0 +1,561 @@
+{
+  "ryancodrai--turbovec": {
+    "topics": [
+      "ann",
+      "avx512",
+      "embedding",
+      "embeddings",
+      "faiss",
+      "nearest-neighbor",
+      "neon",
+      "python",
+      "quant",
+      "quantization",
+      "rag",
+      "rust",
+      "simd",
+      "turboquant",
+      "vector-search"
+    ],
+    "homepage": "https://pypi.org/project/turbovec/",
+    "archived": false,
+    "commit": "c3b043b992290ff223b903046af7f6683768241c",
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "pip install turbovec / pip install maturin",
+    "install_evidence": [
+      {
+        "command": "pip install turbovec",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/README.md",
+        "line": 37
+      },
+      {
+        "command": "pip install maturin",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/README.md",
+        "line": 148
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "examples/downstream-smoke/src/main.rs",
+        "turbovec/src/io.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Vec",
+      "io::Result",
+      "Box"
+    ],
+    "string_evidence": [
+      {
+        "text": "Vec",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/examples/downstream-smoke/src/main.rs",
+        "line": 28,
+        "kind": "visible-text"
+      },
+      {
+        "text": "io::Result",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/src/io.rs",
+        "line": 219,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Box",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/src/io.rs",
+        "line": 843,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/RyanCodrai/turbovec",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/README.md",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/Cargo.toml",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/Cargo.toml",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec-python/Cargo.toml",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec-python/pyproject.toml",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/examples/downstream-smoke/src/main.rs",
+      "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/src/io.rs",
+      "https://api.github.com/repos/RyanCodrai/turbovec/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/Cargo.toml"
+      },
+      {
+        "path": "turbovec/Cargo.toml",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/Cargo.toml"
+      },
+      {
+        "path": "turbovec-python/Cargo.toml",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec-python/Cargo.toml"
+      },
+      {
+        "path": "turbovec-python/pyproject.toml",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec-python/pyproject.toml"
+      },
+      {
+        "path": "examples/downstream-smoke/src/main.rs",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/examples/downstream-smoke/src/main.rs"
+      },
+      {
+        "path": "turbovec/src/io.rs",
+        "source": "https://github.com/RyanCodrai/turbovec/blob/c3b043b992290ff223b903046af7f6683768241c/turbovec/src/io.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=3, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Rust) → framework / rag",
+    "repository_id": 1192555574,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ryze-ai-adgent--open-seo-mcp-skills": {
+    "topics": [
+      "ai-seo",
+      "ai-visibility",
+      "backlinks",
+      "claude",
+      "claude-code",
+      "claude-skills",
+      "dataforseo",
+      "generative-engine-optimization",
+      "geo",
+      "geo-mcp",
+      "keyword-research",
+      "llm-seo",
+      "mcp",
+      "mcp-server",
+      "open-source-seo",
+      "rank-tracking",
+      "seo",
+      "seo-audit",
+      "seo-mcp",
+      "seo-mcp-server"
+    ],
+    "homepage": "https://www.get-ryze.ai/how-to-connect-claude-to-google-meta-ads-mcp",
+    "archived": false,
+    "commit": "f587b0a69dc1ed92b65cdb241e4f14985b1031fd",
+    "classification_basis": "Topics, README introduction, language (Shell) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+      "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills/blob/f587b0a69dc1ed92b65cdb241e4f14985b1031fd/README.md",
+      "https://api.github.com/repos/Ryze-AI-Adgent/open-seo-mcp-skills/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills/blob/f587b0a69dc1ed92b65cdb241e4f14985b1031fd/README.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:3000..9999 fork:false",
+      "topic:mcp-server stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Shell) → mcp-server / protocol-mcp",
+    "repository_id": 1350978527,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "ryder-sun--meldwork": {
+    "topics": [
+      "agent-collaboration",
+      "agent-orchestration",
+      "agent-workforce",
+      "ai-agent",
+      "ai-agent-workspace",
+      "human-in-the-loop",
+      "local-ai",
+      "multi-agent-collaboration",
+      "multi-agent-system"
+    ],
+    "homepage": "https://ryder-sun.github.io/Meldwork/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Ryder-Sun/Meldwork",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1316195094,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ryensx--opencodex": {
+    "topics": [
+      "chatgpt",
+      "codex",
+      "codex-desktop"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78",
+    "classification_basis": "package dependencies include Electron / Tauri and README describes a chat application",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "1.0.0",
+        "2026-05-21"
+      ],
+      [
+        "2.0.0",
+        "2026-06-08"
+      ],
+      [
+        "2.0.1",
+        "2026-06-17"
+      ],
+      [
+        "2.0.2",
+        "2026-07-10"
+      ],
+      [
+        "2.0.3",
+        "2026-07-31"
+      ],
+      [
+        "2.1.0",
+        "2026-09-13"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "web-shell/internal/providers/project-recent-sort.js",
+        "examples/plugin-v2-hello/src/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Restore previous version",
+      "Unknown",
+      "Not found",
+      "Not created",
+      "Not running",
+      "Save",
+      "Cancel",
+      "Clear",
+      "Choose",
+      "Refresh",
+      "Back",
+      "All",
+      "Status",
+      "Ready",
+      "Gateway started",
+      "Health warning",
+      "Starting"
+    ],
+    "string_evidence": [
+      {
+        "text": "Restore previous version",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Unknown",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Not found",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Not created",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Not running",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Save",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Cancel",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Clear",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Choose",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Refresh",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Back",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "All",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Status",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 14,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ready",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 15,
+        "kind": "i18n"
+      },
+      {
+        "text": "Gateway started",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 16,
+        "kind": "i18n"
+      },
+      {
+        "text": "Health warning",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 17,
+        "kind": "i18n"
+      },
+      {
+        "text": "Starting",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+        "line": 18,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/RyensX/OpenCodex",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/README.md",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/package.json",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/sdk/plugin-v2/package.json",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/web-shell/internal/providers/project-recent-sort.js",
+      "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/examples/plugin-v2-hello/src/index.ts",
+      "https://api.github.com/repos/RyensX/OpenCodex/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/package.json"
+      },
+      {
+        "path": "sdk/plugin-v2/package.json",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/sdk/plugin-v2/package.json"
+      },
+      {
+        "path": "shared/i18n/locales/en-US.json",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/shared/i18n/locales/en-US.json"
+      },
+      {
+        "path": "web-shell/internal/providers/project-recent-sort.js",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/web-shell/internal/providers/project-recent-sort.js"
+      },
+      {
+        "path": "examples/plugin-v2-hello/src/index.ts",
+        "source": "https://github.com/RyensX/OpenCodex/blob/35784ffc5846b5e2ea4f3043bf8d33df1a6fdb78/examples/plugin-v2-hello/src/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=17, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "package dependencies include Electron / Tauri and README describes a chat application",
+    "repository_id": 1239928176,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ryanfrigo--kalshi-ai-trading-bot": {
+    "topics": [
+      "agentic-ai",
+      "ai-agents",
+      "ai-trading",
+      "automated-trading",
+      "edge-measurement",
+      "kalshi",
+      "kalshi-api",
+      "llm",
+      "machine-learning",
+      "mcp",
+      "portfolio-optimization",
+      "prediction-markets",
+      "python",
+      "quantitative-trading",
+      "risk-management",
+      "trading-bot"
+    ],
+    "homepage": "https://kalshi-community.vercel.app",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/ryanfrigo/kalshi-ai-trading-bot",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1026850533,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "ryoppippi--curxy": {
+    "topics": [
+      "cursor",
+      "deno",
+      "hono",
+      "ollama",
+      "proxy-server"
+    ],
+    "homepage": "https://jsr.io/@ryoppippi/curxy",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/ryoppippi/curxy",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ollama stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 789008605,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

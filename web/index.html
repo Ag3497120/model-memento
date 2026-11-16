@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" data-content-en="A static museum exploring AI models and the tools of their time through records." content="AIモデルと、その時代の道具を記録からたどる静的な博物館。">
+<title data-en="ChatGPT inspired · 2023 · Model Memento (unofficial)">ChatGPT 風 · 2023 · Model Memento（非公式）</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<!-- shared-styles:start -->
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/chrome.css">
+<link rel="stylesheet" href="css/combine.css">
+<link rel="stylesheet" href="css/design-d1.css">
+<link rel="stylesheet" href="css/design-d2.css">
+<link rel="stylesheet" href="css/design-d3.css">
+<link rel="stylesheet" href="css/design-d4.css">
+<link rel="stylesheet" href="css/era.css">
+<link rel="stylesheet" href="css/guides.css">
+<link rel="stylesheet" href="css/news.css">
+<link rel="stylesheet" href="css/rights-l1.css">
+<link rel="stylesheet" href="css/rights-l2.css">
+<link rel="stylesheet" href="css/rights-l3.css">
+<link rel="stylesheet" href="css/world.css">
+<!-- shared-styles:end -->
+</head>
+<body>
+<a class="chrome-skip" href="#app" data-en="Skip to tool screen">道具の画面へ進む</a>
+<div id="era-desktop" class="era-desktop">
+  <nav id="era-menu-bar" class="era-menu-bar" aria-label="デスクトップのメニューバー" data-aria-en="Desktop menu bar"></nav>
+  <div class="era-workspace">
+    <section id="era-window" class="era-window" aria-label="当時の道具のウィンドウ" data-aria-en="Historical tool window">
+      <header id="era-window-shell" class="era-window-shell"></header>
+      <div id="era-accents" class="era-accent-host" aria-label="この時代の案内" data-aria-en="Notices from this era"></div>
+      <div id="app" tabindex="-1" aria-label="当時の道具" data-aria-en="Historical tool"><p class="loading" data-en="Loading records…">記録を読み込んでいます…</p></div>
+    </section>
+  </div>
+  <div id="era-transition" class="era-transition-host"></div>
+</div>
+<dialog id="settings" aria-labelledby="dialog-title"></dialog>
+<dialog id="chrome-dialog" class="chrome-dialog" aria-labelledby="chrome-dialog-title"></dialog>
+<dialog id="chrome-hint" class="chrome-dialog chrome-hint" aria-labelledby="chrome-hint-title" aria-describedby="chrome-hint-text"></dialog>
+<script type="module">
+import { isEn } from './js/i18n.js';
+if (isEn) {
+  for (const element of document.querySelectorAll('[data-en]')) element.textContent = element.dataset.en;
+  for (const element of document.querySelectorAll('[data-aria-en]')) element.setAttribute('aria-label', element.dataset.ariaEn);
+  for (const element of document.querySelectorAll('[data-content-en]')) element.setAttribute('content', element.dataset.contentEn);
+}
+</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

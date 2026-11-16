@@ -1,0 +1,501 @@
+name: 検査して世界の索引とサイトを公開する共通手順
+
+on:
+  workflow_call:
+    secrets:
+      MEMENTO_CONTRIB_KEY:
+        required: false
+    inputs:
+      mode:
+        type: string
+        default: delta
+      rollback_to:
+        type: string
+        default: ''
+      patch_initial:
+        type: boolean
+        default: false
+      dry_run:
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    # 手動実行も既定ブランチに限定する。呼出元で読取りから公開まで直列化する。
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && inputs.rollback_to == ''
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.mode == 'full' && 180 || 45 }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      WORLD_MODE: ${{ inputs.mode }}
+      WORLD_DRY_RUN: ${{ inputs.dry_run }}
+      # この一つのリポジトリ変数に、末尾 /world を含まない公開サイトURLを設定する。
+      WORLD_SITE_URL: ${{ vars.WORLD_SITE_URL }}
+      # 合計ではなく各登録先の上限。規約で禁止された登録先はモジュール側で停止する。
+      WORLD_REQUEST_BUDGET: ${{ inputs.mode == 'full' && '10000' || '20' }}
+      WORLD_TOOLS_BUDGET: '20'
+    steps:
+      - name: ソースを読む
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: 固定された依存関係をCI内だけで準備
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: 前回公開できた状態を予備から読む
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .world-cache
+          key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-world-published-v1-
+
+      - name: 公開済みの一覧を優先して状態を選ぶ
+        id: state
+        timeout-minutes: 2
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          if (!['delta', 'full'].includes(process.env.WORLD_MODE)) throw new Error('更新方法はdeltaかfullを指定してください。');
+          let base;
+          try { base = new URL(process.env.WORLD_SITE_URL); }
+          catch { throw new Error('WORLD_SITE_URLに公開サイトのHTTPS URLを設定してください。'); }
+          if (base.protocol !== 'https:' || base.username || base.password || base.search || base.hash) throw new Error('WORLD_SITE_URLに認証情報を含まないHTTPSのサイトURLを設定してください。');
+          base.pathname = base.pathname.replace(/\/?$/, '/');
+          const url = new URL('world/manifest.json', base).href;
+          const valid = data => data?.schema === 'memento.world-index.v1' && Array.isArray(data.shards) && data.registries && Number.isFinite(Date.parse(data.builtAt));
+          let state = '', source = '', status = null, manifest = null;
+          try {
+            const response = await fetch(url, { signal: AbortSignal.timeout(30000), redirect: 'error', headers: { 'Cache-Control': 'no-cache' } });
+            status = response.status;
+            if (!response.ok) throw new Error(`HTTP ${status}`);
+            let size = 0;
+            const chunks = [];
+            for await (const chunk of response.body) {
+              size += chunk.length;
+              if (size > 10_000_000) throw new Error('一覧が10 MBを超えています。');
+              chunks.push(Buffer.from(chunk));
+            }
+            manifest = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+            if (!valid(manifest)) throw new Error('公開一覧の形式が違います。');
+            state = url; source = 'published';
+          } catch (error) {
+            console.warn(`公開一覧を読めません。予備を確認します: ${error.message}`);
+            const cached = path.resolve('.world-cache/world/manifest.json');
+            try {
+              manifest = JSON.parse(await fs.readFile(cached, 'utf8'));
+              if (!valid(manifest)) throw new Error('予備の形式が違います。');
+              state = cached; source = 'cache';
+            } catch {
+              // A network failure must not erase an established index. Only an explicit
+              // full run against a genuinely absent manifest may create the first index.
+              if (process.env.WORLD_MODE !== 'full' || status !== 404) throw new Error('前回の一覧も予備も読めません。初回は公開URLを確認し、fullで実行してください。通信障害の場合は再実行してください。');
+              manifest = null; source = 'bootstrap';
+            }
+          }
+          await fs.appendFile(process.env.GITHUB_OUTPUT, `state=${state}\nsource=${source}\n`);
+          await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, `前回の状態: ${source}。更新方法: ${process.env.WORLD_MODE}。公開しない試行: ${process.env.WORLD_DRY_RUN}。\n`);
+          NODE
+
+      - name: 寄稿データの検査
+        run: npm run check:contrib
+
+      - name: 全モジュールをオフラインで検査
+        timeout-minutes: 10
+        run: |
+          npm test
+          node scripts/check-rights.js --self-test
+
+      - name: 更新番号と差分をオフラインで検査
+        run: node --test test/patch/*.test.js
+
+      - name: サイトを保存済みのデータから組み立てる
+        timeout-minutes: 10
+        run: npm run build:web -- --offline
+
+      - name: モデルとツールの索引を組み立てる
+        timeout-minutes: ${{ inputs.mode == 'full' && 150 || 25 }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORLD_PREVIOUS_STATE: ${{ steps.state.outputs.state }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import { buildWorld, discoverRegistries, parseArgs } from './scripts/world-build.js';
+          import { discoverTools } from './lib/world/tools/index.js';
+          const args = ['--' + process.env.WORLD_MODE, '--budget', process.env.WORLD_REQUEST_BUDGET, '--out', '.world-out'];
+          if (process.env.WORLD_PREVIOUS_STATE) args.push('--state', process.env.WORLD_PREVIOUS_STATE);
+          const modules = await discoverRegistries();
+          const expected = ['hf', 'civitai', 'modelscope', 'kaggle', 'ollama', 'ngc', 'api'];
+          const missing = expected.filter(code => !modules.some(module => module.meta.code === code));
+          if (missing.length) throw new Error('登録先の実装が不足しています: ' + missing.join(', '));
+          // Only reviewed public routes are enabled. Unknown policy is not permission.
+          const registries = modules.map(module => ['hf', 'api'].includes(module.meta.code) ? module : ({
+            ...module, meta: { ...module.meta, listingAllowed: false },
+            async count() { return { count: null, method: 'unverified（CIでは一覧の自動取得を停止）', at: new Date().toISOString(), source: module.meta.terms }; }
+          }));
+          const now = new Date();
+          const max = Number(process.env.WORLD_TOOLS_BUDGET);
+          const fetcher = (input, options = {}) => {
+            const url = new URL(typeof input === 'string' || input instanceof URL ? input : input.url);
+            const headers = new Headers(options.headers);
+            if (url.origin === 'https://api.github.com') headers.set('Authorization', 'Bearer ' + process.env.GITHUB_TOKEN);
+            return fetch(input, { ...options, headers });
+          };
+          const toolDiscovery = options => discoverTools({ ...options,
+            since: options.since ? new Date(Date.parse(options.since) - 86400000).toISOString() : null,
+            budget: { maxRequests: max * 3, perRegistry: { github: max, npm: max, pypi: max }, now: now.toISOString() }
+          });
+          const result = await buildWorld({ ...parseArgs(args), registries, now, fetch: fetcher, toolDiscovery,
+            report(event) {
+              if (event.phase === 'registry') console.log(event.registry + ': 確認' + event.requests + '回、' + event.listingStatus);
+            }
+          });
+          if (result.manifestBytes > 10_000_000) throw new Error('公開一覧が10 MBを超えています。新着履歴の保存方法を見直してください。');
+          console.log(JSON.stringify({ manifest: result.manifestPath, ...result.manifest.stats, publishedBytes: result.publishedBytes, tools: result.manifest.tools?.stats }));
+          await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, 'モデルとツールの索引を組み立てました。完全な収録かどうかは登録先ごとの状態を確認してください。\n');
+          NODE
+
+      - name: 公開フォルダーをまとめる
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          const out = path.join(process.env.RUNNER_TEMP, 'pages');
+          await fs.rm(out, { recursive: true, force: true });
+          await fs.cp('web', out, { recursive: true, dereference: false });
+          await fs.rm(path.join(out, 'world'), { recursive: true, force: true });
+          await fs.cp('.world-out/world', path.join(out, 'world'), { recursive: true, dereference: false });
+          // The only enrichment queue is world/data/enrich-queue.json.
+          NODE
+
+      - name: 検査済み寄稿の次回入力を読む
+        uses: actions/cache/restore@v4
+        with:
+          path: .contrib-cache
+          key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            contrib-state-v1-
+
+      - name: 公開済みの日次確認を引き継ぐ
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          const site = new URL(process.env.WORLD_SITE_URL.replace(/\/?$/, '/'));
+          const out = path.join(process.env.RUNNER_TEMP, 'pages');
+          for (const [remote, local] of [['links-status.json', path.join(out, 'links-status.json')], ['data/news-snapshot.json', '.daily-out/news/snapshot.json'], ['data/contrib/build-input.json', path.join(out, 'data/contrib/build-input.json')], ['data/contrib/credits.json', path.join(out, 'data/contrib/credits.json')]]) {
+            const response = await fetch(new URL(remote, site), { redirect: 'error', signal: AbortSignal.timeout(20000) });
+            if (response.status === 404) continue;
+            if (!response.ok) throw new Error('公開済みの日次確認を読み込めません。');
+            const text = await response.text();
+            if (Buffer.byteLength(text) > 32000000) throw new Error('日次確認が大きすぎます。');
+            JSON.parse(text);
+            await fs.mkdir(path.dirname(local), { recursive: true });
+            await fs.writeFile(local, text);
+          }
+          NODE
+
+      - name: ニュースの見出しと出典を更新する
+        timeout-minutes: 10
+        run: node scripts/news-fetch.js --out .daily-out/news --budget 60
+
+      - name: 軽量アプリ用の公開データと利用集計をまとめる
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          import { loadCatalog } from './lib/recipes/catalog.js';
+          import { loadCuratedPersonas } from './lib/persona/catalog.js';
+          import { realModelLinks } from './lib/links/real.js';
+          import { aggregateRecipeStats } from './lib/contrib/recipe-stats.js';
+          import { validateBuildInput, validateCredits } from './lib/contrib/artifacts.js';
+          import { validateState, buildArtifacts } from './lib/contrib/intake.js';
+          import { createPublicFetcher } from './lib/contrib/fetch.js';
+          const out = path.join(process.env.RUNNER_TEMP, 'pages');
+          const read = file => fs.readFile(file, 'utf8').then(JSON.parse);
+          const write = async (rel, value) => { const file = path.join(out, rel); await fs.mkdir(path.dirname(file), { recursive: true }); await fs.writeFile(file, JSON.stringify(value) + '\n'); };
+          const catalog = await loadCatalog();
+          const examples = (await read('web/data/recipes.json')).examples;
+          await write('data/recipe-runtime.json', { mcp: Object.values(catalog.mcp), styles: Object.values(catalog.styles), examples });
+          await write('data/personas.json', loadCuratedPersonas());
+          await write('data/news-sources.json', await read('data/curated/news-sources.json'));
+          await write('data/news.json', await read('.daily-out/news/news.json'));
+          await write('data/news-snapshot.json', await read('.daily-out/news/snapshot.json'));
+          const at = new Date().toISOString();
+          const savedState = await read('.contrib-cache/state.json').catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
+          if (savedState) {
+            const checked = await buildArtifacts(validateState(savedState, { contributorKey: process.env.MEMENTO_CONTRIB_KEY }), { fetch: createPublicFetcher() });
+            await fs.writeFile('.contrib-cache/build-input.json', JSON.stringify(checked.buildInput));
+            await fs.writeFile('.contrib-cache/credits.json', JSON.stringify(checked.credits));
+          }
+          for (const name of ['build-input.json', 'credits.json']) {
+            const validate = name === 'build-input.json' ? validateBuildInput : validateCredits;
+            const cached = await read(path.join('.contrib-cache', name)).catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
+            const prior = cached || await read(path.join(out, 'data/contrib', name)).catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
+            if (!savedState && ((prior?.items?.length || 0) > 0 || (prior?.contributors?.length || 0) > 0)) throw new Error('寄稿の照合用の状態がありません。管理者が非公開の保存物から復元してください。');
+            if (!prior && process.env.PATCH_INITIAL !== 'true') throw new Error('前回の寄稿入力がありません。初回だけ patch_initial を指定してください。');
+            const empty = name === 'build-input.json' ? { schema: 'memento.contribution-build.v1', builtAt: at, items: [] } : { schema: 'memento.contributor-credits.v1', builtAt: at, contributors: [] };
+            await write('data/contrib/' + name, validate(prior || empty));
+          }
+          await write('data/recipe-stats.json', aggregateRecipeStats(await read(path.join(out, 'data/contrib/build-input.json'))));
+          const links = {};
+          for (const model of await read('web/data/models.json')) links[model.id] = await realModelLinks(model, { spaces: false });
+          await write('data/real-links.json', links);
+          NODE
+        env:
+          PATCH_INITIAL: ${{ inputs.patch_initial }}
+          MEMENTO_CONTRIB_KEY: ${{ secrets.MEMENTO_CONTRIB_KEY }}
+
+      - name: リンクを日次の上限内で確認する
+        timeout-minutes: 16
+        run: node scripts/check-links.js --artifact "$RUNNER_TEMP/pages" --input data/curated --input recipes/catalog --budget 500 --request-budget 5000 --concurrency 4 --host-delay-ms 1000 --timeout-ms 15000 --max-run-ms 900000
+
+      - name: 更新番号と日本語の変更記録を付ける
+        id: patch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PATCH_INITIAL: ${{ inputs.patch_initial }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          import { run } from './scripts/patch-notes.js';
+          import { patchReleases } from './lib/patch/releases.js';
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          const history = await store.history();
+          const initial = process.env.PATCH_INITIAL === 'true';
+          if (initial && history.length) throw new Error('保存済みの更新があります。初回の指定を外してください。');
+          const historyFile = path.join(process.env.RUNNER_TEMP, 'patch-history.json');
+          await fs.writeFile(historyFile, JSON.stringify(history));
+          const args = ['--new', path.join(process.env.RUNNER_TEMP, 'pages'), '--history', historyFile];
+          if (initial) args.push('--initial');
+          else args.push('--previous', process.env.WORLD_SITE_URL);
+          const result = await run(args);
+          await fs.appendFile(process.env.GITHUB_OUTPUT, 'id=' + result.patch.id + '\n');
+          await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, result.summary);
+          NODE
+
+      - name: 画像・ロゴ・公開容量の検査
+        run: node scripts/check-rights.js "$RUNNER_TEMP/pages"
+
+      - name: 公開するフォルダー全体を保存用にまとめる
+        if: ${{ !inputs.dry_run }}
+        run: tar --create --gzip --file="$RUNNER_TEMP/patch-site.tar.gz" --directory="$RUNNER_TEMP/pages" .
+
+      - name: 更新番号を予約して公開物を保存する
+        if: ${{ !inputs.dry_run }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          import { patchReleases } from './lib/patch/releases.js';
+          const patch = JSON.parse(await fs.readFile(path.join(process.env.RUNNER_TEMP, 'pages/data/patch.json'), 'utf8'));
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          await store.prepare({ patch, archive: path.join(process.env.RUNNER_TEMP, 'patch-site.tar.gz'), sha: process.env.GITHUB_SHA });
+          NODE
+
+      - name: Pagesを準備
+        if: ${{ !inputs.dry_run }}
+        uses: actions/configure-pages@v5
+
+      - name: 検査済みのサイトを渡す
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/pages
+          retention-days: 1
+
+      - name: Pagesに公開
+        if: ${{ !inputs.dry_run }}
+        id: deployment
+        timeout-minutes: 10
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: '540000'
+
+      - name: 公開に成功した更新を記録する
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PATCH_ID: ${{ steps.patch.outputs.id }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { patchReleases } from './lib/patch/releases.js';
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          await store.markDeployed(process.env.PATCH_ID);
+          NODE
+
+      - name: 直近5版の公開物を残す
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PATCH_ID: ${{ steps.patch.outputs.id }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { patchReleases } from './lib/patch/releases.js';
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          await store.prune(process.env.PATCH_ID);
+          NODE
+
+      - name: 公開できた状態を予備用にまとめる
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          await fs.rm('.world-cache', { recursive: true, force: true });
+          await fs.mkdir('.world-cache', { recursive: true });
+          await fs.cp('.world-out/world', '.world-cache/world', { recursive: true, dereference: false });
+          NODE
+
+      - name: 公開成功後だけ予備を保存
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: .world-cache
+          key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: 実行結果を記録
+        if: always()
+        env:
+          DEPLOYMENT_OUTCOME: ${{ steps.deployment.outcome }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          const line = `公開結果: ${process.env.DEPLOYMENT_OUTCOME || '未実行'}。登録先ごとの上限: モデル ${process.env.WORLD_REQUEST_BUDGET}回、ツール ${process.env.WORLD_TOOLS_BUDGET}回。\n`;
+          await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, line);
+          NODE
+
+  rollback:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && inputs.rollback_to != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      ROLLBACK_TO: ${{ inputs.rollback_to }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - name: 確認用のソースを読む
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 指定した更新の保存物を検証して取得する
+        run: |
+          node --input-type=module <<'NODE'
+          import path from 'node:path';
+          import { patchReleases } from './lib/patch/releases.js';
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          await store.download(process.env.ROLLBACK_TO, path.join(process.env.RUNNER_TEMP, 'patch-site.tar.gz'));
+          NODE
+
+      - name: 保存物の展開先とファイルの種類を検査する
+        run: |
+          node --input-type=module <<'NODE'
+          import path from 'node:path';
+          import { spawnSync } from 'node:child_process';
+          const file = path.join(process.env.RUNNER_TEMP, 'patch-site.tar.gz');
+          const names = spawnSync('tar', ['--list', '--gzip', '--file', file], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
+          const types = spawnSync('tar', ['--list', '--verbose', '--gzip', '--file', file], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+          if (names.error || types.error || names.status !== 0 || types.status !== 0) throw new Error('保存物の一覧を読めません。');
+          for (const name of names.stdout.trim().split('\n')) {
+            if (!name || name.startsWith('/') || name.includes('\\') || name.split('/').includes('..')) throw new Error('展開先の外を指すファイルがあります。');
+          }
+          for (const line of types.stdout.trim().split('\n')) {
+            if (!['-', 'd'].includes(line[0])) throw new Error('通常のファイルとフォルダーだけを展開できます。');
+          }
+          NODE
+
+      - name: 保存した公開物を展開する
+        run: |
+          mkdir -p "$RUNNER_TEMP/pages"
+          tar --extract --gzip --no-same-owner --no-same-permissions --file="$RUNNER_TEMP/patch-site.tar.gz" --directory="$RUNNER_TEMP/pages"
+
+      - name: 更新番号と公開物を検査する
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          import { parsePatchId } from './lib/patch/version.js';
+          parsePatchId(process.env.ROLLBACK_TO);
+          const root = path.join(process.env.RUNNER_TEMP, 'pages/data');
+          const patch = JSON.parse(await fs.readFile(path.join(root, 'patch.json'), 'utf8'));
+          const manifest = JSON.parse(await fs.readFile(path.join(root, 'patch-manifest.json'), 'utf8'));
+          if (patch.id !== process.env.ROLLBACK_TO || manifest.patch?.id !== patch.id) throw new Error('保存物の更新番号が一致しません。');
+          await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, '更新 ' + patch.id + ' の保存物を確認しました。\n');
+          NODE
+          node scripts/check-rights.js "$RUNNER_TEMP/pages"
+
+      - name: Pagesを準備
+        if: ${{ !inputs.dry_run }}
+        uses: actions/configure-pages@v5
+
+      - name: 保存済みのサイトを渡す
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/pages
+          retention-days: 1
+
+      - name: 指定した更新をPagesに公開
+        if: ${{ !inputs.dry_run }}
+        id: deployment
+        timeout-minutes: 10
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: '540000'
+
+      - name: 公開した更新の保存状態を確定する
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { patchReleases } from './lib/patch/releases.js';
+          const store = patchReleases({ repository: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN });
+          await store.markDeployed(process.env.ROLLBACK_TO);
+          NODE
+
+      - name: 戻した世界の状態を予備にまとめる
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          await fs.rm('.world-cache', { recursive: true, force: true });
+          await fs.mkdir('.world-cache', { recursive: true });
+          await fs.cp(path.join(process.env.RUNNER_TEMP, 'pages/world'), '.world-cache/world', { recursive: true, dereference: false });
+          NODE
+
+      - name: 戻した状態を予備に保存
+        if: ${{ !inputs.dry_run && steps.deployment.outcome == 'success' }}
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: .world-cache
+          key: ${{ runner.os }}-world-published-v1-${{ github.run_id }}-${{ github.run_attempt }}

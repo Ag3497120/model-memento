@@ -1,0 +1,204 @@
+[
+  {
+    "id": "filesystem",
+    "name": "ファイルの読み書き",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+    "env": [],
+    "license": "unverified",
+    "licenseNote": "参照リポジトリは MIT から Apache-2.0 への移行中です。配布物の適用範囲は unverified。",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/package.json",
+      "https://github.com/modelcontextprotocol/servers/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40modelcontextprotocol/server-filesystem?activeTab=versions"
+    ],
+    "needs": ["Node.js 24 以上と npx を用意してください。作業場所を project/ にして起動してください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "fetch",
+    "name": "ウェブページの取得",
+    "command": "uvx",
+    "args": ["mcp-server-fetch"],
+    "env": [],
+    "license": "MIT",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/pyproject.toml",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/LICENSE",
+      "https://pypi.org/project/mcp-server-fetch/"
+    ],
+    "needs": ["Python 3.10 以上と uvx を使えるようにしてください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "git",
+    "name": "Git の変更履歴",
+    "command": "uvx",
+    "args": ["mcp-server-git", "--repository", "."],
+    "env": [],
+    "license": "MIT",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/git/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/git/pyproject.toml",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/git/LICENSE",
+      "https://pypi.org/project/mcp-server-git/"
+    ],
+    "needs": ["Python 3.10 以上と uvx、Git 2.31 以上を用意し、project/ を Git の作業場所にしてください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "memory",
+    "name": "関係を記録するメモ",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "env": ["MEMORY_FILE_PATH"],
+    "license": "unverified",
+    "licenseNote": "参照リポジトリは MIT から Apache-2.0 への移行中です。配布物の適用範囲は unverified。",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/memory/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/memory/package.json",
+      "https://github.com/modelcontextprotocol/servers/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40modelcontextprotocol/server-memory?activeTab=versions"
+    ],
+    "needs": ["Node.js 24 以上と npx を用意し、MEMORY_FILE_PATH に project/ 内の保存先の絶対パスを指定してください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "sequential-thinking",
+    "name": "順を追って考える道具",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+    "env": [],
+    "license": "unverified",
+    "licenseNote": "参照リポジトリは MIT から Apache-2.0 への移行中です。配布物の適用範囲は unverified。",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/sequentialthinking/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/sequentialthinking/package.json",
+      "https://github.com/modelcontextprotocol/servers/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40modelcontextprotocol/server-sequential-thinking?activeTab=versions"
+    ],
+    "needs": ["Node.js 24 以上と npx を使えるようにしてください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "time",
+    "name": "時刻と時差の確認",
+    "command": "uvx",
+    "args": ["mcp-server-time"],
+    "env": [],
+    "license": "MIT",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/time/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/time/pyproject.toml",
+      "https://pypi.org/project/mcp-server-time/"
+    ],
+    "needs": ["Python 3.10 以上と uvx を使えるようにしてください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "everything",
+    "name": "接続の動作確認",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-everything"],
+    "env": [],
+    "license": "unverified",
+    "licenseNote": "参照リポジトリは MIT から Apache-2.0 への移行中です。配布物の適用範囲は unverified。",
+    "repo": "modelcontextprotocol/servers",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/everything/README.md",
+      "https://github.com/modelcontextprotocol/servers/blob/main/src/everything/package.json",
+      "https://github.com/modelcontextprotocol/servers/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40modelcontextprotocol/server-everything?activeTab=readme"
+    ],
+    "needs": ["Node.js 24 以上と npx を使えるようにしてください。接続を確かめるための参照実装です。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "command": "docker",
+    "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+    "env": ["GITHUB_PERSONAL_ACCESS_TOKEN"],
+    "license": "MIT",
+    "repo": "github/github-mcp-server",
+    "sources": [
+      "https://github.com/github/github-mcp-server",
+      "https://github.com/github/github-mcp-server/blob/main/README.md#local-github-mcp-server",
+      "https://github.com/github/github-mcp-server/blob/main/LICENSE"
+    ],
+    "needs": ["Docker を用意し、GITHUB_PERSONAL_ACCESS_TOKEN に GitHub の個人用トークンを設定してください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "playwright",
+    "name": "Playwright",
+    "command": "npx",
+    "args": ["-y", "@playwright/mcp", "--headless"],
+    "env": [],
+    "license": "Apache-2.0",
+    "repo": "microsoft/playwright-mcp",
+    "sources": [
+      "https://github.com/microsoft/playwright-mcp",
+      "https://github.com/microsoft/playwright-mcp/blob/main/package.json",
+      "https://github.com/microsoft/playwright-mcp/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40playwright/mcp?activeTab=versions"
+    ],
+    "needs": ["Node.js 18 以上と npx、Playwright が使うブラウザーを用意してください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "brave-search",
+    "name": "Brave Search",
+    "command": "npx",
+    "args": ["-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
+    "env": ["BRAVE_API_KEY"],
+    "license": "MIT",
+    "repo": "brave/brave-search-mcp-server",
+    "sources": [
+      "https://github.com/brave/brave-search-mcp-server/blob/main/README.md",
+      "https://github.com/brave/brave-search-mcp-server/blob/main/package.json",
+      "https://github.com/brave/brave-search-mcp-server/blob/main/LICENSE",
+      "https://www.npmjs.com/package/%40brave/brave-search-mcp-server"
+    ],
+    "needs": ["Node.js 22 以上と npx を用意し、BRAVE_API_KEY に検索用のキーを設定してください。"],
+    "archived": false,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  },
+  {
+    "id": "puppeteer-archived",
+    "name": "Puppeteer（参照版・更新終了）",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+    "env": [],
+    "license": "MIT",
+    "repo": "modelcontextprotocol/servers-archived",
+    "sources": [
+      "https://github.com/modelcontextprotocol/servers-archived",
+      "https://github.com/modelcontextprotocol/servers-archived/blob/main/src/puppeteer/README.md",
+      "https://github.com/modelcontextprotocol/servers-archived/blob/main/src/puppeteer/package.json",
+      "https://www.npmjs.com/package/%40modelcontextprotocol/server-puppeteer?activeTab=code"
+    ],
+    "needs": ["npx を使えるようにしてください。更新終了済みで、配布元でも非推奨とされています。"],
+    "archived": true,
+    "published": true,
+    "deprecated": true,
+    "verified": { "at": "2026-11-15", "how": "docs" }
+  }
+]

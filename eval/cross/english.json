@@ -1,0 +1,637 @@
+{
+ "schema": "memento.cross-english-eval.v1",
+ "basis": "Written before the first English eval run. Expected values come from the existing local records and Japanese fixtures. This checks record agreement, language, first-person self answers, sources, and abstention.",
+ "questions": [
+  {
+   "id": "en01",
+   "model_id": "claude-opus-5-5",
+   "q": "Who are you?",
+   "expected": {
+    "kinds": [
+     "identity"
+    ],
+    "values": [
+     "Claude Opus 5.5"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en02",
+   "model_id": "claude-opus-5-5",
+   "q": "Who made you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "Anthropic"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en03",
+   "model_id": "claude-opus-5-5",
+   "q": "When were you released?",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2026-09-22"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en04",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your release date?",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2026-09-22"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en05",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your knowledge cutoff?",
+   "expected": {
+    "kinds": [
+     "self_cutoff"
+    ],
+    "values": [
+     "2026-06"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en06",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your context window?",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "1000000"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en07",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your maximum output length?",
+   "expected": {
+    "kinds": [
+     "self_output"
+    ],
+    "values": [
+     "128000"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en08",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your price?",
+   "expected": {
+    "kinds": [
+     "self_price"
+    ],
+    "values": [
+     "4",
+     "20"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en09",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your predecessor?",
+   "expected": {
+    "kinds": [
+     "self_predecessor"
+    ],
+    "values": [
+     "Claude Opus 4.6"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en10",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "Who are you?",
+   "expected": {
+    "kinds": [
+     "identity"
+    ],
+    "values": [
+     "GPT-3.5"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en11",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "Who created you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "OpenAI"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en12",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "Who built you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "OpenAI"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en13",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "When did you come out?",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2023-03-01"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en14",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "What is your context limit?",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "4096"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en15",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "What is your successor?",
+   "expected": {
+    "kinds": [
+     "self_successor"
+    ],
+    "values": [
+     "gpt-3.5-turbo"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en16",
+   "model_id": "gpt-4-0314",
+   "q": "Who made you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "OpenAI"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en17",
+   "model_id": "gpt-4-0314",
+   "q": "When were you launched?",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2023-03-14"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en18",
+   "model_id": "gpt-4-0314",
+   "q": "What is your knowledge cutoff?",
+   "expected": {
+    "kinds": [
+     "self_cutoff"
+    ],
+    "values": [
+     "2021-09"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en19",
+   "model_id": "gpt-4-0314",
+   "q": "What is your context window?",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "8192"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en20",
+   "model_id": "gpt-4-0314",
+   "q": "What is your maximum output length?",
+   "expected": {
+    "kinds": [
+     "self_output"
+    ],
+    "values": [
+     "8192"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en21",
+   "model_id": "gpt-4-0314",
+   "q": "What is your family?",
+   "expected": {
+    "kinds": [
+     "self_family"
+    ],
+    "values": [
+     "GPT-4"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en22",
+   "model_id": "gpt-4-0314",
+   "q": "Are you retired?",
+   "expected": {
+    "kinds": [
+     "self_status"
+    ],
+    "values": [
+     "2026-03-26"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en23",
+   "model_id": "gemini-1.0-pro",
+   "q": "Who made you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "Google"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en24",
+   "model_id": "gemini-1.0-pro",
+   "q": "What is your context length?",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "32768"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en25",
+   "model_id": "gemini-1.0-pro",
+   "q": "What is your successor?",
+   "expected": {
+    "kinds": [
+     "self_successor"
+    ],
+    "values": [
+     "gemini-2.5-flash"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en26",
+   "model_id": "gemini-1.0-pro",
+   "q": "Are you retired?",
+   "expected": {
+    "kinds": [
+     "self_status"
+    ],
+    "values": [
+     "2025-04-21"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en27",
+   "model_id": "claude-opus-5-5",
+   "q": "When was gpt-4-0314 released?",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "2023-03-14"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": false
+   }
+  },
+  {
+   "id": "en28",
+   "model_id": "claude-opus-5-5",
+   "q": "What is the context window of Gemini 1.0 Pro?",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "32768"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": false
+   }
+  },
+  {
+   "id": "en29",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "What is the knowledge cutoff of gpt-4-0314?",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "2021-09"
+    ],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": false
+   }
+  },
+  {
+   "id": "en30",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your favorite color?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en31",
+   "model_id": "gpt-4-0314",
+   "q": "What is your favorite food?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en32",
+   "model_id": "claude-opus-5-5",
+   "q": "What is the weather today?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en33",
+   "model_id": "gemini-1.0-pro",
+   "q": "What is your knowledge cutoff?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en34",
+   "model_id": "deepseek-r1",
+   "q": "What is your price?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en35",
+   "model_id": "claude-opus-5-5",
+   "q": "When was GPT-99 released?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en36",
+   "model_id": "claude-opus-5-5",
+   "q": "What secret training data did you use?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en37",
+   "model_id": "gpt-4-0314",
+   "q": "What is your price?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en38",
+   "model_id": "claude-opus-5-5",
+   "q": "What is your personality?",
+   "expected": {
+    "kinds": [
+     "self_personality"
+    ],
+    "values": [],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en39",
+   "model_id": "claude-opus-5-5",
+   "q": "What are your strengths?",
+   "expected": {
+    "kinds": [
+     "self_strengths"
+    ],
+    "values": [],
+    "unknown": false,
+    "sourcesRequired": true,
+    "firstPerson": true
+   }
+  },
+  {
+   "id": "en40",
+   "model_id": "claude-opus-5-5",
+   "q": "What are your weaknesses?",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false,
+    "firstPerson": true
+   }
+  }
+ ],
+ "expectation_corrections": [
+  {
+   "id": "en38",
+   "at": "2026-11-16",
+   "reason": "E6 added English (value_en) for the researched tone trait, so the personality is now on record in English; expected answer changed from unknown to self_personality."
+  },
+  {
+   "id": "en39",
+   "at": "2026-11-16",
+   "reason": "E6 added English (value_en) for the researched strengths trait; expected answer changed from unknown to self_strengths."
+  }
+ ]
+}

@@ -1,0 +1,1167 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "huggingchat",
+  "name": "HuggingChat",
+  "vendor": "Hugging Face",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "huggingchat-2023-04",
+      "from": "2023-04",
+      "to": "2023-08",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": "280px",
+          "contents": [
+            "新しい会話",
+            "編集・削除付き履歴",
+            "下にテーマ・意見・説明"
+          ]
+        },
+        {
+          "name": "最初の案内",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "左に紹介と小さなv0",
+            "右に現在モデルのカード",
+            "下に質問例"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "丸角の入力",
+            "モデルへのリンク",
+            "注意と共有"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左の上",
+          "purpose": "原画面ではNew Chat"
+        },
+        {
+          "label": "テーマ",
+          "where": "左の下",
+          "purpose": "明暗を切り替える"
+        },
+        {
+          "label": "共有",
+          "where": "入力欄の下。会話がある場合",
+          "purpose": "会話の共有操作"
+        }
+      ],
+      "conversation": {
+        "user": "左揃え、枠塗りなし。小さい丸い印と文章",
+        "assistant": "細い境界と淡いグラデーションを持つ丸角の枠",
+        "tool_calls": null,
+        "streaming": "受け取った回答を断片ごとに文章として描画"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#4b5563",
+          "muted": "#6b7280",
+          "accent": null,
+          "border": "#f3f4f6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#111827",
+          "panel": null,
+          "text": "#d1d5db",
+          "muted": "#9ca3af",
+          "accent": null,
+          "border": "#1f2937",
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "dark.text": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "light.muted": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "dark.muted": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "light.border": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "dark.border": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "dark.bg": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/app.html",
+          "tokens": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js",
+          "theme_config": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/tailwind.config.cjs"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": "左に紹介とv0、右に現在モデルの情報カード。質問例は下の段に並べる。ロゴは省く",
+      "distinctive": [
+        "280pxの左ナビ",
+        "現在モデルの情報カード",
+        "質問例は下の段",
+        "淡いグラデーションの履歴と回答",
+        "入力下のモデルリンク"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "空状態は左に製品紹介と小さなv0、右にCurrent Modelの情報カード。質問例がある場合は下の3列に置く。『右が提案タイルだけ』という以前の調査を訂正。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "左はNew Chat、編集・削除付き履歴、下部Theme/Feedback/About & Privacy。履歴欄と下部欄は右向きの淡いグラデーションと丸角で、単色のパネルではない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/routes/+layout.svelte",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "広い画面は左280pxの2列。小画面では別のMobileNavを表示し左常設欄を隠す。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "下部のグラデーション上にrounded-xlの入力、右端に送信。下はモデルのリンク、注意、会話時の共有。初期の固定コードにモデルの選択器や検索・道具一覧はない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "利用者の発言は枠塗りなしで左揃え。回答はrounded-2xl、淡いグラデーションと細い境界。小さい丸い印で発言を区別。回答本文を断片ごとに描画する。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/tailwind.config.cjs",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "フォントのInter上書きはコメント。grayの独自色上書きもない。主書体をInterと断定せず、標準のシステム書体として扱う。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/app.html",
+          "kind": "oss-source",
+          "date": "2023-04-28",
+          "shows": "bodyにdark:bg-gray-900を指定。暗色の基本背景の根拠。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Tailwind 3の標準gray値。900=#111827、800=#1f2937、700=#374151、600=#4b5563、500=#6b7280、400=#9ca3af、300=#d1d5db、100=#f3f4f6。製品内の実際の用途は各部品を別途確認。"
+        },
+        {
+          "url": "https://www.infoq.com/news/2023/04/hugging-chat-open-source/",
+          "kind": "press",
+          "date": "2023-04-28",
+          "shows": "初期はOpenAssistant由来の30Bモデルを使うという同時期の報道。後年の複数モデル・Assistants・道具の配置の証明には使わない。見た目の細部は固定コードを優先。"
+        }
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "huggingchat-2023-08",
+      "from": "2023-08",
+      "to": "2024-02",
+      "regions": [
+        {
+          "name": "現在モデル",
+          "position": "最初の画面の右側",
+          "size": null,
+          "contents": [
+            "モデルの情報カード",
+            "設定ボタンから選択窓"
+          ]
+        },
+        {
+          "name": "検索と停止",
+          "position": "入力欄の上",
+          "size": null,
+          "contents": [
+            "設定が有効な場合の検索切替",
+            "生成中の停止"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "モデルリンクと共有"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モデルを選ぶ",
+          "where": "空画面の現在モデルカード",
+          "purpose": "Modelsの窓を開く"
+        },
+        {
+          "label": "Webを検索",
+          "where": "入力欄の上",
+          "purpose": "原画面ではSearch web。設定が有効な場合に表示"
+        },
+        {
+          "label": "生成を止める",
+          "where": "入力欄の上",
+          "purpose": "生成中に表示"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "検索の経過と回答を扱う。後年の一般的な道具一覧とは別",
+        "streaming": "生成中に停止操作を表示"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": "紹介と現在モデルのカード、設定からモデル一覧。質問例がある場合はその下に並ぶ",
+      "distinctive": [
+        "現在モデルカードから選択窓を開く",
+        "入力欄の上のSearch web",
+        "検索切替の情報ヒント",
+        "生成中の停止操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2023-08-01",
+          "shows": "検索が有効な設定の場合、入力欄の上にWebSearchToggle。入力下にモデルリンクと共有。生成中は停止操作。カタログの『入力欄の下』ではない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/WebSearchToggle.svelte",
+          "kind": "oss-source",
+          "date": "2023-08-01",
+          "shows": "Search webという短いスイッチ、情報の補足ヒント、明暗両方のスタイルを確認。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte",
+          "kind": "oss-source",
+          "date": "2023-08-01",
+          "shows": "右のCurrent Modelカードの丸い設定操作からModelsModalを開く。質問例はカードと別の下の段。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/ModelsModal.svelte",
+          "kind": "oss-source",
+          "date": "2023-08-01",
+          "shows": "モデル一覧を選んで送信する窓。右上の常設ドロワーではなく空状態の設定ボタンから開く実装。"
+        },
+        {
+          "url": "https://huggingface.co/blog/llama2",
+          "kind": "blog",
+          "date": "2023-07-18",
+          "shows": "Llama 2公開時の公式案内。モデルの利用時期の補助資料で、チャットの左右配置や色は示さない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "huggingchat-2024-02",
+      "from": "2024-02",
+      "to": "2024-09",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "時期ごとの会話",
+            "下のTheme・Assistants・Settings"
+          ]
+        },
+        {
+          "name": "最初の画面",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "現在モデルのカードと質問例"
+          ]
+        },
+        {
+          "name": "検索",
+          "position": "入力欄の上",
+          "size": null,
+          "contents": [
+            "通常の会話で有効な場合に表示"
+          ]
+        },
+        {
+          "name": "アシスタントの一覧",
+          "position": "別ページ",
+          "size": null,
+          "contents": [
+            "公開された専用アシスタントを探す"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "専用アシスタント",
+          "where": "左下",
+          "purpose": "原画面ではAssistants。公開された一覧へ移る"
+        },
+        {
+          "label": "設定",
+          "where": "左下",
+          "purpose": "モデルなどの設定を開く"
+        },
+        {
+          "label": "Webを検索",
+          "where": "入力欄の上",
+          "purpose": "2月2日の固定版は専用アシスタントでは表示しない"
+        }
+      ],
+      "conversation": {
+        "user": "画像対応モデルでは添付画像を入力上に表示",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": "生成中は入力上の停止操作"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": "製品紹介、現在モデルカードと設定リンク、下に質問例。専用アシスタントの利用は別の入口",
+      "distinctive": [
+        "左下のAssistants入口",
+        "名前・モデル・指示を選ぶ作成画面",
+        "時期ごとにまとまる履歴",
+        "検索切替は通常会話だけ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/357?expand=true",
+          "kind": "release-notes",
+          "date": "2024-02-02",
+          "shows": "公式orgのAssistants告知。モデル・名前・システム指示を選んで公開する別ページ。3月15日追記でインターネット対応。2月2日時点のRAGや道具対応を既成機能としない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2024-02-02",
+          "shows": "左下にTheme、Assistants、Settings。会話は時期ごとにグループ化。Assistantsは有効設定のときだけ表示。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2024-02-02",
+          "shows": "検索切替は入力欄の上、設定が有効でassistantでない場合のみ。画像対応モデルでは添付画像を入力上に表示。下にはモデル設定へのリンクと共有。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/chat/ChatIntroduction.svelte",
+          "kind": "oss-source",
+          "date": "2024-02-02",
+          "shows": "空状態は紹介、現在モデルのカードと設定リンク、下の質問例。後年のOmniの簡略な空画面とは異なる。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "huggingchat-2024-09",
+      "from": "2024-09",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "Theme・Assistants・Tools・Settingsへの入口"
+          ]
+        },
+        {
+          "name": "道具選択",
+          "position": "入力欄の上",
+          "size": null,
+          "contents": [
+            "道具対応モデルでToolsMenu",
+            "そうでない場合の検索切替"
+          ]
+        },
+        {
+          "name": "道具の一覧と作成",
+          "position": "別ページ",
+          "size": null,
+          "contents": [
+            "公開SpaceのURL",
+            "関数と引数の設定"
+          ]
+        },
+        {
+          "name": "現在モデル",
+          "position": "最初の画面",
+          "size": null,
+          "contents": [
+            "情報カードと下の質問例"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "道具",
+          "where": "左のTools入口",
+          "purpose": "使う道具を探して有効にする"
+        },
+        {
+          "label": "道具を選ぶ",
+          "where": "入力欄の上",
+          "purpose": "モデルと設定に応じて有効な道具を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "使うモデルと道具に応じた種類のファイルを添付",
+        "assistant": null,
+        "tool_calls": "会話から有効な道具を使う。実行結果の細かい枠形状はunverified",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": "現在モデルのカードと質問例。左には道具や専用アシスタントの入口",
+      "distinctive": [
+        "左のTools入口と紫の新機能バッジ",
+        "入力上のToolsMenu",
+        "SpaceのURLを使う道具作成フォーム",
+        "専用アシスタントに道具を選んで加える"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/community-tools",
+          "kind": "blog",
+          "date": "2024-09-16",
+          "shows": "Community Toolsの公式公開は9月16日。公開SpaceのURLから道具の作成フォームへ関数と引数を読み込み、Toolsページで有効化。Assistants作成では最大3つの道具を選ぶ。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-17",
+          "shows": "Theme・Assistants・Tools・Settings。Toolsの新機能バッジは紫系。道具・Assistantsの常設3タブではない。各入口の表示は設定による。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-17",
+          "shows": "道具対応モデルでは入力欄の上のToolsMenu、そうでなければ検索切替。下はモデル設定リンク。添付できる種類もモデル・有効な道具による。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatIntroduction.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-17",
+          "shows": "現在モデルの情報カードと質問例。提供元ロゴを表示する場合があるが本アプリでは使わない。"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "huggingchat-2025-07",
+      "from": "2025-07",
+      "to": "2025-10",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "公開チャットを一時休止すると公式が告知",
+        "過去会話を書き出す案内",
+        "再公開は10月16日のOmni"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true",
+          "kind": "release-notes",
+          "date": "2025-07-01",
+          "shows": "公式orgは公開チャットを一時休止すると告知し、過去会話のZip書き出しを案内。担当者の同日返信で書き出し機能の公開を確認。ページの厳密なレイアウトは保存資料なし。"
+        },
+        {
+          "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/764",
+          "kind": "release-notes",
+          "date": "2025-10-16",
+          "shows": "Omniで再公開。入力ごとにモデルを選び、生成中に採用モデルを表示。裏の生成状態を追跡して会話を切り替えられる。選択肢数は当日115以上で、現行ページの数を流用しない。"
+        }
+      ],
+      "confidence": 0.35
+    },
+    {
+      "id": "huggingchat-2025-10",
+      "from": "2025-10",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": "290px",
+          "contents": [
+            "新しい会話",
+            "時期別の履歴",
+            "モデル一覧と設定"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "利用者の文章",
+            "回答の枠と下の採用モデル情報"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "右下の丸い送信・停止",
+            "下のモデル選択と経路表示"
+          ]
+        },
+        {
+          "name": "初回案内",
+          "position": "重ねる窓",
+          "size": null,
+          "contents": [
+            "説明と会話開始"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左上",
+          "purpose": "原画面ではNew Chat"
+        },
+        {
+          "label": "モデル",
+          "where": "入力の下",
+          "purpose": "Omniまたは個別モデルを選ぶ"
+        },
+        {
+          "label": "会話を始める",
+          "where": "初回案内の窓",
+          "purpose": "原画面ではStart chatting"
+        }
+      ],
+      "conversation": {
+        "user": "通常は左寄せで塗りなし。灰色の編集用入力枠と区別",
+        "assistant": "淡いグラデーションの丸角枠。回答の下に経路とモデル、条件付きの提供元",
+        "tool_calls": null,
+        "streaming": "生成中の経路と採用モデルを表示。他の会話へ切り替えても生成状態を追跡"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#323843",
+          "muted": "#6b7280",
+          "accent": "#000000",
+          "border": "#f3f4f6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#12151c",
+          "panel": null,
+          "text": "#d1d5db",
+          "muted": "#9ca3af",
+          "accent": "#ffffff",
+          "border": "#1b1f27",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.bg": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/app.html",
+          "dark.text": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "light.text": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "light.muted": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "dark.muted": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "light.border": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "dark.border": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "light.accent": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte",
+          "dark.accent": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte",
+          "custom_gray_tokens": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/tailwind.config.cjs",
+          "standard_tokens": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": "中央の製品名と下の入力。旧いモデル情報カードと質問例の一塊は表示しない。初回は説明の窓",
+      "distinctive": [
+        "Omniの自動選択",
+        "回答下に小さな採用モデル情報",
+        "290pxの折畳み可能な左欄",
+        "簡素になった空画面",
+        "青みがある独自の暗色gray"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/764",
+          "kind": "release-notes",
+          "date": "2025-10-16",
+          "shows": "Omniで再公開。入力ごとにモデルを選び、生成中に採用モデルを表示。裏の生成状態を追跡して会話を切り替えられる。選択肢数は当日115以上で、現行ページの数を流用しない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "左のNew Chat、時期別の履歴、Models、Settings。左の履歴・操作欄はグラデーション。旧Assistantsと旧Toolsの入口を無条件で残さない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/routes/+layout.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "大画面の左欄は290px、折畳み可。初回や未ログイン時にはWelcomeModal。280pxの初期幅とは異なる。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "入力欄はrounded-xl、右下に丸い送信／停止。下にモデル選択とOmniの経路・モデルの生成中表示。入力dark:bg-gray-800、基本グラデーションはdark:from-gray-900。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "利用者は通常時bg-inheritで左寄せ。編集時だけ灰色のtextarea。回答は丸角の淡いグラデーション。経路・採用モデル・プロバイダ情報は回答下に小さく表示。常設の速度表ではない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatIntroduction.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "空状態は中央の製品名。旧い現在モデルカードと質問例の大きな塊はコメントアウトされており、表示されない。ロゴは再利用しない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/WelcomeModal.svelte",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "初回案内の窓とStart chatting。白／黒の背景に簡単な説明。ロゴやルーターの動画意匠は再利用しない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/tailwind.config.cjs",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "grayの独自値：600=#323843、700=#252a33、800=#1b1f27、900=#12151c、950=#07090d。明暗どちらにも同じ色名の上書きが適用されるため、明色の回答text-gray-600も#323843。初期の標準grayとは違う。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/app.html",
+          "kind": "oss-source",
+          "date": "2025-10-16",
+          "shows": "bodyはdark:bg-gray-900。ブラウザのtheme-colorの#07090dはページ本文の背景とは別なので混同しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Tailwind 3の標準gray値。900=#111827、800=#1f2937、700=#374151、600=#4b5563、500=#6b7280、400=#9ca3af、300=#d1d5db、100=#f3f4f6。製品内の実際の用途は各部品を別途確認。"
+        }
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "huggingchat-2026-04",
+      "from": "2026-04",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "会話と機能",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "履歴",
+            "Models",
+            "MCP Servers",
+            "Settings"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "回答の下に小さい経路・モデル・提供元"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "送信・停止・マイク",
+            "入力下のモデルと提供元選択"
+          ]
+        },
+        {
+          "name": "道具の管理",
+          "position": "別の窓",
+          "size": null,
+          "contents": [
+            "MCP Servers"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "外部の道具",
+          "where": "左のMCP Servers入口",
+          "purpose": "道具を提供する接続先を管理"
+        },
+        {
+          "label": "提供元を選ぶ",
+          "where": "入力の下",
+          "purpose": "モデルを動かすサービスを選ぶ。条件による"
+        }
+      ],
+      "conversation": {
+        "user": "左寄せの文章。灰色の編集用入力枠とは区別",
+        "assistant": "丸い回答枠と下の経路・モデル・提供元。小画面では提供元を隠す場合あり",
+        "tool_calls": "現行ヘルプでは実行結果を開閉できる道具のブロック。4月当日の全詳細はunverified",
+        "streaming": "入力下に経路と採用モデルの生成中表示"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#323843",
+          "muted": "#6b7280",
+          "accent": "#000000",
+          "border": "#f3f4f6",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": "#d1d5db",
+          "muted": "#9ca3af",
+          "accent": "#ffffff",
+          "border": "#1b1f27",
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "dark.text": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "light.muted": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "dark.muted": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "light.border": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "dark.border": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "light.accent": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+          "dark.accent": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+          "custom_gray_tokens": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/tailwind.config.cjs",
+          "standard_tokens": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "横長のrounded-xl、右端に送信。正確なpx換算は未確認"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左のMCP Servers入口",
+        "提供元を選ぶ操作",
+        "回答下の小さい経路・モデル表示",
+        "入力内のマイク操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2026-04-12",
+          "shows": "左のMCP Servers入口と管理窓、Models、Settings、時期別の会話。デスクトップの下部ナビ行高を約2.08remへ整えたコード。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2026-04-12",
+          "shows": "入力右下の送信／停止とマイク、入力下のモデル／プロバイダ選択、Omniの経路表示。大きな速度／金額トレースバーの根拠ではない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte",
+          "kind": "oss-source",
+          "date": "2026-04-12",
+          "shows": "回答下に経路、モデル、プロバイダを小さく表示。小画面でプロバイダを隠す条件あり。ユーザーは通常時bg-inherit、編集時だけ灰色の枠。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/tailwind.config.cjs",
+          "kind": "oss-source",
+          "date": "2026-04-12",
+          "shows": "2025年10月と同じgray上書き値をこの固定版でも確認。明色の回答text-gray-600も標準色ではなく#323843。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Tailwind 3の標準gray値。900=#111827、800=#1f2937、700=#374151、600=#4b5563、500=#6b7280、400=#9ca3af、300=#d1d5db、100=#f3f4f6。製品内の実際の用途は各部品を別途確認。"
+        },
+        {
+          "url": "https://huggingface.co/docs/chat-ui/en/configuration/mcp-tools",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の公式ヘルプ。入力部の＋または設定からMCP Serversを開き、Add ServerとHealth Checkで登録。実行結果は会話内の開閉する道具ブロック。2026-11-15閲覧。過去の初出日までは証明しない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "huggingchat-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話と機能",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "New Chat・Models・MCP Servers・Settings"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "考えた過程・道具・計画を会話内に表示"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "追加の作業用帯を重ねる縦の枠",
+            "下のモデル・提供元・経路"
+          ]
+        },
+        {
+          "name": "作業欄",
+          "position": "右、狭い画面は全画面",
+          "size": "幅変更可、最小max(20%,300px)、最大80%",
+          "contents": [
+            "開いたときだけタブを表示",
+            "論文・作業の画面・計測結果"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "外部の道具",
+          "where": "左のMCP Servers入口",
+          "purpose": "道具の接続先を管理"
+        },
+        {
+          "label": "道具の詳細",
+          "where": "会話内",
+          "purpose": "まとめた道具の実行を開閉"
+        },
+        {
+          "label": "作業タブ",
+          "where": "右の作業欄",
+          "purpose": "論文や作業の画面を切り替える"
+        }
+      ],
+      "conversation": {
+        "user": "通常時は塗りなしの文章。編集時だけ灰色の入力枠",
+        "assistant": "経路とモデル・提供元を回答下に条件付きで表示",
+        "tool_calls": "生成中は道具・考えた過程・計画の個別ブロック。終わった道具群はまとめて開閉",
+        "streaming": "生成中の各作業と道具名を表示し、状態に応じて停止・再開操作"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#ffffff",
+          "text": null,
+          "muted": "#737373",
+          "accent": "#000000",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#0a0a0a",
+          "text": null,
+          "muted": "#a3a3a3",
+          "accent": "#ffffff",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.panel": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte",
+          "dark.panel": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte",
+          "light.muted": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/NavMenu.svelte",
+          "dark.muted": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/NavMenu.svelte",
+          "light.accent": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+          "dark.accent": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+          "tokens": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/styles/main.css"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "縦方向の丸角枠。作業用の帯と入力を積む"
+      },
+      "empty_state": "公開ログアウト画面は初回説明、OmniとML Internの案内、会話開始操作。ログイン後の初期状態はunverified",
+      "distinctive": [
+        "ML Internの作業用表示",
+        "必要時に開く右のタブ付き作業欄",
+        "道具群の開閉できる要約",
+        "幅変更する作業欄と小画面の全画面表示",
+        "無彩色へ変わったgray色票"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/NavMenu.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "固定コミットのNew Chat、Models、MCP Servers、Settings。広い画面では操作行h-8、小画面はh-10。旧Assistantsをそのまま戻す根拠はない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "入力部は縦方向の枠になり、ML Assistantの帯を重ねられる。通常入力の下にモデル、プロバイダ、Omniの経路。道具呼出し中の状態表示、マイク、送信、停止、再開操作は状態に応じる。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatMessage.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "生成中の考えた過程・道具・計画は個別ブロック、完了した道具群は要約して開閉。利用者は通常時bg-inherit。回答下の経路・モデル・提供元も条件付きで表示。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/styles/main.css",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "Tailwind 4のgray色票へ変更。50=#fafafa、100=#f5f5f5、200=#e5e5e5、400=#a3a3a3、500=#737373、600=#454545、700=#2e2e2e、800=#1a1a1a、900=#0a0a0a。10月2025版の色を流用しない。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "開いたときだけ作業の横欄とタブ列を表示。Trackioの計測、Workflow、論文PDF等を同じ欄に置く。背景は白／dark gray-900。"
+        },
+        {
+          "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePane.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "作業欄は幅変更でき、最小max(20%,300px)、最大80%。小画面では全画面の重ね表示に切替。右側の部品の存在は、ログイン前から常に表示される意味ではない。"
+        },
+        {
+          "url": "https://huggingface.co/chat/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2026-11-15のログアウト状態で取得。初回のStart chatting案内、New Chat、Models、Settings、OmniとML Internの案内。実会話は送信していない。Modelsの件数は変動するため再現用の固定値にしない。"
+        },
+        {
+          "url": "https://huggingface.co/docs/chat-ui/en/configuration/mcp-tools",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の公式ヘルプ。入力部の＋または設定からMCP Serversを開き、Add ServerとHealth Checkで登録。実行結果は会話内の開閉する道具ブロック。2026-11-15閲覧。過去の初出日までは証明しない。"
+        },
+        {
+          "url": "https://huggingface.co/docs/chat-ui/en/configuration/theming",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の公式設定ページ。名称・アセット・紹介文を環境設定で変えられる。公開chat-uiのコードと公式サービスの選択設定を区別するため参照。"
+        }
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "corrections": [
+    "初期の質問例は現在モデルカードとは別の下段。過去調査の『右側に提案群だけ』では情報カードを落としてしまう。ロゴを省き、紹介・カード・質問例の配置を残す。https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte",
+    "初期は単一モデルのリンクで、後年のモデル選択や専用アシスタントを4月画面へ足さない。Interの上書きはコメントなので主書体と断定しない。https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatWindow.svelte https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/tailwind.config.cjs",
+    "2023-08のモデル選択は空状態のモデルカードから開く窓。web/js/tools/huggingchat.jsの常設Model Cardサイドパネルと別物。Search webは入力欄の上にあり、カタログの『左下』とは違う。https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatWindow.svelte",
+    "2024-02-02の専用アシスタントは名前・モデル・指示を組み合わせる方式。検索は当日の固定コードではassistant利用時に隠し、公式告知のネット対応追記は3月15日。初日から文書検索や道具呼出し対応と描かない。https://huggingface.co/spaces/huggingchat/chat-ui/discussions/357?expand=true https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/chat/ChatWindow.svelte",
+    "Community Toolsの記事は9月16日公開。カタログの9月10日当日の公開はunverified。Chat/Assistants/Community Toolsの固定3タブや左の大きいカタログではなく、左の入口と入力上の選択を確認。https://huggingface.co/blog/community-tools https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/NavMenu.svelte https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatWindow.svelte",
+    "2025-07は公開チャットの休止。rendererのHF Hubの会話画面・Inference Providersタブへの移行先レイアウトは告知で確認できない。https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true",
+    "2025-10は115という数の常設ルータータブや月間クレジット計器ではなく、入力下と回答下に経路・モデルが出る。Omniはモデルを選ぶ役割で、単一の回答モデル名ではない。https://huggingface.co/spaces/huggingchat/chat-ui/discussions/764 https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte",
+    "2026-04の採用モデルと提供元は回答の下の小さい表示。rendererの2,100/420 tok/s等の常設速度表、金額のトレースバーはunverified。MCP Serversの入口は4月固定コードにも存在する。https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/NavMenu.svelte",
+    "2026-11にはML Internと必要時のタブ付き作業欄がある。rendererの旧Assistants入口、IDE風の下部状態バー、固定モデル一覧を標準画面とする根拠はない。2025年の青みのgrayも流用しない。https://huggingface.co/chat/ https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/styles/main.css"
+  ]
+}

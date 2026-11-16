@@ -1,0 +1,272 @@
+/* D4: dimensions are reconstruction choices, not measured product dimensions.
+   Canvas colors stand in for null/unverified tokens. No artwork or font files. */
+.surface.d4 {
+  color-scheme: light dark;
+  --d4-bg: Canvas;
+  --d4-panel: ButtonFace;
+  --d4-text: CanvasText;
+  --d4-muted: CanvasText;
+  --d4-accent: LinkText;
+  --d4-border: color-mix(in srgb, CanvasText 25%, Canvas);
+  --d4-user: color-mix(in srgb, CanvasText 8%, Canvas);
+  --d4-size: 14px;
+  background: var(--d4-bg);
+  color: var(--d4-text);
+  font: var(--d4-size)/1.6 system-ui, sans-serif;
+}
+.surface.d4 [hidden] { display: none !important; }
+.surface.d4 > link { display: none; }
+.surface.d4 :is(button, select, textarea) {
+  font: inherit;
+  color: var(--d4-text);
+  background: var(--d4-bg);
+}
+.surface.d4 :is(button, select) {
+  border: 1px solid var(--d4-border);
+  border-radius: 3px;
+  padding: 5px 9px;
+  min-height: 32px;
+  max-width: 100%;
+  white-space: normal;
+}
+.surface.d4 button[aria-pressed="true"] {
+  border-color: var(--d4-accent);
+  box-shadow: inset 0 -2px var(--d4-accent);
+}
+.surface.d4 button:disabled { opacity: .6; cursor: default; }
+.surface.d4 :is(button, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--d4-accent);
+  outline-offset: 2px;
+}
+.surface.d4 a { color: var(--d4-accent); overflow-wrap: anywhere; }
+.surface.d4 :is(pre, code) { font-family: ui-monospace, monospace; }
+.surface.d4 h2 { font-size: 1em; font-weight: 600; margin: 8px 0; }
+.surface.d4 p { margin: 6px 0; }
+.surface.d4 small { font-size: .85em; }
+.surface.d4 details { margin: 4px 0; }
+.surface.d4 summary { cursor: pointer; overflow-wrap: anywhere; }
+.surface.d4 label { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+.surface.d4 .d4-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: none;
+  gap: 8px 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--d4-border);
+  max-height: 26%;
+  overflow: auto;
+}
+/* Product names remain ordinary text, without wordmark styling. */
+.surface.d4 .d4-product-name { font: inherit; margin-right: auto; }
+.surface.d4 .d4-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  flex: none;
+}
+.surface.d4 .d4-workspace {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.surface.d4 .d4-chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.surface.d4 .thread { padding: 16px; color: var(--d4-text); }
+.surface.d4 .empty-state { min-height: 2rem; align-items: flex-start; text-align: left; }
+.surface.d4 .empty-state p { color: var(--d4-muted); }
+.surface.d4 .empty-state:has(h1:empty):not(:has(p)) { display: none; }
+.surface.d4 .composer {
+  margin: 8px 12px;
+  border: 1px solid var(--d4-border);
+  border-radius: 3px;
+  box-shadow: none;
+  background: var(--d4-bg);
+  color: var(--d4-text);
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+}
+.surface.d4 .composer textarea { flex: 1 1 140px; }
+.surface.d4 .composer .send {
+  border: 1px solid var(--d4-border);
+  background: var(--d4-panel);
+  color: var(--d4-text);
+  border-radius: 3px;
+}
+.surface.d4 .d4-record-note {
+  flex: none;
+  padding: 6px 16px;
+  border-top: 1px solid var(--d4-border);
+  font-size: 11px;
+  max-height: 28%;
+  overflow: auto;
+}
+.surface.d4 .d4-status { margin: 2px 0; }
+.surface.d4 .d4-rail {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 220px;
+  min-width: 150px;
+  overflow: auto;
+  padding: 12px;
+  background: var(--d4-panel);
+  border-right: 1px solid var(--d4-border);
+  gap: 8px;
+}
+.surface.d4 .d4-settings { margin-top: auto; }
+.surface.d4 .d4-overview,
+.surface.d4 .d4-artifacts {
+  min-width: 0;
+  overflow: auto;
+  padding: 12px;
+}
+.surface.d4 .d4-overview {
+  flex: 0 1 300px;
+  border-left: 1px solid var(--d4-border);
+  background: var(--d4-panel);
+}
+.surface.d4 .d4-overview > .d4-artifacts { padding: 0; }
+.surface.d4 .d4-overview > button { margin: 0 6px 8px 0; }
+.surface.d4 .d4-artifacts details { border-top: 1px solid var(--d4-border); padding: 8px 0; }
+.surface.d4 .d4-inline-artifacts { margin: 8px 16px; max-height: 35%; overflow: auto; }
+.surface.d4 .d4-editor { flex: 1; min-width: 0; padding: 16px; overflow: auto; border-right: 1px solid var(--d4-border); }
+.surface.d4 .d4-editor pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.surface.d4 .d4-greeting { margin: 16px; }
+.surface.d4 .d4-greeting small { display: block; }
+.surface.d4:has(.thread .message) .d4-greeting { display: none; }
+.surface.d4.antigravity[data-purpose="work"] .d4-development-items { display: none; }
+.surface.d4 .d4-history { padding: 8px 16px; border-bottom: 1px solid var(--d4-border); }
+.surface.d4.d4-overview-expanded .d4-overview {
+  position: absolute;
+  inset: 8px;
+  z-index: 2;
+  border: 1px solid var(--d4-border);
+  background: var(--d4-bg);
+}
+.surface.d4.antigravity[data-window="editor"] .d4-chat { flex: 0 1 40%; }
+.surface.d4.antigravity[data-window="manager"] .d4-workspace > .d4-artifacts { flex: 0 1 240px; border-left: 1px solid var(--d4-border); }
+.surface.d4.deepseek .d4-chat > .d4-toolbar { margin: 0 12px 8px; }
+
+/* CLI and TUI backgrounds remain Canvas: specs leave terminal backgrounds null. */
+.surface.d4.hermes-agent:is([data-display="cli"], [data-display="tui"]),
+.surface.d4.pi-coding-agent { font-family: ui-monospace, monospace; font-size: 13px; }
+.surface.d4 .d4-boot {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 2px 16px;
+  margin: 12px 16px;
+  flex: none;
+  max-height: 30%;
+  overflow: auto;
+}
+.surface.d4 .d4-boot dt { color: var(--d4-accent); }
+.surface.d4 .d4-boot dd { margin: 0; overflow-wrap: anywhere; }
+.surface.d4 .d4-session-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  flex: none;
+  margin: 0 12px 8px;
+  font-size: 11px;
+  color: var(--d4-muted);
+}
+.surface.d4 .d4-capacity { display: inline-flex; align-items: center; gap: 6px; }
+.surface.d4 .d4-capacity > span { width: 5em; height: .65em; border: 1px solid var(--d4-border); }
+.surface.d4.hermes-agent[data-display="cli"] .composer,
+.surface.d4.pi-coding-agent .composer {
+  border: 0;
+  border-block: 1px solid var(--d4-border);
+  border-radius: 0;
+}
+.surface.d4.hermes-agent[data-display="cli"] .message {
+  display: block;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--d4-border);
+  border-radius: 0;
+  max-width: none;
+  margin: 0;
+  padding: 12px 0;
+}
+.surface.d4.hermes-agent[data-display="cli"] .message-label { display: block; width: auto; color: var(--d4-accent); }
+.surface.d4.hermes-agent[data-display="cli"] .message.assistant .message-label::before { content: '回答 · '; }
+.surface.d4.hermes-agent[data-display="cli"] .message.user .message-label { font-size: 0; }
+.surface.d4.hermes-agent[data-display="cli"] .message.user .message-label::before { content: '❯'; font-size: 13px; }
+.surface.d4 .d4-activity { display: flex; justify-content: space-between; gap: 12px; margin: 0 16px; font-size: 11px; }
+.surface.d4 .d4-task-list { margin: 4px 16px; }
+.surface.d4 .d4-tui-boot { margin: 8px 16px; max-height: 28%; overflow: auto; }
+/* CLI gold/brown facts: https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py */
+.surface.d4.hermes-agent[data-display="cli"]:is([data-phase="2026-09"], [data-phase="2026-10"], [data-phase="2026-11"]) { --d4-accent: #D89B04; --d4-border: #CD7F32; }
+/* TUI colors: https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts */
+.surface.d4.hermes-agent[data-display="tui"] { --d4-panel: #F5F5F5; --d4-text: #3D2F13; --d4-muted: #7A5A0F; --d4-accent: #A0651C; --d4-border: #7A4F1F; }
+/* Desktop Nous colors: https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts */
+.surface.d4.hermes-agent[data-display="desktop"] { --d4-bg: #F8FAFF; --d4-panel: #F3F7FF; --d4-text: #17171A; --d4-muted: #666678; --d4-accent: #0053FD; }
+
+/* Pi's ordinary terminal history scrolls together with the editor and status. */
+.surface.d4 .d4-pi-main { display: flex; flex-direction: column; flex: 1; min-height: 0; overflow: auto; padding: 0; }
+.surface.d4.pi-coding-agent .thread { flex: none; overflow: visible; min-height: 3rem; }
+.surface.d4 .d4-pi-boot { flex: none; padding: 8px 16px; }
+.surface.d4 .d4-pi-settings { flex: none; padding: 4px 16px; }
+.surface.d4 .d4-pi-model-selection { flex: none; margin: 8px 12px; padding: 10px; border-block: 1px solid var(--d4-border); }
+.surface.d4 .d4-pi-model-selection button { margin: 4px; }
+.surface.d4.d4-pi-fullscreen .d4-pi-main { overflow: hidden; }
+.surface.d4.d4-pi-fullscreen .thread { flex: 1; min-height: 0; overflow: auto; }
+.surface.d4.d4-pi-fullscreen .d4-pi-boot { max-height: 25%; overflow: auto; }
+.surface.d4.d4-pi-fullscreen .d4-pi-settings { max-height: 25%; overflow: auto; }
+.surface.d4.pi-coding-agent .message {
+  display: block;
+  max-width: none;
+  margin: 8px 0;
+  border: 0;
+  border-radius: 0;
+  padding: 8px 12px;
+  background: transparent;
+}
+.surface.d4.pi-coding-agent .message.user { background: var(--d4-user); }
+.surface.d4.pi-coding-agent .message-label { display: block; width: auto; color: var(--d4-muted); }
+.surface.d4.pi-coding-agent .composer { border-color: var(--d4-border); }
+.surface.d4.pi-coding-agent[data-reasoning="strong"] .composer { border-color: var(--d4-accent); border-block-width: 2px; }
+/* Pi light tokens, excluding export backgrounds:
+   https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json
+   https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json */
+.surface.d4.pi-coding-agent[data-palette="early"] { --d4-muted: #6c6c6c; --d4-accent: #5f8787; --d4-border: #5f87af; --d4-user: #e8e8e8; }
+.surface.d4.pi-coding-agent[data-palette="classic"] { --d4-text: #1f2328; --d4-muted: #6c6c6c; --d4-accent: #5a8080; --d4-border: #547da7; --d4-user: #e8e8e8; }
+
+@media (prefers-color-scheme: dark) {
+  /* CLI: https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py */
+  .surface.d4.hermes-agent[data-display="cli"] { --d4-accent: #FFBF00; --d4-border: #CD7F32; }
+  .surface.d4.hermes-agent[data-display="tui"] { --d4-panel: #1a1a2e; --d4-text: #FFF8DC; --d4-muted: #CC9B1F; --d4-accent: #FFBF00; --d4-border: #CD7F32; }
+  .surface.d4.hermes-agent[data-display="desktop"] { --d4-bg: #0D2F86; --d4-panel: #09286F; --d4-text: #FFE6CB; --d4-muted: #B5C7F3; --d4-accent: #FFE6CB; --d4-border: #3158AD; --d4-user: #143B91; }
+  /* Pi dark tokens:
+     https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json
+     https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json */
+  .surface.d4.pi-coding-agent:is([data-palette="early"], [data-palette="classic"]) { --d4-muted: #808080; --d4-accent: #8abeb7; --d4-border: #5f87ff; --d4-user: #343541; }
+  .surface.d4.pi-coding-agent[data-palette="classic"] { --d4-text: #d4d4d4; }
+}
+.surface.d4.hermes-agent[data-display="desktop"] .message.user { background: var(--d4-user); }
+@media (max-width: 720px) {
+  .surface.d4 .d4-header { padding: 6px 10px; gap: 6px; }
+  .surface.d4 .d4-workspace { flex-direction: column; }
+  .surface.d4 .d4-rail { flex: 0 1 auto; min-width: 0; max-height: 24%; border-right: 0; border-bottom: 1px solid var(--d4-border); padding: 6px 10px; }
+  .surface.d4 .d4-overview { position: absolute; inset: 0; z-index: 1; border: 1px solid var(--d4-border); }
+  .surface.d4.antigravity[data-window="manager"] .d4-workspace > .d4-artifacts { flex: 0 1 auto; max-height: 24%; border-left: 0; border-top: 1px solid var(--d4-border); }
+  .surface.d4.antigravity[data-window="editor"] .d4-editor { flex: 0 1 auto; max-height: 30%; border-right: 0; border-bottom: 1px solid var(--d4-border); }
+  .surface.d4.antigravity[data-window="editor"] .d4-chat { flex: 1; }
+  .surface.d4 .composer { margin: 6px 8px; padding: 6px; }
+  .surface.d4 .thread { padding: 10px; }
+  .surface.d4 .d4-secondary-status { display: none; }
+  .surface.d4 .d4-record-note { padding: 4px 10px; font-size: 10px; }
+}

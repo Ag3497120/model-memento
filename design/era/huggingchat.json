@@ -1,0 +1,576 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "huggingchat",
+  "versions": [
+    {
+      "id": "huggingchat-2023-04",
+      "model_switch": {
+        "where": "none",
+        "label": "現在のモデル（Current Model）",
+        "steps": [
+          "中央のモデル名は表示と紹介ページへの入口で、画面内から別モデルへは切り替えられない。"
+        ],
+        "options": [
+          "OpenAssistant/oasst-sft-6-llama-30b"
+        ],
+        "default": "OpenAssistant/oasst-sft-6-llama-30b",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2023-04-28",
+            "shows": "中央のCurrent Modelは現在のモデル名とモデル紹介ページへのリンク。通常画面の切替操作はない。"
+          },
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/.env",
+            "date": "2023-04-28",
+            "shows": "公開されるモデル名の設定値はOpenAssistant/oasst-sft-6-llama-30b。サンプルの別の推論接続先を画面の別候補にしない。"
+          }
+        ],
+        "steps_en": [
+          "The central model name displays the model and opens its information page. On-screen model switching is unavailable."
+        ],
+        "label_en": "Current Model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "回答には誤りが含まれる場合があります",
+          "when": "2023-04-28..2023-04-28",
+          "where": "入力欄の下の小さい注意書き。原文を長く転載せず日本語に言い換えた。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatWindow.svelte",
+              "date": "2023-04-28",
+              "shows": "入力部の下に生成内容が誤っている場合がある旨の短い注意書きを出す。"
+            }
+          ],
+          "text_en": "Answers may contain errors",
+          "where_en": "Small notice below the input, paraphrased in Japanese in the source record."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-04-28",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2023-04-28",
+            "shows": "中央のCurrent Modelは現在のモデル名とモデル紹介ページへのリンク。通常画面の切替操作はない。"
+          }
+        ]
+      },
+      "trend": "中央のモデル紹介と小さな注意書きを持つ、単一モデルの会話画面になっている（出典：https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte）。",
+      "unverified": [
+        "ブラウザー名とOSの版はunverified",
+        "noneのoptionsは表示される単一モデルを記録し、切替メニューを意味しない"
+      ],
+      "trend_en": "A single-model chat screen shows a central model introduction and a small notice. (https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatIntroduction.svelte)",
+      "unverified_en": [
+        "unverified (browser name and OS version).",
+        "With where set to none, options records the single displayed model."
+      ]
+    },
+    {
+      "id": "huggingchat-2023-08",
+      "model_switch": {
+        "where": "other",
+        "label": "現在のモデル（Current Model）",
+        "steps": [
+          "空の会話の中央カード右端を押す（候補が複数ある場合だけ表示）。",
+          "別窓のModelsでモデルを選び、Applyを押す。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2023-08-01",
+            "shows": "中央のCurrent Modelカードの右端を押すとModelsModalを開く。モデルが複数ある場合だけ入口を表示する。"
+          },
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/ModelsModal.svelte",
+            "date": "2023-08-01",
+            "shows": "候補のカードを選んでApplyを押す。候補名は実行時のmodels配列で、ソースに配信中の全一覧は固定されていない。"
+          }
+        ],
+        "steps_en": [
+          "Click the right edge of the center card in an empty chat, shown only when multiple models are available.",
+          "Choose a model under Models in the separate window and click Apply."
+        ],
+        "label_en": "Current Model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "ウェブを検索",
+          "when": "2023-08-01..2023-08-01",
+          "where": "入力欄の上にあるSearch webの切替。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/WebSearchToggle.svelte",
+              "date": "2023-08-01",
+              "shows": "Search webの切替と、オンのときウェブの情報で回答を補う説明。"
+            },
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatWindow.svelte",
+              "date": "2023-08-01",
+              "shows": "WebSearchToggleを文章入力より前に表示する。"
+            }
+          ],
+          "text_en": "Search the web",
+          "where_en": "Search web toggle above the input."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-08-01",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2023-08-01",
+            "shows": "中央のCurrent Modelカードの右端を押すとModelsModalを開く。モデルが複数ある場合だけ入口を表示する。"
+          }
+        ]
+      },
+      "trend": "空の画面のモデルカードから別窓を開いて選ぶ作りが見られる（出典：https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "固定の既定モデルはunverified"
+      ],
+      "trend_en": "The model card on the empty screen opens a separate selection window. (https://github.com/huggingface/chat-ui/blob/54e8a52e285c9f3997d9d7550420da821cdde219/src/lib/components/chat/ChatIntroduction.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "unverified (a fixed default model)."
+      ]
+    },
+    {
+      "id": "huggingchat-2024-02",
+      "model_switch": {
+        "where": "settings",
+        "label": "有効にする（Activate）",
+        "steps": [
+          "中央のCurrent Modelカード右端、または左下Settingsからモデル設定を開く。",
+          "設定画面左のModels一覧でモデルを選び、Activateを押して使用中にする。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2024-02-02",
+            "shows": "中央のCurrent Modelカード右端から/settings/モデルIDへ移る。"
+          },
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/routes/settings/[...model]/+page.svelte",
+            "date": "2024-02-02",
+            "shows": "モデル設定ページでActivateを押すとactiveModelを変える。選択中はActive model表示。"
+          },
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/routes/settings/+layout.svelte",
+            "date": "2024-02-02",
+            "shows": "設定ページ左のModels一覧から別のモデルの設定へ移る。"
+          },
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/NavMenu.svelte",
+            "date": "2024-02-02",
+            "shows": "左下のSettingsと、機能が有効な場合のAssistantsの入口。"
+          }
+        ],
+        "steps_en": [
+          "Open model settings from the right edge of the central Current Model card or Settings at the bottom left.",
+          "Choose a model in the Models list on the left of settings and click Activate."
+        ],
+        "label_en": "Activate"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "専用アシスタント",
+          "when": "2024-02-02..2024-02-02",
+          "where": "左下のAssistants入口。機能が有効な場合だけ表示する。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/NavMenu.svelte",
+              "date": "2024-02-02",
+              "shows": "左下のSettingsと、機能が有効な場合のAssistantsの入口。"
+            }
+          ],
+          "text_en": "Custom assistants",
+          "where_en": "Assistants entry point at the bottom left, shown when enabled."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-02-02",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2024-02-02",
+            "shows": "中央のCurrent Modelカード右端から/settings/モデルIDへ移る。"
+          }
+        ]
+      },
+      "trend": "モデルを選ぶために設定画面へ移動し、使用中にする操作を行う（出典：https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/routes/settings/[...model]/+page.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "固定の既定モデルはunverified"
+      ],
+      "trend_en": "Users open settings to select and activate a model. (https://github.com/huggingface/chat-ui/blob/9574269312f8c18f71a9f56563d01f52ae182e2b/src/routes/settings/[...model]/+page.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "unverified (a fixed default model)."
+      ]
+    },
+    {
+      "id": "huggingchat-2024-09",
+      "model_switch": {
+        "where": "settings",
+        "label": "unverified",
+        "steps": [
+          "中央のCurrent Modelカード右端からモデル設定へ移る。",
+          "当月の確定ボタンの正確なラベルと、設定画面内の手順全体はunverified。2月版のActivateをそのまま断定しない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2024-09-17",
+            "shows": "中央のCurrent Modelカードから/settings/モデルIDを開く。切替は画面上部の共通メニューではない。"
+          }
+        ],
+        "steps_en": [
+          "Open model settings from the right edge of the central Current Model card.",
+          "unverified (that month's exact confirmation label and full settings workflow). February's Activate label requires separate confirmation."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "外部の道具を選ぶ",
+          "when": "2024-09-17..2024-09-17",
+          "where": "会話の入力欄の上にある道具の選択。公開は9月16日、参照する画面ソースは9月17日。",
+          "sources": [
+            {
+              "url": "https://huggingface.co/blog/community-tools",
+              "date": "2024-09-16",
+              "shows": "Community Toolsを公開し、会話画面から外部の道具を使う流れを説明する。"
+            },
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatWindow.svelte",
+              "date": "2024-09-17",
+              "shows": "入力より前に道具の選択操作を配置する。"
+            }
+          ],
+          "text_en": "Choose external tools",
+          "where_en": "Tool selector above the chat input. Released September 16, with screen source dated September 17."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-09-17",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatIntroduction.svelte",
+            "date": "2024-09-17",
+            "shows": "中央のCurrent Modelカードから/settings/モデルIDを開く。切替は画面上部の共通メニューではない。"
+          }
+        ]
+      },
+      "trend": "モデル別の設定に加え、入力の近くで外部の道具を選ぶ作りへ広がる（出典：https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatIntroduction.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "固定の既定とモデル設定の確定操作はunverified"
+      ],
+      "trend_en": "Per-model settings expand with external-tool selection near the input. (https://github.com/huggingface/chat-ui/blob/bb38bf54d76f2862955754045c66dc73213e50a5/src/lib/components/chat/ChatIntroduction.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "unverified (a fixed default and the model-settings confirmation action)."
+      ]
+    },
+    {
+      "id": "huggingchat-2025-07",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "この時期は公式サービスの休止告知を記録する。",
+          "会話画面やモデル選択器を動作中として描かない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true",
+            "date": "2025-07-01",
+            "shows": "運営者の休止告知。会話の書き出し案内はあったが、後のコメントと混同しない。10月16日に再開を案内した。"
+          }
+        ],
+        "steps_en": [
+          "This period records the official service pause announcement.",
+          "Keep the chat and model selector inactive in the reconstruction."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "deprecation-notice",
+          "text": "HuggingChatは休止中",
+          "when": "2025-07-01..2025-07-01",
+          "where": "運営の休止告知。掲載先は公式のお知らせで、当日の停止ページの正確な文面と配置はunverified。",
+          "sources": [
+            {
+              "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true",
+              "date": "2025-07-01",
+              "shows": "運営者の休止告知。会話の書き出し案内はあったが、後のコメントと混同しない。10月16日に再開を案内した。"
+            }
+          ],
+          "text_en": "HuggingChat is paused",
+          "where_en": "Official service pause announcement. The exact shutdown page wording and layout that day are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-07-01",
+        "sources": [
+          {
+            "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true",
+            "date": "2025-07-01",
+            "shows": "運営者の休止告知。会話の書き出し案内はあったが、後のコメントと混同しない。10月16日に再開を案内した。"
+          }
+        ]
+      },
+      "trend": "会話画面の代わりに休止を知らせる時期になる（出典：https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true）。",
+      "unverified": [
+        "停止ページ自体の正確な文面と配置はunverified",
+        "ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "This period records the service pause announcement. (https://huggingface.co/spaces/huggingchat/chat-ui/discussions/747?expand=true)",
+      "unverified_en": [
+        "unverified (the shutdown page's exact wording and layout).",
+        "unverified (browser name and OS version)."
+      ]
+    },
+    {
+      "id": "huggingchat-2025-10",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデル（Model:）",
+        "steps": [
+          "入力欄の下にある現在のモデル名を押してモデル設定を開く。",
+          "別のモデルを選ぶために設定へ移動する。確定操作の当月の正確な表記はunverified。",
+          "新規の既定はOmni。これは内容に応じて返答するモデルを振り分ける入口。"
+        ],
+        "options": [
+          "Omni"
+        ],
+        "default": "Omni",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2025-10-16",
+            "shows": "入力欄の下のModel: 現在名は/settings/モデルIDへのリンク。Omniでは生成中に振り分け先を表示する。上部のドロップダウンではない。"
+          },
+          {
+            "url": "https://huggingface.co/spaces/huggingchat/chat-ui/discussions/764",
+            "date": "2025-10-16",
+            "shows": "運営者が再開と既定のOmniを発表。生成中に処理したモデルを見せ、115以上のモデルと15以上の提供元を案内する。固定の全候補の名前は示さない。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name below the input to open model settings.",
+          "Open settings to choose another model. The exact confirmation label that month is unverified.",
+          "Omni is the default for new users and routes replies to models based on the content."
+        ],
+        "label_en": "Model:"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "会話を始める",
+          "when": "2025-10-16..2025-10-16",
+          "where": "初回案内の窓のStart chattingボタン。ロゴや独自の図案は再作成しない。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/WelcomeModal.svelte",
+              "date": "2025-10-16",
+              "shows": "初回案内の窓にOmniの短い説明とStart chattingボタンを置く。"
+            }
+          ],
+          "text_en": "Start a chat",
+          "where_en": "Start chatting button in the onboarding window, represented with text-only elements."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-10-16",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2025-10-16",
+            "shows": "入力欄の下のModel: 現在名は/settings/モデルIDへのリンク。Omniでは生成中に振り分け先を表示する。上部のドロップダウンではない。"
+          }
+        ]
+      },
+      "trend": "入力の下に小さくモデル名を置き、自動の振り分け先を生成中に見せる（出典：https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "optionsは確認できた既定名だけで全候補ではない",
+        "設定内の確定操作はunverified"
+      ],
+      "trend_en": "A small model name below the input shows the routed model during generation. (https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "options contains only the confirmed default name.",
+        "unverified (the confirmation action in settings)."
+      ]
+    },
+    {
+      "id": "huggingchat-2026-04",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデル（Model:）",
+        "steps": [
+          "入力欄の下の現在モデル名からモデル設定へ移る。",
+          "モデルを選ぶ。設定画面での確定操作の正確な表記はunverified。",
+          "提供元の指定がある場合はモデル名の隣に短い印が出る。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2026-04-12",
+            "shows": "入力部の下のモデル名は設定ページへのリンク。提供元の指定があるとProvider: 名前の補助表示を出す。"
+          }
+        ],
+        "steps_en": [
+          "Open model settings from the current model name below the input.",
+          "Choose a model. The exact confirmation label in settings is unverified.",
+          "A short provider indicator appears beside the model name when specified."
+        ],
+        "label_en": "Model:"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "指定した提供元を表示",
+          "when": "2026-04-12..2026-04-12",
+          "where": "モデル名の隣の小さい印とProvider: 提供元名の補助表示。自動選択以外の指定がある場合に限る。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+              "date": "2026-04-12",
+              "shows": "入力部の下のモデル名は設定ページへのリンク。提供元の指定があるとProvider: 名前の補助表示を出す。"
+            }
+          ],
+          "text_en": "Show the selected provider",
+          "where_en": "Small indicator beside the model name and Provider: helper text, shown only for an explicitly selected provider."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-04-12",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2026-04-12",
+            "shows": "入力部の下のモデル名は設定ページへのリンク。提供元の指定があるとProvider: 名前の補助表示を出す。"
+          }
+        ]
+      },
+      "trend": "小さなモデル表示の横で、応答を担当する提供元も示す（出典：https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "固定の既定と設定内の確定操作はunverified"
+      ],
+      "trend_en": "A provider indicator appears beside the compact model display. (https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "unverified (a fixed default and the confirmation action in settings)."
+      ]
+    },
+    {
+      "id": "huggingchat-2026-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデル（Model:）",
+        "steps": [
+          "入力欄の下にあるモデル名からモデル設定へ移る。",
+          "設定内の候補を選ぶ。確定操作の正確な表記はunverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2026-11-14",
+            "shows": "入力部の下にModel: 名前と設定ページへのリンク。生成中の追加メッセージを待ち列へ入れるQueue messageとQueue: read at the next stepの補助表示。"
+          }
+        ],
+        "steps_en": [
+          "Open model settings from the model name below the input.",
+          "Choose an option in settings. The exact confirmation label is unverified."
+        ],
+        "label_en": "Model:"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "次の手順で読むメッセージを追加",
+          "when": "2026-11-14..2026-11-14",
+          "where": "生成中に表示される入力部のQueue message。補助表示はQueue: read at the next step。条件付きで、通常の送信ボタンとは分かれる。",
+          "sources": [
+            {
+              "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+              "date": "2026-11-14",
+              "shows": "入力部の下にModel: 名前と設定ページへのリンク。生成中の追加メッセージを待ち列へ入れるQueue messageとQueue: read at the next stepの補助表示。"
+            }
+          ],
+          "text_en": "Add a message to read in the next step",
+          "where_en": "Queue message in the input during generation, with Queue: read at the next step as conditional helper text."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-14",
+        "sources": [
+          {
+            "url": "https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte",
+            "date": "2026-11-14",
+            "shows": "入力部の下にModel: 名前と設定ページへのリンク。生成中の追加メッセージを待ち列へ入れるQueue messageとQueue: read at the next stepの補助表示。"
+          }
+        ]
+      },
+      "trend": "返答を待つ間にも次の指示を追加できる入力部が見られる（出典：https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte）。",
+      "unverified": [
+        "配信されていた全候補、ブラウザー名、OSの版はunverified",
+        "公開ソースの表示条件は確認したが、本番の全利用者への反映日はunverified",
+        "固定の既定と設定内の確定操作はunverified"
+      ],
+      "trend_en": "The input accepts additional instructions while waiting for a reply. (https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte)",
+      "unverified_en": [
+        "unverified (all served model options, browser name and OS version).",
+        "Public source display conditions are confirmed. Rollout dates for all production users are unverified.",
+        "unverified (a fixed default and the confirmation action in settings)."
+      ]
+    }
+  ]
+}

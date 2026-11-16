@@ -1,0 +1,1934 @@
+{
+  "guillaumemeyer--watermarks-remover": {
+    "topics": [
+      "agent-skill",
+      "ai",
+      "anthropic",
+      "c2pa",
+      "chatgpt",
+      "claude",
+      "gemini",
+      "openai",
+      "provenance",
+      "synthid",
+      "watermark",
+      "watermark-detection",
+      "watermark-tools",
+      "watermarking",
+      "watermarks"
+    ],
+    "homepage": "https://github.com/guillaumemeyer/watermarks-remover",
+    "archived": false,
+    "commit": "5a62be6338d2812372b1da440e55c82922f97d53",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2026-08-11"
+      ],
+      [
+        "v0.1.0",
+        "2026-08-11"
+      ],
+      [
+        "v0.2.0",
+        "2026-08-12"
+      ],
+      [
+        "v0.3.0",
+        "2026-08-12"
+      ],
+      [
+        "v0.3.1",
+        "2026-08-13"
+      ],
+      [
+        "v0.4.0",
+        "2026-08-13"
+      ],
+      [
+        "v0.5.0",
+        "2026-08-14"
+      ],
+      [
+        "v0.6.0",
+        "2026-08-26"
+      ],
+      [
+        "v0.7.0",
+        "2026-09-03"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "docker run --rm -p 127.0.0.1:8765:8765 --read-only --tmpfs /tmp watermarks-remover / docker run --rm -v \"$(pwd):/data\" watermarks-remover \\ / docker compose up -d                         # core HTTP service only / docker compose up -d       # picks up .env automatically / docker run --rm \\",
+    "install_evidence": [
+      {
+        "command": "docker run --rm -p 127.0.0.1:8765:8765 --read-only --tmpfs /tmp watermarks-remover",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+        "line": 437
+      },
+      {
+        "command": "docker run --rm -v \"$(pwd):/data\" watermarks-remover \\",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+        "line": 439
+      },
+      {
+        "command": "docker compose up -d                         # core HTTP service only",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+        "line": 446
+      },
+      {
+        "command": "docker compose up -d       # picks up .env automatically",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+        "line": 486
+      },
+      {
+        "command": "docker run --rm \\",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+        "line": 561
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "stealer/tokens.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/guillaumemeyer/watermarks-remover",
+      "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md",
+      "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/stealer/tokens.py",
+      "https://api.github.com/repos/guillaumemeyer/watermarks-remover/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/README.md"
+      },
+      {
+        "path": "stealer/tokens.py",
+        "source": "https://github.com/guillaumemeyer/watermarks-remover/blob/5a62be6338d2812372b1da440e55c82922f97d53/stealer/tokens.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:claude stars:10000..29999 fork:false",
+      "topic:openai stars:10000..29999 fork:false",
+      "topic:chatgpt stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / other",
+    "repository_id": 1331135699,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guardrails-ai--guardrails": {
+    "topics": [
+      "ai",
+      "foundation-model",
+      "gpt-3",
+      "llm",
+      "openai"
+    ],
+    "homepage": "https://www.guardrailsai.com/docs",
+    "archived": false,
+    "commit": "06d0ff2c5f9bcb493d976b76f885e37e41ce845d",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2023-03-13"
+      ],
+      [
+        "v0.5.0",
+        "2024-07-17"
+      ],
+      [
+        "v0.5.1",
+        "2024-07-23"
+      ],
+      [
+        "v0.5.2",
+        "2024-07-30"
+      ],
+      [
+        "v0.5.3",
+        "2024-08-07"
+      ],
+      [
+        "v0.5.4",
+        "2024-08-14"
+      ],
+      [
+        "v0.5.5",
+        "2024-08-20"
+      ],
+      [
+        "v0.5.6",
+        "2024-08-28"
+      ],
+      [
+        "v0.5.7",
+        "2024-09-04"
+      ],
+      [
+        "v0.5.8",
+        "2024-09-11"
+      ],
+      [
+        "v0.5.9",
+        "2024-09-13"
+      ],
+      [
+        "v0.5.10",
+        "2024-09-17"
+      ],
+      [
+        "v0.5.11",
+        "2024-09-25"
+      ],
+      [
+        "v0.5.12",
+        "2024-09-30"
+      ],
+      [
+        "v0.5.13",
+        "2024-10-04"
+      ],
+      [
+        "v0.5.14",
+        "2024-10-18"
+      ],
+      [
+        "v0.5.15",
+        "2024-10-19"
+      ],
+      [
+        "v0.6.0",
+        "2024-11-12"
+      ],
+      [
+        "v0.6.1",
+        "2024-12-10"
+      ],
+      [
+        "v0.6.2",
+        "2024-12-24"
+      ],
+      [
+        "v0.6.3",
+        "2025-02-13"
+      ],
+      [
+        "v0.6.4",
+        "2025-03-11"
+      ],
+      [
+        "v0.6.5",
+        "2025-03-28"
+      ],
+      [
+        "v0.6.6",
+        "2025-04-28"
+      ],
+      [
+        "v0.6.7",
+        "2025-09-22"
+      ],
+      [
+        "v0.6.8",
+        "2025-11-24"
+      ],
+      [
+        "v0.7.0",
+        "2025-11-25"
+      ],
+      [
+        "v0.7.1",
+        "2025-12-10"
+      ],
+      [
+        "v0.7.2",
+        "2025-12-18"
+      ],
+      [
+        "v0.7.3",
+        "2026-02-06"
+      ],
+      [
+        "v0.8.0",
+        "2026-02-06"
+      ],
+      [
+        "v0.8.1",
+        "2026-02-13"
+      ],
+      [
+        "v0.8.2",
+        "2026-02-17"
+      ],
+      [
+        "v0.9.0",
+        "2026-02-17"
+      ],
+      [
+        "v0.9.1",
+        "2026-02-24"
+      ],
+      [
+        "v0.9.2",
+        "2026-03-16"
+      ],
+      [
+        "v0.9.3",
+        "2026-04-03"
+      ],
+      [
+        "v0.10.0",
+        "2026-04-03"
+      ],
+      [
+        "v0.10.2",
+        "2026-06-04"
+      ],
+      [
+        "v0.11.0",
+        "2026-08-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "pip install guardrails-ai / pip install guardrails-ai-regex-match / pip install guardrails-ai-competitor-check guardrails-ai-toxic-language",
+    "install_evidence": [
+      {
+        "command": "pip install guardrails-ai",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/README.md",
+        "line": 50
+      },
+      {
+        "command": "pip install guardrails-ai-regex-match",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/README.md",
+        "line": 68
+      },
+      {
+        "command": "pip install guardrails-ai-competitor-check guardrails-ai-toxic-language",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/README.md",
+        "line": 95
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "guardrails/settings.py",
+        "guardrails/stores/context.py",
+        "guardrails/prompt/instructions.py",
+        "guardrails/prompt/prompt.py",
+        "guardrails/prompt/__init__.py",
+        "guardrails/prompt/messages.py",
+        "guardrails/utils/args.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/guardrails-ai/guardrails",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/README.md",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/pyproject.toml",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/server_ci/requirements.txt",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/settings.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/stores/context.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/instructions.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/prompt.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/__init__.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/messages.py",
+      "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/utils/args.py",
+      "https://api.github.com/repos/guardrails-ai/guardrails/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/pyproject.toml"
+      },
+      {
+        "path": "server_ci/requirements.txt",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/server_ci/requirements.txt"
+      },
+      {
+        "path": "guardrails/settings.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/settings.py"
+      },
+      {
+        "path": "guardrails/stores/context.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/stores/context.py"
+      },
+      {
+        "path": "guardrails/prompt/instructions.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/instructions.py"
+      },
+      {
+        "path": "guardrails/prompt/prompt.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/prompt.py"
+      },
+      {
+        "path": "guardrails/prompt/__init__.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/__init__.py"
+      },
+      {
+        "path": "guardrails/prompt/messages.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/messages.py"
+      },
+      {
+        "path": "guardrails/utils/args.py",
+        "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/utils/args.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:3000..9999 fork:false",
+      "seed:Guardrails AI"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / other",
+    "repository_id": 594609262,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:11.674Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "system_prompt_path",
+          "path": "guardrails/prompt/instructions.py",
+          "source": "https://github.com/guardrails-ai/guardrails/blob/06d0ff2c5f9bcb493d976b76f885e37e41ce845d/guardrails/prompt/instructions.py",
+          "verified": false
+        }
+      ]
+    }
+  },
+  "gusye1234--nano-graphrag": {
+    "topics": [
+      "gpt",
+      "gpt-4o",
+      "graphrag",
+      "learning-by-doing",
+      "llm",
+      "rag"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.5",
+        "2024-08-28"
+      ],
+      [
+        "v0.0.6",
+        "2024-08-30"
+      ],
+      [
+        "v0.0.7",
+        "2024-09-09"
+      ],
+      [
+        "v0.0.8",
+        "2024-10-01"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install -e . / pip install nano-graphrag",
+    "install_evidence": [
+      {
+        "command": "pip install -e .",
+        "source": "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/readme.md",
+        "line": 58
+      },
+      {
+        "command": "pip install nano-graphrag",
+        "source": "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/readme.md",
+        "line": 64
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/gusye1234/nano-graphrag",
+      "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/readme.md",
+      "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/requirements.txt",
+      "https://api.github.com/repos/gusye1234/nano-graphrag/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "readme.md",
+        "source": "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/readme.md"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/gusye1234/nano-graphrag/blob/acb35c065614eb5a2f5f1be9a56b235f5a2e0a7a/requirements.txt"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / rag",
+    "repository_id": 833512367,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guangzhengli--chatfiles": {
+    "topics": [
+      "chatbot",
+      "chatfile",
+      "chatgpt",
+      "chatgpt-api",
+      "chatpdf"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "c3bb7cf747e0967ef5bb73abe9616c8622c8141c",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2023-04-05"
+      ],
+      [
+        "v0.2.0",
+        "2023-04-18"
+      ],
+      [
+        "v0.3.0",
+        "2023-06-14"
+      ],
+      [
+        "v0.3.1",
+        "2023-06-17"
+      ],
+      [
+        "v0.3.2",
+        "2023-06-26"
+      ],
+      [
+        "v0.3.3",
+        "2023-06-28"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npm install",
+    "install_evidence": [
+      {
+        "command": "npm install",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/README.md",
+        "line": 40
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "components/ui/input.tsx",
+        "components/Chat/Chat.tsx",
+        "components/Sidebar/Sidebar.tsx",
+        "components/Chat/SystemPrompt.tsx",
+        "types/index.ts",
+        "utils/index.ts",
+        "pages/index.tsx",
+        "components/Sidebar/SidebarSettings.tsx",
+        "components/Chat/ChatInput.tsx",
+        "components/Chat/ChatLoader.tsx",
+        "components/Chat/ChatMessage.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#ccc",
+      "text": "hsl(222.2 47.4% 11.2%)",
+      "accent": "hsl(222.2 47.4% 11.2%)",
+      "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "background-color",
+        "value": "#ccc",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css",
+        "line": 10
+      },
+      {
+        "token": "text",
+        "key": "--foreground",
+        "value": "hsl(222.2 47.4% 11.2%)",
+        "raw_value": "222.2 47.4% 11.2%",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css",
+        "line": 43
+      },
+      {
+        "token": "accent",
+        "key": "--primary",
+        "value": "hsl(222.2 47.4% 11.2%)",
+        "raw_value": "222.2 47.4% 11.2%",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css",
+        "line": 57
+      }
+    ],
+    "strings": [
+      "Close",
+      "Error",
+      "ChatFiles",
+      "Loading...",
+      "AI:"
+    ],
+    "string_evidence": [
+      {
+        "text": "Close",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx",
+        "line": 134,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Error",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx",
+        "line": 128,
+        "kind": "visible-text"
+      },
+      {
+        "text": "ChatFiles",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx",
+        "line": 176,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Loading...",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx",
+        "line": 197,
+        "kind": "visible-text"
+      },
+      {
+        "text": "AI:",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatLoader.tsx",
+        "line": 13,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/guangzhengli/ChatFiles",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/README.md",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/package.json",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/public/locales/en/common.json",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/ui/input.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Sidebar/Sidebar.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/SystemPrompt.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/types/index.ts",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/utils/index.ts",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/pages/index.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Sidebar/SidebarSettings.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatInput.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatLoader.tsx",
+      "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatMessage.tsx",
+      "https://api.github.com/repos/guangzhengli/ChatFiles/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/package.json"
+      },
+      {
+        "path": "styles/globals.css",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/styles/globals.css"
+      },
+      {
+        "path": "public/locales/en/common.json",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/public/locales/en/common.json"
+      },
+      {
+        "path": "components/ui/input.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/ui/input.tsx"
+      },
+      {
+        "path": "components/Chat/Chat.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/Chat.tsx"
+      },
+      {
+        "path": "components/Sidebar/Sidebar.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Sidebar/Sidebar.tsx"
+      },
+      {
+        "path": "components/Chat/SystemPrompt.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/SystemPrompt.tsx"
+      },
+      {
+        "path": "types/index.ts",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/types/index.ts"
+      },
+      {
+        "path": "utils/index.ts",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/utils/index.ts"
+      },
+      {
+        "path": "pages/index.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/pages/index.tsx"
+      },
+      {
+        "path": "components/Sidebar/SidebarSettings.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Sidebar/SidebarSettings.tsx"
+      },
+      {
+        "path": "components/Chat/ChatInput.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatInput.tsx"
+      },
+      {
+        "path": "components/Chat/ChatLoader.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatLoader.tsx"
+      },
+      {
+        "path": "components/Chat/ChatMessage.tsx",
+        "source": "https://github.com/guangzhengli/ChatFiles/blob/c3bb7cf747e0967ef5bb73abe9616c8622c8141c/components/Chat/ChatMessage.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=5, theme=3.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / other",
+    "repository_id": 620275636,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guy-hartstein--company-research-agent": {
+    "topics": [
+      "agents",
+      "ai",
+      "company",
+      "financial-analysis",
+      "gemini",
+      "gemini-3-flash",
+      "langchain",
+      "langgraph-python",
+      "multi-agent-systems",
+      "openai",
+      "openrouter",
+      "python",
+      "research",
+      "tavily",
+      "tavily-api",
+      "tavily-search"
+    ],
+    "homepage": "https://companyresearcher.tavily.com",
+    "archived": false,
+    "commit": "23fe92d48ea05750e6fd7cffdb78799cea5278d8",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2025-05-21"
+      ],
+      [
+        "v1.1.0",
+        "2025-08-26"
+      ],
+      [
+        "v2.0.0",
+        "2025-11-18"
+      ],
+      [
+        "2.0.1",
+        "2025-12-17"
+      ],
+      [
+        "v2.1.0",
+        "2026-07-04"
+      ],
+      [
+        "v2.2.0",
+        "2026-09-21"
+      ],
+      [
+        "v2.3.0",
+        "2026-10-16"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "docker compose up --build",
+    "install_evidence": [
+      {
+        "command": "docker compose up --build",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/README.md",
+        "line": 108
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "ui/src/App.tsx",
+        "ui/src/main.tsx",
+        "ui/src/components/ModelSelector.tsx",
+        "ui/src/types/index.ts",
+        "ui/src/styles/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#fefcf5",
+      "accent": "#2677ff",
+      "font_ui": "Suisse Intl",
+      "font_mono": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--color-background",
+        "value": "#fefcf5",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css",
+        "line": 28
+      },
+      {
+        "token": "accent",
+        "key": "--color-primary-blue",
+        "value": "#2677ff",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css",
+        "line": 34
+      },
+      {
+        "token": "font_ui",
+        "value": "Suisse Intl",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css",
+        "line": 2
+      },
+      {
+        "token": "font_mono",
+        "value": "ui-monospace, SFMono-Regular, Menlo, monospace",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css",
+        "line": 214
+      }
+    ],
+    "strings": [
+      "Generating final report...",
+      "Research completed successfully",
+      "Starting research...",
+      "Failed to start research",
+      "Failed to generate PDF",
+      "Featured",
+      "All models",
+      "Search models, e.g. claude, gpt, gemini…",
+      "Clear search",
+      "Filter by provider",
+      "Models",
+      "Prices are per 1M tokens, as listed by OpenRouter."
+    ],
+    "string_evidence": [
+      {
+        "text": "Generating final report...",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+        "line": 351,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Research completed successfully",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+        "line": 359,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Starting research...",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+        "line": 423,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Failed to start research",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+        "line": 469,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Failed to generate PDF",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+        "line": 516,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Featured",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 53,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "All models",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 54,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Search models, e.g. claude, gpt, gemini…",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 92,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Clear search",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 100,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Filter by provider",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 107,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Models",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 130,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Prices are per 1M tokens, as listed by OpenRouter.",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+        "line": 184,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/guy-hartstein/company-research-agent",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/README.md",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/package.json",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/requirements.txt",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/main.tsx",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/types/index.ts",
+      "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/styles/index.ts",
+      "https://api.github.com/repos/guy-hartstein/company-research-agent/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/README.md"
+      },
+      {
+        "path": "ui/package.json",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/package.json"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/requirements.txt"
+      },
+      {
+        "path": "ui/src/index.css",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/index.css"
+      },
+      {
+        "path": "ui/src/App.tsx",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/App.tsx"
+      },
+      {
+        "path": "ui/src/main.tsx",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/main.tsx"
+      },
+      {
+        "path": "ui/src/components/ModelSelector.tsx",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/components/ModelSelector.tsx"
+      },
+      {
+        "path": "ui/src/types/index.ts",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/types/index.ts"
+      },
+      {
+        "path": "ui/src/styles/index.ts",
+        "source": "https://github.com/guy-hartstein/company-research-agent/blob/23fe92d48ea05750e6fd7cffdb78799cea5278d8/ui/src/styles/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:20.511Z",
+      "source_count": 4,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / framework",
+    "repository_id": 931705070,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guanyang--open-agent-hub": {
+    "topics": [
+      "agents",
+      "ai-agents",
+      "ai-skills",
+      "anthropic-skills",
+      "claude-code",
+      "cli-tool",
+      "context-engineering",
+      "full-stack",
+      "planning",
+      "skills",
+      "superpowers",
+      "ui-ux-design",
+      "workflows"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "995fb11aed090d6993d210e5a41b8a62efdf8e73",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2026-01-14"
+      ],
+      [
+        "v2.0.0",
+        "2026-01-14"
+      ],
+      [
+        "v2.0.1",
+        "2026-01-15"
+      ],
+      [
+        "v2.0.2",
+        "2026-01-23"
+      ],
+      [
+        "v2.1.0",
+        "2026-01-24"
+      ],
+      [
+        "v2.2.0",
+        "2026-02-02"
+      ],
+      [
+        "v2.3.0",
+        "2026-02-09"
+      ],
+      [
+        "v2.4.0",
+        "2026-05-11"
+      ],
+      [
+        "v2.4.1",
+        "2026-06-08"
+      ],
+      [
+        "v3.0.0",
+        "2026-06-08"
+      ],
+      [
+        "v3.0.1",
+        "2026-06-24"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npx skills@latest add guanyang/open-agent-hub / npx skills@latest add guanyang/open-agent-hub --skill remotion",
+    "install_evidence": [
+      {
+        "command": "npx skills@latest add guanyang/open-agent-hub",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/README.md",
+        "line": 77
+      },
+      {
+        "command": "npx skills@latest add guanyang/open-agent-hub --skill remotion",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/README.md",
+        "line": 80
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "skills/pptx/scripts/apply_theme.js",
+        "skills/baoyu-diagram/scripts/themes.ts",
+        "skills/baoyu-diagram/scripts/theme-switch.ts",
+        "skills/docx/scripts/office/helpers/pptx_theme.py",
+        "skills/memory-systems/scripts/memory_store.py",
+        "skills/context-fundamentals/scripts/context_manager.py",
+        "skills/filesystem-context/scripts/filesystem_context.py",
+        "skills/baoyu-diagram/scripts/main.ts",
+        "skills/baoyu-imagine/scripts/main.ts",
+        "skills/brainstorming/scripts/index.js",
+        "skills/skill-creator/eval-viewer/generate_review.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#0f172a",
+      "text": "#94a3b8",
+      "accent": "#22d3ee",
+      "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--bg",
+        "value": "#0f172a",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json",
+        "line": 3
+      },
+      {
+        "token": "text",
+        "key": "--text-muted",
+        "value": "#94a3b8",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json",
+        "line": 7
+      },
+      {
+        "token": "accent",
+        "key": "--color-primary-stroke",
+        "value": "#22d3ee",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json",
+        "line": 10
+      }
+    ],
+    "strings": [
+      "--port",
+      "--skill-name",
+      "--previous-workspace",
+      "--benchmark",
+      "--static",
+      "Path to workspace directory",
+      "Server port (default: 3117)",
+      "Skill name for header",
+      "workspace"
+    ],
+    "string_evidence": [
+      {
+        "text": "--port",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 390,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--skill-name",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 391,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--previous-workspace",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 392,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--benchmark",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 396,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--static",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 400,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "Path to workspace directory",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 389,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Server port (default: 3117)",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 390,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Skill name for header",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 391,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "workspace",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+        "line": 389,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/guanyang/open-agent-hub",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/README.md",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/package.json",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/notebooklm/requirements.txt",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/package.json",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/brainstorming/scripts/package.json",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/pptx/scripts/apply_theme.js",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/themes.ts",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/theme-switch.ts",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/docx/scripts/office/helpers/pptx_theme.py",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/light.json",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/memory-systems/scripts/memory_store.py",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/context-fundamentals/scripts/context_manager.py",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/filesystem-context/scripts/filesystem_context.py",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/diagnosing-superpowers/prompts/scrub.md",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/diagnosing-superpowers/prompts/stumbles.md",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-article-illustrator/prompts/system.md",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/main.ts",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-imagine/scripts/main.ts",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/brainstorming/scripts/index.js",
+      "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py",
+      "https://api.github.com/repos/guanyang/open-agent-hub/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/package.json"
+      },
+      {
+        "path": "skills/notebooklm/requirements.txt",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/notebooklm/requirements.txt"
+      },
+      {
+        "path": "skills/baoyu-diagram/scripts/package.json",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/package.json"
+      },
+      {
+        "path": "skills/brainstorming/scripts/package.json",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/brainstorming/scripts/package.json"
+      },
+      {
+        "path": "skills/pptx/scripts/apply_theme.js",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/pptx/scripts/apply_theme.js"
+      },
+      {
+        "path": "skills/baoyu-diagram/scripts/themes.ts",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/themes.ts"
+      },
+      {
+        "path": "skills/baoyu-diagram/scripts/theme-switch.ts",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/theme-switch.ts"
+      },
+      {
+        "path": "skills/docx/scripts/office/helpers/pptx_theme.py",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/docx/scripts/office/helpers/pptx_theme.py"
+      },
+      {
+        "path": "skills/baoyu-diagram/themes/dark.json",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/dark.json"
+      },
+      {
+        "path": "skills/baoyu-diagram/themes/light.json",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/themes/light.json"
+      },
+      {
+        "path": "skills/memory-systems/scripts/memory_store.py",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/memory-systems/scripts/memory_store.py"
+      },
+      {
+        "path": "skills/context-fundamentals/scripts/context_manager.py",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/context-fundamentals/scripts/context_manager.py"
+      },
+      {
+        "path": "skills/filesystem-context/scripts/filesystem_context.py",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/filesystem-context/scripts/filesystem_context.py"
+      },
+      {
+        "path": "skills/diagnosing-superpowers/prompts/scrub.md",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/diagnosing-superpowers/prompts/scrub.md"
+      },
+      {
+        "path": "skills/diagnosing-superpowers/prompts/stumbles.md",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/diagnosing-superpowers/prompts/stumbles.md"
+      },
+      {
+        "path": "skills/baoyu-article-illustrator/prompts/system.md",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-article-illustrator/prompts/system.md"
+      },
+      {
+        "path": "skills/baoyu-diagram/scripts/main.ts",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-diagram/scripts/main.ts"
+      },
+      {
+        "path": "skills/baoyu-imagine/scripts/main.ts",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/baoyu-imagine/scripts/main.ts"
+      },
+      {
+        "path": "skills/brainstorming/scripts/index.js",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/brainstorming/scripts/index.js"
+      },
+      {
+        "path": "skills/skill-creator/eval-viewer/generate_review.py",
+        "source": "https://github.com/guanyang/open-agent-hub/blob/995fb11aed090d6993d210e5a41b8a62efdf8e73/skills/skill-creator/eval-viewer/generate_review.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=9, theme=3.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "repository_id": 1133238996,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guangxiangdebizi--financemcp": {
+    "topics": [
+      "binance",
+      "data",
+      "finance",
+      "llm",
+      "mcp",
+      "mcp-server",
+      "news",
+      "stablecoin",
+      "tushare"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guangxiangdebizi/FinanceMCP",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 980938785,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "gurpreetkaurjethra--end-to-end-generative-ai-projects": {
+    "topics": [
+      "chainlit",
+      "finetuning-llms",
+      "gemini",
+      "generative-ai",
+      "gpt4o",
+      "gradio-python-llm",
+      "huggingface",
+      "langchain",
+      "large-language-models",
+      "llama",
+      "llama-index",
+      "llama3",
+      "llama3-meta-ai",
+      "llm",
+      "llmops",
+      "lora",
+      "mergekit",
+      "mistral",
+      "openai-api",
+      "qlora"
+    ],
+    "homepage": "https://github.com/GURPREETKAURJETHRA/Generative-AI-LLM-Projects",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (unknown) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/GURPREETKAURJETHRA/END-TO-END-GENERATIVE-AI-PROJECTS",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:llmops stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 775290217,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guangshu100--bidmaster-pro": {
+    "topics": [
+      "agent-skills",
+      "agentic-workflow",
+      "ai-agent",
+      "bid-management",
+      "bidding",
+      "deepseek",
+      "mineru",
+      "procurement",
+      "rag",
+      "tender",
+      "tender-bidding"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guangshu100/BidMaster-Pro",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false",
+      "topic:ai-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1239549872,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guregodevo--memdoor": {
+    "topics": [
+      "agentic-workflows",
+      "ai-agent",
+      "coding-agent",
+      "developer-tools",
+      "golang",
+      "llm",
+      "openrouter",
+      "terminal",
+      "tui",
+      "workflow"
+    ],
+    "homepage": "https://memdoor.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guregodevo/memdoor",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:300..499 fork:false",
+      "topic:coding-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1406324573,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guanguans--ai-commit": {
+    "topics": [
+      "ai",
+      "bito",
+      "changelog",
+      "chat",
+      "chatgpt",
+      "commit",
+      "commit-message",
+      "commitizen",
+      "commitlint",
+      "conventional",
+      "conventional-commit",
+      "copilot",
+      "git",
+      "git-diff",
+      "github",
+      "gpt",
+      "keepachangelog",
+      "model",
+      "models",
+      "openai"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (PHP) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guanguans/ai-commit",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:300..499 fork:false",
+      "topic:openai stars:300..499 fork:false",
+      "topic:copilot stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 595042098,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guyernest--advanced-rag": {
+    "topics": [
+      "llm",
+      "rag"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Jupyter Notebook) → notebook / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guyernest/advanced-rag",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 863811129,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guangzhengli--vectorhub": {
+    "topics": [
+      "chatgpt",
+      "chatpdf",
+      "embedding",
+      "embeddings",
+      "gpt",
+      "gpt-3",
+      "nextjs",
+      "supabase",
+      "vector",
+      "vector-database"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guangzhengli/vectorhub",
+      "https://api.github.com/licenses/gpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 660891114,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guaardvark--guaardvark": {
+    "topics": [
+      "ai-agents",
+      "claude-code",
+      "claude-code-plugin",
+      "comfyui",
+      "computer-use",
+      "image-generation",
+      "local-ai",
+      "local-first",
+      "lora-training",
+      "mcp",
+      "mcp-server",
+      "multi-agent",
+      "music-generation",
+      "ollama",
+      "rag",
+      "self-hosted",
+      "text-to-speech",
+      "text-to-video",
+      "video-generation",
+      "voice-cloning"
+    ],
+    "homepage": "https://guaardvark.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guaardvark/guaardvark",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false",
+      "topic:ollama stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false",
+      "topic:computer-use stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1178503769,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "gustavz--datachad": {
+    "topics": [
+      "activeloop",
+      "chatbot",
+      "chatgpt",
+      "chatwithanything",
+      "chatwithpdf",
+      "embeddings",
+      "knowledge-base",
+      "langchain",
+      "openai",
+      "python",
+      "streamlit"
+    ],
+    "homepage": "https://datachad.streamlit.app/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/gustavz/DataChad",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:300..499 fork:false",
+      "topic:openai stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 638977082,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "guardana--guardana": {
+    "topics": [
+      "agent-security",
+      "ai-agents",
+      "ai-red-teaming",
+      "ai-safety",
+      "ai-security",
+      "devsecops",
+      "llm-security",
+      "mcp",
+      "ml-security",
+      "mlsecops",
+      "model-context-protocol",
+      "model-security",
+      "opentelemetry",
+      "owasp-llm",
+      "prompt-injection",
+      "python",
+      "red-teaming",
+      "sarif",
+      "security-tools",
+      "supply-chain-security"
+    ],
+    "homepage": "https://guardana.dev",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guardana/guardana",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:model-context-protocol stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1304960085,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "gustavoeenriquez--makerai": {
+    "topics": [
+      "ai-agents",
+      "claude",
+      "delphi",
+      "embeddings",
+      "fpc",
+      "free-pascal",
+      "function-calling",
+      "gemini",
+      "grok",
+      "groq",
+      "lazarus",
+      "llm",
+      "mcp-client",
+      "mcp-server",
+      "mistral",
+      "ollama",
+      "openai",
+      "pascal",
+      "rag",
+      "workflow-orchestration"
+    ],
+    "homepage": "https://www.youtube.com/@cimamaker3945",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Pascal) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/gustavoeenriquez/MakerAi",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false",
+      "topic:mcp-client stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 808346066,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "guymanndude--mnemo-cortex": {
+    "topics": [
+      "active-memory",
+      "agent-memory",
+      "ai-agents",
+      "ai-memory",
+      "chatgpt",
+      "claude",
+      "cognitive-coprocessor",
+      "context-management",
+      "llm",
+      "local-first",
+      "mcp",
+      "mcp-server",
+      "memory",
+      "open-source",
+      "openclaw",
+      "semantic-search",
+      "sidecar",
+      "sqlite"
+    ],
+    "homepage": "https://projectsparks.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/GuyMannDude/mnemo-cortex",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1173690694,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "guia-matthieu--clawfu-skills": {
+    "topics": [
+      "ai-skills",
+      "anthropic",
+      "claude-code",
+      "claude-skills",
+      "marketing",
+      "mcp-server",
+      "prompt-engineering",
+      "skills"
+    ],
+    "homepage": "https://clawfu.com",
+    "archived": true,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/guia-matthieu/clawfu-skills",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1146582975,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

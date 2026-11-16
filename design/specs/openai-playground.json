@@ -1,0 +1,1078 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openai-playground",
+  "name": "OpenAI Playground",
+  "vendor": "OpenAI",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "openai-playground-2020-06",
+      "from": "2020-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "入力と補完",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文章を入れてその続きを得る方式。公開初日の操作欄の配置はunverified。 （https://openai.com/index/openai-api/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "文章と例を入力する。 （https://openai.com/index/openai-api/）",
+        "assistant": "入力した文章の続きを返す。 （https://openai.com/index/openai-api/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "文章を受けて続きを返すAPIの試行が中心。 （https://openai.com/index/openai-api/）",
+        "unverified（6月11日当日の右側設定欄とラベル）",
+        "unverified（6月11日当日のCompleteというモード名）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/openai-api/",
+          "kind": "blog",
+          "date": "2020-06-11",
+          "shows": "入力と補完の方式・開始月。ログイン不要の製品発表で、操作画面の寸法・色は示さない。"
+        },
+        {
+          "url": "https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model",
+          "kind": "blog",
+          "date": "2020-08-25",
+          "shows": "8月時点の直接利用記録。6月初日の外観を保証しないため、別の2020-08版へ配置を記録した。"
+        },
+        {
+          "url": "https://venturebeat.com/ai/openai-launches-an-api-to-commercialize-its-research",
+          "kind": "press",
+          "date": "2020-06-11",
+          "shows": "API開始時点の報道。Playgroundの配置の証拠ではない。"
+        }
+      ],
+      "confidence": 0.3
+    },
+    {
+      "id": "openai-playground-2020-08",
+      "from": "2020-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "文章欄",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "入力文と生成された続きを同じ文章欄で扱う。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+          ]
+        },
+        {
+          "name": "生成の設定",
+          "position": "右",
+          "size": null,
+          "contents": [
+            "文章の長さ、出力のばらつき、停止条件などを調整する。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+          ]
+        },
+        {
+          "name": "操作",
+          "position": "上部と文章欄の下",
+          "size": null,
+          "contents": [
+            "上の右にモデル選択、文章欄の上に保存済み設定の選択、下に実行操作。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Submit",
+          "where": "文章欄の下",
+          "purpose": "続きを生成し、再度押すとさらに続きを追加する。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+        },
+        {
+          "label": "Load a preset",
+          "where": "文章欄の上",
+          "purpose": "保存された文章と設定を読み込む。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+        },
+        {
+          "label": "モデル",
+          "where": "上部の右",
+          "purpose": "利用するモデルを選ぶ。8月の記事ではdavinciを使用。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+        }
+      ],
+      "conversation": {
+        "user": "文章欄へ直接入力する。役割別の専用メッセージではない。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）",
+        "assistant": "同じ文章欄に続きが加わる。生成部全体が緑という主張は、この本文だけでは確認できない。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）",
+        "tool_calls": null,
+        "streaming": "通常は生成中の文章が増える。候補を複数作って最良の一つを選ぶBest Ofを1以外にすると、生成完了まで待つ。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "広い文章入力欄。正確な角丸と寸法は未確認。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "一つの文章を継ぎ足す作業面。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）",
+        "右側に生成の設定を集める。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）",
+        "保存された設定を選ぶと文章と設定の両方が置き換わる。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model",
+          "kind": "blog",
+          "date": "2020-08-25",
+          "shows": "当時の直接利用による長い説明。regions、controls、conversationの根拠。Web取得の再試行でタイムアウトした後、Node標準fetchではHTTP 200で本文を読めた。画像ファイルは取得していない。"
+        },
+        {
+          "url": "https://openai.com/index/openai-api/",
+          "kind": "blog",
+          "date": "2020-06-11",
+          "shows": "文章の補完という方式を裏付ける公式発表。8月の外観そのものの独立した観測ではない。"
+        },
+        {
+          "url": "https://venturebeat.com/ai/openai-launches-an-api-to-commercialize-its-research",
+          "kind": "press",
+          "date": "2020-06-11",
+          "shows": "API開始時点の報道。Playgroundの配置の証拠ではない。"
+        }
+      ],
+      "confidence": 0.76
+    },
+    {
+      "id": "openai-playground-2021-11",
+      "from": "2021-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "試行画面",
+          "position": null,
+          "size": null,
+          "contents": [
+            "公式発表はPlaygroundの改良を明記するが、11月18日の各欄の配置はunverified。 （https://openai.com/index/api-no-waitlist/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "指示に従うモデルやコード用モデルで試作できる。各欄の外観は未確認。 （https://openai.com/index/api-no-waitlist/）",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "改良された試行画面と、使い始めるための例文集。 （https://openai.com/index/api-no-waitlist/）",
+        "指示に従うモデルとコード用モデルが同時期の公式説明にある。 （https://openai.com/index/api-no-waitlist/）",
+        "unverified（2021年11月固有の配色・欄の構成）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/api-no-waitlist/",
+          "kind": "blog",
+          "date": "2021-11-18",
+          "shows": "改良されたPlayground、Instruct Series、Codex、例文集。ログイン不要の発表で画面の詳細はない。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-3-edit-insert/",
+          "kind": "blog",
+          "date": "2022-03-15",
+          "shows": "Insert/Editの新しいPlayground画面は後日の発表。2021-11へ遡って描かないための時点の根拠。"
+        },
+        {
+          "url": "https://venturebeat.com/ai/openai-makes-gpt-3-generally-available-through-its-api",
+          "kind": "press",
+          "date": "2021-11-18",
+          "shows": "待機リスト撤廃の同日報道。外観の証拠ではない。"
+        }
+      ],
+      "confidence": 0.32
+    },
+    {
+      "id": "openai-playground-2022-03",
+      "from": "2022-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "挿入用の入力",
+          "position": null,
+          "size": null,
+          "contents": [
+            "前の文章に加え、後ろの文章も渡して、間に入る文章を作る新しい画面。 （https://community.openai.com/t/introducing-insert-and-edits-capabilities/15993）"
+          ]
+        },
+        {
+          "name": "編集用の入力",
+          "position": null,
+          "size": null,
+          "contents": [
+            "元の文章と、どう変えるかという指示を別に指定する新しい画面。左右・上下の配置はunverified。 （https://openai.com/index/gpt-3-edit-insert/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "補完では前後の文章、編集では元の文章と変更指示を与える。 （https://openai.com/index/gpt-3-edit-insert/）",
+        "assistant": "末尾への追加だけでなく、間への挿入や既存文章の変更を返す。 （https://openai.com/index/gpt-3-edit-insert/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "文章の途中に挿入するための専用画面。 （https://community.openai.com/t/introducing-insert-and-edits-capabilities/15993）",
+        "元の文章を変更指示で書き換えるための専用画面。 （https://community.openai.com/t/introducing-insert-and-edits-capabilities/15993）",
+        "前後の文章を両方使える。 （https://openai.com/index/gpt-3-edit-insert/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-3-edit-insert/",
+          "kind": "blog",
+          "date": "2022-03-15",
+          "shows": "新しいPlayground画面の存在、挿入と編集の入力方式。切替ボタンがタブだったかは示さない。"
+        },
+        {
+          "url": "https://community.openai.com/t/introducing-insert-and-edits-capabilities/15993",
+          "kind": "changelog",
+          "date": "2022-03-15",
+          "shows": "Adam-OpenAIの公式Announcements投稿。専用UIとsuffix入力を確認。利用者の3月19日の返信は編集箇所の強調表示を要望しており、完成済み機能として扱わない。"
+        }
+      ],
+      "confidence": 0.61
+    },
+    {
+      "id": "openai-playground-2023-03",
+      "from": "2023-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "モード選択",
+          "position": "上部の右",
+          "size": null,
+          "contents": [
+            "Modeの選択をChatへ変える。 （https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886）"
+          ]
+        },
+        {
+          "name": "メッセージ編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "System、User、返答を編集して送信する。各欄の左右位置は未確認。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "上部の右のモード選択",
+          "purpose": "会話形式の入力に切り替える。 （https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886）"
+        },
+        {
+          "label": "Model",
+          "where": "設定欄",
+          "purpose": "API利用が許可されたモデルを選ぶ。 （https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886）"
+        },
+        {
+          "label": "Save",
+          "where": "場所はunverified",
+          "purpose": "初期Chatモードでは使えないという3月の直接利用報告がある。常時有効にしない。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）"
+        }
+      ],
+      "conversation": {
+        "user": "役割付きのメッセージを編集して送る。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）",
+        "assistant": "返答も編集対象として並ぶ。色・枠線は未確認。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "SystemとUserなどのメッセージを入力して試す画面。初期の空欄の件数はunverified。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）",
+      "distinctive": [
+        "上部の右の選択メニューでChatへ切り替える。 （https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886）",
+        "利用者だけでなくSystemや返答側も編集する。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）",
+        "初期Chatでは保存やコード表示が無効という報告がある。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886",
+          "kind": "blog",
+          "date": "2023-03-18",
+          "shows": "公式Communityに掲載された利用者の直接報告。3月18〜21日の返信で右上のModeとChat、Modelの操作を確認。OpenAI社員による仕様保証ではない。"
+        },
+        {
+          "url": "https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300",
+          "kind": "blog",
+          "date": "2023-03-16",
+          "shows": "利用者の直接報告。役割付き入力と保存・コード表示の無効状態。返信内のAPI解説の推測は採用しない。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-4-research/",
+          "kind": "blog",
+          "date": "2023-03-14",
+          "shows": "GPT-4のAPI/Playgroundへの提供時点。UIの寸法や色の証拠ではない。"
+        },
+        {
+          "url": "https://techcrunch.com/2023/03/14/openai-releases-gpt-4-ai-that-it-claims-is-state-of-the-art/",
+          "kind": "press",
+          "date": "2023-03-14",
+          "shows": "GPT-4のAPI待機リストの報道。外観の証拠ではない。"
+        }
+      ],
+      "confidence": 0.69
+    },
+    {
+      "id": "openai-playground-2023-11",
+      "from": "2023-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "アシスタントの設定",
+          "position": null,
+          "size": null,
+          "contents": [
+            "名前、指示、モデル、使う道具、ファイルを設定する。左配置は当該記事本文では未確認。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+          ]
+        },
+        {
+          "name": "会話と実行",
+          "position": null,
+          "size": null,
+          "contents": [
+            "作成したアシスタントへ文章を渡し、実行結果を確認する。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Create",
+          "where": "作成画面",
+          "purpose": "新しいアシスタントを作る。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+        },
+        {
+          "label": "Save",
+          "where": "設定画面",
+          "purpose": "設定を保存する。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+        },
+        {
+          "label": "Code Interpreter",
+          "where": "道具の設定",
+          "purpose": "プログラムで計算する道具を切り替える。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+        },
+        {
+          "label": "Add",
+          "where": "Functionsの欄",
+          "purpose": "呼び出す処理の定義を加える。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）"
+        }
+      ],
+      "conversation": {
+        "user": "作成したアシスタントとの会話へ文章やファイルを渡す。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）",
+        "assistant": "文章に加え、計算用コードとその結果を確認できる。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）",
+        "tool_calls": "関数の呼び出しで実行が待ち状態になり、試験用の返却値を入力して続けられる。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "アシスタントの名前・指示・道具を保存して試す。 （https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/）",
+        "計算、文書検索、外部の処理の呼び出しを設定する。 （https://openai.com/index/new-models-and-developer-products-announced-at-devday/）",
+        "会話を保持するthreadを使う。 （https://openai.com/index/new-models-and-developer-products-announced-at-devday/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/new-models-and-developer-products-announced-at-devday/",
+          "kind": "blog",
+          "date": "2023-11-06",
+          "shows": "Assistants APIと専用Playgroundの発表、threadと3つの道具。APIの128Kという数値をChatGPTの画面仕様へ流用しない。"
+        },
+        {
+          "url": "https://dev.classmethod.jp/articles/4e7a92449ab74724778e8da65fa0006bdabbe660/",
+          "kind": "blog",
+          "date": "2023-11-07",
+          "shows": "著者がPlaygroundで実際に作成・実行した説明。controlsとconversationの根拠。掲載画像の寸法や色は採用せず、本文のみ。"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "kind": "changelog",
+          "date": "2023-11-06",
+          "shows": "Assistants API公開日の変更記録。操作画面の独立した観測ではない。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "openai-playground-2024-05",
+      "from": "2024-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "アシスタントの構成",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話を保持する仕組み、文書を探すFile Search、計算の道具を扱う。5月当日の配置はunverified。 （https://help.openai.com/en/articles/8550641-assistants-api-v2-faq）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "アシスタントとの会話とファイルを扱う。 （https://help.openai.com/en/articles/8550641-assistants-api-v2-faq）",
+        "assistant": null,
+        "tool_calls": "文書検索と計算の道具を使える。ただしAPIの機能説明から個々の表示部品は断定しない。 （https://help.openai.com/en/articles/8550641-assistants-api-v2-faq）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "4月17日に文書検索などの更新が発表されている。5月がv2の初公開月ではない。 （https://developers.openai.com/api/docs/changelog）",
+        "5月9日に画像入力、5月13日にGPT-4oのAPI提供が記録される。 （https://developers.openai.com/api/docs/changelog）",
+        "unverified（5月当日のBatchというタブ・JSON Schemaのスライダー）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "kind": "changelog",
+          "date": "2024-05-13",
+          "shows": "2024-04-17、05-09、05-13の該当項目で時点を確認。配置を示す資料ではない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/8550641-assistants-api-v2-faq",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のv2説明。会話保持と道具を確認。改訂される記事なので5月当日の見た目を保証しない。"
+        },
+        {
+          "url": "https://openai.com/index/introducing-structured-outputs-in-the-api/",
+          "kind": "blog",
+          "date": "2024-08-06",
+          "shows": "JSON Schemaへの厳密な出力の発表は後の8月。5月版へ遡及しないための根拠。"
+        }
+      ],
+      "confidence": 0.38
+    },
+    {
+      "id": "openai-playground-2024-10",
+      "from": "2024-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "ナビゲーション",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "Realtimeを選んで音声の試行画面を開く。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+          ]
+        },
+        {
+          "name": "音声の設定",
+          "position": null,
+          "size": null,
+          "contents": [
+            "指示、声、発言終了の自動検知、関数、出力のばらつきと最大長を設定する。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+          ]
+        },
+        {
+          "name": "指示の拡大編集",
+          "position": "重ねて開く画面",
+          "size": null,
+          "contents": [
+            "指示欄の右下の操作から開く。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Realtime",
+          "where": "左の一覧",
+          "purpose": "音声会話の試行画面を開く。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+        },
+        {
+          "label": "Generate",
+          "where": "指示の編集画面の右上",
+          "purpose": "入力した要望から指示文を作る。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+        },
+        {
+          "label": "Voice",
+          "where": "設定欄",
+          "purpose": "10月4日の実測ではAlloy、Echo、Shimmerから選び、右側の再生操作で試聴する。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+        },
+        {
+          "label": "Voice activity",
+          "where": "発言終了の設定",
+          "purpose": "発言の終わりを自動検知する。無効時は画面下部の操作で開始と終了を扱う。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+        }
+      ],
+      "conversation": {
+        "user": "声で入力し、自動検知を切ったときは手動で発言区間を決める。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+        "assistant": "音声で返答する。会話本文の枠や吹き出しの形はunverified。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+        "tool_calls": "設定欄で呼び出す処理を加えられる。実行中の表示様式はunverified。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+        "streaming": "音声の入出力を逐次送受信する。 （https://openai.com/index/introducing-the-realtime-api/）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の一覧から入る専用の音声試行画面。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+        "声の試聴と、発言終了の自動検知の切替。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+        "指示を別画面で広げ、要望から生成できる。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-the-realtime-api/",
+          "kind": "blog",
+          "date": "2024-10-01",
+          "shows": "Realtime公開とWebSocket接続、音声の逐次送受信。Playgroundの具体的なメニューとは分ける。"
+        },
+        {
+          "url": "https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/",
+          "kind": "blog",
+          "date": "2024-10-04",
+          "shows": "当時の直接利用による説明。regionsとcontrolsの根拠。本文・説明だけを読み、埋め込み動画のフレームは使用していない。"
+        },
+        {
+          "url": "https://www.axios.com/2024/10/01/chatgpt-developers-ai-voice-engine",
+          "kind": "press",
+          "date": "2024-10-01",
+          "shows": "音声API公開の同日報道。Playgroundの配置は示さない。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "openai-playground-2025-03",
+      "from": "2025-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "Responsesの試行",
+          "position": null,
+          "size": null,
+          "contents": [
+            "回答と道具の呼び出しを扱うAPIをPlaygroundで試せる。3月11日の配置はunverified。 （https://openai.com/index/new-tools-for-building-agents/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "文章を入力して試す。 （https://openai.com/index/new-tools-for-building-agents/）",
+        "assistant": "回答に加え、道具の呼び出しを含む出力を扱う。 （https://openai.com/index/new-tools-for-building-agents/）",
+        "tool_calls": "Web検索や文書検索などを試す。全モデルで全て使えるという意味ではない。 （https://openai.com/index/new-tools-for-building-agents/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Responses APIを試す画面。 （https://openai.com/index/new-tools-for-building-agents/）",
+        "回答以外に道具の呼び出しも扱う。 （https://openai.com/index/new-tools-for-building-agents/）",
+        "unverified（3月時点のPrompts・Versions・Variablesタブ）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/new-tools-for-building-agents/",
+          "kind": "blog",
+          "date": "2025-03-11",
+          "shows": "Responsesの公開とTry in Playground。配置・色は示さない。"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "kind": "changelog",
+          "date": "2025-06-13",
+          "shows": "再利用できる版付きPromptsは6月13日の別更新。3月の名前と画面へ遡らせない。"
+        }
+      ],
+      "confidence": 0.36
+    },
+    {
+      "id": "openai-playground-2025-06",
+      "from": "2025-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "保存する指示と設定",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文章、道具の定義、モデル設定を一組として保存し、版と差し替え用の変数を扱う。左右配置はunverified。 （https://community.openai.com/t/enhanced-prompt-management/1290305）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Optimize",
+          "where": "Promptsの試行画面",
+          "purpose": "矛盾した指示や曖昧な書式などを見直す案を作る。 （https://community.openai.com/t/enhanced-prompt-management/1290305）"
+        }
+      ],
+      "conversation": {
+        "user": "使い回す文章と差し替える値を設定する。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+        "assistant": null,
+        "tool_calls": "呼び出す道具の定義も保存する設定に含める。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "文章と道具とモデル設定を一組で保存。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+        "版と変数を持つ。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+        "以前のPresetsを取り込める。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+        "指示文の見直しを助ける操作が加わる。 （https://community.openai.com/t/enhanced-prompt-management/1290305）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://community.openai.com/t/enhanced-prompt-management/1290305",
+          "kind": "changelog",
+          "date": "2025-06-16",
+          "shows": "OpenAIの公式Announcements投稿。Prompts Playground改修、版、変数、Optimize、Presets移行。"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "kind": "changelog",
+          "date": "2025-06-13",
+          "shows": "dashboardとResponses APIの再利用可能Promptsの追加日。カタログの6月11日を追認しない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/9824968-prompt-management-in-playground",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在の説明ではPublish、History、Link Eval等を確認できるが、初期6月の正確な部品と配置の根拠には使わない。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "openai-playground-2026-06",
+      "from": "2026-06",
+      "to": null,
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "unverified（2026年6月15日の外観変更）",
+        "unverified（Prompts・Responses・Agents Trace・Evalsという4つのタブ）",
+        "unverified（右側に常設の処理時間一覧と下部の状態バー）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "公式や利用者の画面画像・生成結果の長い文章・独自の例文以外のサンプル",
+        "非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/9824968-prompt-management-in-playground",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のPrompts操作を示す背景資料。2026-06-15の画面の観測資料ではない。"
+        },
+        {
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "kind": "changelog",
+          "date": null,
+          "shows": "6月15日のPlayground外観変更という一致項目は確認できず。APIの変更から外観を推定しない。"
+        },
+        {
+          "url": "https://platform.openai.com/playground",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のPlayground URLを取得したが読める本文は0行。ログイン後の画面や過去の配置の根拠は得られない。"
+        }
+      ],
+      "confidence": 0.08
+    }
+  ],
+  "corrections": [
+    "2020年のモデル選択を常に右側の設定欄とするのは不正確。8月の直接利用記録ではモデル選択は上部の右、生成の設定は右側、保存済み設定は文章欄の上。6月初日はunverified。 （https://www.twilio.com/en-us/blog/developers/ultimate-guide-openai-gpt-3-language-model）",
+    "2021-11の描画にあるInsert/Editとcode-davinci-002を戻す。専用画面とそのモデル名の発表は2022-03-15。 （https://openai.com/index/gpt-3-edit-insert/）",
+    "2023-03はModeの選択メニューでChatへ切り替える記録がある。Complete/Chat/Editの常設タブという描画はunverified。 （https://community.openai.com/t/gpt-4-not-visible-in-the-api-playground-even-though-i-have-been-invited-for-the-limited-beta/105886）",
+    "2023-03のSave/View codeを常に有効にしない。初期のChatで灰色だったという直接利用報告がある。 （https://community.openai.com/t/chat-mode-in-playground-has-load-save-view-code-grayed-out/102300）",
+    "2023-11に温度設定を当然のように置かない。Assistantsのtemperature追加は公式記録で2024-03-29。 （https://developers.openai.com/api/docs/changelog）",
+    "2024-05のBatchタブやJSON Schemaスライダーはunverified。厳密なJSON Schema出力の発表は2024-08-06。数値のつまみではない。 （https://openai.com/index/introducing-structured-outputs-in-the-api/）",
+    "2024-10をWebRTC公開時の画面と呼ばない。10月1日の発表はWebSocketを説明している。 （https://openai.com/index/introducing-the-realtime-api/）",
+    "2024-10の声をAlloy/Coral/Verseの3つで固定しない。10月4日の直接利用記録はAlloy/Echo/Shimmer。310msという固定値やバッファのメーターはunverified。 （https://dev.classmethod.jp/articles/openai-realtime-api-on-playground/）",
+    "2025-03のPrompts・Versions・Variablesは6月の更新との混同。6月11日という開始日も未確認で、6月13日の記録と6月16日の発表に分ける。 （https://community.openai.com/t/enhanced-prompt-management/1290305）",
+    "2026-06のAgents Trace常設分割・MCP表示・xhighバッジ・下部状態バーはunverified。現在の操作説明やAPI機能だけで画面を作らない。 （https://help.openai.com/en/articles/9824968-prompt-management-in-playground）"
+  ]
+}

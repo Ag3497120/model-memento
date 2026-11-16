@@ -1,0 +1,956 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "zed",
+  "name": "Zed",
+  "vendor": "Zed Industries",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "zed-2024-05-macos",
+      "from": "2024-05",
+      "to": "2024-08",
+      "regions": [
+        {
+          "name": "ファイル一覧",
+          "position": "left",
+          "size": "240px",
+          "contents": [
+            "プロジェクトのファイルとフォルダ"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のコード編集"
+          ]
+        },
+        {
+          "name": "Assistant",
+          "position": "right",
+          "size": "640px",
+          "contents": [
+            "会話全体を編集する文章ブロック",
+            "役割の見出しとモデル選択"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "Assistant内のメニュー。原文New Context",
+          "purpose": "新しい文章型の会話を作る"
+        },
+        {
+          "label": "モデル選択",
+          "where": "Assistant",
+          "purpose": "使うモデルを切り替える"
+        },
+        {
+          "label": "送信",
+          "where": "Cmd+Enter",
+          "purpose": "Youのブロックを送る"
+        },
+        {
+          "label": "停止",
+          "where": "Escape",
+          "purpose": "応答の生成を止める"
+        }
+      ],
+      "conversation": {
+        "user": "Youという見出しの文章ブロック。過去の質問も編集できる",
+        "assistant": "Assistantの見出しの下に文章を表示。回答も通常の文章として編集できる",
+        "tool_calls": null,
+        "streaming": "Assistantブロックへ回答を順に追加。Escapeで止める"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#ebebec",
+          "text": "#383a41",
+          "muted": "#7e8087",
+          "accent": "#5c78e2",
+          "border": "#c9c9ca",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#282c33",
+          "panel": "#2f343e",
+          "text": "#c8ccd4",
+          "muted": "#838994",
+          "accent": "#74ade8",
+          "border": "#464b57",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "light.panel": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "light.text": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "light.muted": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "light.accent": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "light.border": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.bg": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.panel": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.text": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.muted": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.accent": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "dark.border": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json"
+        }
+      },
+      "typography": {
+        "ui_named": ".SystemUIFont",
+        "mono_named": "Zed Mono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "会話と入力を分離せず、Youの文章ブロックへ直接書く"
+      },
+      "empty_state": "初回はOpenAIのAPIキー設定。会話では空のYouブロックに書き始める。",
+      "distinctive": [
+        "会話全体が編集できる文章",
+        "You・Assistant・Systemの役割見出し",
+        "Enterは改行、Cmd+Enterが送信",
+        "右ドックの広いAssistant"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/docs/src/assistant-panel.md",
+          "kind": "official-doc",
+          "date": "2024-05-29",
+          "shows": "regions・controls・conversation・empty_state・shape: 右ドックのAssistant。You/Assistant/Systemの文章ブロック。モデル選択と残り文字量に相当するトークン数、Cmd+Enterで送信、Escapeで停止、過去の文章も編集可能。New Contextと履歴。初回はAPIキー設定。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/settings/default.json",
+          "kind": "oss-source",
+          "date": "2024-05-29",
+          "shows": "regions・typography: 固定ソースの既定設定。ペインの幅と左右位置、UIと編集面の書体名。利用者は変更でき、配布版での実測ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json",
+          "kind": "oss-source",
+          "date": "2024-05-29",
+          "shows": "palette: 同梱One Dark/One Lightの色。bgはeditor.background、panelはpanel.background、text/muted/accent/borderはtext/text.muted/text.accent/border。末尾ffは完全不透明なので省略。会話専用の吹き出し色とはみなさない。"
+        },
+        {
+          "url": "https://zed.dev/blog/assistant",
+          "kind": "blog",
+          "date": "2023-06-28",
+          "shows": "conversation・distinctiveの来歴: 0.92で会話を文章として編集するAssistantを導入。Youの場所からCmd+Enterで送信し、下へ応答を順に表示。Escapeで停止。初回はOpenAI APIキー。2024年5月より前の資料。"
+        }
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "zed-2024-08-macos",
+      "from": "2024-08",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "ファイル一覧",
+          "position": "left",
+          "size": "240px",
+          "contents": [
+            "プロジェクトのファイルとフォルダ"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "Ctrl+Enterから選択部分を変更"
+          ]
+        },
+        {
+          "name": "Assistant",
+          "position": "right",
+          "size": "640px",
+          "contents": [
+            "編集可能な会話",
+            "文脈を折り畳んで表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ファイルを添える",
+          "where": "Assistantの/file",
+          "purpose": "ファイルやフォルダを会話へ取り込む"
+        },
+        {
+          "label": "タブを添える",
+          "where": "Assistantの/tab",
+          "purpose": "開いたファイルを取り込む"
+        },
+        {
+          "label": "選択部分を変更",
+          "where": "Ctrl+Enter",
+          "purpose": "選んだコードを自然な言葉の依頼で変更する"
+        },
+        {
+          "label": "新しい会話",
+          "where": "AssistantのNew Context",
+          "purpose": "会話を新しく作る"
+        }
+      ],
+      "conversation": {
+        "user": "Youという見出しの文章ブロック。過去の質問も編集できる",
+        "assistant": "Assistantの見出しの下に文章を表示。回答も通常の文章として編集できる",
+        "tool_calls": "slash commandで取り込んだ文脈を、展開できる折り畳みの文章として表示。現在のAgentの道具カードとは区別する",
+        "streaming": "会話の応答を順に表示し、インライン変換も小さな変更を順に反映する"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#ebebec",
+          "text": "#383a41",
+          "muted": "#7e8087",
+          "accent": "#5c78e2",
+          "border": "#c9c9ca",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#282c33",
+          "panel": "#2f343e",
+          "text": "#c8ccd4",
+          "muted": "#838994",
+          "accent": "#74ade8",
+          "border": "#464b57",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "light.panel": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "light.text": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "light.muted": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "light.accent": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "light.border": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.bg": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.panel": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.text": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.muted": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.accent": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "dark.border": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json"
+        }
+      },
+      "typography": {
+        "ui_named": "Zed Plex Sans",
+        "mono_named": "Zed Plex Mono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "会話の文章内に直接入力し、取り込んだ文脈を折り畳む"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話・コード・文脈を同じ文章として編集",
+        "/fileなどの文脈を折り畳み表示",
+        "Ctrl+Enterのインライン変換",
+        "既定の書体がZed Plex系"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://zed.dev/blog/zed-ai",
+          "kind": "blog",
+          "date": "2024-08-20",
+          "shows": "regions・controls・conversation・distinctive: Assistantは全会話を編集できる文章の編集面。/file・/tab・/terminal等の文脈は折り畳み表示。Ctrl+Enterのインライン変換は変更を順に表示する。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/docs/src/assistant/assistant-panel.md",
+          "kind": "official-doc",
+          "date": "2024-08-20",
+          "shows": "controls・conversation・shape: You/Assistant/System、モデル選択、Cmd+Enter送信、Escape停止、New Context。会話全体を編集できる。右ドックを開く操作。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/settings/default.json",
+          "kind": "oss-source",
+          "date": "2024-08-20",
+          "shows": "regions・typography: 固定ソースの既定設定。ペインの幅と左右位置、UIと編集面の書体名。利用者は変更でき、配布版での実測ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json",
+          "kind": "oss-source",
+          "date": "2024-08-20",
+          "shows": "palette: 同梱One Dark/One Lightの色。bgはeditor.background、panelはpanel.background、text/muted/accent/borderはtext/text.muted/text.accent/border。末尾ffは完全不透明なので省略。会話専用の吹き出し色とはみなさない。"
+        }
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "zed-2025-04-macos",
+      "from": "2025-04",
+      "to": "2025-05",
+      "regions": [
+        {
+          "name": "刷新されたAssistant Panel",
+          "position": null,
+          "size": null,
+          "contents": [
+            "AIへの依頼と自律的なコード変更"
+          ]
+        },
+        {
+          "name": "変更のレビュー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "複数ファイルの変更をひとつの編集可能な作業面で確認"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "変更を残す・戻す",
+          "where": "変更のレビュー。正確な原文ラベルは未確認",
+          "purpose": "AIによる変更を保持するか元へ戻す"
+        },
+        {
+          "label": "保存点へ戻す",
+          "where": "会話のチェックポイント。正確な位置は未確認",
+          "purpose": "会話途中で作られた保存点の状態へ戻す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "刷新されたAssistant Panelのbeta",
+        "複数ファイルの変更を編集できる作業面でまとめて確認",
+        "会話の途中の保存点へ戻せる",
+        "道具の設定をまとめるProfilesと.rules"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20250331193917id_/https://zed.dev/ai/agent",
+          "kind": "archive",
+          "date": "2025-03-31",
+          "shows": "regions・controls・distinctive: 当時の公式beta募集ページの保存本文。刷新されたAssistant Panel、変更を編集できるmultibufferで保持・差戻し、会話のチェックポイント、Profiles・MCP・.rulesを案内。掲載画像は使わず、左右・幅・色・書体・正確なボタン文言は確認しない。"
+        },
+        {
+          "url": "https://github.com/zed-industries/zed/discussions/24028",
+          "kind": "official-doc",
+          "date": "2025-03-31",
+          "shows": "distinctiveと確認範囲: Zedの担当者がAgentic Editingのbeta参加受付を案内。4月23日の完成した画面配置やラベルの証拠にはならない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/2124b7ea998a949b2a5e4bdc1f12bb5275d636c2/docs/src/assistant/assistant-panel.md",
+          "kind": "official-doc",
+          "date": "2025-04-23",
+          "shows": "確認範囲: 同日までの公開ソースの説明書は従来の文章型Assistantを説明している。カタログのAgentic Editing betaの固有画面へ流用しない。"
+        },
+        {
+          "url": "https://zed.dev/blog/fastest-ai-code-editor",
+          "kind": "blog",
+          "date": "2025-05-07",
+          "shows": "regions・controls・conversation・distinctive: AgentへEnterで送信。コマンド許可、回答後の評価、編集可能なReview Changesの横断差分、モデル選択、Write/Ask/Minimalの道具設定。5月の一般公開であり、4月betaの形を確定しない。"
+        }
+      ],
+      "confidence": 0.57
+    },
+    {
+      "id": "zed-2025-05",
+      "from": "2025-05",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "Agent Panel",
+          "position": null,
+          "size": null,
+          "contents": [
+            "依頼と応答",
+            "コマンドの許可",
+            "モデルと道具設定の選択"
+          ]
+        },
+        {
+          "name": "変更のレビュー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Review Changesで複数ファイルの差分をひとつの編集面に表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "変更を確認",
+          "where": "Review Changes",
+          "purpose": "複数ファイルの差分をまとめて開く"
+        },
+        {
+          "label": "道具の設定を選ぶ",
+          "where": "Profilesの選択",
+          "purpose": "Write・Ask・Minimalを切り替える"
+        },
+        {
+          "label": "モデル選択",
+          "where": "Agent Panelの選択欄",
+          "purpose": "応答に使うモデルを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "Agentへ依頼を入力しEnterで送信",
+        "assistant": "応答と作業結果。応答の末尾に良い・悪いの評価操作",
+        "tool_calls": "コマンド実行時に許可を求める。道具の一覧で有効・無効を変更できる",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "会話用の依頼欄からEnterで送る。旧Assistantの文章全体編集とは別の流れ"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Agent PanelとEnter送信",
+        "編集できる横断差分のReview Changes",
+        "Write・Ask・Minimal",
+        "応答末尾の評価とコマンド許可"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://zed.dev/blog/fastest-ai-code-editor",
+          "kind": "blog",
+          "date": "2025-05-07",
+          "shows": "regions・controls・conversation・distinctive: AgentへEnterで送信。コマンド許可、回答後の評価、編集可能なReview Changesの横断差分、モデル選択、Write/Ask/Minimalの道具設定。5月の一般公開であり、4月betaの形を確定しない。"
+        },
+        {
+          "url": "https://zed.dev/ai",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行のログイン前の製品紹介。編集可能な統合差分での受入・拒否という流れを補助確認する。5月7日の固定配置・色の根拠にはしない。2026-11-15取得。"
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "zed-2025-09-macos",
+      "from": "2025-09",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "ファイル一覧",
+          "position": "left",
+          "size": "240px",
+          "contents": [
+            "プロジェクトのファイル"
+          ]
+        },
+        {
+          "name": "コード編集とレビュー",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "複数ファイルの変更を横断表示"
+          ]
+        },
+        {
+          "name": "Agent Panel",
+          "position": "right",
+          "size": "640px",
+          "contents": [
+            "会話",
+            "Agent別のスレッド",
+            "変更一覧と入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "別のAgentで新しい会話",
+          "where": "Agent Panel右上の+",
+          "purpose": "Claude CodeやGemini CLIのスレッドを始める"
+        },
+        {
+          "label": "変更を確認",
+          "where": "入力欄の上のReview Changes",
+          "purpose": "横断差分を開く"
+        },
+        {
+          "label": "道具の設定を選ぶ",
+          "where": "入力付近のProfiles",
+          "purpose": "Write・Ask・Minimalなどを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "編集できる質問カード。外部Agentでは対応状況に違いがある",
+        "assistant": "会話の本文と進行を順に表示",
+        "tool_calls": "呼び出す道具の表示。外部Agentの出力もネイティブの会話面で扱う",
+        "streaming": "応答と道具の実行表示を順に追加する"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#ebebec",
+          "text": "#242529",
+          "muted": "#58585a",
+          "accent": "#5c78e2",
+          "border": "#c9c9ca",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#282c33",
+          "panel": "#2f343e",
+          "text": "#dce0e5",
+          "muted": "#a9afbc",
+          "accent": "#74ade8",
+          "border": "#464b57",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "light.panel": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "light.text": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "light.muted": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "light.accent": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "light.border": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.bg": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.panel": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.text": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.muted": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.accent": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "dark.border": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json"
+        }
+      },
+      "typography": {
+        "ui_named": ".ZedSans",
+        "mono_named": ".ZedMono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "下部の複数行の依頼欄。必要なら入力面を拡大できる"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "右上の+から外部Agentを選ぶ",
+        "Claude CodeとGemini CLIをネイティブ会話面で扱う",
+        "変更一覧から横断差分へ進む",
+        "旧文章型のText Threadも別の選択肢"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md",
+          "kind": "official-doc",
+          "date": "2025-09-16",
+          "shows": "regions・controls・conversation・shape: 右上の+でAgent別の新規スレッド。下の入力でEnter送信、応答と道具の実行状況を順に表示。入力上の変更一覧とReview Changes、質問カードの再編集、Write/Ask/Minimal。外部Agentには履歴・モデル選択などの制限がある。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md",
+          "kind": "official-doc",
+          "date": "2025-09-16",
+          "shows": "controls・distinctive: Gemini CLIとClaude CodeのスレッドをAgent Panel右上の+から作る。認証を選ぶ。Codexの標準項目やClaude Sonnet 4.5の既定表示はこの版では確認しない。"
+        },
+        {
+          "url": "https://zed.dev/blog/claude-code-via-acp",
+          "kind": "blog",
+          "date": "2025-09-03",
+          "shows": "regions・distinctive: Claude CodeがZedのAgent Panelへ統合。作業リストを横へ固定し、変更箇所の横断表示で小さな変更ごとに受入・拒否する。右上のPlusメニューから選ぶ。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/settings/default.json",
+          "kind": "oss-source",
+          "date": "2025-09-16",
+          "shows": "regions・typography: 固定ソースの既定設定。ペインの幅と左右位置、UIと編集面の書体名。利用者は変更でき、配布版での実測ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json",
+          "kind": "oss-source",
+          "date": "2025-09-16",
+          "shows": "palette: 同梱One Dark/One Lightの色。bgはeditor.background、panelはpanel.background、text/muted/accent/borderはtext/text.muted/text.accent/border。末尾ffは完全不透明なので省略。会話専用の吹き出し色とはみなさない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "zed-2026-04",
+      "from": "2026-04",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "Threads Sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "プロジェクト別のスレッド一覧"
+          ]
+        },
+        {
+          "name": "Agent Panel",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "選択中の会話。Threads Sidebarの隣"
+          ]
+        },
+        {
+          "name": "ファイル・Git",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "Project PanelとGit Panel"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイル編集。Agent Panelの全画面表示も可能"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "Threads Sidebar",
+          "purpose": "プロジェクトに属する会話を作る"
+        },
+        {
+          "label": "停止",
+          "where": "Threads Sidebar",
+          "purpose": "実行中の会話を止める"
+        },
+        {
+          "label": "保管",
+          "where": "Threads Sidebar",
+          "purpose": "使い終えた会話を保管する"
+        },
+        {
+          "label": "一覧を開く",
+          "where": "macOSではOption+Cmd+J",
+          "purpose": "Threads Sidebarを開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Threads Sidebarでプロジェクト別に会話を一覧",
+        "Agent Panelと会話一覧が左へ移動",
+        "Project PanelとGit Panelは右",
+        "既存利用者は新配置を選んで使う"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://zed.dev/blog/parallel-agents",
+          "kind": "blog",
+          "date": "2026-04-22",
+          "shows": "regions・controls・distinctive: 新しいThreads Sidebarでプロジェクト別に会話を一覧し、新規作成・停止・保管を行う。既定ではThreads SidebarとAgent Panelを左、Project/Git Panelを右へ配置。既存利用者は任意で新配置へ変更する。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/parallel-agents.md",
+          "kind": "official-doc",
+          "date": "2026-11-04",
+          "shows": "補助資料: 同名のThreads Sidebarとプロジェクト別管理が後の固定説明書にも残る。4月22日の寸法・追加機能を遡及する証拠にはしない。"
+        }
+      ],
+      "confidence": 0.76
+    },
+    {
+      "id": "zed-2026-11-macos",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "Threads Sidebar",
+          "position": "left",
+          "size": "300px",
+          "contents": [
+            "プロジェクト別のAgent・ターミナルのスレッド"
+          ]
+        },
+        {
+          "name": "Agent Panel",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "会話と入力。既定は比率に応じて幅が変わる"
+          ]
+        },
+        {
+          "name": "コード編集とレビュー",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルと横断差分"
+          ]
+        },
+        {
+          "name": "ファイル・Git",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "Project PanelとGit Panel。Projectの既定幅は240px"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しいスレッド",
+          "where": "空画面の左のAgent選択または右上の+",
+          "purpose": "Zed Agent・外部Agent・Terminalを選ぶ"
+        },
+        {
+          "label": "途中で指示",
+          "where": "生成中の入力の待ち列。原文Steer",
+          "purpose": "Zed Agentへ次の区切りで指示を渡す"
+        },
+        {
+          "label": "変更を確認",
+          "where": "入力欄の上のReview Changes",
+          "purpose": "複数ファイルの差分をまとめて開く"
+        },
+        {
+          "label": "ターミナルのスレッド",
+          "where": "New ThreadメニューのTerminal",
+          "purpose": "本文領域にターミナルを開く"
+        }
+      ],
+      "conversation": {
+        "user": "再編集できる質問カード。生成中の追加指示は待ち列へ入る",
+        "assistant": "会話本文。右クリックでコピーや文章形式で開く操作がある",
+        "tool_calls": "使用中の道具を示し、応答とともに順に表示する",
+        "streaming": "生成中の追加メッセージを待ち列へ表示。Zed AgentではSteerで早めに渡せる"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#ebebec",
+          "text": "#242529",
+          "muted": "#58585a",
+          "accent": "#5c78e2",
+          "border": "#c9c9ca",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#282c33",
+          "panel": "#2f343e",
+          "text": "#dce0e5",
+          "muted": "#a9afbc",
+          "accent": "#74ade8",
+          "border": "#464b57",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "light.panel": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "light.text": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "light.muted": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "light.accent": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "light.border": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.bg": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.panel": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.text": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.muted": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.accent": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "dark.border": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json"
+        }
+      },
+      "typography": {
+        "ui_named": ".ZedSans",
+        "mono_named": ".ZedMono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "下部の依頼欄。幅が広い場合は内容の最大幅を設けて中央へ寄せる"
+      },
+      "empty_state": "空の会話の左側にAgentを選ぶ操作があり、右上の+からも新しいスレッドを始められる。正確な歓迎文は未確認。",
+      "distinctive": [
+        "プロジェクト別のThreads Sidebar",
+        "Agentとターミナルのスレッドを同じ一覧で管理",
+        "左のAgent Panelと右のファイル・Git",
+        "生成中の指示の待ち列とSteer",
+        "幅が変わるAgent Panel"
+      ],
+      "must_not_copy": [
+        "Zedのロゴ・アプリアイコン・独自の印",
+        "公式の画面画像・宣伝画像・動画フレーム",
+        "同梱の書体ファイル・画面例にある他社ロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+          "kind": "official-doc",
+          "date": "2026-11-04",
+          "shows": "controls・conversation・empty_state・shape: 空の会話では左のAgent選択、右上の+からNew Thread。Enter送信、道具の実行状況、編集可能な質問カード、入力の待ち列とSteer。Review Changesで横断差分。Terminalを新規スレッドとして選べる。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/parallel-agents.md",
+          "kind": "official-doc",
+          "date": "2026-11-04",
+          "shows": "regions・controls・distinctive: プロジェクト別のThreads Sidebar、会話ごとのAgentと作業フォルダ、必要時の作業用コピー分離。Agentのスレッドとターミナルのスレッドは同じ一覧に並ぶ。4月時点の寸法は示さない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/settings/default.json",
+          "kind": "oss-source",
+          "date": "2026-11-04",
+          "shows": "regions・typography: 固定ソースの既定設定。ペインの幅と左右位置、UIと編集面の書体名。利用者は変更でき、配布版での実測ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json",
+          "kind": "oss-source",
+          "date": "2026-11-04",
+          "shows": "palette: 同梱One Dark/One Lightの色。bgはeditor.background、panelはpanel.background、text/muted/accent/borderはtext/text.muted/text.accent/border。末尾ffは完全不透明なので省略。会話専用の吹き出し色とはみなさない。"
+        },
+        {
+          "url": "https://zed.dev/blog/parallel-agents",
+          "kind": "blog",
+          "date": "2026-04-22",
+          "shows": "regions・controls・distinctive: 新しいThreads Sidebarでプロジェクト別に会話を一覧し、新規作成・停止・保管を行う。既定ではThreads SidebarとAgent Panelを左、Project/Git Panelを右へ配置。既存利用者は任意で新配置へ変更する。"
+        },
+        {
+          "url": "https://zed.dev/blog/terminal-threads",
+          "kind": "blog",
+          "date": "2026-05-20",
+          "shows": "regions・controls・distinctive: 新規スレッドの+メニューからTerminalを選ぶと、Agent Panel本文がターミナルになり、Threads Sidebarに独立した項目が現れる。5月追加なので4月の版へ遡らせない。"
+        }
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "corrections": [
+    "2024年5月をZed AIサービスの公開月にしない。文章型Assistantは2023年6月から存在し、Zed AIの公開は2024年8月20日。https://zed.dev/blog/assistant https://zed.dev/blog/zed-ai",
+    "2024年5月の描画にある別枠のチャット入力や/file・/tab・/diagnostics常設バーを当時の確定UIにしない。固定説明書はYouの文章ブロックへ直接入力する。5月のslash command群は今回未確認。https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/docs/src/assistant-panel.md",
+    "2024年8月のPrompt Library Drawerという固定の引出し、3つの既成ワークフロー、Anthropic Fast Edit状態表示はunverified。公式の中核は編集可能な会話・文脈の折り畳み・Ctrl+Enter変換。https://zed.dev/blog/zed-ai",
+    "zed-2025-04-macosはbeta期。3月31日の保存された公式募集文から横断差分と会話の保存点は確認できたが、左右配置・寸法・色・書体は未確認。一般公開は別版の5月7日として扱う。https://web.archive.org/web/20250331193917id_/https://zed.dev/ai/agent https://zed.dev/blog/fastest-ai-code-editor",
+    "2025年9月の外部Agent選択は右上の+から新規スレッドを作る操作。常設のACP JSON-RPC Stream表やclaude --acpのコマンド欄は裏付けがない。9月16日のCodex標準項目とClaude Sonnet 4.5表示はunverified。https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md",
+    "2026年の左右配置は4月22日のParallel Agentsで変化した。左のThreads SidebarとAgent Panel、右のProject/Gitを記録し、2025年へ戻して適用しない。https://zed.dev/blog/parallel-agents",
+    "描画コードのGPU 120 FPSやJSON-RPC Connectedは性能や内部の仕組みを画面の常設ラベルに変えたもの。固定設定・説明書にはその状態バーを確認できずunverified。https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+    "2026年11月のPinned、共同参加者3人のバー、Zeta 2の差分バッジ、DeltaDBのUIは今回の固定説明書では確認できない。再描画の必須要素にしない。https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/parallel-agents.md",
+    "既定書体は時期で異なる。2024年5月は.SystemUIFont/Zed Mono、8月はZed Plex Sans/Mono、2025年9月は.ZedSans/.ZedMono。現行サイトの書体や一律の書体を全版に使わない。https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/settings/default.json https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/settings/default.json https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/settings/default.json"
+  ]
+}

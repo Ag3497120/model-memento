@@ -1,0 +1,1467 @@
+{
+  "ccch1mneyyy--dsh-go": {
+    "topics": [
+      "ai-agent",
+      "android",
+      "android-app",
+      "coding-agent",
+      "deepseek",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin",
+      "dsh-tui",
+      "flutter",
+      "llm"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "0cf6efab9fa255d73a3310bd84bab6746e50a07c",
+    "classification_basis": "Topics, README introduction, language (Dart) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.1",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.2",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.3",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.4",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.5",
+        "2026-10-31"
+      ],
+      [
+        "v1.0.6",
+        "2026-10-31"
+      ],
+      [
+        "v1.0.7",
+        "2026-10-31"
+      ],
+      [
+        "v1.0.8",
+        "2026-11-01"
+      ],
+      [
+        "v1.0.9",
+        "2026-11-02"
+      ],
+      [
+        "v1.0.10",
+        "2026-11-03"
+      ],
+      [
+        "v1.0.11",
+        "2026-11-05"
+      ],
+      [
+        "v1.0.12",
+        "2026-11-06"
+      ],
+      [
+        "v1.0.13",
+        "2026-11-07"
+      ],
+      [
+        "v1.0.14",
+        "2026-11-09"
+      ],
+      [
+        "v1.0.15",
+        "2026-11-10"
+      ],
+      [
+        "v1.0.16",
+        "2026-11-13"
+      ],
+      [
+        "v1.1.0",
+        "2026-11-15"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "app/tool/pet_theme_convert.py",
+        "app/tool/test_pet_theme_convert.py",
+        "app/assets/skills/pet-theme/pet_theme_convert.py",
+        "runtime/bridge/dsh-go-bridge/lib/companion/full-context.js",
+        "runtime/bridge/dsh-go-bridge/lib/companion/prompt-context.js",
+        "runtime/bridge/dsh-go-bridge/lib/companion/recall-context.js",
+        "app/tool/l10n_scan.py",
+        "app/tool/guide_sync.py",
+        "app/tool/l10n_merge.py",
+        "sdk/plugin-kit/lib/index.js",
+        "services/share-worker/src/index.ts",
+        "runtime/media/dsh-media/src/index.js"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Turn pet art into a dsh-Go pet pack.",
+      "theme directory, image folder, or Aseprite export",
+      "pack id; default: the input directory name",
+      "--input",
+      "--out",
+      "pet name; default: theme.json name or the id",
+      "where the art came from (shown in the pet page)",
+      "keep pixel-art sizes and draw crisply",
+      "check only, write nothing",
+      "dsh-go",
+      "--check",
+      "--repo",
+      "--no-gen",
+      "--part",
+      "--locale",
+      "Bearer",
+      "用户指定的工作区参考图绝对路径，最多一张。图生视频不要指定 aspect。",
+      "完整描述，UTF-8 最多 4096 字节。",
+      "completed",
+      "failed",
+      "读取本会话媒体后台任务的最终文件与卡片；不会重新生成或再次收费。",
+      "Host 重启后续查原会话中已提交的视频任务。必须提供原恢复标识 rid；绝不再次创建供应商任务。"
+    ],
+    "string_evidence": [
+      {
+        "text": "Turn pet art into a dsh-Go pet pack.",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+        "line": 526,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "theme directory, image folder, or Aseprite export",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+        "line": 528,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "pack id; default: the input directory name",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+        "line": 530,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--input",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+        "line": 527,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--out",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+        "line": 529,
+        "kind": "cli-help"
+      },
+      {
+        "text": "pet name; default: theme.json name or the id",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/assets/skills/pet-theme/pet_theme_convert.py",
+        "line": 531,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "where the art came from (shown in the pet page)",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/assets/skills/pet-theme/pet_theme_convert.py",
+        "line": 532,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "keep pixel-art sizes and draw crisply",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/assets/skills/pet-theme/pet_theme_convert.py",
+        "line": 533,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "check only, write nothing",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py",
+        "line": 251,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "dsh-go",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py",
+        "line": 12,
+        "kind": "visible-text"
+      },
+      {
+        "text": "--check",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py",
+        "line": 251,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--repo",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py",
+        "line": 252,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--no-gen",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_merge.py",
+        "line": 185,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--part",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_merge.py",
+        "line": 186,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--locale",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_merge.py",
+        "line": 187,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Bearer",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/services/share-worker/src/index.ts",
+        "line": 5,
+        "kind": "visible-text"
+      },
+      {
+        "text": "用户指定的工作区参考图绝对路径，最多一张。图生视频不要指定 aspect。",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 259,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "完整描述，UTF-8 最多 4096 字节。",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 264,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "completed",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 332,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "failed",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 335,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "读取本会话媒体后台任务的最终文件与卡片；不会重新生成或再次收费。",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 346,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Host 重启后续查原会话中已提交的视频任务。必须提供原恢复标识 rid；绝不再次创建供应商任务。",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+        "line": 363,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ccch1mneyyy/dsh-Go",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/README.md",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/market/package.json",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/site/home/package.json",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/sdk/plugin-kit/package.json",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/services/share-worker/package.json",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/test_pet_theme_convert.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_src/deepy-whale/theme.json",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/assets/skills/pet-theme/pet_theme_convert.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/infra/forum/theme-dshgo/locales/en.yml",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/full-context.js",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/prompt-context.js",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/recall-context.js",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_scan.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_merge.py",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/sdk/plugin-kit/lib/index.js",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/services/share-worker/src/index.ts",
+      "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js",
+      "https://api.github.com/repos/ccch1mneyyy/dsh-Go/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/README.md"
+      },
+      {
+        "path": "market/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/market/package.json"
+      },
+      {
+        "path": "site/home/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/site/home/package.json"
+      },
+      {
+        "path": "sdk/plugin-kit/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/sdk/plugin-kit/package.json"
+      },
+      {
+        "path": "services/share-worker/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/services/share-worker/package.json"
+      },
+      {
+        "path": "app/tool/pet_theme_convert.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_theme_convert.py"
+      },
+      {
+        "path": "app/tool/test_pet_theme_convert.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/test_pet_theme_convert.py"
+      },
+      {
+        "path": "app/tool/pet_src/deepy-whale/theme.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/pet_src/deepy-whale/theme.json"
+      },
+      {
+        "path": "app/assets/skills/pet-theme/pet_theme_convert.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/assets/skills/pet-theme/pet_theme_convert.py"
+      },
+      {
+        "path": "infra/forum/theme-dshgo/locales/en.yml",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/infra/forum/theme-dshgo/locales/en.yml"
+      },
+      {
+        "path": "runtime/bridge/dsh-go-bridge/lib/companion/full-context.js",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/full-context.js"
+      },
+      {
+        "path": "runtime/bridge/dsh-go-bridge/lib/companion/prompt-context.js",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/prompt-context.js"
+      },
+      {
+        "path": "runtime/bridge/dsh-go-bridge/lib/companion/recall-context.js",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/bridge/dsh-go-bridge/lib/companion/recall-context.js"
+      },
+      {
+        "path": "app/tool/l10n_scan.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_scan.py"
+      },
+      {
+        "path": "app/tool/guide_sync.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/guide_sync.py"
+      },
+      {
+        "path": "app/tool/l10n_merge.py",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/app/tool/l10n_merge.py"
+      },
+      {
+        "path": "sdk/plugin-kit/lib/index.js",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/sdk/plugin-kit/lib/index.js"
+      },
+      {
+        "path": "services/share-worker/src/index.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/services/share-worker/src/index.ts"
+      },
+      {
+        "path": "runtime/media/dsh-media/src/index.js",
+        "source": "https://github.com/ccch1mneyyy/dsh-Go/blob/0cf6efab9fa255d73a3310bd84bab6746e50a07c/runtime/media/dsh-media/src/index.js"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agent stars:10000..29999 fork:false",
+      "topic:coding-agent stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=22, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Dart) → framework / general-agent",
+    "repository_id": 1432967563,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ccfos--nightingale": {
+    "topics": [
+      "aiops",
+      "alerting",
+      "alertmanager",
+      "clickhouse",
+      "golang",
+      "logs",
+      "loki",
+      "mcp-server",
+      "metrics",
+      "monitoring",
+      "nightingale",
+      "observability",
+      "on-call",
+      "prometheus",
+      "self-hosted",
+      "sre",
+      "sre-agent",
+      "time-series",
+      "tsdb",
+      "victoriametrics"
+    ],
+    "homepage": "https://n9e.io",
+    "archived": false,
+    "commit": "201bce08e7bdef6636398150cb9268b786739fd1",
+    "classification_basis": "Topics, README introduction, language (Go) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.1",
+        "2020-03-20"
+      ],
+      [
+        "v7.7.0",
+        "2024-11-15"
+      ],
+      [
+        "v7.7.1",
+        "2024-11-19"
+      ],
+      [
+        "v7.7.2",
+        "2024-12-02"
+      ],
+      [
+        "v8.0.0-beta.1",
+        "2024-12-12"
+      ],
+      [
+        "v8.0.0-beta.2",
+        "2024-12-26"
+      ],
+      [
+        "v8.0.0-beta.3",
+        "2025-01-08"
+      ],
+      [
+        "v8.0.0-beta.4",
+        "2025-01-24"
+      ],
+      [
+        "v8.0.0-beta.5",
+        "2025-02-14"
+      ],
+      [
+        "v8.0.0-beta.6",
+        "2025-02-25"
+      ],
+      [
+        "v8.0.0-beta.7",
+        "2025-03-05"
+      ],
+      [
+        "v8.0.0-beta.8",
+        "2025-03-11"
+      ],
+      [
+        "v8.0.0-beta.8.2",
+        "2025-03-13"
+      ],
+      [
+        "v8.0.0-beta.8.3",
+        "2025-03-17"
+      ],
+      [
+        "v8.0.0-beta.9",
+        "2025-03-20"
+      ],
+      [
+        "v8.0.0-beta.10",
+        "2025-03-27"
+      ],
+      [
+        "v8.0.0-beta.11",
+        "2025-05-29"
+      ],
+      [
+        "v8.0.0-beta.12",
+        "2025-05-30"
+      ],
+      [
+        "v8.0.0-beta.13",
+        "2025-06-09"
+      ],
+      [
+        "v8.0.0-beta.14",
+        "2025-06-20"
+      ],
+      [
+        "v8.0.0",
+        "2025-07-03"
+      ],
+      [
+        "v8.1.0",
+        "2025-07-15"
+      ],
+      [
+        "v8.2.0",
+        "2025-07-31"
+      ],
+      [
+        "v8.2.1",
+        "2025-08-06"
+      ],
+      [
+        "v8.2.2",
+        "2025-08-06"
+      ],
+      [
+        "v8.3.0",
+        "2025-08-28"
+      ],
+      [
+        "v8.3.1",
+        "2025-08-29"
+      ],
+      [
+        "v8.4.0",
+        "2025-10-15"
+      ],
+      [
+        "v8.4.1",
+        "2025-11-11"
+      ],
+      [
+        "v8.5.0",
+        "2025-12-20"
+      ],
+      [
+        "v8.5.1",
+        "2026-01-16"
+      ],
+      [
+        "v9.0.0-beta.1",
+        "2026-05-23"
+      ],
+      [
+        "v9.0.0-beta.2",
+        "2026-05-29"
+      ],
+      [
+        "v9.0.0-beta.3",
+        "2026-06-12"
+      ],
+      [
+        "v9.0.0-beta.4",
+        "2026-07-04"
+      ],
+      [
+        "v9.0.0",
+        "2026-07-25"
+      ],
+      [
+        "v9.1.0",
+        "2026-08-06"
+      ],
+      [
+        "v9.1.1",
+        "2026-08-18"
+      ],
+      [
+        "v9.2.0",
+        "2026-10-11"
+      ],
+      [
+        "v9.3.0",
+        "2026-10-21"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "docker compose up -d",
+    "install_evidence": [
+      {
+        "command": "docker compose up -d",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/README.md",
+        "line": 48
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "cmd/cli/main.go",
+        "cmd/edge/main.go",
+        "cmd/alert/main.go",
+        "cmd/center/main.go",
+        "cmd/pushgw/main.go",
+        "cmd/a2a-cli/main.go",
+        "cmd/aichat-cli/main.go",
+        "aiagent/context_manager.go",
+        "aiagent/chat/context_dump.go",
+        "aiagent/chat/context_enrich.go",
+        "aiagent/tools/sql.go",
+        "aiagent/tools/code.go",
+        "aiagent/tools/file.go",
+        "cli/cli.go",
+        "pkg/ginx/render.go",
+        "models/saved_view.go",
+        "models/metric_view.go"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "1) Take target from the alert labels and break down the timing with curl -w",
+      "CDN response status code abnormal",
+      "CDN probe failed",
+      "LLM Service Requests",
+      "LLM Service Average Request Latency",
+      "Models with the Highest Token Usage",
+      "Input Token Usage in the Selected Time Range",
+      "Hosts reporting the most monitoring data. The value is how many data points are reported per second",
+      "Data Source",
+      "NSQ channel has no consumer but has a backlog",
+      "NSQ channel overflowing to disk",
+      "NSQ channel backlog",
+      "NSQ message processing timeouts spiking",
+      "1) Take pool from the alert labels and run grep -i",
+      "PHP-FPM slow requests increasing",
+      "PHP-FPM idle processes exhausted",
+      "PHP-FPM listen queue backing up"
+    ],
+    "string_evidence": [
+      {
+        "text": "1) Take target from the alert labels and break down the timing with curl -w",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/CDN/i18n/en_US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "CDN response status code abnormal",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/CDN/i18n/en_US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "CDN probe failed",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/CDN/i18n/en_US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "LLM Service Requests",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "LLM Service Average Request Latency",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Models with the Highest Token Usage",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Input Token Usage in the Selected Time Range",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Hosts reporting the most monitoring data. The value is how many data points are reported per second",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/N9E/i18n/en_US.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Data Source",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/N9E/i18n/en_US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "NSQ channel has no consumer but has a backlog",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "NSQ channel overflowing to disk",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "NSQ channel backlog",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "NSQ message processing timeouts spiking",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "1) Take pool from the alert labels and run grep -i",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "PHP-FPM slow requests increasing",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "PHP-FPM idle processes exhausted",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "PHP-FPM listen queue backing up",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json",
+        "line": 9,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ccfos/nightingale",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/README.md",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/go.mod",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/CDN/i18n/en_US.json",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/N9E/i18n/en_US.json",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/cli/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/edge/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/alert/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/center/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/pushgw/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/a2a-cli/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/aichat-cli/main.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/context_manager.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/chat/context_dump.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/chat/context_enrich.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/sql.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/code.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/file.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cli/cli.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/pkg/ginx/render.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/models/saved_view.go",
+      "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/models/metric_view.go",
+      "https://api.github.com/repos/ccfos/nightingale/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/README.md"
+      },
+      {
+        "path": "go.mod",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/go.mod"
+      },
+      {
+        "path": "integrations/CDN/i18n/en_US.json",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/CDN/i18n/en_US.json"
+      },
+      {
+        "path": "integrations/LLM/i18n/en_US.json",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/LLM/i18n/en_US.json"
+      },
+      {
+        "path": "integrations/N9E/i18n/en_US.json",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/N9E/i18n/en_US.json"
+      },
+      {
+        "path": "integrations/NSQ/i18n/en_US.json",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/NSQ/i18n/en_US.json"
+      },
+      {
+        "path": "integrations/PHP/i18n/en_US.json",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/integrations/PHP/i18n/en_US.json"
+      },
+      {
+        "path": "cmd/cli/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/cli/main.go"
+      },
+      {
+        "path": "cmd/edge/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/edge/main.go"
+      },
+      {
+        "path": "cmd/alert/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/alert/main.go"
+      },
+      {
+        "path": "cmd/center/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/center/main.go"
+      },
+      {
+        "path": "cmd/pushgw/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/pushgw/main.go"
+      },
+      {
+        "path": "cmd/a2a-cli/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/a2a-cli/main.go"
+      },
+      {
+        "path": "cmd/aichat-cli/main.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cmd/aichat-cli/main.go"
+      },
+      {
+        "path": "aiagent/context_manager.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/context_manager.go"
+      },
+      {
+        "path": "aiagent/chat/context_dump.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/chat/context_dump.go"
+      },
+      {
+        "path": "aiagent/chat/context_enrich.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/chat/context_enrich.go"
+      },
+      {
+        "path": "aiagent/tools/sql.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/sql.go"
+      },
+      {
+        "path": "aiagent/tools/code.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/code.go"
+      },
+      {
+        "path": "aiagent/tools/file.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/aiagent/tools/file.go"
+      },
+      {
+        "path": "cli/cli.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/cli/cli.go"
+      },
+      {
+        "path": "pkg/ginx/render.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/pkg/ginx/render.go"
+      },
+      {
+        "path": "models/saved_view.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/models/saved_view.go"
+      },
+      {
+        "path": "models/metric_view.go",
+        "source": "https://github.com/ccfos/nightingale/blob/201bce08e7bdef6636398150cb9268b786739fd1/models/metric_view.go"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp-server stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=17, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Go) → dashboard / observability-eval",
+    "repository_id": 244694886,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "ccch1mneyyy--dsh-tui": {
+    "topics": [
+      "claude-code",
+      "coding-agent",
+      "deepseek",
+      "deepseek-harness",
+      "dsh-plugin",
+      "ink",
+      "react",
+      "terminal",
+      "tui"
+    ],
+    "homepage": "https://dshtui.com/",
+    "archived": false,
+    "commit": "52b50464f9b9ca101033bfb3751f8d9178b25bf1",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.4.1",
+        "2026-08-14"
+      ],
+      [
+        "v0.5.0",
+        "2026-08-15"
+      ],
+      [
+        "v0.5.1",
+        "2026-08-15"
+      ],
+      [
+        "v0.5.2",
+        "2026-08-15"
+      ],
+      [
+        "v0.5.3",
+        "2026-08-15"
+      ],
+      [
+        "v0.6.0",
+        "2026-08-15"
+      ],
+      [
+        "v0.6.1",
+        "2026-08-15"
+      ],
+      [
+        "v0.7.0",
+        "2026-08-16"
+      ],
+      [
+        "v0.7.1",
+        "2026-08-16"
+      ],
+      [
+        "v0.7.2",
+        "2026-08-16"
+      ],
+      [
+        "v0.7.3",
+        "2026-08-16"
+      ],
+      [
+        "v0.8.0",
+        "2026-08-17"
+      ],
+      [
+        "v0.8.1",
+        "2026-08-18"
+      ],
+      [
+        "v0.8.2",
+        "2026-08-19"
+      ],
+      [
+        "v0.9.0",
+        "2026-08-23"
+      ],
+      [
+        "v0.9.1",
+        "2026-08-25"
+      ],
+      [
+        "v0.9.2",
+        "2026-08-25"
+      ],
+      [
+        "v0.9.3",
+        "2026-08-26"
+      ],
+      [
+        "v0.10.0-beta.1",
+        "2026-08-30"
+      ],
+      [
+        "v0.10.0-beta.2",
+        "2026-08-31"
+      ],
+      [
+        "v0.10.0-beta.3",
+        "2026-08-31"
+      ],
+      [
+        "v0.10.0-beta.4",
+        "2026-09-01"
+      ],
+      [
+        "v0.10.0-beta.5",
+        "2026-09-04"
+      ],
+      [
+        "v0.10.0",
+        "2026-09-08"
+      ],
+      [
+        "v0.10.1",
+        "2026-09-10"
+      ],
+      [
+        "v0.10.2",
+        "2026-09-17"
+      ],
+      [
+        "v0.11.0",
+        "2026-09-24"
+      ],
+      [
+        "v0.11.1",
+        "2026-09-26"
+      ],
+      [
+        "v0.11.2",
+        "2026-09-29"
+      ],
+      [
+        "v0.12.0",
+        "2026-09-30"
+      ],
+      [
+        "v0.13.0",
+        "2026-10-04"
+      ],
+      [
+        "v0.14.0",
+        "2026-10-07"
+      ],
+      [
+        "v0.15.0",
+        "2026-10-13"
+      ],
+      [
+        "v0.16.0",
+        "2026-10-17"
+      ],
+      [
+        "v0.16.1",
+        "2026-10-17"
+      ],
+      [
+        "v0.17.0",
+        "2026-10-24"
+      ],
+      [
+        "v0.18.0",
+        "2026-11-01"
+      ],
+      [
+        "v0.19.0",
+        "2026-11-06"
+      ],
+      [
+        "v0.20.0",
+        "2026-11-12"
+      ],
+      [
+        "v0.20.1",
+        "2026-11-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "npm install -g @deepseek-ai/dsh @deepseek-harness-tui/dsh-tui / npm install -g @openai/codex@0.160.1 / pnpm install --frozen-lockfile",
+    "install_evidence": [
+      {
+        "command": "npm install -g @deepseek-ai/dsh @deepseek-harness-tui/dsh-tui",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/README.md",
+        "line": 164
+      },
+      {
+        "command": "npm install -g @openai/codex@0.160.1",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/README.md",
+        "line": 318
+      },
+      {
+        "command": "pnpm install --frozen-lockfile",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/README.md",
+        "line": 618
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/theme.ts",
+        "src/themePrefs.ts",
+        "src/customTheme.ts",
+        "src/themeCatalog.ts",
+        "src/screens/Chat.tsx",
+        "src/screens/Settings.tsx",
+        "src/ink/components/App.tsx",
+        "src/components/ModelPicker.tsx",
+        "src/channel/projection.ts",
+        "src/utils/loaded-context.ts",
+        "scripts/lib/projection-golden.ts",
+        "scripts/lib/projector-harness.ts",
+        "src/index.ts",
+        "src/commands.ts",
+        "src/agent/index.ts",
+        "scripts/verify-image-preview.tsx",
+        "scripts/verify-theme-preview.tsx",
+        "scripts/verify-markdown-render.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "accent": "rgb('#7DA1DE')",
+      "text": "rgb('#E8E6E0')",
+      "bg": "rgb('#5E88CC')",
+      "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts"
+    },
+    "theme_evidence": [
+      {
+        "token": "accent",
+        "key": "accent",
+        "value": "rgb('#7DA1DE')",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts",
+        "line": 328
+      },
+      {
+        "token": "text",
+        "key": "text",
+        "value": "rgb('#E8E6E0')",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts",
+        "line": 340
+      },
+      {
+        "token": "bg",
+        "key": "background",
+        "value": "rgb('#5E88CC')",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts",
+        "line": 347
+      }
+    ],
+    "strings": [
+      "dsh-TUI",
+      "Pixel-whale terminal interface for DeepSeek Harness agents, sessions, and tools.",
+      "resume",
+      "rename",
+      "open",
+      "Probe image admission",
+      "idle",
+      "Image #7",
+      "Image #3",
+      "Image #4",
+      "Fixture dialog command",
+      "DRAFT-LEASE-DIALOG",
+      "PEEK-SUSPEND-DIALOG",
+      "EDITOR-SUSPEND-DIALOG",
+      "Fixture vision command"
+    ],
+    "string_evidence": [
+      {
+        "text": "dsh-TUI",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/locale/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Pixel-whale terminal interface for DeepSeek Harness agents, sessions, and tools.",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/locale/en.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "resume",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Chat.tsx",
+        "line": 2664,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "rename",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Chat.tsx",
+        "line": 2665,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "open",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Chat.tsx",
+        "line": 2666,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Probe image admission",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 172,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "idle",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 224,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Image #7",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 617,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Image #3",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 652,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Image #4",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 686,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Fixture dialog command",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 1249,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "DRAFT-LEASE-DIALOG",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 1268,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "PEEK-SUSPEND-DIALOG",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 1359,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "EDITOR-SUSPEND-DIALOG",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 1384,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Fixture vision command",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+        "line": 1417,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ccch1mneyyy/dsh-TUI",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/README.md",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/package.json",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/standalone/package.json",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/tui-profile/package.json",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/windows/package.json",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/themePrefs.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/customTheme.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/themeCatalog.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/locale/en.json",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Chat.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Settings.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/ink/components/App.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/components/ModelPicker.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/channel/projection.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/utils/loaded-context.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/lib/projection-golden.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/lib/projector-harness.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/index.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/commands.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/agent/index.ts",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-theme-preview.tsx",
+      "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-markdown-render.tsx",
+      "https://api.github.com/repos/ccch1mneyyy/dsh-TUI/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/package.json"
+      },
+      {
+        "path": "standalone/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/standalone/package.json"
+      },
+      {
+        "path": "tui-profile/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/tui-profile/package.json"
+      },
+      {
+        "path": "scripts/windows/package.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/windows/package.json"
+      },
+      {
+        "path": "src/theme.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/theme.ts"
+      },
+      {
+        "path": "src/themePrefs.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/themePrefs.ts"
+      },
+      {
+        "path": "src/customTheme.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/customTheme.ts"
+      },
+      {
+        "path": "src/themeCatalog.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/themeCatalog.ts"
+      },
+      {
+        "path": "locale/en.json",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/locale/en.json"
+      },
+      {
+        "path": "src/screens/Chat.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Chat.tsx"
+      },
+      {
+        "path": "src/screens/Settings.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/screens/Settings.tsx"
+      },
+      {
+        "path": "src/ink/components/App.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/ink/components/App.tsx"
+      },
+      {
+        "path": "src/components/ModelPicker.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/components/ModelPicker.tsx"
+      },
+      {
+        "path": "src/channel/projection.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/channel/projection.ts"
+      },
+      {
+        "path": "src/utils/loaded-context.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/utils/loaded-context.ts"
+      },
+      {
+        "path": "scripts/lib/projection-golden.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/lib/projection-golden.ts"
+      },
+      {
+        "path": "scripts/lib/projector-harness.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/lib/projector-harness.ts"
+      },
+      {
+        "path": "src/index.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/index.ts"
+      },
+      {
+        "path": "src/commands.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/commands.ts"
+      },
+      {
+        "path": "src/agent/index.ts",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/src/agent/index.ts"
+      },
+      {
+        "path": "scripts/verify-image-preview.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-image-preview.tsx"
+      },
+      {
+        "path": "scripts/verify-theme-preview.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-theme-preview.tsx"
+      },
+      {
+        "path": "scripts/verify-markdown-render.tsx",
+        "source": "https://github.com/ccch1mneyyy/dsh-TUI/blob/52b50464f9b9ca101033bfb3751f8d9178b25bf1/scripts/verify-markdown-render.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:coding-agent stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:16.859Z",
+      "source_count": 6,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "repository_id": 1333111893,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "cccpan--gebaini": {
+    "topics": [
+      "bank-card-verify",
+      "china",
+      "claude",
+      "cursor",
+      "enterprise-check",
+      "face-compare",
+      "id-card",
+      "identity-verification",
+      "kyc",
+      "mcp",
+      "mcp-server",
+      "ocr",
+      "openclaw",
+      "qclaw",
+      "risk-assessment",
+      "vehicle-query"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (unknown) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/CCCpan/Gebaini",
+      "https://api.github.com/licenses/gpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 735263882,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

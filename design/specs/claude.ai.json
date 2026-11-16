@@ -1,0 +1,1682 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "claude.ai",
+  "name": "Claude.ai",
+  "vendor": "Anthropic",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "claude.ai-2023-07",
+      "from": "2023-07",
+      "to": "2023-11",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文章で質問と返答を交わすWeb画面。初日の左右の配置は未確認（https://cointelegraph.com/news/anthropic-launches-claude-2-amid-continuing-ai-hullabaloo）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "送信",
+          "where": "会話の入力欄。10月の実使用例で確認（https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/）",
+          "purpose": "入力した文章を送る（https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "期間内の10月の例では文章とコードを返す。吹き出しの色と配置は未確認（https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Claude 2を使う公開ベータの会話画面（https://www.anthropic.com/news/claude-2）",
+        "公開当日の画面には文書添付の案内がある（https://cointelegraph.com/news/anthropic-launches-claude-2-amid-continuing-ai-hullabaloo）",
+        "10月の例では添付したファイル名と容量が入力欄に出る。初日と同一かは未確認（https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-2",
+          "kind": "blog",
+          "date": "2023-07-11",
+          "shows": "Claude 2を使う一般向けWebベータの公開。画面寸法・配色の記載はない。"
+        },
+        {
+          "url": "https://cointelegraph.com/news/anthropic-launches-claude-2-amid-continuing-ai-hullabaloo",
+          "kind": "press",
+          "date": "2023-07-11",
+          "shows": "公開当日の実使用記事。Web会話と文書添付の表示を報告。筆者の添付試験は成功していない。"
+        },
+        {
+          "url": "https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/",
+          "kind": "press",
+          "date": "2023-10-19",
+          "shows": "実際にログインした操作レビュー。入力・送信、文章とコードの回答、ファイルのドラッグ添付と名前・容量表示。7月初日や11月更新直後の寸法は示さない。"
+        }
+      ],
+      "confidence": 0.42
+    },
+    {
+      "id": "claude.ai-2023-11",
+      "from": "2023-11",
+      "to": "2024-03",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文書を添付して質問する。11月21日当日の配置変更は未確認（https://www.anthropic.com/news/claude-2-1）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Claude 2.1を使う会話（https://www.anthropic.com/news/claude-2-1）",
+        "Proでは従来より大きな文書を添付できる（https://www.anthropic.com/news/claude-2-1）",
+        "unverified：200Kの常設メーター、System Prompt欄、ベータの道具欄のWeb表示は確認できない"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-2-1",
+          "kind": "blog",
+          "date": "2023-11-21",
+          "shows": "Claude 2.1のWeb提供とProの大きなファイル添付。tool useとsystem promptsの説明はAPI/Workbenchの文脈。"
+        },
+        {
+          "url": "https://gigazine.net/news/20231019-claude-chatgpt-rival-chat-ai/",
+          "kind": "press",
+          "date": "2023-10-19",
+          "shows": "実際にログインした操作レビュー。入力・送信、文章とコードの回答、ファイルのドラッグ添付と名前・容量表示。7月初日や11月更新直後の寸法は示さない。"
+        }
+      ],
+      "confidence": 0.28
+    },
+    {
+      "id": "claude.ai-2024-03",
+      "from": "2024-03",
+      "to": "2024-06",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文章と画像・文書を使って会話する。入力欄の正確な座標は未確認（https://www.watch.impress.co.jp/docs/topic/1581763.html）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モデル",
+          "where": "位置は未確認。3月4日の全メニューは未採録（https://www.anthropic.com/news/claude-3-family）",
+          "purpose": "無料のSonnetとProのOpusを使い分ける。Haikuは初日の選択肢に含めない（https://www.anthropic.com/news/claude-3-family）"
+        }
+      ],
+      "conversation": {
+        "user": "画像や文書を添付する。表示方法は4月の利用記録で確認し、3月初日と同一とは断定しない（https://www.watch.impress.co.jp/docs/topic/1581763.html）",
+        "assistant": "文章の返答やコードを表示する（https://www.watch.impress.co.jp/docs/topic/1581763.html）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "画像について質問する会話（https://www.anthropic.com/news/claude-3-family）",
+        "公開当日はOpusとSonnet。Haikuは後日（https://www.anthropic.com/news/claude-3-family）",
+        "文書添付から文章やHTMLを生成する例（https://www.watch.impress.co.jp/docs/topic/1581763.html）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "kind": "blog",
+          "date": "2024-03-04",
+          "shows": "公開当日のWeb提供はOpusとSonnet。Haikuは後日。画像理解の導入。モデル選択欄の座標はない。"
+        },
+        {
+          "url": "https://www.watch.impress.co.jp/docs/topic/1581763.html",
+          "kind": "press",
+          "date": "2024-04-09",
+          "shows": "Claude 3期間内の実使用レビュー。文章・画像・文書添付、生成された文章とコード。3月4日当日のモデル選択配置は示さない。"
+        }
+      ],
+      "confidence": 0.48
+    },
+    {
+      "id": "claude.ai-2024-06",
+      "from": "2024-06",
+      "to": "2024-09",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "生成物について会話し、修正を依頼する（https://www.anthropic.com/news/claude-3-5-sonnet）"
+          ]
+        },
+        {
+          "name": "artifact",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "生成したコードや文書・画面を会話の横の専用欄に表示する。空の会話で常時開く欄とは確認できない（https://www.anthropic.com/news/claude-3-5-sonnet）"
+          ]
+        },
+        {
+          "name": "project",
+          "position": null,
+          "size": null,
+          "contents": [
+            "資料、独自の指示、会話をひとまとまりにする別の画面（https://www.anthropic.com/news/projects）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "説明の文章と、会話横で編集を重ねる成果物を使う（https://www.anthropic.com/news/claude-3-5-sonnet）",
+        "tool_calls": null,
+        "streaming": "成果物の内容は会話しながら更新できる。文字表示の速度や点滅は未確認（https://www.anthropic.com/news/claude-3-5-sonnet）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話と成果物が隣り合う（https://www.anthropic.com/news/claude-3-5-sonnet）",
+        "Projectsに資料と指示を置く（https://www.anthropic.com/news/projects）",
+        "Teamでは会話を共有して活動フィードで見る（https://www.anthropic.com/news/projects）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "kind": "blog",
+          "date": null,
+          "shows": "Artifactsを会話の横の専用ウィンドウに表示する説明。現行ページの日付は2024-06-21、同時期のレビューは06-20。6月版として使用。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/projects",
+          "kind": "blog",
+          "date": "2024-06-25",
+          "shows": "Projectsの資料、指示、Teamの共有会話・活動フィード。寸法や常設Artifactsメニューの証拠ではない。"
+        },
+        {
+          "url": "https://simonwillison.net/2024/Jun/20/claude-35-sonnet/",
+          "kind": "press",
+          "date": "2024-06-20",
+          "shows": "本人の利用記録。Artifactsプレビューの有効化と生成物を伴う会話。"
+        }
+      ],
+      "confidence": 0.67
+    },
+    {
+      "id": "claude.ai-2024-09",
+      "from": "2024-09",
+      "to": "2024-10",
+      "regions": [
+        {
+          "name": "project",
+          "position": null,
+          "size": null,
+          "contents": [
+            "EnterpriseではGitHubの資料をProjectに追加する。09-04当日については未確認（https://claude.com/resources/articles/claude-for-enterprise）"
+          ]
+        },
+        {
+          "name": "artifact",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "会話と並べた成果物の表示（https://www.anthropic.com/news/claude-3-5-sonnet）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Projectsへ資料をまとめる（https://www.anthropic.com/news/projects）",
+        "Enterprise向けのGitHub接続（https://claude.com/resources/articles/claude-for-enterprise）",
+        "会話と成果物を並べる（https://www.anthropic.com/news/claude-3-5-sonnet）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/claude-for-enterprise",
+          "kind": "blog",
+          "date": null,
+          "shows": "EnterpriseのGitHub資料連携とProjects/Artifacts。現行ページは2024-09-10表記で、カタログ09-04とは一致しない。正確な初出日は保留。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/projects",
+          "kind": "blog",
+          "date": "2024-06-25",
+          "shows": "Projectsの資料、指示、Teamの共有会話・活動フィード。寸法や常設Artifactsメニューの証拠ではない。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "kind": "blog",
+          "date": null,
+          "shows": "Artifactsを会話の横の専用ウィンドウに表示する説明。現行ページの日付は2024-06-21、同時期のレビューは06-20。6月版として使用。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行のProject資料・指示・履歴の説明。段階展開の新Projectsも含むため、2024年の幅・配置・対象プランの証拠にはしない。"
+        }
+      ],
+      "confidence": 0.42
+    },
+    {
+      "id": "claude.ai-2024-10",
+      "from": "2024-10",
+      "to": "2024-11",
+      "regions": [
+        {
+          "name": "account-menu",
+          "position": "bottom-left",
+          "size": null,
+          "contents": [
+            "名前を押して試験機能を管理する。分析機能の案内は10月24日（https://claude.com/resources/articles/analysis-tool）"
+          ]
+        },
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "CSVなどの資料を渡して計算と結果を求める（https://claude.com/resources/articles/analysis-tool）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "試験機能",
+          "where": "左下の名前から開くメニュー（https://claude.com/resources/articles/analysis-tool）",
+          "purpose": "分析用のJavaScript実行を有効にする（https://claude.com/resources/articles/analysis-tool）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "計算を実行して分析の答えを返す。実行欄の開閉や罫線は未確認（https://claude.com/resources/articles/analysis-tool）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話内の分析で実際にコードを動かす（https://claude.com/resources/articles/analysis-tool）",
+        "CSVの集計や図表を頼める（https://claude.com/resources/articles/analysis-tool）",
+        "試験機能を左下の名前のメニューから管理する（https://claude.com/resources/articles/analysis-tool）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/analysis-tool",
+          "kind": "blog",
+          "date": "2024-10-24",
+          "shows": "名前のメニューは左下、feature previewでJavaScript実行を有効化。常設Analysis REPL欄の説明はない。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "kind": "blog",
+          "date": null,
+          "shows": "Artifactsを会話の横の専用ウィンドウに表示する説明。現行ページの日付は2024-06-21、同時期のレビューは06-20。6月版として使用。"
+        },
+        {
+          "url": "https://techcrunch.com/2024/10/24/anthropics-ai-can-now-run-and-write-code/",
+          "kind": "press",
+          "date": "2024-10-24",
+          "shows": "同日の報道でも分析コード実行と図表化を確認。寸法・常設パネルの証拠ではない。"
+        }
+      ],
+      "confidence": 0.51
+    },
+    {
+      "id": "claude.ai-2024-11",
+      "from": "2024-11",
+      "to": "2025-02",
+      "regions": [],
+      "controls": [
+        {
+          "label": "文体",
+          "where": "チャット入力欄から設定。初日のアイコン位置は未確認（https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html）",
+          "purpose": "簡潔・説明重視・改まった文章を選び、独自の文体も作る（https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "返答の文体を選ぶ（https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html）",
+        "文章例から自分用の文体を作る（https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html）",
+        "分析機能を使える時期。文体の変更だけで横に常設の文体プレビューが出るとは未確認（https://claude.com/resources/articles/analysis-tool）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html",
+          "kind": "press",
+          "date": "2024-11-28",
+          "shows": "11月26日発表の文体選択を報道。Formal/Concise/Explanatory、文章例から独自の文体を作成。"
+        },
+        {
+          "url": "https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "検索索引に残る旧公式ヘルプ。Search and tools > Use style、文体管理の説明。直接取得は404。2024年当日の位置の証拠には使わない。"
+        },
+        {
+          "url": "https://claude.com/resources/articles/analysis-tool",
+          "kind": "blog",
+          "date": "2024-10-24",
+          "shows": "名前のメニューは左下、feature previewでJavaScript実行を有効化。常設Analysis REPL欄の説明はない。"
+        }
+      ],
+      "confidence": 0.45
+    },
+    {
+      "id": "claude.ai-2025-02",
+      "from": "2025-02",
+      "to": "2025-03",
+      "regions": [
+        {
+          "name": "thinking",
+          "position": null,
+          "size": null,
+          "contents": [
+            "答えの前に考えた内容を表示する。開閉部分の当日の位置は未確認（https://www.anthropic.com/news/claude-3-7-sonnet）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "拡張思考",
+          "where": "会話の設定。正確な位置と短文は未確認（https://www.anthropic.com/news/claude-3-7-sonnet）",
+          "purpose": "すぐ返すか、長く考えてから返すかを選ぶ（https://www.anthropic.com/news/claude-3-7-sonnet）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "長く考える設定では、考えた内容を利用者に見せてから回答する（https://www.anthropic.com/news/claude-3-7-sonnet）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "一つのモデルで通常と拡張思考を選ぶ（https://www.anthropic.com/news/claude-3-7-sonnet）",
+        "考えた内容が会話に現れる（https://www.anthropic.com/news/claude-3-7-sonnet）",
+        "既存の会話横の成果物欄を使う機能は前年6月から。2月初日の全体配置は未確認（https://www.anthropic.com/news/claude-3-5-sonnet）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+          "kind": "blog",
+          "date": "2025-02-24",
+          "shows": "通常/拡張思考を切り替え、考えた内容を表示。思考量の数値指定はAPIの説明。Claude Codeは端末の別製品。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "kind": "blog",
+          "date": null,
+          "shows": "Artifactsを会話の横の専用ウィンドウに表示する説明。現行ページの日付は2024-06-21、同時期のレビューは06-20。6月版として使用。"
+        },
+        {
+          "url": "https://support.anthropic.com/en/articles/10574485-using-extended-thinking",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "検索索引の旧公式ヘルプではSearch and tools > Extended thinking。正確な2月24日の配置を裏付ける固定版ではない。"
+        }
+      ],
+      "confidence": 0.55
+    },
+    {
+      "id": "claude.ai-2025-03",
+      "from": "2025-03",
+      "to": "2025-04",
+      "regions": [],
+      "controls": [
+        {
+          "label": "Web検索",
+          "where": "プロフィール設定（https://claude.com/resources/articles/web-search）",
+          "purpose": "検索を有効にする（https://claude.com/resources/articles/web-search）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Webを調べた答えにはクリックできる出典を添える（https://www.macrumors.com/2025/03/21/anthropic-claude-gets-web-search/）",
+        "tool_calls": "必要に応じてWebを調べる。実行中の行の形は未確認（https://claude.com/resources/articles/web-search）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "設定でWeb検索を有効化（https://claude.com/resources/articles/web-search）",
+        "答えから出典ページを開ける（https://www.macrumors.com/2025/03/21/anthropic-claude-gets-web-search/）",
+        "初回は米国の有料利用者向け（https://claude.com/resources/articles/web-search）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/web-search",
+          "kind": "blog",
+          "date": "2025-03-20",
+          "shows": "Web検索を設定で有効化、回答に直接出典。初回は米国の有料プラン向け。現行記事に後日の対象拡大もある。"
+        },
+        {
+          "url": "https://www.macrumors.com/2025/03/21/anthropic-claude-gets-web-search/",
+          "kind": "press",
+          "date": "2025-03-21",
+          "shows": "Web検索の翌日記事。回答にクリックできる出典表示。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+          "kind": "blog",
+          "date": "2025-02-24",
+          "shows": "通常/拡張思考を切り替え、考えた内容を表示。思考量の数値指定はAPIの説明。Claude Codeは端末の別製品。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "claude.ai-2025-04",
+      "from": "2025-04",
+      "to": "2025-05",
+      "regions": [],
+      "controls": [
+        {
+          "label": "Research",
+          "where": "チャット内（https://claude.com/resources/articles/research）",
+          "purpose": "複数回調べてまとめる作業に切り替える（https://claude.com/resources/articles/research）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Webや連携した社内資料を調べた回答に出典を付ける（https://claude.com/resources/articles/research）",
+        "tool_calls": "いくつかの検索を続けて行う。進捗欄の正確な形は未確認（https://claude.com/resources/articles/research）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "チャット内のResearch切替（https://claude.com/resources/articles/research）",
+        "Gmail・予定・文書の情報を横断する（https://claude.com/resources/articles/research）",
+        "回答内に出典を示す（https://claude.com/resources/articles/research）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/research",
+          "kind": "blog",
+          "date": "2025-04-15",
+          "shows": "チャットのResearch切替、WebとGoogle Workspace検索、回答内の出典。"
+        },
+        {
+          "url": "https://claude.com/resources/articles/integrations",
+          "kind": "blog",
+          "date": "2025-05-01",
+          "shows": "Researchボタン、遠隔MCP接続をWeb/desktopへ導入。後日更新を分離する。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプの+ > Research、下端の青い表示。旧索引にはResearch/Default選択。2025年初日へ現行の位置を転記しない。"
+        }
+      ],
+      "confidence": 0.58
+    },
+    {
+      "id": "claude.ai-2025-05",
+      "from": "2025-05",
+      "to": "2025-07",
+      "regions": [],
+      "controls": [
+        {
+          "label": "Research",
+          "where": "チャット内のボタン（https://claude.com/resources/articles/integrations）",
+          "purpose": "連携したサービスも含めて調べる（https://claude.com/resources/articles/integrations）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "思考と検索などを交互に行い、答えを返す。常設の別リサーチ欄の存在は未確認（https://www.anthropic.com/news/claude-4）",
+        "tool_calls": "つないだサービスをResearchで調べ、元資料へのリンクを返す（https://claude.com/resources/articles/integrations）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Opus 4とSonnet 4の提供（https://www.anthropic.com/news/claude-4）",
+        "遠隔の外部サービスをWebからつなぐ（https://claude.com/resources/articles/integrations）",
+        "Researchボタンと出典付きの報告（https://claude.com/resources/articles/integrations）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-4",
+          "kind": "blog",
+          "date": "2025-05-22",
+          "shows": "Opus 4/Sonnet 4、思考と検索などの交互実行、Claude Code一般公開とIDE差分連携。"
+        },
+        {
+          "url": "https://claude.com/resources/articles/integrations",
+          "kind": "blog",
+          "date": "2025-05-01",
+          "shows": "Researchボタン、遠隔MCP接続をWeb/desktopへ導入。後日更新を分離する。"
+        },
+        {
+          "url": "https://claude.com/resources/articles/research",
+          "kind": "blog",
+          "date": "2025-04-15",
+          "shows": "チャットのResearch切替、WebとGoogle Workspace検索、回答内の出典。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプの+ > Research、下端の青い表示。旧索引にはResearch/Default選択。2025年初日へ現行の位置を転記しない。"
+        }
+      ],
+      "confidence": 0.56
+    },
+    {
+      "id": "claude.ai-2025-07",
+      "from": "2025-07",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Artifacts専用の画面への入口。発表は6月25日で、7月17日の新設ではない（https://claude.com/resources/articles/build-artifacts）"
+          ]
+        },
+        {
+          "name": "artifact-library",
+          "position": null,
+          "size": null,
+          "contents": [
+            "作ったものをまとめて見る、例を選んで変更する、会話から新しく作る（https://claude.com/resources/articles/build-artifacts）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Artifacts",
+          "where": "左のナビゲーション（https://claude.com/resources/articles/build-artifacts）",
+          "purpose": "成果物専用の画面を開く（https://claude.com/resources/articles/build-artifacts）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "成果物の中からClaudeに問い合わせる小さなアプリを作れる。6月公開時は永続保存なし（https://www.anthropic.com/news/claude-powered-artifacts）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左ナビから成果物の一覧へ移る（https://claude.com/resources/articles/build-artifacts）",
+        "既存の例を見て自分用に変更する（https://claude.com/resources/articles/build-artifacts）",
+        "成果物内でClaudeの返答を使うアプリ（https://www.anthropic.com/news/claude-powered-artifacts）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/build-artifacts",
+          "kind": "blog",
+          "date": "2025-06-25",
+          "shows": "公式本文を直接確認。左ナビの成果物専用画面、例を見て変更、新規作成。6月25日の発表。7月21日mobile/7月31日Team、10月21日保存機能は追記。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-powered-artifacts",
+          "kind": "blog",
+          "date": "2025-06-25",
+          "shows": "検索索引で本文確認。成果物内からClaudeに問い合わせる共有アプリ。公開時は永続保存なし。直接取得不可。"
+        },
+        {
+          "url": "https://simonwillison.net/2025/Jun/25/ai-powered-apps-with-claude/",
+          "kind": "press",
+          "date": "2025-06-25",
+          "shows": "本人の利用記録。成果物の中でClaudeへ問い合わせる小アプリ。専用画面の導入日を7月17日へ移す根拠ではない。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "claude.ai-2025-09",
+      "from": "2025-09",
+      "to": "2026-02",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文書・表・スライドのファイルを会話から作る。9月29日の全体配置は未確認（https://www.anthropic.com/news/claude-sonnet-4-5）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "会話の中でコード実行とファイル作成を行う。返すファイルのカード寸法は未確認（https://www.anthropic.com/news/claude-sonnet-4-5）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Sonnet 4.5の提供（https://www.anthropic.com/news/claude-sonnet-4-5）",
+        "文書・表・スライドを会話から作る（https://www.anthropic.com/news/claude-sonnet-4-5）",
+        "unverified：モデル更新に伴う独自のMemory/Files常設サイドバーは確認できない"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+          "kind": "blog",
+          "date": "2025-09-29",
+          "shows": "Sonnet 4.5と製品更新。モデル発表だけでは全画面の配置を確定できない。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        }
+      ],
+      "confidence": 0.43
+    },
+    {
+      "id": "claude.ai-2026-02",
+      "from": "2026-02",
+      "to": "2026-04",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Opus 4.6が登場する時期（https://www.anthropic.com/news/claude-opus-4-6）",
+        "unverified：2月5日のWeb画面の思考量選択の位置と形",
+        "unverified：Coworkのプラグイン管理欄を同日Webチャットに表示する根拠"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-4-6",
+          "kind": "blog",
+          "date": "2026-02-05",
+          "shows": "Opus 4.6、adaptive thinking、APIのeffort設定とClaude Codeのagent teams。APIの1MをWeb入力表示へ転記しない。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行画面の送信ボタン隣のモデル名・思考量、More models、Effort、思考内容の開閉。2023/2024年の座標証拠には使わない。"
+        }
+      ],
+      "confidence": 0.25
+    },
+    {
+      "id": "claude.ai-2026-04",
+      "from": "2026-04",
+      "to": "2026-06",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Researchの調査と出典表示は2025年4月から（https://claude.com/resources/articles/research）",
+        "外部資料の接続は2025年5月から（https://claude.com/resources/articles/integrations）",
+        "unverified：2026年4月18日に出典カード・資料鮮度メーター・思考量スライダーを刷新したという根拠"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/research",
+          "kind": "blog",
+          "date": "2025-04-15",
+          "shows": "チャットのResearch切替、WebとGoogle Workspace検索、回答内の出典。"
+        },
+        {
+          "url": "https://claude.com/resources/articles/integrations",
+          "kind": "blog",
+          "date": "2025-05-01",
+          "shows": "Researchボタン、遠隔MCP接続をWeb/desktopへ導入。後日更新を分離する。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        }
+      ],
+      "confidence": 0.18
+    },
+    {
+      "id": "claude.ai-2026-06",
+      "from": "2026-06",
+      "to": "2026-07",
+      "regions": [
+        {
+          "name": "draft",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "6月12日の更新では文書を会話横で開き、変更したい部分を選んで指示する（https://support.claude.com/en/articles/12138966-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "部分を選んで修正",
+          "where": "会話横の文書（https://support.claude.com/en/articles/12138966-release-notes）",
+          "purpose": "変更する箇所を選んで、直し方を伝える（https://support.claude.com/en/articles/12138966-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "文書を会話横に開く（https://support.claude.com/en/articles/12138966-release-notes）",
+        "選んだ部分へ修正を依頼する（https://support.claude.com/en/articles/12138966-release-notes）",
+        "unverified：6月版にWhiteboards切替タブがあったという根拠"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行Artifactsの左ナビ、会話横の編集面、Outputからテンプレート選択、Export。2026-09-16以前のものはlegacyと明記。 旧9487310 URLから転送された新ページ。"
+        }
+      ],
+      "confidence": 0.41
+    },
+    {
+      "id": "claude.ai-2026-07",
+      "from": "2026-07",
+      "to": "2026-09",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "7月7日、Webと携帯へCoworkを展開開始（https://support.claude.com/en/articles/12138966-release-notes）",
+        "ChatとCoworkでProjectと成果物のホームを共有（https://support.claude.com/en/articles/12138966-release-notes）",
+        "9月の一つの会話への統合は後の更新。7月の全体配置の細部は未確認（https://support.claude.com/en/articles/12138966-release-notes）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "Chat/Coworkを選ばず一つの会話で依頼。段階展開、移行済みアカウントは旧モードへ戻せない。"
+        }
+      ],
+      "confidence": 0.38
+    },
+    {
+      "id": "claude.ai-2026-09",
+      "from": "2026-09",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": null,
+          "size": null,
+          "contents": [
+            "移行済みアカウントではChat/Coworkを選び分けず、一つの会話で依頼する（https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude）"
+          ]
+        },
+        {
+          "name": "artifact",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "9月16日以降の新しい文書・スライド・デザインの成果物を編集する（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Chat/Coworkの選択がなくなる段階展開（https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude）",
+        "質問から作業の依頼まで同じ会話（https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude）",
+        "新しい成果物と9月16日より前の成果物は別の扱い（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "Chat/Coworkを選ばず一つの会話で依頼。段階展開、移行済みアカウントは旧モードへ戻せない。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行Artifactsの左ナビ、会話横の編集面、Outputからテンプレート選択、Export。2026-09-16以前のものはlegacyと明記。 旧9487310 URLから転送された新ページ。"
+        }
+      ],
+      "confidence": 0.63
+    },
+    {
+      "id": "claude.ai-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "artifact",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "共同のボードや表を直接編集する。外部アプリは会話横または全画面に開く（https://claude.com/resources/articles/sheets-whiteboards-data）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Output",
+          "where": "会話の入力欄（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）",
+          "purpose": "成果物の型を選ぶ（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）"
+        },
+        {
+          "label": "More models",
+          "where": "送信ボタン隣のモデルメニュー（https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings）",
+          "purpose": "ほかのモデルを見る（https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "文章の返答に加えて、その場で編集する成果物を会話横に開く（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）",
+        "tool_calls": null,
+        "streaming": "成果物は利用者とClaudeの編集を反映する。文字の表示速度は未確認（https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif；コード部分は ui-monospace, monospace（再描画用の提案。原画面の書体名ではない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "WhiteboardsとSheetsは11月10日からの試験提供（https://claude.com/resources/articles/sheets-whiteboards-data）",
+        "外部アプリを会話横や全画面で使う（https://claude.com/resources/articles/sheets-whiteboards-data）",
+        "送信ボタン隣のモデル名から思考量などを開く（https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、キャラクター、アプリアイコン",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+          "kind": "blog",
+          "date": "2026-11-10",
+          "shows": "Whiteboards/Sheets betaとData。Web/desktop/mobile、会話横または全画面に外部アプリ。6月や9月の証拠には使わない。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行Artifactsの左ナビ、会話横の編集面、Outputからテンプレート選択、Export。2026-09-16以前のものはlegacyと明記。 旧9487310 URLから転送された新ページ。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行画面の送信ボタン隣のモデル名・思考量、More models、Effort、思考内容の開閉。2023/2024年の座標証拠には使わない。"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12138966-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "日付別の公式更新履歴。2025-09-29ファイル作成拡大、2026-01-12 Cowork、03-17遠隔依頼、06-12文書編集、07-07共有ホーム、09-16会話統合、11-12 Meetings。各版で参照日を限定。"
+        }
+      ],
+      "confidence": 0.69
+    }
+  ],
+  "corrections": [
+    "web/js/tools/claude.jsの2023-07は#EFEEE6を実測値のように表示し、初日のモデル選択も描く。公開発表ではその色と選択UIを確認できないため、色・選択位置は未確定とする（https://www.anthropic.com/news/claude-2）",
+    "2023-11のSystem Prompt欄と200K常設メーターには根拠がない。2.1発表のsystem promptsとtool useはAPI/Workbenchの説明であり、一般向けWeb画面に移さない（https://www.anthropic.com/news/claude-2-1）",
+    "2024-03のOpus/Sonnet/Haikuの3つの常設ボタンは裏付けがない。3月4日にはHaikuは後日提供とされている（https://www.anthropic.com/news/claude-3-family）",
+    "2024-06の常時表示される成果物欄、Artifacts専用左ナビ、Fable 5.2/Opus 5.5比較の候補文は当時の新規画面の再現として扱えない。6月発表が示すのは生成物を会話横へ開く動作（https://www.anthropic.com/news/claude-3-5-sonnet）",
+    "専用Artifacts一覧は2025年6月25日の発表。2024年6月の左ナビや2025年7月17日の初出として扱わない。7月版はこの画面を利用する期間の区切りとして残す（https://claude.com/resources/articles/build-artifacts）",
+    "2024-09のEnterprise・GitHub同期・Team Libraryなどの常設UIは、連携の機能発表からは導けない。プランやProject資料追加の機能と区別する（https://claude.com/resources/articles/claude-for-enterprise）",
+    "2024-10のAnalysis REPL左ナビと常設右実行欄は未確認。分析機能の公開は10月24日で、10月22日のモデル更新と区別する（https://claude.com/resources/articles/analysis-tool）",
+    "2024-11の文体ボタン横並びと常設Style Profile右欄は未確認。確認できるのは入力欄からの文体設定と文章例による独自文体（https://www.notebookcheck.net/Anthropic-allows-Claude-AI-users-to-customize-writing-styles.924555.0.html）",
+    "2025-02の16k thinking budgetの数値表示は、API向けの思考量指定をWebの設定と混同している。Web検索は3月、Researchは4月、遠隔接続は5月の別更新（https://www.anthropic.com/news/claude-3-7-sonnet）",
+    "Web検索・Research・遠隔接続を同じ2月の画面にまとめない。追加した3月・4月の版と5月の版に分けた（https://claude.com/resources/articles/research）",
+    "2025-07のstatefulという説明は公開当日の内容と一致しない。6月公開時は永続保存なし、公式記事の保存対応追記は10月21日（https://www.anthropic.com/news/claude-powered-artifacts）",
+    "2026-02のAPI向け1Mの説明は、Webの会話に1Mメーターを描く証拠ではない（https://www.anthropic.com/news/claude-opus-4-6）",
+    "2026-04-18の資料鮮度メーター、思考量スライダー、独自の出典カード刷新は未確認。出典付きResearch自体は2025年から（https://claude.com/resources/articles/research）",
+    "2026-06/09のWhiteboards切替は未確認。公式のWhiteboards/Sheets試験提供発表は2026年11月10日（https://claude.com/resources/articles/sheets-whiteboards-data）",
+    "2026-06-15のFable 5を通常の候補として固定しない。公式履歴は6月9日公開、6月12日停止、7月1日復旧と記載（https://support.claude.com/en/articles/12138966-release-notes）",
+    "2026-09のChat/Cowork統合は9月16日からの段階展開。全員が同日に同じ画面になるとは扱わない（https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude）",
+    "既存のdesign-outは初出機能の切り分けには役立つが、配色・寸法・入力形状の証拠にはしない。今回も全版の数値色・固定px・専用フォント名は未確認のためnull。"
+  ]
+}
+

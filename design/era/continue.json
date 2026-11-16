@@ -1,0 +1,576 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "continue",
+  "versions": [
+    {
+      "id": "continue-2023-06",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "gpt-4",
+        "steps": [
+          "会話欄のいちばん下のモデル名のボタンを押す。",
+          "押すたびにgpt-4とgpt-3.5-turboが入れ替わる。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx",
+            "date": "2023-06-30",
+            "kind": "source-code",
+            "shows": "フッターのボタンは押すたびにgpt-4とgpt-3.5-turboを切替。Collect Dataのスイッチもある。"
+          }
+        ],
+        "notes": "選択肢を開くメニューではなく二者の切替。labelは初期表示。サーバーから選択状態を受け直すため、実際の既定値は unverified。",
+        "steps_en": [
+          "Click the model name button at the bottom of the chat.",
+          "Each click alternates between gpt-4 and gpt-3.5-turbo."
+        ],
+        "notes_en": "A two-model toggle. label is the initial display. Selection is refreshed from the server, leaving the actual default unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Collect Data",
+          "when": "2023-06-30..2023-06-30",
+          "where": "会話欄のフッター。データを収集するか選ぶスイッチ。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx",
+              "date": "2023-06-30",
+              "kind": "source-code",
+              "shows": "フッターのボタンは押すたびにgpt-4とgpt-3.5-turboを切替。Collect Dataのスイッチもある。"
+            }
+          ],
+          "where_en": "Chat footer switch for choosing whether to collect data."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2023-06-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx",
+            "date": "2023-06-30",
+            "kind": "source-code",
+            "shows": "フッターのボタンは押すたびにgpt-4とgpt-3.5-turboを切替。Collect Dataのスイッチもある。"
+          }
+        ]
+      },
+      "trend": "会話欄の下にモデルの二者切替とデータ収集のスイッチを並べる素朴な形だった。（https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx）",
+      "trend_en": "The early chat footer places a two-model toggle beside a data collection switch. (https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx)"
+    },
+    {
+      "id": "continue-2024-05",
+      "model_switch": {
+        "where": "side-panel",
+        "label": "unverified",
+        "steps": [
+          "会話欄のいちばん下、入力欄とは別のフッターでモデル名を押す。",
+          "設定済みの候補からモデルを選ぶ。",
+          "候補を追加する場合は追加の入口から設定する。"
+        ],
+        "options": [
+          "Claude 3 Sonnet (Free Trial)",
+          "GPT-4 Turbo (Free Trial)",
+          "GPT-3.5-Turbo (Free Trial)",
+          "Gemini Pro (Free Trial)",
+          "Mixtral (Free Trial)"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/Layout.tsx",
+            "date": "2024-05-15",
+            "kind": "source-code",
+            "shows": "会話入力とは別のフッターにModelSelectと無料体験の利用回数を置く。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2024-05-15",
+            "kind": "source-code",
+            "shows": "設定済みモデルの一覧と、モデルを追加する入口。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/core/config/default.ts",
+            "date": "2024-05-15",
+            "kind": "source-code",
+            "shows": "初期設定の5つの無料体験用モデル。"
+          }
+        ],
+        "notes": "初期設定の候補だけを記録。利用者が設定を書き換えられる。ボタンの表示は現在のモデル名で、既定の選択値は unverified。",
+        "steps_en": [
+          "Click the model name in the footer at the bottom of the chat, below the input.",
+          "Choose a model from your configured options.",
+          "Use the add option to configure another model."
+        ],
+        "notes_en": "Only initially configured options are recorded. Users can change settings. The button shows the current model name. Default selection is unverified."
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "無料体験の利用回数",
+          "when": "2024-05-15..2024-05-15",
+          "where": "会話欄のフッター。検索用の準備が完了し、設定画面を開いたときか利用回数が50以上のときに表示する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/Layout.tsx",
+              "date": "2024-05-15",
+              "kind": "source-code",
+              "shows": "会話入力とは別のフッターにModelSelectと無料体験の利用回数を置く。"
+            }
+          ],
+          "text_en": "Free trial usage",
+          "where_en": "Chat footer, shown after search indexing is ready when settings are open or usage reaches 50."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2024-05-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/Layout.tsx",
+            "date": "2024-05-15",
+            "kind": "source-code",
+            "shows": "会話入力とは別のフッターにModelSelectと無料体験の利用回数を置く。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2024-05-15",
+            "kind": "source-code",
+            "shows": "設定済みモデルの一覧と、モデルを追加する入口。"
+          }
+        ]
+      },
+      "trend": "会話入力とは別の細いフッターにモデルと無料体験の回数表示を集める。（https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/Layout.tsx）",
+      "trend_en": "A narrow footer below the chat input groups model selection and free trial usage. (https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/Layout.tsx)"
+    },
+    {
+      "id": "continue-2024-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select model",
+        "steps": [
+          "入力欄の操作列の左にあるモデル名を押す。",
+          "設定済みの候補から使うモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2024-11-10",
+            "kind": "source-code",
+            "shows": "入力の操作列の左にModelSelect、右にEnterを置く。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2024-11-10",
+            "kind": "source-code",
+            "shows": "モデル名を表示し、未選択時はSelect model。設定済みの候補を並べる。"
+          }
+        ],
+        "notes": "labelは未選択時の表示。選択済みならモデル名。候補は利用者の設定で決まるため、全一覧と既定値は unverified。",
+        "steps_en": [
+          "Click the model name on the left of the input toolbar.",
+          "Choose a model from your configured options."
+        ],
+        "notes_en": "label is shown when unselected, otherwise the model name appears. User configuration determines options, leaving the full list and default unverified."
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Enterで送信",
+          "when": "2024-11-10..2024-11-10",
+          "where": "入力の操作列の右。幅が十分あるとEnterの文字を表示し、狭い場合は記号のみ。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx",
+              "date": "2024-11-10",
+              "kind": "source-code",
+              "shows": "入力の操作列の左にModelSelect、右にEnterを置く。"
+            }
+          ],
+          "text_en": "Press Enter to send",
+          "where_en": "Right of the input toolbar. Shows Enter when space permits and only a symbol when narrow."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2024-11-10",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2024-11-10",
+            "kind": "source-code",
+            "shows": "入力の操作列の左にModelSelect、右にEnterを置く。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2024-11-10",
+            "kind": "source-code",
+            "shows": "モデル名を表示し、未選択時はSelect model。設定済みの候補を並べる。"
+          }
+        ]
+      },
+      "trend": "モデル選択が会話欄のフッターから入力の操作列へ移る。（https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx）",
+      "trend_en": "Model selection moves from the chat footer to the input toolbar. (https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx)"
+    },
+    {
+      "id": "continue-2025-02",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "入力欄の操作列の左にあるモデル名を押す。",
+          "設定済みの候補からモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2025-02-28",
+            "kind": "source-code",
+            "shows": "入力の左のモデル選択と、対応モデル向けの道具の切替。"
+          }
+        ],
+        "notes": "候補の全表示名・現在のモデルを示すボタン名・既定値は利用者の設定で変わり unverified。",
+        "steps_en": [
+          "Click the model name on the left of the input toolbar.",
+          "Choose a model from your configured options."
+        ],
+        "notes_en": "Full option labels, current-model button text and default depend on user settings and are unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Tools",
+          "when": "2025-02-28..2025-02-28",
+          "where": "入力付近の道具の切替。モデルが対応し、編集モードではないときに使える。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar/ToggleToolsButton.tsx",
+              "date": "2025-02-28",
+              "kind": "source-code",
+              "shows": "Toolsを入力付近で切替。編集モードや非対応モデルでは使えない。"
+            }
+          ],
+          "where_en": "Tool toggle near the input, available for supported models outside edit mode."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-02-28",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2025-02-28",
+            "kind": "source-code",
+            "shows": "入力の左のモデル選択と、対応モデル向けの道具の切替。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar/ToggleToolsButton.tsx",
+            "date": "2025-02-28",
+            "kind": "source-code",
+            "shows": "Toolsを入力付近で切替。編集モードや非対応モデルでは使えない。"
+          }
+        ]
+      },
+      "trend": "入力の近くにモデルと道具の切替をまとめ、使える操作をモデルに応じて変える。（https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar/ToggleToolsButton.tsx）",
+      "trend_en": "Model and tool controls gather near the input, adapting available actions to the model. (https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar/ToggleToolsButton.tsx)"
+    },
+    {
+      "id": "continue-2025-10",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model",
+        "steps": [
+          "入力欄の下、動作方式の隣のモデル名を押す。",
+          "設定したモデルの一覧から選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2025-10-15",
+            "kind": "source-code",
+            "shows": "入力操作列の左にModeSelectとModelSelectを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2025-10-15",
+            "kind": "source-code",
+            "shows": "未選択時のSelect modelと設定済みのモデル一覧。"
+          }
+        ],
+        "notes": "labelはマウスを重ねたときの案内。ボタン本文はモデル名、未選択時はSelect model。全一覧・既定値は unverified。",
+        "steps_en": [
+          "Click the model name beside the mode below the input.",
+          "Choose from your configured models."
+        ],
+        "notes_en": "label is the hover hint. Button text is the model name or Select model when unselected. Full list and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "この動作方式に合わないモデルです",
+          "when": "2025-10-15..2025-10-15",
+          "where": "動作方式の選択の隣の警告にマウスを重ねると出る説明の意訳。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx",
+              "date": "2025-10-15",
+              "kind": "source-code",
+              "shows": "Chat・Plan・Agentと、モデルに合わない動作方式への警告。"
+            }
+          ],
+          "text_en": "This model is incompatible with the current mode",
+          "where_en": "Paraphrased tooltip on the warning beside the mode selector."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-10-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2025-10-15",
+            "kind": "source-code",
+            "shows": "入力操作列の左にModeSelectとModelSelectを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx",
+            "date": "2025-10-15",
+            "kind": "source-code",
+            "shows": "Chat・Plan・Agentと、モデルに合わない動作方式への警告。"
+          }
+        ]
+      },
+      "trend": "入力欄の下で質問・計画・実行とモデルを横に並べて選ぶ形になる。（https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx）",
+      "trend_en": "Question, planning, execution and model choices sit side by side below the input. (https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx)"
+    },
+    {
+      "id": "continue-2026-05",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "設定したモデルの一覧から選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-04-17",
+            "kind": "source-code",
+            "shows": "最後に確認できた5月以前の入力部。ModeSelectとModelSelectを入力下に並べる。"
+          }
+        ],
+        "notes": "4月17日の固定ソースを基準に記録。5月固有の位置変更は unverified。候補と既定値は利用者の設定で決まる。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose from your configured models."
+        ],
+        "notes_en": "Recorded against the pinned April 17 source. May-specific placement changes are unverified. Options and defaults depend on user settings."
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2026-05-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-04-17",
+            "kind": "source-code",
+            "shows": "最後に確認できた5月以前の入力部。ModeSelectとModelSelectを入力下に並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/ModeSelect/ModeSelect.tsx",
+            "date": "2026-04-17",
+            "kind": "source-code",
+            "shows": "Chat・Plan・Agent・Background。手元の設定ではBackgroundを選べない。"
+          }
+        ]
+      },
+      "trend": "最後に確認できた構成は、入力欄の下に動作方式とモデルを並べる形を保つ。（https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/mainInput/InputToolbar.tsx）",
+      "trend_en": "The last confirmed layout retains mode and model selection below the input. (https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/mainInput/InputToolbar.tsx)"
+    },
+    {
+      "id": "continue-2026-06",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "設定済みの候補から選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "最終2.0.0版も入力欄下に動作方式とモデルを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "モデルがないとNo models configuredを表示。モデル切替のキー案内。"
+          }
+        ],
+        "notes": "最後の2.0.0を対象とする。プラン向けの固定候補一覧ではなく、利用者の設定を使う。全一覧・既定値は unverified。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose from the configured options."
+        ],
+        "notes_en": "Covers final version 2.0.0 using user-configured options. Full list and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "deprecation-notice",
+          "text": "公開リポジトリの更新を終了",
+          "when": "2026-07-21..2026-07-21",
+          "where": "公開リポジトリのREADME。会話画面にバナーが出る証拠ではない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+              "date": "2026-07-21",
+              "kind": "source-code",
+              "shows": "リポジトリは更新を終了し読取専用、2.0.0を最終版と説明。アプリ内の通知ではない。"
+            }
+          ],
+          "text_en": "Public repository updates ended",
+          "where_en": "Public repository README. An in-chat banner is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2026-07-21",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "最終2.0.0版も入力欄下に動作方式とモデルを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+            "date": "2026-07-21",
+            "kind": "source-code",
+            "shows": "リポジトリは更新を終了し読取専用、2.0.0を最終版と説明。アプリ内の通知ではない。"
+          }
+        ]
+      },
+      "trend": "最終版でも、入力欄の近くにモデルと動作方式を並べる形が残る。（https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md）",
+      "trend_en": "The final release keeps model and mode controls near the input. (https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md)"
+    },
+    {
+      "id": "continue-2026-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model",
+        "steps": [
+          "最後の2.0.0版で入力欄の下のモデル名を押す。",
+          "自分が設定した候補からモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "最終2.0.0版も入力欄下に動作方式とモデルを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/modelSelection/ModelSelect.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "モデルがないとNo models configuredを表示。モデル切替のキー案内。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+            "date": "2026-07-21",
+            "kind": "source-code",
+            "shows": "リポジトリは更新を終了し読取専用、2.0.0を最終版と説明。アプリ内の通知ではない。"
+          }
+        ],
+        "notes": "11月の新しい公開版は unverified。保存された最終版の構成を記録し、新機能や新しい固定モデル一覧を追加しない。既定値は unverified。",
+        "steps_en": [
+          "In the final 2.0.0 version, click the model name below the input.",
+          "Choose a model from the options you configured."
+        ],
+        "notes_en": "A new November release is unverified. The archived final layout is recorded. Default selection is unverified."
+      },
+      "accents": [
+        {
+          "kind": "deprecation-notice",
+          "text": "最終公開版は2.0.0",
+          "when": "2026-11-15..2026-11-15",
+          "where": "公開リポジトリの説明。アプリ内の終了バナーとして描かない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+              "date": "2026-07-21",
+              "kind": "source-code",
+              "shows": "リポジトリは更新を終了し読取専用、2.0.0を最終版と説明。アプリ内の通知ではない。"
+            },
+            {
+              "url": "https://github.com/continuedev/continue",
+              "date": null,
+              "kind": "repository",
+              "shows": "2026-11-15閲覧。最終2.0.0と更新終了の案内。",
+              "accessed": "2026-11-15"
+            }
+          ],
+          "text_en": "Final public release is 2.0.0",
+          "where_en": "Public repository description, recorded as repository information."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2026-11-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+            "date": "2026-06-19",
+            "kind": "source-code",
+            "shows": "最終2.0.0版も入力欄下に動作方式とモデルを並べる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+            "date": "2026-07-21",
+            "kind": "source-code",
+            "shows": "リポジトリは更新を終了し読取専用、2.0.0を最終版と説明。アプリ内の通知ではない。"
+          },
+          {
+            "url": "https://github.com/continuedev/continue",
+            "date": null,
+            "kind": "repository",
+            "shows": "2026-11-15閲覧。最終2.0.0と更新終了の案内。",
+            "accessed": "2026-11-15"
+          }
+        ]
+      },
+      "trend": "保存された最終版では、入力付近に動作方式とモデルを選ぶ操作列が残る。（https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md）",
+      "trend_en": "The archived final release retains a toolbar near the input for mode and model selection. (https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx、https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md)"
+    }
+  ]
+}

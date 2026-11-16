@@ -1,0 +1,555 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "openclaw-formerly-clawdbot-moltbot",
+  "versions": [
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2025-11",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "この固定版に、独立したモデル選択の画面は確認できない。",
+          "外部の返答コマンドを設定する構成であり、その外部ツールのモデル候補は unverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v0.1.1/README.md",
+            "date": "2025-11-25",
+            "shows": "この固定版は warelay という端末の中継ツール。後の管理画面を遡って付けない。"
+          }
+        ],
+        "steps_en": [
+          "unverified (a dedicated model selection screen in this pinned version).",
+          "This setup configures an external reply command. That tool's model options are unverified."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/new で会話を開始し直す",
+          "when": "2025-11-25..2025-11-25",
+          "where": "受信メッセージ中の会話を初期化する言葉。既定の resetTriggers に指定される。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/v0.1.1/README.md",
+              "date": "2025-11-25",
+              "shows": "この固定版は warelay という端末の中継ツール。後の管理画面を遡って付けない。"
+            }
+          ],
+          "text_en": "Start a fresh chat with /new",
+          "where_en": "Chat reset phrase in incoming messages, included in the default resetTriggers."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-11-25",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v0.1.1/README.md",
+            "date": "2025-11-25",
+            "shows": "この固定版は warelay という端末の中継ツール。後の管理画面を遡って付けない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末で受信を中継し、利用者との会話は外部のメッセージ画面で行う（https://raw.githubusercontent.com/openclaw/openclaw/v0.1.1/README.md）。",
+      "trend_en": "The terminal relays incoming messages, while user chat happens in an external messaging interface. (https://raw.githubusercontent.com/openclaw/openclaw/v0.1.1/README.md)"
+    },
+    {
+      "id": "openclaw-clawdbot-2026-01",
+      "model_switch": {
+        "where": "settings",
+        "label": "Config",
+        "steps": [
+          "管理画面の Config から設定を開く。",
+          "agent.model に提供元とモデルの名前を指定する。",
+          "会話内の /model も設定資料に記載されるが、この版の画面の候補表示は unverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md",
+            "date": "2026-01-04",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/configuration.md",
+            "date": "2026-01-04",
+            "shows": "agent.model を provider/model で指定し、allowedModels と modelAliases を /model に使う。管理画面にはConfig編集があるが、専用のモデル選択ボタンは確認できない。"
+          }
+        ],
+        "steps_en": [
+          "Open settings from Config in the admin screen.",
+          "Set the provider and model name in agent.model.",
+          "The configuration docs also describe /model in chat. This version's on-screen options are unverified."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "接続用の秘密の文字列を設定",
+          "when": "2026-01-04..2026-01-04",
+          "where": "管理画面の接続設定で使う認証情報。実物の秘密の文字列は記録しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md",
+              "date": "2026-01-04",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "text_en": "Set a secret connection token",
+          "where_en": "Authentication credentials in the admin connection settings, represented without real secrets."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-01-04",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md",
+            "date": "2026-01-04",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "ブラウザーの管理画面に会話と接続設定をまとめる（https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md）。",
+      "trend_en": "Browser admin groups chat and connection settings. (https://raw.githubusercontent.com/openclaw/openclaw/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md)"
+    },
+    {
+      "id": "openclaw-moltbot-2026-01",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "会話の入力欄から /model または /model list を送る。",
+          "表示された番号、別名、または提供元とモデル名で指定する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/tools/slash-commands.md",
+            "date": "2026-01-28",
+            "shows": "/model、/model list と番号または provider/model による選択。例示されたモデルを全員に表示される候補としない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md",
+            "date": "2026-01-28",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Send /model or /model list in the chat input.",
+          "Select using a listed number, alias, or provider and model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "安全な接続が必要",
+          "when": "2026-01-28..2026-01-28",
+          "where": "通常のHTTP接続でブラウザーの端末識別が使えない場合、管理画面への接続を拒否する。エラーの文面は自分の言葉で要約。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md",
+              "date": "2026-01-28",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "text_en": "Secure connection required",
+          "where_en": "Admin access is refused when browser device identity is unavailable over ordinary HTTP. Error summarized in original words."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-01-28",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md",
+            "date": "2026-01-28",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "会話の操作を入力欄にまとめ、モデル変更も文字の指示で行う（https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md）。",
+      "trend_en": "Chat controls gather in the input, with text commands for model changes. (https://raw.githubusercontent.com/openclaw/openclaw/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md)"
+    },
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2026-01",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "会話の入力欄から /model または /model list を送る。",
+          "表示された番号、別名、または提供元とモデル名で指定する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/tools/slash-commands.md",
+            "date": "2026-01-31",
+            "shows": "/model、/model list と番号または provider/model による選択。例示されたモデルを全員に表示される候補としない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/web/control-ui.md",
+            "date": "2026-01-31",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Send /model or /model list in the chat input.",
+          "Select using a listed number, alias, or provider and model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "安全な接続が必要",
+          "when": "2026-01-31..2026-01-31",
+          "where": "通常のHTTP接続でブラウザーの端末識別が使えない場合、管理画面への接続を拒否する。エラーの文面は自分の言葉で要約。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/web/control-ui.md",
+              "date": "2026-01-31",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "text_en": "Secure connection required",
+          "where_en": "Admin access is refused when browser device identity is unavailable over ordinary HTTP. Error summarized in original words."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-01-31",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/web/control-ui.md",
+            "date": "2026-01-31",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "会話の操作を入力欄にまとめ、モデル変更も文字の指示で行う（https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/web/control-ui.md）。",
+      "trend_en": "Chat controls gather in the input, with text commands for model changes. (https://raw.githubusercontent.com/openclaw/openclaw/v2026.1.30/docs/web/control-ui.md)"
+    },
+    {
+      "id": "openclaw-2026-03-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "Open Chat",
+        "steps": [
+          "macOSのメニューバーにある製品のメニューから Open Chat を選ぶ。",
+          "開いた会話の入力欄で /model とモデル名を送る。",
+          "メニューバー自体のモデル選択部品は unverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/menu-bar.md",
+            "date": "2026-03-18",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/webchat.md",
+            "date": "2026-03-18",
+            "shows": "メニューから開く専用のWebChat画面とGateway経由の会話。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/tools/slash-commands.md",
+            "date": "2026-03-18",
+            "shows": "この時点の /model の選択操作。OSのメニューバーにモデル一覧があるという根拠ではない。"
+          }
+        ],
+        "steps_en": [
+          "Choose Open Chat from the product menu in the macOS menu bar.",
+          "Send /model followed by the model name in the chat that opens.",
+          "unverified (a model selector in the menu bar itself)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Open Dashboard",
+          "when": "2026-03-18..2026-03-18",
+          "where": "macOSのメニューバーから開くメニュー。ブラウザーの管理画面を開く項目。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/apps/macos/Sources/OpenClaw/MenuContentView.swift",
+              "date": "2026-03-18",
+              "shows": "Open Chat、Open Dashboardなどのメニュー項目。"
+            }
+          ],
+          "where_en": "Menu opened from the macOS menu bar, with an item opening browser admin."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "macOS menu bar / WebChat window",
+        "date_shown": "2026-03-18",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/menu-bar.md",
+            "date": "2026-03-18",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/webchat.md",
+            "date": "2026-03-18",
+            "shows": "メニューから開く専用のWebChat画面とGateway経由の会話。"
+          }
+        ]
+      },
+      "trend": "OSのメニューバーに接続と会話の入口を置き、会話は別の窓で開く（https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/menu-bar.md）。",
+      "trend_en": "The OS menu bar offers connection and chat entry points, opening chat in a separate window. (https://raw.githubusercontent.com/openclaw/openclaw/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/menu-bar.md)"
+    },
+    {
+      "id": "openclaw-2026-06",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "Model",
+        "steps": [
+          "会話の上部にあるモデルの一覧を開く。",
+          "使うモデルを選ぶ。保存した変更が会話へ反映されてから送信する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md",
+            "date": "2026-06-15",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Open the model list at the top of the chat.",
+          "Choose a model. Wait for saved changes to reach the chat before sending."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデル変更の保存を待って送信",
+          "when": "2026-06-15..2026-06-15",
+          "where": "会話上部の選択直後に送信した場合、入力欄はモデル変更の保存を待つ。新しい待機バナーの文面は unverified。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md",
+              "date": "2026-06-15",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "text_en": "Wait for model changes to save before sending",
+          "where_en": "After a top-of-chat model change, sending waits for the change to save. Exact waiting-banner wording is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-06-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md",
+            "date": "2026-06-15",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "会話上部にモデルと考える量の選択をまとめ、会話ごとに保存する（https://raw.githubusercontent.com/openclaw/openclaw/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md）。",
+      "trend_en": "Model and reasoning-effort selection sit at the top and are saved per chat. (https://raw.githubusercontent.com/openclaw/openclaw/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md)"
+    },
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2026-08",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話または New session の入力欄の下で現在のモデル名を押す。",
+          "一覧からモデルを選ぶ。考える量は隣の Effort で別に選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.8.1/docs/web/control-ui.md",
+            "date": "2026-08-31",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name below the Chat or New session input.",
+          "Choose a model from the list. Set reasoning effort separately in the adjacent Effort control."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデルと考える量を別々に選ぶ",
+          "when": "2026-08-31..2026-08-31",
+          "where": "入力欄に隣り合って並ぶモデル選択と Effort。モデル一覧の中へ Effort を混ぜない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.8.1/docs/web/control-ui.md",
+              "date": "2026-08-31",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "text_en": "Choose model and reasoning effort separately",
+          "where_en": "Model selection and Effort appear side by side in the input."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-08-31",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/v2026.8.1/docs/web/control-ui.md",
+            "date": "2026-08-31",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "モデルと考える量を入力欄の隣接する別の操作へ移し、会話を中心に整える（https://raw.githubusercontent.com/openclaw/openclaw/v2026.8.1/docs/web/control-ui.md）。",
+      "trend_en": "Model and reasoning effort move to adjacent controls in the input, keeping chat central. (https://raw.githubusercontent.com/openclaw/openclaw/v2026.8.1/docs/web/control-ui.md)"
+    },
+    {
+      "id": "openclaw-2026-09",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "入力欄にある現在のモデル名を押して一覧を開く。",
+          "提供元やモデル名で候補を探して選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/chat.md",
+            "date": "2026-09-12",
+            "shows": "モデル一覧の提供元ごとの認証表示と候補の検索。配置は同じ固定版の実装で別途確認する。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui.md",
+            "date": "2026-09-12",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/pages/chat/chat-pane-session-controls.ts",
+            "date": "2026-09-12",
+            "shows": "composerControls の chat-composer-model-control 内にモデル選択を組み込む。資料の会話上部という古い説明より、同じ固定版の実装を優先する。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name in the input to open the list.",
+          "Find and choose an option by provider or model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "API / Subscription",
+          "when": "2026-09-12..2026-09-12",
+          "where": "モデル一覧の提供元見出し。接続方法が取得できた場合に表示し、契約名を表示する場合もある。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/chat.md",
+              "date": "2026-09-12",
+              "shows": "モデル一覧の提供元ごとの認証表示と候補の検索。本文には会話上部という記述も残るため、8月の入力欄の説明と照合しても9月の正確な配置は unverified。"
+            }
+          ],
+          "where_en": "Provider headings in the model list, shown when connection methods are available. A plan name may appear."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-09-12",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui.md",
+            "date": "2026-09-12",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/chat.md",
+            "date": "2026-09-12",
+            "shows": "モデル一覧の提供元ごとの認証表示と候補の検索。本文には会話上部という記述も残るため、8月の入力欄の説明と照合しても9月の正確な配置は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/pages/chat/chat-pane-session-controls.ts",
+            "date": "2026-09-12",
+            "shows": "composerControls の chat-composer-model-control 内にモデル選択を組み込む。資料の会話上部という古い説明より、同じ固定版の実装を優先する。"
+          }
+        ]
+      },
+      "trend": "入力欄のモデル一覧に提供元の接続方法も示し、使える候補を探しやすくする（https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/pages/chat/chat-pane-session-controls.ts）。",
+      "trend_en": "The input's model list shows provider connection methods to help find available options. (https://raw.githubusercontent.com/openclaw/openclaw/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/pages/chat/chat-pane-session-controls.ts)"
+    },
+    {
+      "id": "openclaw-2026-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話の入力欄にある現在のモデル名を押す。",
+          "名前を探し、一覧の行を選ぶ。",
+          "再接続中に一覧が未取得なら、更新が終わるまで操作を待つ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md",
+            "date": "2026-11-10",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name in the chat input.",
+          "Search for a name and select its row.",
+          "If reconnecting before the list loads, wait for the refresh to finish."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Refreshing models…",
+          "when": "2026-11-10..2026-11-10",
+          "where": "保存した会話を読み直した直後のモデル選択。新しい候補一覧が届くまで無効になる。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openclaw/openclaw/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md",
+              "date": "2026-11-10",
+              "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+            }
+          ],
+          "where_en": "Model selection immediately after restoring a saved chat, disabled until new options arrive."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-10",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openclaw/openclaw/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md",
+            "date": "2026-11-10",
+            "shows": "固定した時点の公式資料。モデル候補は設定と認証によって変わり、全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "会話を再表示しても下書きを残し、モデル一覧の更新状態を入力欄で示す（https://raw.githubusercontent.com/openclaw/openclaw/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md）。",
+      "trend_en": "Drafts survive chat restoration, with model-list refresh state shown in the input. (https://raw.githubusercontent.com/openclaw/openclaw/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md)"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Meta",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "meta-prompting",
+      "publisher": "Meta",
+      "kind": "prompting-guide",
+      "title": "Llama の指示の工夫",
+      "url": "https://dev.meta.ai/llama/docs/how-to-guides/prompting",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "llama"
+        ],
+        "model_ids": [
+          "llama-2",
+          "llama-3.1-405b"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "examples",
+          "summary_ja": "期待する答えの例を示し、答えの形や判断の仕方を伝えます。",
+          "when_ja": "例なしの指示で回答が揃わないとき。",
+          "summary_en": "Provide examples of expected answers to demonstrate formatting and decision criteria.",
+          "when_en": "When zero-shot instructions produce inconsistent answers."
+        },
+        {
+          "technique_id": "reasoning-steps",
+          "summary_ja": "複雑な問題では途中の段階に分ける方法を試します。",
+          "when_ja": "複数の段階が必要な問題。",
+          "summary_en": "Try dividing complex problems into intermediate stages.",
+          "when_en": "When solving a problem with several stages."
+        }
+      ],
+      "sources": [
+        "https://dev.meta.ai/llama/docs/how-to-guides/prompting"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Llama prompting techniques"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "meta-llama31-format",
+      "publisher": "Meta",
+      "kind": "model-notes",
+      "title": "Llama 3.1 のメッセージ形式",
+      "url": "https://dev.meta.ai/llama/docs/model-cards-and-prompt-formats/llama3_1",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "llama-3.1-405b"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "conversation-format",
+          "summary_ja": "共通の指示、利用者の質問、道具の結果を、それぞれの役割に分けて渡します。",
+          "when_ja": "Llama 3.1 に会話や道具の結果を直接渡すとき。",
+          "summary_en": "Pass shared instructions, user questions and tool results using their respective message roles.",
+          "when_en": "When passing conversations or tool results directly to Llama 3.1."
+        }
+      ],
+      "sources": [
+        "https://dev.meta.ai/llama/docs/model-cards-and-prompt-formats/llama3_1"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Llama 3.1 message format"
+    }
+  ]
+}

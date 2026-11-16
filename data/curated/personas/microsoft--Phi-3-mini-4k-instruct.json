@@ -1,0 +1,102 @@
+{
+  "schema": "memento.persona.v1",
+  "model_id": "microsoft/Phi-3-mini-4k-instruct",
+  "name": "Phi-3 Mini 4K Instruct（更新後のカード）",
+  "family": "phi",
+  "aliases": [
+    "phi-3-mini-4k-instruct"
+  ],
+  "reviewed_at": "2026-11-15",
+  "traits": {
+    "tone": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "verbosity": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "formatting_habits": {
+      "value": "追加の調整により、指示した書式での応答が改善した。",
+      "source": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "Additional tuning improved adherence to requested response formats."
+    },
+    "refusal_style": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "humour": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "self_description": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "knowledge_cutoff": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "interface": {
+      "value": "chat",
+      "source": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+      "basis": "official",
+      "confidence": 0.9,
+      "note": "資料で示された入出力形式です。chat は対話、completion は文章の続きを書く形式です。"
+    },
+    "quirks": [],
+    "failure_modes": [
+      {
+        "value": "英語以外では能力が落ちやすい。もっともらしい誤った内容も作る。",
+        "source": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Performance can drop outside English. May generate plausible false content."
+      }
+    ],
+    "typical_strengths": [
+      {
+        "value": "指示に沿った応答や、複数の発言を受けた会話。",
+        "source": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Instruction following and multi-turn conversation."
+      }
+    ]
+  },
+  "resolution": {
+    "kind": "researched",
+    "ancestor": null,
+    "path": [
+      "microsoft/Phi-3-mini-4k-instruct"
+    ],
+    "method": "own",
+    "warnings": [
+      "空欄の話し方は未確認です。公開資料の説明だけで人格全体が分かるわけではありません。"
+    ],
+    "links": []
+  }
+}

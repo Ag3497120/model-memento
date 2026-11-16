@@ -1,0 +1,2095 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "chatgpt",
+  "name": "ChatGPT",
+  "vendor": "OpenAI",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "chatgpt-2022-11",
+      "from": "2022-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "入力した質問に答え、続きの質問や訂正を同じ会話で扱う。初日そのものの左右メニューはunverified。 （https://openai.com/index/chatgpt/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "質問と、その後の追加の質問を送る。初日の吹き出し形状はunverified。 （https://openai.com/index/chatgpt/）",
+        "assistant": "追加の質問に応じた答えが会話として続く。 （https://openai.com/index/chatgpt/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "無料の研究用プレビューとして公開された会話画面。 （https://openai.com/index/chatgpt/）",
+        "前のやり取りを踏まえて質問を続けられる。 （https://openai.com/index/chatgpt/）",
+        "unverified（11月30日当日のサイドバー・空画面の厳密な構成）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt/",
+          "kind": "blog",
+          "date": "2022-11-30",
+          "shows": "初回公開と対話方式。公開紹介ページであり、現在の製品ナビゲーションは2022年の操作画面ではない。"
+        },
+        {
+          "url": "https://arstechnica.com/information-technology/2022/12/openai-invites-everyone-to-test-new-ai-powered-chatbot-with-amusing-results/",
+          "kind": "press",
+          "date": "2022-12-01",
+          "shows": "公開直後の報道。会話画面と無料試行を確認するが、ピクセル単位の外観を記述しない。"
+        },
+        {
+          "url": "https://interfacelineage.com/chatgpt-chat-completions-ui",
+          "kind": "blog",
+          "date": null,
+          "shows": "二次のデザイン史。12月5日の帯状の会話を紹介する。初日の画面の保証ではないので次の版へ分けた。"
+        }
+      ],
+      "confidence": 0.44
+    },
+    {
+      "id": "chatgpt-2022-12",
+      "from": "2022-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "初期12月の記録では利用者と返答が横幅のある帯で交互に並ぶ。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": null,
+          "size": null,
+          "contents": [
+            "12月15日の更新から保存した会話の表示・改名・削除が段階的に追加される。初日から完成済みの履歴を描かない。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下部",
+          "size": null,
+          "contents": [
+            "質問を入れる欄。利用者の質問は編集、返答は評価・再生成という役割の違いがある。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "質問を編集",
+          "where": "利用者の質問の横",
+          "purpose": "送った質問を書き直す。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+        },
+        {
+          "label": "評価",
+          "where": "返答の横",
+          "purpose": "返答を評価する。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+        }
+      ],
+      "conversation": {
+        "user": "横幅のある帯に利用者の印と質問が並ぶ。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "assistant": "別の明るさの帯に返答が並ぶ。元のロゴは再利用しない。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "tool_calls": null,
+        "streaming": "文字が順次増える。停止操作が追加されるのは2023年1月9日。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "会話の下の文章入力欄。角丸と幅は未測定。 （https://interfacelineage.com/chatgpt-chat-completions-ui）"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左右に小さな吹き出しを並べる形ではなく、横幅のある帯でやり取りする。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "質問に編集、返答に評価という違いがある。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "月の後半から会話の保存と整理が加わる。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://interfacelineage.com/chatgpt-chat-completions-ui",
+          "kind": "blog",
+          "date": null,
+          "shows": "12月5日の画面に対する説明と帯状の配置。二次資料であり、採寸やCSSの根拠にしない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2022-12-15",
+          "shows": "履歴・改名・削除の段階公開と下部の版表記。12月15日の項目だけを用いる。"
+        }
+      ],
+      "confidence": 0.62
+    },
+    {
+      "id": "chatgpt-2023-03",
+      "from": "2023-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "当時の直接利用者は既存の選択メニューにGPT-4が加わったと報告。二分割の常設タブという根拠は得られない。 （https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/）"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "PlusでGPT-4を使う。利用上限は需要に応じて変わる。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "GPT-4",
+          "where": "モデル選択メニュー",
+          "purpose": "Plusの利用者が選ぶ。初日の直接報告ではDefaultとLegacyも並ぶ。 （https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "モデル選択へGPT-4が加わる。 （https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/）",
+        "同じ選択メニューに以前の版も残るという直接報告。 （https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/）",
+        "利用上限は変動するため25回/3時間を固定表示しない。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-4-research/",
+          "kind": "blog",
+          "date": "2023-03-14",
+          "shows": "GPT-4とPlus/APIの提供時点。外観の配色や幅は示さない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2023-03-14",
+          "shows": "Plusへの追加と利用上限が変わること。"
+        },
+        {
+          "url": "https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/",
+          "kind": "blog",
+          "date": "2023-03-14",
+          "shows": "当日利用者の投稿と返信の本文。選択メニューにGPT-4、Legacy、Defaultがあると報告。画像の数値やコメント中の憶測は採用しない。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "chatgpt-2023-05",
+      "from": "2023-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "設定の試験機能",
+          "position": null,
+          "size": null,
+          "contents": [
+            "設定からWeb閲覧とPluginsを有効にする。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "モデルと追加機能の選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "モデル選択でPluginsを選び、下の選択メニューから追加機能の一覧へ入る。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Beta features",
+          "where": "設定",
+          "purpose": "試験機能を切り替える。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        },
+        {
+          "label": "Plugins",
+          "where": "モデル選択",
+          "purpose": "追加機能を使う会話にする。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        },
+        {
+          "label": "Plugin Store",
+          "where": "Pluginsの選択メニュー",
+          "purpose": "追加機能を探して有効にする。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "閲覧したWebページを示し、出典への参照が回答に付く。 （https://openai.com/index/chatgpt-plugins/）",
+        "tool_calls": "Web閲覧では訪問したページを確認できる。固定の処理順・件数ではない。 （https://openai.com/index/chatgpt-plugins/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "設定に試験機能の切替がある。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "追加機能用の選択メニューと一覧画面。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "Web閲覧の過程と出典が会話に加わる。 （https://openai.com/index/chatgpt-plugins/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2023-05-12",
+          "shows": "モデル選択→Plugins→Plugin Storeという操作順とBeta features。"
+        },
+        {
+          "url": "https://openai.com/index/chatgpt-plugins/",
+          "kind": "blog",
+          "date": "2023-03-23",
+          "shows": "先行公開時の説明。閲覧先と出典の表示。5月の全Plus向け展開と区別する。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "chatgpt-2023-07",
+      "from": "2023-07",
+      "to": null,
+      "regions": [
+        {
+          "name": "設定",
+          "position": null,
+          "size": null,
+          "contents": [
+            "試験機能からCode Interpreterを有効にする。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "会話とファイル",
+          "position": null,
+          "size": null,
+          "contents": [
+            "アップロードしたファイルを使って計算や図表作成を行う。入力欄の添付ボタンの形・位置はunverified。 （https://openai.com/index/chatgpt-plugins/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Code Interpreter",
+          "where": "設定の試験機能とモデル選択",
+          "purpose": "プログラムを動かして計算やファイル処理をする会話に切り替える。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": "文章に加えファイルを渡せる。 （https://openai.com/index/chatgpt-plugins/）",
+        "assistant": "処理した結果や取得できるファイルを返す。 （https://openai.com/index/chatgpt-plugins/）",
+        "tool_calls": "同じ会話で計算用の状態を保って処理する。具体的な折りたたみ表示や文言はunverified。 （https://openai.com/index/chatgpt-plugins/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ファイルを会話へ渡せる。 （https://openai.com/index/chatgpt-plugins/）",
+        "表の集計や図表づくりを会話で依頼する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "計算の結果をファイルとして受け取れる。 （https://openai.com/index/chatgpt-plugins/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2023-07-06",
+          "shows": "PlusのWeb版へ順次公開、設定から有効化。"
+        },
+        {
+          "url": "https://openai.com/index/chatgpt-plugins/",
+          "kind": "blog",
+          "date": "2023-03-23",
+          "shows": "計算用の状態、ファイルの受け渡しについての公式説明。7月当日の細かな部品の保証ではない。"
+        },
+        {
+          "url": "https://community.openai.com/t/chatgpt-4-missing-upload-button-solved-confusing-ui/300566",
+          "kind": "blog",
+          "date": "2023-07-16",
+          "shows": "利用者の直接報告。添付操作は通常のGPT-4ではなくCode Interpreterを選んだ場合に出るという説明。"
+        }
+      ],
+      "confidence": 0.62
+    },
+    {
+      "id": "chatgpt-2023-09",
+      "from": "2023-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "画像入力",
+          "position": null,
+          "size": null,
+          "contents": [
+            "写真を撮るか選んで会話へ渡す。モバイルでは先に＋を開く。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）"
+          ]
+        },
+        {
+          "name": "モバイルの音声開始",
+          "position": "ホームの右上",
+          "size": null,
+          "contents": [
+            "ヘッドホンのボタンから声の会話を始め、5種類から声を選ぶ。Webの常設の声選択とは分ける。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "写真",
+          "where": "入力操作",
+          "purpose": "写真を撮るか選ぶ。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）"
+        },
+        {
+          "label": "音声会話",
+          "where": "モバイルホームの右上",
+          "purpose": "設定で有効にした後、ヘッドホンのボタンから始める。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）"
+        }
+      ],
+      "conversation": {
+        "user": "文章と画像を渡せる。モバイルでは画像の一部を描いて指定できる。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）",
+        "assistant": "画像について文章で答える。音声会話は当初モバイル向け。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "写真を会話へ渡す入口が加わる。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）",
+        "モバイルでは描いて画像の場所を指示する。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）",
+        "ヘッドホンから始めるモバイルの音声会話。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-can-now-see-hear-and-speak/",
+          "kind": "blog",
+          "date": "2023-09-25",
+          "shows": "画像は全プラットフォーム、音声はiOS/Androidという初期の区別。操作の場所は記事本文で確認。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2023-09-25",
+          "shows": "同日の段階公開を照合する変更記録。同じ発表に基づき、独立した2つの画面観測ではない。"
+        }
+      ],
+      "confidence": 0.72
+    },
+    {
+      "id": "chatgpt-2023-11",
+      "from": "2023-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "GPTの作成",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話で目的を伝え、指示・追加資料・使う機能を設定して独自のGPTを作る。 （https://openai.com/index/introducing-gpts/）"
+          ]
+        },
+        {
+          "name": "通常の会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Web検索、画像生成、データ分析のために別モードへ移る手間を減らす。細かなホームの配置はunverified。 （https://openai.com/index/introducing-gpts/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "GPTを作成",
+          "where": "GPTの作成画面",
+          "purpose": "会話しながら設定を作る。 （https://openai.com/index/introducing-gpts/）"
+        }
+      ],
+      "conversation": {
+        "user": "文章に加え、ファイルを添付して分析を依頼できる。 （https://openai.com/index/introducing-gpts/）",
+        "assistant": null,
+        "tool_calls": "Web検索・画像づくり・分析を必要に応じて使う。 （https://openai.com/index/introducing-gpts/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "用途別のGPTを作成して共有する。 （https://openai.com/index/introducing-gpts/）",
+        "指示と追加資料と機能を組み合わせる。 （https://openai.com/index/introducing-gpts/）",
+        "通常会話の中で複数の機能を使いやすくする。 （https://openai.com/index/introducing-gpts/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-gpts/",
+          "kind": "blog",
+          "date": "2023-11-06",
+          "shows": "GPT作成と通常会話の機能統合。公開紹介ページであって、サイドバーの幅や配色の資料ではない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2023-11-06",
+          "shows": "GPTs公開の変更記録。"
+        },
+        {
+          "url": "https://openai.com/index/new-models-and-developer-products-announced-at-devday/",
+          "kind": "blog",
+          "date": "2023-11-06",
+          "shows": "APIのGPT-4 Turboの128Kという記載。これをChatGPT画面の常設の値へ流用しない。"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=U9mJuUkhUzk",
+          "kind": "video",
+          "date": "2023-11-06",
+          "shows": "公式投稿のタイトル・説明・発表リンクを検索結果で確認。直接ページの本文はフッターだけ。画面配置の証拠に数えない。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "chatgpt-2024-05",
+      "from": "2024-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "ホームと会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "公式にホームとメッセージ配置の変更を発表。5月13日そのもののカード枚数はunverified。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "6月の記録では質問は右寄せの灰色の角丸枠。5月13日当日の形状は未確認。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "assistant": "6月の記録では返答は枠のない本文として会話の幅に沿って並ぶ。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ホームとメッセージ配置を作り直したと公式に発表。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）",
+        "6月までには、質問の角丸枠と返答の枠なし本文という違いを観測できる。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+        "ファイルや画像の入力を無料利用者にも順次広げる。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/",
+          "kind": "blog",
+          "date": "2024-05-13",
+          "shows": "新しいホーム・メッセージ配置と機能展開。具体的な寸法やスターターの枚数は示さない。"
+        },
+        {
+          "url": "https://interfacelineage.com/chatgpt-chat-completions-ui",
+          "kind": "blog",
+          "date": null,
+          "shows": "6月2024の会話を説明。右寄せの質問と枠なしの返答。5月初日の形状への遡及はしない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2024-05-13",
+          "shows": "当初はテキストと画像のみ。新しいリアルタイム音声・動画の初日実装を追認しない。"
+        }
+      ],
+      "confidence": 0.64
+    },
+    {
+      "id": "chatgpt-2024-05-macos",
+      "from": "2024-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "質問の呼び出し",
+          "position": "他の作業中に呼び出すMacアプリ",
+          "size": null,
+          "contents": [
+            "Option＋Spaceで質問を始める。起動時の正確な窓サイズはunverified。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+          ]
+        },
+        {
+          "name": "音声開始",
+          "position": "アプリの右下",
+          "size": null,
+          "contents": [
+            "ヘッドホンの操作から従来の音声会話を開始。新音声・動画は後日予定。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "⌥ Space",
+          "where": "キーボード",
+          "purpose": "別の作業中から質問を呼び出す。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+        },
+        {
+          "label": "音声会話",
+          "where": "アプリ右下",
+          "purpose": "ヘッドホンの操作から声で会話する。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+        }
+      ],
+      "conversation": {
+        "user": "質問や、アプリ内で撮った画面を渡す。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "キーボードで素早く質問を始める。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）",
+        "アプリ内で画面を撮って内容について話す。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）",
+        "従来の音声会話の入口は右下。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/",
+          "kind": "blog",
+          "date": "2024-05-13",
+          "shows": "Mac版の公式発表は5月13日。ショートカットと右下の音声操作を確認。カタログは5月14日と記しており、ここでは月だけを保持する。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes",
+          "kind": "release-notes",
+          "date": "2024-08-06",
+          "shows": "常に前面に残るCompanion windowは8月6日の別更新。5月の呼び出しと区別するための資料。"
+        }
+      ],
+      "confidence": 0.61
+    },
+    {
+      "id": "chatgpt-2024-08-macos",
+      "from": "2024-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "小さな会話ウィンドウ",
+          "position": "他のアプリの前面",
+          "size": null,
+          "contents": [
+            "別の作業を続けながら横で会話できる。前面に残り、位置などを設定できる。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "⌥ Space",
+          "where": "キーボード",
+          "purpose": "新しい会話、開いている窓への入力の移動、最後の窓の再表示。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "他のアプリの前に残る小さな会話ウィンドウ。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+        "位置と再開までの設定を変えられる。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+        "主ウィンドウの既存会話も小さな窓に取り出せる。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes",
+          "kind": "release-notes",
+          "date": "2024-08-06",
+          "shows": "追加されたCompanion windowの挙動と設定。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/",
+          "kind": "blog",
+          "date": "2024-05-13",
+          "shows": "5月には呼び出し用ショートカットが既にあったこと。8月の常時前面ウィンドウと混同しないための背景資料。"
+        }
+      ],
+      "confidence": 0.76
+    },
+    {
+      "id": "chatgpt-2024-09",
+      "from": "2024-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "o1-previewとo1-miniを手動で選ぶ。主画面に固定のモデルの札が3つ並ぶ根拠はない。 （https://openai.com/index/introducing-openai-o1-preview/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "o1-preview",
+          "where": "モデル選択",
+          "purpose": "時間をかけて回答するモデルを選ぶ。 （https://openai.com/index/introducing-openai-o1-preview/）"
+        },
+        {
+          "label": "o1-mini",
+          "where": "モデル選択",
+          "purpose": "もう一つの推論用モデルを選ぶ。 （https://openai.com/index/introducing-openai-o1-preview/）"
+        }
+      ],
+      "conversation": {
+        "user": "初期のo1は文章入力。Web閲覧・ファイルや画像のアップロードは未対応。 （https://openai.com/index/introducing-openai-o1-preview/）",
+        "assistant": null,
+        "tool_calls": "初期o1ではWeb閲覧を使えない。思考の要約と外部処理の呼び出しは分ける。 （https://openai.com/index/introducing-openai-o1-preview/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "モデル選択にo1の2種類が加わる。 （https://openai.com/index/introducing-openai-o1-preview/）",
+        "返答の前に考える時間を取るモデル。 （https://openai.com/index/introducing-openai-o1-preview/）",
+        "初期版は画像・ファイルの入力やWeb閲覧を伴わない。 （https://openai.com/index/introducing-openai-o1-preview/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "kind": "blog",
+          "date": "2024-09-12",
+          "shows": "初期のモデル選択と入力制限。APIが逐次出力に未対応という説明を、そのままChatGPTの表示仕様へ流用しない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2024-09-12",
+          "shows": "同日のo1公開記録。具体的な思考表示の短文や折りたたみ形は確認できず。"
+        }
+      ],
+      "confidence": 0.56
+    },
+    {
+      "id": "chatgpt-2024-10",
+      "from": "2024-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話と編集",
+          "position": "並べて使う別の編集領域",
+          "size": null,
+          "contents": [
+            "文書やコードを直接編集し、選んだ部分への修正やコメントを依頼する。左右の固定幅・文章への行番号はunverified。 （https://openai.com/index/introducing-canvas/）"
+          ]
+        },
+        {
+          "name": "検索の出典",
+          "position": "回答の下から開く別の欄",
+          "size": null,
+          "contents": [
+            "10月31日の検索追加では回答の下のSources操作で参照先一覧を開く。10月3日の初日とは分ける。 （https://openai.com/index/introducing-chatgpt-search/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Suggest edits",
+          "where": "編集領域の操作メニュー",
+          "purpose": "文書の修正案を出す。 （https://openai.com/index/introducing-canvas/）"
+        },
+        {
+          "label": "Adjust the length",
+          "where": "編集領域の操作メニュー",
+          "purpose": "文書の長さを変える。 （https://openai.com/index/introducing-canvas/）"
+        },
+        {
+          "label": "Sources",
+          "where": "検索回答の下",
+          "purpose": "参照先の一覧を開く。10月31日以後。 （https://openai.com/index/introducing-chatgpt-search/）"
+        }
+      ],
+      "conversation": {
+        "user": "会話で依頼し、編集領域の特定部分を選んでも指示できる。 （https://openai.com/index/introducing-canvas/）",
+        "assistant": "会話以外の編集領域に文書やコードを表示し、部分的な変更を提案する。 （https://openai.com/index/introducing-canvas/）",
+        "tool_calls": "月末追加の検索は回答に参照先を付ける。 （https://openai.com/index/introducing-chatgpt-search/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話とは別の場所で文書・コードを直接直す。 （https://openai.com/index/introducing-canvas/）",
+        "範囲を選んで局所的な提案を受ける。 （https://openai.com/index/introducing-canvas/）",
+        "長さ・読解の難しさなどを変える操作メニュー。 （https://openai.com/index/introducing-canvas/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-canvas/",
+          "kind": "blog",
+          "date": "2024-10-03",
+          "shows": "canvas初期の別編集領域、範囲選択、修正メニュー、戻す操作。"
+        },
+        {
+          "url": "https://openai.com/index/introducing-chatgpt-search/",
+          "kind": "blog",
+          "date": "2024-10-31",
+          "shows": "月末追加の検索ボタンとSources一覧。canvas初日の実装と区別。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2024-12-10",
+          "shows": "canvasでのPython実行は12月の更新。10月の文章用Canvasに常設の実行ボタンを置かないための時点の資料。"
+        }
+      ],
+      "confidence": 0.74
+    },
+    {
+      "id": "chatgpt-2024-11-macos",
+      "from": "2024-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "入力欄の上の連携表示",
+          "position": "入力欄の上",
+          "size": null,
+          "contents": [
+            "どのアプリの内容を読み取るかを帯で示す。現行ヘルプの記述なので当日の細部はunverified。 （https://help.openai.com/en/articles/10119604-work-with-apps-on-macos）"
+          ]
+        },
+        {
+          "name": "モデルの操作",
+          "position": "Macの入力バー",
+          "size": null,
+          "contents": [
+            "モデル変更と一時的な会話の切替を直接行う。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Work with Apps",
+          "where": "Macの入力バー付近",
+          "purpose": "作業中のアプリの内容を会話へ渡す。 （https://help.openai.com/en/articles/10119604-work-with-apps-on-macos）"
+        },
+        {
+          "label": "Temporary Chat",
+          "where": "Macの入力バー",
+          "purpose": "一時的な会話へ切り替える。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": "連携したアプリの内容を文章と一緒に送る。 （https://help.openai.com/en/articles/10119604-work-with-apps-on-macos）",
+        "assistant": "読み取った内容を踏まえて答える。直接ファイルを直す機能は2025年3月の別更新。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "作業中のアプリを読む機能。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+        "入力バーからモデルと一時的な会話を切り替える。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+        "連携中のアプリと読み取る内容を入力欄の上で確認する。 （https://help.openai.com/en/articles/10119604-work-with-apps-on-macos）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes",
+          "kind": "release-notes",
+          "date": "2024-11-14",
+          "shows": "Work with Appsと入力バー改修。2025-03-06のコード直接編集と分ける。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/10119604-work-with-apps-on-macos",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の操作説明。入力欄の上の帯。現在は直接編集や追加アプリの説明も含むため、11月当日の一覧には流用しない。"
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "chatgpt-2024-11",
+      "from": "2024-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "サイドバー",
+          "position": "左・浮かせて表示も可能",
+          "size": null,
+          "contents": [
+            "最近の会話を表示し、全件は追加の一覧で探す。GPTと設定も並ぶ。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "入力と新規会話",
+          "position": "会話下部とモデル選択の左",
+          "size": null,
+          "contents": [
+            "新しい会話の操作がモデル選択の左へ移る。入力欄の下に内容が入ると徐々に薄く見える。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "モデル選択の左",
+          "purpose": "会話を新しく始める。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        },
+        {
+          "label": "設定",
+          "where": "サイドバーの下",
+          "purpose": "設定を開く。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "会話の返答側のアイコンが取り除かれ、本文に使える幅が広がる。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "サイドバーを浮かせて表示する形が加わる。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "最近の会話と全件の一覧を分ける。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "設定がサイドバーの下に残る。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2024-11-22",
+          "shows": "2週間かけるWeb改修。サイドバーと入力欄、新規会話の移動。"
+        },
+        {
+          "url": "https://community.openai.com/t/new-sidebar-pop-up-is-garbage/1028109",
+          "kind": "blog",
+          "date": "2024-11-22",
+          "shows": "当日の直接利用者が会話一覧のポップアップ化を報告。OpenAIの仕様保証ではないが、同日の変化を照合できる。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "chatgpt-2024-12",
+      "from": "2024-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "プロジェクトの入口",
+          "position": "左のサイドバー",
+          "size": null,
+          "contents": [
+            "＋からプロジェクトを作成し、関連する会話と資料をまとめる。 （https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "＋",
+          "where": "サイドバー",
+          "purpose": "新しいプロジェクトを作る。 （https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話をプロジェクトでまとめる入口。 （https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/）",
+        "関連ファイルをまとめられる。 （https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/）",
+        "プロジェクト向けの指示を持てる。 （https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://arstechnica.com/information-technology/2024/12/12-days-of-openai-the-ars-technica-recap/",
+          "kind": "press",
+          "date": "2024-12-20",
+          "shows": "12日間の発表の当時のまとめ。12月13日のProjectsとサイドバーの＋操作。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2024-12-13",
+          "shows": "Projects公開時点の照合。現在の共有機能や全プランへの展開を初日へ遡らせない。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "chatgpt-2025-02",
+      "from": "2025-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "調査の入口",
+          "position": "メッセージ入力欄",
+          "size": null,
+          "contents": [
+            "Deep researchを選び、依頼と資料を渡す。 （https://openai.com/index/introducing-deep-research/）"
+          ]
+        },
+        {
+          "name": "調査の進み具合",
+          "position": "開始後に開くサイドバー",
+          "size": null,
+          "contents": [
+            "実行した手順の要約と参照先を表示する。左右の固定幅や割合のメーターはunverified。 （https://openai.com/index/introducing-deep-research/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Deep research",
+          "where": "メッセージ入力欄",
+          "purpose": "資料を調べて出典付きの報告を作る。 （https://openai.com/index/introducing-deep-research/）"
+        }
+      ],
+      "conversation": {
+        "user": "依頼にファイルや表を添えられる。 （https://openai.com/index/introducing-deep-research/）",
+        "assistant": "結果の報告を会話の中に出す。 （https://openai.com/index/introducing-deep-research/）",
+        "tool_calls": "途中の手順と使用した出典を別の欄で確認する。 （https://openai.com/index/introducing-deep-research/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "入力欄で調査用の機能を選ぶ。 （https://openai.com/index/introducing-deep-research/）",
+        "調査開始後に進行状況の欄が開く。 （https://openai.com/index/introducing-deep-research/）",
+        "最終報告は会話へ戻る。 （https://openai.com/index/introducing-deep-research/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-deep-research/",
+          "kind": "blog",
+          "date": "2025-02-02",
+          "shows": "How to use節の初期説明。2026-02-10の更新段落は別版へ分ける。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2025-02-02",
+          "shows": "最初のPro向け公開時点を照合。2月27日のGPT-4.5を2月2日の常設ボタンにしない。"
+        }
+      ],
+      "confidence": 0.76
+    },
+    {
+      "id": "chatgpt-2025-04",
+      "from": "2025-04",
+      "to": null,
+      "regions": [
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "o3、o4-mini、o4-mini-highを選択する。 （https://openai.com/index/introducing-o3-and-o4-mini/）"
+          ]
+        },
+        {
+          "name": "画像の保存一覧",
+          "position": "サイドバーのLibraryから開く",
+          "size": null,
+          "contents": [
+            "4月15日から、会話で作った画像をまとめて探す入口が加わる。画像の一覧は独自の無地の枠で表現する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Think",
+          "where": "無料利用者の入力欄",
+          "purpose": "o4-miniを試す。 （https://openai.com/index/introducing-o3-and-o4-mini/）"
+        },
+        {
+          "label": "Library",
+          "where": "サイドバー",
+          "purpose": "作成した画像の一覧へ入る。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+        }
+      ],
+      "conversation": {
+        "user": "画像やファイルを使う依頼ができる。 （https://openai.com/index/introducing-o3-and-o4-mini/）",
+        "assistant": "文章に加え、複数の道具を使った回答を返す。外観の細部はunverified。 （https://openai.com/index/introducing-o3-and-o4-mini/）",
+        "tool_calls": "Web検索、計算、画像の分析などを組み合わせる。固定の画像操作ボタン列を示す資料ではない。 （https://openai.com/index/introducing-o3-and-o4-mini/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "モデル選択に新しい推論モデルが加わる。 （https://openai.com/index/introducing-o3-and-o4-mini/）",
+        "無料利用者には入力欄のThinkという入口。 （https://openai.com/index/introducing-o3-and-o4-mini/）",
+        "サイドバーに作成画像の保存一覧への入口。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "kind": "blog",
+          "date": "2025-04-16",
+          "shows": "モデル選択と無料利用者のThink操作、道具の組み合わせ。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2025-04-15",
+          "shows": "Image Libraryの公開日とサイドバーの入口。会話上部の常設の画像ストリップとは異なる。"
+        }
+      ],
+      "confidence": 0.69
+    },
+    {
+      "id": "chatgpt-2025-06-macos",
+      "from": "2025-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "録音",
+          "position": null,
+          "size": null,
+          "contents": [
+            "録音した会話を文字に起こし、編集できる要約へつなげる。初回6月の波形・窓の寸法はunverified。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "会議や音声メモを録音する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "assistant": "文字起こしと要約を編集可能なcanvasへまとめる。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Macアプリで録音する機能。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "録音から文字起こしと要約へ進む。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "要約は編集できる文書として扱う。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2025-06-04",
+          "shows": "後続7月16日の項目も初回Team公開を6月4日と記す。初日・後日のプラン展開を分ける。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/11487532-chatgpt-record",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在の録音操作は録音開始、経過時間、停止、Resume、Send。現行の4時間上限や後年の操作を6月初日の仕様として採用しない。"
+        }
+      ],
+      "confidence": 0.47
+    },
+    {
+      "id": "chatgpt-2025-08",
+      "from": "2025-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "初日にはGPT-5と有料利用者向けのThinking。8月12日の更新でAuto/Fast/Thinkingが追加される。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "話し方の設定",
+          "position": "設定",
+          "size": null,
+          "contents": [
+            "皮肉寄り・簡潔・聞き役・好奇心の強い話し方を任意で選ぶ。会話上部の固定の札ではない。 （https://openai.com/index/introducing-gpt-5/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "GPT-5 Thinking",
+          "where": "モデル選択",
+          "purpose": "有料利用者が考える時間を取るモデルを選ぶ。 （https://openai.com/index/introducing-gpt-5/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "内容に応じてすぐ答えるか、考える時間を取る。外観上の表示文言はunverified。 （https://openai.com/index/introducing-gpt-5/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "質問に応じて通常の回答と推論を使い分ける。 （https://openai.com/index/introducing-gpt-5/）",
+        "必要ならモデル選択からThinkingを明示する。 （https://openai.com/index/introducing-gpt-5/）",
+        "話し方の選択は設定で行う。 （https://openai.com/index/introducing-gpt-5/）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-gpt-5/",
+          "kind": "blog",
+          "date": "2025-08-07",
+          "shows": "初日のモデル選択と任意の話し方の設定。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2025-08-12",
+          "shows": "Auto/Fast/Thinkingの追加は8月12日。8月8日のAccent Colors説明は色を変更できることを示すが、固定の色コードは示さない。"
+        }
+      ],
+      "confidence": 0.67
+    },
+    {
+      "id": "chatgpt-2026-02",
+      "from": "2026-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "調査の入口",
+          "position": "サイドバー",
+          "size": null,
+          "contents": [
+            "Deep researchの入口を作り直し、調査を始めて管理する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        },
+        {
+          "name": "調査の計画と報告",
+          "position": "計画の編集と全画面の報告表示",
+          "size": null,
+          "contents": [
+            "実行前に調査の計画を編集し、途中で方向を変える。報告は全画面で読める。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "対象のサイトや接続したサービスを絞り、計画を調整する。 （https://openai.com/index/introducing-deep-research/）",
+        "assistant": "進み具合を確認し、調査の途中でも追記できる。 （https://openai.com/index/introducing-deep-research/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "調査の入口をサイドバーにまとめ直す。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "実行前の調査計画を編集する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+        "報告を全画面で確認する。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2026-02-10",
+          "shows": "入口と報告表示の改修。"
+        },
+        {
+          "url": "https://openai.com/index/introducing-deep-research/",
+          "kind": "blog",
+          "date": "2026-02-10",
+          "shows": "冒頭の明示された更新段落。2025年初期の画面と分ける。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "chatgpt-2026-04",
+      "from": "2026-04",
+      "to": null,
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "unverified（2026年4月10日という固有の画面改修）",
+        "unverified（Memory Graphという常設の欄）",
+        "unverified（ファイル・記憶の件数を表示する固定の上部バー）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のProjectsの説明では会話・資料・指示と設定を確認できる。4月10日の独自UIを示す資料ではない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のMemoryの設定・要約・Sourcesの説明。Memory Graphという画面の根拠は確認できず。4月当日の観測資料ではない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "April 10, 2026という該当する更新を確認できず。Memory Graphの不存在を証明する資料ではない。2026-04版の外観はunverifiedのまま。"
+        }
+      ],
+      "confidence": 0.1
+    },
+    {
+      "id": "chatgpt-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "dotとの会話とプロフィール",
+          "position": null,
+          "size": null,
+          "contents": [
+            "作業の依頼は会話へ入力し、進行中・予定・完了の活動はデスクトップのプロフィールで確認する。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "＋",
+          "where": "dotとの会話",
+          "purpose": "資料を添付する。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）"
+        },
+        {
+          "label": "Texting",
+          "where": "dotのプロフィール",
+          "purpose": "自分の電話番号との接続を設定する。対象者だけに表示される。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）"
+        }
+      ],
+      "conversation": {
+        "user": "会話で依頼や追記を伝える。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）",
+        "assistant": "定期的な作業や進捗は会話へ届き、活動をプロフィールから確認する。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）",
+        "tool_calls": "ローカルの作業はサイドバーに別のタスクとして現れる。詳細な色や処理時間一覧はunverified。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, BlinkMacSystemFont, \"Noto Sans JP\", sans-serif; コードはui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話とプロフィール内の活動一覧を使い分ける。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）",
+        "予定した作業をプロフィールやScheduledから管理する。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）",
+        "Textingはプロフィールから設定する条件付きの入口。 （https://help.openai.com/en/articles/20001530-getting-started-with-your-dot）"
+      ],
+      "must_not_copy": [
+        "OpenAIの結び目のロゴ・アプリのアイコン・ブランド風の文字組み",
+        "GPTのアイコン・マスコット・写真・生成画像・画面画像・壁紙",
+        "元の紹介文・例文・回答の長い転記・非公開の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2026-11-15に読んだ現行の操作説明。プロフィールの3区分とTexting、添付、タスクの位置。全ての利用者に同じ表示とはしない。"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "kind": "release-notes",
+          "date": "2026-11-13",
+          "shows": "11月4日のImages 2.6、10月26日のTerra、11月13日のWalletを日付別に照合。11月5日の固定画面を示す資料ではない。"
+        },
+        {
+          "url": "https://chatgpt.com/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2026-11-15に取得したログアウト状態のページ。ログインと登録、New chat・Images・Plugins等の文字を確認。ログイン後のDots・モデル選択・Walletの配置は確認できない。"
+        }
+      ],
+      "confidence": 0.56
+    }
+  ],
+  "corrections": [
+    "2022-11の「左サイドバーなし」という断言はunverified。12月の画面の説明だけで初日の有無は決められない。旧調査の未確認扱いは維持し、12月の構成は追加版へ分けた。 （https://interfacelineage.com/chatgpt-chat-completions-ui）",
+    "最初から会話履歴が並ぶ描画にしない。履歴は12月15日から段階公開。停止ボタンも2023年1月9日の追加。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+    "2023-03の二分割GPT-3.5/GPT-4タブは未確認。当日の利用者は既存のドロップダウンへの追加を報告している。25回/3時間という制限も固定しない。 （https://www.reddit.com/r/ChatGPT/comments/11rc06k/just_got_access_to_gpt4_chatgpt_plus/）",
+    "2023-05の追加機能の会社名を常設のバッジ列にしない。設定・モデル選択・追加機能のメニューという操作順がある。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+    "2023-07に常設のUploaded Files一覧や内部のファイルパスを描く根拠はない。利用者が渡したファイルと結果を会話で扱うことまで確認できる。 （https://openai.com/index/chatgpt-plugins/）",
+    "2023-09の5つの声をWebの常設ボタンにしない。音声は当初モバイルの右上から開始、画像は全プラットフォーム。 （https://openai.com/index/chatgpt-can-now-see-hear-and-speak/）",
+    "APIのGPT-4 Turboの128Kを2023-11のChatGPTの常設表示へ流用しない。 （https://openai.com/index/new-models-and-developer-products-announced-at-devday/）",
+    "2024-05のWebの4枚のカード・常時Temporary Chatボタン・サイドバーをなくした配置はunverified。公式に確認できるのはホームとメッセージ配置の変更。 （https://openai.com/index/gpt-4o-and-more-tools-to-chatgpt-free/）",
+    "Macの常に前面に残るCompanion windowは2024-08-06の更新として分ける。5月のOption＋Space起動から、そのまま8月の窓全体を推定しない。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+    "2024-09のDecompose/Verifyという思考全文風の表はunverified。公開された思考の要約と、内部の思考そのものを混同しない。 （https://openai.com/index/introducing-openai-o1-preview/）",
+    "文章用canvasの常設の行番号・罫線、Canvas Historyというサイドバー項目はunverified。検索は10月31日、canvas初日は10月3日。 （https://openai.com/index/introducing-canvas/）",
+    "Macで直接コードを編集する機能は2025-03-06。2024-11はまず内容の読み取りと入力バーの変更。 （https://help.openai.com/en/articles/9703738-chatgpt-macos-app-release-notes）",
+    "2025-02の固定の進捗パーセント、実行時間、出典件数はunverified。公開説明は手順の要約と出典を示すサイドバー。 （https://openai.com/index/introducing-deep-research/）",
+    "2025-04の画像一覧の入口はサイドバーのLibrary。会話の上に常設の画像操作ストリップを置く根拠はない。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+    "録音版のRecordings/Transcripts/Canvas Notesという左メニュー、常設の文字起こし欄、⌘⇧Rの固定キー、120分という初日上限はunverified。現在のヘルプの上限を初日に移さない。 （https://help.openai.com/en/articles/11487532-chatgpt-record）",
+    "GPT-5の話し方は設定で選ぶ。会話の上の常設バッジではない。Auto/Fast/Thinkingは8月12日追加で、7日の初日へ遡らせない。 （https://openai.com/index/introducing-gpt-5/）",
+    "2026-04のMemory Graph・18 Nodes・固定ファイル件数はunverified。現在の公式Memory説明にある要約と出典の操作からグラフを創作しない。 （https://help.openai.com/en/articles/8590148-memory-in-chatgpt）",
+    "2026-11のDots/Images/Wallet/GPT-Live/iMessageという固定の5ボタン列と右の常設情報欄はunverified。Walletは11月13日の発表で、カタログの11月5日の固定画面へは置けない。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）",
+    "Terraの10月26日の説明はWork/Codexが対象。通常のChat画面にTerra/Sol/Astraの3つが並ぶという根拠としては使えない。 （https://help.openai.com/en/articles/6825453-chatgpt-release-notes）"
+  ]
+}

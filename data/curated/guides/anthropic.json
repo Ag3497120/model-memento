@@ -1,0 +1,448 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Anthropic",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-overview",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "良い答えの基準を先に決める",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "claude-opus",
+          "claude-sonnet",
+          "claude-haiku",
+          "claude-fable"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "claude.ai",
+          "claude-desktop"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "verify",
+          "summary_ja": "何を良い答えとするか決め、試す方法を用意してから指示文を直します。",
+          "when_ja": "指示を変えても良くなったか判断できないとき。",
+          "summary_en": "Set success criteria and an evaluation method before revising the prompt.",
+          "when_en": "When it is hard to judge whether a prompt change helped."
+        }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Define a good answer first"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-prompting",
+      "publisher": "Anthropic",
+      "kind": "prompting-guide",
+      "title": "Claude への指示の基本",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "claude-opus",
+          "claude-sonnet",
+          "claude-haiku",
+          "claude-fable"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "claude.ai",
+          "claude-desktop"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "examples",
+          "summary_ja": "実際の依頼に近い例と、例外になる例を示して答え方を伝えます。",
+          "when_ja": "答えの形や調子をそろえたいとき。",
+          "summary_en": "Show examples close to the real task, including edge cases, to demonstrate the answer.",
+          "when_en": "When aligning answer format or tone."
+        },
+        {
+          "technique_id": "delimiters",
+          "summary_ja": "指示・資料・例を見出しやタグで分けます。",
+          "when_ja": "長い入力に複数の種類の文章を入れるとき。",
+          "summary_en": "Separate instructions, references and examples with headings or tags.",
+          "when_en": "When an input contains several kinds of text."
+        },
+        {
+          "technique_id": "role",
+          "summary_ja": "担当する仕事を明確にし、必要な専門分野や観点を伝えます。",
+          "when_ja": "答えに特定の視点が必要なとき。",
+          "summary_en": "Define the job and specify the relevant expertise or perspective.",
+          "when_en": "When the answer needs a particular viewpoint."
+        }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Claude prompting basics"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-thinking",
+      "publisher": "Anthropic",
+      "kind": "model-notes",
+      "title": "Claude の考える時間を調整する",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "claude-3.7-sonnet",
+          "claude-sonnet-4",
+          "claude-opus-4",
+          "claude-opus-4.1",
+          "claude-sonnet-4.5"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "reasoning-effort",
+          "summary_ja": "対応モデルの考える設定と、回答に使える量を合わせて調整します。",
+          "when_ja": "複雑な問題で時間と回答の質を調整したいとき。",
+          "summary_en": "Tune the supported model’s thinking settings alongside its response budget.",
+          "when_en": "When balancing time and answer quality on complex problems."
+        }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/build-with-claude/extended-thinking"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Adjust Claude thinking time"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-hallucinations",
+      "publisher": "Anthropic",
+      "kind": "prompting-guide",
+      "title": "資料にない答えを減らす",
+      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "claude-opus",
+          "claude-sonnet",
+          "claude-haiku",
+          "claude-fable"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "claude.ai",
+          "claude-desktop"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "grounding",
+          "summary_ja": "資料の根拠を確かめ、分からない場合は分からないと答えるよう頼みます。",
+          "when_ja": "資料を使って事実を答えてほしいとき。",
+          "summary_en": "Ask for evidence from the reference material and for uncertainty to be acknowledged.",
+          "when_en": "When asking for factual answers based on documents."
+        }
+      ],
+      "sources": [
+        "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Reduce answers unsupported by references"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-effective-agents",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "自動で作業する AI の組み立て方",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "published": "2024-12-19",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "decompose",
+          "summary_ja": "複雑さを増やす前に、単純な手順や小さな仕事の組み合わせで試します。",
+          "when_ja": "複数の処理を AI に任せたいとき。",
+          "summary_en": "Try simple workflows and combinations of small tasks before adding complexity.",
+          "when_en": "When delegating several processing steps to AI."
+        }
+      ],
+      "sources": [
+        "https://www.anthropic.com/research/building-effective-agents"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Build AI workflows that use tools"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-context",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "AI に渡す資料を選ぶ",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "published": "2025-09-29",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "context-selection",
+          "summary_ja": "必要な情報を選び、長い作業では要約や別の担当役を使って整理します。",
+          "when_ja": "会話が長くなり、重要な条件を見失いやすいとき。",
+          "summary_en": "Choose relevant information and organize long tasks with summaries or separate agents.",
+          "when_en": "When a long conversation makes important constraints easy to lose."
+        }
+      ],
+      "sources": [
+        "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Select context for AI"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-skills-introduction",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "繰り返す仕事を Skills にまとめる",
+      "url": "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills",
+      "published": "2025-10-16",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code",
+          "claude.ai",
+          "claude-desktop"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "手順と関連資料をひとまとめにし、必要なときに詳しい内容を読む形にします。",
+          "when_ja": "同じ種類の仕事を何度も頼むとき。",
+          "summary_en": "Bundle instructions and supporting material so detailed content can be read when needed.",
+          "when_en": "When requesting the same kind of task repeatedly."
+        }
+      ],
+      "sources": [
+        "https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Package repeatable tasks as Skills"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-claude-md",
+      "publisher": "Anthropic",
+      "kind": "agent-instructions-file",
+      "title": "CLAUDE.md に毎回の約束を書く",
+      "url": "https://code.claude.com/docs/en/memory",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "claude-file",
+          "summary_ja": "共有する作業の約束を短く具体的に書き、対象が限られる約束は分けます。",
+          "when_ja": "毎回同じ作業手順を説明しているとき。",
+          "summary_en": "Keep shared conventions short and specific, with narrowly scoped rules stored separately.",
+          "when_en": "When you keep explaining the same working procedures."
+        }
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/memory"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Write recurring conventions in CLAUDE.md"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-skills-format",
+      "publisher": "Anthropic",
+      "kind": "agent-instructions-file",
+      "title": "Claude Code の SKILL.md",
+      "url": "https://code.claude.com/docs/en/skills",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "SKILL.md の名前・説明・本文で、仕事の呼び出し方と手順を伝えます。",
+          "when_ja": "必要な場面だけ詳しい手順を読ませたいとき。",
+          "summary_en": "Use the SKILL.md name, description and body to explain how to invoke and perform the task.",
+          "when_en": "When detailed instructions should be read only as needed."
+        }
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/skills"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "SKILL.md in Claude Code"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-subagents",
+      "publisher": "Anthropic",
+      "kind": "agent-instructions-file",
+      "title": "別の担当役を定義する",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "subagents",
+          "summary_ja": "担当役ごとに説明、使える道具、指示を定義します。",
+          "when_ja": "調査や確認を別の会話の文脈で進めたいとき。",
+          "summary_en": "Define each agent’s description, available tools and instructions.",
+          "when_en": "When research or review needs its own conversation context."
+        }
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/sub-agents"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Define separate agents"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-code-practices",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "Claude Code で結果を確かめる",
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "verify",
+          "summary_ja": "テストや期待する見た目など、作業結果を確かめる方法も渡します。",
+          "when_ja": "変更が正しいか AI 自身でも確かめてほしいとき。",
+          "summary_en": "Provide ways to check the work, such as tests or the expected appearance.",
+          "when_en": "When you want AI to verify its changes."
+        }
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/best-practices"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Verify results in Claude Code"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-projects",
+      "publisher": "Anthropic",
+      "kind": "release-notes-on-prompting",
+      "title": "プロジェクトごとの資料と指示",
+      "url": "https://www.anthropic.com/news/projects",
+      "published": "2024-06-25",
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude.ai",
+          "claude-desktop"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "reuse",
+          "summary_ja": "プロジェクトの資料と指示をまとめ、同じ背景を繰り返し説明する手間を減らします。",
+          "when_ja": "共通の資料で複数の会話をするとき。",
+          "summary_en": "Collect project documents and instructions to reduce repeated background explanations.",
+          "when_en": "When several conversations share reference material."
+        }
+      ],
+      "sources": [
+        "https://www.anthropic.com/news/projects"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Project references and instructions"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "anthropic-mcp",
+      "publisher": "Anthropic",
+      "kind": "best-practices",
+      "title": "Claude Code に外部の道具をつなぐ",
+      "url": "https://code.claude.com/docs/en/mcp",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "claude-code"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "mcp",
+          "summary_ja": "MCP（外部の道具や資料を AI につなぐ共通の方式）の接続を設定します。",
+          "when_ja": "手元にない情報や外部の機能を使う仕事。",
+          "summary_en": "Configure MCP connections to give AI access to external tools and resources.",
+          "when_en": "When a task needs external information or capabilities."
+        }
+      ],
+      "sources": [
+        "https://code.claude.com/docs/en/mcp"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Connect external tools to Claude Code"
+    }
+  ]
+}

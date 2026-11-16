@@ -1,0 +1,1427 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "aider",
+  "name": "Aider",
+  "vendor": "Paul Gauthier / Aider-AI",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "aider-2023-05",
+      "from": "2023-06",
+      "to": "2023-11",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/clear",
+          "where": "入力行",
+          "purpose": "会話を消す"
+        },
+        {
+          "label": "/tokens",
+          "where": "入力行",
+          "purpose": "モデルへ渡す文字量の目安を見る"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "初期の公式会話例では、変更前と変更後を ORIGINAL / UPDATED の区切りで示す。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.5.0/aider/io.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.5.0/aider/io.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "ファイルを指定して起動すると、追加・新規作成の案内と入力待ち。2023年5月そのものの配布版は unverified。",
+      "distinctive": [
+        "ファイル名を入力待ちの直前に表示",
+        "質問・コード・編集結果が一つの出力として流れる",
+        "適用結果と Git の保存結果を同じ画面に表示"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.5.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0",
+          "kind": "release-notes",
+          "date": "2023-06-07",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.5.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "端末の入力・出力色を設定から渡す。背景色を製品の黒に固定しない。"
+        },
+        {
+          "url": "https://aider.chat/examples/hello-world-flask.html",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "初期形式の会話例。ORIGINAL / UPDATED の区切り、適用結果、Git 保存を確認。公開日なし。ウェブ用の整形済み記録であり端末の正確な配色は証明しない。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "aider-2023-11",
+      "from": "2023-11",
+      "to": "2023-12",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/clear",
+          "where": "入力行",
+          "purpose": "会話を消す"
+        },
+        {
+          "label": "/tokens",
+          "where": "入力行",
+          "purpose": "モデルへ渡す文字量の目安を見る"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "通常は返答を受け取った順に端末へ表示する。設定で逐次表示を止められる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.18.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.18.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "端末のファイル名と > の入力行",
+        "返答とコードが順に現れる",
+        "編集結果と Git の保存結果を縦に表示"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.18.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.18.0",
+          "kind": "release-notes",
+          "date": "2023-11-17",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.18.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "--dark-mode 指定時だけ入力色 #32FF32、返答色 #00FFFF を選ぶ。背景色は指定しない。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.18.0/aider/coders/base_coder.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "stream=True と返答の逐次表示。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.18.0/HISTORY.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "v0.18.0 は GPT-4 Turbo の出力改善。統一差分方式をこの版へ遡らせない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "aider-2023-12",
+      "from": "2023-12",
+      "to": "2024-06",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/clear",
+          "where": "入力行",
+          "purpose": "会話を消す"
+        },
+        {
+          "label": "/tokens",
+          "where": "入力行",
+          "purpose": "モデルへ渡す文字量の目安を見る"
+        },
+        {
+          "label": "--4-turbo",
+          "where": "起動時",
+          "purpose": "この版の GPT-4 Turbo 設定を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "GPT-4 Turbo の標準設定では、変更ファイルと --- / +++、@@、追加・削除の行からなる差分形式を返す。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "通常は返答を受け取った順に端末へ表示する。設定で逐次表示を止められる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.19.0/aider/coders/udiff_coder.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.19.0/aider/coders/udiff_coder.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "GPT-4 Turbo の編集が統一差分形式になる",
+        "--- / +++ と @@ の文字の区切り",
+        "端末の入力方式は従来どおり"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.19.0",
+          "kind": "release-notes",
+          "date": "2023-12-20",
+          "shows": "v0.19.0 は2023-12-20 UTC。GPT-4 Turbo の標準編集を統一差分形式に変更。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.19.0/aider/coders/udiff_coder.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "udiff 編集形式と差分の読み取り。"
+        },
+        {
+          "url": "https://aider.chat/2023/12/21/unified-diffs.html",
+          "kind": "blog",
+          "date": "2023-12-21",
+          "shows": "変更内容を行単位の差分で渡す説明。コード出力の形を確認する資料。固定パネルを追加する資料ではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "aider-2024-05",
+      "from": "2024-05",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "ブラウザ版の左メニュー",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Aider の通常文字の見出し",
+            "編集するファイルの複数選択",
+            "ウェブページの追加",
+            "最近の入力を選び直す欄",
+            "会話を消す操作と実験版の注意"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者と返答の行",
+            "起動情報の案内",
+            "変更結果と折りたたみ式の差分"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "メッセージ入力欄"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Add files to the chat",
+          "where": "左メニュー",
+          "purpose": "編集するファイルを選ぶ"
+        },
+        {
+          "label": "Add a web page to the chat",
+          "where": "左メニュー",
+          "purpose": "ページの文章を会話へ加える"
+        },
+        {
+          "label": "Clear chat history",
+          "where": "左メニュー",
+          "purpose": "会話を消す"
+        },
+        {
+          "label": "Undo commit",
+          "where": "変更結果の下",
+          "purpose": "直近の適用を戻す"
+        }
+      ],
+      "conversation": {
+        "user": "Streamlit の利用者用の会話行。製品独自の吹き出し色は未確定。",
+        "assistant": "Streamlit の返答用の会話行に文章とコードを表示。",
+        "tool_calls": "編集の結果を会話内の枠で示す。差分は開閉でき、取り消しは編集結果の近くに出る。",
+        "streaming": "st.write_stream で返答を順に表示する。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.31.0/aider/gui.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.31.0/aider/gui.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "Streamlit の会話用入力欄。枠の半径や色は依存する版・設定を確認できず null。"
+      },
+      "empty_state": "起動情報の案内と、依頼を尋ねる短い返答。左で編集対象を選び、下の欄から入力する。",
+      "distinctive": [
+        "左に編集ファイルの複数選択",
+        "左に最近の入力と会話を消す操作",
+        "編集結果と差分は会話の途中",
+        "実験版である注意書き",
+        "初期ソースは会話の上に300pxの空白を入れる"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークと紹介動画",
+        "公式の会話例、コード、製品画像",
+        "Streamlit や他製品のロゴとアプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.31.0/aider/gui.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "有効な左メニューの呼び出し、会話、差分、取り消し、逐次表示。未使用の補助関数を常設UIに数えない。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.31.0",
+          "kind": "release-notes",
+          "date": "2024-05-02",
+          "shows": "ブラウザ画面を含む固定版の公開日。"
+        },
+        {
+          "url": "https://aider.chat/docs/usage/browser.html",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "--browser でローカルのプロジェクトを扱う説明。紹介ページであり、実際のログイン後画面を開いた観察ではない。"
+        },
+        {
+          "url": "https://aider.chat/2024/05/02/browser.html",
+          "kind": "blog",
+          "date": "2024-05-02",
+          "shows": "実験的なブラウザ画面の公開案内。現在の本文には後年のモデル名も混ざるので当時のモデルや色へ流用しない。"
+        }
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "aider-2024-06",
+      "from": "2024-06",
+      "to": "2024-10",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/add",
+          "where": "入力行",
+          "purpose": "編集したいファイルを会話へ加える"
+        },
+        {
+          "label": "/drop",
+          "where": "入力行",
+          "purpose": "ファイルを会話から外す"
+        },
+        {
+          "label": "/model",
+          "where": "入力行",
+          "purpose": "利用するモデルを変える"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "返答とコードを少しずつ表示する。stream の設定で無効にできる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.39.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.39.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "起動時の選択モデルと編集形式の案内",
+        "対象ファイル名と > の入力行",
+        "文章とコードを端末に逐次表示",
+        "モデル変更も入力行の命令で操作"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.39.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.39.0",
+          "kind": "release-notes",
+          "date": "2024-06-20",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.39.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "暗い端末向けを明示したときの入力色 #32FF32。明るい端末向けは ANSI の green。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.39.0/aider/coders/base_coder.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "MarkdownStream による返答表示と、起動時のモデル・ファイル案内。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.31.0",
+          "kind": "release-notes",
+          "date": "2024-05-02",
+          "shows": "2024-05-02 に /model と /models を追加済み。--browser は別の利用面。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "aider-2024-10",
+      "from": "2024-10",
+      "to": "2025-01",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "ファイル名と、architect など現在の方式名に続く >"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/architect",
+          "where": "入力行",
+          "purpose": "相談役と編集役を使う方式へ切り替える"
+        },
+        {
+          "label": "/read-only",
+          "where": "入力行",
+          "purpose": "変更させずに参照するファイルを加える"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "相談役の返答のあと、編集役へ引き渡して変更結果を同じ出力に続ける。モデルによって待ち時間は変わる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.59.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.59.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "architect などの方式名が入力待ちに出る",
+        "相談役から編集役へ同じ端末内で進む",
+        "参照専用ファイルを入力命令で指定",
+        "固定の工程図や別パネルを持たない"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.59.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.59.0",
+          "kind": "release-notes",
+          "date": "2024-10-04",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.59.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "明暗向けの出力色設定。端末背景は設定しない。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.59.0/aider/coders/architect_coder.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "編集役の案内を出してから同じ端末で編集を実行する。"
+        },
+        {
+          "url": "https://aider.chat/2024/09/26/architect.html",
+          "kind": "blog",
+          "date": "2024-09-26",
+          "shows": "相談役と編集役の二段階方式を公開。独立した工程図の画面を追加したものではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "aider-2025-01",
+      "from": "2025-01",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "選択した主モデル、architect 方式の場合の編集役モデル、作業場所の案内"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名、現在の方式名と >"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/architect",
+          "where": "入力行",
+          "purpose": "相談役から編集役へ渡す方式を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力行",
+          "purpose": "モデルを変える"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "モデルが対応する場合は返答を順に出力する。相談役から編集役へ同じ端末の出力が続く。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.72.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.72.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "主モデルと編集役モデルの案内",
+        "architect の入力待ち",
+        "モデルの返答と変更結果が順に続く",
+        "二つのモデルを図で常設表示しない"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.72.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.72.0",
+          "kind": "release-notes",
+          "date": "2025-01-20",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.72.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "明暗向けの出力色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.72.0/aider/coders/base_coder.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "起動時の Main model / Editor model、編集形式、利用量の表示。"
+        },
+        {
+          "url": "https://aider.chat/2025/01/24/r1-sonnet.html",
+          "kind": "blog",
+          "date": "2025-01-24",
+          "shows": "R1を相談役、Sonnetを編集役にする使い方。ベンチマークは64.0%。思考文そのものを編集役へ渡した結果ではない。"
+        }
+      ],
+      "confidence": 0.89
+    },
+    {
+      "id": "aider-2025-04",
+      "from": "2025-04",
+      "to": "2026-03",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "通常の入力待ち。監視中はファイル中の依頼も受け付ける"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--watch-files",
+          "where": "起動時",
+          "purpose": "ファイル内の AI コメントから依頼を受け取る"
+        },
+        {
+          "label": "/diff",
+          "where": "入力行",
+          "purpose": "ファイルの変更を確認する"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "返答と編集結果を端末に逐次表示する。ファイル監視から届いた依頼も同じ会話に入る。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.82.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.82.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "通常の端末入力とファイル内の依頼を同じ会話で扱う",
+        "AI! と AI? を使う案内",
+        "変更・確認結果が出力として流れる",
+        "監視専用の架空の watch > 表示にはしない"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.82.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.82.0",
+          "kind": "release-notes",
+          "date": "2025-04-14",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.82.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "暗い端末向けの入力色 #32FF32 と色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.82.0/aider/watch.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル中の依頼を読み、AI! は変更、AI? は質問として扱う。"
+        },
+        {
+          "url": "https://aider.chat/docs/usage/watch.html",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "端末を開いたまま、外部エディタのコメントから依頼する説明。現在の文書で、導入日の資料ではない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "aider-2025-09",
+      "from": "2025-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザ版の左メニュー",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Aider の通常文字の見出し",
+            "編集するファイルの複数選択",
+            "ウェブページの追加",
+            "最近の入力を選び直す欄",
+            "会話を消す操作と実験版の注意"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者と返答の行",
+            "起動情報の案内",
+            "変更結果と折りたたみ式の差分"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "メッセージ入力欄"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Add files to the chat",
+          "where": "左メニュー",
+          "purpose": "編集するファイルを選ぶ"
+        },
+        {
+          "label": "Add a web page to the chat",
+          "where": "左メニュー",
+          "purpose": "ページの文章を会話へ加える"
+        },
+        {
+          "label": "Clear chat history",
+          "where": "左メニュー",
+          "purpose": "会話を消す"
+        },
+        {
+          "label": "Undo commit",
+          "where": "変更結果の下",
+          "purpose": "直近の適用を戻す"
+        }
+      ],
+      "conversation": {
+        "user": "Streamlit の利用者用の会話行。製品独自の吹き出し色は未確定。",
+        "assistant": "Streamlit の返答用の会話行に文章とコードを表示。",
+        "tool_calls": "編集の結果を会話内の枠で示す。差分は開閉でき、取り消しは編集結果の近くに出る。",
+        "streaming": "st.write_stream で返答を順に表示する。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/gui.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/gui.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "Streamlit の会話用入力欄。枠の半径や色は依存する版・設定を確認できず null。"
+      },
+      "empty_state": "起動情報の案内と、依頼を尋ねる短い返答。左で編集対象を選び、下の欄から入力する。",
+      "distinctive": [
+        "左に編集ファイルの複数選択",
+        "左に最近の入力と会話を消す操作",
+        "編集結果と差分は会話の途中",
+        "実験版である注意書き",
+        "初期の会話上部300pxの空白はこのソースでは無効"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークと紹介動画",
+        "公式の会話例、コード、製品画像",
+        "Streamlit や他製品のロゴとアプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/gui.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "有効な左メニューの呼び出し、会話、差分、取り消し、逐次表示。未使用の補助関数を常設UIに数えない。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+          "kind": "release-notes",
+          "date": "2025-08-09",
+          "shows": "v0.86.0 は2025-08-09。9月の独立した新画面という主張ではなく、カタログ9月枠の固定版の代表。"
+        },
+        {
+          "url": "https://aider.chat/docs/usage/browser.html",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "--browser でローカルのプロジェクトを扱う説明。紹介ページであり、実際のログイン後画面を開いた観察ではない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "aider-2026-03",
+      "from": null,
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/read-only",
+          "where": "入力行",
+          "purpose": "参照専用のファイルを加える"
+        },
+        {
+          "label": "/model",
+          "where": "入力行",
+          "purpose": "利用するモデルを変える"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "モデルの対応と設定に従い、同じ端末に返答を順に出す。新しい3月専用の画面は unverified。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "ファイル名と現在の方式名を入力行付近に表示",
+        "参照専用と編集対象を文字で区別",
+        "会話と適用結果を同じ端末へ出力"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+          "kind": "release-notes",
+          "date": "2025-08-09",
+          "shows": "v0.86.0 は2025-08-09公開。3月に新しいUIが出た証拠ではない。カタログの指定タグを記述する。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "v0.86.0 の明暗向けの出力色設定。"
+        },
+        {
+          "url": "https://aider.chat/HISTORY.html",
+          "kind": "changelog",
+          "date": null,
+          "shows": "v0.86.0 の後も変更履歴は公開されるが、Reasoning Alias Matrix という3月専用の画面は確認できない。"
+        }
+      ],
+      "confidence": 0.56
+    },
+    {
+      "id": "aider-2026-11",
+      "from": null,
+      "to": null,
+      "regions": [
+        {
+          "name": "起動情報",
+          "position": "flow-start",
+          "size": null,
+          "contents": [
+            "作業フォルダや対象ファイルの案内。固定ヘッダーではなく端末の出力。"
+          ]
+        },
+        {
+          "name": "会話と変更結果",
+          "position": "flow",
+          "size": null,
+          "contents": [
+            "質問、返答、コード、適用結果を同じ端末に縦に出力"
+          ]
+        },
+        {
+          "name": "次の入力",
+          "position": "flow-end",
+          "size": null,
+          "contents": [
+            "対象ファイル名と > の入力待ち。固定の下部ツールバーではない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/read-only",
+          "where": "入力行",
+          "purpose": "参照専用のファイルを加える"
+        },
+        {
+          "label": "/model",
+          "where": "入力行",
+          "purpose": "利用するモデルを変える"
+        }
+      ],
+      "conversation": {
+        "user": "対象ファイル名と > に続けて入力する。囲みの吹き出しはない。",
+        "assistant": "見出し、文章、コードを端末内に表示する。",
+        "tool_calls": "ファイルへの適用や Git の保存結果を文章で続けて出す。ブラウザ風の承認カードにはしない。",
+        "streaming": "固定版 v0.86.0 ではモデル・設定に応じて逐次表示。2026年11月固有の変更は unverified。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#32FF32",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py",
+          "dark": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字行。角丸の入力ボックスや常設の操作ボタンはない。"
+      },
+      "empty_state": "起動情報と追加したファイルの案内に続いて > で依頼を待つ。",
+      "distinctive": [
+        "ファイル名と現在の方式名を入力行付近に表示",
+        "参照専用と編集対象を文字で区別",
+        "会話と適用結果を同じ端末へ出力"
+      ],
+      "must_not_copy": [
+        "Aider の製品マークや紹介動画",
+        "公式会話例の長い文章とコード",
+        "端末アプリ自身のアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/io.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル名と > の入力行、補完、端末側の色設定。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+          "kind": "release-notes",
+          "date": "2025-08-09",
+          "shows": "v0.86.0 は2025-08-09公開。3月に新しいUIが出た証拠ではない。カタログの指定タグを記述する。"
+        },
+        {
+          "url": "https://github.com/Aider-AI/aider/blob/v0.86.0/aider/main.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "v0.86.0 の明暗向けの出力色設定。"
+        },
+        {
+          "url": "https://aider.chat/HISTORY.html",
+          "kind": "changelog",
+          "date": null,
+          "shows": "v0.86.0 の後も変更履歴は公開されるが、Reasoning Alias Matrix という3月専用の画面は確認できない。"
+        },
+        {
+          "url": "https://aider.chat/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "ログイン前の紹介ページ。端末で会話と編集をする製品という説明に限って使用。11月の新デザインやモデル名の確認には使わない。"
+        }
+      ],
+      "confidence": 0.44
+    }
+  ],
+  "corrections": [
+    "旧調査の2023-05という開始月は unverified。今回読めた初期固定版 v0.5.0 の GitHub 公開日は2023-06-07 UTC。公式会話例にも公開日がない。 https://github.com/Aider-AI/aider/releases/tag/v0.5.0 https://aider.chat/examples/hello-world-flask.html",
+    "カタログの aider-2023-11 は v0.18 と統一差分を混同。v0.18.0 は11月17日、統一差分を標準にした v0.19.0 は12月20日 UTC。renderer の11月の v0.19 表示と固定差分カードを修正対象にする。 https://github.com/Aider-AI/aider/releases/tag/v0.18.0 https://github.com/Aider-AI/aider/releases/tag/v0.19.0",
+    "カタログの黒背景・灰色文字・緑の強調色は製品全体の固定値ではない。--dark-mode を明示したときの入力色は #32FF32、返答色は #00FFFF。通常は端末と設定による。 https://github.com/Aider-AI/aider/blob/v0.39.0/aider/main.py",
+    "v0.39.0 は Sonnet 対応の版で、6月の初めから Architect、watch-files、後年のモデルがそろった版ではない。Architect の公開説明は9月26日。6月 renderer の Architect / Editor パネルと監視準備表示を削除対象にする。 https://github.com/Aider-AI/aider/releases/tag/v0.39.0 https://aider.chat/2024/09/26/architect.html",
+    "R1 と Sonnet の2025-01記事は64.0%の結果で、renderer の84%は一致しない。性能値を画面の常設状態表示にも入れない。思考文をそのまま編集役へ渡した結果という説明も記事と逆。 https://aider.chat/2025/01/24/r1-sonnet.html",
+    "Browser GUI は2025-09初公開ではなく、2024-05-02 の v0.31.0 から存在する。 https://github.com/Aider-AI/aider/releases/tag/v0.31.0",
+    "ブラウザ版の現行 renderer の右固定 Diff & Commit Log、常設のモデル選択、監視状態表示は unverified。有効な左メニューはファイル、ページ、最近の入力、会話消去。Git やコストの補助関数があるだけで常設と判定しない。 https://github.com/Aider-AI/aider/blob/v0.86.0/aider/gui.py",
+    "2025-04 の watch >、独立した自動確認ボタン、承認カード、予算メーターは確認できない。ファイル監視の依頼も通常の端末会話へ流れる。 https://github.com/Aider-AI/aider/blob/v0.82.0/aider/io.py https://github.com/Aider-AI/aider/blob/v0.82.0/aider/watch.py",
+    "2026-03 の Reasoning Alias Matrix、2026-11 の新しい状態バー、GPT-6/Fable等の版固有の表示は unverified。v0.86.0 は2025年8月公開であり、新しい3月の外観の証拠にはならない。11月に初期の ORIGINAL / UPDATED を必ず出す根拠もない。 https://github.com/Aider-AI/aider/releases/tag/v0.86.0 https://aider.chat/HISTORY.html",
+    "端末版の固定のボタン列、モデルの選択メニュー、工程図は今回の固定版ソースで裏付けられない。入力命令と通常の出力として再現する。 https://github.com/Aider-AI/aider/blob/v0.59.0/aider/io.py https://github.com/Aider-AI/aider/blob/v0.59.0/aider/coders/architect_coder.py"
+  ]
+}
+

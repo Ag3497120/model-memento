@@ -1,0 +1,27 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "look-up-first",
+  "name": "調べてから、出どころ付きで答える",
+  "plain": "答える前に「何を調べるか」を見せ、調べた出どころ（ページの場所）を添えて答えます。調べられないときは、そう言います。",
+  "good_for": ["research"],
+  "seen_in": ["Bing Chat / Microsoft Copilot", "Google Bard → Gemini", "ChatGPT", "HuggingChat"],
+  "needs_web": true,
+  "placeholder": "例: 近所の図書館で使える電子書籍サービスは？",
+  "steps": [
+    {
+      "id": "queries",
+      "label": "調べること",
+      "show": "list",
+      "system": "List 2 to 4 short things you will look up to answer the question, as a numbered list, in the language of the question. Nothing else.",
+      "prompt": "{{input}}"
+    },
+    {
+      "id": "answer",
+      "label": "答えと出どころ",
+      "gate": "これで調べる",
+      "show": "text",
+      "system": "Answer the question using what you can actually look up now. After the answer, list the pages you used as plain URLs under the heading 'Sources'. Never invent a URL. If you cannot browse, say so in the first sentence and answer only from what you know, marked as unchecked. Use the language of the question.",
+      "prompt": "Question:\n{{input}}\n\nWhat to look up:\n{{step:queries}}"
+    }
+  ]
+}

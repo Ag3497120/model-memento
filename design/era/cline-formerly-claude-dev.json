@@ -1,0 +1,701 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "cline-formerly-claude-dev",
+  "versions": [
+    {
+      "id": "cline-formerly-claude-dev-2024-07",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "この版のモデルは固定で、画面から切り替えない。",
+          "設定画面で自分のAPIキーを登録する。"
+        ],
+        "options": [],
+        "default": "claude-3-5-sonnet-20240620",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v1.0.4/src/ClaudeDev.ts",
+            "date": "2024-07-28",
+            "kind": "source-code",
+            "shows": "送信先モデルをclaude-3-5-sonnet-20240620へ固定している。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v1.0.4/webview-ui/src/components/SettingsView.tsx",
+            "date": "2024-07-28",
+            "kind": "source-code",
+            "shows": "設定はAPIキーと最大呼出回数。空のキーにエラー。"
+          }
+        ],
+        "notes": "モデル名は内部で固定。APIキーの設定をモデル選択欄として描かない。",
+        "steps_en": [
+          "This version uses a fixed model without an on-screen switch.",
+          "Add your API key in settings."
+        ],
+        "notes_en": "Model name is fixed internally. Keep API-key configuration as a connection setting."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "APIキーを入力してください",
+          "when": "2024-07-28..2024-07-28",
+          "where": "設定のAPIキーが空のとき、入力欄の下に表示するエラーの意訳。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/cline/cline/v1.0.4/webview-ui/src/components/SettingsView.tsx",
+              "date": "2024-07-28",
+              "kind": "source-code",
+              "shows": "設定はAPIキーと最大呼出回数。空のキーにエラー。"
+            }
+          ],
+          "text_en": "Enter an API key",
+          "where_en": "Paraphrased error below the input when the API key setting is empty."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2024-07-28",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v1.0.4",
+            "date": "2024-07-28",
+            "kind": "release-notes",
+            "shows": "VS Code内のClaude Dev。失敗した呼び出しを再試行できる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v1.0.4/webview-ui/src/components/SettingsView.tsx",
+            "date": "2024-07-28",
+            "kind": "source-code",
+            "shows": "設定はAPIキーと最大呼出回数。空のキーにエラー。"
+          }
+        ]
+      },
+      "trend": "狭い会話欄に作業と確認の操作を積み、設定は接続用のキーが中心だった。（https://raw.githubusercontent.com/cline/cline/v1.0.4/webview-ui/src/components/SettingsView.tsx、https://github.com/cline/cline/releases/tag/v1.0.4）",
+      "trend_en": "A narrow chat pane stacks work and confirmation actions, with settings centered on connection keys. (https://raw.githubusercontent.com/cline/cline/v1.0.4/webview-ui/src/components/SettingsView.tsx、https://github.com/cline/cline/releases/tag/v1.0.4)"
+    },
+    {
+      "id": "cline-formerly-claude-dev-2024-10",
+      "model_switch": {
+        "where": "settings",
+        "label": "API Provider",
+        "steps": [
+          "Clineの設定を開く。",
+          "API Providerで接続先を選び、キーを設定する。",
+          "その接続先のモデル欄でモデルを選ぶ。"
+        ],
+        "options": [
+          "claude-3-5-sonnet-20240620",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v2.0.0/webview-ui/src/components/settings/ApiOptions.tsx",
+            "date": "2024-10-09",
+            "kind": "source-code",
+            "shows": "設定のAPI Providerとモデル選択、接続先ごとの候補を表示。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v2.0.0/src/shared/api.ts",
+            "date": "2024-10-09",
+            "kind": "source-code",
+            "shows": "Anthropic接続にある3モデルの識別名。ほかの接続先は別一覧。"
+          }
+        ],
+        "notes": "ここではAnthropic接続の候補のみを記録。接続先ごとに既定モデルが異なり、アプリ全体の初期選択は unverified。",
+        "steps_en": [
+          "Open Cline settings.",
+          "Choose a provider under API Provider and configure its key.",
+          "Choose a model in that provider's model field."
+        ],
+        "notes_en": "Only Anthropic connection options are recorded. Defaults differ by provider. The app-wide initial selection is unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Cancel",
+          "when": "2024-10-09..2024-10-09",
+          "where": "会話入力の上。返答や編集が進行しているときに停止できる。",
+          "sources": [
+            {
+              "url": "https://github.com/cline/cline/releases/tag/v2.0.0",
+              "date": "2024-10-09",
+              "kind": "release-notes",
+              "shows": "Clineへの改名、返答の逐次表示とCancelを追加。"
+            }
+          ],
+          "where_en": "Above the chat input, with a stop action during replies or edits."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2024-10-09",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v2.0.0",
+            "date": "2024-10-09",
+            "kind": "release-notes",
+            "shows": "Clineへの改名、返答の逐次表示とCancelを追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v2.0.0/webview-ui/src/components/settings/ApiOptions.tsx",
+            "date": "2024-10-09",
+            "kind": "source-code",
+            "shows": "設定のAPI Providerとモデル選択、接続先ごとの候補を表示。"
+          }
+        ]
+      },
+      "trend": "返答と編集の進み方が見えるようになり、途中で止める操作が加わる。（https://github.com/cline/cline/releases/tag/v2.0.0）",
+      "trend_en": "Reply and edit progress become visible, with an action to stop midway. (https://github.com/cline/cline/releases/tag/v2.0.0)"
+    },
+    {
+      "id": "cline-2024-12",
+      "model_switch": {
+        "where": "settings",
+        "label": "API Provider",
+        "steps": [
+          "Clineの設定を開く。",
+          "API Providerで接続先を選ぶ。",
+          "その接続先のモデル欄でモデルを選ぶ。"
+        ],
+        "options": [
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.0.0/webview-ui/src/components/settings/ApiOptions.tsx",
+            "date": "2024-12-18",
+            "kind": "source-code",
+            "shows": "設定画面の接続先とモデル選択。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.0.0/src/shared/api.ts",
+            "date": "2024-12-18",
+            "kind": "source-code",
+            "shows": "Anthropic接続の候補は10月版Sonnet・Haikuと旧Opus・Haiku。"
+          }
+        ],
+        "notes": "Anthropic接続の候補だけを記録。全接続先共通の既定値は unverified。",
+        "steps_en": [
+          "Open Cline settings.",
+          "Choose a provider under API Provider.",
+          "Choose a model in that provider's model field."
+        ],
+        "notes_en": "Only Anthropic connection options are recorded. A shared default across providers is unverified."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "自動で進める回数にも上限",
+          "when": "2024-12-18..2024-12-18",
+          "where": "入力欄付近のAuto-approveメニュー。許可する操作と呼出回数の上限を設定する。",
+          "sources": [
+            {
+              "url": "https://github.com/cline/cline/releases/tag/v3.0.0",
+              "date": "2024-12-18",
+              "kind": "release-notes",
+              "shows": "道具の種類ごとに自動承認を選び、呼出回数の上限を設定できる。"
+            }
+          ],
+          "text_en": "Automatic steps also have a limit",
+          "where_en": "Auto-approve menu near the input for permitted actions and tool-call limits."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2024-12-18",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.0.0",
+            "date": "2024-12-18",
+            "kind": "release-notes",
+            "shows": "道具の種類ごとに自動承認を選び、呼出回数の上限を設定できる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.0.0/webview-ui/src/components/settings/ApiOptions.tsx",
+            "date": "2024-12-18",
+            "kind": "source-code",
+            "shows": "設定画面の接続先とモデル選択。"
+          }
+        ]
+      },
+      "trend": "入力欄の近くに操作ごとの自動承認をまとめ、確認を省く範囲を選ぶ形になる。（https://github.com/cline/cline/releases/tag/v3.0.0）",
+      "trend_en": "Per-action automatic approvals sit near the input, with configurable scope. (https://github.com/cline/cline/releases/tag/v3.0.0)"
+    },
+    {
+      "id": "cline-2025-01",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "上に開いた小窓でAPI Providerを選ぶ。",
+          "モデルを選び、小窓を閉じる。"
+        ],
+        "options": [
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.2.0",
+            "date": "2025-01-21",
+            "kind": "release-notes",
+            "shows": "入力欄下のモデル・接続先の小窓とPlan/Actを追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.2.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-01-21",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名を押すと、その上にApiOptionsの小窓を開く。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.2.0/src/shared/api.ts",
+            "date": "2025-01-21",
+            "kind": "source-code",
+            "shows": "Anthropic接続の候補の識別名。"
+          }
+        ],
+        "notes": "モデル名と接続先名を組み合わせた表示がボタンになるため、全利用者共通の短いラベルは unverified。Anthropic接続の候補のみ。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose API Provider in the popover above.",
+          "Choose a model and close the popover."
+        ],
+        "notes_en": "The button combines provider and model names. A shared short label for every user is unverified. Anthropic options only."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Plan / Act",
+          "when": "2025-01-21..2025-01-21",
+          "where": "入力欄の下。相談して計画する段階と、編集を進める段階を切り替える。",
+          "sources": [
+            {
+              "url": "https://github.com/cline/cline/releases/tag/v3.2.0",
+              "date": "2025-01-21",
+              "kind": "release-notes",
+              "shows": "入力欄下のモデル・接続先の小窓とPlan/Actを追加。"
+            }
+          ],
+          "where_en": "Below the input, switching between planning and editing."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-01-21",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.2.0",
+            "date": "2025-01-21",
+            "kind": "release-notes",
+            "shows": "入力欄下のモデル・接続先の小窓とPlan/Actを追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.2.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-01-21",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名を押すと、その上にApiOptionsの小窓を開く。"
+          }
+        ]
+      },
+      "trend": "入力欄の下に相談・実行の切替とモデルの小窓が並ぶ。（https://github.com/cline/cline/releases/tag/v3.2.0）",
+      "trend_en": "Planning/action selection and the model popover sit below the input. (https://github.com/cline/cline/releases/tag/v3.2.0)"
+    },
+    {
+      "id": "cline-formerly-claude-dev-2025-02",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話の入力欄の下のモデル名を押す。",
+          "小窓で接続先とモデルを選ぶ。",
+          "小窓を閉じて選択を保存する。"
+        ],
+        "options": [
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.4.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-02-19",
+            "kind": "source-code",
+            "shows": "モデル名から上に開く小窓。閉じると設定を保存する。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.4.0/src/shared/api.ts",
+            "date": "2025-02-19",
+            "kind": "source-code",
+            "shows": "Anthropic接続の候補。"
+          }
+        ],
+        "notes": "外部の道具の一覧は別の画面。モデルを選ぶ操作は会話側にある。Anthropic接続の候補のみ。共通の短いラベルと既定値は unverified。",
+        "steps_en": [
+          "Click the model name below the chat input.",
+          "Choose a provider and model in the popover.",
+          "Close the popover to save your selection."
+        ],
+        "notes_en": "External tools have a separate list screen. Model selection is in chat. Anthropic options only. Shared short label and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "外部の道具を一覧から追加",
+          "when": "2025-02-19..2025-02-19",
+          "where": "MCP Marketplace（外部の道具を探す一覧）。会話内では別途、図も表示できる。",
+          "sources": [
+            {
+              "url": "https://github.com/cline/cline/releases/tag/v3.4.0",
+              "date": "2025-02-19",
+              "kind": "release-notes",
+              "shows": "MCP Marketplaceと計画時の図の表示を追加。"
+            }
+          ],
+          "text_en": "Add external tools from a list",
+          "where_en": "MCP Marketplace lists external tools. Diagrams can also be displayed in chat."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-02-19",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.4.0",
+            "date": "2025-02-19",
+            "kind": "release-notes",
+            "shows": "MCP Marketplaceと計画時の図の表示を追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.4.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-02-19",
+            "kind": "source-code",
+            "shows": "モデル名から上に開く小窓。閉じると設定を保存する。"
+          }
+        ]
+      },
+      "trend": "会話とは別の一覧画面で外部の道具を探して追加する形が加わる。（https://github.com/cline/cline/releases/tag/v3.4.0）",
+      "trend_en": "A separate list screen supports finding and adding external tools. (https://github.com/cline/cline/releases/tag/v3.4.0)"
+    },
+    {
+      "id": "cline-2025-07",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model / API Provider",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "小窓で接続先とモデルを選び、閉じる。"
+        ],
+        "options": [
+          "claude-sonnet-4-20250514",
+          "claude-opus-4-20250514",
+          "claude-3-7-sonnet-20250219",
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-07-15",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名、Select Model / API Provider、小窓を確認。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.19.4/src/shared/api.ts",
+            "date": "2025-07-15",
+            "kind": "source-code",
+            "shows": "Anthropic接続の7候補。"
+          }
+        ],
+        "notes": "labelはマウスを重ねたときの短い案内。実際のボタン本文は接続先とモデル名。Anthropic接続の候補のみ。共通の既定値は unverified。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose a provider and model in the popover, then close it."
+        ],
+        "notes_en": "label is the short hover hint. Button text is the provider and model name. Anthropic options only. A shared default is unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Plan / Act",
+          "when": "2025-07-15..2025-07-15",
+          "where": "入力欄の下。モデル名と同じ操作列にある切替。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/cline/cline/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx",
+              "date": "2025-07-15",
+              "kind": "source-code",
+              "shows": "入力欄下のモデル名、Select Model / API Provider、小窓を確認。"
+            }
+          ],
+          "where_en": "Toggle below the input in the same toolbar as the model name."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-07-15",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.19.4",
+            "date": "2025-07-15",
+            "kind": "release-notes",
+            "shows": "7月15日の公開版。Moonshot接続先の地域選択を追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-07-15",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名、Select Model / API Provider、小窓を確認。"
+          }
+        ]
+      },
+      "trend": "入力欄の下に動作方式とモデルを小さく並べる形が続く。（https://raw.githubusercontent.com/cline/cline/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx）",
+      "trend_en": "Mode and model remain compactly arranged below the input. (https://raw.githubusercontent.com/cline/cline/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx)"
+    },
+    {
+      "id": "cline-2025-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Select Model / API Provider",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "今のPlanまたはActで使う接続先とモデルを選ぶ。",
+          "小窓を閉じる。"
+        ],
+        "options": [
+          "claude-sonnet-4-5-20250929",
+          "claude-sonnet-4-5-20250929:1m",
+          "claude-haiku-4-5-20251001",
+          "claude-sonnet-4-20250514",
+          "claude-sonnet-4-20250514:1m",
+          "claude-opus-4-1-20250805",
+          "claude-opus-4-20250514",
+          "claude-3-7-sonnet-20250219",
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022",
+          "claude-3-opus-20240229",
+          "claude-3-haiku-20240307"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-11-06",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名から小窓を開き、現在のPlan/Actに応じた設定を渡す。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.36.0/src/shared/api.ts",
+            "date": "2025-11-06",
+            "kind": "source-code",
+            "shows": "Anthropic接続の候補の識別名。"
+          }
+        ],
+        "notes": "labelはボタンの短い案内。候補はAnthropic接続のみ。接続先やモードごとの既定値は一律に扱わずnull。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose the provider and model for the current Plan or Act mode.",
+          "Close the popover."
+        ],
+        "notes_en": "label is the short button hint. Anthropic options only. Provider- and mode-specific defaults are left null."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Plan / Act",
+          "when": "2025-11-06..2025-11-06",
+          "where": "入力欄の下。相談する段階と作業する段階を切り替える。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/cline/cline/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+              "date": "2025-11-06",
+              "kind": "source-code",
+              "shows": "入力欄下のモデル名から小窓を開き、現在のPlan/Actに応じた設定を渡す。"
+            }
+          ],
+          "where_en": "Below the input, switching between discussion and action."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2025-11-06",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.36.0",
+            "date": "2025-11-06",
+            "kind": "release-notes",
+            "shows": "11月6日の公開版。設定や接続先の改良。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2025-11-06",
+            "kind": "source-code",
+            "shows": "入力欄下のモデル名から小窓を開き、現在のPlan/Actに応じた設定を渡す。"
+          }
+        ]
+      },
+      "trend": "同じ小さな操作列を保ち、相談と実行で使うモデルも分ける形が続く。（https://raw.githubusercontent.com/cline/cline/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx）",
+      "trend_en": "The compact toolbar remains, with separate models for planning and action. (https://raw.githubusercontent.com/cline/cline/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+    },
+    {
+      "id": "cline-2026-04",
+      "model_switch": {
+        "where": "settings",
+        "label": "Open API Settings",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "移動先のAPI設定で接続先とモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2026-04-10",
+            "kind": "source-code",
+            "shows": "モデル名のクリックはnavigateToSettingsModelPicker。短い案内はOpen API Settings。"
+          }
+        ],
+        "notes": "入口は入力欄の下だが、選ぶ場所は設定画面へ移った。全候補・既定値は unverified。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose a provider and model in the API settings that open."
+        ],
+        "notes_en": "The entry remains below the input, with selection moved to settings. Full options and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "Spend Limit Reached",
+          "when": "2026-04-10..2026-04-10",
+          "where": "利用額の上限に達したときの専用のエラー表示。正確な画面内の位置は unverified。",
+          "sources": [
+            {
+              "url": "https://github.com/cline/cline/releases/tag/v3.78.0",
+              "date": "2026-04-10",
+              "kind": "release-notes",
+              "shows": "Spend Limit Reached専用のエラー表示を追加。"
+            }
+          ],
+          "where_en": "Dedicated spending-limit error. Exact location is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2026-04-10",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v3.78.0",
+            "date": "2026-04-10",
+            "kind": "release-notes",
+            "shows": "Spend Limit Reached専用のエラー表示を追加。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2026-04-10",
+            "kind": "source-code",
+            "shows": "モデル名のクリックはnavigateToSettingsModelPicker。短い案内はOpen API Settings。"
+          }
+        ]
+      },
+      "trend": "入力欄下のモデル名を入口に保ちながら、選択そのものは設定画面へ移る。（https://raw.githubusercontent.com/cline/cline/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx）",
+      "trend_en": "The model name below the input remains the entry point, while selection moves into settings. (https://raw.githubusercontent.com/cline/cline/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx)"
+    },
+    {
+      "id": "cline-2026-11",
+      "model_switch": {
+        "where": "settings",
+        "label": "Local / Cloud",
+        "steps": [
+          "入力欄の下のモデル名を押す。",
+          "API ConfigurationでLocalかCloudを選ぶ。",
+          "対象のモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+            "date": "2026-10-26",
+            "kind": "release-notes",
+            "shows": "設定にLocal/Cloudを分離。遠隔作業ではPlan/Actと自動承認を隠す。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2026-10-26",
+            "kind": "source-code",
+            "shows": "Open API Settingsで設定へ移動。画像に非対応なら対応モデルを選ぶ案内を表示。"
+          }
+        ],
+        "notes": "このidの仕様書の開始月は2026-10。Cloudの選択は新しい遠隔作業用で、手元の設定と別に保存。未選択のCline接続はClaude Sonnet 5.5だが、全接続先の既定ではないためdefaultはnull。全候補とUI表記は unverified。",
+        "steps_en": [
+          "Click the model name below the input.",
+          "Choose Local or Cloud under API Configuration.",
+          "Choose the relevant model."
+        ],
+        "notes_en": "This ID's specification starts in 2026-10. Cloud selection is saved separately for remote work. An unselected Cline connection uses Claude Sonnet 5.5. The cross-provider default is null. Full options and UI labels are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "画像を扱えるモデルを選んでください",
+          "when": "2026-10-26..2026-10-26",
+          "where": "画像を添付したがモデルが非対応のとき。入力欄の近くのリンクからAPI設定へ進める。意訳。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/cline/cline/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx",
+              "date": "2026-10-26",
+              "kind": "source-code",
+              "shows": "Open API Settingsで設定へ移動。画像に非対応なら対応モデルを選ぶ案内を表示。"
+            }
+          ],
+          "text_en": "Choose a model that supports images",
+          "where_en": "Paraphrased notice for an image attached to an unsupported model. A link near the input opens API settings."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "VS Code window",
+        "date_shown": "2026-10-26",
+        "sources": [
+          {
+            "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+            "date": "2026-10-26",
+            "kind": "release-notes",
+            "shows": "設定にLocal/Cloudを分離。遠隔作業ではPlan/Actと自動承認を隠す。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/cline/cline/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx",
+            "date": "2026-10-26",
+            "kind": "source-code",
+            "shows": "Open API Settingsで設定へ移動。画像に非対応なら対応モデルを選ぶ案内を表示。"
+          }
+        ]
+      },
+      "trend": "手元と遠隔のモデル設定を分け、遠隔作業では不要な切替を隠す形になる。（https://github.com/cline/cline/releases/tag/v4.1.26）",
+      "trend_en": "Local and remote model settings are separated, with unnecessary remote-work controls hidden. (https://github.com/cline/cline/releases/tag/v4.1.26)"
+    }
+  ]
+}

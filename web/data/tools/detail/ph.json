@@ -1,0 +1,410 @@
+{
+  "phoebussi--alpaca-cot": {
+    "topics": [
+      "alpaca",
+      "chatglm",
+      "chatgpt",
+      "cot",
+      "instruction-tuning",
+      "llama",
+      "llm",
+      "lora",
+      "moss",
+      "p-tuning",
+      "parameter-efficient",
+      "pytorch",
+      "tabul",
+      "tabular-data",
+      "tabular-model"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "bd46c44e0d0d88522b6d817f9610e3eb1050784d",
+    "classification_basis": "Topics, README introduction, language (Jupyter Notebook) → notebook / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "pip install -r requirements.txt / pip install -e ./peft / pip install peft / pip install git+https://github.com/huggingface/peft / pip install -e .",
+    "install_evidence": [
+      {
+        "command": "pip install -r requirements.txt",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/README.md",
+        "line": 158
+      },
+      {
+        "command": "pip install -e ./peft",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/README.md",
+        "line": 165
+      },
+      {
+        "command": "pip install peft",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/docs/source/install.mdx",
+        "line": 24
+      },
+      {
+        "command": "pip install git+https://github.com/huggingface/peft",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/docs/source/install.mdx",
+        "line": 32
+      },
+      {
+        "command": "pip install -e .",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/docs/source/install.mdx",
+        "line": 42
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "app.py",
+        "utils/input.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Process some integers.",
+      "Top-p (nucleus sampling)",
+      "Temperature",
+      "Alpaca-CoT",
+      "--model_type",
+      "--model_name_or_path",
+      "--lora_name_or_path"
+    ],
+    "string_evidence": [
+      {
+        "text": "Process some integers.",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 133,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Top-p (nucleus sampling)",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 148,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Temperature",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 149,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Alpaca-CoT",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 151,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--model_type",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 134,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--model_name_or_path",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 135,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--lora_name_or_path",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+        "line": 136,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/PhoebusSi/Alpaca-CoT",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/README.md",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/docs/source/install.mdx",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/requirements.txt",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/pyproject.toml",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/examples/lora_dreambooth/requirements.txt",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/examples/token_classification/requirements.txt",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py",
+      "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/utils/input.py",
+      "https://api.github.com/repos/PhoebusSi/Alpaca-CoT/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/README.md"
+      },
+      {
+        "path": "peft/docs/source/install.mdx",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/docs/source/install.mdx"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/requirements.txt"
+      },
+      {
+        "path": "peft/pyproject.toml",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/pyproject.toml"
+      },
+      {
+        "path": "peft/examples/lora_dreambooth/requirements.txt",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/examples/lora_dreambooth/requirements.txt"
+      },
+      {
+        "path": "peft/examples/token_classification/requirements.txt",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/peft/examples/token_classification/requirements.txt"
+      },
+      {
+        "path": "app.py",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/app.py"
+      },
+      {
+        "path": "utils/input.py",
+        "source": "https://github.com/PhoebusSi/Alpaca-CoT/blob/bd46c44e0d0d88522b6d817f9610e3eb1050784d/utils/input.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=7, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Jupyter Notebook) → notebook / other",
+    "repository_id": 618345160,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "philippgille--chromem-go": {
+    "topics": [
+      "chroma",
+      "chromadb",
+      "cosine-similarity",
+      "embedded",
+      "embeddings",
+      "go",
+      "golang",
+      "in-memory",
+      "llm",
+      "llms",
+      "nearest-neighbor",
+      "rag",
+      "retrieval-augmented-generation",
+      "vector-database",
+      "vector-search"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MPL-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/philippgille/chromem-go",
+      "https://api.github.com/licenses/mpl-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 735283134,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "phone-harness--mcp": {
+    "topics": [
+      "ai-agents",
+      "android",
+      "iphone",
+      "mcp",
+      "mcp-server",
+      "mobile-automation",
+      "model-context-protocol",
+      "phone-automation"
+    ],
+    "homepage": "https://phone-harness.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/phone-harness/mcp",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:model-context-protocol stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1430664237,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "phuryn--product-engineering": {
+    "topics": [
+      "agent-skills",
+      "ai-agents",
+      "claude-code",
+      "claude-code-marketplace",
+      "claude-code-plugins",
+      "claude-skills",
+      "codex",
+      "cursor",
+      "product-engineering",
+      "product-management"
+    ],
+    "homepage": "https://www.productcompass.pm/p/product-engineering-skills",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/phuryn/product-engineering",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1438330757,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "philolabs--fable51-worlds": {
+    "topics": [
+      "3d-reconstruction",
+      "ai-agents",
+      "claude",
+      "digital-twin",
+      "openstreetmap",
+      "procedural-generation",
+      "san-francisco",
+      "threejs",
+      "urban-simulation",
+      "webgl"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/PhiloLabs/fable51-worlds",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1355092388,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "physiclaw--physiclaw": {
+    "topics": [
+      "agentic-ai",
+      "ai-agent",
+      "embodied-agent",
+      "embodied-ai",
+      "gui-agent",
+      "gui-agents",
+      "phone-automation",
+      "phone-use",
+      "phone-use-agent",
+      "phone-use-agents",
+      "robot-arm"
+    ],
+    "homepage": "https://physiclaw.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/physiclaw/PhysiClaw",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1182162835,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "phibrowser--phibrowser-mac": {
+    "topics": [
+      "ai",
+      "ai-agent",
+      "ai-browser",
+      "browser",
+      "chromium",
+      "local-first",
+      "macos",
+      "macos-app",
+      "privacy",
+      "swift",
+      "web-browser"
+    ],
+    "homepage": "https://phibrowser.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Swift) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/phibrowser/phibrowser-mac",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1196072395,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

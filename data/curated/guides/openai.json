@@ -1,0 +1,340 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "OpenAI",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-prompting",
+      "publisher": "OpenAI",
+      "kind": "prompting-guide",
+      "title": "OpenAI の指示の書き方",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gpt-6",
+          "gpt-codex"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-playground"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "役割、目的、必要な資料、答えの形をはっきり伝えます。",
+          "when_ja": "初めて指示文を作るとき。",
+          "summary_en": "State the role, goal, relevant references and answer format clearly.",
+          "when_en": "When writing a prompt for the first time."
+        },
+        {
+          "technique_id": "examples",
+          "summary_ja": "望む答え方を例で示し、指示が変わったら結果を試します。",
+          "when_ja": "同じ形式の回答を安定させたいとき。",
+          "summary_en": "Demonstrate the desired answer with examples and test results when instructions change.",
+          "when_en": "When seeking consistent answer formats."
+        }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/prompt-engineering"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "OpenAI prompting guidance"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-reasoning",
+      "publisher": "OpenAI",
+      "kind": "best-practices",
+      "title": "考えるモデルには目的を簡潔に伝える",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gpt-6"
+        ],
+        "model_ids": [
+          "o1-preview",
+          "o1-mini",
+          "o1-2024-12-17"
+        ],
+        "tool_ids": [
+          "openai-playground"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "simple-reasoning",
+          "summary_ja": "考えるモデルには明確な目的を簡潔に伝え、細かな思考手順の指示は必要か試して判断します。",
+          "when_ja": "考える機能を持つモデルを使うとき。",
+          "summary_en": "Give reasoning models a clear, concise goal and test whether detailed thinking instructions help.",
+          "when_en": "When using a model with reasoning capabilities."
+        }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/reasoning-best-practices"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Give reasoning models concise goals"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-structured",
+      "publisher": "OpenAI",
+      "kind": "best-practices",
+      "title": "決めた項目で答えを受け取る",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gpt-6",
+          "gpt-codex"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-playground"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "output-format",
+          "summary_ja": "機械が読む答えは、必要な項目と型を定めた形式で指定します。",
+          "when_ja": "回答を表や別の処理へ渡すとき。",
+          "summary_en": "Specify machine-readable answers with required fields and types.",
+          "when_en": "When passing answers to a table or another process."
+        }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/structured-outputs"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Receive answers with fixed fields"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-functions",
+      "publisher": "OpenAI",
+      "kind": "best-practices",
+      "title": "道具の説明を具体的にする",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "gpt-6",
+          "gpt-codex"
+        ],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-playground"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "tool-contract",
+          "summary_ja": "道具の名前・説明・引数を具体的にし、使い分けが分かるようにします。",
+          "when_ja": "AI に外部の処理を選ばせるとき。",
+          "summary_en": "Make tool names, descriptions and arguments specific so their intended uses are clear.",
+          "when_en": "When asking AI to select an external operation."
+        }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/function-calling"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Describe tools specifically"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-agents-md",
+      "publisher": "OpenAI",
+      "kind": "agent-instructions-file",
+      "title": "Codex の AGENTS.md",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-codex-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "instruction-file",
+          "summary_ja": "プロジェクトの指示を AGENTS.md に置き、場所ごとの約束を整理します。",
+          "when_ja": "作業場所に合わせた約束を毎回伝えたいとき。",
+          "summary_en": "Put project instructions in AGENTS.md and organize conventions by working location.",
+          "when_en": "When sharing workspace-specific conventions repeatedly."
+        }
+      ],
+      "sources": [
+        "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "AGENTS.md in Codex"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-skills",
+      "publisher": "OpenAI",
+      "kind": "agent-instructions-file",
+      "title": "Codex の Skills を作る",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-codex-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "繰り返す仕事を一つに絞り、SKILL.md に使う場面と手順を書きます。",
+          "when_ja": "同じ仕事を再利用できる形にしたいとき。",
+          "summary_en": "Focus a skill on one recurring task and describe its use cases and procedure in SKILL.md.",
+          "when_en": "When making a recurring task reusable."
+        }
+      ],
+      "sources": [
+        "https://learn.chatgpt.com/docs/build-skills"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Create Codex Skills"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-codex-practices",
+      "publisher": "OpenAI",
+      "kind": "best-practices",
+      "title": "Codex に背景と確認方法を渡す",
+      "url": "https://learn.chatgpt.com/docs/learn/best-practices",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "openai-codex-cli"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "context-selection",
+          "summary_ja": "必要な背景を渡し、長く使う約束は指示ファイル、繰り返す手順は Skills にまとめます。",
+          "when_ja": "大きな作業を継続して任せたいとき。",
+          "summary_en": "Provide relevant context, store lasting conventions in instruction files and package recurring procedures as Skills.",
+          "when_en": "When delegating sustained work on a large task."
+        }
+      ],
+      "sources": [
+        "https://learn.chatgpt.com/docs/learn/best-practices"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Give Codex context and verification methods"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-personalize",
+      "publisher": "OpenAI",
+      "kind": "system-prompt-advice",
+      "title": "ChatGPT の好みを設定する",
+      "url": "https://learn.chatgpt.com/docs/personalize",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "chatgpt"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "reuse",
+          "summary_ja": "会話をまたいで伝えたい返答の好みは、カスタム指示に保存します。",
+          "when_ja": "答えの長さや文体を毎回説明しているとき。",
+          "summary_en": "Save response preferences that apply across conversations as custom instructions.",
+          "when_en": "When you keep explaining preferred length or writing style."
+        }
+      ],
+      "sources": [
+        "https://learn.chatgpt.com/docs/personalize"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Set ChatGPT response preferences"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-gpt2",
+      "publisher": "OpenAI",
+      "kind": "model-notes",
+      "title": "GPT-2 の入力文から続きを作る",
+      "url": "https://github.com/openai/gpt-2/blob/master/DEVELOPERS.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "gpt-2-1.5b"
+        ],
+        "tool_ids": [
+          "openai-gpt-2-interactive"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "conversation-format",
+          "summary_ja": "公式の対話用スクリプトでは、入力した文章を出発点に続きを生成します。",
+          "when_ja": "チャット形式以前のモデルの使い方を調べるとき。",
+          "summary_en": "The official interactive script uses the input text as the starting point for a continuation.",
+          "when_en": "When exploring model usage before chat formats."
+        }
+      ],
+      "sources": [
+        "https://github.com/openai/gpt-2/blob/master/DEVELOPERS.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Generate continuations from GPT-2 input"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "openai-gpt41",
+      "publisher": "OpenAI",
+      "kind": "model-notes",
+      "title": "GPT-4.1 には望む振る舞いを明記する",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-4.1",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [
+          "gpt-4.1-nano"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "以前のモデルが意図を補っていた部分も、GPT-4.1 には望む振る舞いを明確に書きます。",
+          "when_ja": "GPT-4.1 系列へ指示を移すとき。",
+          "summary_en": "Describe desired behavior explicitly for GPT-4.1, including details earlier models may have inferred.",
+          "when_en": "When moving prompts to the GPT-4.1 family."
+        }
+      ],
+      "sources": [
+        "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-4.1"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "State the desired GPT-4.1 behavior explicitly"
+    }
+  ]
+}

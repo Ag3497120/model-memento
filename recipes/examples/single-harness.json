@@ -1,0 +1,12 @@
+{
+  "schema": "memento.recipe.v1",
+  "id": "single-harness",
+  "title": "ひとつのアプリで計画して進める",
+  "purpose": "小さな変更を計画し、作業してから結果を確認します。",
+  "conductor": { "harness": "claude-code", "model": "anthropic:claude-sonnet-5-5" },
+  "helpers": [],
+  "tools": ["filesystem"],
+  "instructions": { "style": "plan-then-act", "files": ["agents-md"] },
+  "frontend": "terminal",
+  "notes": "モデルとアプリの出典 https://platform.claude.com/docs/en/models/overview https://github.com/anthropics/claude-code"
+}

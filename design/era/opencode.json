@@ -1,0 +1,613 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "opencode",
+  "versions": [
+    {
+      "id": "opencode-2025-06",
+      "model_switch": {
+        "where": "other",
+        "label": "Ctrl+O",
+        "steps": [
+          "端末の画面で Ctrl+O を押す。",
+          "重ねて開く一覧で提供元を切り替え、モデルを選び Enter を押す。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/tui.go",
+            "date": "2025-06-03",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/components/dialog/models.go",
+            "date": "2025-06-03",
+            "shows": "提供元とモデルの一覧、Enter による選択。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v0.0.55",
+            "date": "2025-06-03",
+            "shows": "タグの日時。リリース本文の機能説明はない。"
+          }
+        ],
+        "steps_en": [
+          "Press Ctrl+O in the terminal interface.",
+          "Switch providers in the overlay, choose a model and press Enter."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+O でモデルを選択",
+          "when": "2025-06-03..2025-06-03",
+          "where": "端末全体で使えるキー。上部の常設メニューではない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/tui.go",
+              "date": "2025-06-03",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v0.0.55",
+              "date": "2025-06-03",
+              "shows": "タグの日時。リリース本文の機能説明はない。"
+            }
+          ],
+          "text_en": "Choose a model with Ctrl+O",
+          "where_en": "Keyboard shortcut available throughout the terminal interface."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-06-03",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/tui.go",
+            "date": "2025-06-03",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v0.0.55",
+            "date": "2025-06-03",
+            "shows": "タグの日時。リリース本文の機能説明はない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に重ねてモデル一覧を開き、最下部に現在のモデルを示す（https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/tui.go）。",
+      "trend_en": "A model list overlays terminal chat, with the current model at the bottom. (https://raw.githubusercontent.com/anomalyco/opencode/v0.0.55/packages/tui/internal/tui/tui.go)"
+    },
+    {
+      "id": "opencode-2025-09",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/models",
+        "steps": [
+          "端末の入力欄に /models を入力する。",
+          "重ねて開く一覧でモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.9.1/packages/tui/internal/commands/command.go",
+            "date": "2025-09-15",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v0.9.1",
+            "date": "2025-09-15",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Type /models in the terminal input.",
+          "Choose a model in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/models",
+          "when": "2025-09-15..2025-09-15",
+          "where": "端末の入力欄から開くモデル一覧。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.9.1/packages/tui/internal/commands/command.go",
+              "date": "2025-09-15",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v0.9.1",
+              "date": "2025-09-15",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "where_en": "Model list opened from the terminal input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-09-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v0.9.1/packages/tui/internal/commands/command.go",
+            "date": "2025-09-15",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v0.9.1",
+            "date": "2025-09-15",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力欄と操作一覧から、モデルや作業役を切り替える（https://raw.githubusercontent.com/anomalyco/opencode/v0.9.1/packages/tui/internal/commands/command.go）。",
+      "trend_en": "Terminal input and the command list switch models and agents. (https://raw.githubusercontent.com/anomalyco/opencode/v0.9.1/packages/tui/internal/commands/command.go)"
+    },
+    {
+      "id": "opencode-2025-10",
+      "model_switch": {
+        "where": "other",
+        "label": "Switch model",
+        "steps": [
+          "端末の画面で Ctrl+P を押して操作の一覧を開く。",
+          "Switch model を選び、モデルの一覧を開く。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.0.0/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2025-10-31",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+            "date": "2025-10-31",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Press Ctrl+P in the terminal interface to open the command list.",
+          "Choose Switch model to open the model list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "what's-new",
+          "text": "端末画面を作り直し",
+          "when": "2025-10-31..2025-10-31",
+          "where": "v1.0.0 の公開告知。常設の案内帯とは断定しない。",
+          "sources": [
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+              "date": "2025-10-31",
+              "shows": "版の公開日と変更内容。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+              "date": "2025-10-31",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "text_en": "Rebuilt terminal interface",
+          "where_en": "Version v1.0.0 release announcement. A persistent announcement strip is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-10-31",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.0.0/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2025-10-31",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+            "date": "2025-10-31",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力欄と操作一覧から、モデルや作業役を切り替える（https://raw.githubusercontent.com/anomalyco/opencode/v1.0.0/packages/opencode/src/cli/cmd/tui/app.tsx）。",
+      "trend_en": "Terminal input and the command list switch models and agents. (https://raw.githubusercontent.com/anomalyco/opencode/v1.0.0/packages/opencode/src/cli/cmd/tui/app.tsx)"
+    },
+    {
+      "id": "opencode-2025-11-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：このIDに対応する公開済みmacOS画面を確認できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.75",
+            "date": "2025-11-18",
+            "shows": "版自体の公開日は確認。仕様の from は null で、この時点のmacOS用配布画面とモデル選択は unverified。"
+          }
+        ],
+        "steps_en": [
+          "unverified (a released macOS screen matching this ID)."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "unverified",
+        "date_shown": null,
+        "sources": [
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.75",
+            "date": "2025-11-18",
+            "shows": "版自体の公開日は確認。仕様の from は null で、この時点のmacOS用配布画面とモデル選択は unverified。"
+          }
+        ]
+      },
+      "trend": "macOS版の具体的な画面配置は unverified である（https://github.com/anomalyco/opencode/releases/tag/v1.0.75）。",
+      "trend_en": "unverified (the specific macOS layout). (https://github.com/anomalyco/opencode/releases/tag/v1.0.75)"
+    },
+    {
+      "id": "opencode-2025-12",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "Choose model",
+        "steps": [
+          "入力欄の下にあるモデルの選択ボタンを押す。",
+          "開いた一覧からモデルを選ぶ。現在のモデル名も同じ場所に表示する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.0.218/packages/app/src/components/prompt-input.tsx",
+            "date": "2025-12-30",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.218",
+            "date": "2025-12-30",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Click the model selector button below the input.",
+          "Choose a model from the list. The current model name appears in the same place."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Choose model",
+          "when": "2025-12-30..2025-12-30",
+          "where": "入力欄の下のボタンに付く操作案内。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.0.218/packages/app/src/components/prompt-input.tsx",
+              "date": "2025-12-30",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.218",
+              "date": "2025-12-30",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "where_en": "Action hint on the button below the input."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-12-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.0.218/packages/app/src/components/prompt-input.tsx",
+            "date": "2025-12-30",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.218",
+            "date": "2025-12-30",
+            "shows": "版の公開日と変更内容。"
+          }
+        ]
+      },
+      "trend": "通常の文字を使う会話画面に、作業役とモデルの操作を入力欄の下へまとめる（https://raw.githubusercontent.com/anomalyco/opencode/v1.0.218/packages/app/src/components/prompt-input.tsx）。",
+      "trend_en": "A plain-text chat interface groups agent and model controls below the input. (https://raw.githubusercontent.com/anomalyco/opencode/v1.0.218/packages/app/src/components/prompt-input.tsx)"
+    },
+    {
+      "id": "opencode-2026-02",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/models",
+        "steps": [
+          "端末の入力欄に /models を入力する。",
+          "重ねて開く一覧でモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.1.54/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2026-02-10",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.1.54",
+            "date": "2026-02-10",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Type /models in the terminal input.",
+          "Choose a model in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/models でモデル一覧",
+          "when": "2026-02-10..2026-02-10",
+          "where": "端末の入力欄から開く選択一覧。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.1.54/packages/opencode/src/cli/cmd/tui/app.tsx",
+              "date": "2026-02-10",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.1.54",
+              "date": "2026-02-10",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "text_en": "List models with /models",
+          "where_en": "Selection list opened from the terminal input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-02-10",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.1.54/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2026-02-10",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.1.54",
+            "date": "2026-02-10",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力欄と操作一覧から、モデルや作業役を切り替える（https://raw.githubusercontent.com/anomalyco/opencode/v1.1.54/packages/opencode/src/cli/cmd/tui/app.tsx）。",
+      "trend_en": "Terminal input and the command list switch models and agents. (https://raw.githubusercontent.com/anomalyco/opencode/v1.1.54/packages/opencode/src/cli/cmd/tui/app.tsx)"
+    },
+    {
+      "id": "opencode-2026-04",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/models",
+        "steps": [
+          "端末の入力欄に /models を入力する。",
+          "重ねて開く一覧でモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.4.6/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2026-04-15",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.4.6",
+            "date": "2026-04-15",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Type /models in the terminal input.",
+          "Choose a model in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/models でモデル一覧",
+          "when": "2026-04-15..2026-04-15",
+          "where": "端末の入力欄から開く選択一覧。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.4.6/packages/opencode/src/cli/cmd/tui/app.tsx",
+              "date": "2026-04-15",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.4.6",
+              "date": "2026-04-15",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "text_en": "List models with /models",
+          "where_en": "Selection list opened from the terminal input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-04-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.4.6/packages/opencode/src/cli/cmd/tui/app.tsx",
+            "date": "2026-04-15",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.4.6",
+            "date": "2026-04-15",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力欄と操作一覧から、モデルや作業役を切り替える（https://raw.githubusercontent.com/anomalyco/opencode/v1.4.6/packages/opencode/src/cli/cmd/tui/app.tsx）。",
+      "trend_en": "Terminal input and the command list switch models and agents. (https://raw.githubusercontent.com/anomalyco/opencode/v1.4.6/packages/opencode/src/cli/cmd/tui/app.tsx)"
+    },
+    {
+      "id": "opencode-2026-08",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/models",
+        "steps": [
+          "端末の入力欄に /models を入力する。",
+          "重ねて開く一覧でモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.18.19/packages/tui/src/app.tsx",
+            "date": "2026-08-20",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.19",
+            "date": "2026-08-20",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Type /models in the terminal input.",
+          "Choose a model in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/mo でもモデル一覧",
+          "when": "2026-08-20..2026-08-20",
+          "where": "/models を探しやすくする入力の別名。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.18.19/packages/tui/src/app.tsx",
+              "date": "2026-08-20",
+              "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.19",
+              "date": "2026-08-20",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "text_en": "/mo also lists models",
+          "where_en": "Input alias that makes /models easier to find."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-08-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v1.18.19/packages/tui/src/app.tsx",
+            "date": "2026-08-20",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v1.18.19",
+            "date": "2026-08-20",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力欄と操作一覧から、モデルや作業役を切り替える（https://raw.githubusercontent.com/anomalyco/opencode/v1.18.19/packages/tui/src/app.tsx）。",
+      "trend_en": "Terminal input and the command list switch models and agents. (https://raw.githubusercontent.com/anomalyco/opencode/v1.18.19/packages/tui/src/app.tsx)"
+    },
+    {
+      "id": "opencode-2026-11",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/models",
+        "steps": [
+          "端末の入力欄に /models を入力する。",
+          "重ねて開く一覧でモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v2.3.0/packages/tui/src/app.tsx",
+            "date": "2026-11-13",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+            "date": "2026-11-13",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "steps_en": [
+          "Type /models in the terminal input.",
+          "Choose a model in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "実行の記録を折りたたみ",
+          "when": "2026-11-13..2026-11-13",
+          "where": "v2.3.0 では道具の呼び出しと思考を、開閉できる作業行へまとめるのが既定。",
+          "sources": [
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+              "date": "2026-11-13",
+              "shows": "版の公開日と変更内容。"
+            },
+            {
+              "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+              "date": "2026-11-13",
+              "shows": "版の公開日と変更内容。"
+            }
+          ],
+          "text_en": "Collapse execution logs",
+          "where_en": "Version v2.3.0 defaults to grouping tool calls and reasoning in expandable work rows."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-11-13",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anomalyco/opencode/v2.3.0/packages/tui/src/app.tsx",
+            "date": "2026-11-13",
+            "shows": "固定版のモデル選択の入口。候補の表示名は接続した提供元の一覧から作るため、全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+            "date": "2026-11-13",
+            "shows": "版の公開日と変更内容。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "複数の会話を切り替え、細かな実行内容を折りたたんで返答を読みやすくする（https://github.com/anomalyco/opencode/releases/tag/v2.3.0）。",
+      "trend_en": "Multiple chats can be switched, with detailed execution collapsed for readable replies. (https://github.com/anomalyco/opencode/releases/tag/v2.3.0)"
+    }
+  ]
+}

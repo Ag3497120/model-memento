@@ -1,0 +1,710 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "ollama",
+  "name": "Ollama",
+  "vendor": "Ollama",
+  "kind": "desktop-chat",
+  "versions": [
+    {
+      "id": "ollama-2023-07",
+      "from": "2023-07",
+      "to": "2024-02",
+      "regions": [
+        {
+          "name": "端末の出力",
+          "position": "全体",
+          "size": null,
+          "contents": [
+            "コマンドと入手の進捗",
+            "入力記号と回答の文章"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ヘルプ",
+          "where": "端末の入力行",
+          "purpose": "/helpで案内を開く"
+        },
+        {
+          "label": "終了",
+          "where": "端末の入力行",
+          "purpose": "/byeまたは/exitで会話を終える"
+        }
+      ],
+      "conversation": {
+        "user": "入力記号>>>の後に文章。吹き出しはない",
+        "assistant": "同じ端末の行へ文章を追記",
+        "tool_calls": null,
+        "streaming": "回答の断片を到着順に追記。完了すると改行して次の入力を待つ"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の入力行。枠のある入力部ではない"
+      },
+      "empty_state": "ollama runでモデルを選んだ後、>>>で入力を待つ。最初に入手が必要な場合は進捗を出す",
+      "distinctive": [
+        ">>>で始まる入力",
+        "入手中と回答待ちの回転表示",
+        "回答は端末の行に直接表示",
+        "色と書体は使う端末に依存"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go",
+          "kind": "oss-source",
+          "date": "2023-07-20",
+          "shows": "固定コミットの対話入力は>>>。入力待ちや入手時に回転表示、回答の断片を受け取るたび端末へ追記し、最後に改行。端末の背景色・文字色・書体はここでは決めない。"
+        },
+        {
+          "url": "https://ollama.com/blog/run-llama2-uncensored-locally",
+          "kind": "blog",
+          "date": "2023-08-01",
+          "shows": "当時の公式利用例はollama runによるローカル実行。7月20日そのものの画面を示す資料ではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "ollama-2024-02",
+      "from": "2024-02",
+      "to": "2024-09",
+      "regions": [
+        {
+          "name": "端末の出力",
+          "position": "全体",
+          "size": null,
+          "contents": [
+            "コマンドと入手の進捗",
+            "入力記号と回答の文章"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ヘルプ",
+          "where": "端末の入力行",
+          "purpose": "/?で使い方を確認"
+        }
+      ],
+      "conversation": {
+        "user": "入力記号>>>の後に文章。吹き出しはない",
+        "assistant": "同じ端末の行へ文章を追記",
+        "tool_calls": null,
+        "streaming": "回答の断片を到着順に追記。完了すると改行して次の入力を待つ"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の入力行。枠のある入力部ではない"
+      },
+      "empty_state": "入力行に送信とヘルプの短い案内。複数行入力では...へ切替",
+      "distinctive": [
+        ">>>と...の入力記号",
+        "入力欄内の短いヘルプ案内",
+        "互換APIは外部アプリ用で端末画面とは別"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.1.24/cmd/interactive.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "v0.1.24の入力記号>>>、複数行...、入力案内とヘルプ操作。APIのカード型管理画面はこの対話画面にない。タグの公開日はここから確定していない。"
+        },
+        {
+          "url": "https://ollama.com/blog/openai-compatibility",
+          "kind": "blog",
+          "date": "2024-02-08",
+          "shows": "外部アプリ向けの互換APIを紹介。記事のWeb画面は利用例の別アプリで、Ollama本体の分割画面ではない。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "ollama-2024-09-macos",
+      "from": "2024-09",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "メニューバー",
+          "position": "画面上端",
+          "size": null,
+          "contents": [
+            "常駐アプリの操作メニュー"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "別の端末",
+          "size": null,
+          "contents": [
+            "ollama runによる対話"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "終了",
+          "where": "メニューバーのメニュー",
+          "purpose": "原画面ではQuit Ollama"
+        },
+        {
+          "label": "更新して再起動",
+          "where": "更新があるときのメニュー",
+          "purpose": "原画面ではRestart to update。更新がないと表示しない"
+        }
+      ],
+      "conversation": {
+        "user": "対話は別の端末で行う。メニューバーのチャット入力は未確認",
+        "assistant": "端末で回答を表示",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話画面と分かれた常駐メニュー",
+        "通常は終了操作",
+        "更新がある場合だけ更新案内と再起動操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.3.12/macapp/src/index.ts",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "macOSのメニューバー操作はQuit Ollama、更新時だけ通知とRestart to updateを追加。これはmacappのコードで、Windows用Go実装と区別。メニューバーから会話をする画面やGPU計器は確認できない。"
+        },
+        {
+          "url": "https://ollama.com/blog/llama3.2",
+          "kind": "blog",
+          "date": "2024-09-25",
+          "shows": "Llama 3.2の1B/3Bを端末で使う案内。11B/90B画像対応版はComing very soonという状態で、9月25日の対応済みモデルではない。"
+        },
+        {
+          "url": "https://ollama.com/blog/llama3.2-vision",
+          "kind": "blog",
+          "date": "2024-11-06",
+          "shows": "画像対応の11B/90Bは11月6日にOllama 0.4向けに公開。画像を端末へ落とすかパスを入力する手順。"
+        },
+        {
+          "url": "https://ollama.com/blog/new-app",
+          "kind": "blog",
+          "date": "2025-07-30",
+          "shows": "macOSとWindowsに公式チャットを追加。アプリでモデルを入手し、テキスト・PDF・コードを落として添付し、対応モデルへ画像を送る。設定で会話に渡す量を調整。図版・動画フレームは未使用で、本文では左右位置や色番号までは不明。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "ollama-2025-07-macos",
+      "from": "2025-07",
+      "to": "2026-03",
+      "regions": [
+        {
+          "name": "チャットウィンドウ",
+          "position": null,
+          "size": null,
+          "contents": [
+            "モデルの入手と対話",
+            "ファイルを落として添付"
+          ]
+        },
+        {
+          "name": "設定",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話に渡せる文章量の調整"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モデルを選ぶ",
+          "where": "チャット画面。左右位置はunverified",
+          "purpose": "対話するモデルを入手して使う"
+        },
+        {
+          "label": "会話に渡す量",
+          "where": "設定画面",
+          "purpose": "長い文書を扱う量を増減"
+        }
+      ],
+      "conversation": {
+        "user": "テキスト・PDF・コードを添付し、対応モデルでは画像も送れる。発言の形はunverified",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "2025年7月に追加された公式チャット",
+        "モデルの入手をアプリ内で行う",
+        "文書や画像を落として添付",
+        "設定で会話に渡す量を変える"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://ollama.com/blog/new-app",
+          "kind": "blog",
+          "date": "2025-07-30",
+          "shows": "macOSとWindowsに公式チャットを追加。アプリでモデルを入手し、テキスト・PDF・コードを落として添付し、対応モデルへ画像を送る。設定で会話に渡す量を調整。図版・動画フレームは未使用で、本文では左右位置や色番号までは不明。"
+        },
+        {
+          "url": "https://www.windowscentral.com/artificial-intelligence/ollamas-new-app-makes-using-local-ai-llms-on-your-windows-11-pc-a-breeze-no-more-need-to-chat-in-the-terminal",
+          "kind": "press",
+          "date": "2025-08-05",
+          "shows": "利用者による起動・モデル選択・文書添付の紹介。Windows版の説明で、macOS版の厳密な配置や配色の根拠には使わない。"
+        },
+        {
+          "url": "https://ollama.com/blog/gpt-oss?pubDate=20250824",
+          "kind": "blog",
+          "date": "2025-08-05",
+          "shows": "gpt-ossの公開は8月5日。7月30日の公式チャット初公開時点のモデルとしては扱わない。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "ollama-2026-03-macos",
+      "from": "2026-03",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "新しい会話",
+            "設定",
+            "時期ごとの履歴"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "ユーザーの枠",
+            "回答本文",
+            "考えた過程と道具の結果"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "中央下",
+          "size": "最大768px",
+          "contents": [
+            "添付チップ",
+            "モデル選択",
+            "条件付きの思考と検索",
+            "送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左の一覧上部",
+          "purpose": "原画面ではNew Chat"
+        },
+        {
+          "label": "モデルを選ぶ",
+          "where": "入力部のボタン",
+          "purpose": "上に開く検索付き一覧でモデルを選ぶ"
+        },
+        {
+          "label": "考える",
+          "where": "入力部。対応モデルで表示",
+          "purpose": "考える機能または考える量を設定"
+        },
+        {
+          "label": "考えた過程",
+          "where": "回答内",
+          "purpose": "考え中の表示や所要時間付き見出しを押して開閉"
+        }
+      ],
+      "conversation": {
+        "user": "右寄せの丸い枠。添付は小さなチップや画像の見本",
+        "assistant": "幅のある本文欄へMarkdownで表示し、コピー操作を持つ",
+        "tool_calls": "道具名と実行状態、開閉できる引数・結果。検索の進捗も文章で表示",
+        "streaming": "回答を順次描画。考え中は別枠を更新し、完了時に所要時間付き見出しへ切替"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "ui-sans-serif, system-ui, Segoe UI",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "rounded-3xlの大きな丸角。上側に添付チップ、下側に操作。ピクセルへの換算は未確認"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "入力部にまとまったモデル選択",
+        "モデル一覧はボタンの上へ開く",
+        "右寄せの発言枠と通常の回答本文",
+        "開閉する考えた過程と所要時間",
+        "道具の実行結果を会話内で開閉"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ChatForm.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "v0.16.0の入力欄は中央寄せで最大768px、rounded-3xl、上側に添付チップ、案内Send a message。モデル選択・思考・Web検索は対応状態により表示。タグの日付と3月12日の一致は未確認。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/Chat.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "スクロールする会話と下部に固定する入力部。モデルを跨いだ会話、ログイン不足の表示などの条件分岐を確認。常設の右側VRAM計器は確認できない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/Message.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ユーザーは右寄せの丸い枠、回答はMarkdown本文。添付チップ、道具名・実行状態・開閉できる引数／結果、回答のコピー操作を確認。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/Thinking.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "考え中と所要時間付きの見出し、開閉する過程、生成中の高さ調整と自動スクロール。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ModelPicker.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄のモデルボタンから上に開く検索付き一覧。幅w-64、クラウドモデルに印。ローカル／クラウドはモデルの属性で、M5とTurboを並べた常設切替板ではない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ChatSidebar.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "左の会話一覧にNew ChatとSettings、時期ごとの履歴、名前の編集。Vision Attachments・MCP Tools・ollama psの常設タブはこの部品にない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/index.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "本文はui-sans-serif/system-ui/Segoe UI。丸い表示用スタックにSF Pro Roundedの名前もある。--bg-color:#1a1a1aはサンプル変数で使用箇所を追えておらず、実効背景色として採用しない。"
+        },
+        {
+          "url": "https://ollama.com/blog/thinking",
+          "kind": "blog",
+          "date": "2025-05-30",
+          "shows": "考えた過程の有効／無効切替と、過程を回答から分ける出力。記事の手順は端末とAPI。動画は添えられた説明文だけを読み、フレームは使わない。2026年3月の専用GUI初公開の根拠ではない。"
+        },
+        {
+          "url": "https://ollama.com/blog/new-app",
+          "kind": "blog",
+          "date": "2025-07-30",
+          "shows": "macOSとWindowsに公式チャットを追加。アプリでモデルを入手し、テキスト・PDF・コードを落として添付し、対応モデルへ画像を送る。設定で会話に渡す量を調整。図版・動画フレームは未使用で、本文では左右位置や色番号までは不明。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "ollama-2026-11-macos",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "機能切替",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Apps",
+            "Chat",
+            "Settings。可変mainの観察"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "会話の本文"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "モデルと送信操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "アプリとの接続",
+          "where": "機能切替",
+          "purpose": "原画面ではApps"
+        },
+        {
+          "label": "会話",
+          "where": "機能切替",
+          "purpose": "原画面ではChat"
+        },
+        {
+          "label": "設定",
+          "where": "機能切替",
+          "purpose": "原画面ではSettings"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": "現行Chat部品で継続生成を扱う。11月8日の固定版の意匠はunverified"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "現行コードのApps・Chat・Settings入口",
+        "クラウドもモデル名を選んで利用する方式",
+        "1.2・M5専用切替板・固定速度表はunverified"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ollama/ollama/blob/main/app/ui/app/src/components/AppSidebar.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "2026-11-15閲覧時の可変main。Apps、Chat、Settingsの機能入口を確認。11月8日の固定版や1.2という版番号を証明しない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/main/app/ui/app/src/components/Chat.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "2026-11-15閲覧時の可変main。会話欄と下部入力、モデルとログインに応じた表示。過去のv0.16.0から全意匠が同じという意味ではない。"
+        },
+        {
+          "url": "https://ollama.com/blog/cloud-models",
+          "kind": "blog",
+          "date": "2025-09-19",
+          "shows": "クラウド対応の公開。ローカルと同じモデル操作で利用し、モデル名の-cloudで区別。特定のGPU別切替板や速度表の配置は示さない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ModelPicker.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄のモデルボタンから上に開く検索付き一覧。幅w-64、クラウドモデルに印。ローカル／クラウドはモデルの属性で、M5とTurboを並べた常設切替板ではない。"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/index.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "本文はui-sans-serif/system-ui/Segoe UI。丸い表示用スタックにSF Pro Roundedの名前もある。--bg-color:#1a1a1aはサンプル変数で使用箇所を追えておらず、実効背景色として採用しない。"
+        }
+      ],
+      "confidence": 0.51
+    }
+  ],
+  "corrections": [
+    "初期3版の主たる対話面は端末。rootのdesktop-chatは後年の公式アプリを表す分類であり、初期版へチャットウィンドウを追加する根拠ではない。https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go https://ollama.com/blog/new-app",
+    "web/js/tools/ollama.jsの2023-07に描く動物・ASCII飾り・状態バーは初期cmd.goに裏付けがない。特にロゴやマスコットの描き直しはしない。https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go",
+    "2024-02のModelfileカードとAPIカードを並べる固定の管理画面は確認できない。APIの記事は外部Webアプリの作成例。https://ollama.com/blog/openai-compatibility",
+    "2024-09のmacOSメニューは終了と条件付き更新操作。rendererの会話ポップアップ、Vision Ready、GPU使用量計器は根拠なし。Llama 3.2 Visionは11月6日公開で9月25日へ遡及できない。https://github.com/ollama/ollama/blob/v0.3.12/macapp/src/index.ts https://ollama.com/blog/llama3.2 https://ollama.com/blog/llama3.2-vision",
+    "7月30日の公式アプリのモデル例はGemma 3。gpt-ossは8月5日の発表なので初公開日の常設モデル名にはできない。https://ollama.com/blog/new-app https://ollama.com/blog/gpt-oss?pubDate=20250824",
+    "2026-03のVision Attachments・MCP Tools・ollama psタブと右側のVRAM計器は、確認した公式ChatSidebarとChatの配置にはない。思考機能の公式発表は2025年5月で、2026年3月のGUI初登場日を証明しない。https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/ChatSidebar.tsx https://github.com/ollama/ollama/blob/v0.16.0/app/ui/app/src/components/Chat.tsx https://ollama.com/blog/thinking",
+    "2026-11の1.2という版番号、Local Metal M5とTurboの大型切替板、138/310 tok/s等の固定値はunverified。クラウドモデルの存在だけからその画面を発明しない。https://ollama.com/blog/cloud-models https://github.com/ollama/ollama/blob/main/app/ui/app/src/components/AppSidebar.tsx"
+  ]
+}

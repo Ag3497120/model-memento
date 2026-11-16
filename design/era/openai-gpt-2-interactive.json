@@ -1,0 +1,336 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "openai-gpt-2-interactive",
+  "versions": [
+    {
+      "id": "openai-gpt-2-2019-02",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model_name",
+        "steps": [
+          "実行中なら端末で終了する。",
+          "起動コマンドに --model_name=117M を付ける。",
+          "そのモデルのファイルを用意した状態で起動する。"
+        ],
+        "options": [
+          "117M"
+        ],
+        "default": "117M",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/9d1e704fec1726d5e051e98336b655ae8ce49242/src/interactive_conditional_samples.py",
+            "date": "2019-02-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/0465394bd312e564fe8fc2e600f562369037636b/README.md",
+            "date": "2019-02-28",
+            "kind": "source-code",
+            "shows": "その時点の公開モデル。2019年8月に小型・中型のパラメーター数の表記を訂正。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ],
+        "notes": "コマンドに付ける指定で変更する。端末アプリ名とOSの版は unverified。",
+        "steps_en": [
+          "Stop the running process in the terminal.",
+          "Add --model_name=117M to the launch command.",
+          "Start with that model's files already available."
+        ],
+        "notes_en": "Changed through a command option. Terminal app name and OS version are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "Prompt should not be empty!",
+          "when": "2019-02-28..2019-02-28",
+          "where": "空の文章を送ると端末に表示され、入力をもう一度求める。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/gpt-2/9d1e704fec1726d5e051e98336b655ae8ce49242/src/interactive_conditional_samples.py",
+              "date": "2019-02-27",
+              "kind": "source-code",
+              "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+              "accessed_on": "2026-11-15",
+              "date_type": "commit"
+            }
+          ],
+          "where_en": "Displayed in the terminal after empty input, requesting input again."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2019-02-28",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/9d1e704fec1726d5e051e98336b655ae8ce49242/src/interactive_conditional_samples.py",
+            "date": "2019-02-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ]
+      },
+      "trend": "番号と区切り線で生成結果を並べる端末の操作が中心となる。 （https://raw.githubusercontent.com/openai/gpt-2/9d1e704fec1726d5e051e98336b655ae8ce49242/src/interactive_conditional_samples.py）",
+      "trend_en": "Terminal generation results are arranged with numbers and separators. (https://raw.githubusercontent.com/openai/gpt-2/9d1e704fec1726d5e051e98336b655ae8ce49242/src/interactive_conditional_samples.py)"
+    },
+    {
+      "id": "openai-gpt-2-2019-05",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model_name",
+        "steps": [
+          "実行中なら端末で終了する。",
+          "起動コマンドに --model_name=345M を付ける。",
+          "そのモデルのファイルを用意した状態で起動する。"
+        ],
+        "options": [
+          "117M",
+          "345M"
+        ],
+        "default": "117M",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/e5c5054474f583d6d9499624649353995d63c70a/src/interactive_conditional_samples.py",
+            "date": "2019-05-16",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/dd75299dfec802cc0ee8b7bcc7ac4c2d05622bf8/README.md",
+            "date": "2019-05-03",
+            "kind": "source-code",
+            "shows": "その時点の公開モデル。2019年8月に小型・中型のパラメーター数の表記を訂正。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ],
+        "notes": "コマンドに付ける指定で変更する。端末アプリ名とOSの版は unverified。",
+        "steps_en": [
+          "Stop the running process in the terminal.",
+          "Add --model_name=345M to the launch command.",
+          "Start with that model's files already available."
+        ],
+        "notes_en": "Changed through a command option. Terminal app name and OS version are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "Prompt should not be empty!",
+          "when": "2019-05-31..2019-05-31",
+          "where": "空の文章を送ると端末に表示され、入力をもう一度求める。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/gpt-2/e5c5054474f583d6d9499624649353995d63c70a/src/interactive_conditional_samples.py",
+              "date": "2019-05-16",
+              "kind": "source-code",
+              "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+              "accessed_on": "2026-11-15",
+              "date_type": "commit"
+            }
+          ],
+          "where_en": "Displayed in the terminal after empty input, requesting input again."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2019-05-31",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/e5c5054474f583d6d9499624649353995d63c70a/src/interactive_conditional_samples.py",
+            "date": "2019-05-16",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ]
+      },
+      "trend": "番号と区切り線で生成結果を並べる端末の操作が中心となる。 （https://raw.githubusercontent.com/openai/gpt-2/e5c5054474f583d6d9499624649353995d63c70a/src/interactive_conditional_samples.py）",
+      "trend_en": "Terminal generation results are arranged with numbers and separators. (https://raw.githubusercontent.com/openai/gpt-2/e5c5054474f583d6d9499624649353995d63c70a/src/interactive_conditional_samples.py)"
+    },
+    {
+      "id": "openai-gpt-2-2019-08",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model_name",
+        "steps": [
+          "実行中なら端末で終了する。",
+          "起動コマンドに --model_name=774M を付ける。",
+          "そのモデルのファイルを用意した状態で起動する。"
+        ],
+        "options": [
+          "124M",
+          "355M",
+          "774M"
+        ],
+        "default": "124M",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+            "date": "2019-08-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/f35fa1d920e9d2d0690f66d03aa3f76b3c59230e/README.md",
+            "date": "2019-08-20",
+            "kind": "source-code",
+            "shows": "その時点の公開モデル。2019年8月に小型・中型のパラメーター数の表記を訂正。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ],
+        "notes": "コマンドに付ける指定で変更する。端末アプリ名とOSの版は unverified。",
+        "steps_en": [
+          "Stop the running process in the terminal.",
+          "Add --model_name=774M to the launch command.",
+          "Start with that model's files already available."
+        ],
+        "notes_en": "Changed through a command option. Terminal app name and OS version are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "Prompt should not be empty!",
+          "when": "2019-08-28..2019-08-28",
+          "where": "空の文章を送ると端末に表示され、入力をもう一度求める。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+              "date": "2019-08-27",
+              "kind": "source-code",
+              "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+              "accessed_on": "2026-11-15",
+              "date_type": "commit"
+            }
+          ],
+          "where_en": "Displayed in the terminal after empty input, requesting input again."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2019-08-28",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+            "date": "2019-08-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ]
+      },
+      "trend": "番号と区切り線で生成結果を並べる端末の操作が中心となる。 （https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py）",
+      "trend_en": "Terminal generation results are arranged with numbers and separators. (https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py)"
+    },
+    {
+      "id": "openai-gpt-2-2019-11",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model_name",
+        "steps": [
+          "実行中なら端末で終了する。",
+          "起動コマンドに --model_name=1558M を付ける。",
+          "そのモデルのファイルを用意した状態で起動する。"
+        ],
+        "options": [
+          "124M",
+          "355M",
+          "774M",
+          "1558M"
+        ],
+        "default": "124M",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+            "date": "2019-08-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/fbae7db92a722d85b8ab058a6076d22963dc8ce9/README.md",
+            "date": "2019-11-05",
+            "kind": "source-code",
+            "shows": "その時点の公開モデル。2019年8月に小型・中型のパラメーター数の表記を訂正。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          },
+          {
+            "url": "https://openai.com/index/gpt-2-1-5b-release/",
+            "date": "2019-11-05",
+            "kind": "official",
+            "shows": "最大モデルの公開。1558Mは同リポジトリのモデル指定名。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/fbae7db92a722d85b8ab058a6076d22963dc8ce9/DEVELOPERS.md",
+            "date": "2019-11-05",
+            "kind": "source-code",
+            "shows": "同時点のモデル取得の指定に124M・355M・774M・1558Mが並ぶ。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ],
+        "notes": "コマンドに付ける指定で変更する。端末アプリ名とOSの版は unverified。",
+        "steps_en": [
+          "Stop the running process in the terminal.",
+          "Add --model_name=1558M to the launch command.",
+          "Start with that model's files already available."
+        ],
+        "notes_en": "Changed through a command option. Terminal app name and OS version are unverified."
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "Prompt should not be empty!",
+          "when": "2019-11-05..2019-11-05",
+          "where": "空の文章を送ると端末に表示され、入力をもう一度求める。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+              "date": "2019-08-27",
+              "kind": "source-code",
+              "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+              "accessed_on": "2026-11-15",
+              "date_type": "commit"
+            }
+          ],
+          "where_en": "Displayed in the terminal after empty input, requesting input again."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2019-11-05",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py",
+            "date": "2019-08-27",
+            "kind": "source-code",
+            "shows": "固定コミットのmodel_name引数、初期値、入力確認、番号付きの生成結果。",
+            "accessed_on": "2026-11-15",
+            "date_type": "commit"
+          }
+        ]
+      },
+      "trend": "番号と区切り線で生成結果を並べる端末の操作が中心となる。 （https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py）",
+      "trend_en": "Terminal generation results are arranged with numbers and separators. (https://raw.githubusercontent.com/openai/gpt-2/ac5d52295f8a1c3856ea24fb239087cc1a3d1131/src/interactive_conditional_samples.py)"
+    }
+  ]
+}

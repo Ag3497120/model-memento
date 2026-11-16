@@ -1,0 +1,242 @@
+name: AI で日々の資料を見直す
+
+on:
+  # auto-sync.yml runs daily; this starts only after its deterministic publication succeeds.
+  workflow_run:
+    workflows: ['世界の新着と全件索引を更新']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '変更案の検査だけ行い、保存と公開をしない'
+        type: boolean
+        default: true
+
+permissions: {}
+
+concurrency:
+  group: ai-maintain
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: >-
+      vars.AI_MAINTAIN != 'off' &&
+      (github.event_name == 'workflow_dispatch' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) ||
+       github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == github.event.repository.default_branch &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    outputs:
+      count: ${{ steps.collect.outputs.count }}
+      base: ${{ steps.base.outputs.sha }}
+    steps:
+      - id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - id: base
+        env:
+          AI_CHECKED_SHA: ${{ steps.checkout.outputs.commit }}
+        run: node -e "require('node:fs').appendFileSync(process.env.GITHUB_OUTPUT, 'sha=' + process.env.AI_CHECKED_SHA + '\n')"
+        # workflow_run GITHUB_SHA is the default branch, not an untrusted upstream artifact SHA.
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .ai-state
+          key: ai-maintain-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ai-maintain-state-v1-
+      - name: 公開済みの最新データを読む
+        env:
+          WORLD_SITE_URL: ${{ vars.WORLD_SITE_URL }}
+        run: node scripts/ai-maintain/prepare.js latest
+      - name: AI を使わず作業候補と資料をまとめる
+        id: collect
+        env:
+          AI_BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: node scripts/ai-maintain/collect.js
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ai-input
+          path: .ai-input
+          include-hidden-files: true
+          retention-days: 1
+          if-no-files-found: error
+      - name: 本文を含まない確認状態だけを保存する
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run == false
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          await fs.mkdir('.ai-state', { recursive: true });
+          await fs.copyFile('.ai-input/state.json', '.ai-state/state.json');
+          NODE
+      - uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run == false
+        with:
+          path: .ai-state
+          key: ai-maintain-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+
+  ai:
+    needs: collect
+    if: vars.AI_MAINTAIN != 'off' && needs.collect.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    outputs:
+      available: ${{ steps.keys.outputs.available }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.collect.outputs.base }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-input
+          path: .ai-input
+      # Secrets cannot be tested directly in a job-level if. No model is called when both are absent.
+      - name: 使える契約の名前だけを選ぶ
+        id: keys
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          const provider = process.env.ANTHROPIC_API_KEY ? 'claude' : process.env.OPENAI_API_KEY ? 'codex' : '';
+          await fs.appendFile(process.env.GITHUB_OUTPUT, `provider=${provider}\navailable=${Boolean(provider)}\n`);
+          NODE
+      - id: prepare
+        if: steps.keys.outputs.available == 'true'
+        run: node scripts/ai-maintain/prepare.js
+      - name: 読取り専用の Claude に変更案を頼む
+        id: claude
+        if: steps.keys.outputs.provider == 'claude'
+        uses: anthropics/claude-code-action@f3b070c88125d33dbae5653df5f143101d4ea9dc # v1.0.276
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Explicit read-only token avoids the action obtaining a separate GitHub App write token.
+          github_token: ${{ github.token }}
+          prompt: ${{ steps.prepare.outputs.prompt }}
+          claude_args: ${{ steps.prepare.outputs.claude_args }}
+          settings: '{"permissions":{"allow":["Read(./.ai-input/**)"],"deny":["Read(./.git/**)","Read(./.ai-codex-home/**)"]}}'
+      - name: 読取り専用の Codex に変更案を頼む
+        if: steps.keys.outputs.provider == 'codex'
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675 # v1.13
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          codex-version: '0.169.0'
+          prompt-file: .github/ai/maintain-prompt.md
+          output-schema-file: .github/ai/patch.schema.json
+          output-file: .ai-patch/ai-patch.json
+          codex-home: .ai-codex-home
+          permission-profile: ':read-only'
+          safety-strategy: drop-sudo
+          allow-bots: 'true'
+          codex-args: '["--config","features.shell_tool=false","--config","web_search=\"disabled\""]'
+      - name: 変更案の JSON だけを保存する
+        if: steps.keys.outputs.available == 'true'
+        env:
+          AI_PROVIDER: ${{ steps.keys.outputs.provider }}
+          AI_CLAUDE_EXECUTION_FILE: ${{ steps.claude.outputs.execution_file }}
+        run: node scripts/ai-maintain/save-output.js
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: steps.keys.outputs.available == 'true'
+        with:
+          name: ai-patch
+          path: .ai-patch/ai-patch.json
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: error
+
+  validate:
+    needs: [collect, ai]
+    if: vars.AI_MAINTAIN != 'off' && needs.ai.outputs.available == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    outputs:
+      count: ${{ steps.validate.outputs.count }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.collect.outputs.base }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-input
+          path: .ai-input
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-patch
+          path: .ai-patch
+      - name: 保存先・形式・出典・権利・容量・全テストを検査する
+        id: validate
+        run: node scripts/ai-maintain/validate.js --patch .ai-patch/ai-patch.json --work .ai-input/ai-work.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ai-validated
+          path: ai-validation.json
+          retention-days: 7
+          if-no-files-found: error
+
+  land:
+    needs: [collect, validate]
+    if: >-
+      vars.AI_MAINTAIN != 'off' && needs.validate.result == 'success' && needs.validate.outputs.count != '0' &&
+      (github.event_name != 'workflow_dispatch' || inputs.dry_run == false)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: world-pages
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pull-requests: write
+      # Required only to dispatch pages.yml after a GITHUB_TOKEN commit (see design/ai-ci.md).
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.collect.outputs.base }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-input
+          path: .ai-input
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-patch
+          path: .ai-patch
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ai-validated
+          path: .ai-validated
+      - name: 検査済みの資料だけを保存する
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AI_AUTOMERGE: ${{ vars.AI_AUTOMERGE }}
+          AI_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          AI_BASE_SHA: ${{ needs.collect.outputs.base }}
+        run: node scripts/ai-maintain/land.js

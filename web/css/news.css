@@ -1,0 +1,60 @@
+.memento-news {
+  --news-paper: #faf9f5;
+  --news-ink: #252a29;
+  --news-muted: #5f6965;
+  --news-rule: #d8ded7;
+  --news-accent: #315d52;
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 56px);
+  background: var(--news-paper);
+  color: var(--news-ink);
+  font: 16px/1.8 system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  overflow-wrap: anywhere;
+}
+.memento-news *, .memento-news *::before, .memento-news *::after { box-sizing: border-box; }
+.memento-news .news-header { display: flex; justify-content: space-between; gap: 24px; align-items: start; padding-bottom: 26px; }
+.memento-news h1 { margin: 4px 0 10px; font-size: clamp(24px, 4vw, 34px); font-weight: 600; line-height: 1.5; letter-spacing: .025em; }
+.memento-news p { margin: 0 0 10px; }
+.memento-news .news-kicker { color: var(--news-muted); letter-spacing: .16em; font-size: 11px; }
+.memento-news button, .memento-news input, .memento-news select { font: inherit; color: inherit; }
+.memento-news button, .memento-news select, .memento-news input { min-height: 44px; border: 1px solid var(--news-rule); border-radius: 6px; background: #fffefa; padding: 7px 12px; }
+.memento-news button { cursor: pointer; }
+.memento-news button:disabled { cursor: default; opacity: .65; }
+.memento-news a { color: var(--news-accent); text-underline-offset: .2em; }
+.memento-news a:hover { text-decoration-thickness: 2px; }
+.memento-news :focus-visible { outline: 3px solid #397b9d; outline-offset: 4px; }
+.memento-news .news-tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--news-rule); margin-bottom: 24px; }
+.memento-news .news-tabs button { border: 0; border-radius: 0; background: transparent; padding: 10px 2px; border-bottom: 3px solid transparent; }
+.memento-news .news-tabs button[aria-pressed="true"] { color: var(--news-accent); border-bottom-color: var(--news-accent); font-weight: 650; }
+.memento-news .news-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; }
+.memento-news label { display: grid; gap: 5px; font-size: 13px; color: var(--news-muted); }
+.memento-news .news-search { flex: 1; min-width: 180px; }
+.memento-news .news-status { font-size: 12px; color: var(--news-muted); margin: 18px 0 4px; }
+.memento-news .news-count { font-size: 13px; color: var(--news-muted); margin-bottom: 28px; }
+.memento-news .news-group { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 24px; }
+.memento-news h2 { font-size: 15px; font-weight: 600; padding-top: 18px; border-top: 1px solid var(--news-ink); margin: 0; }
+.memento-news .news-item { grid-column: 2; border-top: 1px solid var(--news-rule); padding: 20px 0 28px; }
+.memento-news .news-item:first-of-type { grid-row: 1; }
+.memento-news .news-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px 14px; font-size: 12px; color: var(--news-muted); }
+.memento-news .news-kind { color: var(--news-accent); font-weight: 650; }
+.memento-news h3 { font-size: clamp(19px, 2.5vw, 23px); line-height: 1.6; font-weight: 600; margin: 10px 0; }
+.memento-news a.news-title { color: var(--news-ink); text-decoration: none; }
+.memento-news a.news-title:hover { text-decoration: underline; }
+.memento-news .news-summary { max-width: 65ch; line-height: 1.95; font-size: 15px; margin-top: 12px; }
+.memento-news .news-note { font-size: 11px; color: var(--news-muted); }
+.memento-news .news-out { display: inline-block; font-size: 13px; padding: 5px 0; }
+.memento-news .news-related { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.memento-news .news-related button { font-size: 12px; }
+.memento-news .news-more { display: block; margin: 24px auto; min-width: 180px; }
+.memento-news .news-empty { padding: 40px 18px; border: 1px solid var(--news-rule); border-radius: 6px; text-align: center; color: var(--news-muted); }
+.memento-news .news-source-status { border-top: 1px solid var(--news-rule); padding-top: 18px; font-size: 12px; color: var(--news-muted); margin-top: 24px; }
+.memento-news summary { cursor: pointer; min-height: 44px; }
+@media (max-width: 620px) {
+  .memento-news .news-header { display: block; }
+  .memento-news .news-header > button { margin-top: 12px; }
+  .memento-news .news-group { display: block; }
+  .memento-news h2 { margin: 20px 0 0; padding-bottom: 12px; }
+  .memento-news .news-search { flex-basis: 100%; }
+}

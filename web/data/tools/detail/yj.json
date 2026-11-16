@@ -1,0 +1,759 @@
+{
+  "yjh051108--dsh-routing-suite": {
+    "topics": [
+      "ai-agents",
+      "cordis",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "195273352f23bff7f9023ebe2ec0cdbdf9c98f10",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-08-15"
+      ],
+      [
+        "0.0.1-exp",
+        "2026-09-02"
+      ],
+      [
+        "0.0.1-rc1",
+        "2026-09-02"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "graded/lib/index.js",
+        "graded/src/index.js",
+        "injector/src/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "分级清单审核",
+      "开发侧挂：把测试/开发工具挂",
+      "工具名（唯一）",
+      "工具描述",
+      "参数 schema（可选，留空则无参）",
+      "调用后侧（staging）工具测试：不进 schema、不污染缓存。args 为传给工具的 JSON 参数对象。",
+      "staging 工具名",
+      "传给工具的 JSON 参数（可选）",
+      "列出后侧（staging）工具（含转正状态）",
+      "转正：把 staging 工具一键挂",
+      "丢弃/撤回：从 staging 移除工具（若已转正则同时从正式工具集注销）。",
+      "插件包目录绝对路径（如 F:/dsh/03-dev-infra/dsh-xxx）"
+    ],
+    "string_evidence": [
+      {
+        "text": "分级清单审核",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/lib/index.js",
+        "line": 344,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "开发侧挂：把测试/开发工具挂",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1493,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "工具名（唯一）",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1495,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "工具描述",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1496,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "参数 schema（可选，留空则无参）",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1497,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "调用后侧（staging）工具测试：不进 schema、不污染缓存。args 为传给工具的 JSON 参数对象。",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1524,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "staging 工具名",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1526,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "传给工具的 JSON 参数（可选）",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1527,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "列出后侧（staging）工具（含转正状态）",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1543,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "转正：把 staging 工具一键挂",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1555,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "丢弃/撤回：从 staging 移除工具（若已转正则同时从正式工具集注销）。",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 1585,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "插件包目录绝对路径（如 F:/dsh/03-dev-infra/dsh-xxx）",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+        "line": 2402,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/yjh051108/dsh-routing-suite",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/README.md",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/package.json",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/package.json",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/preset/package.json",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/package.json",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/lib/index.js",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/src/index.js",
+      "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts",
+      "https://api.github.com/repos/yjh051108/dsh-routing-suite/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/package.json"
+      },
+      {
+        "path": "graded/package.json",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/package.json"
+      },
+      {
+        "path": "preset/package.json",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/preset/package.json"
+      },
+      {
+        "path": "injector/package.json",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/package.json"
+      },
+      {
+        "path": "graded/lib/index.js",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/lib/index.js"
+      },
+      {
+        "path": "graded/src/index.js",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/graded/src/index.js"
+      },
+      {
+        "path": "injector/src/index.ts",
+        "source": "https://github.com/yjh051108/dsh-routing-suite/blob/195273352f23bff7f9023ebe2ec0cdbdf9c98f10/injector/src/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=12, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "repository_id": 1334586481,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "yjid--kensaku": {
+    "topics": [
+      "ai-agents",
+      "desktop",
+      "desktop-search",
+      "file-search",
+      "full-text-search",
+      "launcher",
+      "local-first",
+      "mcp",
+      "ocr",
+      "open-source",
+      "privacy",
+      "rust",
+      "search",
+      "semantic-search",
+      "tauri",
+      "windows"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "9585797888e8b7260daf9d1334ea1c8282dee2f3",
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.2.0",
+        "2026-10-25"
+      ],
+      [
+        "v0.3.3",
+        "2026-10-26"
+      ],
+      [
+        "v1.0.0",
+        "2026-10-27"
+      ],
+      [
+        "v1.0.1",
+        "2026-10-27"
+      ],
+      [
+        "v1.0.2",
+        "2026-10-27"
+      ],
+      [
+        "v1.0.3",
+        "2026-10-27"
+      ],
+      [
+        "v1.0.5",
+        "2026-10-28"
+      ],
+      [
+        "v1.0.6",
+        "2026-10-28"
+      ],
+      [
+        "v1.0.7",
+        "2026-10-28"
+      ],
+      [
+        "v1.0.8",
+        "2026-10-28"
+      ],
+      [
+        "v1.0.9",
+        "2026-10-29"
+      ],
+      [
+        "v1.0.10",
+        "2026-10-29"
+      ],
+      [
+        "v1.0.11",
+        "2026-10-30"
+      ],
+      [
+        "v1.0.12",
+        "2026-11-02"
+      ],
+      [
+        "v1.0.14",
+        "2026-11-04"
+      ],
+      [
+        "v1.0.15",
+        "2026-11-04"
+      ],
+      [
+        "v1.0.16",
+        "2026-11-06"
+      ],
+      [
+        "v1.0.17",
+        "2026-11-09"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/hooks/useTheme.ts",
+        "src/App.tsx",
+        "src/main.tsx",
+        "cli/src/main.rs",
+        "src-tauri/src/main.rs",
+        "src-tauri/src/util/memory.rs",
+        "src/i18n/index.ts",
+        "src-tauri/src/preview.rs",
+        "src-tauri/src/commands.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "How to search",
+      "Keyboard",
+      "Filters",
+      "show or hide the window (launcher mode)",
+      "move into and through results",
+      "move within a row, once you",
+      "settings",
+      "Saved",
+      "Recent",
+      "Recent searches",
+      "Clear",
+      "Ask for a file the way you",
+      "latest resume",
+      "screenshots from last week",
+      "big videos",
+      "invoice",
+      "Minimize",
+      "Theme",
+      "Ready",
+      "Indexing",
+      "found it.",
+      "to search.",
+      "You",
+      "Find Kensaku in your taskbar or Dock anytime.",
+      "Files",
+      "Read inside",
+      "Start searching",
+      "Verifying files",
+      "Kensaku",
+      "Close"
+    ],
+    "string_evidence": [
+      {
+        "text": "How to search",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Keyboard",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Filters",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "show or hide the window (launcher mode)",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "move into and through results",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "move within a row, once you",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "settings",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+        "line": 16,
+        "kind": "i18n"
+      },
+      {
+        "text": "Saved",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Recent",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Recent searches",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Clear",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ask for a file the way you",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "latest resume",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "screenshots from last week",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "big videos",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "invoice",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Minimize",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Theme",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ready",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Indexing",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "found it.",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "to search.",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "You",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Find Kensaku in your taskbar or Dock anytime.",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Files",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 16,
+        "kind": "i18n"
+      },
+      {
+        "text": "Read inside",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 17,
+        "kind": "i18n"
+      },
+      {
+        "text": "Start searching",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 18,
+        "kind": "i18n"
+      },
+      {
+        "text": "Verifying files",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+        "line": 22,
+        "kind": "i18n"
+      },
+      {
+        "text": "Kensaku",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/common.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Close",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/common.json",
+        "line": 4,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/yjid/kensaku",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/README.md",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/package.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/cli/Cargo.toml",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/Cargo.toml",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/hooks/useTheme.ts",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/common.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/errors.json",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/App.tsx",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/main.tsx",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/cli/src/main.rs",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/main.rs",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/util/memory.rs",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/i18n/index.ts",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/preview.rs",
+      "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/commands.rs",
+      "https://api.github.com/repos/yjid/kensaku/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/package.json"
+      },
+      {
+        "path": "cli/Cargo.toml",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/cli/Cargo.toml"
+      },
+      {
+        "path": "src-tauri/Cargo.toml",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/Cargo.toml"
+      },
+      {
+        "path": "src/hooks/useTheme.ts",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/hooks/useTheme.ts"
+      },
+      {
+        "path": "src/locales/en/help.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/help.json"
+      },
+      {
+        "path": "src/locales/en/home.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/home.json"
+      },
+      {
+        "path": "src/locales/en/setup.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/setup.json"
+      },
+      {
+        "path": "src/locales/en/common.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/common.json"
+      },
+      {
+        "path": "src/locales/en/errors.json",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/locales/en/errors.json"
+      },
+      {
+        "path": "src/App.tsx",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/App.tsx"
+      },
+      {
+        "path": "src/main.tsx",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/main.tsx"
+      },
+      {
+        "path": "cli/src/main.rs",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/cli/src/main.rs"
+      },
+      {
+        "path": "src-tauri/src/main.rs",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/main.rs"
+      },
+      {
+        "path": "src-tauri/src/util/memory.rs",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/util/memory.rs"
+      },
+      {
+        "path": "src/i18n/index.ts",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src/i18n/index.ts"
+      },
+      {
+        "path": "src-tauri/src/preview.rs",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/preview.rs"
+      },
+      {
+        "path": "src-tauri/src/commands.rs",
+        "source": "https://github.com/yjid/kensaku/blob/9585797888e8b7260daf9d1334ea1c8282dee2f3/src-tauri/src/commands.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=30, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Rust) → mcp-server / protocol-mcp",
+    "repository_id": 1432590994,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "yjl9903--animegarden": {
+    "topics": [
+      "agent",
+      "animation",
+      "anime",
+      "anime-tracker",
+      "animegarden",
+      "animelist",
+      "animespace",
+      "anitomy",
+      "bangumi",
+      "claude-code",
+      "codex",
+      "dmhy",
+      "dsh-plugin",
+      "mcp",
+      "openapi",
+      "scraper",
+      "skills",
+      "torrent"
+    ],
+    "homepage": "https://animes.garden",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/yjl9903/AnimeGarden",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 625259410,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "yjacquin--fast-mcp": {
+    "topics": [
+      "ai",
+      "llm",
+      "mcp",
+      "rack",
+      "ruby"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Ruby) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/yjacquin/fast-mcp",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 945879706,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "yjh051108--dsh-router-standard": {
+    "topics": [
+      "ai-agents",
+      "cordis",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin"
+    ],
+    "homepage": "",
+    "archived": true,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/yjh051108/dsh-router-standard",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1334459444,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

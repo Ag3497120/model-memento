@@ -1,0 +1,432 @@
+{
+ "schema": "memento.persona-eval.v1",
+ "basis": "2026-11-16 に立体十字を動かす前に書いた言い換えの質問（期待値は記録の値）。調整には使わない。",
+ "questions": [
+  {
+   "id": "p01",
+   "model_id": "claude-opus-5-5",
+   "q": "君っていつ生まれたの？",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2026-09-22"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p02",
+   "model_id": "claude-opus-5-5",
+   "q": "どれくらい長い文章を読み込める？",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "1000000"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p03",
+   "model_id": "claude-opus-5-5",
+   "q": "作ったのはどこ？",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "Anthropic"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p04",
+   "model_id": "claude-opus-5-5",
+   "q": "君の知識って何年何月まで？",
+   "expected": {
+    "kinds": [
+     "self_cutoff"
+    ],
+    "values": [
+     "2026-06"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p05",
+   "model_id": "claude-opus-5-5",
+   "q": "1回で何トークンまで返せる？",
+   "expected": {
+    "kinds": [
+     "self_output"
+    ],
+    "values": [
+     "128000"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p06",
+   "model_id": "claude-opus-5-5",
+   "q": "前の世代のモデルは？",
+   "expected": {
+    "kinds": [
+     "self_predecessor"
+    ],
+    "values": [
+     "Claude Opus 4.6"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p07",
+   "model_id": "claude-opus-5-5",
+   "q": "gpt-4-0314はいつ出たの？",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "2023-03-14"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p08",
+   "model_id": "claude-opus-5-5",
+   "q": "Gemini 1.0 Proの文脈長は？",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "32768"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p09",
+   "model_id": "claude-opus-5-5",
+   "q": "GPT-4-0314ってまだ使える？",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "2026-03-26"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p10",
+   "model_id": "gpt-4-0314",
+   "q": "あなたはもう使えないの？",
+   "expected": {
+    "kinds": [
+     "self_status"
+    ],
+    "values": [
+     "2026-03-26"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p11",
+   "model_id": "gpt-4-0314",
+   "q": "あなたの次のモデルは？",
+   "expected": {
+    "kinds": [
+     "self_successor"
+    ],
+    "values": [
+     "gpt-5"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p12",
+   "model_id": "gemini-1.0-pro",
+   "q": "知識の締め切りはいつ？",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p13",
+   "model_id": "gemini-1.0-pro",
+   "q": "何ヶ国語に対応してる？",
+   "expected": {
+    "kinds": [
+     "self_languages"
+    ],
+    "values": [
+     "38"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p14",
+   "model_id": "gemini-1.0-pro",
+   "q": "どこの会社のモデル？",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "Google"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p15",
+   "model_id": "gemini-1.0-pro",
+   "q": "君の後継は？",
+   "expected": {
+    "kinds": [
+     "self_successor"
+    ],
+    "values": [
+     "gemini-2.5-flash"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p16",
+   "model_id": "deepseek-r1",
+   "q": "いつ公開された？",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p17",
+   "model_id": "deepseek-r1",
+   "q": "あなたの料金は？",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p18",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "読める量の上限は？",
+   "expected": {
+    "kinds": [
+     "self_context"
+    ],
+    "values": [
+     "4096"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p19",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "When did you come out?",
+   "expected": {
+    "kinds": [
+     "self_release"
+    ],
+    "values": [
+     "2023-03-01"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p20",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "Who built you?",
+   "expected": {
+    "kinds": [
+     "self_maker"
+    ],
+    "values": [
+     "OpenAI"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p21",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "あなたの好きな色は？",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p22",
+   "model_id": "claude-opus-5-5",
+   "q": "最新のニュースを教えて",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p23",
+   "model_id": "gpt-4-0314",
+   "q": "あなたの系統は？",
+   "expected": {
+    "kinds": [
+     "self_family"
+    ],
+    "values": [
+     "GPT-4"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p24",
+   "model_id": "claude-opus-5-5",
+   "q": "あなたの値段",
+   "expected": {
+    "kinds": [
+     "self_price"
+    ],
+    "values": [
+     "4",
+     "20"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p25",
+   "model_id": "gemini-1.0-pro",
+   "q": "Gemini 1.0 Proはいつ引退した？",
+   "expected": {
+    "kinds": [
+     "self_status",
+     "model_lookup"
+    ],
+    "values": [
+     "2025-04-21"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p26",
+   "model_id": "claude-opus-5-5",
+   "q": "画像を入力できる？",
+   "expected": {
+    "kinds": [
+     "unknown"
+    ],
+    "values": [],
+    "unknown": true,
+    "sourcesRequired": false
+   }
+  },
+  {
+   "id": "p27",
+   "model_id": "gpt-3.5-turbo-0301",
+   "q": "gpt-4-0314の知識はいつまで？",
+   "expected": {
+    "kinds": [
+     "model_lookup"
+    ],
+    "values": [
+     "2021-09"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p28",
+   "model_id": "claude-opus-5-5",
+   "q": "Claude Opus 5.5とは？",
+   "expected": {
+    "kinds": [
+     "identity",
+     "model_lookup"
+    ],
+    "values": [
+     "Claude Opus 5.5"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  },
+  {
+   "id": "p29",
+   "model_id": "gpt-4-0314",
+   "q": "1度に出力できる最大は？",
+   "expected": {
+    "kinds": [
+     "self_output"
+    ],
+    "values": [
+     "8192"
+    ],
+    "unknown": false,
+    "sourcesRequired": true
+   }
+  }
+ ]
+}

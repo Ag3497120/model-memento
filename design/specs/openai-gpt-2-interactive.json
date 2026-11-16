@@ -1,0 +1,381 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openai-gpt-2-interactive",
+  "name": "GPT-2 interactive",
+  "vendor": "OpenAI",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "openai-gpt-2-2019-02",
+      "from": "2019-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "出力と入力",
+          "position": "端末の通常の本文領域",
+          "size": null,
+          "contents": [
+            "読み込み後の入力待ち、生成例の番号付き見出し、生成された続き、次の入力待ちが縦に並ぶ。固定の操作欄はスクリプトにない。現行の公開ソースによる確認で、各公開日の固定版との照合は未完了。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "文章を入力",
+          "where": "本文の末尾",
+          "purpose": "空でない文章を入力しEnterで生成を始める。空入力では注意文を出して入力待ちへ戻る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+        }
+      ],
+      "conversation": {
+        "user": "入力待ちの行に文章を入力する。会話用の吹き出しは作らない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "assistant": "入力文に続く部分だけを、番号付き見出しの下へ出す。見出しの左右はそれぞれ40個の等号、全例の後は80個の等号。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "tool_calls": "外部の道具を呼ぶ画面はない。生成結果を端末へ出す処理である。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "streaming": "生成処理の結果を受け取ってから例ごとに本文を出す。文字が逐次増えるチャット表示ではない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Pythonの標準入力による1行の入力待ち。枠付きの入力部品はない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "empty_state": "モデルの読み込み後に Model prompt >>> の入力待ちになる。端末の色・書体・読み込みログは実行環境に依存するため固定しない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+      "distinctive": [
+        "対話アプリの専用画面ではなく、端末内で文章の続きを作る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "生成例を等号の線と番号付き見出しで区切る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "小型モデルを公開。小型・中型の初期の数え方は後に訂正された。 （https://openai.com/index/better-language-models/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "他社のTalk to Transformerの画面や名称を公式端末スクリプトへ混ぜること",
+        "論文や公式ブログの挿絵・長い生成例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "regions、controls、conversation、shape、empty_stateの根拠。masterの現行コード。過去の固定コミットではなく、2019年各月に同一だったという証拠にはしない。"
+        },
+        {
+          "url": "https://openai.com/index/better-language-models/",
+          "kind": "blog",
+          "date": "2019-02-14",
+          "shows": "公開段階の根拠。ログイン不要の研究発表ページであり、端末画面の実写資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/README.md",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "117M/345Mが後に124M/355Mへ訂正されたことと、公式の研究用リポジトリであること。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openai-gpt-2-2019-05",
+      "from": "2019-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "出力と入力",
+          "position": "端末の通常の本文領域",
+          "size": null,
+          "contents": [
+            "読み込み後の入力待ち、生成例の番号付き見出し、生成された続き、次の入力待ちが縦に並ぶ。固定の操作欄はスクリプトにない。現行の公開ソースによる確認で、各公開日の固定版との照合は未完了。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "文章を入力",
+          "where": "本文の末尾",
+          "purpose": "空でない文章を入力しEnterで生成を始める。空入力では注意文を出して入力待ちへ戻る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+        }
+      ],
+      "conversation": {
+        "user": "入力待ちの行に文章を入力する。会話用の吹き出しは作らない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "assistant": "入力文に続く部分だけを、番号付き見出しの下へ出す。見出しの左右はそれぞれ40個の等号、全例の後は80個の等号。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "tool_calls": "外部の道具を呼ぶ画面はない。生成結果を端末へ出す処理である。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "streaming": "生成処理の結果を受け取ってから例ごとに本文を出す。文字が逐次増えるチャット表示ではない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Pythonの標準入力による1行の入力待ち。枠付きの入力部品はない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "empty_state": "モデルの読み込み後に Model prompt >>> の入力待ちになる。端末の色・書体・読み込みログは実行環境に依存するため固定しない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+      "distinctive": [
+        "対話アプリの専用画面ではなく、端末内で文章の続きを作る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "生成例を等号の線と番号付き見出しで区切る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "公式の8月の振り返り本文は中型モデルの公開を5月と記す。ただし同じ記事の年表は4月と記し、月の食い違いがある。 （https://openai.com/index/gpt-2-6-month-follow-up/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "他社のTalk to Transformerの画面や名称を公式端末スクリプトへ混ぜること",
+        "論文や公式ブログの挿絵・長い生成例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "regions、controls、conversation、shape、empty_stateの根拠。masterの現行コード。過去の固定コミットではなく、2019年各月に同一だったという証拠にはしない。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-2-6-month-follow-up/",
+          "kind": "blog",
+          "date": "2019-08-20",
+          "shows": "公開段階の根拠。ログイン不要の研究発表ページであり、端末画面の実写資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/README.md",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "117M/345Mが後に124M/355Mへ訂正されたことと、公式の研究用リポジトリであること。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openai-gpt-2-2019-08",
+      "from": "2019-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "出力と入力",
+          "position": "端末の通常の本文領域",
+          "size": null,
+          "contents": [
+            "読み込み後の入力待ち、生成例の番号付き見出し、生成された続き、次の入力待ちが縦に並ぶ。固定の操作欄はスクリプトにない。現行の公開ソースによる確認で、各公開日の固定版との照合は未完了。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "文章を入力",
+          "where": "本文の末尾",
+          "purpose": "空でない文章を入力しEnterで生成を始める。空入力では注意文を出して入力待ちへ戻る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+        }
+      ],
+      "conversation": {
+        "user": "入力待ちの行に文章を入力する。会話用の吹き出しは作らない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "assistant": "入力文に続く部分だけを、番号付き見出しの下へ出す。見出しの左右はそれぞれ40個の等号、全例の後は80個の等号。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "tool_calls": "外部の道具を呼ぶ画面はない。生成結果を端末へ出す処理である。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "streaming": "生成処理の結果を受け取ってから例ごとに本文を出す。文字が逐次増えるチャット表示ではない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Pythonの標準入力による1行の入力待ち。枠付きの入力部品はない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "empty_state": "モデルの読み込み後に Model prompt >>> の入力待ちになる。端末の色・書体・読み込みログは実行環境に依存するため固定しない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+      "distinctive": [
+        "対話アプリの専用画面ではなく、端末内で文章の続きを作る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "生成例を等号の線と番号付き見出しで区切る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "774Mモデルを公開。モデルの追加と画面の変更は同じ意味ではない。 （https://openai.com/index/gpt-2-6-month-follow-up/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "他社のTalk to Transformerの画面や名称を公式端末スクリプトへ混ぜること",
+        "論文や公式ブログの挿絵・長い生成例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "regions、controls、conversation、shape、empty_stateの根拠。masterの現行コード。過去の固定コミットではなく、2019年各月に同一だったという証拠にはしない。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-2-6-month-follow-up/",
+          "kind": "blog",
+          "date": "2019-08-20",
+          "shows": "公開段階の根拠。ログイン不要の研究発表ページであり、端末画面の実写資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/README.md",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "117M/345Mが後に124M/355Mへ訂正されたことと、公式の研究用リポジトリであること。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "openai-gpt-2-2019-11",
+      "from": "2019-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "出力と入力",
+          "position": "端末の通常の本文領域",
+          "size": null,
+          "contents": [
+            "読み込み後の入力待ち、生成例の番号付き見出し、生成された続き、次の入力待ちが縦に並ぶ。固定の操作欄はスクリプトにない。現行の公開ソースによる確認で、各公開日の固定版との照合は未完了。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "文章を入力",
+          "where": "本文の末尾",
+          "purpose": "空でない文章を入力しEnterで生成を始める。空入力では注意文を出して入力待ちへ戻る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+        }
+      ],
+      "conversation": {
+        "user": "入力待ちの行に文章を入力する。会話用の吹き出しは作らない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "assistant": "入力文に続く部分だけを、番号付き見出しの下へ出す。見出しの左右はそれぞれ40個の等号、全例の後は80個の等号。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "tool_calls": "外部の道具を呼ぶ画面はない。生成結果を端末へ出す処理である。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "streaming": "生成処理の結果を受け取ってから例ごとに本文を出す。文字が逐次増えるチャット表示ではない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "Pythonの標準入力による1行の入力待ち。枠付きの入力部品はない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+      },
+      "empty_state": "モデルの読み込み後に Model prompt >>> の入力待ちになる。端末の色・書体・読み込みログは実行環境に依存するため固定しない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+      "distinctive": [
+        "対話アプリの専用画面ではなく、端末内で文章の続きを作る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "生成例を等号の線と番号付き見出しで区切る。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+        "1.5Bモデルを公開。別会社のWebサービスへ変わったという発表ではない。 （https://openai.com/index/gpt-2-1-5b-release/）"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴ・アプリのアイコン・ブランド風の文字組み",
+        "他社のTalk to Transformerの画面や名称を公式端末スクリプトへ混ぜること",
+        "論文や公式ブログの挿絵・長い生成例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "regions、controls、conversation、shape、empty_stateの根拠。masterの現行コード。過去の固定コミットではなく、2019年各月に同一だったという証拠にはしない。"
+        },
+        {
+          "url": "https://openai.com/index/gpt-2-1-5b-release/",
+          "kind": "blog",
+          "date": "2019-11-05",
+          "shows": "公開段階の根拠。ログイン不要の研究発表ページであり、端末画面の実写資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/gpt-2/master/README.md",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "117M/345Mが後に124M/355Mへ訂正されたことと、公式の研究用リポジトリであること。"
+        }
+      ],
+      "confidence": 0.78
+    }
+  ],
+  "corrections": [
+    "web/js/tools/gpt2.jsのSettings・モデル選択・生成ボタン・情報カード・スライダー・常設の状態表示・/helpは公式スクリプトにはない。再現用の追加機能なら、そのことを明記する。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+    "2019-11の見出しにあるTalk to Transformerは別のWeb画面との混同。公式記事もAdam Kingのサービスとして紹介している。 （https://openai.com/index/gpt-2-6-month-follow-up/）",
+    "Top-K=40、Temperature=0.7を当時の固定の初期値として描かない。現在のソースの既定値はtop_k=0、temperature=1。過去各月の既定値はunverified。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+    "生成長の既定値は現行ソースではモデルの文脈長の半分。単に1024文字/トークンの固定生成長として描く根拠はない。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）",
+    "2019-05-03という日付は今回の資料で確定できない。公式8月記事の本文は5月、年表は4月。fromの2019-05は既存IDとの対応用に残した月で、日付を追認しない。 （https://openai.com/index/gpt-2-6-month-follow-up/）",
+    "旧調査の端末構造の説明は現行ソースと整合するが、masterを2019-02当日の固定版と同一視しない。固定コミットの確認は未完了。 （https://raw.githubusercontent.com/openai/gpt-2/master/src/interactive_conditional_samples.py）"
+  ]
+}

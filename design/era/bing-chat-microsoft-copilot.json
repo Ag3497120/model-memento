@@ -1,0 +1,1116 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "bing-chat-microsoft-copilot",
+  "versions": [
+    {
+      "id": "bing-chat-microsoft-copilot-2023-02",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/",
+            "date": "2023-02-07",
+            "kind": "official",
+            "shows": "BingとEdgeの限定プレビュー、待機リスト、出典付き返答とChat/Compose。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "公開資料に利用者が基盤モデルを指定する操作は示されていない。",
+        "notes_en": "Public sources leave direct user selection of the underlying model undocumented."
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "1会話5往復、1日50往復",
+          "when": "2023-02-17..2023-02-17",
+          "where": "5往復後に新しい話題を求める表示。",
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/2/The-new-Bing-Edge-Updates-to-Chat/",
+              "date": "2023-02-17",
+              "kind": "official",
+              "shows": "1会話5往復・1日50往復。上限後は新しい話題を求め、入力欄の左の掃除用ボタンで再開。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "5 turns per chat, 50 per day",
+          "where_en": "Prompt to start a new topic after five turns."
+        },
+        {
+          "kind": "waitlist",
+          "text": "利用開始は待機リストから",
+          "when": "2023-02-17..2023-02-17",
+          "where": "利用開始前の申し込み。",
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/",
+              "date": "2023-02-07",
+              "kind": "official",
+              "shows": "BingとEdgeの限定プレビュー、待機リスト、出典付き返答とChat/Compose。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Join through the waitlist",
+          "where_en": "Application before gaining access."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-02-17",
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/",
+            "date": "2023-02-07",
+            "kind": "official",
+            "shows": "BingとEdgeの限定プレビュー、待機リスト、出典付き返答とChat/Compose。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "返答に出典を付け、検索から会話へ移る形となる。 （https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/）",
+      "trend_en": "Replies include sources as search develops into conversation. (https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-03",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+            "date": "2023-03-03",
+            "kind": "official",
+            "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "基盤モデル名の選択欄は資料にない。会話の調子を選ぶ操作をrelated_controlsに収録。",
+        "notes_en": "Sources leave underlying-model selection undocumented. Tone selection is recorded under related_controls."
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "1会話6往復",
+          "when": "2023-03-03..2023-03-03",
+          "where": "返答の下に回数と信号色で残りを表示。",
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "6 turns per chat",
+          "where_en": "Count and traffic-light colors below replies show remaining turns."
+        },
+        {
+          "kind": "other",
+          "text": "調子に合わせて紫・青・緑",
+          "when": "2023-03-03..2023-03-03",
+          "where": "会話の調子を選んだ時の画面の色。",
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Purple, blue or green to match the tone",
+          "where_en": "Screen color when a conversation tone is selected."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-03-03",
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+            "date": "2023-03-03",
+            "kind": "official",
+            "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "会話の調子を選ぶ操作と残り回数の表示が加わる。 （https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/）",
+      "related_controls": [
+        {
+          "kind": "conversation-style",
+          "where": "会話の開始画面。入力欄との正確な距離は unverified。",
+          "label": "unverified",
+          "options": [
+            "More Creative",
+            "More Balanced",
+            "More Precise"
+          ],
+          "default": null,
+          "steps": [
+            "新しい会話で好みの調子を選ぶ。"
+          ],
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            },
+            {
+              "url": "https://www.windowscentral.com/software-apps/bing-chat-can-now-switch-between-tones-at-the-switch-of-a-toggle",
+              "date": "2023-03-02",
+              "kind": "press",
+              "shows": "More Creative・More Balanced・More Preciseの短いラベル。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Chat start screen. Exact distance from the input is unverified.",
+          "steps_en": [
+            "Choose a preferred tone in a new chat."
+          ]
+        }
+      ],
+      "trend_en": "Conversation tone selection and remaining-turn counts are added. (https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-05",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2023/05/04/announcing-the-next-wave-of-ai-innovation-with-microsoft-bing-and-edge/",
+            "date": "2023-05-04",
+            "kind": "official",
+            "shows": "公開プレビューへ移行し待機リストを撤廃。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          },
+          {
+            "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+            "date": "2023-03-03",
+            "kind": "official",
+            "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "基盤モデル名の選択欄は資料にない。当日の調子の切替位置は unverified。",
+        "notes_en": "Sources leave underlying-model selection undocumented. That day's tone-switch location is unverified."
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "待機リストを撤廃",
+          "when": "2023-05-19..2023-05-19",
+          "where": "Microsoftアカウントで利用を開始する案内。",
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2023/05/04/announcing-the-next-wave-of-ai-innovation-with-microsoft-bing-and-edge/",
+              "date": "2023-05-04",
+              "kind": "official",
+              "shows": "公開プレビューへ移行し待機リストを撤廃。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Waitlist removed",
+          "where_en": "Guidance to start using a Microsoft account."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-05-19",
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/",
+            "date": "2023-05-19",
+            "kind": "official",
+            "shows": "右側の会話履歴と書き出し。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "会話履歴を右側に置き、返答を書き出せる形となる。 （https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/）",
+      "related_controls": [
+        {
+          "kind": "conversation-style",
+          "where": "会話の開始画面。入力欄との正確な距離は unverified。",
+          "label": "unverified",
+          "options": [
+            "More Creative",
+            "More Balanced",
+            "More Precise"
+          ],
+          "default": null,
+          "steps": [
+            "新しい会話で好みの調子を選ぶ。"
+          ],
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            },
+            {
+              "url": "https://www.windowscentral.com/software-apps/bing-chat-can-now-switch-between-tones-at-the-switch-of-a-toggle",
+              "date": "2023-03-02",
+              "kind": "press",
+              "shows": "More Creative・More Balanced・More Preciseの短いラベル。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Chat start screen. Exact distance from the input is unverified.",
+          "steps_en": [
+            "Choose a preferred tone in a new chat."
+          ]
+        }
+      ],
+      "trend_en": "Chat history appears on the right, with reply export. (https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-07",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/",
+            "date": "2023-07-18",
+            "kind": "official",
+            "shows": "Webと携帯で画像による質問を段階公開。企業向けの公開ベータも別に案内。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          },
+          {
+            "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+            "date": "2023-03-03",
+            "kind": "official",
+            "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "基盤モデル名の選択欄は資料にない。当日の調子の切替位置は unverified。",
+        "notes_en": "Sources leave underlying-model selection undocumented. That day's tone-switch location is unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "画像を添えて質問",
+          "when": "2023-07-18..2023-07-18",
+          "where": "Webと携帯の会話への画像追加。段階公開。",
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/",
+              "date": "2023-07-18",
+              "kind": "official",
+              "shows": "Webと携帯で画像による質問を段階公開。企業向けの公開ベータも別に案内。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Ask with an attached image",
+          "where_en": "Image attachment in web and mobile chat, rolling out gradually."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-07-18",
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/",
+            "date": "2023-07-18",
+            "kind": "official",
+            "shows": "Webと携帯で画像による質問を段階公開。企業向けの公開ベータも別に案内。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "文章に加え画像を使って質問する操作が加わる。 （https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/）",
+      "related_controls": [
+        {
+          "kind": "conversation-style",
+          "where": "会話の開始画面。入力欄との正確な距離は unverified。",
+          "label": "unverified",
+          "options": [
+            "More Creative",
+            "More Balanced",
+            "More Precise"
+          ],
+          "default": null,
+          "steps": [
+            "新しい会話で好みの調子を選ぶ。"
+          ],
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            },
+            {
+              "url": "https://www.windowscentral.com/software-apps/bing-chat-can-now-switch-between-tones-at-the-switch-of-a-toggle",
+              "date": "2023-03-02",
+              "kind": "press",
+              "shows": "More Creative・More Balanced・More Preciseの短いラベル。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Chat start screen. Exact distance from the input is unverified.",
+          "steps_en": [
+            "Choose a preferred tone in a new chat."
+          ]
+        }
+      ],
+      "trend_en": "Questions can include images as well as text. (https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-11",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/",
+            "date": "2023-11-15",
+            "kind": "official",
+            "shows": "Copilotへの名称変更と専用のWeb会話。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          },
+          {
+            "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+            "date": "2023-03-03",
+            "kind": "official",
+            "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "専用のCopilot会話へ移行。当日のモデル選択と調子の切替位置は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Moved to dedicated Copilot chat. That day's model and tone switch locations are unverified."
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "Bing ChatからCopilotへ",
+          "when": "2023-11-15..2023-11-15",
+          "where": "製品名と専用Webサイトの案内。常設バナーの位置は unverified。",
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/",
+              "date": "2023-11-15",
+              "kind": "official",
+              "shows": "Copilotへの名称変更と専用のWeb会話。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Bing Chat becomes Copilot",
+          "where_en": "Product name and dedicated website announcement. Persistent banner placement is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-11-15",
+        "sources": [
+          {
+            "url": "https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/",
+            "date": "2023-11-15",
+            "kind": "official",
+            "shows": "Copilotへの名称変更と専用のWeb会話。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "検索と会話を併せた入口に専用の会話サイトが加わる。 （https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/）",
+      "related_controls": [
+        {
+          "kind": "conversation-style",
+          "where": "会話の開始画面。入力欄との正確な距離は unverified。",
+          "label": "unverified",
+          "options": [
+            "More Creative",
+            "More Balanced",
+            "More Precise"
+          ],
+          "default": null,
+          "steps": [
+            "新しい会話で好みの調子を選ぶ。"
+          ],
+          "sources": [
+            {
+              "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+              "date": "2023-03-03",
+              "kind": "official",
+              "shows": "会話の調子で紫・青・緑へ変化。1会話6往復と返答下の回数表示。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            },
+            {
+              "url": "https://www.windowscentral.com/software-apps/bing-chat-can-now-switch-between-tones-at-the-switch-of-a-toggle",
+              "date": "2023-03-02",
+              "kind": "press",
+              "shows": "More Creative・More Balanced・More Preciseの短いラベル。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Chat start screen. Exact distance from the input is unverified.",
+          "steps_en": [
+            "Choose a preferred tone in a new chat."
+          ]
+        }
+      ],
+      "trend_en": "A dedicated chat site joins the combined search and conversation entry point. (https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-02",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/",
+            "date": "2024-02-07",
+            "kind": "official",
+            "shows": "開始画面の提案を横に並べる表示。画像生成は通常1日15、Proは100の優先枠。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "モデル名の選択欄とGPT-4 Turboの切替条件は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "unverified (a model-name selector and the conditions for switching GPT-4 Turbo)."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "画像生成の優先枠は1日15回",
+          "when": "2024-02-07..2024-02-07",
+          "where": "画像生成の優先処理枠。有料のProでは100回。表示場所は unverified。",
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/",
+              "date": "2024-02-07",
+              "kind": "official",
+              "shows": "開始画面の提案を横に並べる表示。画像生成は通常1日15、Proは100の優先枠。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "15 priority image generations per day",
+          "where_en": "Priority image generation allowance, with 100 for paid Pro. Display location is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-02-07",
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/",
+            "date": "2024-02-07",
+            "kind": "official",
+            "shows": "開始画面の提案を横に並べる表示。画像生成は通常1日15、Proは100の優先枠。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "開始画面で提案を横に並べ、選んで質問を始める形となる。 （https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/）",
+      "trend_en": "Suggestions sit side by side on the start screen to begin a question. (https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-03",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside",
+            "date": "2024-02-23",
+            "kind": "press",
+            "shows": "Notebookは左の入力・右の返答で最大18,000文字を扱う。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "Notebookの切替は作業画面の変更。モデル選択欄の位置と候補は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Notebook switches workspaces. Model selector placement and options are unverified."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "Notebookは18,000文字まで",
+          "when": "2024-03-01..2024-03-01",
+          "where": "左の長い入力欄。実際の残り文字数表示の原文は unverified。",
+          "sources": [
+            {
+              "url": "https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside",
+              "date": "2024-02-23",
+              "kind": "press",
+              "shows": "Notebookは左の入力・右の返答で最大18,000文字を扱う。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "Up to 18,000 characters in Notebook",
+          "where_en": "Long input area on the left. Exact remaining-character wording is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-03-01",
+        "sources": [
+          {
+            "url": "https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside",
+            "date": "2024-02-23",
+            "kind": "press",
+            "shows": "Notebookは左の入力・右の返答で最大18,000文字を扱う。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "長い入力を左、返答を右に並べて直す形となる。 （https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside）",
+      "trend_en": "Long input appears on the left and replies on the right for editing. (https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-10",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+            "date": "2024-10-01",
+            "kind": "official",
+            "shows": "新しい開始画面、Voice、Daily、試験中のLabs。Think Deeperは一部のPro向け。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "Think Deeperは考えるモード。当日の基盤モデルの選択欄の有無は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Think Deeper is a reasoning mode. An underlying-model selector that day is unverified."
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "Copilot Labs",
+          "when": "2024-10-01..2024-10-01",
+          "where": "一部のPro向け試験機能の入口。",
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+              "date": "2024-10-01",
+              "kind": "official",
+              "shows": "新しい開始画面、Voice、Daily、試験中のLabs。Think Deeperは一部のPro向け。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Entry point for experimental features available to some Pro users."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-10-01",
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+            "date": "2024-10-01",
+            "kind": "official",
+            "shows": "新しい開始画面、Voice、Daily、試験中のLabs。Think Deeperは一部のPro向け。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "音声と日々の情報を会話の開始画面に組み込む形となる。 （https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/）",
+      "related_controls": [
+        {
+          "kind": "reasoning-mode",
+          "where": "Copilot Labs。会話内の正確な座標は unverified。",
+          "label": "Think Deeper",
+          "options": [
+            "Think Deeper"
+          ],
+          "default": null,
+          "steps": [
+            "対象のProアカウントで試験機能を開く。",
+            "Think Deeperを選んで質問する。"
+          ],
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+              "date": "2024-10-01",
+              "kind": "official",
+              "shows": "新しい開始画面、Voice、Daily、試験中のLabs。Think Deeperは一部のPro向け。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Copilot Labs. Exact position within chat is unverified.",
+          "steps_en": [
+            "Open experimental features with an eligible Pro account.",
+            "Choose Think Deeper and ask a question."
+          ]
+        }
+      ],
+      "trend_en": "Voice and daily information become part of the chat start screen. (https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2025-03-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+            "date": "2025-02-27",
+            "kind": "press",
+            "shows": "Mac向けアプリ、macOS 14以降、Option + Space、Think Deeperと音声。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "Mac版でThink Deeperを利用できる。モデル名の直接選択とモードの正確な場所は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Think Deeper is available on Mac. Direct model-name selection and exact mode placement are unverified."
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Option + Space",
+          "when": "2025-03-01..2025-03-01",
+          "where": "Mac版を背後で起動した状態から質問を呼び出す。",
+          "sources": [
+            {
+              "url": "https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+              "date": "2025-02-27",
+              "kind": "press",
+              "shows": "Mac向けアプリ、macOS 14以降、Option + Space、Think Deeperと音声。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Open a question while the Mac app runs in the background."
+        }
+      ],
+      "desktop": {
+        "os": "macOS 14",
+        "app_shell": "Copilotのアプリウィンドウ",
+        "date_shown": "2025-03-01",
+        "sources": [
+          {
+            "url": "https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+            "date": "2025-02-27",
+            "kind": "press",
+            "shows": "Mac向けアプリ、macOS 14以降、Option + Space、Think Deeperと音声。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "文献にある最低対応OSを代表画面に選択。実装方式は unverified。",
+        "app_shell_en": "Copilot app window",
+        "notes_en": "The minimum supported OS in the sources is used for the representative screen. Implementation is unverified."
+      },
+      "trend": "別の作業中から短い質問を呼び出す形が加わる。 （https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac）",
+      "related_controls": [
+        {
+          "kind": "reasoning-mode",
+          "where": "アプリの会話画面。正確な座標は unverified。",
+          "label": "Think Deeper",
+          "options": [
+            "Think Deeper"
+          ],
+          "default": null,
+          "steps": [
+            "Think Deeperを有効にして質問を送る。"
+          ],
+          "sources": [
+            {
+              "url": "https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+              "date": "2025-02-27",
+              "kind": "press",
+              "shows": "Mac向けアプリ、macOS 14以降、Option + Space、Think Deeperと音声。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "App chat screen. Exact position is unverified.",
+          "steps_en": [
+            "Enable Think Deeper and send a question."
+          ]
+        }
+      ],
+      "trend_en": "A small question interface can be opened while working elsewhere. (https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2025-04",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/",
+            "date": "2025-04-04",
+            "kind": "official",
+            "shows": "Pagesの編集面、音声解説、記憶と調査などを案内。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "機能の拡張は確認。当日のモデル選択とThink Deeperの正確な場所は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Feature expansion is confirmed. That day's model selector and exact Think Deeper location are unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Pages",
+          "when": "2025-04-04..2025-04-04",
+          "where": "会話から文章を整理・編集する作業面。",
+          "sources": [
+            {
+              "url": "https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/",
+              "date": "2025-04-04",
+              "kind": "official",
+              "shows": "Pagesの編集面、音声解説、記憶と調査などを案内。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Workspace for organizing and editing text from a chat."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-04-04",
+        "sources": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/",
+            "date": "2025-04-04",
+            "kind": "official",
+            "shows": "Pagesの編集面、音声解説、記憶と調査などを案内。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "会話で集めた内容を編集用の作業面へまとめる形となる。 （https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/）",
+      "trend_en": "Material gathered in chat can be organized in an editing workspace. (https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2026-03",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1",
+            "date": "2025-08-07",
+            "kind": "official",
+            "shows": "入力欄でSmart Modeを選ぶとGPT-5を使用。",
+            "accessed_on": "2026-11-15",
+            "date_type": "release-entry"
+          },
+          {
+            "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/conversation-modes-in-microsoft-copilot",
+            "date": null,
+            "kind": "official",
+            "shows": "2026-11-15閲覧。入力欄の下のQuick responseから複数の会話モードを選ぶ。3月当日の一覧は unverified。",
+            "accessed_on": "2026-11-15",
+            "date_type": "undated"
+          }
+        ],
+        "notes": "Smartの導入は2025年8月7日。2026年3月当日の全候補と正確なラベルは unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Smart was introduced August 7, 2025. The complete options and exact labels on the March 2026 date are unverified."
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Smart",
+          "when": "2026-03-01..2026-03-01",
+          "where": "入力欄のモード選択。導入後の継続として収録。当月の画面記録は unverified。",
+          "sources": [
+            {
+              "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1",
+              "date": "2025-08-07",
+              "kind": "official",
+              "shows": "入力欄でSmart Modeを選ぶとGPT-5を使用。",
+              "accessed_on": "2026-11-15",
+              "date_type": "release-entry"
+            }
+          ],
+          "where_en": "Mode selector in the input, recorded as continuing after introduction. Screen records for that month are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-03-01",
+        "sources": [
+          {
+            "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1",
+            "date": "2025-08-07",
+            "kind": "official",
+            "shows": "入力欄でSmart Modeを選ぶとGPT-5を使用。",
+            "accessed_on": "2026-11-15",
+            "date_type": "release-entry"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "入力欄で返答の速さや考え方を選ぶ形となる。 （https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1）",
+      "related_controls": [
+        {
+          "kind": "conversation-mode",
+          "where": "入力欄。3月当日の座標は unverified。",
+          "label": "unverified",
+          "options": [],
+          "default": null,
+          "steps": [
+            "unverified（3月当日のモード選択）"
+          ],
+          "sources": [
+            {
+              "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1",
+              "date": "2025-08-07",
+              "kind": "official",
+              "shows": "入力欄でSmart Modeを選ぶとGPT-5を使用。",
+              "accessed_on": "2026-11-15",
+              "date_type": "release-entry"
+            },
+            {
+              "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/conversation-modes-in-microsoft-copilot",
+              "date": null,
+              "kind": "official",
+              "shows": "2026-11-15閲覧。入力欄の下のQuick responseから複数の会話モードを選ぶ。3月当日の一覧は unverified。",
+              "accessed_on": "2026-11-15",
+              "date_type": "undated"
+            }
+          ],
+          "where_en": "Input area. Exact position on that March date is unverified.",
+          "steps_en": [
+            "unverified (mode selection on that March date)."
+          ]
+        }
+      ],
+      "trend_en": "The input offers choices for response speed and reasoning. (https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/08/07/release-notes-august-7-2025/?msockid=3a9cb2b069a26f4000daa4fe68bb6eb1)"
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2026-11",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified（基盤モデルを直接選ぶ操作）"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528",
+            "date": "2026-10-30",
+            "kind": "official",
+            "shows": "企業向けCopilotのHome、Chat/Cowork、Agents & Plugins。11月の全世界公開は段階展開。11月13日更新。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "仕様が参照する企業向けCopilotの例。基盤モデルの選択位置と一覧は unverified。",
+        "steps_en": [
+          "unverified (direct selection of the underlying model)."
+        ],
+        "notes_en": "Enterprise Copilot example referenced by the specification. Underlying-model selector placement and list are unverified."
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "新しいHomeを順次公開",
+          "when": "2026-11-15..2026-11-15",
+          "where": "企業向けCopilotのHomeと共通の左メニュー。全世界へ11月に段階公開。",
+          "sources": [
+            {
+              "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528",
+              "date": "2026-10-30",
+              "kind": "official",
+              "shows": "企業向けCopilotのHome、Chat/Cowork、Agents & Plugins。11月の全世界公開は段階展開。11月13日更新。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "text_en": "New Home rolling out",
+          "where_en": "Home and shared left menu in enterprise Copilot, rolling out worldwide in November."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-15",
+        "sources": [
+          {
+            "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528",
+            "date": "2026-10-30",
+            "kind": "official",
+            "shows": "企業向けCopilotのHome、Chat/Cowork、Agents & Plugins。11月の全世界公開は段階展開。11月13日更新。",
+            "accessed_on": "2026-11-15",
+            "date_type": "published"
+          }
+        ],
+        "notes": "代表画面としてWeb版を選択。",
+        "notes_en": "Web version selected as the representative screen."
+      },
+      "trend": "会話と仕事の依頼を同じ開始画面にまとめる形となる。 （https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528）",
+      "related_controls": [
+        {
+          "kind": "work-mode",
+          "where": "Homeの入力欄。",
+          "label": "Chat",
+          "options": [
+            "Chat",
+            "Cowork"
+          ],
+          "default": null,
+          "steps": [
+            "Homeの入力欄でChatまたはCoworkを選ぶ。"
+          ],
+          "sources": [
+            {
+              "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528",
+              "date": "2026-10-30",
+              "kind": "official",
+              "shows": "企業向けCopilotのHome、Chat/Cowork、Agents & Plugins。11月の全世界公開は段階展開。11月13日更新。",
+              "accessed_on": "2026-11-15",
+              "date_type": "published"
+            }
+          ],
+          "where_en": "Home input area.",
+          "steps_en": [
+            "Choose Chat or Cowork in the Home input."
+          ]
+        }
+      ],
+      "trend_en": "Chat and work requests share a start screen. (https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528)"
+    }
+  ]
+}

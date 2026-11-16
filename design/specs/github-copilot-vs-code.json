@@ -1,0 +1,1305 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "github-copilot-vs-code",
+  "name": "GitHub Copilot (VS Code)",
+  "vendor": "GitHub / Microsoft",
+  "kind": "ide-extension",
+  "versions": [
+    {
+      "id": "github-copilot-vs-code-2021-06",
+      "from": "2021-06",
+      "to": "2023-03",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイル",
+            "入力の続きに出る補完候補"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "コードやコメントを入力する。独立した会話欄ではない。",
+        "assistant": "入力しているコードの続きに、行や関数の候補が出る。",
+        "tool_calls": "この版の公開資料はインライン補完を扱う。会話型の道具実行欄は確認できない。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": null,
+          "text": "#000000",
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1E1E1E",
+          "panel": null,
+          "text": "#D4D4D4",
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/light_vs.json",
+          "light.text": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/light_vs.json",
+          "dark.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/dark_vs.json",
+          "dark.text": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/dark_vs.json"
+        }
+      },
+      "typography": {
+        "ui_named": "macOS: -apple-system / BlinkMacSystemFont; Windows: Segoe WPC / Segoe UI; Linux: system-ui / Ubuntu / Droid Sans",
+        "mono_named": "エディタ既定値: macOSはMenlo / Monaco、WindowsはConsolas、LinuxはDroid Sans Mono。editor.fontFamilyで変更可能。",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "通常のコード編集のカーソル位置"
+      },
+      "empty_state": "通常のエディタで入力を始める。会話を始める提案カードは確認できない。",
+      "distinctive": [
+        "コードの続きに補完候補",
+        "コメントも候補の文脈になる",
+        "独立したチャット中心の画面ではない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+          "kind": "blog",
+          "date": "2021-06-29",
+          "shows": "regions・conversation・empty_state・distinctive: 技術プレビューの入力中補完。記事は2022-02-23にも更新されている。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/src/vs/workbench/browser/media/style.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: 直後のVS Code 1.58.0のOS別画面書体。6月29日当日の配布版CSSと同一とは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/src/vs/editor/common/config/editorOptions.ts",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: 1.58.0のエディタ書体の既定値。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/dark_vs.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.darkのbg/text: Dark+が参照する基本テーマのeditor.background/foreground。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.58.0/extensions/theme-defaults/themes/light_vs.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.lightのbg/text: Light+が参照する基本テーマ。補完文字自体の色は未採録。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "github-copilot-vs-code-2023-03",
+      "from": "2023-03",
+      "to": "2023-07",
+      "regions": [
+        {
+          "name": "通常のVS Code",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "ファイル一覧・検索など。位置は利用者が変えられる"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルのタブと行番号",
+            "コードや変更箇所"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問と回答",
+            "コード例"
+          ]
+        },
+        {
+          "name": "会話入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "会話欄の下の入力"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "コードを選び、会話欄またはコード内で質問する。",
+        "assistant": "会話欄の回答またはコードの近くでの応答。正確な初日ラベル・余白は未確認。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "macOS: -apple-system / BlinkMacSystemFont; Windows: Segoe WPC / Segoe UI; Linux: system-ui / Ubuntu / Droid Sans",
+        "mono_named": "画面内の固定幅表示: macOSはSF Mono / Monaco / Menlo、WindowsはConsolas、LinuxはUbuntu Mono / Liberation Mono / DejaVu Sans Mono。エディタ本文の利用者設定とは別。",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "横の会話入力とコード内の小さい入力を区別"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "コードの補完に加えて会話画面",
+        "コード内の会話と横の会話欄",
+        "Copilot Xは複数のプレビューを含む構想"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/product-news/github-copilot-x-the-ai-powered-developer-experience/",
+          "kind": "blog",
+          "date": "2023-03-22",
+          "shows": "regions・conversation・distinctive: IDE内の会話を含む構想。PR・CLI・Docsも別々の体験として説明。本文は2024-05-21更新なので初日の細部は断定しない。"
+        },
+        {
+          "url": "https://code.visualstudio.com/updates/v1_77",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "regions・conversation: 3月版VS CodeがChat viewとinline chatを別の機能として説明。3月22日初日ではなく月内の照合資料。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.77.0/src/vs/workbench/browser/media/style.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: 3月版のOS別書体と画面内固定幅用の指定。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "github-copilot-vs-code-2023-07",
+      "from": "2023-07",
+      "to": "2024-05",
+      "regions": [
+        {
+          "name": "通常のVS Code",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "ファイル一覧・検索など。位置は利用者が変えられる"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルのタブと行番号",
+            "コードや変更箇所"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問と回答",
+            "コード例"
+          ]
+        },
+        {
+          "name": "会話入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "会話欄の下の入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/search",
+          "where": "会話入力",
+          "purpose": "プロジェクト内を探す。プレビュー設定で有効化"
+        },
+        {
+          "label": "Create Workspace",
+          "where": "生成された構成案の下",
+          "purpose": "新しいプロジェクトを作る"
+        }
+      ],
+      "conversation": {
+        "user": "会話欄の幅を使う段で、名前・24pxの識別用の枠・質問を置く。",
+        "assistant": "同じ列に名前と回答、別枠のコード例。大きい左右の吹き出しを交互に並べる構成ではない。",
+        "tool_calls": null,
+        "streaming": "回答の待機・受信を伝える機能がある。文字の出る速さは未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "macOS: -apple-system / BlinkMacSystemFont; Windows: Segoe WPC / Segoe UI; Linux: system-ui / Ubuntu / Droid Sans",
+        "mono_named": "画面内の固定幅表示: macOSはSF Mono / Monaco / Menlo、WindowsはConsolas、LinuxはUbuntu Mono / Liberation Mono / DejaVu Sans Mono。エディタ本文の利用者設定とは別。",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": "compact",
+        "input_shape": "会話欄の下。枠線付き入力、左右12pxの外側余白、右下に送信等の操作"
+      },
+      "empty_state": "Chat viewで質問を始める。当日の挨拶・提案文は未確認。",
+      "distinctive": [
+        "会話欄とコード内の会話が併存",
+        "質問と回答は縦に並ぶ段",
+        "名前12px・識別用の枠24px",
+        "入力の角丸4px"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/product-news/github-copilot-chat-beta-now-available-for-every-organization/",
+          "kind": "blog",
+          "date": "2023-07-20",
+          "shows": "regions・distinctive: Business向け限定公開ベータ。記事は9月29日にも更新。"
+        },
+        {
+          "url": "https://code.visualstudio.com/updates/v1_80",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "controls・streaming: /searchやCreate Workspace等のプレビュー、Chat view/inline chat、回答待機・受信の通知。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.80.0/src/vs/workbench/contrib/chat/browser/media/chat.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "conversation・shape: 最大幅850px、段の余白16px/20px、名前12px、識別枠24px、入力の角丸4px、右下の操作。色はテーマ変数。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.80.0/src/vs/workbench/browser/media/style.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: OS別書体、固定幅用の指定。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "github-copilot-vs-code-2024-05",
+      "from": "2024-05",
+      "to": "2024-10",
+      "regions": [
+        {
+          "name": "通常のVS Code",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "ファイル一覧・検索など。位置は利用者が変えられる"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルのタブと行番号",
+            "コードや変更箇所"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問と回答",
+            "コード例"
+          ]
+        },
+        {
+          "name": "会話入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "会話欄の下の入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "@で機能を選ぶ",
+          "where": "会話入力",
+          "purpose": "許可された外部サービスに質問する"
+        }
+      ],
+      "conversation": {
+        "user": "通常の質問列に、呼び出す外部機能を含める。",
+        "assistant": "同じ会話に返答やコード例を出す。",
+        "tool_calls": "外部機能を会話から使う。全機能共通の実行カードの形は未確認。",
+        "streaming": "段内の待機表示には点が変化する表現がある。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "会話欄の入力"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話から外部サービスを呼ぶ",
+        "利用できる機能は招待・導入状態に依存",
+        "Workspaceの仕様・計画画面は別の開発環境"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-extensions/",
+          "kind": "blog",
+          "date": "2024-05-21",
+          "shows": "controls・conversation・distinctive: Extensionsの限定プレビュー。VS Codeも対象で、外部サービスを会話から使用。"
+        },
+        {
+          "url": "https://github.blog/news-insights/product-news/github-copilot-workspace/",
+          "kind": "blog",
+          "date": "2024-04-29",
+          "shows": "distinctive: WorkspaceはIssue等から始まる別のタスク中心環境。VS Codeの常設の右ペインという根拠はない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.89.0/src/vs/workbench/contrib/chat/browser/media/chat.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "conversation・shape: 直前の4月版のチャット段、名前、コード表示と点の待機表示。5月21日の拡張サービス独自の表示は確定しない。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "github-copilot-vs-code-2024-10",
+      "from": "2024-10",
+      "to": "2025-02",
+      "regions": [
+        {
+          "name": "通常のファイル一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Explorer等"
+          ]
+        },
+        {
+          "name": "編集と差分",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "提案変更をファイル内で確認"
+          ]
+        },
+        {
+          "name": "会話・Copilot Edits",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "Chatの新しい既定位置は第2サイドバー",
+            "Editsは別の編集セッション"
+          ]
+        },
+        {
+          "name": "対象ファイルと入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "変更対象のファイルを集める",
+            "編集依頼"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Open Copilot Edits",
+          "where": "上部のChatメニュー",
+          "purpose": "編集セッションを開く"
+        },
+        {
+          "label": "モデルを選ぶ",
+          "where": "会話の選択欄",
+          "purpose": "利用可能なモデルを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "会話またはEditsへ依頼を送る。",
+        "assistant": "会話の返答と、ファイル内に適用された変更案を区別する。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#F8F8F8",
+          "text": "#3B3B3B",
+          "muted": "#3B3B3B",
+          "accent": "#005FB8",
+          "border": "#E5E5E5",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1F1F1F",
+          "panel": "#181818",
+          "text": "#CCCCCC",
+          "muted": "#9D9D9D",
+          "accent": "#0078D4",
+          "border": "#2B2B2B",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.panel": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.text": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.muted": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.accent": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.border": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "dark.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.panel": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.text": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.muted": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.accent": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.border": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "会話とは別にEditsの入力と対象ファイル欄がある"
+      },
+      "empty_state": "Editsを開き、対象ファイルを集めて依頼する。正確な歓迎文は未確認。",
+      "distinctive": [
+        "右の会話を開いたまま左のファイル一覧を使える",
+        "複数ファイルの編集セッション",
+        "モデル選択の追加",
+        "変更はエディタ内で確認"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/",
+          "kind": "blog",
+          "date": "2024-10-29",
+          "shows": "controls・distinctive: 複数社のモデル選択。各モデルの展開時期は異なり、全てが10月29日に揃ったわけではない。"
+        },
+        {
+          "url": "https://code.visualstudio.com/updates/v1_95",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "regions・controls・conversation: 月の更新名は10月。Editsプレビュー、対象ファイル、Chatの既定位置が第2サイドバーへ。リリース月名と公開日を混同しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.dark: Default Dark Modernのエディタ背景・文字、sideBar背景/境界、descriptionForeground、button.background。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.95.0/extensions/theme-defaults/themes/light_modern.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.light: Default Light Modernの同じ役割。利用者の別テーマには適用しない。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "github-copilot-vs-code-2025-02",
+      "from": "2025-02",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "Copilot Edits",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "依頼と対象ファイル",
+            "編集・Agentの切替"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "変更案と差分"
+          ]
+        },
+        {
+          "name": "コマンド確認",
+          "position": "in-conversation",
+          "size": null,
+          "contents": [
+            "実行予定の内容と続行操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Agent",
+          "where": "Copilot Editsの切替欄",
+          "purpose": "関連ファイルの探索から修正まで依頼する"
+        },
+        {
+          "label": "Continue",
+          "where": "実行予定のコマンドの下",
+          "purpose": "内容を確認して実行を進める"
+        }
+      ],
+      "conversation": {
+        "user": "Editsに作業を依頼する。",
+        "assistant": "変更と調査を続け、必要なコマンドの実行前には内容を示す。",
+        "tool_calls": "会話中に実行予定のコマンドを示して続行を待つ。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "macOS: -apple-system / BlinkMacSystemFont; Windows: Segoe WPC / Segoe UI; Linux: system-ui / Ubuntu / Droid Sans",
+        "mono_named": "画面内の固定幅表示: macOSはSF Mono / Monaco / Menlo、WindowsはConsolas、LinuxはUbuntu Mono / Liberation Mono / DejaVu Sans Mono。エディタ本文の利用者設定とは別。",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "Copilot Edits内の入力。後の統合された3モード欄とは区別"
+      },
+      "empty_state": "Editsで依頼とモードを選ぶ。Insiders先行の段階提供。",
+      "distinctive": [
+        "EditsからAgentを選ぶ初期版",
+        "実行前のコマンド確認",
+        "通常編集と次の変更を示す補完も併存"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/updates/v1_97",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "regions・controls・conversation: 1.97の実験的Agent。コマンドを表示しContinueを待つ。NESは行番号脇の矢印とTab操作。"
+        },
+        {
+          "url": "https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode",
+          "kind": "blog",
+          "date": "2025-02-24",
+          "shows": "regions・empty_state: InsidersのEdits内モード切替とAdd Filesによる対象の指定。2月6日と同一の日次状態までは確定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.97.0/src/vs/workbench/browser/media/style.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: OS別の画面書体・固定幅用の指定。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "github-copilot-vs-code-2025-04",
+      "from": "2025-04",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "統合された会話",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "会話履歴",
+            "変更したファイル",
+            "実行する道具"
+          ]
+        },
+        {
+          "name": "編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルの変更を確認"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ask",
+          "where": "会話入力の切替",
+          "purpose": "質問する"
+        },
+        {
+          "label": "Edit",
+          "where": "会話入力の切替",
+          "purpose": "範囲を決めて修正を依頼する"
+        },
+        {
+          "label": "Agent",
+          "where": "会話入力の切替",
+          "purpose": "調査や実行を含む作業を依頼する"
+        }
+      ],
+      "conversation": {
+        "user": "1つの会話画面で方式を選んで依頼する。",
+        "assistant": "返答、ファイルの変更、必要な道具の実行を同じ流れに表示。",
+        "tool_calls": "外部の道具をつなぐMCPへの初期対応。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "統合されたChat viewの下にモード選択"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Ask・Edit・Agentを同じ欄で切り替える",
+        "ChatとEditsの統合",
+        "通常版でAgentを順次利用可能",
+        "外部の道具への初期対応"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/updates/v1_99",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "regions・controls・conversation: 3月版名の1.99。統合チャットと3モード、通常版Agent、MCP対応。"
+        },
+        {
+          "url": "https://code.visualstudio.com/blogs/2025/04/07/agentMode",
+          "kind": "blog",
+          "date": "2025-04-07",
+          "shows": "regions・distinctive: 4月の展開状況。統合会話、会話履歴、別窓への移動、対象ファイル欄の簡素化。MCPはこの時期に一般提供済みと断定しない。"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "github-copilot-vs-code-2025-07",
+      "from": "2025-07",
+      "to": "2026-02",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "会話の履歴とコード例",
+            "変更ファイルと道具の実行"
+          ]
+        },
+        {
+          "name": "会話入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "Ask・Edit・Agentや独自の方式を選ぶ",
+            "モデル・道具を選ぶ"
+          ]
+        },
+        {
+          "name": "MCP管理",
+          "position": "separate-view",
+          "size": null,
+          "contents": [
+            "外部の道具を検索・管理する専用表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "方式を選ぶ",
+          "where": "会話入力の下",
+          "purpose": "質問・編集・Agentを切り替える"
+        },
+        {
+          "label": "モデルを選ぶ",
+          "where": "会話入力の下",
+          "purpose": "使用するモデルを変更する"
+        }
+      ],
+      "conversation": {
+        "user": "名前のある質問段。コードやファイルは小さい添付として並べる。",
+        "assistant": "縦の回答列とコード例。名前13px、段の余白12px/16px。",
+        "tool_calls": "Agentの作業経過に実行を表示。MCP一覧は専用の管理表示と区別する。",
+        "streaming": "進行の詳細に点が変化する待機表示。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#FFFFFF",
+          "panel": "#F8F8F8",
+          "text": "#3B3B3B",
+          "muted": "#3B3B3B",
+          "accent": "#005FB8",
+          "border": "#E5E5E5",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1F1F1F",
+          "panel": "#181818",
+          "text": "#CCCCCC",
+          "muted": "#9D9D9D",
+          "accent": "#0078D4",
+          "border": "#2B2B2B",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.panel": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.text": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.muted": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.accent": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "light.border": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "dark.bg": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.panel": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.text": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.muted": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.accent": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "dark.border": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json"
+        }
+      },
+      "typography": {
+        "ui_named": "macOS: -apple-system / BlinkMacSystemFont; Windows: Segoe WPC / Segoe UI; Linux: system-ui / Ubuntu / Droid Sans",
+        "mono_named": "画面内の固定幅表示: macOSはSF Mono / Monaco / Menlo、WindowsはConsolas、LinuxはUbuntu Mono / Liberation Mono / DejaVu Sans Mono。エディタ本文の利用者設定とは別。",
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": 4,
+        "density": "compact",
+        "input_shape": "通常の会話入力は角丸4px。下の操作列に方式とモデル。小型表示では角丸2px"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "統合チャットと下の選択欄",
+        "コード例がエディタのテーマに従う",
+        "MCPは1.102で一般提供",
+        "拡張のソース公開自体は画面内のMITバッジではない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/updates/v1_102",
+          "kind": "release-notes",
+          "date": "2025-07-09",
+          "shows": "regions・controls・distinctive: Ask/Edit/Agentと独自モード、MCP一般提供、専用のMCP表示。"
+        },
+        {
+          "url": "https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone",
+          "kind": "blog",
+          "date": "2025-06-30",
+          "shows": "distinctive: 拡張のソース公開日は6月30日。7月10日を初公開日とはしない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode-copilot-chat/v0.29.0/package.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "版の照合: Chat拡張0.29.0はVS Code 1.102系を対象とする。道具の宣言を確認。図柄やコードの転載はしていない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/src/vs/workbench/contrib/chat/browser/media/chat.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "conversation・shape: 最大幅850px、段の余白12/16px、名前13px、入力の角丸4px/小型2px、添付・モデル欄・進行表示。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/src/vs/workbench/browser/media/style.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "typography: OS別画面書体と固定幅指定。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.dark: Default Dark Modernの役割別の色。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/light_modern.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "palette.light: Default Light Modernの役割別の色。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "github-copilot-vs-code-2026-02",
+      "from": "2026-02",
+      "to": "2026-05",
+      "regions": [
+        {
+          "name": "Agent Sessions",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "複数の作業一覧と状態",
+            "一覧は幅を変更できる"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "作業の返答",
+            "展開できる子作業の進捗"
+          ]
+        },
+        {
+          "name": "会話入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "ローカル・背景・クラウド等の実行場所を選ぶ"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行場所を選ぶ",
+          "where": "会話入力",
+          "purpose": "新しい作業の場所を選ぶ、または引き継ぐ"
+        },
+        {
+          "label": "作業状態",
+          "where": "上部の操作欄",
+          "purpose": "進行中・未読・確認待ちの作業を開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "子作業は展開して詳細を読める。",
+        "tool_calls": "子作業の使用中の道具や状態を会話に表示。",
+        "streaming": "生成中の進行を見せる改善がある。具体的な速さは未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "作業一覧と会話入力の実行場所選択",
+        "上部に確認待ちなどの状態",
+        "子作業を展開して読める",
+        "Editは既定で隠す実験があり、3モード固定とはしない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/updates/v1_109",
+          "kind": "release-notes",
+          "date": "2026-02-04",
+          "shows": "regions・controls・conversation・distinctive: 1.109および追補の作業一覧、場所の選択、状態表示、子作業、Editを隠す実験。カタログの2月18日固有の初日確認ではない。"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agents/overview",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料: 現行公式ガイドが会話・作業一覧・Agents windowを別の表示として案内。2月の数値や正確な初日ラベルの証拠にはしない。"
+        }
+      ],
+      "confidence": 0.69
+    },
+    {
+      "id": "github-copilot-vs-code-2026-05",
+      "from": "2026-05",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "Agentsの別窓",
+          "position": "window",
+          "size": null,
+          "contents": [
+            "複数プロジェクトの作業",
+            "会話とファイル・変更の表示"
+          ]
+        },
+        {
+          "name": "Files / Changes",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "ファイル一覧",
+            "変更の確認"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Open in Agents",
+          "where": "VS Code上部",
+          "purpose": "作業管理の別窓を開く"
+        },
+        {
+          "label": "変更を破棄",
+          "where": "Changes",
+          "purpose": "作業の変更を戻す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "通常のエディタと連携するAgents別窓",
+        "プロジェクトをまたいで作業を切り替える",
+        "FilesとChangesの表示",
+        "モデル・作業の実行方式を選べる"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://code.visualstudio.com/updates/v1_120",
+          "kind": "release-notes",
+          "date": "2026-05-13",
+          "shows": "regions・controls・distinctive: Agents windowが通常版でもプレビューとして利用可能。Open in Agents、Files/Changes、実行方式等の選択保持。"
+        },
+        {
+          "url": "https://code.visualstudio.com/docs/agents/overview",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料: 現行ガイドもAgents windowと通常エディタ内Chatを区別。5月15日の固定画面ではない。"
+        }
+      ],
+      "confidence": 0.72
+    },
+    {
+      "id": "github-copilot-vs-code-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "通常エディタとAgents別窓",
+          "position": "window",
+          "size": null,
+          "contents": [
+            "同じ作業を両方から開ける"
+          ]
+        },
+        {
+          "name": "Agentsの作業欄",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話",
+            "複数候補の並列確認"
+          ]
+        },
+        {
+          "name": "Customizations",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "追加する機能・共有手順等を探す"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行方式を選ぶ",
+          "where": "新規の作業の選択欄",
+          "purpose": "Copilot等の実行方式を選ぶ"
+        },
+        {
+          "label": "Customizations",
+          "where": "Agentsの移動欄",
+          "purpose": "道具や追加機能を探す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "返答の詳しさを選び、推論や道具の詳細表示を調整できる。",
+        "tool_calls": "詳細表示の量は設定に依存する。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "通常エディタとAgents別窓で同じ作業を開く",
+        "クラウドや別のマシンへ作業を引き継ぐ",
+        "並列の候補確認はプレビュー",
+        "GitHub Copilotの別アプリとVS Code内の画面を区別"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases/",
+          "kind": "changelog",
+          "date": "2026-10-28",
+          "shows": "regions・controls・distinctive: VS CodeのAgents window、既定のCopilot実行方式、Customizations、並列結果の比較。別のCopilot appも列挙されており、同一画面としない。"
+        },
+        {
+          "url": "https://code.visualstudio.com/updates/v1_145",
+          "kind": "release-notes",
+          "date": "2026-11-04",
+          "shows": "conversation・distinctive: 生成内容の詳しさの設定、遠隔作業のプレビューや表示。11月10日のモデル追加自体は画面変更の根拠にしない。"
+        }
+      ],
+      "confidence": 0.75
+    }
+  ],
+  "corrections": [
+    "2021年版に常設の会話型Outputパネルを置く根拠はない。コードの続きの補完が中心。https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+    "2023-03のPR Summary・CLIの常設タブは、別々のCopilot Xプレビューを同じVS Codeパネルへ混ぜている。https://github.blog/news-insights/product-news/github-copilot-x-the-ai-powered-developer-experience/",
+    "2023-07の@workspaceは初日UIとして未確認。1.80で確認できるプレビュー例は/search等。https://code.visualstudio.com/updates/v1_80",
+    "以前の調査の2023年Chatを最初からGPT-4固定とする説明は慎重に扱う。2024年の公式回顧ではGPT-3.5から後にGPT-4と説明。画面に固定モデル名を追加しない。https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/",
+    "2024-05のCopilot WorkspaceをVS Codeの常設カードとして描かない。Workspaceは別のタスク中心環境。https://github.blog/news-insights/product-news/github-copilot-workspace/",
+    "2024-10の画面に全モデルを一斉に並べない。展開は段階的。1.95のChat既定位置は右側の第2サイドバー。https://code.visualstudio.com/updates/v1_95",
+    "2025-02にv1.99・Ask/Edit/Agent統合・MCP Stable・Autoモデルを同時に表示しない。2月は1.97のEdits内Agentプレビュー。https://code.visualstudio.com/updates/v1_97",
+    "Ask/Edit/Agent統合は1.99期として別版を追加。MCPの一般提供は1.102。https://code.visualstudio.com/updates/v1_102",
+    "2025-07のMIT RepoボタンやMCP Server Registryの固定表・ツール件数・OAuth状態は製品画面の根拠がない。管理表示と会話を分ける。https://code.visualstudio.com/updates/v1_102",
+    "2026-02をNESとGitHub Issue割当の宣伝カードだけで表さない。公式の1.109は作業一覧・実行場所選択・子作業表示を扱う。https://code.visualstudio.com/updates/v1_109",
+    "2026-05のCopilot Fusionメータを5月へ遡らせる根拠は未確認。確認できる別窓は1.120。https://code.visualstudio.com/updates/v1_120",
+    "2026-11のVS Code版をgithub-copilot-appの独立アプリ画面で代用しない。固定のモデル終了案内・Interactive/Automationsタブの根拠はこの版として未確認。https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases/",
+    "paletteはテーマを選んだ場合の役割別の値。bgはエディタ、panelはsideBar、textはeditor.foreground、mutedはdescriptionForeground、accentはbutton.background、borderはsideBar.border。質問の吹き出し色は未確定。https://raw.githubusercontent.com/microsoft/vscode/1.102.0/extensions/theme-defaults/themes/dark_modern.json"
+  ]
+}
+

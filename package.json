@@ -1,0 +1,46 @@
+{
+  "name": "model-memento",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AIモデルのメメントモリ・カレンダーと、提供終了モデルの再現（降霊）",
+  "bin": {
+    "model-memento": "bin/model-memento.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "research": "node scripts/research.js",
+    "check": "node scripts/check-data.js",
+    "build:static": "node scripts/build-static.js",
+    "check:contrib": "node scripts/check-contrib.js",
+    "build:web": "node scripts/build-web.js",
+    "check:web": "node scripts/check-web.js",
+    "sync:upstream": "node scripts/sync-upstream.js",
+    "sync:screens": "node scripts/capture-historical-screens.js",
+    "sync:vera": "python3 scripts/vera_sync.py --catalog web/data/models.json --closed web/data/closed.json --out-json data/auto-sync/vcross-status.json",
+    "sync:dry-run": "node scripts/sync-upstream.js --dry-run",
+    "export:curated": "node scripts/export-curated.js",
+    "test": "node test/app/run.js",
+    "check:package-size": "node scripts/check-package-size.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "zod": "^4.6.7"
+  },
+  "files": [
+    "server.js",
+    "bin/*.js",
+    "lib/**/*.js",
+    "public/*.js",
+    "public/*.html",
+    "public/*.css",
+    "web/index.html",
+    "web/style.css",
+    "web/css/**/*.css",
+    "web/js/**/*.js",
+    "web/lib/*.js",
+    "scripts/*.js",
+    "!web/**/*.test.js",
+    "!lib/**/fixtures/**"
+  ]
+}

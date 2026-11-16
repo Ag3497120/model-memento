@@ -1,0 +1,1343 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "opencode",
+  "name": "OpenCode",
+  "vendor": "SST / Anomaly",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "opencode-2025-06",
+      "from": "2025-06",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "起動画面",
+          "position": "top-left",
+          "size": null,
+          "contents": [
+            "製品名と固定値 v0.0.1、作業フォルダ",
+            "LSP Servers の見出し。コードの診断機能一覧はこの箇所で無効化"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center-left",
+          "size": null,
+          "contents": [
+            "返答と作業記録を縦に表示"
+          ]
+        },
+        {
+          "name": "作業情報",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "会話開始・選択後に開く補助欄",
+            "作業フォルダ、会話名、共有URL"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "上の区切り線と > の入力",
+            "添付ファイルがあれば入力の上に名前"
+          ]
+        },
+        {
+          "name": "状態",
+          "position": "bottom-edge",
+          "size": null,
+          "contents": [
+            "左に操作案内と利用量、右にモデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ctrl+? help",
+          "where": "最下部",
+          "purpose": "操作案内を開く"
+        },
+        {
+          "label": ">",
+          "where": "下部",
+          "purpose": "作業の依頼を入力する"
+        }
+      ],
+      "conversation": {
+        "user": "同じ端末の会話領域へ入力内容を表示する。正確な利用者行の装飾は unverified。",
+        "assistant": "端末内の文章とコード。独立したウェブの吹き出しではない。",
+        "tool_calls": "会話の途中に処理の記録を出す。承認の主要処理には無効なコードがあり、後年の承認カードを当てはめない。",
+        "streaming": "Working... の表示と動く目印を使う。返答の細かな更新方法は unverified。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f8f8f8",
+          "panel": "#f0f0f0",
+          "text": "#2a2a2a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#d3d3d3",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#212121",
+          "panel": "#252525",
+          "text": "#e0e0e0",
+          "muted": "#6a6a6a",
+          "accent": "#fab283",
+          "border": "#4b4c5c",
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/theme/opencode.go",
+          "dark": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/theme/opencode.go"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字で描く区切りと >。ピクセル単位の角丸は適用しない。"
+      },
+      "empty_state": "左上から製品名、作業場所、診断機能の見出し。下に入力と状態行。会話前は右の補助欄を開かない。",
+      "distinctive": [
+        "空画面が中央寄せではなく左上から始まる",
+        "タグは v0.0.55 でも見た目の版番号は固定値 v0.0.1",
+        "会話を始めると右の補助欄が開く",
+        "最下部右にモデル名"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/page/chat.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話を開始・選択すると右側欄を設定する。新規時は取り除く。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/chat/chat.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の左上の配置、固定 v0.0.1、LSP Servers。診断一覧部分はコメント内。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/chat/editor.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "> の入力、添付、文字による区切り。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/chat/sidebar.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "右の作業情報と共有先の表示。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/core/status.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "最下部の操作案内、利用量、モデル名。診断値の一部は無効なコードであり、動作中の診断一覧と断定しない。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/theme/opencode.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込み OpenCode テーマの明暗色。accent 欄は PrimaryColor、panel は BackgroundSecondaryColor に対応。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.0.55/README.md",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "当時の README は端末で使う製品と説明。実装と一致しない箇所があるため、配置は固定版コードを優先。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "opencode-2025-09",
+      "from": "2025-09",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "空画面の案内",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の製品マークと版番号。再現時は通常文字に置き換える",
+            "操作候補と期間限定モデルの案内"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の行と返答、作業記録"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "太い左右の線がある入力領域",
+            "通常は >、シェル操作時は !",
+            "入力内容の下に送信などの操作案内"
+          ]
+        },
+        {
+          "name": "状態",
+          "position": "bottom-edge",
+          "size": null,
+          "contents": [
+            "端末の状態表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Tab",
+          "where": "入力中",
+          "purpose": "作業役を切り替える"
+        },
+        {
+          "label": "Shift+Tab",
+          "where": "入力中",
+          "purpose": "前の作業役へ切り替える"
+        },
+        {
+          "label": ">",
+          "where": "入力欄",
+          "purpose": "メッセージを入力する"
+        },
+        {
+          "label": "!",
+          "where": "入力欄",
+          "purpose": "シェル操作として入力する"
+        }
+      ],
+      "conversation": {
+        "user": "通常は第二強調色の枠で囲む。実行待ちの入力は別の強調色。",
+        "assistant": "通常の返答は枠のない文章。考え中の内容は別背景の領域。",
+        "tool_calls": "作業記録を会話の中へ表示。許可待ちの処理は境界線の表示が変わる。",
+        "streaming": "考え中は Thinking... の動く文字表示。返答は会話領域へ更新される。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#1a1a1a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#b8b8b8",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0a0a0a",
+          "panel": "#141414",
+          "text": "#eeeeee",
+          "muted": "#808080",
+          "accent": "#fab283",
+          "border": "#484848",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "light.panel": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "light.text": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "light.muted": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "light.accent": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "light.border": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.bg": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.panel": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.text": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.muted": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.accent": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "dark.border": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字で描いた太い左右の線。空画面の入力は最大80文字幅。余白は文字の行数・列数で扱う。"
+      },
+      "empty_state": "中央に製品マークと版番号、操作候補、期間限定のモデル案内と入力欄。マークはそのまま描き直さない。",
+      "distinctive": [
+        "6月版から空画面が中央配置へ変わる",
+        "太い左右線のある > 入力",
+        "! にするとシェル入力の色が変わる",
+        "利用者の行は枠、通常の返答は枠なし",
+        "Tab で作業役を切り替える"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v0.9.1",
+          "kind": "release-notes",
+          "date": "2025-09-15",
+          "shows": "v0.9.1 は2025-09-15。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/tui/tui.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "home と chat の別描画。中央寄せの空画面、版番号、候補、期間限定の案内。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/components/chat/editor.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "最大80文字幅、> / !、左右の太い枠、操作案内。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/components/chat/message.go",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者の枠、考え中の背景、通常返答の枠なし表示。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/opencode/src/config/config.ts",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "agent_cycle の既定値は tab、逆順は shift+tab。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/theme/themes/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込みテーマの色。accent 欄は primary の色。"
+        }
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "opencode-2025-10",
+      "from": "2025-10",
+      "to": "2026-02",
+      "regions": [
+        {
+          "name": "空画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の製品マークと入力。マークは通常文字に置き換える"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center-left",
+          "size": null,
+          "contents": [
+            "依頼、返答、簡潔な作業記録"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "右欄を自動表示するのは端末が広い場合。42文字幅を会話から差し引く"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "添付とモデル・作業役の情報",
+            "操作メニューの案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ctrl+P",
+          "where": "どの画面からでも",
+          "purpose": "操作メニューを開く"
+        }
+      ],
+      "conversation": {
+        "user": "薄い別背景と左の線がある横長の領域。通常は第二強調色、実行待ちは別の色。",
+        "assistant": "文章とコードを会話領域に表示。",
+        "tool_calls": "通常の作業記録は短くまとめ、編集とシェル操作の詳細は大きく表示する。",
+        "streaming": "返答を受け取りながら会話を更新する。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#1a1a1a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#b8b8b8",
+          "user_bubble": "#fafafa"
+        },
+        "dark": {
+          "bg": "#0a0a0a",
+          "panel": "#141414",
+          "text": "#eeeeee",
+          "muted": "#808080",
+          "accent": "#fab283",
+          "border": "#484848",
+          "user_bubble": "#141414"
+        },
+        "source": {
+          "light.bg": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.panel": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.text": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.muted": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.accent": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.border": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "light.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.bg": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.panel": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.text": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.muted": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.accent": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.border": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "dark.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "初期画面の入力は最大75文字幅。端末の文字数による寸法であり75pxではない。"
+      },
+      "empty_state": "中央の製品マークの下に入力を置く。モデルや接続状態に応じた案内を添える。マークは複製しない。",
+      "distinctive": [
+        "利用者の入力は左線と薄い別背景",
+        "Ctrl+P から操作を探す",
+        "作業記録を短くまとめる",
+        "右の補助欄を切り替えられる"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/opencode/src/cli/cmd/tui/routes/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の配置と入力。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/opencode/src/cli/cmd/tui/routes/session/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話、利用者行、作業記録、右欄の表示条件。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/tui/internal/theme/themes/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込み OpenCode テーマの色。accent 欄は primary。利用者の背景は backgroundPanel。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+          "kind": "release-notes",
+          "date": "2025-10-31",
+          "shows": "v1.0.0 は2025-10-31。端末画面を全面改稿。短い作業記録、Ctrl+P の操作メニュー、切替可能な右欄。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/opencode/src/cli/cmd/tui/component/prompt/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄、添付、操作メニューの案内。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.0/packages/opencode/src/cli/cmd/tui/context/theme.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "当該版のテーマ定義の取り込み先。"
+        }
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "opencode-2025-11-macos",
+      "from": null,
+      "to": null,
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/anomalyco/opencode/blob/v1.0.75/packages/desktop/package.json",
+          "dark": "https://github.com/anomalyco/opencode/blob/v1.0.75/packages/desktop/package.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.0.75",
+          "kind": "release-notes",
+          "date": "2025-11-18",
+          "shows": "2025-11-18 に desktop application の修正はあるが、macOS専用の Tauri 公開日やウィンドウの装飾は示さない。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.75/packages/desktop/package.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "v1.0.75 の desktop は Vite / Solid のウェブ画面。パッケージ内に Tauri 依存がないだけではネイティブ配布の不存在も証明できない。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.75/packages/desktop/src/pages/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "このタグの home はプロジェクトへのボタン一覧。macOSの壁紙、半透明装飾、専用メニューの証拠ではない。"
+        },
+        {
+          "url": "https://opencode.ai/changelog/v1.0.218",
+          "kind": "changelog",
+          "date": "2025-12-30",
+          "shows": "12月には Tauri と desktop の変更を確認。これを11月20日へ遡らせる根拠はない。"
+        }
+      ],
+      "confidence": 0.12
+    },
+    {
+      "id": "opencode-2025-12",
+      "from": "2025-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "プロジェクトと会話",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "開いたプロジェクト",
+            "プロジェクトごとの会話一覧",
+            "新しい会話や設定の操作"
+          ]
+        },
+        {
+          "name": "作業領域",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "上に会話見出し",
+            "利用者と返答、作業記録"
+          ]
+        },
+        {
+          "name": "変更の確認",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "必要なときに開く変更内容やファイルのタブ"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行入力",
+            "添付、作業役とモデルの選択、送信・停止"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "lower-panel",
+          "size": null,
+          "contents": [
+            "必要なときに開く操作用端末"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Open project",
+          "where": "空画面",
+          "purpose": "作業フォルダを開く"
+        },
+        {
+          "label": "Choose model",
+          "where": "入力欄の下",
+          "purpose": "利用するモデルを選ぶ"
+        },
+        {
+          "label": "Cycle agent",
+          "where": "入力欄の下",
+          "purpose": "作業役を切り替える"
+        }
+      ],
+      "conversation": {
+        "user": "文章の背景は薄い別色、角は4px。添付ファイルはその上に別の小枠。",
+        "assistant": "依頼ごとの会話で文章・コード・作業記録を表示する。",
+        "tool_calls": "会話中の作業記録と、必要に応じて右の変更確認で内容を見る。",
+        "streaming": "動作中は送信の上向き矢印が停止操作になる。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f8f7f7",
+          "panel": "#f1f0f0",
+          "text": "#656363",
+          "muted": "#8e8b8b",
+          "accent": "#034cff",
+          "border": "#0b060032",
+          "user_bubble": "#25000007"
+        },
+        "dark": {
+          "bg": "#131010",
+          "panel": "#1c1717",
+          "text": "#fcf9f9b2",
+          "muted": "#faf5f467",
+          "accent": "#89b5ff",
+          "border": "#f7ecec3f",
+          "user_bubble": "#0e0b0b7f"
+        },
+        "source": {
+          "tokens": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/theme.css",
+          "values": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/colors.css",
+          "user_bubble": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/components/message-part.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "mono_named": "IBM Plex Mono",
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 6,
+        "density": "regular",
+        "input_shape": "横長の複数行欄。入力の外枠は rounded-md = 0.375rem、標準16px換算で6px。表示倍率による差は残る。"
+      },
+      "empty_state": "製品マーク、接続先の名前と状態、最近のプロジェクト、作業フォルダを開く操作。プロジェクトを開いた後に会話入力へ進む。",
+      "distinctive": [
+        "まず作業フォルダを開く",
+        "左にプロジェクトと会話一覧",
+        "右に変更やファイルを開く",
+        "入力欄内に作業役とモデル選択",
+        "端末版とは異なる通常書体の画面"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://opencode.ai/changelog/v1.0.218",
+          "kind": "changelog",
+          "date": "2025-12-30",
+          "shows": "Desktop、サーバー状態、Tauriへの対応を含む更新。最初のデスクトップ公開日そのものではない。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/app/src/pages/layout.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "プロジェクトごとの会話一覧、折りたたみ可能な左欄。幅は状態に依存。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/app/src/pages/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "プロジェクト未選択時の最近の作業と Open project、接続先の状態。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/app/src/pages/session.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話、右の変更確認・ファイルタブ、任意のターミナル。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/app/src/components/prompt-input.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力と添付、作業役・モデル、動作中の停止操作。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/theme.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "通常書体 Inter、コード IBM Plex Mono、14px基準、角丸と明暗の色変数。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/colors.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "色変数の具体値。半透明の8桁値を合成前のまま記録。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/components/message-part.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者と返答の別表示、添付と作業記録。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/components/message-part.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者本文は surface-inset-base 背景、4px角丸。添付は6px角丸。"
+        }
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "opencode-2026-02",
+      "from": "2026-02",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "空画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の製品マークと入力。マークは通常文字に置き換える"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center-left",
+          "size": null,
+          "contents": [
+            "依頼、返答、簡潔な作業記録"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "この版では初期値が非表示。開いた場合は42文字幅を会話から差し引く"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "添付とモデル・作業役の情報",
+            "操作メニューの案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ctrl+P",
+          "where": "どの画面からでも",
+          "purpose": "操作メニューを開く"
+        }
+      ],
+      "conversation": {
+        "user": "薄い別背景と左の線がある横長の領域。通常は第二強調色、実行待ちは別の色。",
+        "assistant": "文章とコードを会話領域に表示。",
+        "tool_calls": "通常の作業記録は短くまとめ、編集とシェル操作の詳細は大きく表示する。",
+        "streaming": "返答を受け取りながら会話を更新する。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#1a1a1a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#b8b8b8",
+          "user_bubble": "#fafafa"
+        },
+        "dark": {
+          "bg": "#0a0a0a",
+          "panel": "#141414",
+          "text": "#eeeeee",
+          "muted": "#808080",
+          "accent": "#fab283",
+          "border": "#484848",
+          "user_bubble": "#141414"
+        },
+        "source": {
+          "light.bg": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.panel": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.text": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.muted": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.accent": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.border": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.bg": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.panel": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.text": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.muted": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.accent": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.border": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字単位の左右の境界と背景で区切る入力。丸いウェブ入力欄ではない。"
+      },
+      "empty_state": "中央の製品マークの下に入力を置く。モデルや接続状態に応じた案内を添える。マークは複製しない。",
+      "distinctive": [
+        "初期状態では右欄を隠す",
+        "利用者行の左線と薄い背景",
+        "Ctrl+P の操作メニュー",
+        "入力と会話を同じ端末で扱う"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/routes/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の配置と入力。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/routes/session/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話、利用者行、作業記録、右欄の表示条件。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込み OpenCode テーマの色。accent 欄は primary。利用者の背景は backgroundPanel。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.1.54",
+          "kind": "release-notes",
+          "date": "2026-02-10",
+          "shows": "固定版の公開日と変更内容。"
+        },
+        {
+          "url": "https://opencode.ai/v1/docs/tui/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "V1の公開文書。入力・ファイル添付・操作メニューの補助資料。現在のV1文書の全機能が2月時点にあるとはしない。"
+        }
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "opencode-2026-04",
+      "from": "2026-04",
+      "to": "2026-08",
+      "regions": [
+        {
+          "name": "空画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の製品マークと入力。マークは通常文字に置き換える"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center-left",
+          "size": null,
+          "contents": [
+            "依頼、返答、簡潔な作業記録"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "幅が十分なとき自動表示。開いた場合の会話幅は42文字分減る"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "添付とモデル・作業役の情報",
+            "操作メニューの案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ctrl+P",
+          "where": "どの画面からでも",
+          "purpose": "操作メニューを開く"
+        }
+      ],
+      "conversation": {
+        "user": "薄い別背景と左の線がある横長の領域。通常は第二強調色、実行待ちは別の色。",
+        "assistant": "文章とコードを会話領域に表示。",
+        "tool_calls": "通常の作業記録は短くまとめ、編集とシェル操作の詳細は大きく表示する。",
+        "streaming": "返答を受け取りながら会話を更新する。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#1a1a1a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#b8b8b8",
+          "user_bubble": "#fafafa"
+        },
+        "dark": {
+          "bg": "#0a0a0a",
+          "panel": "#141414",
+          "text": "#eeeeee",
+          "muted": "#808080",
+          "accent": "#fab283",
+          "border": "#484848",
+          "user_bubble": "#141414"
+        },
+        "source": {
+          "light.bg": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.panel": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.text": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.muted": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.accent": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.border": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "light.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.bg": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.panel": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.text": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.muted": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.accent": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.border": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "dark.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字単位の左右の境界と背景で区切る入力。丸いウェブ入力欄ではない。"
+      },
+      "empty_state": "中央の製品マークの下に入力を置く。モデルや接続状態に応じた案内を添える。マークは複製しない。",
+      "distinctive": [
+        "中央の空画面と最大75文字幅の入力",
+        "利用者行の左線と薄い背景",
+        "広い端末で右の補助欄を表示",
+        "会話中の作業記録と操作メニュー"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/routes/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の配置と入力。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/routes/session/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話、利用者行、作業記録、右欄の表示条件。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/context/theme/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込み OpenCode テーマの色。accent 欄は primary。利用者の背景は backgroundPanel。"
+        },
+        {
+          "url": "https://opencode.ai/changelog/v1.4.6",
+          "kind": "changelog",
+          "date": "2026-04-15",
+          "shows": "v1.4.6 の更新内容は保存処理やDesktopの入力・見出し修正など。serve機能を初めて追加したという内容ではない。"
+        },
+        {
+          "url": "https://opencode.ai/v1/docs/tui/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "V1の端末操作の説明。サーバー専用ダッシュボードの説明ではない。"
+        }
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "opencode-2026-08",
+      "from": "2026-08",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "空画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の製品マークと入力。マークは通常文字に置き換える"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center-left",
+          "size": null,
+          "contents": [
+            "依頼、返答、簡潔な作業記録"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "120文字より広い端末で自動表示する設定。開くと42文字幅を使う"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "添付とモデル・作業役の情報",
+            "操作メニューの案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ctrl+P",
+          "where": "どの画面からでも",
+          "purpose": "操作メニューを開く"
+        }
+      ],
+      "conversation": {
+        "user": "薄い別背景と左の線がある横長の領域。通常は第二強調色、実行待ちは別の色。",
+        "assistant": "文章とコードを会話領域に表示。",
+        "tool_calls": "通常の作業記録は短くまとめ、編集とシェル操作の詳細は大きく表示する。",
+        "streaming": "返答を受け取りながら会話を更新する。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": "#fafafa",
+          "text": "#1a1a1a",
+          "muted": "#8a8a8a",
+          "accent": "#3b7dd8",
+          "border": "#b8b8b8",
+          "user_bubble": "#fafafa"
+        },
+        "dark": {
+          "bg": "#0a0a0a",
+          "panel": "#141414",
+          "text": "#eeeeee",
+          "muted": "#808080",
+          "accent": "#fab283",
+          "border": "#484848",
+          "user_bubble": "#141414"
+        },
+        "source": {
+          "light.bg": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.panel": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.text": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.muted": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.accent": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.border": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "light.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.bg": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.panel": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.text": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.muted": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.accent": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.border": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "dark.user_bubble": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字単位の左右の境界と背景で区切る入力。丸いウェブ入力欄ではない。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "120文字幅を基準に右欄を自動表示",
+        "利用者行と作業結果を同じ会話で扱う",
+        "失敗や許可待ちを作業の行に表示",
+        "組み込みテーマの明暗色を継続"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/app.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "当該版の端末全体と画面切替。新しい空画面の細部は未確認。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/routes/session/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話、利用者行、作業記録、右欄の表示条件。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/theme/assets/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "組み込み OpenCode テーマの色。accent 欄は primary。利用者の背景は backgroundPanel。"
+        },
+        {
+          "url": "https://opencode.ai/changelog/v1.18.19",
+          "kind": "changelog",
+          "date": "2026-08-20",
+          "shows": "認証済み接続先の表示、接続先URLなどの修正。Console v2や複数ペインの新設をこのリリースの画面としては確認できない。"
+        },
+        {
+          "url": "https://opencode.ai/v1/docs/tui/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "公開されているV1の説明。Consoleという管理サイトと端末画面は分ける。"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "opencode-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話切替",
+          "position": "top-or-left",
+          "size": null,
+          "contents": [
+            "設定に応じて横または縦のタブ",
+            "未読の作業へ移る操作"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の依頼と返答",
+            "処理をまとめた開閉式の行"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "モデル・作業役と依頼入力"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "必要に応じて開く作業情報。正確な幅は unverified"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Ctrl+P",
+          "where": "端末内",
+          "purpose": "操作メニューを開く"
+        },
+        {
+          "label": "Next unread tab",
+          "where": "操作メニュー",
+          "purpose": "次の未読の会話へ移る"
+        },
+        {
+          "label": "Close tab",
+          "where": "操作メニュー",
+          "purpose": "会話のタブを閉じる"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の依頼を会話内の別領域に表示。テーマの意味づけが変わるため、以前の16進色をそのまま当てはめない。",
+        "assistant": "返答を中心に表示し、その前の作業記録はまとめる。",
+        "tool_calls": "v2.3.0 の初期設定では、連続する処理と考え中の記録を一つの開閉式の作業行にまとめる。",
+        "streaming": "返答を順に表示。裏で続く作業は状態更新を会話へ返す。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "legacy_theme": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/theme/assets/opencode.json",
+          "rendering": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/routes/session/index.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末内の入力。新しい色の解決結果や細かな枠の寸法は unverified。"
+      },
+      "empty_state": "中央の製品マークと入力、更新通知や接続に応じた案内。再現時は製品マークを省く。",
+      "distinctive": [
+        "連続する処理を一つの開閉式の行にまとめる",
+        "横・縦を選べる会話タブ",
+        "未読の会話へ移動できる",
+        "会話の返答を中心にした表示"
+      ],
+      "must_not_copy": [
+        "OpenCode の文字組みマークと端末内の文字絵ロゴ",
+        "製品画像、アプリアイコン、紹介動画",
+        "macOS の壁紙や他製品のロゴ"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v2.3.0",
+          "kind": "release-notes",
+          "date": "2026-11-13",
+          "shows": "2026-11-13 の v2.3.0。処理と考え中の記録を開閉式の作業行にまとめる初期設定。11月1日ではなく月内の更新。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/routes/session/index.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "新しい会話の記録、開閉式の表示、利用者行と補助欄。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/app.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "横・縦の会話タブと未読切替。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/routes/home.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "中央の空画面、入力と更新案内。"
+        },
+        {
+          "url": "https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/theme/assets/opencode.json",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "旧形式の組み込み色ファイルは残るが、意味別の新しい色を使う描画へ単純転記できないため具体色を null にする。"
+        },
+        {
+          "url": "https://opencode.ai/docs/themes/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のV2は意味別の色設定を使用。端末の明暗や選択テーマで表示が変わる。"
+        },
+        {
+          "url": "https://opencode.ai/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "ログイン前の紹介ページだけ。Desktop、Terminal、Mobile、SDK は別の利用面。内部画面の詳細は固定版コードを優先。"
+        }
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "corrections": [
+    "2025-06 に Build / Plan のタブ、@general、Ctrl+P の現行メニューを載せる根拠はない。この固定版は左上の空画面、> 入力、最下部の操作案内とモデル名。 https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/chat/chat.go https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/core/status.go",
+    "旧調査の LSP Servers という見出しは正しいが、コード上の一覧や診断処理にはコメントが多い。見出しの存在から動く診断一覧を推定しない。v0.0.1は画面側の固定値で、取得したタグ名v0.0.55と区別する。 https://github.com/anomalyco/opencode/blob/v0.0.55/packages/tui/internal/tui/components/chat/chat.go",
+    "2025-09 は中央の空画面、左右の太線、> / ! を使う入力が特徴。renderer の常設のルーター表、Build / Plan のボタン列、LSP Status のタブは unverified。Tab の作業役切替は設定で確認。 https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/tui/tui.go https://github.com/anomalyco/opencode/blob/v0.9.1/packages/tui/internal/components/chat/editor.go https://github.com/anomalyco/opencode/blob/v0.9.1/packages/opencode/src/config/config.ts",
+    "2025-10-31 の v1.0.0 を独立した版として追加。端末画面の書き直しに伴い、作業記録の圧縮、Ctrl+P の操作メニュー、切替可能な右欄が明記される。 https://github.com/anomalyco/opencode/releases/tag/v1.0.0",
+    "2025-11-20 の macOS Tauri 専用画面、半透明の外枠、壁紙、専用メニューは unverified。11月のdesktopコードはウェブ画面を確認できるにとどまる。後日の Tauri 対応を遡って当てはめない。 https://github.com/anomalyco/opencode/blob/v1.0.75/packages/desktop/package.json https://opencode.ai/changelog/v1.0.218",
+    "2025-12 の旧調査の画面区分と書体はおおむね維持。左のプロジェクト別会話、右の任意の変更確認を具体化。色は theme.css と colors.css の変数を解決した値で、透過色は合成前の8桁値。 https://github.com/anomalyco/opencode/blob/v1.0.218/packages/app/src/pages/layout.tsx https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/theme.css https://github.com/anomalyco/opencode/blob/v1.0.218/packages/ui/src/styles/colors.css",
+    "2026-02 の接続方式の表、2026-04 のサーバー状態ダッシュボードを会話の常設画面にする根拠はない。2月の右欄の初期値は非表示、4月は広い端末で自動表示という実際の差を優先。 https://github.com/anomalyco/opencode/blob/v1.1.54/packages/opencode/src/cli/cmd/tui/routes/session/index.tsx https://github.com/anomalyco/opencode/blob/v1.4.6/packages/opencode/src/cli/cmd/tui/routes/session/index.tsx",
+    "2026-08 の Console v2、複数ペイン、使用量ゲージはこの版の新外観として unverified。管理サイトの機能を端末の上部へ常設表示しない。 https://opencode.ai/changelog/v1.18.19 https://github.com/anomalyco/opencode/blob/v1.18.19/packages/tui/src/app.tsx",
+    "2026-11 は最新の確認済み v2.3.0 の処理をまとめた行と会話タブを記録する。renderer の Zen / Go / OpenClaw の固定ボタン列は unverified。組み込みの古い色ファイルだけからV2の最終的な色を決めない。 https://github.com/anomalyco/opencode/releases/tag/v2.3.0 https://github.com/anomalyco/opencode/blob/v2.3.0/packages/tui/src/app.tsx https://opencode.ai/docs/themes/"
+  ]
+}
+

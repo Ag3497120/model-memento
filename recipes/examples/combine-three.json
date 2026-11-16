@@ -1,0 +1,15 @@
+{
+  "schema": "memento.recipe.v1",
+  "id": "combine-three",
+  "title": "進行・調査・確認の三役を組み合わせる",
+  "purpose": "進行役が作業をまとめ、調査役と確認役に依頼を渡して結果を照合します。",
+  "conductor": { "harness": "opencode", "model": "anthropic:claude-sonnet-5-5" },
+  "helpers": [
+    { "role": "researcher", "harness": "openclaw", "model": "anthropic:claude-sonnet-5-5" },
+    { "role": "reviewer", "harness": "claude-code", "model": "anthropic:claude-opus-5-5" }
+  ],
+  "tools": ["filesystem", "fetch", "playwright"],
+  "instructions": { "style": "plan-then-act", "files": ["agents-md"] },
+  "frontend": "terminal",
+  "notes": "依頼と返答は Model Memento の中継で渡します。OpenClaw は画面を開かずに1回実行し、Claude Code は返答を表示して終了する方式です。初回の準備は手動、実接続とモデルの動作は unverified。出典 https://docs.openclaw.ai/cli/agent https://code.claude.com/docs/en/headless https://platform.claude.com/docs/en/models/overview"
+}

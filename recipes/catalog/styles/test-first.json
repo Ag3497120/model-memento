@@ -1,0 +1,74 @@
+{
+  "schema": "memento.style.v1",
+  "id": "test-first",
+  "name": "先に確認を作って直す",
+  "plain": "期待する動作の確認を先に作り、失敗を確かめてから実装します。",
+  "when": "不具合の修正や、動作を自動で確かめられる機能を作るとき。",
+  "since": "2025-04",
+  "popularized_by": [
+    "Anthropic の開発手順ガイド"
+  ],
+  "since_basis": "公開資料で確認できる年月です。発明や普及の開始年月を示すものではありません。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n期待する入力と出力から、動作を確かめるテストを先に作ってください。未実装や不具合が原因で失敗することを確認し、最小限の変更で直してください。確認を弱めて通さず、修正後にもう一度確かめ、実際の結果を報告してください。\n\n# English\n\nWrite a behaviour test from expected inputs and outputs first. Confirm it fails because of the missing behaviour or bug, then make the smallest fix. Do not weaken checks merely to pass. Re-run the relevant checks and report actual results.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "via AGENTS.md",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://www.anthropic.com/research/claude-code-best-practices",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://code.claude.com/docs/en/memory",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

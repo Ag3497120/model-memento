@@ -1,0 +1,220 @@
+{
+  "id": "openai--codex",
+  "version": "b016cd184725",
+  "from": "2026-11-15",
+  "surface": "terminal",
+  "layout": {
+    "t": "col",
+    "label": "ChatWidget::as_backdrop_renderable",
+    "c": [
+      {
+        "t": "thread",
+        "label": "active_cell_renderable"
+      },
+      {
+        "t": "thread",
+        "label": "pending_history_cells / live_transcript_cells"
+      },
+      {
+        "t": "banner",
+        "label": "pending_rate_limit_reset_hint"
+      },
+      {
+        "t": "col",
+        "label": "BottomPane",
+        "c": [
+          {
+            "t": "banner",
+            "label": "inline_banner"
+          },
+          {
+            "t": "statusline",
+            "label": "status_widget / hook_status_message"
+          },
+          {
+            "t": "statusline",
+            "label": "unified_exec_footer"
+          },
+          {
+            "t": "panel",
+            "label": "pending_thread_approvals"
+          },
+          {
+            "t": "panel",
+            "label": "pending_input_preview"
+          },
+          {
+            "t": "composer",
+            "label": "ChatComposer"
+          }
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "accent": "#1c64c8",
+    "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/style.rs"
+  },
+  "strings": {
+    "s1": "Move up/down to live preview themes",
+    "s2": "Save and close external editor to continue.",
+    "s3": "Read the API key from stdin (e.g. `printenv OPENAI_API_KEY | codex login --with-api-key`)",
+    "s4": "Apply reasoning change",
+    "s5": "Prefix a command with ! to run it locally",
+    "s6": "Example: !ls",
+    "s7": "Ask for approval",
+    "s8": "Approve for me",
+    "s9": "Ask a follow-up question",
+    "s10": "configure Codex preferences",
+    "s11": "send logs to maintainers or save a ZIP",
+    "s12": "start a new chat during a conversation",
+    "s13": "summarize the current conversation now",
+    "s14": "Forking conversation…",
+    "s15": "fork",
+    "s16": "command center",
+    "s17": "exit",
+    "s18": "transcript"
+  },
+  "behaviors": {
+    "commands": [
+      "/theme",
+      "/permissions",
+      "/quit",
+      "/exit",
+      "/new",
+      "/config",
+      "/model",
+      "/diff"
+    ],
+    "model_picker": "slash-model"
+  },
+  "mobile": "none",
+  "sources": [
+    "https://github.com/openai/codex",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-cli/scripts/README.md",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/docs/install.md",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/docs/getting-started.md",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/Cargo.toml",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-cli/package.json",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/cli/Cargo.toml",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/utils/cli/Cargo.toml",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/style.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/theme_picker.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/ui_tree/theme.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/analytics/tokens.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/app.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/tui.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/main.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/app/input.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/app/sidebar.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/config_panel/input.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/settings.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/ide_context.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/projectless.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/ide_context.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/app_server_session/cloud_project.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/core/src/agents_md.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/core/src/context/world_state/agents_md.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/core/src/context/user_instructions.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/ext/extension-api/src/user_instructions.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/prompts/src/permissions_instructions/approval_instructions.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/prompts/src/permissions_instructions/approval_instructions_tests.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tools/README.md",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/core/src/tools/mod.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/core/src/tools/events.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/cli.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/cli/src/main.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/diff_render.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/pets/preview.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/slash_command.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/mod.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/rendering.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/session_header.rs",
+    "https://api.github.com/repos/openai/codex/releases",
+    "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/models-manager/prompt.md"
+  ],
+  "provenance": {
+    "commit": "b016cd18472588606c04af565528c4cd6746a41f",
+    "snapshot_at": "2026-11-15",
+    "layout_path": "codex-rs/tui/src/chatwidget/rendering.rs",
+    "layout_evidence": [
+      {
+        "component": "active_cell_renderable",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/rendering.rs",
+        "line": 173,
+        "type": "native-render-call"
+      },
+      {
+        "component": "pending_history_cells",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/rendering.rs",
+        "line": 202,
+        "type": "native-render-call"
+      },
+      {
+        "component": "self.bottom_pane_renderable",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget/rendering.rs",
+        "line": 230,
+        "type": "native-render-call"
+      },
+      {
+        "component": "inline_banner",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/mod.rs",
+        "line": 336,
+        "type": "native-render-call"
+      },
+      {
+        "component": "self.pending_input_preview",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/mod.rs",
+        "line": 598,
+        "type": "native-render-call"
+      }
+    ],
+    "behavior_evidence": [
+      {
+        "value": "/theme",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/theme_picker.rs",
+        "line": 1
+      },
+      {
+        "value": "/permissions",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/app.rs",
+        "line": 457
+      },
+      {
+        "value": "/quit",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget.rs",
+        "line": 1469
+      },
+      {
+        "value": "/exit",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/chatwidget.rs",
+        "line": 1469
+      },
+      {
+        "value": "/new",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "line": 162
+      },
+      {
+        "value": "/config",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "line": 183
+      },
+      {
+        "value": "/model",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "line": 202
+      },
+      {
+        "value": "/diff",
+        "source": "https://github.com/openai/codex/blob/b016cd18472588606c04af565528c4cd6746a41f/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+        "line": 3351
+      }
+    ],
+    "method": "Observed component outline in source order. Conditional branches may coexist in this static outline.",
+    "mobile": "Terminal reconstruction.",
+    "stream": "Unmeasured; omitted."
+  }
+}

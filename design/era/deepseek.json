@@ -1,0 +1,288 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "deepseek",
+  "versions": [
+    {
+      "id": "deepseek-2024-11",
+      "model_switch": {
+        "where": "other",
+        "label": "深く考える（Deep Think）",
+        "steps": [
+          "公式の会話にログインし、Deep Thinkを有効にする。",
+          "有効にする位置はunverified。任意のモデル名の一覧から選ぶ操作とは扱わない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news1120/",
+            "date": "2024-11-20",
+            "shows": "R1-Lite-Previewの公開と考えた過程の逐次表示。公開トップの現在のナビゲーションを当時の会話画面と見なさない。"
+          },
+          {
+            "url": "https://www.datacamp.com/blog/deepseek-r1-lite-preview",
+            "date": "2024-11-26",
+            "shows": "執筆者の使用記録。ログインしてDeep Thinkを有効にする手順と、深く考えるモードの1日50件という制限。位置や上限注意の掲示文は示さない。"
+          }
+        ],
+        "steps_en": [
+          "Sign in to the official chat and enable Deep Think.",
+          "unverified (where to enable it). Treat this as a feature toggle."
+        ],
+        "label_en": "Deep Think"
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "深く考えるモードは1日50件まで",
+          "when": "2024-11-26..2024-11-26",
+          "where": "Deep Thinkの利用上限。記事は制限を説明するが、画面内の掲示位置と原文はunverified。架空の上限バッジを追加しない。",
+          "sources": [
+            {
+              "url": "https://www.datacamp.com/blog/deepseek-r1-lite-preview",
+              "date": "2024-11-26",
+              "shows": "執筆者の使用記録。ログインしてDeep Thinkを有効にする手順と、深く考えるモードの1日50件という制限。位置や上限注意の掲示文は示さない。"
+            }
+          ],
+          "text_en": "Up to 50 deep reasoning requests per day",
+          "where_en": "Deep Think usage limit described in the article. On-screen notice placement and wording are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-11-26",
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news1120/",
+            "date": "2024-11-20",
+            "shows": "R1-Lite-Previewの公開と考えた過程の逐次表示。公開トップの現在のナビゲーションを当時の会話画面と見なさない。"
+          },
+          {
+            "url": "https://www.datacamp.com/blog/deepseek-r1-lite-preview",
+            "date": "2024-11-26",
+            "shows": "執筆者の使用記録。ログインしてDeep Thinkを有効にする手順と、深く考えるモードの1日50件という制限。位置や上限注意の掲示文は示さない。"
+          }
+        ]
+      },
+      "trend": "通常の会話に、考えた過程を見せるモードを加える（出典：https://api-docs.deepseek.com/news/news1120/）。",
+      "unverified": [
+        "切替位置、通常モードのモデル名、候補一覧、既定、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Regular chat gains a mode displaying reasoning. (https://api-docs.deepseek.com/news/news1120/)",
+      "unverified_en": [
+        "unverified (switch location, regular-mode model name, option list, default, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "deepseek-2025-01",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "深く考える（DeepThink (R1)）",
+        "steps": [
+          "下部の文章入力欄の下にあるDeepThink (R1)を押してR1を使う。",
+          "Searchはウェブ検索の切替で、返答モデル名ではない。",
+          "通常モードを含む固定のモデル一覧と既定はunverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news250120/",
+            "date": "2025-01-20",
+            "shows": "公式ウェブでDeepThinkからR1を使えることを案内する。"
+          },
+          {
+            "url": "https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/",
+            "date": "2025-02-06",
+            "shows": "元記事は1月29日、表示上の更新日は2月6日。下部入力の下にDeepThink (R1)とSearchを置く。スマホとウェブを併記しており、左右の寸法の根拠にしない。"
+          }
+        ],
+        "steps_en": [
+          "Click DeepThink (R1) below the text input at the bottom to use R1.",
+          "Search toggles web search.",
+          "unverified (a fixed model list including regular mode, and the default)."
+        ],
+        "label_en": "DeepThink (R1)"
+      },
+      "accents": [
+        {
+          "kind": "capacity",
+          "text": "サーバーが混み合っています",
+          "when": "2025-01-31..2025-01-31",
+          "where": "混雑時にウェブ会話へ返る短いエラー。常時表示する見出しではない。正確な吹き出し位置・色はunverified。",
+          "sources": [
+            {
+              "url": "https://biz.chosun.com/en/en-it/2025/01/31/CA2MBEEGIVGSHNXUBMUWKCDBFU/",
+              "date": "2025-01-31",
+              "shows": "1月31日のウェブ会話で、混雑時にThe server is busy, please try again laterという返答や、連投時の待機通知が出たと報じる。常時表示ではない。"
+            },
+            {
+              "url": "https://status.deepseek.com/incidents/2328579188430287",
+              "date": "2025-01-27",
+              "shows": "公式の履歴は1月27日から2月8日のウェブ/API性能低下を記録する。エラーの正確な文面は報道資料が根拠。現在の構成要素名を当時のモデル名と見なさない。"
+            }
+          ],
+          "text_en": "Server is busy",
+          "where_en": "Brief error returned to web chat during congestion. Exact bubble placement and color are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-01-31",
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news250120/",
+            "date": "2025-01-20",
+            "shows": "公式ウェブでDeepThinkからR1を使えることを案内する。"
+          },
+          {
+            "url": "https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/",
+            "date": "2025-02-06",
+            "shows": "元記事は1月29日、表示上の更新日は2月6日。下部入力の下にDeepThink (R1)とSearchを置く。スマホとウェブを併記しており、左右の寸法の根拠にしない。"
+          }
+        ]
+      },
+      "trend": "モデルの切替を入力の下の短いモード操作として置く（出典：https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/）。",
+      "unverified": [
+        "当月の全日で同一の表示だったか、既定の通常モデル名、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model switching uses a compact mode control below the input. (https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/)",
+      "unverified_en": [
+        "unverified (consistent display throughout the month, default regular model name, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "deepseek-2025-08",
+      "model_switch": {
+        "where": "other",
+        "label": "深く考える（DeepThink）",
+        "steps": [
+          "DeepThinkを押し、V3.1の思考あり／なしを切り替える。",
+          "公式発表はボタン名を示すが、周囲の正確な位置はunverified。別モデルを二つ並べるメニューを作らない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news250821/",
+            "date": "2025-08-21",
+            "shows": "同じV3.1の思考あり／なしをDeepThinkボタンで切り替える。UIの周辺座標と固定のモデル一覧は説明しない。"
+          }
+        ],
+        "steps_en": [
+          "Click DeepThink to toggle V3.1 reasoning on or off.",
+          "The official announcement names the button. Its exact surrounding placement is unverified. Use a mode toggle."
+        ],
+        "label_en": "DeepThink"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "ひとつのモデルで考え方を切替",
+          "when": "2025-08-21..2025-08-21",
+          "where": "DeepThinkボタンの役割の短い説明。公式発表から確認できる機能であり、同じ文面の常設バナーはunverified。",
+          "sources": [
+            {
+              "url": "https://api-docs.deepseek.com/news/news250821/",
+              "date": "2025-08-21",
+              "shows": "同じV3.1の思考あり／なしをDeepThinkボタンで切り替える。UIの周辺座標と固定のモデル一覧は説明しない。"
+            }
+          ],
+          "text_en": "Switch reasoning modes within one model",
+          "where_en": "Brief description of the DeepThink button's role from the official announcement. A matching permanent banner is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-08-21",
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news250821/",
+            "date": "2025-08-21",
+            "shows": "同じV3.1の思考あり／なしをDeepThinkボタンで切り替える。UIの周辺座標と固定のモデル一覧は説明しない。"
+          }
+        ]
+      },
+      "trend": "別モデルを選ぶ代わりに、ひとつのモデルの考え方を切り替える（出典：https://api-docs.deepseek.com/news/news250821/）。",
+      "unverified": [
+        "ボタンの位置、候補一覧、既定モード、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "A single model offers switchable reasoning modes. (https://api-docs.deepseek.com/news/news250821/)",
+      "unverified_en": [
+        "unverified (button location, option list, default mode, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "deepseek-2026-07",
+      "model_switch": {
+        "where": "other",
+        "label": "専門モード／速く答える（Expert Mode / Instant Mode）",
+        "steps": [
+          "会話画面の上部でExpert ModeかInstant Modeを選ぶ。",
+          "前者は考えた過程を表示する思考モード、後者は思考なしの速い応答。",
+          "上部にあることは確認できるが、ドロップダウンという形かどうかはunverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://api-docs.deepseek.com/news/news260424/",
+            "date": "2026-04-24",
+            "shows": "公式ウェブのExpert Mode / Instant Modeの入口を案内。これは二つのモード名で、モデル名のドロップダウンという説明ではない。"
+          },
+          {
+            "url": "https://www.techradar.com/pro/deepseek-ai-review",
+            "date": "2026-07-13",
+            "shows": "使用レビュー。Expert Modeと思考なしのInstant Modeを上部に示し、思考内容と手動のウェブ検索・文書添付を説明する。ドロップダウンの形や座標の数値は説明しない。"
+          }
+        ],
+        "steps_en": [
+          "Choose Expert Mode or Instant Mode at the top of the chat.",
+          "Expert Mode displays its reasoning process. Instant Mode gives fast replies with reasoning disabled.",
+          "The top placement is confirmed. A dropdown form is unverified."
+        ],
+        "label_en": "Expert Mode / Instant Mode"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "考えた過程を表示",
+          "when": "2026-07-13..2026-07-13",
+          "where": "Expert Modeで回答とともに示す思考内容。開閉操作のラベルと位置はunverified。",
+          "sources": [
+            {
+              "url": "https://www.techradar.com/pro/deepseek-ai-review",
+              "date": "2026-07-13",
+              "shows": "使用レビュー。Expert Modeと思考なしのInstant Modeを上部に示し、思考内容と手動のウェブ検索・文書添付を説明する。ドロップダウンの形や座標の数値は説明しない。"
+            }
+          ],
+          "text_en": "Show the reasoning process",
+          "where_en": "Reasoning shown with the answer in Expert Mode. Expand/collapse label and location are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-07-13",
+        "sources": [
+          {
+            "url": "https://www.techradar.com/pro/deepseek-ai-review",
+            "date": "2026-07-13",
+            "shows": "使用レビュー。Expert Modeと思考なしのInstant Modeを上部に示し、思考内容と手動のウェブ検索・文書添付を説明する。ドロップダウンの形や座標の数値は説明しない。"
+          }
+        ]
+      },
+      "trend": "上部に速さと思考の違いを示すモード操作を置く（出典：https://www.techradar.com/pro/deepseek-ai-review）。",
+      "unverified": [
+        "正確な操作の形と座標、モデル候補の固有名の一覧、既定、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Mode controls at the top distinguish speed and reasoning. (https://www.techradar.com/pro/deepseek-ai-review)",
+      "unverified_en": [
+        "unverified (exact control form and coordinates, named model list, default, browser name and OS version)."
+      ]
+    }
+  ]
+}

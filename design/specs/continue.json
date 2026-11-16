@@ -1,0 +1,1103 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "continue",
+  "name": "Continue",
+  "vendor": "Continue Dev, Inc.",
+  "kind": "ide-extension",
+  "versions": [
+    {
+      "id": "continue-2023-06",
+      "from": "2023-06",
+      "to": "2024-05",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "選択範囲のコード。変更は編集面へ反映"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "展開・折り畳みできる作業ステップ",
+            "指示の待ち列",
+            "入力欄とContinueボタン"
+          ]
+        },
+        {
+          "name": "拡張欄のフッター",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "Collect Data",
+            "モデルの二者切替",
+            "Clear・Docs・Feedback"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "続ける",
+          "where": "入力の後のContinueボタン",
+          "purpose": "指示を送って処理を進める"
+        },
+        {
+          "label": "モデル切替",
+          "where": "フッター",
+          "purpose": "gpt-4とgpt-3.5-turboを切り替える"
+        },
+        {
+          "label": "データ収集",
+          "where": "フッターのCollect Data",
+          "purpose": "データ収集の設定を変える"
+        },
+        {
+          "label": "再試行",
+          "where": "作業ステップのRetry",
+          "purpose": "そのステップをやり直す"
+        },
+        {
+          "label": "消去",
+          "where": "フッターのClear",
+          "purpose": "履歴を消す"
+        }
+      ],
+      "conversation": {
+        "user": "指示と作業のステップを縦に表示。後から送る指示は待ち列へ並ぶ",
+        "assistant": "文章の回答と作業をステップ内へ表示し、展開・削除・再試行できる",
+        "tool_calls": "作業ステップの一部として扱う。現在のAgentの道具カードとは違う",
+        "streaming": "エディタへの変更を順に反映する。会話欄の厳密な生成中表示は未確認"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#1e1e1e",
+          "panel": "#1e1e1e",
+          "text": "#ffffff",
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "dark.bg": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css",
+          "dark.panel": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css",
+          "dark.text": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Mona Sans, Arial, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 5,
+        "density": "compact",
+        "input_shape": "角の丸い指示の枠とContinueボタン。5pxはCSSの既定変数"
+      },
+      "empty_state": "歓迎の案内を作業ステップとして表示。初回のサーバー準備中は読込表示。下に入力・Continue・設定フッター。",
+      "distinctive": [
+        "会話より作業ステップの履歴が中心",
+        "入力後のContinueボタン",
+        "常設のCollect Dataスイッチ",
+        "モデルの二者切替とClear・Docs・Feedback"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx",
+          "kind": "oss-source",
+          "date": "2023-06-30",
+          "shows": "regions・controls・conversation・empty_state: ステップの履歴、待ち列、指示入力とContinue、下のCollect Data、gpt-4/gpt-3.5-turbo二者切替、Clear/Docs/Feedback。初期の案内ステップとサーバー準備表示。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/components/StepContainer.tsx",
+          "kind": "oss-source",
+          "date": "2023-06-30",
+          "shows": "conversation・controls: 展開できる作業ステップ、Delete/Retry操作。単純な左右の吹き出し会話ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css",
+          "kind": "oss-source",
+          "date": "2023-06-30",
+          "shows": "typography・palette・shape: 本文Mona Sans/Arial。濃色背景rgb(30,30,30)、文字white、既定角丸変数5px。製品の全テーマや全ての部品の角丸を一律とする根拠ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/components/ContinueButton.tsx",
+          "kind": "oss-source",
+          "date": "2023-06-30",
+          "shows": "controls・shape: 入力後のContinueボタン。背景は単色のブランド色ではなくグラデーションで定義されるため、accentに単一値を採用しない。"
+        },
+        {
+          "url": "https://www.ycombinator.com/launches/J6f-continue-the-easiest-way-to-code-with-any-llm",
+          "kind": "blog",
+          "date": null,
+          "shows": "創設者の公開紹介文。選択コードから文脈を集め、サイドバーで質問するか、エディタへ変更を順に反映する。ページの公開日を確認できず、6月30日のボタン・モデル一覧をここから逆算しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/package.json",
+          "kind": "oss-source",
+          "date": "2023-06-30",
+          "shows": "固定ソースの拡張番号0.0.91、publisher Continue、name continue。"
+        }
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "continue-2024-05",
+      "from": "2024-05",
+      "to": "2024-11",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "New Session",
+          "purpose": "会話を新しくする"
+        },
+        {
+          "label": "コード全体を使う",
+          "where": "入力ツールバーのUse codebase",
+          "purpose": "プロジェクトの情報を使って送る"
+        },
+        {
+          "label": "送信",
+          "where": "入力ツールバーのEnter",
+          "purpose": "依頼を送る"
+        },
+        {
+          "label": "中止",
+          "where": "生成中のCancel",
+          "purpose": "生成を止める"
+        }
+      ],
+      "conversation": {
+        "user": "縦の履歴内で質問を表示し、再編集できる",
+        "assistant": "回答文とコードを縦の履歴に表示する",
+        "tool_calls": null,
+        "streaming": "生成中はCancelで中止できる"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 5,
+        "density": "compact",
+        "input_shape": "文脈付き入力と下のツールバー。5pxはCSSの既定変数"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "IDEの会話欄とコード編集を併用",
+        "文脈付きの依頼欄とUse codebase",
+        "New SessionとCancel",
+        "既定はOS標準の本文書体"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/continuedev/continue/releases/tag/v0.9.132-vscode",
+          "kind": "release-notes",
+          "date": "2024-05-15",
+          "shows": "固定リリースの公開日とタグ。注: タグ内のpackage.jsonは0.9.93を記載しており、タグ番号と一致しない。配布バイナリを実行していない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/pages/gui.tsx",
+          "kind": "oss-source",
+          "date": "2024-05-15",
+          "shows": "regions・controls・conversation: 上から会話履歴と再編集可能な質問、下に文脈付きの入力、New Session、生成中のCancel。IDE内の表示であり独立したIDE製品ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2024-05-15",
+          "shows": "controls・shape: 入力に添付操作、Use codebase、Enter。Chat/Plan/Agentの3ボタンではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/mainInput/ContinueInputBox.tsx",
+          "kind": "oss-source",
+          "date": "2024-05-15",
+          "shows": "shape: 枠内に入力・文脈・ツールバーを組む。既定角丸の変数を利用する。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2024-05-15",
+          "shows": "typography・shape・palette: system-uiの本文、既定角丸変数5px。エディタの背景・文字変数を使う。CSSの初期値を実効テーマ色とみなさない。"
+        },
+        {
+          "url": "https://dev.to/maximsaplin/continuedev-the-swiss-army-knife-that-sometimes-fails-to-cut-4gg3",
+          "kind": "press",
+          "date": "2024-09-10",
+          "shows": "利用者自身の長い体験記。5月に導入したと述べ、会話欄を自分で右へ移したこと、コード全体・URL・ファイルの文脈を確認。個人の体験記で、専門媒体の記事や5月15日の固定画面ではない。配色の根拠にしない。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "continue-2024-11",
+      "from": "2024-11",
+      "to": "2025-02",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モデル選択",
+          "where": "入力ツールバー",
+          "purpose": "会話のモデルを選ぶ"
+        },
+        {
+          "label": "コード全体を使う",
+          "where": "Use codebase",
+          "purpose": "コード全体の情報を使う"
+        },
+        {
+          "label": "画像を添付",
+          "where": "対応モデルの入力ツールバー",
+          "purpose": "画像を指示に加える"
+        },
+        {
+          "label": "新しい会話",
+          "where": "New Session",
+          "purpose": "別の会話を始める"
+        }
+      ],
+      "conversation": {
+        "user": "入力の背景色を使った質問側の区画。縦の履歴から再編集できる",
+        "assistant": "拡張欄の背景を使った応答区画",
+        "tool_calls": null,
+        "streaming": "回答を生成中はCancelを表示する"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文脈・画像とモデル選択を伴う入力欄"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話・行内補完・編集中の変更を分ける",
+        "会話入力付近のモデル選択",
+        "質問と応答でホストの背景変数を使い分ける"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20241112175452id_/https://docs.continue.dev/",
+          "kind": "archive",
+          "date": "2024-11-12",
+          "shows": "regions・distinctive: 公式説明書の保存版。Chatはサイドバー、Autocompleteは編集面の行内候補、Editは編集中ファイルを変える操作。ログイン前の説明書で、アプリの左右固定や二つの常設モデル選択は示さない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/pages/gui/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2024-11-10",
+          "shows": "regions・controls・conversation: 会話履歴と下部の主入力、New Session、Cancel、質問の再編集。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2024-11-10",
+          "shows": "controls: 入力ツールバー内のModelSelect、画像添付、Use codebase、Enter。Tab補完用モデルとの常設二連セレクタはこの部品にない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/gui/StepContainer.tsx",
+          "kind": "oss-source",
+          "date": "2024-11-10",
+          "shows": "conversation・palette: 質問側はvscInputBackground、応答側はvscBackground。色はIDEから渡される。履歴は縦に並ぶ。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2024-11-10",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "continue-2025-02",
+      "from": "2025-02",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "拡張欄の会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "質問・応答・道具の実行結果"
+          ]
+        },
+        {
+          "name": "主入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "モデル・文脈・画像",
+            "Toolsの有効化"
+          ]
+        },
+        {
+          "name": "編集モード",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Edit Modeの対象コードカードと編集操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "道具を有効にする",
+          "where": "入力下のEnable tool usage",
+          "purpose": "モデルに道具を使わせる"
+        },
+        {
+          "label": "道具の設定",
+          "where": "Toolsのメニュー",
+          "purpose": "使う道具や許可方針を選ぶ"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力下のModelSelect",
+          "purpose": "対応するモデルへ切り替える"
+        },
+        {
+          "label": "送信",
+          "where": "入力のEnter",
+          "purpose": "依頼を送る"
+        }
+      ],
+      "conversation": {
+        "user": "過去の質問を入力欄として再編集できる",
+        "assistant": "回答と道具の実行結果を履歴へ並べる",
+        "tool_calls": "会話内に道具の実行と結果。Toolsで有効化し、道具ごとの方針を設定する",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文脈を添える入力の下にモデルとToolsを並べる"
+      },
+      "empty_state": "空の会話に主入力。導入の案内は利用状態による。編集モードでは対象コードのカードが現れる。",
+      "distinctive": [
+        "独立したToolsの有効化操作",
+        "道具別の利用方針",
+        "Edit Modeの対象コードカード",
+        "Chat・Plan・Agentの常設タブにはしない"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/pages/gui/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2025-02-28",
+          "shows": "regions・controls・conversation・empty_state: チャット、Edit Modeのコードカード、会話の再編集、道具の実行結果、主入力。空の会話の案内や導入は設定・利用状態による。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2025-02-28",
+          "shows": "controls・regions: 入力下のModelSelect、画像、文脈、道具を有効にする操作、Enter。Edit時はTools利用不可。現行のModeSelectを遡って付けない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar/ToggleToolsButton.tsx",
+          "kind": "oss-source",
+          "date": "2025-02-28",
+          "shows": "controls・distinctive: Enable tool usage、Tools、道具別の利用方針。モデルが道具を使えない時や編集時の説明。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2025-02-28",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        },
+        {
+          "url": "https://web.archive.org/web/20250203053443id_/https://docs.continue.dev/",
+          "kind": "archive",
+          "date": "2025-02-03",
+          "shows": "regions・distinctiveの月初の背景: IDE内のサイドバーチャット、行内補完、編集中の変更という公式の区分。月末のTools操作をこの保存文書だけから断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/extensions/vscode/package.json",
+          "kind": "oss-source",
+          "date": "2025-02-28",
+          "shows": "月末の固定ソースは拡張番号1.1.3。1.0の発表時と同一ビルドとは限らない。"
+        }
+      ],
+      "confidence": 0.89
+    },
+    {
+      "id": "continue-2025-10",
+      "from": "2025-10",
+      "to": "2026-05",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モード選択",
+          "where": "入力下のメニュー",
+          "purpose": "Chat・Plan・Agentを切り替える"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力下の選択欄",
+          "purpose": "会話に使うモデルを選ぶ"
+        },
+        {
+          "label": "文脈を追加",
+          "where": "入力付近",
+          "purpose": "参照するコードなどを添える"
+        },
+        {
+          "label": "送信",
+          "where": "入力のEnter",
+          "purpose": "依頼を送る"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "ひとつの入力枠の下にモード選択とモデル選択を置く"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Chat・Plan・Agentの選択メニュー",
+        "入力付近でモードとモデルを選ぶ",
+        "IDE拡張とCLI・Hubは別の画面"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/continuedev/continue/releases/tag/v1.3.19-vscode",
+          "kind": "release-notes",
+          "date": "2025-10-15",
+          "shows": "タグと公開日、pre-release指定を確認。ソースのpackage.jsonも1.3.19。安定版やCLI1.5.0の画面と混同しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "controls・distinctive: 入力ツールバー用のモード選択メニュー。Chat/Plan/Agentを選ぶ。横並びの常設3タブではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "regions・controls: 入力下の同じツールバーにModeSelectとModelSelect、文脈・画像、送信。独立したPR Checksナビゲーションはこの部品にない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2025-10-15",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        },
+        {
+          "url": "https://web.archive.org/web/20251001163706id_/https://docs.continue.dev/",
+          "kind": "archive",
+          "date": "2025-10-01",
+          "shows": "regions・distinctiveの範囲: 公式説明書がCLI、IDE拡張、Hubを別に案内。IDEにはAgent/Chat/Edit/Autocomplete。Hubの設定やCLIの画面をIDEの常設パネルに描かない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "continue-2026-05",
+      "from": "2026-05",
+      "to": "2026-06",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モード選択",
+          "where": "入力下のメニュー",
+          "purpose": "Chat・Plan・Agentを切り替える"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力下の選択欄",
+          "purpose": "会話に使うモデルを選ぶ"
+        },
+        {
+          "label": "文脈を追加",
+          "where": "入力付近",
+          "purpose": "参照するコードなどを添える"
+        },
+        {
+          "label": "送信",
+          "where": "入力のEnter",
+          "purpose": "依頼を送る"
+        },
+        {
+          "label": "設定を選ぶ",
+          "where": "AssistantAndOrgListboxの選択一覧",
+          "purpose": "設定やルール・道具の設定へ進む"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "公開ソース上はモードとモデルのある依頼欄。5月の配布版の実画面は未確認"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "公開ソースにはモード・モデル選択が残る",
+        "設定一覧からルールや道具の設定へ進む",
+        "PR自動確認の説明をIDEの常設カードへ置き換えない"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2026-04-17",
+          "shows": "regions・controls: 5月12日以前に確認した公開ソース。入力下のModeSelectとModelSelect、文脈・添付・Enter。5月12日に配布されたビルドの証明ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/ModeSelect/ModeSelect.tsx",
+          "kind": "oss-source",
+          "date": "2026-04-17",
+          "shows": "controls・distinctive: Chat/Plan/Agentのモード選択。旧来のモード構成が残る公開ソース。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/AssistantAndOrgListbox/index.tsx",
+          "kind": "oss-source",
+          "date": "2026-04-17",
+          "shows": "controls: 設定の一覧・選択、ルールと道具の設定へ進む部品。存在するソースだけでHubのクラウドサービスが5月に稼働したと判断しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2026-04-17",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/README.md",
+          "kind": "official-doc",
+          "date": "2026-04-17",
+          "shows": "distinctiveの区別: 当時の説明の中心はGitHubのPRを自動確認するchecks。これがIDE会話欄のルール表や専用バッジを証明するわけではない。"
+        }
+      ],
+      "confidence": 0.58
+    },
+    {
+      "id": "continue-2026-06",
+      "from": "2026-06",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モード選択",
+          "where": "入力下のメニュー",
+          "purpose": "Chat・Plan・Agentを切り替える"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力下の選択欄",
+          "purpose": "会話に使うモデルを選ぶ"
+        },
+        {
+          "label": "文脈を追加",
+          "where": "入力付近",
+          "purpose": "参照するコードなどを添える"
+        },
+        {
+          "label": "送信",
+          "where": "入力のEnter",
+          "purpose": "依頼を送る"
+        }
+      ],
+      "conversation": {
+        "user": "会話の質問として表示し、編集できる",
+        "assistant": "回答とコードを会話に表示する",
+        "tool_calls": "会話内で道具の処理を扱う",
+        "streaming": "生成中は中止できる"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "入力下のモード・モデル選択、文脈・画像添付・送信"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "最終2.0.0のIDE拡張を別版として記録",
+        "Chat・Plan・Agentの選択は残る",
+        "公式の後日説明では認証と匿名の利用情報送信を除去"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
+          "kind": "release-notes",
+          "date": "2026-06-19",
+          "shows": "v2.0.0-vscodeの公開日。固定タグのpackage.jsonは2.0.0。2025年2月の版ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "regions・controls: 入力ツールバーにModeSelect/ModelSelect、文脈・画像添付・送信が残る。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/ModeSelect/ModeSelect.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "controls・distinctive: Chat/Plan/Agentのモード選択メニュー。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/pages/gui/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "regions・conversation・empty_state: 会話の履歴、文脈付き入力、生成中の停止、New Session。編集不可の会話やArchiveバナーを追加する根拠はない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+          "kind": "official-doc",
+          "date": "2026-07-21",
+          "shows": "distinctive・修正事項: 後日の公式説明でリポジトリの保守終了・読み取り専用化、最終2.0.0、匿名の利用情報の送信と認証の除去を確認。GitHubリポジトリの状態であり、IDEアプリの読み取り専用バナーとは書かれていない。"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "continue-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "IDEのコード編集",
+          "position": null,
+          "size": null,
+          "contents": [
+            "ファイルのコードと補完候補。ホスト側の領域"
+          ]
+        },
+        {
+          "name": "Continue拡張欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "文脈付きの入力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "モード選択",
+          "where": "入力下のメニュー",
+          "purpose": "Chat・Plan・Agentを切り替える"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力下の選択欄",
+          "purpose": "会話に使うモデルを選ぶ"
+        },
+        {
+          "label": "文脈を追加",
+          "where": "入力付近",
+          "purpose": "参照するコードなどを添える"
+        },
+        {
+          "label": "送信",
+          "where": "入力のEnter",
+          "purpose": "依頼を送る"
+        }
+      ],
+      "conversation": {
+        "user": "最終2.0.0ソースの会話表示。11月固有の変更は未確認",
+        "assistant": "最終2.0.0ソースの応答表示。11月固有の変更は未確認",
+        "tool_calls": "最終ソースは会話内で道具の処理を扱う",
+        "streaming": "最終ソースは生成を中止できる"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "確認できた最終2.0.0の入力を基準にする。11月専用画面は未確認"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "公開リポジトリは読み取り専用と公式説明",
+        "確認できた最終版の会話とモード選択を基準にする",
+        "アプリ内の読み取り専用バナーは未確認"
+      ],
+      "must_not_copy": [
+        "Continueのロゴ・アプリアイコン・独自の印",
+        "他社のモデル・IDEのロゴやアイコン",
+        "公式画面・宣伝画像・同梱の書体ファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md",
+          "kind": "official-doc",
+          "date": "2026-07-21",
+          "shows": "distinctive・修正事項: 後日の公式説明でリポジトリの保守終了・読み取り専用化、最終2.0.0、匿名の利用情報の送信と認証の除去を確認。GitHubリポジトリの状態であり、IDEアプリの読み取り専用バナーとは書かれていない。"
+        },
+        {
+          "url": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
+          "kind": "release-notes",
+          "date": "2026-06-19",
+          "shows": "v2.0.0-vscodeの公開日。固定タグのpackage.jsonは2.0.0。2025年2月の版ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "regions・controls: 入力ツールバーにModeSelect/ModelSelect、文脈・画像添付・送信が残る。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/components/ModeSelect/ModeSelect.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "controls・distinctive: Chat/Plan/Agentのモード選択メニュー。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/pages/gui/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "regions・conversation・empty_state: 会話の履歴、文脈付き入力、生成中の停止、New Session。編集不可の会話やArchiveバナーを追加する根拠はない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/index.css",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "typography・palette: 本文はsystem-uiから始まるOS標準書体。背景と文字はIDEから渡される変数。InterやJetBrains Monoのfont-face宣言だけを、本文の実効書体と断定しない。実際の色は利用者のテーマ次第。"
+        }
+      ],
+      "confidence": 0.72
+    }
+  ],
+  "corrections": [
+    "kindは独立IDEではなくide-extension。創設者はコードを選んでサイドバーへ文脈を渡す使い方を説明する。ホストIDEの外観とContinueの拡張欄を区別する。https://www.ycombinator.com/launches/J6f-continue-the-easiest-way-to-code-with-any-llm",
+    "2023年6月は展開できる作業ステップと入力後のContinueボタンが特徴。描画コードの@codebase・@docs・/editの常設上部バーは当日のソースで確認できない。https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/tabs/gui.tsx",
+    "2024年5月のリリースタグv0.9.132-vscodeは5月15日だが、タグ内package.jsonは0.9.93。タグから画面を記録し、当日のdefault branchの0.9.94と混ぜない。https://github.com/continuedev/continue/releases/tag/v0.9.132-vscode https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/extensions/vscode/package.json",
+    "2024年5月の描画コードにあるCodestralの固定ボタンや常設config.json欄は未確認。入力ツールバーに確認できるのは添付・Use codebase・Enter等。https://raw.githubusercontent.com/continuedev/continue/v0.9.132-vscode/gui/src/components/mainInput/InputToolbar.tsx",
+    "2024年11月の@Docs索引表、340 chunks、FIM 19ms、常設二連のChat/Tabモデル選択はunverified。モデル選択は入力ツールバーにあるが、補完モデルの常設選択とは別。https://raw.githubusercontent.com/continuedev/continue/544c5d36823e04a1edc86c698594e2f5d589266e/gui/src/components/mainInput/InputToolbar.tsx",
+    "2025年2月の描画に後年のCLI・最終2.0.0・認証除去・Chat/Plan/Agentの3タブを入れない。月末1.1.3の入力はModelSelectとToggleToolsButton。https://raw.githubusercontent.com/continuedev/continue/52dc6f961d88b23f718ad9db8776913179c3d7c8/gui/src/components/mainInput/InputToolbar.tsx",
+    "2025年10月のChat/Plan/Agentは入力下のメニュー。Hub Blocks、PR Checks、CLIの画面を同じIDEの常設ナビゲーションにする根拠はない。https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/components/ModeSelect/ModeSelect.tsx https://web.archive.org/web/20251001163706id_/https://docs.continue.dev/",
+    "2026年5月のCloud/Local Rulesの固定表や適用済みルールの常設バッジはunverified。4月17日までに確認した部品の存在と、5月12日の配布版・Hub稼働を混同しない。https://raw.githubusercontent.com/continuedev/continue/cb273098d968906d25ee737b454f0b5f13ea2482/gui/src/components/AssistantAndOrgListbox/index.tsx",
+    "リポジトリの読み取り専用化をIDE内のArchive: Read-Onlyバナーへ変換しない。最終版には会話・送信・モード選択の実装が残る。https://raw.githubusercontent.com/continuedev/continue/5522c6f44ca0ac3528b37244818fbfa39b5af470/README.md https://raw.githubusercontent.com/continuedev/continue/v2.0.0-vscode/gui/src/pages/gui/Chat.tsx",
+    "2023年のMona Sansを現行版へ一律に適用しない。後年の本文CSSはsystem-uiであり、Interのfont-face宣言だけでは本文の実効書体の証明にならない。ホストの色変数の初期値も全利用者の実画面色ではない。https://raw.githubusercontent.com/continuedev/continue/v1.3.19-vscode/gui/src/index.css"
+  ]
+}

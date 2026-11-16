@@ -1,0 +1,40 @@
+/* 担当画面だけに適用する、中立的な役割表示。 */
+.surface.claude .rights-l1-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* 製品名にも周囲の操作画面と同じ書体を使う。 */
+.surface.claude .native-header > strong {
+  font-family: inherit;
+}
+
+/* 旧会話画面の22pxの枠を、中立的な役割表示に置き換える。 */
+.surface.chatgpt:is(.first-chatgpt, .edition-2023) .message.assistant .message-label::before {
+  content: 'AI';
+  box-sizing: border-box;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 9px;
+}
+
+/* 回答の進行を表すカーソルは通常の縦線にする。 */
+.surface.gemini .message.assistant:is(.is-thinking, .is-streaming)[data-cursor="gemini-glow"] .answer-text::after {
+  content: '▏';
+  animation: none;
+}

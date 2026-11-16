@@ -1,0 +1,68 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "pi",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "pi-agent",
+      "publisher": "pi",
+      "kind": "agent-instructions-file",
+      "title": "pi が指示ファイルを読む仕組み",
+      "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "earendil-works--pi"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "instruction-file",
+          "summary_ja": "公式の読み込み処理では AGENTS.md などの候補から、その場所で使う指示ファイルを選びます。",
+          "when_ja": "pi が読む指示ファイルを公式の実装で確かめたいとき。",
+          "summary_en": "The official loader selects instruction files for a location from candidates such as AGENTS.md.",
+          "when_en": "When checking pi instruction loading against the official implementation."
+        }
+      ],
+      "sources": [
+        "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "How pi loads instruction files"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "pi-skills",
+      "publisher": "pi",
+      "kind": "agent-instructions-file",
+      "title": "pi の Skills",
+      "url": "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": [
+          "earendil-works--pi"
+        ]
+      },
+      "techniques": [
+        {
+          "technique_id": "skills",
+          "summary_ja": "名前と説明を持つ手順の文書を用意し、必要なときに詳しい内容を読ませます。",
+          "when_ja": "特定の仕事に必要な手順を再利用したいとき。",
+          "summary_en": "Prepare procedure documents with names and descriptions so detailed instructions can be read on demand.",
+          "when_en": "When reusing procedures for particular tasks."
+        }
+      ],
+      "sources": [
+        "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "pi Skills"
+    }
+  ]
+}

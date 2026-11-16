@@ -1,0 +1,1426 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "pi-coding-agent",
+  "name": "Pi Coding Agent",
+  "vendor": "Mario Zechner / Earendil",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "earendil-works--pi-2025-12-0",
+      "from": "2025-12",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "版番号と主なキー操作の案内"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "端末の通常の履歴に会話を積み重ねる。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、文字の処理量、費用、会話の残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄から開く一覧",
+          "purpose": "モデルを探して選ぶ"
+        },
+        {
+          "label": "/theme",
+          "where": "入力欄から開く一覧",
+          "purpose": "明るい配色・暗い配色・追加の配色を選ぶ"
+        },
+        {
+          "label": "/branch",
+          "where": "入力欄から開く過去の入力一覧",
+          "purpose": "選んだ入力の手前から会話を分ける"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答や道具に渡す引数の到着に合わせて同じ表示を更新する。道具の結果本文が逐次届くかは、この初期版では未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#6c6c6c",
+          "accent": "#5f8787",
+          "border": "#5f87af",
+          "user_bubble": "#e8e8e8"
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#808080",
+          "accent": "#8abeb7",
+          "border": "#5f87ff",
+          "user_bubble": "#343541"
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "版番号とキー操作の案内の下に空の編集欄があり、最下部にモデルや作業フォルダーの情報が出る。",
+      "distinctive": [
+        "端末の通常の履歴に会話を積み重ねる。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "初期の通常表示。モデル選択と配色選択は入力欄から開く。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/README.md",
+          "kind": "official-doc",
+          "date": "2025-12-02",
+          "shows": "v0.12.0 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/tui/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2025-12-02",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/tui/user-message.ts",
+          "kind": "oss-source",
+          "date": "2025-12-02",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/tui/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2025-12-02",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2025-12-02",
+          "shows": "palette.dark：役割ごとの文字色と背景色。画面全体の背景を設定する値はなく、HTML 書き出し用の背景は流用しない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.12.0/packages/coding-agent/src/theme/light.json",
+          "kind": "oss-source",
+          "date": "2025-12-02",
+          "shows": "palette.light：固定 light の文字色、枠色、利用者の帯の色。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.12.0",
+          "kind": "release-notes",
+          "date": "2025-12-02",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        },
+        {
+          "url": "https://mariozechner.at/posts/2025-11-30-pi-coding-agent/",
+          "kind": "blog",
+          "date": "2025-11-30",
+          "shows": "作者による初期設計の説明。通常の端末履歴を使う方式、文字中心の縦並び、差分更新の根拠。11月30日の説明なので12月2日版の操作は固定版の資料を優先。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "earendil-works--pi-2026-06-1",
+      "from": "2026-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "端末の通常の履歴に会話を積み重ねる。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や推論の強さなどを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#1f2328",
+          "muted": "#6c6c6c",
+          "accent": "#5a8080",
+          "border": "#547da7",
+          "user_bubble": "#e8e8e8"
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": "#d4d4d4",
+          "muted": "#808080",
+          "accent": "#8abeb7",
+          "border": "#5f87ff",
+          "user_bubble": "#343541"
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "端末の通常の履歴に会話を積み重ねる。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "左右の余白を設定できる。起動時の読み込み一覧と下部の使用量表示を持つ。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/README.md",
+          "kind": "official-doc",
+          "date": "2026-06-30",
+          "shows": "v0.80.3 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-06-30",
+          "shows": "palette の既定と表示設定。端末の通常の履歴に会話を積み重ねる。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-06-30",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-06-30",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-06-30",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-06-30",
+          "shows": "palette.dark：役割ごとの文字色と背景色。画面全体の背景を設定する値はなく、HTML 書き出し用の背景は流用しない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-06-30",
+          "shows": "palette.light：固定 light の文字色、枠色、利用者の帯の色。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.80.3",
+          "kind": "release-notes",
+          "date": "2026-06-30",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "earendil-works--pi-2026-07-2",
+      "from": "2026-07",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "端末の通常の履歴に会話を積み重ねる。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や推論の強さなどを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#1f2328",
+          "muted": "#6c6c6c",
+          "accent": "#5a8080",
+          "border": "#547da7",
+          "user_bubble": "#e8e8e8"
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": "#d4d4d4",
+          "muted": "#808080",
+          "accent": "#8abeb7",
+          "border": "#5f87ff",
+          "user_bubble": "#343541"
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "端末の通常の履歴に会話を積み重ねる。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "基本の領域と青緑の配色は6月版と共通。新しい専用ペインへの変更は確認できない。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/README.md",
+          "kind": "official-doc",
+          "date": "2026-07-29",
+          "shows": "v0.83.0 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-07-29",
+          "shows": "palette の既定と表示設定。端末の通常の履歴に会話を積み重ねる。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-07-29",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-07-29",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-07-29",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-07-29",
+          "shows": "palette.dark：役割ごとの文字色と背景色。画面全体の背景を設定する値はなく、HTML 書き出し用の背景は流用しない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.83.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-07-29",
+          "shows": "palette.light：固定 light の文字色、枠色、利用者の帯の色。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.83.0",
+          "kind": "release-notes",
+          "date": "2026-07-29",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "earendil-works--pi-2026-08-3",
+      "from": "2026-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や表示方法を選ぶ。通常表示と全画面表示も切り替えられる"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#1f2328",
+          "muted": "#6c6c6c",
+          "accent": "#5a8080",
+          "border": "#547da7",
+          "user_bubble": "#e8e8e8"
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": "#d4d4d4",
+          "muted": "#808080",
+          "accent": "#8abeb7",
+          "border": "#5f87ff",
+          "user_bubble": "#343541"
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "通常表示と追加の全画面表示を切り替えられる。全画面側は会話のスクロールバーと選択コピーを持つ。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/README.md",
+          "kind": "official-doc",
+          "date": "2026-08-28",
+          "shows": "v0.84.4 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-08-28",
+          "shows": "palette の既定と表示設定。通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-08-28",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-08-28",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-08-28",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-08-28",
+          "shows": "palette.dark：役割ごとの文字色と背景色。画面全体の背景を設定する値はなく、HTML 書き出し用の背景は流用しない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.84.4/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-08-28",
+          "shows": "palette.light：固定 light の文字色、枠色、利用者の帯の色。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.84.4",
+          "kind": "release-notes",
+          "date": "2026-08-28",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "earendil-works--pi-2026-09-4",
+      "from": "2026-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や表示方法を選ぶ。通常表示と全画面表示も切り替えられる"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "端末の配色から色を作る system が既定。固定の dark/light は別に選べる。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/docs/usage.md",
+          "kind": "official-doc",
+          "date": "2026-09-30",
+          "shows": "v0.99.2 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-09-30",
+          "shows": "palette の既定と表示設定。通常表示が既定。設定で全画面表示にすると、入力欄と状態欄を下に固定できる。 system 配色は端末の設定に従うため固定 HEX は定めない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-09-30",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-09-30",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-09-30",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-09-30",
+          "shows": "palette.dark：固定 dark の色は OKHSL（色を数式で指定する形式）。HEX へは変換していないため値は null。これは既定の system 配色とは別。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-09-30",
+          "shows": "palette.light：固定 light の OKHSL 値。未変換の HEX 値は null。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v0.99.2",
+          "kind": "release-notes",
+          "date": "2026-09-30",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "earendil-works--pi-2026-10-5",
+      "from": "2026-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や表示方法を選ぶ。通常表示と全画面表示も切り替えられる"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "全画面表示が既定へ変わる。版番号と操作案内だけを残す起動設定もある。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/usage.md",
+          "kind": "official-doc",
+          "date": "2026-10-01",
+          "shows": "v1.0.0 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-10-01",
+          "shows": "palette の既定と表示設定。全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。 system 配色は端末の設定に従うため固定 HEX は定めない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-10-01",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-10-01",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-10-01",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-10-01",
+          "shows": "palette.dark：固定 dark の色は OKHSL（色を数式で指定する形式）。HEX へは変換していないため値は null。これは既定の system 配色とは別。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-10-01",
+          "shows": "palette.light：固定 light の OKHSL 値。未変換の HEX 値は null。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+          "kind": "release-notes",
+          "date": "2026-10-01",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "earendil-works--pi-2026-10-6",
+      "from": "2026-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や表示方法を選ぶ。通常表示と全画面表示も切り替えられる"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "全画面の基本配置は1.0.0と共通。選択画面を重ねて開いたときの復帰が修正された。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/usage.md",
+          "kind": "official-doc",
+          "date": "2026-10-21",
+          "shows": "v1.4.0 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-10-21",
+          "shows": "palette の既定と表示設定。全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。 system 配色は端末の設定に従うため固定 HEX は定めない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-10-21",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-10-21",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-10-21",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-10-21",
+          "shows": "palette.dark：固定 dark の色は OKHSL（色を数式で指定する形式）。HEX へは変換していないため値は null。これは既定の system 配色とは別。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.4.0/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-10-21",
+          "shows": "palette.light：固定 light の OKHSL 値。未変換の HEX 値は null。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.4.0",
+          "kind": "release-notes",
+          "date": "2026-10-21",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "earendil-works--pi-record",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "キー操作と、読み込んだ指示ファイル・追加機能の一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の入力、回答、道具の実行と結果が縦に続く",
+            "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "推論の強さに合わせて枠の色が変わる",
+            "選択操作中は同じ場所を選択一覧に置き換える"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "作業フォルダー、会話名、処理量と再利用量、費用、残り容量、モデル名"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る。作業中は次の応答へ指示を差し込む"
+        },
+        {
+          "label": "Ctrl+O",
+          "where": "会話内の道具の結果",
+          "purpose": "道具の出力を開く・たたむ"
+        },
+        {
+          "label": "Ctrl+T",
+          "where": "会話",
+          "purpose": "考えている内容の表示を切り替える"
+        },
+        {
+          "label": "/settings",
+          "where": "入力欄から開く設定一覧",
+          "purpose": "配色や表示方法を選ぶ。通常表示と全画面表示も切り替えられる"
+        }
+      ],
+      "conversation": {
+        "user": "端末の横幅に沿う、背景色付きの文字の帯。左右に余白があり、右寄せの小さな吹き出しではない。",
+        "assistant": "背景を塗らない本文。見出し、箇条書き、コードを端末の文字で表示し、考えている内容は別の文字色で区別する。",
+        "tool_calls": "道具名と結果を背景付きの領域で表示する。実行中・成功・失敗で背景を変え、長い出力は開閉できる。",
+        "streaming": "回答と実行結果の表示を更新する。作業中も入力できる。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.muted": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.accent": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.border": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "light.user_bubble": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "dark.text": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.muted": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.accent": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.border": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "dark.user_bubble": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の罫線を使う複数行の編集欄。ピクセル単位の角丸は端末では定義しない。"
+      },
+      "empty_state": "起動案内と読み込み済みの指示・追加機能を表示して入力を待つ。表示量は起動設定や利用者の追加機能で変わる。",
+      "distinctive": [
+        "全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。",
+        "利用者の入力は横長の色付き帯、回答は塗りのない本文。",
+        "入力枠の色が推論の強さを示す。",
+        "下部に作業場所・使用量・モデルをまとめる。",
+        "全画面の基本配置を継続。元の作業フォルダーがなくなった会話を、今のフォルダーへ分ける選択肢が加わる。"
+      ],
+      "must_not_copy": [
+        "Pi のロゴ、装飾した文字ロゴ、起動ロゴを文字の図形として描き直さない。",
+        "同梱の人物・キャラクター・イースターエッグ画像を使わない。",
+        "紹介画像、画面の画像、外部モデル提供者のロゴを使わない。製品名は通常の文字で示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/docs/usage.md",
+          "kind": "official-doc",
+          "date": "2026-11-10",
+          "shows": "v1.5.2 の操作資料。regions・controls・empty_state・入力中の操作の根拠。版の切り替わりごとに固定した資料を読み、最新の説明を過去へ流用していない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/docs/settings.md",
+          "kind": "official-doc",
+          "date": "2026-11-10",
+          "shows": "palette の既定と表示設定。全画面表示が既定。会話だけを上下に動かせ、入力欄と状態欄は下に残る。 system 配色は端末の設定に従うため固定 HEX は定めない。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/components/tool-execution.ts",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "conversation.tool_calls：実行中・成功・失敗の背景と、出力を開閉する実装。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/components/user-message.ts",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "conversation.user：背景付きの利用者メッセージ。ピクセルの吹き出しではなく端末の文字行。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "conversation.assistant：同じ固定版の実装で、背景を塗らない本文と別色の推論を確認。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "palette.dark：固定 dark の色は OKHSL（色を数式で指定する形式）。HEX へは変換していないため値は null。これは既定の system 配色とは別。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/src/modes/interactive/theme/light.json",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "palette.light：固定 light の OKHSL 値。未変換の HEX 値は null。"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi/releases/tag/v1.5.2",
+          "kind": "release-notes",
+          "date": "2026-11-10",
+          "shows": "版の公開日と差分の確認。すべてのリリースが画面の刷新を意味するわけではない。"
+        }
+      ],
+      "confidence": 0.86
+    }
+  ],
+  "corrections": [
+    "依頼の pi-coding-agent はカタログの earendil-works--pi に対応する。8個の既存版 ID を維持した。作者の初期説明と現在の公式リポジトリで同じ製品を確認：https://mariozechner.at/posts/2025-11-30-pi-coding-agent/ 、https://github.com/earendil-works/pi",
+    "初期版を常時全画面の端末画面として描かない。作者の初期設計は端末の通常履歴を使う方式：https://mariozechner.at/posts/2025-11-30-pi-coding-agent/",
+    "全画面表示の追加は v0.84.0（2026-08-06）、既定への変更は v1.0.0（2026-10-01）。8月版と10月版を同じ既定表示にしない：https://github.com/earendil-works/pi/releases/tag/v0.84.0 、https://github.com/earendil-works/pi/releases/tag/v1.0.0",
+    "テーマの export.pageBg / export.cardBg は HTML 書き出し用。端末の画面背景として塗らない：https://github.com/earendil-works/pi/blob/v0.80.3/packages/coding-agent/src/modes/interactive/theme/dark.json",
+    "9月の固定版では system 配色が既定で、固定 dark/light の色定義も OKHSL に変わっている。以前の青緑の HEX 値を11月版の既定色として固定しない：https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/docs/settings.md 、https://github.com/earendil-works/pi/blob/v0.99.2/packages/coding-agent/src/modes/interactive/theme/dark.json",
+    "独自の /answer・/todos・/review の画面は利用者の追加機能の例であり、標準の常設領域ではない：https://lucumr.pocoo.org/2026/1/31/pi/",
+    "書体は端末側の設定に従う。typography の代替書体は本調査側の再描画案で、製品指定ではない。radius_px は端末のため null、density は文字行の構成からの分類。版の日付は観測対象の固定版で、終了日が確認できないため to は null：https://github.com/earendil-works/pi/blob/v1.5.2/packages/coding-agent/docs/usage.md"
+  ]
+}

@@ -1,0 +1,1154 @@
+{
+  "schema": "memento.technique.v1",
+  "techniques": [
+    {
+      "id": "clear-goal",
+      "name_ja": "目的と条件をはっきり書く",
+      "explanation_ja": "何を、誰のために、どの条件で行うかを具体的に伝えます。",
+      "style_id": "plain-chat",
+      "publishers": [
+        "Alibaba / Qwen",
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Mistral",
+        "Moonshot",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Alibaba / Qwen",
+          "date": "2026-10-11",
+          "guide_ids": [
+            "alibaba-qwen-prompt-design"
+          ]
+        },
+        {
+          "publisher": "Amazon",
+          "date": null,
+          "guide_ids": [
+            "amazon-precision"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-prompting"
+          ]
+        },
+        {
+          "publisher": "Microsoft",
+          "date": null,
+          "guide_ids": [
+            "microsoft-copilot-tips",
+            "microsoft-prompting"
+          ]
+        },
+        {
+          "publisher": "Mistral",
+          "date": null,
+          "guide_ids": [
+            "mistral-prompting"
+          ]
+        },
+        {
+          "publisher": "Moonshot",
+          "date": null,
+          "guide_ids": [
+            "moonshot-prompting"
+          ]
+        },
+        {
+          "publisher": "NVIDIA",
+          "date": null,
+          "guide_ids": [
+            "nvidia-cosmos"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-gpt41",
+            "openai-prompting"
+          ]
+        }
+      ],
+      "name_en": "State the goal and constraints",
+      "explanation_en": "Specify what to do, who it is for and which constraints apply."
+    },
+    {
+      "id": "role",
+      "name_ja": "担当する役割を伝える",
+      "explanation_ja": "どの分野・視点・役割で答えてほしいかを伝えます。",
+      "style_id": "role-system",
+      "publishers": [
+        "Anthropic",
+        "Cherry Studio",
+        "Cohere",
+        "Google",
+        "Hugging Face",
+        "Open WebUI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-prompting"
+          ]
+        },
+        {
+          "publisher": "Cherry Studio",
+          "date": null,
+          "guide_ids": [
+            "cherry-studio-assistants"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "date": null,
+          "guide_ids": [
+            "cohere-tutorial"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-cli-system",
+            "google-system"
+          ]
+        },
+        {
+          "publisher": "Hugging Face",
+          "date": null,
+          "guide_ids": [
+            "hugging-face-chat-ui"
+          ]
+        },
+        {
+          "publisher": "Open WebUI",
+          "date": null,
+          "guide_ids": [
+            "open-webui-models"
+          ]
+        }
+      ],
+      "name_en": "Define the role",
+      "explanation_en": "Describe the expertise, perspective or role you want the answer to use."
+    },
+    {
+      "id": "examples",
+      "name_ja": "答えの例を見せる",
+      "explanation_ja": "欲しい答えに近い具体例を添えて、形式や判断の仕方を伝えます。",
+      "style_id": "few-shot",
+      "publishers": [
+        "Amazon",
+        "Anthropic",
+        "Cohere",
+        "Google",
+        "Meta",
+        "OpenAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Amazon",
+          "date": null,
+          "guide_ids": [
+            "amazon-examples"
+          ]
+        },
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-prompting"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "date": null,
+          "guide_ids": [
+            "cohere-effective"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-prompting"
+          ]
+        },
+        {
+          "publisher": "Meta",
+          "date": null,
+          "guide_ids": [
+            "meta-prompting"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-prompting"
+          ]
+        }
+      ],
+      "name_en": "Show example answers",
+      "explanation_en": "Include concrete examples of the desired answer to demonstrate format and decision criteria."
+    },
+    {
+      "id": "delimiters",
+      "name_ja": "指示と資料を区切る",
+      "explanation_ja": "見出しやタグで、依頼・資料・例の境界を明らかにします。",
+      "style_id": "structured-tags",
+      "publishers": [
+        "Anthropic",
+        "Cohere"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-prompting"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "date": null,
+          "guide_ids": [
+            "cohere-effective"
+          ]
+        }
+      ],
+      "name_en": "Separate instructions and references",
+      "explanation_en": "Use headings or tags to mark the boundaries between requests, references and examples."
+    },
+    {
+      "id": "output-format",
+      "name_ja": "答えの項目と形を決める",
+      "explanation_ja": "必要な項目や型を指定し、受け取った値も確かめます。",
+      "style_id": "structured-tags",
+      "publishers": [
+        "DeepSeek",
+        "Google",
+        "Mistral",
+        "Ollama",
+        "OpenAI",
+        "Zhipu"
+      ],
+      "first_seen": [
+        {
+          "publisher": "DeepSeek",
+          "date": null,
+          "guide_ids": [
+            "deepseek-json"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-structured"
+          ]
+        },
+        {
+          "publisher": "Mistral",
+          "date": null,
+          "guide_ids": [
+            "mistral-structured"
+          ]
+        },
+        {
+          "publisher": "Ollama",
+          "date": null,
+          "guide_ids": [
+            "ollama-structured"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-structured"
+          ]
+        },
+        {
+          "publisher": "Zhipu",
+          "date": null,
+          "guide_ids": [
+            "zhipu-structured"
+          ]
+        }
+      ],
+      "name_en": "Define answer fields and structure",
+      "explanation_en": "Specify the required fields and types, then validate the returned values."
+    },
+    {
+      "id": "grounding",
+      "name_ja": "資料を根拠に答える",
+      "explanation_ja": "参照する資料を指定し、資料にないことは分からないと伝えるようにします。",
+      "style_id": "context-engineering",
+      "publishers": [
+        "Anthropic"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-hallucinations"
+          ]
+        }
+      ],
+      "name_en": "Base answers on references",
+      "explanation_en": "Identify the reference material and ask the model to acknowledge what it cannot establish from it."
+    },
+    {
+      "id": "long-context",
+      "name_ja": "長い資料の置き方を工夫する",
+      "explanation_ja": "資料と質問の順序や区切りを整理します。適切な順序はモデルや仕事で異なります。",
+      "style_id": "context-engineering",
+      "publishers": [
+        "Amazon",
+        "Google"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Amazon",
+          "date": null,
+          "guide_ids": [
+            "amazon-nova2"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-long-context"
+          ]
+        }
+      ],
+      "name_en": "Arrange long reference material",
+      "explanation_en": "Organize the order and boundaries of references and questions. The best order depends on the model and task."
+    },
+    {
+      "id": "context-selection",
+      "name_ja": "必要な背景を選ぶ",
+      "explanation_ja": "関係のある資料を選び、長い作業では情報をまとめ直します。",
+      "style_id": "context-engineering",
+      "publishers": [
+        "Aider",
+        "Anthropic",
+        "Moonshot",
+        "OpenAI",
+        "xAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Aider",
+          "date": null,
+          "guide_ids": [
+            "aider-tips"
+          ]
+        },
+        {
+          "publisher": "Anthropic",
+          "date": "2025-09-29",
+          "guide_ids": [
+            "anthropic-context"
+          ]
+        },
+        {
+          "publisher": "Moonshot",
+          "date": null,
+          "guide_ids": [
+            "moonshot-context"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-codex-practices"
+          ]
+        },
+        {
+          "publisher": "xAI",
+          "date": null,
+          "guide_ids": [
+            "xai-reasoning"
+          ]
+        }
+      ],
+      "name_en": "Select relevant context",
+      "explanation_en": "Choose relevant references and summarize information again during long tasks."
+    },
+    {
+      "id": "decompose",
+      "name_ja": "仕事を小さく分ける",
+      "explanation_ja": "一度に頼む仕事を小さな段階に分け、結果を次へ渡します。",
+      "style_id": "plan-then-act",
+      "publishers": [
+        "Anthropic",
+        "Cline",
+        "Cohere"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": "2024-12-19",
+          "guide_ids": [
+            "anthropic-effective-agents"
+          ]
+        },
+        {
+          "publisher": "Cline",
+          "date": null,
+          "guide_ids": [
+            "cline-tasks"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "date": null,
+          "guide_ids": [
+            "cohere-advanced"
+          ]
+        }
+      ],
+      "name_en": "Split work into smaller tasks",
+      "explanation_en": "Divide a request into small stages and pass each result to the next."
+    },
+    {
+      "id": "verify",
+      "name_ja": "答えを確かめて直す",
+      "explanation_ja": "良い答えの基準と確認方法を用意し、試した結果で改善します。",
+      "style_id": "review-checklist",
+      "publishers": [
+        "Anthropic",
+        "Mistral",
+        "NVIDIA"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-code-practices",
+            "anthropic-overview"
+          ]
+        },
+        {
+          "publisher": "Mistral",
+          "date": null,
+          "guide_ids": [
+            "mistral-cookbook"
+          ]
+        },
+        {
+          "publisher": "NVIDIA",
+          "date": null,
+          "guide_ids": [
+            "nvidia-guardrails"
+          ]
+        }
+      ],
+      "name_en": "Check and improve answers",
+      "explanation_en": "Define answer criteria and verification methods, then improve instructions using observed results."
+    },
+    {
+      "id": "reasoning-effort",
+      "name_ja": "考える時間を調整する",
+      "explanation_ja": "考える機能の設定を、難しさ・待ち時間・使える量に合わせます。",
+      "style_id": "reasoning-goals",
+      "publishers": [
+        "Alibaba / Qwen",
+        "Amazon",
+        "Anthropic",
+        "DeepSeek",
+        "Google",
+        "Zhipu",
+        "xAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Alibaba / Qwen",
+          "date": "2025-04-29",
+          "guide_ids": [
+            "alibaba-qwen-qwen3"
+          ]
+        },
+        {
+          "publisher": "Amazon",
+          "date": null,
+          "guide_ids": [
+            "amazon-nova2"
+          ]
+        },
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-thinking"
+          ]
+        },
+        {
+          "publisher": "DeepSeek",
+          "date": null,
+          "guide_ids": [
+            "deepseek-thinking"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-thinking"
+          ]
+        },
+        {
+          "publisher": "Zhipu",
+          "date": null,
+          "guide_ids": [
+            "zhipu-thinking"
+          ]
+        },
+        {
+          "publisher": "xAI",
+          "date": null,
+          "guide_ids": [
+            "xai-text-practices"
+          ]
+        }
+      ],
+      "name_en": "Adjust thinking time",
+      "explanation_en": "Tune reasoning settings to the task’s difficulty, latency needs and available budget."
+    },
+    {
+      "id": "reasoning-steps",
+      "name_ja": "問題を解く段階を示す",
+      "explanation_ja": "複雑な問題に途中の段階を設けます。すべてのモデルに同じ方法が有効とは限りません。",
+      "style_id": "chain-of-thought",
+      "publishers": [
+        "Amazon",
+        "Meta"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Amazon",
+          "date": null,
+          "guide_ids": [
+            "amazon-cot"
+          ]
+        },
+        {
+          "publisher": "Meta",
+          "date": null,
+          "guide_ids": [
+            "meta-prompting"
+          ]
+        }
+      ],
+      "name_en": "Give the problem intermediate stages",
+      "explanation_en": "Try intermediate stages for complex problems. Effectiveness varies across models."
+    },
+    {
+      "id": "simple-reasoning",
+      "name_ja": "考えるモデルに目的を簡潔に伝える",
+      "explanation_ja": "細かな思考手順を固定せず、目的と条件を明確に伝える方法です。",
+      "style_id": "reasoning-goals",
+      "publishers": [
+        "DeepSeek",
+        "OpenAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "DeepSeek",
+          "date": null,
+          "guide_ids": [
+            "deepseek-r1"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-reasoning"
+          ]
+        }
+      ],
+      "name_en": "Give reasoning models concise goals",
+      "explanation_en": "State the goal and constraints clearly while leaving detailed reasoning steps flexible."
+    },
+    {
+      "id": "instruction-file",
+      "name_ja": "共通の指示ファイルを使う",
+      "explanation_ja": "作業場所の約束を文書に保存し、次の仕事でも読めるようにします。",
+      "style_id": "agents-md",
+      "publishers": [
+        "AGENTS.md",
+        "Aider",
+        "Microsoft",
+        "NousResearch",
+        "Ollama",
+        "OpenAI",
+        "OpenClaw",
+        "OpenCode",
+        "Zed",
+        "pi"
+      ],
+      "first_seen": [
+        {
+          "publisher": "AGENTS.md",
+          "date": null,
+          "guide_ids": [
+            "agents-md-format"
+          ]
+        },
+        {
+          "publisher": "Aider",
+          "date": null,
+          "guide_ids": [
+            "aider-conventions"
+          ]
+        },
+        {
+          "publisher": "Microsoft",
+          "date": "2024-10-29",
+          "guide_ids": [
+            "microsoft-copilot-instructions-release"
+          ]
+        },
+        {
+          "publisher": "NousResearch",
+          "date": null,
+          "guide_ids": [
+            "nousresearch-context-files"
+          ]
+        },
+        {
+          "publisher": "Ollama",
+          "date": null,
+          "guide_ids": [
+            "ollama-modelfile"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-agents-md"
+          ]
+        },
+        {
+          "publisher": "OpenClaw",
+          "date": null,
+          "guide_ids": [
+            "openclaw-workspace"
+          ]
+        },
+        {
+          "publisher": "OpenCode",
+          "date": null,
+          "guide_ids": [
+            "opencode-instructions"
+          ]
+        },
+        {
+          "publisher": "Zed",
+          "date": null,
+          "guide_ids": [
+            "zed-instructions"
+          ]
+        },
+        {
+          "publisher": "pi",
+          "date": null,
+          "guide_ids": [
+            "pi-agent"
+          ]
+        }
+      ],
+      "name_en": "Use shared instruction files",
+      "explanation_en": "Save workspace conventions in a document so they can be read for later tasks."
+    },
+    {
+      "id": "claude-file",
+      "name_ja": "CLAUDE.md に約束を書く",
+      "explanation_ja": "Claude Code が読む指示文書に、毎回必要な約束をまとめます。",
+      "style_id": "claude-md",
+      "publishers": [
+        "Anthropic"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-claude-md"
+          ]
+        }
+      ],
+      "name_en": "Write conventions in CLAUDE.md",
+      "explanation_en": "Collect recurring conventions in an instruction document read by Claude Code."
+    },
+    {
+      "id": "gemini-file",
+      "name_ja": "GEMINI.md に約束を書く",
+      "explanation_ja": "Gemini CLI が読む指示文書に、共有する背景や約束をまとめます。",
+      "style_id": "gemini-md",
+      "publishers": [
+        "Google"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-gemini-md"
+          ]
+        }
+      ],
+      "name_en": "Write conventions in GEMINI.md",
+      "explanation_en": "Collect shared context and conventions in an instruction document read by Gemini CLI."
+    },
+    {
+      "id": "scoped-rules",
+      "name_ja": "場所や仕事ごとにルールを分ける",
+      "explanation_ja": "すべての仕事に適用する約束と、対象を限る約束を分けます。",
+      "style_id": "cursor-rules",
+      "publishers": [
+        "Cline",
+        "Continue",
+        "Cursor",
+        "Google",
+        "Windsurf"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Cline",
+          "date": null,
+          "guide_ids": [
+            "cline-rules"
+          ]
+        },
+        {
+          "publisher": "Continue",
+          "date": null,
+          "guide_ids": [
+            "continue-rules"
+          ]
+        },
+        {
+          "publisher": "Cursor",
+          "date": null,
+          "guide_ids": [
+            "cursor-rules"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-antigravity-rules"
+          ]
+        },
+        {
+          "publisher": "Windsurf",
+          "date": null,
+          "guide_ids": [
+            "windsurf-rules"
+          ]
+        }
+      ],
+      "name_en": "Scope rules by location or task",
+      "explanation_en": "Organize broadly applicable conventions and rules with narrower scopes."
+    },
+    {
+      "id": "skills",
+      "name_ja": "繰り返す仕事を手順にまとめる",
+      "explanation_ja": "使う場面の説明と手順・資料をまとめ、必要なときに呼び出します。",
+      "style_id": "skills",
+      "publishers": [
+        "Agent Skills",
+        "Anthropic",
+        "Google",
+        "NousResearch",
+        "OpenAI",
+        "OpenClaw",
+        "OpenCode",
+        "Zed",
+        "pi"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Agent Skills",
+          "date": null,
+          "guide_ids": [
+            "agent-skills-format"
+          ]
+        },
+        {
+          "publisher": "Anthropic",
+          "date": "2025-10-16",
+          "guide_ids": [
+            "anthropic-skills-introduction"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-antigravity-workflows",
+            "google-cli-extensions"
+          ]
+        },
+        {
+          "publisher": "NousResearch",
+          "date": null,
+          "guide_ids": [
+            "nousresearch-skills"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-skills"
+          ]
+        },
+        {
+          "publisher": "OpenClaw",
+          "date": null,
+          "guide_ids": [
+            "openclaw-skills"
+          ]
+        },
+        {
+          "publisher": "OpenCode",
+          "date": null,
+          "guide_ids": [
+            "opencode-skills"
+          ]
+        },
+        {
+          "publisher": "Zed",
+          "date": null,
+          "guide_ids": [
+            "zed-settings"
+          ]
+        },
+        {
+          "publisher": "pi",
+          "date": null,
+          "guide_ids": [
+            "pi-skills"
+          ]
+        }
+      ],
+      "name_en": "Package repeatable procedures",
+      "explanation_en": "Bundle use cases, procedures and supporting material for invocation when needed."
+    },
+    {
+      "id": "subagents",
+      "name_ja": "別の担当役に仕事を分ける",
+      "explanation_ja": "専門の担当役に必要な指示と道具を渡し、別の文脈で仕事を進めます。",
+      "style_id": "subagents",
+      "publishers": [
+        "Anthropic"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-subagents"
+          ]
+        }
+      ],
+      "name_en": "Delegate to separate agents",
+      "explanation_en": "Give specialist agents relevant instructions and tools so they can work in separate contexts."
+    },
+    {
+      "id": "tool-contract",
+      "name_ja": "道具の使い方を明確にする",
+      "explanation_ja": "道具の機能・入力・使う条件を明確にし、結果を正しい形で戻します。",
+      "style_id": "spec-driven",
+      "publishers": [
+        "MiniMax",
+        "OpenAI",
+        "n8n"
+      ],
+      "first_seen": [
+        {
+          "publisher": "MiniMax",
+          "date": null,
+          "guide_ids": [
+            "minimax-tools"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-functions"
+          ]
+        },
+        {
+          "publisher": "n8n",
+          "date": null,
+          "guide_ids": [
+            "n8n-agent"
+          ]
+        }
+      ],
+      "name_en": "Clarify tool usage",
+      "explanation_en": "Define tool capabilities, inputs and usage conditions, and return results in the expected format."
+    },
+    {
+      "id": "mcp",
+      "name_ja": "外部の道具や資料をつなぐ",
+      "explanation_ja": "MCP は AI と外部の道具・資料をつなぐ共通の方式です。",
+      "style_id": "context-engineering",
+      "publishers": [
+        "Anthropic",
+        "MCP"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": null,
+          "guide_ids": [
+            "anthropic-mcp"
+          ]
+        },
+        {
+          "publisher": "MCP",
+          "date": null,
+          "guide_ids": [
+            "mcp-reusable-prompts"
+          ]
+        }
+      ],
+      "name_en": "Connect external tools and resources",
+      "explanation_en": "MCP is a shared protocol for connecting AI to external tools and resources."
+    },
+    {
+      "id": "reuse",
+      "name_ja": "よく使う指示を保存する",
+      "explanation_ja": "同じ役割やひな形を保存し、毎回の説明を減らします。",
+      "style_id": "plain-chat",
+      "publishers": [
+        "Anthropic",
+        "Baidu",
+        "Continue",
+        "LM Studio",
+        "Microsoft",
+        "MiniMax",
+        "Moonshot",
+        "Open WebUI",
+        "OpenAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Anthropic",
+          "date": "2024-06-25",
+          "guide_ids": [
+            "anthropic-projects"
+          ]
+        },
+        {
+          "publisher": "Baidu",
+          "date": null,
+          "guide_ids": [
+            "baidu-prompt-templates"
+          ]
+        },
+        {
+          "publisher": "Continue",
+          "date": null,
+          "guide_ids": [
+            "continue-chat"
+          ]
+        },
+        {
+          "publisher": "LM Studio",
+          "date": null,
+          "guide_ids": [
+            "lm-studio-presets"
+          ]
+        },
+        {
+          "publisher": "Microsoft",
+          "date": null,
+          "guide_ids": [
+            "microsoft-prompt-files"
+          ]
+        },
+        {
+          "publisher": "MiniMax",
+          "date": null,
+          "guide_ids": [
+            "minimax-cache"
+          ]
+        },
+        {
+          "publisher": "Moonshot",
+          "date": null,
+          "guide_ids": [
+            "moonshot-phrases"
+          ]
+        },
+        {
+          "publisher": "Open WebUI",
+          "date": null,
+          "guide_ids": [
+            "open-webui-prompts"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-personalize"
+          ]
+        }
+      ],
+      "name_en": "Save frequent instructions",
+      "explanation_en": "Save recurring roles and templates to reduce repeated explanations."
+    },
+    {
+      "id": "conversation-format",
+      "name_ja": "モデルに合う会話形式を使う",
+      "explanation_ja": "役割や会話の区切りはモデル・版ごとの公式の形式で渡します。",
+      "style_id": "structured-tags",
+      "publishers": [
+        "Alibaba / Qwen",
+        "BigScience",
+        "Google",
+        "LM Studio",
+        "Meta",
+        "OpenAI"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Alibaba / Qwen",
+          "date": null,
+          "guide_ids": [
+            "alibaba-qwen-formats"
+          ]
+        },
+        {
+          "publisher": "BigScience",
+          "date": "2022-07-06",
+          "guide_ids": [
+            "bigscience-bloom"
+          ]
+        },
+        {
+          "publisher": "Google",
+          "date": null,
+          "guide_ids": [
+            "google-gemma-format"
+          ]
+        },
+        {
+          "publisher": "LM Studio",
+          "date": null,
+          "guide_ids": [
+            "lm-studio-template"
+          ]
+        },
+        {
+          "publisher": "Meta",
+          "date": null,
+          "guide_ids": [
+            "meta-llama31-format"
+          ]
+        },
+        {
+          "publisher": "OpenAI",
+          "date": null,
+          "guide_ids": [
+            "openai-gpt2"
+          ]
+        }
+      ],
+      "name_en": "Use the model’s conversation format",
+      "explanation_en": "Pass roles and conversation boundaries using the official format for the model and version."
+    },
+    {
+      "id": "plan",
+      "name_ja": "先に進め方を確かめる",
+      "explanation_ja": "複雑な作業は実装の前に方針や段階を相談します。",
+      "style_id": "plan-then-act",
+      "publishers": [
+        "Aider",
+        "Cursor"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Aider",
+          "date": null,
+          "guide_ids": [
+            "aider-tips"
+          ]
+        },
+        {
+          "publisher": "Cursor",
+          "date": null,
+          "guide_ids": [
+            "cursor-practices"
+          ]
+        }
+      ],
+      "name_en": "Review the approach first",
+      "explanation_en": "Discuss the approach and stages before implementing complex work."
+    },
+    {
+      "id": "spec",
+      "name_ja": "条件と例外を整理する",
+      "explanation_ja": "曖昧な約束や矛盾する条件を見直し、判断できる形で伝えます。",
+      "style_id": "spec-driven",
+      "publishers": [
+        "Mistral"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Mistral",
+          "date": null,
+          "guide_ids": [
+            "mistral-prompting"
+          ]
+        }
+      ],
+      "name_en": "Clarify constraints and exceptions",
+      "explanation_en": "Resolve ambiguous or conflicting requirements and describe them in a form that supports decisions."
+    },
+    {
+      "id": "test",
+      "name_ja": "テストで確かめる約束を渡す",
+      "explanation_ja": "テスト（動きが正しいか調べる手順）の作り方や実行方法も具体的に伝えます。",
+      "style_id": "test-first",
+      "publishers": [
+        "Microsoft"
+      ],
+      "first_seen": [
+        {
+          "publisher": "Microsoft",
+          "date": "2024-10-03",
+          "guide_ids": [
+            "microsoft-test-instructions-release"
+          ]
+        }
+      ],
+      "name_en": "Provide testing instructions",
+      "explanation_en": "Describe how to create and run tests that check the expected behavior."
+    }
+  ]
+}

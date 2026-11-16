@@ -1,0 +1,35 @@
+dialog.chrome-dialog.guides-dialog { width: min(1120px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); color: var(--chrome-text, #202523); background: var(--chrome-bg, #fbfcfa); }
+.guides-dialog .screen-header { display: flex; align-items: center; gap: 12px; }
+.guides-dialog .screen-header h2 { flex: 1; margin: 0; font-size: 1.2rem; }
+.guides-body { overflow-y: auto; }
+.guides-intro { max-width: 72ch; line-height: 1.8; }
+.guides-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-block: 12px; }
+.guides-field { display: flex; flex-direction: column; gap: 6px; font-size: .9rem; }
+.guides-field input, .guides-field select { width: 100%; min-width: 0; min-height: 42px; padding: 8px; border: 1px solid #9aa69f; border-radius: 6px; background: var(--chrome-bg, #fff); color: inherit; font: inherit; }
+.guides-search { grid-column: 1 / -1; }
+.guides-filters > button { justify-self: start; align-self: end; min-height: 40px; }
+.guides-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-block: 16px; }
+.guides-card { min-width: 0; border: 1px solid var(--chrome-border, #bdc8c0); border-radius: 8px; padding: 16px; background: var(--chrome-panel, #fff); overflow-wrap: anywhere; }
+.guides-card h3 { margin: 8px 0 16px; font-size: 1.05rem; line-height: 1.5; }
+.guides-card p { margin-block: 8px; line-height: 1.7; }
+.guides-card a, .guides-timeline a, .guides-instructions a { color: var(--chrome-accent, #215a43); text-decoration: underline; text-underline-offset: .2em; }
+.guides-meta, .guides-when { font-size: .85rem; color: var(--chrome-muted, #535f57); }
+.guides-method { margin-block: 12px; }
+.guides-method strong { font-size: .9rem; }
+.guides-source { padding-top: 8px; }
+.guides-count { font-weight: 600; }
+.guides-timeline, .guides-instructions { padding: 12px; margin-block: 12px; border: 1px solid var(--chrome-border, #bdc8c0); border-radius: 6px; }
+.guides-body summary { cursor: pointer; line-height: 1.6; }
+.guides-timeline ol { padding-left: 24px; }
+.guides-timeline li { padding: 8px 0; line-height: 1.7; }
+.guides-timeline time { font-variant-numeric: tabular-nums; }
+.guides-embedded { margin-block: 20px; }
+.guides-embedded .guides-card { margin-block: 12px; }
+.guides-dialog :focus-visible { outline: 3px solid #337153; outline-offset: 3px; }
+@media (max-width: 650px) {
+  .guides-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guides-results { grid-template-columns: minmax(0, 1fr); }
+  .guides-dialog .screen-header { gap: 6px; flex-wrap: wrap; }
+  .guides-dialog .screen-header h2 { font-size: 1rem; }
+  .guides-card { padding: 12px; }
+}

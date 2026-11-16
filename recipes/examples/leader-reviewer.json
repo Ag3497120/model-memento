@@ -1,0 +1,12 @@
+{
+  "schema": "memento.recipe.v1",
+  "id": "leader-reviewer",
+  "title": "進行役と確認役で作業する",
+  "purpose": "進行役が変更案を作り、確認役に内容を渡して見落としを探します。",
+  "conductor": { "harness": "openclaw", "model": "anthropic:claude-sonnet-5-5" },
+  "helpers": [{ "role": "reviewer", "harness": "claude-code", "model": "anthropic:claude-opus-5-5" }],
+  "tools": ["filesystem", "fetch"],
+  "instructions": { "style": "plan-then-act", "files": ["agents-md"] },
+  "frontend": "terminal",
+  "notes": "確認役への依頼と返答は Model Memento の中継で渡します。Claude Code の画面を開かずに返答を受け取る方式を使います。初回のログインと鍵の準備は手動、実接続とモデルの動作は unverified。出典 https://code.claude.com/docs/en/headless https://docs.openclaw.ai/tools/mcp https://platform.claude.com/docs/en/models/overview"
+}

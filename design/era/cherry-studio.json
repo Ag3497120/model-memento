@@ -1,0 +1,429 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "cherry-studio",
+  "versions": [
+    {
+      "id": "cherry-studio-2024-06",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "対象資料は5月31日の初期の試作画面で、モデル切替は実装されていない。",
+          "6月の出荷済み画面の操作が存在したかはunverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/HomePage.tsx",
+            "date": "2024-05-31",
+            "shows": "初期の試作ソース。上に会話追加操作、横並びの会話一覧・会話・空の設定領域。モデル選択器はこの画面にない。"
+          }
+        ],
+        "steps_en": [
+          "The source covers an early May 31 prototype with model switching unimplemented.",
+          "unverified (whether these controls existed in the shipped June screen)."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Electron window",
+        "date_shown": "2024-06-01",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f866387862f2f92bd4768d4611ded6fd90405313/package.json",
+            "date": "2024-05-31",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/HomePage.tsx",
+            "date": "2024-05-31",
+            "shows": "初期の試作ソース。上に会話追加操作、横並びの会話一覧・会話・空の設定領域。モデル選択器はこの画面にない。"
+          }
+        ]
+      },
+      "trend": "横に領域を分けた、会話画面の試作段階を示す（出典：https://github.com/CherryHQ/cherry-studio/blob/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/HomePage.tsx）。",
+      "unverified": [
+        "6月の出荷済み画面、当時の小さな表示要素、OSとその版はunverified",
+        "参照ソースは期間前日の5月31日。6月の実画面を直接観察したとはしない"
+      ],
+      "trend_en": "A prototype chat screen divides the workspace into side-by-side regions. (https://github.com/CherryHQ/cherry-studio/blob/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/HomePage.tsx)",
+      "unverified_en": [
+        "unverified (the shipped June screen, small UI details, OS and OS version).",
+        "The reference source is dated May 31, one day before the period. Direct observation of the June screen is unverified."
+      ]
+    },
+    {
+      "id": "cherry-studio-2024-08",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "現在のモデル名",
+        "steps": [
+          "上部中央のアシスタント名の隣にあるモデル名を押す。",
+          "下に開く候補から、提供元ごとにまとまったモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/src/renderer/src/pages/home/components/NavigationCenter.tsx",
+            "date": "2024-08-07",
+            "shows": "上部中央にアシスタント名とSelectModelButtonを配置する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/src/renderer/src/pages/home/components/SelectModelDropdown.tsx",
+            "date": "2024-08-07",
+            "shows": "上部のモデル名を押すと、提供元ごとにまとめたモデル候補を下へ開く。候補は利用者が設定したprovidersのモデル。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name beside the assistant name at the top center.",
+          "Choose a model from the dropdown, grouped by provider."
+        ],
+        "label_en": "Current model name"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "提供元ごとにモデルを選ぶ",
+          "when": "2024-08-07..2024-08-07",
+          "where": "モデル名から下に開く候補のグループ。ロゴを使わず、提供元とモデル名を通常の文字で扱う。",
+          "sources": [
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/src/renderer/src/pages/home/components/SelectModelDropdown.tsx",
+              "date": "2024-08-07",
+              "shows": "上部のモデル名を押すと、提供元ごとにまとめたモデル候補を下へ開く。候補は利用者が設定したprovidersのモデル。"
+            }
+          ],
+          "text_en": "Choose models by provider",
+          "where_en": "Provider groups in the dropdown from the model name. Display providers and models in plain text."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Electron window",
+        "date_shown": "2024-08-07",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/package.json",
+            "date": "2024-08-07",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          }
+        ]
+      },
+      "trend": "上部のモデル選択と横に分けた会話一覧で、複数の提供元を扱う（出典：https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/src/renderer/src/pages/home/components/NavigationCenter.tsx）。",
+      "unverified": [
+        "モデル候補の全一覧と固定の既定はunverified。利用者の提供元設定で変わる",
+        "OSの版はunverified",
+        "表示するOS自体はunverified"
+      ],
+      "trend_en": "A top model selector and chat sidebar support multiple providers. (https://github.com/CherryHQ/cherry-studio/blob/f7ef895ce60298639d09e65d06f5c1c1d277d614/src/renderer/src/pages/home/components/NavigationCenter.tsx)",
+      "unverified_en": [
+        "unverified (the full model list and fixed default). These vary with provider settings.",
+        "unverified (OS version).",
+        "unverified (which OS to display)."
+      ]
+    },
+    {
+      "id": "cherry-studio-2025-01",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select Model）",
+        "steps": [
+          "会話の上部にあるモデル名を押す。",
+          "選択用の窓でモデルを選び、このアシスタントの返答に使う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Navbar.tsx",
+            "date": "2025-01-24",
+            "shows": "会話上部の見出しの隣にSelectModelButtonを配置する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/components/SelectModelButton.tsx",
+            "date": "2025-01-24",
+            "shows": "モデル名ボタンからSelectModelPopupを開き、選んだモデルをアシスタントのモデルにする。候補は設定された提供元に依存する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/i18n/locales/en-us.json",
+            "date": "2025-01-24",
+            "shows": "translation.button.select_modelの英語表記はSelect Model。モデル選択後は選んだモデル名がボタンに出る。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name at the top of the chat.",
+          "Choose a model in the selection window for this assistant's replies."
+        ],
+        "label_en": "Select Model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "考えた過程と所要時間",
+          "when": "2025-01-24..2025-01-24",
+          "where": "回答内の開閉する欄。生成中は小さな進行表示があり、終了後は秒数を示す。",
+          "sources": [
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Messages/MessageThought.tsx",
+              "date": "2025-01-24",
+              "shows": "考えた過程を折りたたみ、生成中の表示と所要時間を示す。"
+            }
+          ],
+          "text_en": "Reasoning process and elapsed time",
+          "where_en": "Collapsible section within the reply, with a small progress indicator during generation and elapsed seconds afterward."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Electron window",
+        "date_shown": "2025-01-24",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/package.json",
+            "date": "2025-01-24",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          }
+        ]
+      },
+      "trend": "考えた過程を折りたたみ、回答と所要時間を分けて見せる（出典：https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Navbar.tsx）。",
+      "unverified": [
+        "モデル候補の全一覧と固定の既定はunverified。利用者の提供元設定で変わる",
+        "OSの版はunverified",
+        "表示するOS自体はunverified"
+      ],
+      "trend_en": "Reasoning is collapsible, with the answer and elapsed time shown separately. (https://github.com/CherryHQ/cherry-studio/blob/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Navbar.tsx)",
+      "unverified_en": [
+        "unverified (the full model list and fixed default). These vary with provider settings.",
+        "unverified (OS version).",
+        "unverified (which OS to display)."
+      ]
+    },
+    {
+      "id": "cherry-studio-2025-06-macos",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "モデルを選ぶ（Select Model）",
+        "steps": [
+          "会話の上部にあるモデル名を押す。",
+          "選択用の窓でモデルを選び、このアシスタントの返答に使う。",
+          "入力欄の@は追加で返答させるモデルの入口で、上部の主モデル選択とは別。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Navbar.tsx",
+            "date": "2025-06-18",
+            "shows": "会話上部の見出しの隣にSelectModelButtonを配置する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/components/SelectModelButton.tsx",
+            "date": "2025-06-18",
+            "shows": "モデル名ボタンからSelectModelPopupを開き、選んだモデルをアシスタントのモデルにする。候補は設定された提供元に依存する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/i18n/locales/en-us.json",
+            "date": "2025-06-18",
+            "shows": "translation.button.select_modelの英語表記はSelect Model。モデル選択後は選んだモデル名がボタンに出る。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name at the top of the chat.",
+          "Choose a model in the selection window for this assistant's replies.",
+          "The @ control in the input adds another replying model. The primary model selector is at the top."
+        ],
+        "label_en": "Select Model"
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "更新を適用できます",
+          "when": "2025-06-18..2025-06-18",
+          "where": "会話上部のUpdate Availableボタン。更新を入手済みで自動確認が有効な場合だけ表示する。",
+          "sources": [
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/components/UpdateAppButton.tsx",
+              "date": "2025-06-18",
+              "shows": "更新を入手済みで自動確認が有効な場合だけ、上部にbutton.update_availableの操作を出す。"
+            },
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Navbar.tsx",
+              "date": "2025-06-18",
+              "shows": "会話上部の見出しの隣にSelectModelButtonを配置する。"
+            },
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/i18n/locales/en-us.json",
+              "date": "2025-06-18",
+              "shows": "translation.button.update_availableはUpdate Available。"
+            }
+          ],
+          "text_en": "Update available",
+          "where_en": "Update Available button at the top of chat, shown after an update downloads with automatic checks enabled."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "Electron window",
+        "date_shown": "2025-06-18",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/package.json",
+            "date": "2025-06-18",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          }
+        ]
+      },
+      "trend": "上部で主モデルを選び、下の入力部に資料や追加モデルの操作をまとめる（出典：https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Navbar.tsx）。",
+      "unverified": [
+        "モデル候補の全一覧と固定の既定はunverified。利用者の提供元設定で変わる",
+        "OSの版はunverified"
+      ],
+      "trend_en": "The primary model is chosen at the top, while files and additional-model controls sit in the input below. (https://github.com/CherryHQ/cherry-studio/blob/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Navbar.tsx)",
+      "unverified_en": [
+        "unverified (the full model list and fixed default). These vary with provider settings.",
+        "unverified (OS version)."
+      ]
+    },
+    {
+      "id": "cherry-studio-2026-03-macos",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "unverified",
+        "steps": [
+          "会話の上部にあるモデル名を押す。",
+          "選択用の窓でモデルを選び、このアシスタントの返答に使う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/components/ChatNavBar/ChatNavbarContent/TopicContent.tsx",
+            "date": "2026-03-14",
+            "shows": "会話上部の見出し領域でSelectModelButtonを表示する。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Chat.tsx",
+            "date": "2026-03-14",
+            "shows": "会話内のモデル選択用のポップアップと、下部の入力欄を別に扱う。複数モデルへの呼び掛けだけを主モデルの選択器と見なさない。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name at the top of the chat.",
+          "Choose a model in the selection window for this assistant's replies."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "返答を格子状に比較",
+          "when": "2026-03-14..2026-03-14",
+          "where": "比較で格子表示を選んだ場合の回答欄。画面内の固定バナーではなく、表示方法の短い説明。",
+          "sources": [
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Messages/MessageGroup.tsx",
+              "date": "2026-03-14",
+              "shows": "返答の比較に格子表示があり、gridColumnsの設定で列数が変わる。固定の4分割ではない。"
+            }
+          ],
+          "text_en": "Compare replies in a grid",
+          "where_en": "Reply area in grid comparison view. A brief explanation of the layout."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "Electron window",
+        "date_shown": "2026-03-14",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/package.json",
+            "date": "2026-03-14",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          }
+        ]
+      },
+      "trend": "返答の数や設定に合わせて並べ方を変える比較画面が見られる（出典：https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Messages/MessageGroup.tsx）。",
+      "unverified": [
+        "モデル候補の全一覧と固定の既定はunverified。利用者の提供元設定で変わる",
+        "OSの版はunverified"
+      ],
+      "trend_en": "The comparison layout adapts to reply counts and settings. (https://github.com/CherryHQ/cherry-studio/blob/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Messages/MessageGroup.tsx)",
+      "unverified_en": [
+        "unverified (the full model list and fixed default). These vary with provider settings.",
+        "unverified (OS version)."
+      ]
+    },
+    {
+      "id": "cherry-studio-2026-11-macos",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "unverified",
+        "steps": [
+          "会話の上部にあるモデル名を押す。",
+          "選択用の窓でモデルを選び、このアシスタントの返答に使う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://cherryai.com/docs/en/cherrystudio/preview/chat/",
+            "date": null,
+            "shows": "2026-11-15閲覧の現在の公式ヘルプ。会話の見出し内のモデル選択と、入力欄の＋・検索を区別する。11月5日の全画面そのものの証拠ではない。"
+          },
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/2292fdd739266df12518e4f706de1aa99f66015f/src/renderer/pages/home/components/ChatNavbar.tsx",
+            "date": "2026-11-05",
+            "shows": "上部の会話用の操作をConversationTopBarPortalHostで表示する。モデル選択自体の部品の正確な位置はこのファイルだけからはunverified。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name at the top of the chat.",
+          "Choose a model in the selection window for this assistant's replies."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデルごとの返答を選ぶ",
+          "when": "2026-11-05..2026-11-05",
+          "where": "複数の返答があるグループ内のモデル名の選択列。マークや画像は再作成しない。",
+          "sources": [
+            {
+              "url": "https://github.com/CherryHQ/cherry-studio/blob/2292fdd739266df12518e4f706de1aa99f66015f/src/renderer/components/chat/messages/list/MessageGroupModelList.tsx",
+              "date": "2026-11-05",
+              "shows": "返答グループ内にモデル名の選択列を置き、モデルごとの回答を選べる。"
+            }
+          ],
+          "text_en": "Select replies from each model",
+          "where_en": "Model selection row within a group of multiple replies. Use text-only representations."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "Electron window",
+        "date_shown": "2026-11-15",
+        "sources": [
+          {
+            "url": "https://github.com/CherryHQ/cherry-studio/blob/2292fdd739266df12518e4f706de1aa99f66015f/package.json",
+            "date": "2026-11-05",
+            "shows": "Electronを使うウィンドウ。ソースの版番号と対応するビルド設定を確認し、カタログの呼び名から別の出荷済み版を推測しない。"
+          }
+        ]
+      },
+      "trend": "会話の上部の操作と、返答ごとのモデル選択を分ける（出典：https://github.com/CherryHQ/cherry-studio/blob/2292fdd739266df12518e4f706de1aa99f66015f/src/renderer/pages/home/components/ChatNavbar.tsx）。",
+      "unverified": [
+        "モデル候補の全一覧と固定の既定はunverified。利用者の提供元設定で変わる",
+        "OSの版はunverified",
+        "モデル選択位置は11月15日の現在の公式ヘルプによる。11月5日ビルドで同一だったかはunverified"
+      ],
+      "trend_en": "Top-level chat actions are separate from per-reply model selection. (https://github.com/CherryHQ/cherry-studio/blob/2292fdd739266df12518e4f706de1aa99f66015f/src/renderer/pages/home/components/ChatNavbar.tsx)",
+      "unverified_en": [
+        "unverified (the full model list and fixed default). These vary with provider settings.",
+        "unverified (OS version).",
+        "Model selector placement follows official help current on November 15. Identical placement in the November 5 build is unverified."
+      ]
+    }
+  ]
+}

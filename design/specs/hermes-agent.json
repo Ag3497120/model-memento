@@ -1,0 +1,1636 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "hermes-agent",
+  "name": "Hermes Agent",
+  "vendor": "Nous Research",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "nousresearch--hermes-agent-2026-03-0",
+      "from": "2026-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "考え中の印や道具の進行を更新する。回答本文の逐次表示の正確な範囲は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "会話の再開時に前回の振り返りを挟む。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "起動時のモデル・作業場所・使える道具・追加の手順をまとめた案内と、下部の入力欄を持つ。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-03-12",
+          "shows": "v2026.3.12 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-03-12",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/cli.py",
+          "kind": "oss-source",
+          "date": "2026-03-12",
+          "shows": "regions と conversation：固定入力と、回答ラベル付きの水平罫線による出力。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/banner.py",
+          "kind": "oss-source",
+          "date": "2026-03-12",
+          "shows": "empty_state：起動案内の情報構成。図柄のコードは転記しない。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.3.12",
+          "kind": "release-notes",
+          "date": "2026-03-12",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-05-1",
+      "from": "2026-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "入力欄の上にモデル、使用量、容量バー、費用、経過時間",
+            "端末が狭いと表示項目を減らす"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "道具の出力を進行に合わせて表示し、処理中も入力できる。回答本文の更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "入力欄の上に容量バー付きの状態欄がある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "入力欄の上に、モデル名・会話の使用量・容量バー・費用・経過時間の状態欄がある。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-05-29",
+          "shows": "v2026.5.29.2 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-05-29",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29.2",
+          "kind": "release-notes",
+          "date": "2026-05-29",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-06-2",
+      "from": "2026-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "入力欄の上にモデル、使用量、容量バー、費用、経過時間",
+            "端末が狭いと表示項目を減らす"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "道具の出力を進行に合わせて表示し、処理中も入力できる。回答本文の更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "入力欄の上に容量バー付きの状態欄がある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "通常の端末画面は5月版と同じ領域構成。専用アプリ版があることと混同しない。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-06-19",
+          "shows": "v2026.6.19 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+          "kind": "release-notes",
+          "date": "2026-06-19",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-07-3",
+      "from": "2026-07",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "入力欄の上にモデル、使用量、容量バー、費用、経過時間",
+            "端末が狭いと表示項目を減らす"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "道具の出力を進行に合わせて表示し、処理中も入力できる。回答本文の更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "入力欄の上に容量バー付きの状態欄がある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "金色と茶色の基本配色は継続。専用の推論文字色などを追加の配色設定で指定できる。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-07-30",
+          "shows": "v2026.7.30 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.7.30/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-07-30",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30",
+          "kind": "release-notes",
+          "date": "2026-07-30",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-08-4",
+      "from": "2026-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "入力欄の上にモデル、使用量、容量バー、費用、経過時間",
+            "端末が狭いと表示項目を減らす"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "道具の出力を進行に合わせて表示し、処理中も入力できる。回答本文の更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "入力欄の上に容量バー付きの状態欄がある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "Ctrl+P のコマンド検索と、入力して絞り込むモデル一覧が加わる。会話名を状態欄の右側に出す。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-08-31",
+          "shows": "v2026.8.31 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.8.31/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-08-31",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31",
+          "kind": "release-notes",
+          "date": "2026-08-31",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-09-5",
+      "from": "2026-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "入力、道具の進行、回答の文字行",
+            "回答ラベルと罫線で回答を区切る",
+            "再開時は前回の会話の短い振り返りを表示"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "❯ を先頭に置く複数行の編集欄",
+            "入力補完の候補を表示"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "入力欄の上にモデル、使用量、容量バー、費用、経過時間",
+            "端末が狭いと表示項目を減らす"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Tab",
+          "where": "入力欄",
+          "purpose": "短いコマンドの補完候補を選ぶ"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルを確認・切り替えする"
+        },
+        {
+          "label": "/verbose",
+          "where": "入力欄",
+          "purpose": "道具の実行の表示量を変える"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の文を端末の文字行として表示する。入力欄は下部に固定される。",
+        "assistant": "回答ラベルを添え、罫線で区切った本文を表示する。",
+        "tool_calls": "縦の印、道具の短い名前、処理時間を並べる。表示の詳しさはコマンドで変えられる。",
+        "streaming": "道具の出力を進行に合わせて表示し、処理中も入力できる。回答本文の更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#F5F5F5",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#D89B04",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "light.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "light.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "light.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "light.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "金色と茶色の起動案内、下部の固定入力欄。",
+        "入力欄の上に容量バー付きの状態欄がある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "入力欄の上に作業中の子エージェントや処理を並べ、詳細な作業一覧を全画面で開ける。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-09-24",
+          "shows": "v2026.9.24 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。追加の全画面 TUI やデスクトップ版とは別。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-09-24",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24",
+          "kind": "release-notes",
+          "date": "2026-09-24",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-10-6",
+      "from": "2026-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "短い印を先頭に置いた入力・推論・道具の結果・回答の行",
+            "変更箇所は実行行の下に縦線を付けて表示",
+            "一回の応答の最後に経過時間などの短いまとめ"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "上の罫線の左側に処理中の内容、右側に会話名"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "入力欄の下にモデル、会話の容量、作業場所とブランチ",
+            "右側にその時点で使えるキー操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "送信する。作業中は新しい指示で向きを変える"
+        },
+        {
+          "label": "Tab",
+          "where": "作業中の入力欄",
+          "purpose": "書いたメッセージを次の作業用に待ち行列へ置く"
+        },
+        {
+          "label": "Ctrl+C",
+          "where": "端末",
+          "purpose": "下書きがあれば消す。入力欄が空なら進行中の作業を止める"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "この会話で使うモデルを切り替える"
+        }
+      ],
+      "conversation": {
+        "user": "❯ を付けた文字行。入力と回答のまとまりを、固定の文字数の短い罫線で区切る。",
+        "assistant": "短い回答ラベルの後に本文を置き、一回の応答の末尾に時間や変更数をまとめる。",
+        "tool_calls": "完了した道具を名前と時間付きの行で表示する。失敗は赤い印と終了番号、編集差分はその下の縦線付きの行。",
+        "streaming": "考えている内容を逐次表示する。作業の印と経過時間は入力欄の上を更新し、会話履歴へ同じ待機行を積み続けない。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#F5F5F5",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#D89B04",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "light.panel": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "light.accent": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "light.border": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "light.muted": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。活動表示は上、状態表示は下。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "罫線と短い印で区切る行単位の会話。",
+        "状態欄が入力欄の下にある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "modern が既定。回答と道具の結果を短い印付きの行にし、状態欄を入力欄の下へ置く。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-10-23",
+          "shows": "v0.22.5 の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。modern が既定、classic は任意の旧配置。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-10-23",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/cli_modern_layout.py",
+          "kind": "oss-source",
+          "date": "2026-10-23",
+          "shows": "modern の既定設定、短い罫線、道具の行、活動の表示、入力欄より下の状態表示を確認。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+          "kind": "release-notes",
+          "date": "2026-10-23",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "nousresearch--hermes-agent-record",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "モデル、実行環境、作業場所、道具、追加の手順の一覧",
+            "元の図柄を省き、製品名を通常の文字で示す"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "短い印を先頭に置いた入力・推論・道具の結果・回答の行",
+            "変更箇所は実行行の下に縦線を付けて表示",
+            "一回の応答の最後に経過時間などの短いまとめ"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の編集欄",
+            "上の罫線の左側に処理中の内容、右側に会話名"
+          ]
+        },
+        {
+          "name": "状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "入力欄の下にモデル、会話の容量、作業場所とブランチ",
+            "右側にその時点で使えるキー操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "送信する。作業中は新しい指示で向きを変える"
+        },
+        {
+          "label": "Tab",
+          "where": "作業中の入力欄",
+          "purpose": "書いたメッセージを次の作業用に待ち行列へ置く"
+        },
+        {
+          "label": "Ctrl+C",
+          "where": "端末",
+          "purpose": "下書きがあれば消す。入力欄が空なら進行中の作業を止める"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "この会話で使うモデルを切り替える"
+        }
+      ],
+      "conversation": {
+        "user": "❯ を付けた文字行。入力と回答のまとまりを、固定の文字数の短い罫線で区切る。",
+        "assistant": "短い回答ラベルの後に本文を置き、一回の応答の末尾に時間や変更数をまとめる。",
+        "tool_calls": "完了した道具を名前と時間付きの行で表示する。失敗は赤い印と終了番号、編集差分はその下の縦線付きの行。",
+        "streaming": "考えている内容を逐次表示する。作業の印と経過時間は入力欄の上を更新し、会話履歴へ同じ待機行を積み続けない。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#F5F5F5",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#D89B04",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": null,
+          "muted": "#B8860B",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "light.panel": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "light.accent": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "light.border": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "light.muted": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文字の横罫線と ❯ を使う複数行の編集欄。活動表示は上、状態表示は下。"
+      },
+      "empty_state": "モデル、作業場所、使える道具や追加の手順をまとめた起動案内を出し、下の入力欄で最初の依頼を待つ。",
+      "distinctive": [
+        "罫線と短い印で区切る行単位の会話。",
+        "状態欄が入力欄の下にある。",
+        "道具の実行名と経過時間が同じ会話内に出る。",
+        "modern の配置を継続。過去の入力を選び直す操作と、対応する端末で画像を会話内に出す機能を持つ。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md",
+          "kind": "official-doc",
+          "date": "2026-11-14",
+          "shows": "v0.23.1+canary.20261114T064334Z の通常 CLI（端末の文字画面）の資料。regions・controls・conversation・empty_state の根拠。modern が既定、classic は任意の旧配置。この日付は固定版の観測日。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "palette：標準スキンのアクセント、起動案内の控えめな文字、入力罫線の色。panel は状態欄・候補欄の背景だけを指す。回答本文や端末全体の色は未固定のため null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/hermes_cli/cli_modern_layout.py",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "modern の既定設定、短い罫線、道具の行、活動の表示、入力欄より下の状態表示を確認。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261114T064334Z",
+          "kind": "release-notes",
+          "date": "2026-11-14",
+          "shows": "公開版の対応と差分を確認。タグ名の年月や番号だけで新しい見た目を推定していない。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+          "kind": "release-notes",
+          "date": "2026-11-05",
+          "shows": "過去の入力の選び直しと端末内の画像表示を確認。画像そのものは再配布しない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "hermes-agent-2026-05",
+      "from": "2026-05",
+      "to": null,
+      "regions": [
+        {
+          "name": "全画面 TUI の起動案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "道具、追加の手順、指示文、外部道具の接続先を開閉する見出し",
+            "道具の一覧だけが最初から開いている"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "回答、考えている内容、道具の呼び出しと結果",
+            "マウスで文字を選択できる領域"
+          ]
+        },
+        {
+          "name": "入力欄と状態欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の入力",
+            "稼働中の会話数、使用量、進行状態"
+          ]
+        },
+        {
+          "name": "選択画面",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "モデル、会話、許可の確認、追加質問の選択画面"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "hermes --tui",
+          "where": "起動コマンド",
+          "purpose": "通常 CLI と別の全画面表示を開く"
+        },
+        {
+          "label": "/model",
+          "where": "入力欄から開く選択画面",
+          "purpose": "提供元ごとにまとまったモデルを選ぶ"
+        },
+        {
+          "label": "/details",
+          "where": "入力欄",
+          "purpose": "道具の詳しい表示を切り替える"
+        },
+        {
+          "label": "Ctrl+X",
+          "where": "会話選択",
+          "purpose": "稼働中の会話の一覧を開く"
+        }
+      ],
+      "conversation": {
+        "user": "端末の文字行として表示する。吹き出しの固定背景色は未確認。",
+        "assistant": "本文と考えている内容を区別する。考えている内容は標準で開いて表示する。",
+        "tool_calls": "呼び出しと結果は標準で開いて表示する。詳しさを切り替えられる。",
+        "streaming": "起動案内を先に描き、道具や追加の手順が読み込まれるたびに情報を埋める。起動が終わる前の入力も待ち行列に置ける。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#F5F5F5",
+          "text": "#3D2F13",
+          "muted": "#7A5A0F",
+          "accent": "#A0651C",
+          "border": "#7A4F1F",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#1a1a2e",
+          "text": "#FFF8DC",
+          "muted": "#CC9B1F",
+          "accent": "#FFBF00",
+          "border": "#CD7F32",
+          "user_bubble": null
+        },
+        "source": {
+          "light.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "light.text": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "light.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "light.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "light.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "dark.text": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末の文字で作る複数行の編集欄。選択や確認は会話の上に重ねる。"
+      },
+      "empty_state": "折りたためる起動案内と入力欄が出る。読み込みの途中でも依頼を書ける。",
+      "distinctive": [
+        "通常 CLI と別の全画面表示。",
+        "道具・追加の手順・指示文・接続先を開閉できる起動案内。",
+        "モデルや許可確認を重ねた選択画面で行う。",
+        "マウスでの文字選択と、入力を止めない起動処理。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/website/docs/user-guide/tui.md",
+          "kind": "official-doc",
+          "date": "2026-05-29",
+          "shows": "regions・controls・conversation・empty_state：追加の全画面表示の操作。最初の公開日ではなく、この固定版で存在を確認。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts",
+          "kind": "oss-source",
+          "date": "2026-05-29",
+          "shows": "palette の明暗と文字の役割。panel は候補・状態欄。端末全体の背景と利用者の吹き出しは未確認。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/hermes_cli/skin_engine.py",
+          "kind": "oss-source",
+          "date": "2026-05-29",
+          "shows": "標準スキンから重ねる色や短い印の設定。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.28",
+          "kind": "release-notes",
+          "date": "2026-05-28",
+          "shows": "同月の本体リリース。5月29日の修正版を観測した位置づけを確認。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "hermes-agent-2026-06",
+      "from": "2026-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "専用アプリの案内欄",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "会話、作業場所、各種設定への移動"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "複数の会話",
+            "回答と道具の進行"
+          ]
+        },
+        {
+          "name": "プレビュー",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "ウェブページ、ファイル、道具の出力を並べて表示",
+            "必要に応じて開く領域"
+          ]
+        },
+        {
+          "name": "入力と状態",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "添付できる入力欄",
+            "マイクの左のモデル選択",
+            "会話の状態を示す下部の帯"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Cmd/Ctrl+N",
+          "where": "専用アプリ",
+          "purpose": "新しい会話を開く"
+        },
+        {
+          "label": "モデル選択",
+          "where": "入力欄のマイクの左",
+          "purpose": "モデル、推論の強さ、高速設定を一つの選択画面で変える"
+        },
+        {
+          "label": "Cmd/Ctrl+K",
+          "where": "専用アプリ",
+          "purpose": "操作の検索を開く"
+        },
+        {
+          "label": "Settings",
+          "where": "左の移動欄",
+          "purpose": "提供元、モデル、道具、接続先などを設定する"
+        }
+      ],
+      "conversation": {
+        "user": "入力した文章を会話内に表示する。標準 Nous 配色には利用者メッセージ用の面色がある。",
+        "assistant": "中央の会話に回答を出し、必要なファイルやページの表示は右へ並べる。",
+        "tool_calls": "実行中の道具と構造化した短い結果を同じ会話内に表示する。",
+        "streaming": "回答と道具の実行状況を到着に合わせて表示する。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#F8FAFF",
+          "panel": "#F3F7FF",
+          "text": "#17171A",
+          "muted": "#666678",
+          "accent": "#0053FD",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0D2F86",
+          "panel": "#09286F",
+          "text": "#FFE6CB",
+          "muted": "#B5C7F3",
+          "accent": "#FFE6CB",
+          "border": "#3158AD",
+          "user_bubble": "#143B91"
+        },
+        "source": {
+          "light.bg": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.text": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "light.user_bubble": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.bg": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.panel": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.text": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.muted": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.accent": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.border": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "dark.user_bubble": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts"
+        }
+      },
+      "typography": {
+        "ui_named": "Segoe WPC / Segoe UI / SF Pro Text / SF Pro Display（標準のシステム書体スタック）",
+        "mono_named": "Courier Prime（Nous 配色）",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "添付とモデル選択、音声の操作を備える入力欄。正確な角丸は未確認。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "端末版と別の専用アプリの画面。",
+        "左の案内欄、中央の会話、必要時に開く右のプレビュー。",
+        "モデル選択は入力欄のマイクの左。",
+        "下部の状態欄に会話の使用状況と操作をまとめる。",
+        "標準 Nous 配色と別に、他の配色や利用者が追加した配色を選べる。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。",
+        "Nous / Hermes の文字ロゴや青い製品図柄は作り直さない。色と領域の事実だけを使う。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/website/docs/user-guide/desktop.md",
+          "kind": "official-doc",
+          "date": "2026-06-19",
+          "shows": "regions・controls・conversation：専用アプリの左の案内欄、会話、右の表示、入力欄のモデル選択、状態欄。空の画面の正確な文言は未確認。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+          "kind": "oss-source",
+          "date": "2026-06-19",
+          "shows": "palette・typography：標準 Nous 配色の colors と darkColors、DEFAULT_SKIN_NAME、書体スタック。panel は sidebarBackground、accent は primary に対応。明るい版の枠と利用者の帯は色の混合式のため HEX は null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+          "kind": "release-notes",
+          "date": "2026-06-19",
+          "shows": "専用アプリのショートカット、通知、右の作業表示、入力欄のモデル選択、端末ペイン、配色選択を説明。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.5",
+          "kind": "release-notes",
+          "date": "2026-06-06",
+          "shows": "専用アプリを出した一つ前の本体版。6月19日を初公開日と断定しない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "hermes-agent-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー版の会話一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "接続先ごとの会話、利用者の設定"
+          ]
+        },
+        {
+          "name": "作業中の会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "専用アプリと共通の会話画面",
+            "入力と作業の進行"
+          ]
+        },
+        {
+          "name": "補助領域",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "変更の確認、ファイルの一覧、プレビュー",
+            "配置の選択や開閉で変わる"
+          ]
+        },
+        {
+          "name": "端末",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "必要に応じて開く文字の操作欄"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "hermes webapp",
+          "where": "起動コマンド",
+          "purpose": "専用アプリと共通の作業画面をブラウザーで開く"
+        },
+        {
+          "label": "Simple",
+          "where": "表示方法の選択",
+          "purpose": "会話を中心にした簡単な配置を選ぶ"
+        },
+        {
+          "label": "Advanced",
+          "where": "表示方法の選択",
+          "purpose": "変更確認やファイルを並べる配置を選ぶ"
+        },
+        {
+          "label": "Web Access",
+          "where": "専用アプリの設定",
+          "purpose": "ブラウザーから使う接続を設定する"
+        }
+      ],
+      "conversation": {
+        "user": "専用アプリと共通の会話に入力を置く。正確な帯の色や余白は選択した配色と配置に依存する。",
+        "assistant": "専用アプリと共通の会話・ファイル表示を使う。",
+        "tool_calls": "同じ会話の作業の進行と結果を表示する。",
+        "streaming": "接続先が所有する同じ会話へ接続し、入力の待ち行列と回答履歴を専用アプリなどと共有する。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/apps/shared/src/theme-presets.ts",
+          "dark": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/apps/shared/src/theme-presets.ts"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "選択した表示方法と共通の入力欄。ブラウザー版の正確な角丸は未確認。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "管理用の Web Dashboard とは別の、専用アプリと共通の作業画面。",
+        "会話を中心にした簡単な配置と、補助領域を並べる配置。",
+        "ファイルや変更確認、端末は必要なときに開く。",
+        "専用アプリ・端末・ブラウザーで同じ会話の続きが表示される。"
+      ],
+      "must_not_copy": [
+        "起動時の文字ロゴ、杖の図柄、顔の図柄やマスコットを描き直さない。",
+        "同梱画像、画面の画像、製品やモデル提供者のロゴを使わない。",
+        "製品名は通常の文字で表示し、長い案内文や顔文字のアニメーションをそのまま複製しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md",
+          "kind": "official-doc",
+          "date": "2026-11-14",
+          "shows": "regions・controls・conversation：ブラウザーで専用アプリと共通の画面を提供する機能。管理用 Web Dashboard との違い。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/apps/desktop/src/app/contrib/layout-presets.ts",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "regions・shape：左の会話、中央、右の変更確認とファイル、下の端末という配置案。Simple は補助領域を閉じた配置、Advanced は並べる配置。固定幅ではなく比率と利用者の変更を使う。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/apps/shared/src/theme-presets.ts",
+          "kind": "oss-source",
+          "date": "2026-11-14",
+          "shows": "palette：複数の配色を共有している。ブラウザーで実際に選ばれる配色の実行確認はしていないので固定 HEX は null。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+          "kind": "release-notes",
+          "date": "2026-11-05",
+          "shows": "専用アプリと同じ作業画面をブラウザーへ提供する追加を説明。"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261114T064334Z",
+          "kind": "release-notes",
+          "date": "2026-11-14",
+          "shows": "観測対象の固定版。試験版であることを保持。"
+        }
+      ],
+      "confidence": 0.82
+    }
+  ],
+  "corrections": [
+    "依頼の hermes-agent はカタログの nousresearch--hermes-agent に対応する。既存8版の ID を維持し、全画面 TUI・専用アプリ・ブラウザー版を別の追加記録にした：https://github.com/NousResearch/hermes-agent 、https://hermes-agent.nousresearch.com/docs/user-guide/desktop",
+    "カタログ側の terminal 分類に、web/src/App.tsx の案内欄の輪郭を合成しない。通常 CLI、追加 TUI、専用アプリ、管理 Web Dashboard は別の画面：https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/website/docs/user-guide/desktop.md",
+    "3月の通常 CLI は、情報のある起動案内、下部の固定入力、罫線で区切る回答。ウェブ用のカードや固定の黒い画面背景を足す根拠はない：https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/cli.py 、https://github.com/NousResearch/hermes-agent/blob/v2026.3.12/hermes_cli/skin_engine.py",
+    "10月の固定版は modern の行単位表示が既定。旧配置の状態欄を入力欄の上に残したまま最新の既定画面として扱わない：https://github.com/NousResearch/hermes-agent/blob/v0.22.5/website/docs/user-guide/cli.md 、https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/cli_modern_layout.py",
+    "全画面 TUI の文字色と専用アプリの Nous 配色を混ぜない。TUI の金色、専用アプリの明暗の青系配色は異なる根拠を持つ：https://github.com/NousResearch/hermes-agent/blob/v2026.5.29.2/ui-tui/src/theme.ts 、https://github.com/NousResearch/hermes-agent/blob/v2026.6.19/apps/desktop/src/themes/presets.ts",
+    "11月の共通ブラウザー画面と、以前からある管理画面を区別する。単に『ウェブ対応』という理由で以前の版へ同じチャット画面を当てはめない：https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+    "製品のホームページはログインしていない紹介ページとしてだけ読んだ。掲載画像から色・寸法・当時の状態は採取していない：https://hermes-agent.nousresearch.com/desktop",
+    "kind はカタログの主対象である terminal。追加記録では領域名と出典で別の画面を明示する。日付は固定版の観測時点で、機能の初公開日とは限らない。終了日は未確認のため to は null。density は文字行や領域の構成からの分類、free_fallback は本調査側の提案：https://github.com/NousResearch/hermes-agent/blob/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md"
+  ]
+}

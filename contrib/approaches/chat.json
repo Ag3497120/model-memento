@@ -1,0 +1,18 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "chat",
+  "name": "聞いたら、すぐ答える",
+  "plain": "ふつうの会話です。聞いたことに、その場で 1 回で答えます。",
+  "good_for": ["talk"],
+  "seen_in": ["ChatGPT", "Claude.ai", "Google Bard → Gemini", "Bing Chat / Microsoft Copilot", "HuggingChat", "Claude Desktop", "LM Studio"],
+  "placeholder": "例: 母の誕生日に送る短い手紙を書いて",
+  "steps": [
+    {
+      "id": "answer",
+      "label": "答え",
+      "show": "text",
+      "system": "You are a friendly assistant for someone who is not technical. Answer in the language of the request, plainly and briefly. Avoid jargon; if a technical word is unavoidable, explain it in one short phrase.",
+      "prompt": "{{input}}"
+    }
+  ]
+}

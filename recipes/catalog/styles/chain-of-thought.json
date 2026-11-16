@@ -1,0 +1,76 @@
+{
+  "schema": "memento.style.v1",
+  "id": "chain-of-thought",
+  "name": "順に考えるよう頼む（過去の方法）",
+  "plain": "段階を追うよう頼む方法を知り、推論モデルでは別の頼み方を選びます。",
+  "when": "2022年の方法を比較したいときで、普段は「目的と合格条件を渡す」を使います。",
+  "since": "2022-05",
+  "popularized_by": [
+    "Kojima らの推論研究"
+  ],
+  "since_basis": "公開資料で確認できる年月です。発明や普及の開始年月を示すものではありません。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n複数の条件を順に検討し、答えを確かめてください。返答は結論、確認に使った計算や事実、注意点だけを簡潔に示してください。内面の思考過程の全文は求めません。推論モデルには目的と合格条件を直接渡してください。\n\n# English\n\nConsider the constraints and verify the answer. Return the conclusion, checkable calculations or facts, and caveats briefly. Do not disclose private internal reasoning. For reasoning models, state the goal and acceptance criteria directly.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "via AGENTS.md",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://arxiv.org/abs/2205.11916",
+    "https://arxiv.org/abs/2201.11903",
+    "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://code.claude.com/docs/en/memory",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

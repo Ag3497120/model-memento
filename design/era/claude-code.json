@@ -1,0 +1,824 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "claude-code",
+  "versions": [
+    {
+      "id": "claude-code-2025-02",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：この版・表示面のモデル選択の位置、ラベル、手順を日時付き資料で確定できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "date": "2025-02-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "steps_en": [
+          "unverified (dated sources for this version's model selector location, label and steps)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "試験公開",
+          "when": "2025-02-24..2025-02-24",
+          "where": "公開時の位置付けを短く示す。画面上のバッジの形や位置は unverified。",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+              "date": "2025-02-24",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Preview release",
+          "where_en": "Brief release status. The on-screen badge shape and location are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-02-24",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "date": "2025-02-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "専用の編集画面ではなく、端末の会話からファイル操作や実行を扱う（https://www.anthropic.com/news/claude-3-7-sonnet）。",
+      "trend_en": "Terminal chat handles file operations and command execution. (https://www.anthropic.com/news/claude-3-7-sonnet)"
+    },
+    {
+      "id": "claude-code-2025-04",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：この版・表示面のモデル選択の位置、ラベル、手順を日時付き資料で確定できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/555b6b5b8a5f06f1e8725a584e62fb6b7c8eece5/README.md",
+            "date": "2025-03-10",
+            "shows": "4月末までのREADME履歴で最後の変更は3月10日。試験公開と端末での利用を説明する。"
+          }
+        ],
+        "steps_en": [
+          "unverified (dated sources for this version's model selector location, label and steps)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "試験公開",
+          "when": "2025-04-15..2025-04-15",
+          "where": "当時の公式READMEにある公開段階。端末の常設ラベルとは断定しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/anthropics/claude-code/555b6b5b8a5f06f1e8725a584e62fb6b7c8eece5/README.md",
+              "date": "2025-03-10",
+              "shows": "4月末までのREADME履歴で最後の変更は3月10日。試験公開と端末での利用を説明する。"
+            }
+          ],
+          "text_en": "Preview release",
+          "where_en": "Release stage in the README at the time. A persistent terminal label is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-04-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/555b6b5b8a5f06f1e8725a584e62fb6b7c8eece5/README.md",
+            "date": "2025-03-10",
+            "shows": "4月末までのREADME履歴で最後の変更は3月10日。試験公開と端末での利用を説明する。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末に会話を積む試験公開段階であり、4月固有の配置変更は unverified である（https://raw.githubusercontent.com/anthropics/claude-code/555b6b5b8a5f06f1e8725a584e62fb6b7c8eece5/README.md）。",
+      "trend_en": "The preview builds conversation in the terminal. April-specific layout changes are unverified. (https://raw.githubusercontent.com/anthropics/claude-code/555b6b5b8a5f06f1e8725a584e62fb6b7c8eece5/README.md)"
+    },
+    {
+      "id": "claude-code-2025-05",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "一覧からモデルを選ぶ。候補と既定の動作は契約・接続先で変わる。"
+        ],
+        "options": [
+          "Default"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/issues/1243",
+            "date": "2025-05-22",
+            "shows": "公開日の利用者報告に Model • /model と Default の表示がある。Maxの一例であり、全候補ではない。"
+          },
+          {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "date": "2025-05-22",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list. Options and default behavior depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "what's-new",
+          "text": "一般公開・IDEで変更点を確認",
+          "when": "2025-05-22..2025-05-22",
+          "where": "5月22日の公開告知。起動時に常設された通知という意味ではない。",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "General release with IDE change review",
+          "where_en": "May 22 launch announcement. A persistent startup notification is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-05-22",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "date": "2025-05-22",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "会話は端末に置き、IDE側でも変更点を確認できるようになる（https://www.anthropic.com/news/claude-4）。",
+      "trend_en": "Chat stays in the terminal, with changes also reviewable in the IDE. (https://www.anthropic.com/news/claude-4)"
+    },
+    {
+      "id": "claude-code-2025-07",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "この報告例では Sonnet を選ぶ。全候補と他の契約での表示は unverified。"
+        ],
+        "options": [
+          "Sonnet"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/issues/2806",
+            "date": "2025-07-01",
+            "shows": "利用者本人の報告。Proへ移行した環境で /model に Sonnet の選択肢が出て、選択後にモデル名のエラーを受けた。全利用者に共通する状態とはしない。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose Sonnet in this reported example. The full list and other plans' displays are unverified."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "モデル名が無効です",
+          "when": "2025-07-01..2025-07-01",
+          "where": "この報告例でモデルを選択した後の返答欄に出たエラーの要約。全利用者に出るとはしない。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/issues/2806",
+              "date": "2025-07-01",
+              "shows": "利用者本人の報告。Proへ移行した環境で /model に Sonnet の選択肢が出て、選択後にモデル名のエラーを受けた。全利用者に共通する状態とはしない。"
+            }
+          ],
+          "text_en": "Invalid model name",
+          "where_en": "Summary of an error in the reply area after model selection in this report. Its appearance for all users is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-07-01",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/issues/2806",
+            "date": "2025-07-01",
+            "shows": "利用者本人の報告。Proへ移行した環境で /model に Sonnet の選択肢が出て、選択後にモデル名のエラーを受けた。全利用者に共通する状態とはしない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル変更を端末の入力行から呼び出す設計である（https://github.com/anthropics/claude-code/issues/2806）。",
+      "trend_en": "Model switching is opened from the terminal input. (https://github.com/anthropics/claude-code/issues/2806)"
+    },
+    {
+      "id": "claude-code-2025-09",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+            "date": "2025-09-29",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.0.74/CHANGELOG.md",
+            "date": "2025-12-19",
+            "shows": "2.0.12 の /model 選択欄修正を含む公式履歴。ただし9月29日の正確な表示名と候補一覧は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Esc を2回で巻き戻し",
+          "when": "2025-09-29..2025-09-29",
+          "where": "端末で以前の状態を選ぶ操作。/rewind からも開く。",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+              "date": "2025-09-29",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Press Esc twice to rewind",
+          "where_en": "Terminal action to select an earlier state, also opened with /rewind."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-09-29",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+            "date": "2025-09-29",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の状態表示と履歴検索を整え、以前の作業状態にも戻れるようになる（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）。",
+      "trend_en": "Terminal status and history search improve, with restoration of earlier work states. (https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously)"
+    },
+    {
+      "id": "claude-code-2025-10",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：この版・表示面のモデル選択の位置、ラベル、手順を日時付き資料で確定できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://claude.com/resources/articles/claude-code-on-the-web",
+            "date": "2025-10-20",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "steps_en": [
+          "unverified (dated sources for this version's model selector location, label and steps)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "Web版を試験公開",
+          "when": "2025-10-20..2025-10-20",
+          "where": "公開時の案内。Web画面上のバッジの正確な位置は unverified。",
+          "sources": [
+            {
+              "url": "https://claude.com/resources/articles/claude-code-on-the-web",
+              "date": "2025-10-20",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Web preview",
+          "where_en": "Launch announcement. Exact badge placement on the web screen is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-10-20",
+        "sources": [
+          {
+            "url": "https://claude.com/resources/articles/claude-code-on-the-web",
+            "date": "2025-10-20",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ]
+      },
+      "trend": "端末を開かず、ブラウザーから複数の作業と変更点を確認する画面になる（https://claude.com/resources/articles/claude-code-on-the-web）。",
+      "trend_en": "A browser screen supports reviewing multiple tasks and changes. (https://claude.com/resources/articles/claude-code-on-the-web)"
+    },
+    {
+      "id": "claude-code-2025-11",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：この版・表示面のモデル選択の位置、ラベル、手順を日時付き資料で確定できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "date": "2025-11-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "steps_en": [
+          "unverified (dated sources for this version's model selector location, label and steps)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "what's-new",
+          "text": "専用アプリで複数の作業を並行",
+          "when": "2025-11-24..2025-11-24",
+          "where": "11月24日の公開告知。アプリ内の常設通知の位置は unverified。",
+          "sources": [
+            {
+              "url": "https://www.anthropic.com/news/claude-opus-4-5",
+              "date": "2025-11-24",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Run multiple tasks in parallel in a dedicated app",
+          "where_en": "November 24 launch announcement. Persistent in-app notification placement is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Claude Desktop window（実装方式は unverified）",
+        "date_shown": "2025-11-24",
+        "sources": [
+          {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "date": "2025-11-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Claude Desktop window (implementation unverified)"
+      },
+      "trend": "専用アプリでローカルと遠隔の作業を並行して扱う画面が加わる（https://www.anthropic.com/news/claude-opus-4-5）。",
+      "trend_en": "A dedicated app adds parallel management of local and remote work. (https://www.anthropic.com/news/claude-opus-4-5)"
+    },
+    {
+      "id": "claude-code-2025-12",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.0.74",
+            "date": "2025-12-19",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.0.74/CHANGELOG.md",
+            "date": "2025-12-19",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/theme の Ctrl+T で色分けを切替",
+          "when": "2025-12-19..2025-12-19",
+          "where": "/theme の選択画面内。コードの色分けを入れる・切る操作。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.0.74",
+              "date": "2025-12-19",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Toggle syntax coloring with Ctrl+T in /theme",
+          "where_en": "Control inside /theme selection to enable or disable code coloring."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-12-19",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.0.74",
+            "date": "2025-12-19",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の配色選択にコードの色分けとキー操作の説明をまとめる（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）。",
+      "trend_en": "Terminal theme selection groups code coloring with keyboard guidance. (https://github.com/anthropics/claude-code/releases/tag/v2.0.74)"
+    },
+    {
+      "id": "claude-code-2026-02",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [
+          "Sonnet 4.5"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.51",
+            "date": "2026-02-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.51/CHANGELOG.md",
+            "date": "2026-02-24",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "モデル名を読みやすい表示に",
+          "when": "2026-02-24..2026-02-24",
+          "where": "/model の一覧で、固定した版の長い識別名の代わりに Sonnet 4.5 のような名前を出す。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.51",
+              "date": "2026-02-24",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "More readable model names",
+          "where_en": "The /model list shows names such as Sonnet 4.5 in place of long pinned-version identifiers."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-02-24",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.51",
+            "date": "2026-02-24",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末内のモデル選択に読みやすい名前と更新の案内を加える（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）。",
+      "trend_en": "Terminal model selection gains readable names and update guidance. (https://github.com/anthropics/claude-code/releases/tag/v2.1.51)"
+    },
+    {
+      "id": "claude-code-2026-04-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：この版・表示面のモデル選択の位置、ラベル、手順を日時付き資料で確定できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://claude.com/resources/articles/claude-code-desktop-redesign",
+            "date": "2026-04-14",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "steps_en": [
+          "unverified (dated sources for this version's model selector location, label and steps)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Verbose / Normal / Summary",
+          "when": "2026-04-14..2026-04-14",
+          "where": "専用アプリの表示量を選ぶ操作。細かなボタン位置は unverified。",
+          "sources": [
+            {
+              "url": "https://claude.com/resources/articles/claude-code-desktop-redesign",
+              "date": "2026-04-14",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "where_en": "Dedicated app control for display density. Exact button locations are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "Claude Desktop window（実装方式は unverified）",
+        "date_shown": "2026-04-14",
+        "sources": [
+          {
+            "url": "https://claude.com/resources/articles/claude-code-desktop-redesign",
+            "date": "2026-04-14",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Claude Desktop window (implementation unverified)"
+      },
+      "trend": "会話や差分や端末の各欄を、利用者が動かして並べる設計になる（https://claude.com/resources/articles/claude-code-desktop-redesign）。",
+      "trend_en": "Users can rearrange chat, diff and terminal panes. (https://claude.com/resources/articles/claude-code-desktop-redesign)"
+    },
+    {
+      "id": "claude-code-2026-05",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+            "date": "2026-05-19",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.145/CHANGELOG.md",
+            "date": "2026-05-19",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "候補をマウスでも選択",
+          "when": "2026-05-19..2026-05-19",
+          "where": "全画面の端末表示で、コマンドや @ の候補にマウスを重ねて押せる。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+              "date": "2026-05-19",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Select options with the mouse",
+          "where_en": "Mouse hover and click on command and @ suggestions in the full-screen terminal."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-05-19",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+            "date": "2026-05-19",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "全画面の端末表示に、マウスで押せる入力候補を加える（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）。",
+      "trend_en": "Full-screen terminal display gains clickable input suggestions. (https://github.com/anthropics/claude-code/releases/tag/v2.1.145)"
+    },
+    {
+      "id": "claude-code-2026-08",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+            "date": "2026-08-20",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.238/CHANGELOG.md",
+            "date": "2026-08-20",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+W の削除方法を設定",
+          "when": "2026-08-20..2026-08-20",
+          "where": "keybindingFlavor を readline にした場合の端末入力。既定の classic とは動作が異なる。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+              "date": "2026-08-20",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Configure Ctrl+W deletion behavior",
+          "where_en": "Terminal input with keybindingFlavor set to readline. Behavior differs from the default classic setting."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-08-20",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+            "date": "2026-08-20",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力操作を利用者の慣れた削除方法に合わせられるようになる（https://github.com/anthropics/claude-code/releases/tag/v2.1.238）。",
+      "trend_en": "Terminal input deletion can be configured to match familiar behavior. (https://github.com/anthropics/claude-code/releases/tag/v2.1.238)"
+    },
+    {
+      "id": "claude-code-2026-10",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+            "date": "2026-10-31",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.316/CHANGELOG.md",
+            "date": "2026-10-31",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "deprecation-notice",
+          "text": "Opus 4.8 の高速モードを終了予定",
+          "when": "2026-10-31..2026-10-31",
+          "where": "10月31日の更新履歴で、11月30日の終了予定を案内。モデル自体の終了ではない。常設の案内帯は unverified。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+              "date": "2026-10-31",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Opus 4.8 fast mode scheduled to end",
+          "where_en": "October 31 release note announcing a November 30 fast-mode end. A permanent announcement strip is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-10-31",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+            "date": "2026-10-31",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話からモデルを変更する操作を保ち、旧高速モードの終了も案内する（https://github.com/anthropics/claude-code/releases/tag/v2.1.316）。",
+      "trend_en": "Terminal chat retains model switching and announces the older fast mode's scheduled end. (https://github.com/anthropics/claude-code/releases/tag/v2.1.316)"
+    },
+    {
+      "id": "claude-code-2026-11",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /model を入力する。",
+          "開いた一覧でモデルを選ぶ。候補と既定値は契約・接続先で変わる。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+            "date": "2026-11-13",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.325/CHANGELOG.md",
+            "date": "2026-11-13",
+            "shows": "固定版の公式履歴にある /model の操作。全候補と共通の既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model in the list. Options and defaults depend on your plan and provider."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "error-message",
+          "text": "拒否の後は /rewind または /clear",
+          "when": "2026-11-13..2026-11-13",
+          "where": "組織の方針で拒否された依頼のエラー直下に出る次の操作の案内。",
+          "sources": [
+            {
+              "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+              "date": "2026-11-13",
+              "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+            }
+          ],
+          "text_en": "Use /rewind or /clear after a refusal",
+          "where_en": "Next-step guidance immediately below an error for a request refused under organization policy."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-11-13",
+        "sources": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+            "date": "2026-11-13",
+            "shows": "その時点の公式公開記録。告知内容を常設の画面メッセージとみなさない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "エラーだけで止めず、その下にやり直す操作を示す設計になる（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）。",
+      "trend_en": "Errors gain recovery actions immediately below them. (https://github.com/anthropics/claude-code/releases/tag/v2.1.325)"
+    }
+  ]
+}

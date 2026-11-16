@@ -1,0 +1,19 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "stay-on-this-computer",
+  "name": "このパソコンの中だけで答える",
+  "plain": "書いたことをインターネットに送りません。このパソコンに入れた AI だけが読みます。そのぶん、少し賢さが落ちることがあります。",
+  "good_for": ["private"],
+  "seen_in": ["LM Studio", "OpenCode", "Continue", "Aider"],
+  "local_only": true,
+  "placeholder": "例: この健康診断の結果を、やさしい言葉で説明して",
+  "steps": [
+    {
+      "id": "answer",
+      "label": "答え",
+      "show": "text",
+      "system": "You run on the person's own computer. Answer plainly and briefly in the language of the request. If the topic needs a professional (doctor, lawyer), say so kindly at the end.",
+      "prompt": "{{input}}"
+    }
+  ]
+}

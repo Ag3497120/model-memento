@@ -1,0 +1,1324 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "google-bard-gemini",
+  "name": "Google Bard → Gemini",
+  "vendor": "Google",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "google-bard-gemini-2023-03",
+      "from": "2023-03",
+      "to": "2023-07",
+      "regions": [
+        {
+          "name": "メニュー",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "会話のリセット、利用履歴、よくある質問、ヘルプ（https://www.engadget.com/google-bard-ai-hands-on-a-work-in-progress-with-plenty-of-caveats-170956025.html）"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "質問と返答。返答には複数の下書きを選ぶ入口（https://blog.google/innovation-and-ai/products/try-bard/）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "横長の入力欄（https://www.engadget.com/google-bard-ai-hands-on-a-work-in-progress-with-plenty-of-caveats-170956025.html）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "別の下書き",
+          "where": "返答の付近（https://blog.google/innovation-and-ai/products/try-bard/）",
+          "purpose": "別案を選ぶ（https://blog.google/innovation-and-ai/products/try-bard/）"
+        },
+        {
+          "label": "Googleで検索",
+          "where": "返答の付近（https://blog.google/innovation-and-ai/products/try-bard/）",
+          "purpose": "関連する検索候補を別タブで開く（https://blog.google/innovation-and-ai/products/try-bard/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "返答の別案を選べ、再回答も依頼できる。吹き出しの形・色は未確認（https://blog.google/innovation-and-ai/products/try-bard/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "最初に実験段階で誤り得ることを説明する案内。正確な挨拶と提案カードの配置は未確認（https://blog.google/innovation-and-ai/products/try-bard/）",
+      "distinctive": [
+        "Bardという名前で実験版として案内（https://blog.google/innovation-and-ai/products/try-bard/）",
+        "複数の返答案を切り替える（https://blog.google/innovation-and-ai/products/try-bard/）",
+        "検索へ進む操作がある（https://blog.google/innovation-and-ai/products/try-bard/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/products/try-bard/",
+          "kind": "blog",
+          "date": "2023-03-21",
+          "shows": "初期Bardの複数下書き・検索・実験の説明。画面画像は取得せず本文と代替説明のみ確認。"
+        },
+        {
+          "url": "https://www.engadget.com/google-bard-ai-hands-on-a-work-in-progress-with-plenty-of-caveats-170956025.html",
+          "kind": "press",
+          "date": "2023-03-21",
+          "shows": "当日の操作記事。左列のメニューと下部入力欄を確認。"
+        }
+      ],
+      "confidence": 0.64
+    },
+    {
+      "id": "google-bard-gemini-2023-07",
+      "from": "2023-07",
+      "to": "2023-09",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "上に新規会話、その下に固定した会話と最近の会話（https://9to5google.com/2023/07/13/google-bard-europe/）"
+          ]
+        },
+        {
+          "name": "設定など",
+          "position": "top-right",
+          "size": null,
+          "contents": [
+            "利用履歴、よくある質問など（https://9to5google.com/2023/07/13/google-bard-europe/）"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答の読み上げと、長さ・調子を変える操作（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字入力の隣に画像を追加する＋（https://9to5google.com/2023/07/13/google-bard-europe/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左列の上（https://9to5google.com/2023/07/13/google-bard-europe/）",
+          "purpose": "会話を始める（https://9to5google.com/2023/07/13/google-bard-europe/）"
+        },
+        {
+          "label": "固定・名前を変更",
+          "where": "会話一覧（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/）",
+          "purpose": "会話を残し見つけやすくする（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/）"
+        },
+        {
+          "label": "読み上げ",
+          "where": "返答の右上（https://9to5google.com/2023/07/13/google-bard-europe/）",
+          "purpose": "返答を音声で聞く（https://9to5google.com/2023/07/13/google-bard-europe/）"
+        },
+        {
+          "label": "返答を調整",
+          "where": "評価ボタンの隣（https://9to5google.com/2023/07/13/google-bard-europe/）",
+          "purpose": "簡単・長め・短め・丁寧・くだけた調子から選ぶ。当初は英語（https://9to5google.com/2023/07/13/google-bard-europe/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "返答に読み上げと調子を変える操作が加わる（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "固定した会話と最近の会話を左に並べる（https://9to5google.com/2023/07/13/google-bard-europe/）",
+        "返答の右上に読み上げ（https://9to5google.com/2023/07/13/google-bard-europe/）",
+        "入力欄の隣に画像を追加する＋（https://9to5google.com/2023/07/13/google-bard-europe/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/",
+          "kind": "blog",
+          "date": "2023-07-13",
+          "shows": "履歴のピン留め・改名、読み上げ、返答の調整、画像入力の開始。"
+        },
+        {
+          "url": "https://9to5google.com/2023/07/13/google-bard-europe/",
+          "kind": "press",
+          "date": "2023-07-13",
+          "shows": "左列の新規会話・固定・最近の会話、右上へ移動した設定、入力横の＋、読み上げと調整の位置。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "google-bard-gemini-2023-09",
+      "from": "2023-09",
+      "to": "2023-12",
+      "regions": [
+        {
+          "name": "返答",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "検索で裏付けや異なる情報が見つかった文を押して詳細を読む（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "返答を再確認",
+          "where": "返答の検索用ボタン（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+          "purpose": "検索と照合し、評価できた文を強調する（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "再確認を実行した後、文の一部が強調され詳細へ進める。色番号は未確認（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+        "tool_calls": "Gmail、Drive、Mapsなどの関連情報を会話内に表示する（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "返答の一部を強調して検索で確認する（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+        "強調した箇所を押して説明を読む（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+        "複数のGoogleサービスの情報を一つの会話に出す（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/",
+          "kind": "blog",
+          "date": "2023-09-19",
+          "shows": "検索で確認できた文を強調表示する操作、Googleサービスとの連携。2026-10の追記があるためプライバシー説明は当時の根拠に使わない。"
+        },
+        {
+          "url": "https://www.semafor.com/article/09/19/2023/google-soups-up-gmail-and-other-apps-with-bard-ai-updates",
+          "kind": "press",
+          "date": "2023-09-19",
+          "shows": "検索の抜粋で同日のサービス連携と検索による再確認を照合。本文取得は制限され、配色・配置の証拠には使わない。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "google-bard-gemini-2023-12",
+      "from": "2023-12",
+      "to": "2024-02",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "Bardのテキスト会話でGemini Proを使う（https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "Bardの名前でテキストの依頼に返答する。返答の形・配置は unverified（https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "製品名は引き続きBard（https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/）",
+        "英語のテキスト会話にGemini Proを導入（https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/）",
+        "unverified：12月特有の常設バナーや新しい画面構成"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/",
+          "kind": "blog",
+          "date": "2023-12-06",
+          "shows": "Bardの英語テキスト会話へGemini Proを導入。モデルの公開は確認できるが、画面全体の変更は示さない。"
+        },
+        {
+          "url": "https://9to5google.com/2023/12/06/google-gemini-1-0/",
+          "kind": "press",
+          "date": "2023-12-06",
+          "shows": "BardへのGemini Pro導入。当時の新しい画面寸法・バナー・モデル選択メニューの証拠にはならない。"
+        },
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/",
+          "kind": "blog",
+          "date": "2023-09-19",
+          "shows": "再確認と連携は12月以前の追加。12月6日の完全な配置は未確認。"
+        }
+      ],
+      "confidence": 0.31
+    },
+    {
+      "id": "google-bard-gemini-2024-02",
+      "from": "2024-02",
+      "to": "2024-05",
+      "regions": [
+        {
+          "name": "メニュー",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "下部に設定、利用履歴、ヘルプ（https://9to5google.com/2024/02/08/google-gemini-advanced/）"
+          ]
+        },
+        {
+          "name": "利用先の切替",
+          "position": "top-left",
+          "size": null,
+          "contents": [
+            "通常のGeminiとGemini Advancedの切替（https://9to5google.com/2024/02/08/google-gemini-advanced/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Gemini / Gemini Advanced",
+          "where": "左上（https://9to5google.com/2024/02/08/google-gemini-advanced/）",
+          "purpose": "利用先を切り替える（https://9to5google.com/2024/02/08/google-gemini-advanced/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "BardからGeminiへ名称変更（https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app/）",
+        "実験版という表示が消える（https://9to5google.com/2024/02/08/google-gemini-advanced/）",
+        "左上からAdvancedへ切替（https://9to5google.com/2024/02/08/google-gemini-advanced/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/bard-gemini-advanced-app/",
+          "kind": "blog",
+          "date": "2024-02-08",
+          "shows": "Geminiへの改称、AdvancedとUltra 1.0、AndroidとiOSの別の利用面。"
+        },
+        {
+          "url": "https://9to5google.com/2024/02/08/google-gemini-advanced/",
+          "kind": "press",
+          "date": "2024-02-08",
+          "shows": "Webの左上の切替、左列下部の設定・履歴・ヘルプ、実験表示の削除。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "google-bard-gemini-2024-05",
+      "from": "2024-05",
+      "to": "2024-08",
+      "regions": [
+        {
+          "name": "文書を追加する入口",
+          "position": null,
+          "size": null,
+          "contents": [
+            "端末またはGoogle Driveから文書を会話へ追加（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）"
+          ]
+        },
+        {
+          "name": "解析結果",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "5月21日には表データからグラフを作成し、種類やラベルを調整できる（https://9to5google.com/2024/05/21/gemini-advanced-spreadsheet/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "ファイルを追加",
+          "where": "会話への追加メニュー。正確な位置は未確認（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）",
+          "purpose": "文書を端末かDriveから読み込む（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "追加した文書への質問に返答する。5月14日時点の吹き出し形状は未確認（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "公式記事の画面代替説明は名前入りの挨拶と手助けを申し出る文を記録。カード数・色は未確認（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）",
+      "distinctive": [
+        "Advancedが1.5 Proになる（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）",
+        "端末・Driveから文書を追加する（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/）",
+        "月後半にはグラフを直接調整できる（https://9to5google.com/2024/05/21/gemini-advanced-spreadsheet/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-may-2024/",
+          "kind": "blog",
+          "date": "2024-05-14",
+          "shows": "Web Advancedへ端末・Driveから文書を追加。記事は2025-08-13に更新されており、当日以外の予告を含む。"
+        },
+        {
+          "url": "https://9to5google.com/2024/05/14/gemini-advanced-1-5-pro/",
+          "kind": "press",
+          "date": "2024-05-14",
+          "shows": "当日の文書追加と1.5 Pro。表計算の解析やGemsは当日には予告。"
+        },
+        {
+          "url": "https://9to5google.com/2024/05/21/gemini-advanced-spreadsheet/",
+          "kind": "press",
+          "date": "2024-05-21",
+          "shows": "5月21日に表データ追加とグラフの調整を報告。14日と区別。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "google-bard-gemini-2024-08",
+      "from": "2024-08",
+      "to": "2024-09",
+      "regions": [
+        {
+          "name": "Gems一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "保存した用途別の会話相手への入口（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）"
+          ]
+        },
+        {
+          "name": "Gemの作成",
+          "position": null,
+          "size": null,
+          "contents": [
+            "名前と指示を書いて保存する（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Gemsを管理",
+          "where": "左列（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）",
+          "purpose": "保存した会話相手を管理する（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）"
+        },
+        {
+          "label": "保存",
+          "where": "Gemの作成画面（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）",
+          "purpose": "名前と指示を保存する（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "保存した指示に沿って会話する。通常会話と異なる吹き出しの仕様は未確認（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左列にGemsへの入口（https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/）",
+        "名前と指示を保存して会話を再開（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/）",
+        "学習・文章編集・プログラミングなどの作成済み例（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/",
+          "kind": "blog",
+          "date": "2024-08-28",
+          "shows": "Gemsの指示・名前・会話、用途別の作成例。8月13日の機能として遡らせない。"
+        },
+        {
+          "url": "https://9to5google.com/2024/08/28/gemini-advanced-gems-imagen-3/",
+          "kind": "press",
+          "date": "2024-08-28",
+          "shows": "WebのGem manager、左列のGemsへの入口、指示の書き直し。"
+        },
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/",
+          "kind": "blog",
+          "date": "2024-08-13",
+          "shows": "LiveはAndroidの音声会話として公開。Webの常設波形の根拠ではない。"
+        }
+      ],
+      "confidence": 0.69
+    },
+    {
+      "id": "google-bard-gemini-2024-09",
+      "from": "2024-09",
+      "to": "2024-12",
+      "regions": [
+        {
+          "name": "開始画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "提案を省き、短い問いかけだけを置く試験（https://9to5google.com/2024/09/11/gemini-homepage-redesign/）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "何を手伝うかを尋ねる短い文を中心に置く。後の記事では名前入りの挨拶も報告され、文言は一律ではない（https://9to5google.com/2024/09/11/gemini-homepage-redesign/）",
+      "distinctive": [
+        "開始画面から提案を省く（https://9to5google.com/2024/09/11/gemini-homepage-redesign/）",
+        "短い問いかけを中心に置く（https://9to5google.com/2024/09/11/gemini-homepage-redesign/）",
+        "一部アカウントからの試験であり、全員同じ変更日ではない（https://9to5google.com/2024/09/11/gemini-homepage-redesign/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://9to5google.com/2024/09/11/gemini-homepage-redesign/",
+          "kind": "press",
+          "date": "2024-09-11",
+          "shows": "Webの開始画面で提案と名前入り挨拶を省いた試験を一アカウントで確認。全員への適用日は不明。"
+        },
+        {
+          "url": "https://9to5google.com/2024/10/09/gemini-homescreen-android-redesign-wide/",
+          "kind": "press",
+          "date": "2024-10-09",
+          "shows": "Webも挨拶中心に簡素化されたと追認。記事の細かな入力配置はAndroidのためWebへ転用しない。"
+        }
+      ],
+      "confidence": 0.52
+    },
+    {
+      "id": "google-bard-gemini-2024-12",
+      "from": "2024-12",
+      "to": "2025-03",
+      "regions": [
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "左に＋、文字入力、末尾にマイク（https://9to5google.com/2024/12/10/gemini-text-field-tweak/）"
+          ]
+        },
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Deep Researchと2.0 Flash Experimentalの入口（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+          ]
+        },
+        {
+          "name": "調査計画と報告",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "調査前に計画を提示し、終了後に出典リンク付き報告（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "調査計画を修正",
+          "where": "調査開始前の計画（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）",
+          "purpose": "調べる内容を直す（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+        },
+        {
+          "label": "調査を開始",
+          "where": "調査開始前の計画（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）",
+          "purpose": "計画を承認して検索を始める（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+        },
+        {
+          "label": "Googleドキュメントへ書き出す",
+          "where": "調査報告（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）",
+          "purpose": "報告を文書に移す（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "調査計画を先に出し、実行後にリンク付きの報告を出す（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "細い輪郭の横長丸形。角丸の数値は未確認（https://9to5google.com/2024/12/10/gemini-text-field-tweak/）"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "輪郭だけの横長の入力欄（https://9to5google.com/2024/12/10/gemini-text-field-tweak/）",
+        "モデル選択にDeep Research（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）",
+        "調査計画を先に承認する（https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-deep-research/",
+          "kind": "blog",
+          "date": "2024-12-11",
+          "shows": "モデル選択からDeep Researchまたは2.0 Flash Experimentalへ。調査計画の修正・承認、出典付き報告、Docsへの書き出し。"
+        },
+        {
+          "url": "https://9to5google.com/2024/12/10/gemini-text-field-tweak/",
+          "kind": "press",
+          "date": "2024-12-10",
+          "shows": "Webの入力欄が細い輪郭の横長丸形へ。左に＋、入力、右にマイク。"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "google-bard-gemini-2025-03",
+      "from": "2025-03",
+      "to": "2025-06",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Canvasを開くと会話が左に残る（https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/）"
+          ]
+        },
+        {
+          "name": "Canvas",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "文章編集、コード、動作の確認をする領域（https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/）"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "Canvasを選択。資料追加後は入力欄の上に音声解説を作る候補（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Canvas",
+          "where": "Webの入力欄（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+          "purpose": "文章やコードの編集を開く（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）"
+        },
+        {
+          "label": "Googleドキュメントへ書き出す",
+          "where": "文章のCanvas（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+          "purpose": "文章を移す（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）"
+        },
+        {
+          "label": "音声解説を作成",
+          "where": "資料を追加した後、入力欄の上（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+          "purpose": "資料から対話形式の音声を作る（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "会話を続けながら横のCanvasに変更を反映（https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/）",
+        "tool_calls": "Deep Researchでは検索中の進め方を表示（https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025/）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話と編集内容を左右に並べる（https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/）",
+        "文章を部分選択して直す（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+        "コードの動作を同じ領域で確認（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+        "資料追加後に音声解説を作る候補が出る（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/",
+          "kind": "blog",
+          "date": "2025-03-18",
+          "shows": "入力欄のCanvas、選択箇所の長さ・調子の修正、HTML/Reactの確認、音声解説の候補。"
+        },
+        {
+          "url": "https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/",
+          "kind": "press",
+          "date": "2025-03-18",
+          "shows": "Webで左に会話、隣にCanvasという2領域。"
+        },
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/new-gemini-app-features-march-2025/",
+          "kind": "blog",
+          "date": "2025-03-13",
+          "shows": "Deep Researchの進捗と思考表示、入力欄・モデル選択からの入口。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "google-bard-gemini-2025-06",
+      "from": "2025-06",
+      "to": "2025-12",
+      "regions": [
+        {
+          "name": "Canvas",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文章から図解・クイズ・音声解説などへ変える作成メニュー（https://gemini.google/release-notes/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作成",
+          "where": "Canvas内（https://gemini.google/release-notes/）",
+          "purpose": "文章を図解・クイズなどに変える（https://gemini.google/release-notes/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "Canvasで会話しながらアプリなどを修正できる。6月17日の全体配置は未確認（https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/）",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Canvas内に作成メニュー（https://gemini.google/release-notes/）",
+        "図解やクイズに変換（https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/）",
+        "Canvasで動くアプリを作る（https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-app-updates-io-2025/",
+          "kind": "blog",
+          "date": "2025-05-20",
+          "shows": "2.5期のCanvasで図解、クイズ、音声解説、アプリを作る。6月17日の画面全体を示す資料ではない。"
+        },
+        {
+          "url": "https://gemini.google/release-notes/",
+          "kind": "release-notes",
+          "date": "2025-05-20",
+          "shows": "Canvasの作成メニューとGemini Advanced名の終了。6月版に関係する5月の変更を参照。"
+        },
+        {
+          "url": "https://9to5google.com/2025/03/18/gemini-canvas-audio-overview/",
+          "kind": "press",
+          "date": "2025-03-18",
+          "shows": "左右に会話とCanvasを置く構成の初出根拠。6月の全配置は未確認。"
+        }
+      ],
+      "confidence": 0.6
+    },
+    {
+      "id": "google-bard-gemini-2025-12",
+      "from": "2025-12",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "モデル選択",
+          "position": null,
+          "size": null,
+          "contents": [
+            "速い返答、考えて返答、Proの3つの選択（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "速い返答",
+          "where": "モデル選択内のFast（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+          "purpose": "すばやく返答する（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）"
+        },
+        {
+          "label": "考えて返答",
+          "where": "モデル選択内のThinking（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+          "purpose": "複雑な依頼を考えて返答する（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）"
+        },
+        {
+          "label": "Pro",
+          "where": "モデル選択内（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+          "purpose": "高度な数学やプログラミング向けを選ぶ（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Fastという選択（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+        "Thinkingという選択（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+        "Proを同じ選択メニューに置く（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/",
+          "kind": "blog",
+          "date": "2025-12-17",
+          "shows": "Fast・Thinking・Proという選択名と対応。"
+        },
+        {
+          "url": "https://gemini.google/release-notes/",
+          "kind": "release-notes",
+          "date": "2025-12-17",
+          "shows": "12月17日の項目で同じ3つの選択名を確認。寸法・配置の根拠ではない。"
+        }
+      ],
+      "confidence": 0.51
+    },
+    {
+      "id": "google-bard-gemini-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "設定の入口",
+          "position": "bottom-left",
+          "size": null,
+          "contents": [
+            "左メニュー下の設定から個人に関する情報へ（https://support.google.com/gemini/answer/18617127?hl=en）"
+          ]
+        },
+        {
+          "name": "記憶のまとめ",
+          "position": null,
+          "size": null,
+          "contents": [
+            "覚えている情報の確認・修正と変更履歴（https://support.google.com/gemini/answer/18617127?hl=en）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "記憶のまとめ",
+          "where": "設定→個人に関する情報（https://support.google.com/gemini/answer/18617127?hl=en）",
+          "purpose": "覚えている情報を確認する（https://support.google.com/gemini/answer/18617127?hl=en）"
+        },
+        {
+          "label": "記憶の履歴",
+          "where": "記憶のまとめの右上（https://support.google.com/gemini/answer/18617127?hl=en）",
+          "purpose": "変更の一覧を見る（https://support.google.com/gemini/answer/18617127?hl=en）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, -apple-system, \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "設定から覚えている情報を確認（https://support.google.com/gemini/answer/18617127?hl=en）",
+        "依頼文で内容を追加・修正・削除（https://support.google.com/gemini/answer/18617127?hl=en）",
+        "右上から変更履歴を開く（https://support.google.com/gemini/answer/18617127?hl=en）"
+      ],
+      "must_not_copy": [
+        "Google、Bard、Geminiのロゴ・ブランド用の文字装飾・星形の製品マーク",
+        "製品の画像、提案カードの作例、画面画像、長い紹介文",
+        "独自書体のファイル。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://support.google.com/gemini/answer/18617127?hl=en",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "左メニュー→設定→Personal Intelligence→Memory summary。依頼文で情報を更新し、右上の履歴で変更を確認。公開日なし、2026-11-15閲覧。"
+        },
+        {
+          "url": "https://www.androidcentral.com/apps-software/ai/google-is-upgrading-gemini-with-memory-summary-heres-how-to-find-out-what-your-assistant-knows-about-you",
+          "kind": "press",
+          "date": "2026-11-10",
+          "shows": "同月のMemory summary公開と設定からの入口。提供条件は現行ヘルプと異なるため固定しない。"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "kind": "blog",
+          "date": "2026-11-10",
+          "shows": "CarbonをGeminiアプリに展開。画面配置・思考レベルのUIは示さない。"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+          "kind": "blog",
+          "date": "2026-11-12",
+          "shows": "Hydrogenのモデル選択。記事は11月13日更新。APIの思考設定をアプリの4段階メニューの根拠にしない。"
+        }
+      ],
+      "confidence": 0.58
+    }
+  ],
+  "corrections": [
+    "2023年3月の左列を会話履歴として扱わない。履歴の固定や改名は7月の追加（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-july-2023/）",
+    "3月から検索による文の再確認やGoogleサービス連携を同時に表示しない。9月19日の追加（https://blog.google/products-and-platforms/products/gemini/google-bard-new-features-update-sept-2023/）",
+    "7月版の描画では設定類を左列に残さず、当日の記事が示す右上の位置を使う（https://9to5google.com/2023/07/13/google-bard-europe/）",
+    "12月のGemini Pro導入はモデルの変更。常設のGemini Proバッジや新レイアウトは unverified（https://blog.google/products-and-platforms/products/gemini/google-bard-try-gemini-ai/）",
+    "2月版は左のメニューと左上の切替を省かない。描画コードの4枚カード・正確な挨拶は unverified（https://9to5google.com/2024/02/08/google-gemini-advanced/）",
+    "5月14日に表計算・グラフを最初から表示しない。表データ対応の確認日は5月21日。100万文字相当の残量計を常設する根拠も unverified（https://9to5google.com/2024/05/21/gemini-advanced-spreadsheet/）",
+    "Gemsは8月28日の追加。8月13日のWebに遡らせない（https://blog.google/products-and-platforms/products/gemini/google-gemini-update-august-2024/）",
+    "8月13日のLiveはAndroid向け音声会話。Webの常設の波形や音量計は unverified（https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/）",
+    "3月18日のCanvasをGemini 2.5の専用画面と呼ばない。公式の公開記事はCanvasと音声解説を説明している（https://blog.google/products-and-platforms/products/gemini/gemini-collaboration-features/）",
+    "6月の上部常設音声プレイヤーやGoogle Docs Syncボタンは unverified。作成メニューとして確認できる内容を使う（https://gemini.google/release-notes/）",
+    "12月のFast・Thinking・Proは選択メニューの項目。Fast/Thinkingだけの独立したトグルの位置は unverified（https://blog.google/products-and-platforms/products/gemini/gemini-3-flash-gemini-app/）",
+    "11月の記憶のまとめは設定配下。独立した左列ボタン、Pixel Rambler、アプリ内low/medium/high/xhighの4段階メニューは unverified（https://support.google.com/gemini/answer/18617127?hl=en）",
+    "Web版の色番号・書体名・幅・角丸は全版で unverified。カタログの配色を確認済みの実測値として転記しない。"
+  ]
+}

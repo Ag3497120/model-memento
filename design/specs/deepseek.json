@@ -1,0 +1,407 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "deepseek",
+  "name": "DeepSeek",
+  "vendor": "DeepSeek",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "deepseek-2024-11",
+      "from": "2024-11",
+      "to": null,
+      "regions": [],
+      "controls": [
+        {
+          "label": "深く考える（Deep Think）",
+          "where": "会話画面。位置は未確認",
+          "purpose": "推論するモードへ切り替える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "最終回答だけでなく、考えている過程を画面に示す。囲み方・開閉操作・文字色は未確認。",
+        "tool_calls": null,
+        "streaming": "思考の内容を進行に合わせて表示する。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ウェブの会話画面でDeep Thinkを有効にする",
+        "答えに至る過程を進行中に表示する",
+        "通常の会話に推論モードを加える初期のプレビュー"
+      ],
+      "must_not_copy": [
+        "DeepSeekのクジラのロゴ・マスコット",
+        "独自に描いた製品名のワードマーク",
+        "公式の画面画像・図版・アプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://www.deepseek.com/en/news/r1-lite-preview/",
+          "kind": "blog",
+          "date": "2024-11-20",
+          "shows": "DeepSeek-R1-Lite-Previewとリアルタイムの思考表示、公式チャットへの入口を説明。現在のページのナビゲーションを2024年のチャット画面と見なさない。"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/news/news1120/",
+          "kind": "release-notes",
+          "date": "2024-11-20",
+          "shows": "初期プレビューの思考表示を確認。色や配置の数値はない。"
+        },
+        {
+          "url": "https://www.datacamp.com/blog/deepseek-r1-lite-preview",
+          "kind": "press",
+          "date": "2024-11-26",
+          "shows": "本人が試した長い解説。ログイン後にDeep Thinkを有効化する操作と、思考内容が見えることを文章で確認。UI寸法は採用していない。"
+        }
+      ],
+      "confidence": 0.48
+    },
+    {
+      "id": "deepseek-2025-01",
+      "from": "2025-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "履歴の入口",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "狭い画面では左上のボタンから過去の会話を開く"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者とAIのやりとり"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文章を入力する欄",
+            "深く考えるモード",
+            "ウェブ検索",
+            "ファイルの追加"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "深く考える（DeepThink (R1)）",
+          "where": "入力欄の下",
+          "purpose": "R1で考えるモードを有効にする"
+        },
+        {
+          "label": "検索（Search）",
+          "where": "入力欄の下",
+          "purpose": "ウェブの情報を調べる"
+        },
+        {
+          "label": "+",
+          "where": "入力欄の右側。端末による違いは未確認",
+          "purpose": "文書などを添付する"
+        },
+        {
+          "label": "会話履歴",
+          "where": "狭い画面の左上",
+          "purpose": "以前の会話を開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "会話画面の下に文章入力欄とモードを変える操作をまとめる。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "入力欄の下にDeepThink (R1)とSearchを置く",
+        "文章入力の近くに文書追加の入口を置く",
+        "狭い画面では履歴をボタンから開く"
+      ],
+      "must_not_copy": [
+        "DeepSeekのクジラのロゴ・マスコット",
+        "独自に描いた製品名のワードマーク",
+        "公式の画面画像・図版・アプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news250120/",
+          "kind": "release-notes",
+          "date": "2025-01-20",
+          "shows": "R1の公開と、公式ウェブのDeepThinkから使えることを確認。配色や幅はこの発表からは分からない。"
+        },
+        {
+          "url": "https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/",
+          "kind": "press",
+          "date": "2025-02-06",
+          "shows": "元記事は2025-01-29、表示される更新日は02-06。下部入力、DeepThink (R1)・Search、その近くの+、狭い画面の左上から開く履歴。スマホとウェブを併記した記事なのでデスクトップの常設左欄の幅へ変換しない。"
+        }
+      ],
+      "confidence": 0.56
+    },
+    {
+      "id": "deepseek-2025-08",
+      "from": "2025-08",
+      "to": null,
+      "regions": [],
+      "controls": [
+        {
+          "label": "深く考える（DeepThink）",
+          "where": "公式会話画面。周辺の配置は未確認",
+          "purpose": "同じモデルの通常応答と思考ありの応答を切り替える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "公式の案内はDeepThinkという機能名を使う",
+        "1つのモデルで通常応答と思考ありを切り替える",
+        "R1専用の別画面を追加したという資料ではない"
+      ],
+      "must_not_copy": [
+        "DeepSeekのクジラのロゴ・マスコット",
+        "独自に描いた製品名のワードマーク",
+        "公式の画面画像・図版・アプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news250821/",
+          "kind": "release-notes",
+          "date": "2025-08-21",
+          "shows": "V3.1の通常応答・思考モードをDeepThinkボタンで切り替える。画面全体の変更を示した説明ではない。"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/updates/",
+          "kind": "changelog",
+          "date": null,
+          "shows": "2025-08-21の項目を参照。APIで通常応答・思考モードが同じV3.1に対応することを確認する補助。ウェブの配置の証拠にはしない。現在の全文は後の変更も含む。"
+        }
+      ],
+      "confidence": 0.27
+    },
+    {
+      "id": "deepseek-2026-07",
+      "from": "2026-07",
+      "to": null,
+      "regions": [
+        {
+          "name": "モード切り替え",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "専門モード",
+            "速く答えるモード"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常の応答",
+            "思考を有効にした場合の考え方の表示"
+          ]
+        },
+        {
+          "name": "入力の操作",
+          "position": null,
+          "size": null,
+          "contents": [
+            "文書の追加",
+            "ウェブ検索の切り替え"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "専門モード（Expert Mode）",
+          "where": "画面の上部",
+          "purpose": "思考するモードを選ぶ"
+        },
+        {
+          "label": "速く答える（Instant Mode）",
+          "where": "画面の上部",
+          "purpose": "すばやい応答のモードを選ぶ"
+        },
+        {
+          "label": "検索",
+          "where": "会話の操作部。正確な位置は未確認",
+          "purpose": "ウェブ検索を切り替える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "専門モードでは、回答に加えて思考を表示する。文字色や開閉方法は未確認。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "上部にExpert ModeとInstant Modeの切り替えを示す",
+        "ウェブ検索は利用者が切り替える",
+        "文書をドラッグして追加できる"
+      ],
+      "must_not_copy": [
+        "DeepSeekのクジラのロゴ・マスコット",
+        "独自に描いた製品名のワードマーク",
+        "公式の画面画像・図版・アプリアイコン"
+      ],
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news260424/",
+          "kind": "release-notes",
+          "date": "2026-04-24",
+          "shows": "V4公開時点で公式ウェブのExpert Mode / Instant Modeという入口を案内。上部の配置まで分かる資料ではない。"
+        },
+        {
+          "url": "https://www.techradar.com/pro/deepseek-ai-review",
+          "kind": "press",
+          "date": "2026-07-13",
+          "shows": "本人が使ったレビューのUser experienceとFeaturesを参照。上部のモード切り替え、手動の検索切り替え、文書のドラッグ追加、思考表示。7月の観察を4月24日の配置へ逆算しない。"
+        }
+      ],
+      "confidence": 0.57
+    }
+  ],
+  "corrections": [
+    "今回読んだcatalogにはdeepseekという独立IDがなく、DeepSeekを使う別のクライアントやHarnessのIDがある。それらの画面を公式ウェブの画面として流用しない。公式のチャット入口はchat.deepseek.com。https://www.deepseek.com/en/news/r1-lite-preview/",
+    "初期のDeep Think、2025年1月のDeepThink (R1)、2025年8月のDeepThink、2026年のExpert Mode / Instant Modeを同一の固定ラベルとして描かない。周辺レイアウトを確認できない月ではnullを残す。https://www.datacamp.com/blog/deepseek-r1-lite-preview https://indianexpress.com/article/technology/techook/deepseek-how-to-use-for-free-smartphone-laptop-pc-9805383/ https://api-docs.deepseek.com/news/news250821/ https://api-docs.deepseek.com/news/news260424/",
+    "モデルの公開ソースと公式ウェブ画面のソースは別。モデルのライセンスだけで公式UIの素材をコピーできるとは扱わない。2026年11月に案内されたchat-demoはAPIを使う別の公開デモ。https://api-docs.deepseek.com/news/news261113/ https://github.com/deepseek-ai/chat-demo/blob/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c/README.md",
+    "公式APIデモのtheme.cssに色があっても、2024～2026年の本番チャットの色を証明しない。今回の本番UIのHEX色、書体、幅、角丸はunverifiedなのでnull。https://github.com/deepseek-ai/chat-demo/blob/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c/src/app/theme.css",
+    "公開トップページはログアウト状態の案内・広告ページ。chat.deepseek.comは取得時403だったため、トップページの背景や製品名の装飾を会話画面へ移さない。https://www.deepseek.com/ https://chat.deepseek.com/"
+  ]
+}

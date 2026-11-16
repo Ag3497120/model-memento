@@ -1,0 +1,172 @@
+# Reviewer installs this as .github/workflows/contrib-intake.yml.
+# Sources and installation requirements: design/contrib.md. Never executes issue text.
+name: 寄稿を自動検査して次の更新へ渡す
+
+on:
+  issues:
+    types: [opened, edited]
+  discussion:
+    types: [created, edited]
+
+permissions:
+  contents: read
+
+# The state is shared; do not drop a prior accepted event by cancelling its writer.
+concurrency:
+  group: memento-contribution-state-v1
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      accepted: ${{ steps.intake.outputs.accepted }}
+    env:
+      MEMENTO_CONTRIB_OUT: ${{ runner.temp }}/contrib-next
+      MEMENTO_CONTRIB_REPLY: ${{ runner.temp }}/contrib-reply.txt
+    steps:
+      - name: 既定ブランチの検査コードだけを読む
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - name: Node.jsを準備
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: CIで固定された依存関係を準備
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: 寄稿の検査をオフラインで試す
+        run: node --test test/contrib/*.test.js
+
+      - name: AI の変更案に同じ出典・権利・形式検査をかける
+        if: contains(github.event.issue.labels.*.name, 'ai-maintain') || contains(github.event.discussion.labels.*.name, 'ai-maintain')
+        run: node scripts/ai-maintain/validate.js --event "$GITHUB_EVENT_PATH" --report ai-contribution-validation.json
+
+      - name: 前回の照合用の状態を読む
+        id: state
+        uses: actions/cache/restore@v4
+        with:
+          path: .contrib-cache
+          key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            contrib-state-v1-
+
+      - name: イベントファイルだけを入口にして検査する
+        id: intake
+        env:
+          MEMENTO_CONTRIB_KEY: ${{ secrets.MEMENTO_CONTRIB_KEY }}
+          # Enable once for the first run; disable immediately after a state is saved.
+          MEMENTO_CONTRIB_ALLOW_EMPTY: ${{ vars.MEMENTO_CONTRIB_ALLOW_EMPTY }}
+          RESTORED_STATE: ${{ steps.state.outputs.cache-matched-key }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import { run } from './scripts/contrib-intake.js';
+          if (process.env.RESTORED_STATE) process.env.MEMENTO_CONTRIB_STATE = '.contrib-cache/state.json';
+          else if (process.env.MEMENTO_CONTRIB_ALLOW_EMPTY !== 'true') throw new Error('前回の寄稿の状態がありません。管理者が保存済みの状態を復元してください。初回だけALLOW_EMPTYを設定できます。');
+          const result = await run([process.env.GITHUB_EVENT_PATH]);
+          await fs.appendFile(process.env.GITHUB_OUTPUT, `accepted=${result.ok ? 'true' : 'false'}\n`);
+          NODE
+
+      - name: 次のビルドが読む入力と協力者一覧を渡す
+        if: steps.intake.outputs.accepted == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: memento-contrib-build-input
+          path: |
+            ${{ runner.temp }}/contrib-next/build-input.json
+            ${{ runner.temp }}/contrib-next/credits.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: 管理者の確認用データを別に保存する
+        if: steps.intake.outputs.accepted == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: memento-contrib-review-and-state
+          path: |
+            ${{ runner.temp }}/contrib-next/review-queue.json
+            ${{ runner.temp }}/contrib-next/pending.json
+            ${{ runner.temp }}/contrib-next/state.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: 次回へ渡す照合用の状態を準備する
+        if: steps.intake.outputs.accepted == 'true'
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs/promises';
+          import path from 'node:path';
+          await fs.mkdir('.contrib-cache', { recursive: true });
+          await fs.copyFile(path.join(process.env.MEMENTO_CONTRIB_OUT, 'state.json'), '.contrib-cache/state.json');
+          for (const file of ['build-input.json', 'credits.json']) await fs.copyFile(path.join(process.env.MEMENTO_CONTRIB_OUT, file), path.join('.contrib-cache', file));
+          NODE
+
+      - name: 検査と受け渡しが終わった状態だけを保存する
+        if: steps.intake.outputs.accepted == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .contrib-cache
+          key: contrib-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: 返信文を返信専用の処理へ渡す
+        uses: actions/upload-artifact@v4
+        with:
+          name: memento-contrib-reply
+          path: ${{ runner.temp }}/contrib-reply.txt
+          if-no-files-found: error
+          retention-days: 1
+
+  reply:
+    needs: intake
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: read
+      issues: write
+      discussions: write
+    steps:
+      - name: 検査済みの返信文だけを読む
+        uses: actions/download-artifact@v4
+        with:
+          name: memento-contrib-reply
+          path: reply
+
+      - name: IssueまたはDiscussionへ受付結果を返信する
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs/promises');
+            const body = await fs.readFile('reply/contrib-reply.txt', 'utf8');
+            if (Buffer.byteLength(body) > 8192) throw new Error('返信が長すぎます。');
+            if (context.payload.issue && !context.payload.issue.pull_request) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: context.payload.issue.number, body });
+            } else if (context.payload.discussion) {
+              await github.graphql('mutation($id: ID!, $body: String!) { addDiscussionComment(input: {discussionId: $id, body: $body}) { comment { id } } }', {
+                id: context.payload.discussion.node_id, body
+              });
+            }
+
+  publish:
+    needs: intake
+    if: needs.intake.outputs.accepted == 'true'
+    concurrency:
+      group: world-pages
+      queue: max
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/world-pages.yml
+    secrets:
+      MEMENTO_CONTRIB_KEY: ${{ secrets.MEMENTO_CONTRIB_KEY }}
+    with:
+      mode: delta
+      dry_run: false

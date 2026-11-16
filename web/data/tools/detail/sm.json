@@ -1,0 +1,2377 @@
+{
+  "smol-machines--smolvm": {
+    "topics": [
+      "agent-sandbox",
+      "ai-agents",
+      "code-execution",
+      "containers",
+      "crun",
+      "libkrun",
+      "llm",
+      "microvm",
+      "rust",
+      "sandbox",
+      "virtual-machine",
+      "virtualization"
+    ],
+    "homepage": "https://smolmachines.com",
+    "archived": false,
+    "commit": "ed6789642867952c091ed70c6fd9a2936bc77c6f",
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-01-28"
+      ],
+      [
+        "v1.24.1",
+        "2026-10-07"
+      ],
+      [
+        "v1.24.2",
+        "2026-10-07"
+      ],
+      [
+        "v1.25.0",
+        "2026-10-08"
+      ],
+      [
+        "v1.25.1",
+        "2026-10-08"
+      ],
+      [
+        "v1.25.2",
+        "2026-10-09"
+      ],
+      [
+        "v1.25.3",
+        "2026-10-09"
+      ],
+      [
+        "v1.25.4",
+        "2026-10-09"
+      ],
+      [
+        "v1.26.0",
+        "2026-10-10"
+      ],
+      [
+        "v1.26.1",
+        "2026-10-10"
+      ],
+      [
+        "v1.27.0",
+        "2026-10-12"
+      ],
+      [
+        "v1.27.1",
+        "2026-10-12"
+      ],
+      [
+        "v1.27.2",
+        "2026-10-12"
+      ],
+      [
+        "v1.27.3",
+        "2026-10-13"
+      ],
+      [
+        "v1.27.4",
+        "2026-10-14"
+      ],
+      [
+        "v1.28.0",
+        "2026-10-14"
+      ],
+      [
+        "v1.28.1",
+        "2026-10-14"
+      ],
+      [
+        "v1.29.0",
+        "2026-10-15"
+      ],
+      [
+        "v1.29.1",
+        "2026-10-16"
+      ],
+      [
+        "v1.30.0",
+        "2026-10-17"
+      ],
+      [
+        "v1.30.1",
+        "2026-10-17"
+      ],
+      [
+        "v1.31.0",
+        "2026-10-21"
+      ],
+      [
+        "v1.31.1",
+        "2026-10-21"
+      ],
+      [
+        "v1.31.2",
+        "2026-10-22"
+      ],
+      [
+        "v1.31.3",
+        "2026-10-22"
+      ],
+      [
+        "v1.31.4",
+        "2026-10-23"
+      ],
+      [
+        "v1.31.5",
+        "2026-10-23"
+      ],
+      [
+        "v1.32.0",
+        "2026-10-24"
+      ],
+      [
+        "v1.32.1",
+        "2026-10-24"
+      ],
+      [
+        "v1.32.2",
+        "2026-10-25"
+      ],
+      [
+        "v1.32.3",
+        "2026-10-26"
+      ],
+      [
+        "v1.32.4",
+        "2026-10-28"
+      ],
+      [
+        "v1.33.0",
+        "2026-11-01"
+      ],
+      [
+        "v1.34.0",
+        "2026-11-08"
+      ],
+      [
+        "v1.34.1",
+        "2026-11-10"
+      ],
+      [
+        "v1.34.2",
+        "2026-11-13"
+      ],
+      [
+        "v1.34.3",
+        "2026-11-13"
+      ],
+      [
+        "v1.34.4",
+        "2026-11-13"
+      ],
+      [
+        "v1.35.0",
+        "2026-11-14"
+      ],
+      [
+        "v1.35.1",
+        "2026-11-15"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "brew install smol-machines/tap/smolvm                  # macOS (Homebrew) / npm install smolmachines     # Node / TypeScript / pip install smolmachines     # Python",
+    "install_evidence": [
+      {
+        "command": "brew install smol-machines/tap/smolvm                  # macOS (Homebrew)",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/README.md",
+        "line": 28
+      },
+      {
+        "command": "npm install smolmachines     # Node / TypeScript",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/README.md",
+        "line": 67
+      },
+      {
+        "command": "pip install smolmachines     # Python",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/README.md",
+        "line": 68
+      }
+    ],
+    "instruction_files": [
+      "AGENTS.md"
+    ],
+    "instruction_evidence": [
+      {
+        "name": "AGENTS.md",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/main.rs",
+        "path": "src/main.rs",
+        "line": 16,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      }
+    ],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/main.rs",
+        "src/settings.rs",
+        "src/agent/input.rs",
+        "crates/smolvm-shim/src/main.rs",
+        "crates/smolvm-agent/src/main.rs",
+        "crates/smolvm-cuda-guest/src/main.rs",
+        "crates/smolvm-cuda-codegen/src/main.rs",
+        "bench/graph_pool_memory.py",
+        "src/api/memory_pressure.rs",
+        "crates/smolvm-agent/src/memory_trim.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Agents: run",
+      "Option",
+      "Result",
+      "finalizing file write",
+      "starting detached container",
+      "std::io::Result",
+      "Vec",
+      "match serde_json::from_slice::",
+      "std::result::Result",
+      "Box",
+      "--pool",
+      "--shapes",
+      "--min-elements",
+      "--max-elements",
+      "--replays",
+      "--label"
+    ],
+    "string_evidence": [
+      {
+        "text": "Agents: run",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/main.rs",
+        "line": 13,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Option",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/main.rs",
+        "line": 145,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Result",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/settings.rs",
+        "line": 73,
+        "kind": "visible-text"
+      },
+      {
+        "text": "finalizing file write",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 3895,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "starting detached container",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 4950,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "std::io::Result",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 206,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Vec",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 309,
+        "kind": "visible-text"
+      },
+      {
+        "text": "match serde_json::from_slice::",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 2420,
+        "kind": "visible-text"
+      },
+      {
+        "text": "std::result::Result",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 3177,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Box",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+        "line": 7495,
+        "kind": "visible-text"
+      },
+      {
+        "text": "--pool",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 18,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--shapes",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 19,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--min-elements",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 20,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--max-elements",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 21,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--replays",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 22,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--label",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+        "line": 23,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/smol-machines/smolvm",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/README.md",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/Cargo.toml",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda/Cargo.toml",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-pack/Cargo.toml",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-s3fs/Cargo.toml",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/main.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/settings.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/agent/input.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-shim/src/main.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda-guest/src/main.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda-codegen/src/main.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/api/memory_pressure.rs",
+      "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/memory_trim.rs",
+      "https://api.github.com/repos/smol-machines/smolvm/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/Cargo.toml"
+      },
+      {
+        "path": "crates/smolvm-cuda/Cargo.toml",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda/Cargo.toml"
+      },
+      {
+        "path": "crates/smolvm-pack/Cargo.toml",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-pack/Cargo.toml"
+      },
+      {
+        "path": "crates/smolvm-s3fs/Cargo.toml",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-s3fs/Cargo.toml"
+      },
+      {
+        "path": "src/main.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/main.rs"
+      },
+      {
+        "path": "src/settings.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/settings.rs"
+      },
+      {
+        "path": "src/agent/input.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/agent/input.rs"
+      },
+      {
+        "path": "crates/smolvm-shim/src/main.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-shim/src/main.rs"
+      },
+      {
+        "path": "crates/smolvm-agent/src/main.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/main.rs"
+      },
+      {
+        "path": "crates/smolvm-cuda-guest/src/main.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda-guest/src/main.rs"
+      },
+      {
+        "path": "crates/smolvm-cuda-codegen/src/main.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-cuda-codegen/src/main.rs"
+      },
+      {
+        "path": "bench/graph_pool_memory.py",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/bench/graph_pool_memory.py"
+      },
+      {
+        "path": "src/api/memory_pressure.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/src/api/memory_pressure.rs"
+      },
+      {
+        "path": "crates/smolvm-agent/src/memory_trim.rs",
+        "source": "https://github.com/smol-machines/smolvm/blob/ed6789642867952c091ed70c6fd9a2936bc77c6f/crates/smolvm-agent/src/memory_trim.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=16, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Rust) → framework / sandbox",
+    "repository_id": 1119210021,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smol-ai--godmode": {
+    "topics": [
+      "bard",
+      "chatgpt",
+      "electron",
+      "google",
+      "menubar"
+    ],
+    "homepage": "https://smol.ai",
+    "archived": false,
+    "commit": "8ac3ffde96ab72d992b5d5cf1743673e610cb07b",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2023-05-15"
+      ],
+      [
+        "v0.0.2",
+        "2023-05-16"
+      ],
+      [
+        "v0.0.3",
+        "2023-05-16"
+      ],
+      [
+        "v0.0.4",
+        "2023-05-19"
+      ],
+      [
+        "v0.0.5",
+        "2023-05-26"
+      ],
+      [
+        "v0.0.6",
+        "2023-05-30"
+      ],
+      [
+        "v0.0.7",
+        "2023-06-01"
+      ],
+      [
+        "v0.0.8",
+        "2023-06-05"
+      ],
+      [
+        "v0.0.9",
+        "2023-06-15"
+      ],
+      [
+        "v0.0.10",
+        "2023-07-04"
+      ],
+      [
+        "v0.0.11",
+        "2023-07-11"
+      ],
+      [
+        "v0.0.12",
+        "2023-07-14"
+      ],
+      [
+        "v0.0.13",
+        "2023-07-20"
+      ],
+      [
+        "v0.0.14",
+        "2023-07-25"
+      ],
+      [
+        "v0.0.15",
+        "2023-07-27"
+      ],
+      [
+        "v0.0.16",
+        "2023-07-31"
+      ],
+      [
+        "v0.0.17",
+        "2023-08-08"
+      ],
+      [
+        "v1.0.0-beta.0",
+        "2023-08-16"
+      ],
+      [
+        "v1.0.0-beta.1",
+        "2023-08-18"
+      ],
+      [
+        "v1.0.0-beta.2",
+        "2023-08-19"
+      ],
+      [
+        "v1.0.0-beta.3",
+        "2023-08-21"
+      ],
+      [
+        "v1.0.0-beta.4",
+        "2023-08-25"
+      ],
+      [
+        "v1.0.0-beta.5",
+        "2023-08-29"
+      ],
+      [
+        "v1.0.0-beta.6",
+        "2023-08-30"
+      ],
+      [
+        "v1.0.0-beta.7",
+        "2023-09-06"
+      ],
+      [
+        "v1.0.0-beta.8",
+        "2023-09-06"
+      ],
+      [
+        "v1.0.0-beta.9",
+        "2023-10-05"
+      ],
+      [
+        "v1.0.0-beta.10",
+        "2023-11-17"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npm install --force",
+    "install_evidence": [
+      {
+        "command": "npm install --force",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/README.md",
+        "line": 147
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/renderer/App.tsx",
+        "src/renderer/layout.tsx",
+        "src/settings/settings.tsx",
+        "src/renderer/components/settings.tsx",
+        "src/renderer/components/ui/input.tsx",
+        "src/main/main.ts",
+        "src/renderer/index.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#ccc",
+      "font_ui": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica",
+      "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "background",
+        "value": "#ccc",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.css",
+        "line": 46
+      },
+      {
+        "token": "font_ui",
+        "value": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.css",
+        "line": 12
+      }
+    ],
+    "strings": [
+      "Settings",
+      "Automatically Open GodMode at Login",
+      "Focus superprompt input on quick open shortcut",
+      "Change Shortcut",
+      "Recording...",
+      "Record shortcut"
+    ],
+    "string_evidence": [
+      {
+        "text": "Settings",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 157,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Automatically Open GodMode at Login",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 165,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Focus superprompt input on quick open shortcut",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 192,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Change Shortcut",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 218,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Recording...",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 243,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Record shortcut",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+        "line": 251,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/smol-ai/GodMode",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/README.md",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/package.json",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/release/app/package.json",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/layout.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/settings/settings.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/ui/input.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/main/main.ts",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/index.tsx",
+      "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.css",
+      "https://api.github.com/repos/smol-ai/GodMode/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/package.json"
+      },
+      {
+        "path": "release/app/package.json",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/release/app/package.json"
+      },
+      {
+        "path": "src/renderer/App.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.tsx"
+      },
+      {
+        "path": "src/renderer/layout.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/layout.tsx"
+      },
+      {
+        "path": "src/settings/settings.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/settings/settings.tsx"
+      },
+      {
+        "path": "src/renderer/components/settings.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/settings.tsx"
+      },
+      {
+        "path": "src/renderer/components/ui/input.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/components/ui/input.tsx"
+      },
+      {
+        "path": "src/main/main.ts",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/main/main.ts"
+      },
+      {
+        "path": "src/renderer/index.tsx",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/index.tsx"
+      },
+      {
+        "path": "src/renderer/App.css",
+        "source": "https://github.com/smol-ai/GodMode/blob/8ac3ffde96ab72d992b5d5cf1743673e610cb07b/src/renderer/App.css"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=6, theme=2.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / other",
+    "repository_id": 640819432,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smallcloudai--refact": {
+    "topics": [
+      "ai-agent",
+      "developer-tools",
+      "enterprise",
+      "fine-tuning",
+      "on-prem",
+      "open-source",
+      "rag",
+      "self-hosted",
+      "swe-bench",
+      "vscode"
+    ],
+    "homepage": "https://refact.ai",
+    "archived": true,
+    "commit": "27f86def9423b1153f1ff857a51329a88bbbe292",
+    "classification_basis": "plugins/vscode/package.json declares engines.vscode",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2023-10-06"
+      ],
+      [
+        "v1.1.0",
+        "2023-10-26"
+      ],
+      [
+        "v1.2.0",
+        "2023-11-17"
+      ],
+      [
+        "v1.3.0",
+        "2024-01-03"
+      ],
+      [
+        "v1.3.1",
+        "2024-01-16"
+      ],
+      [
+        "v1.4.0",
+        "2024-02-09"
+      ],
+      [
+        "v1.5.0",
+        "2024-03-25"
+      ],
+      [
+        "v1.6.0",
+        "2024-04-19"
+      ],
+      [
+        "v1.6.1",
+        "2024-05-02"
+      ],
+      [
+        "v1.6.2",
+        "2024-05-27"
+      ],
+      [
+        "v1.6.3",
+        "2024-06-20"
+      ],
+      [
+        "v1.6.4",
+        "2024-07-05"
+      ],
+      [
+        "v1.7.0",
+        "2024-09-20"
+      ],
+      [
+        "v1.8.0",
+        "2024-12-03"
+      ],
+      [
+        "v1.9.0",
+        "2025-02-04"
+      ],
+      [
+        "v1.9.1",
+        "2025-02-06"
+      ],
+      [
+        "server/v1.9.3",
+        "2025-04-17"
+      ],
+      [
+        "server/v1.10.0",
+        "2025-04-17"
+      ],
+      [
+        "server/v1.11.0",
+        "2025-05-09"
+      ],
+      [
+        "server/v1.11.2",
+        "2025-06-17"
+      ],
+      [
+        "release/v8.0.3",
+        "2026-05-14"
+      ],
+      [
+        "release/v8.0.4",
+        "2026-05-14"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      ".cursorrules",
+      "GEMINI.md"
+    ],
+    "instruction_evidence": [
+      {
+        "name": "AGENTS.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs",
+        "path": "refact-agent/engine/src/chat/system_context.rs",
+        "line": 22,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      },
+      {
+        "name": "CLAUDE.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs",
+        "path": "refact-agent/engine/src/chat/system_context.rs",
+        "line": 23,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      },
+      {
+        "name": ".cursorrules",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs",
+        "path": "refact-agent/engine/src/chat/system_context.rs",
+        "line": 25,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      },
+      {
+        "name": "GEMINI.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs",
+        "path": "refact-agent/engine/src/chat/system_context.rs",
+        "line": 24,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      }
+    ],
+    "instruction_search": {
+      "inspected_paths": [
+        "refact-agent/engine/src/tokens.rs",
+        "refact-agent/gui/src/utils/modeColors.ts",
+        "refact-agent/gui/src/components/Theme/Theme.tsx",
+        "refact-agent/gui/src/components/Theme/index.ts",
+        "refact-agent/gui/src/main.tsx",
+        "refact-agent/engine/src/main.rs",
+        "refact-agent/gui/src/features/App.tsx",
+        "refact-agent/engine/src/buddy/settings.rs",
+        "refact-agent/gui/src/features/Chat/Chat.tsx",
+        "refact-agent/gui/src/components/Chat/Chat.tsx",
+        "refact-agent/engine/src/http/routers/v1/sidebar.rs",
+        "refact-agent/engine/src/global_context.rs",
+        "refact-agent/engine/src/ext/skills_context.rs",
+        "refact-agent/engine/src/tools/buddy/memory.rs",
+        "refact-agent/engine/src/chat/system_context.rs",
+        "tools/bump_release_version.py",
+        "refact-agent/engine/src/tools/mod.rs",
+        "refact-agent/engine/src/tools/tool_mv.rs",
+        "refact-agent/gui/src/lib/index.ts",
+        "refact-agent/gui/.storybook/preview.tsx",
+        "refact-agent/engine/src/tools/tool_code_review.rs",
+        "refact-agent/engine/src/tools/tool_task_overview.rs",
+        "refact-agent/gui/src/components/Chat/index.tsx",
+        "refact-agent/gui/src/features/Chat/index.ts",
+        "refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "refact-agent/gui/src/components/ChatContent/ChatLoading.tsx",
+        "refact-agent/gui/src/utils/chatUiPersistence.ts",
+        "refact-agent/gui/src/components/ChatForm/index.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "refact-agent/engine/src/tools/buddy/memory.rs",
+      "license": "BSD-3-Clause",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "refact-agent/engine/src/tools/buddy/memory.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/buddy/memory.rs"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/bsd-3-clause",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#1a1a1a",
+      "font_ui": "system-ui, -apple-system, BlinkMacSystemFont",
+      "font_mono": "SF Mono, Fira Code, JetBrains Mono, Consolas",
+      "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "background-color",
+        "value": "#1a1a1a",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css",
+        "line": 15
+      },
+      {
+        "token": "font_ui",
+        "value": "system-ui, -apple-system, BlinkMacSystemFont",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css",
+        "line": 2
+      },
+      {
+        "token": "font_mono",
+        "value": "SF Mono, Fira Code, JetBrains Mono, Consolas",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css",
+        "line": 4
+      }
+    ],
+    "strings": [
+      "Resume",
+      "Send logs to stderr, as opposed to ~/.cache/refact/logs, so it's easier to debug.",
+      "Send logs to a file.",
+      "Set VecDB storage path manually.",
+      "New release version, for example 8.0.4",
+      "version",
+      "Hunger",
+      "Energy",
+      "Hygiene",
+      "Boredom",
+      "Affection",
+      "Reroll",
+      "Settings",
+      "RECENT CHATS",
+      "Draft unavailable or expired.",
+      "Buddy draft review",
+      "Project setup"
+    ],
+    "string_evidence": [
+      {
+        "text": "Resume",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Chat/Chat.tsx",
+        "line": 125,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Send logs to stderr, as opposed to ~/.cache/refact/logs, so it's easier to debug.",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/global_context.rs",
+        "line": 50,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Send logs to a file.",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/global_context.rs",
+        "line": 53,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Set VecDB storage path manually.",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/global_context.rs",
+        "line": 121,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "New release version, for example 8.0.4",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/tools/bump_release_version.py",
+        "line": 124,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "version",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/tools/bump_release_version.py",
+        "line": 124,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Hunger",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 87,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Energy",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 88,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Hygiene",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 89,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Boredom",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 90,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Affection",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 91,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Reroll",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 353,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Settings",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 685,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "RECENT CHATS",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 834,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Draft unavailable or expired.",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 154,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Buddy draft review",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 167,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Project setup",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "line": 780,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/smallcloudai/refact",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/README.md",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/content/docs/introduction/quickstart.md",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/content/docs/features/autonomous-agent/getting-started.md",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/plugins/vscode/package.json",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/package.json",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/Cargo.toml",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/crates/refact-ast/Cargo.toml",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tokens.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/plugins/vscode/assets/custom-theme.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/utils/modeColors.ts",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/Theme.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/index.ts",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/styles/index.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/main.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/main.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/App.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/buddy/settings.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Chat/Chat.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Chat/Chat.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/http/routers/v1/sidebar.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/global_context.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/ext/skills_context.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/buddy/memory.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/tools/bump_release_version.py",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/mod.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_mv.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/lib/index.ts",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/.storybook/preview.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_code_review.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_task_overview.rs",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/shared/tokens.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/App.module.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/lib/render/web.css",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Chat/index.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Chat/index.ts",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/ChatContent/ChatLoading.tsx",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/utils/chatUiPersistence.ts",
+      "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/ChatForm/index.tsx",
+      "https://api.github.com/repos/smallcloudai/refact/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/README.md"
+      },
+      {
+        "path": "docs/src/content/docs/introduction/quickstart.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/content/docs/introduction/quickstart.md"
+      },
+      {
+        "path": "docs/src/content/docs/features/autonomous-agent/getting-started.md",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/content/docs/features/autonomous-agent/getting-started.md"
+      },
+      {
+        "path": "plugins/vscode/package.json",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/plugins/vscode/package.json"
+      },
+      {
+        "path": "refact-agent/gui/package.json",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/package.json"
+      },
+      {
+        "path": "refact-agent/engine/Cargo.toml",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/Cargo.toml"
+      },
+      {
+        "path": "refact-agent/engine/crates/refact-ast/Cargo.toml",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/crates/refact-ast/Cargo.toml"
+      },
+      {
+        "path": "refact-agent/engine/src/tokens.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tokens.rs"
+      },
+      {
+        "path": "plugins/vscode/assets/custom-theme.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/plugins/vscode/assets/custom-theme.css"
+      },
+      {
+        "path": "refact-agent/gui/src/utils/modeColors.ts",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/utils/modeColors.ts"
+      },
+      {
+        "path": "refact-agent/gui/src/components/Theme/Theme.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/Theme.tsx"
+      },
+      {
+        "path": "refact-agent/gui/src/components/Theme/index.ts",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/index.ts"
+      },
+      {
+        "path": "docs/src/styles/index.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/docs/src/styles/index.css"
+      },
+      {
+        "path": "refact-agent/gui/src/main.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/main.tsx"
+      },
+      {
+        "path": "refact-agent/engine/src/main.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/main.rs"
+      },
+      {
+        "path": "refact-agent/gui/src/features/App.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/App.tsx"
+      },
+      {
+        "path": "refact-agent/engine/src/buddy/settings.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/buddy/settings.rs"
+      },
+      {
+        "path": "refact-agent/gui/src/features/Chat/Chat.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Chat/Chat.tsx"
+      },
+      {
+        "path": "refact-agent/gui/src/components/Chat/Chat.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Chat/Chat.tsx"
+      },
+      {
+        "path": "refact-agent/engine/src/http/routers/v1/sidebar.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/http/routers/v1/sidebar.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/global_context.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/global_context.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/ext/skills_context.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/ext/skills_context.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/tools/buddy/memory.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/buddy/memory.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/chat/system_context.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/chat/system_context.rs"
+      },
+      {
+        "path": "tools/bump_release_version.py",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/tools/bump_release_version.py"
+      },
+      {
+        "path": "refact-agent/engine/src/tools/mod.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/mod.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/tools/tool_mv.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_mv.rs"
+      },
+      {
+        "path": "refact-agent/gui/src/lib/index.ts",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/lib/index.ts"
+      },
+      {
+        "path": "refact-agent/gui/.storybook/preview.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/.storybook/preview.tsx"
+      },
+      {
+        "path": "refact-agent/engine/src/tools/tool_code_review.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_code_review.rs"
+      },
+      {
+        "path": "refact-agent/engine/src/tools/tool_task_overview.rs",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/tool_task_overview.rs"
+      },
+      {
+        "path": "refact-agent/gui/src/components/Theme/theme-config.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Theme/theme-config.css"
+      },
+      {
+        "path": "refact-agent/gui/src/components/shared/tokens.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/shared/tokens.css"
+      },
+      {
+        "path": "refact-agent/gui/src/features/App.module.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/App.module.css"
+      },
+      {
+        "path": "refact-agent/gui/src/lib/render/web.css",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/lib/render/web.css"
+      },
+      {
+        "path": "refact-agent/gui/src/components/Chat/index.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/Chat/index.tsx"
+      },
+      {
+        "path": "refact-agent/gui/src/features/Chat/index.ts",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Chat/index.ts"
+      },
+      {
+        "path": "refact-agent/gui/src/features/Buddy/BuddyHome.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/features/Buddy/BuddyHome.tsx"
+      },
+      {
+        "path": "refact-agent/gui/src/components/ChatContent/ChatLoading.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/ChatContent/ChatLoading.tsx"
+      },
+      {
+        "path": "refact-agent/gui/src/utils/chatUiPersistence.ts",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/utils/chatUiPersistence.ts"
+      },
+      {
+        "path": "refact-agent/gui/src/components/ChatForm/index.tsx",
+        "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/gui/src/components/ChatForm/index.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:3000..9999 fork:false",
+      "topic:ai-agent stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:18.684Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "plugins/vscode/package.json declares engines.vscode",
+    "repository_id": 629849791,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:20.339Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "system_prompt_path",
+          "path": "refact-agent/engine/src/ext/skills_context.rs",
+          "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/ext/skills_context.rs",
+          "verified": false
+        },
+        {
+          "field": "tools_def_path",
+          "path": "refact-agent/engine/src/tools/buddy/memory.rs",
+          "source": "https://github.com/smallcloudai/refact/blob/27f86def9423b1153f1ff857a51329a88bbbe292/refact-agent/engine/src/tools/buddy/memory.rs",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "smartschoolai--ai-to-pptx": {
+    "topics": [
+      "ai-to-pptx",
+      "aippt",
+      "chatgpt",
+      "chatgpt-pptx",
+      "chatgpt-to-",
+      "chatgpt-to-pptx",
+      "pptx",
+      "slides",
+      "vueppt"
+    ],
+    "homepage": "https://pptx.dandian.net",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/SmartSchoolAI/ai-to-pptx",
+      "https://api.github.com/licenses/gpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 758314941,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smythos--sre": {
+    "topics": [
+      "agent-framework",
+      "agents",
+      "agi",
+      "ai",
+      "ai-agents",
+      "artificial-intelligence",
+      "autogpt",
+      "autonomous-agents",
+      "chatgpt",
+      "langchain",
+      "llm",
+      "llmops",
+      "mcp",
+      "multi-agent",
+      "multi-agent-systems",
+      "n8n",
+      "openai",
+      "orchestration",
+      "rag",
+      "retrieval-augmented-generation"
+    ],
+    "homepage": "https://smythos.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/SmythOS/sre",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false",
+      "topic:rag stars:1000..2999 fork:false",
+      "topic:llmops stars:1000..2999 fork:false",
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:autonomous-agents stars:1000..2999 fork:false",
+      "topic:agent-framework stars:1000..2999 fork:false",
+      "topic:chatgpt stars:1000..2999 fork:false",
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 998134875,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smg-project--smg": {
+    "topics": [
+      "anthropic",
+      "anthropic-api",
+      "chat",
+      "claude",
+      "gemini",
+      "inference-gateway",
+      "lightseek",
+      "llm",
+      "mcp",
+      "openai",
+      "responses-api",
+      "routing",
+      "sglang",
+      "tensorrtllm",
+      "tokenspeed",
+      "trtllm",
+      "vllm"
+    ],
+    "homepage": "https://lightseek.org/smg",
+    "archived": false,
+    "commit": "1143a5ef076f83e8760bd7389df3b23ce82b79cc",
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / gateway",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.1",
+        "2026-02-13"
+      ],
+      [
+        "v1.1.0",
+        "2026-02-23"
+      ],
+      [
+        "v1.2.0",
+        "2026-03-10"
+      ],
+      [
+        "v1.3.0",
+        "2026-03-15"
+      ],
+      [
+        "v1.3.1",
+        "2026-03-16"
+      ],
+      [
+        "v1.3.2",
+        "2026-03-17"
+      ],
+      [
+        "v1.3.3",
+        "2026-03-21"
+      ],
+      [
+        "v1.4.0",
+        "2026-04-02"
+      ],
+      [
+        "v1.4.1",
+        "2026-04-09"
+      ],
+      [
+        "v1.5.0",
+        "2026-06-12"
+      ],
+      [
+        "v1.6.0",
+        "2026-06-21"
+      ],
+      [
+        "v1.7.0",
+        "2026-06-29"
+      ],
+      [
+        "v1.8.0",
+        "2026-07-18"
+      ],
+      [
+        "v1.9.0",
+        "2026-07-30"
+      ],
+      [
+        "v1.10.0",
+        "2026-08-25"
+      ],
+      [
+        "v1.10.1",
+        "2026-08-27"
+      ],
+      [
+        "v1.11.0",
+        "2026-09-24"
+      ],
+      [
+        "v1.12.0",
+        "2026-10-08"
+      ],
+      [
+        "v1.13.0",
+        "2026-10-15"
+      ],
+      [
+        "v1.14.0-rc.1",
+        "2026-11-02"
+      ],
+      [
+        "v1.14.0-rc.2",
+        "2026-11-03"
+      ],
+      [
+        "v1.14.0",
+        "2026-11-03"
+      ],
+      [
+        "v1.15.0",
+        "2026-11-10"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install smg / cargo install smg",
+    "install_evidence": [
+      {
+        "command": "pip install smg",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/README.md",
+        "line": 53
+      },
+      {
+        "command": "cargo install smg",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/README.md",
+        "line": 56
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "crates/symphony/src/tokens.rs",
+        "model_gateway/src/main.rs",
+        "clients/rust/src/api/chat.rs",
+        "crates/protocols/src/chat.rs",
+        "crates/symphony/src/input.rs",
+        "crates/mock_worker/src/main.rs",
+        "clients/openapi-gen/src/main.rs",
+        "crates/gateway_perf/src/main.rs",
+        "bindings/golang/src/memory.rs",
+        "model_gateway/src/app_context.rs",
+        "e2e_test/infra/test_gpu_memory.py",
+        "crates/data_connector/src/memory.rs",
+        "crates/symphony/tools/compile_structural_tags.py",
+        "bindings/golang/src/args.rs",
+        "bindings/python/src/smg/cli.py",
+        "crates/rl/src/view.rs",
+        "crates/policy_controller/src/view.rs",
+        "crates/policy_controller/src/wasm/view.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "--tokenizer",
+      "the payloads the README test wrote",
+      "compile against this tokenizer as well",
+      "directory",
+      "Available commands",
+      "Launch router only (requires existing worker URLs)",
+      "Launch backend worker(s) + gateway router"
+    ],
+    "string_evidence": [
+      {
+        "text": "--tokenizer",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py",
+        "line": 31,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "the payloads the README test wrote",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py",
+        "line": 30,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "compile against this tokenizer as well",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py",
+        "line": 31,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "directory",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py",
+        "line": 30,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Available commands",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/python/src/smg/cli.py",
+        "line": 34,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Launch router only (requires existing worker URLs)",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/python/src/smg/cli.py",
+        "line": 39,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Launch backend worker(s) + gateway router",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/python/src/smg/cli.py",
+        "line": 47,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/smg-project/smg",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/README.md",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/Cargo.toml",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/rl/Cargo.toml",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/mcp/Cargo.toml",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/go.mod",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/src/tokens.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/model_gateway/src/main.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/clients/rust/src/api/chat.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/protocols/src/chat.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/src/input.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/mock_worker/src/main.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/clients/openapi-gen/src/main.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/gateway_perf/src/main.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/src/memory.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/model_gateway/src/app_context.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/e2e_test/infra/test_gpu_memory.py",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/data_connector/src/memory.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/src/args.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/python/src/smg/cli.py",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/rl/src/view.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/policy_controller/src/view.rs",
+      "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/policy_controller/src/wasm/view.rs",
+      "https://api.github.com/repos/smg-project/smg/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/Cargo.toml"
+      },
+      {
+        "path": "crates/rl/Cargo.toml",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/rl/Cargo.toml"
+      },
+      {
+        "path": "crates/mcp/Cargo.toml",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/mcp/Cargo.toml"
+      },
+      {
+        "path": "bindings/golang/go.mod",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/go.mod"
+      },
+      {
+        "path": "crates/symphony/src/tokens.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/src/tokens.rs"
+      },
+      {
+        "path": "model_gateway/src/main.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/model_gateway/src/main.rs"
+      },
+      {
+        "path": "clients/rust/src/api/chat.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/clients/rust/src/api/chat.rs"
+      },
+      {
+        "path": "crates/protocols/src/chat.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/protocols/src/chat.rs"
+      },
+      {
+        "path": "crates/symphony/src/input.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/src/input.rs"
+      },
+      {
+        "path": "crates/mock_worker/src/main.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/mock_worker/src/main.rs"
+      },
+      {
+        "path": "clients/openapi-gen/src/main.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/clients/openapi-gen/src/main.rs"
+      },
+      {
+        "path": "crates/gateway_perf/src/main.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/gateway_perf/src/main.rs"
+      },
+      {
+        "path": "bindings/golang/src/memory.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/src/memory.rs"
+      },
+      {
+        "path": "model_gateway/src/app_context.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/model_gateway/src/app_context.rs"
+      },
+      {
+        "path": "e2e_test/infra/test_gpu_memory.py",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/e2e_test/infra/test_gpu_memory.py"
+      },
+      {
+        "path": "crates/data_connector/src/memory.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/data_connector/src/memory.rs"
+      },
+      {
+        "path": "crates/symphony/tools/compile_structural_tags.py",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/symphony/tools/compile_structural_tags.py"
+      },
+      {
+        "path": "bindings/golang/src/args.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/golang/src/args.rs"
+      },
+      {
+        "path": "bindings/python/src/smg/cli.py",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/bindings/python/src/smg/cli.py"
+      },
+      {
+        "path": "crates/rl/src/view.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/rl/src/view.rs"
+      },
+      {
+        "path": "crates/policy_controller/src/view.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/policy_controller/src/view.rs"
+      },
+      {
+        "path": "crates/policy_controller/src/wasm/view.rs",
+        "source": "https://github.com/smg-project/smg/blob/1143a5ef076f83e8760bd7389df3b23ce82b79cc/crates/policy_controller/src/wasm/view.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false",
+      "topic:openai stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=7, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Rust) → framework / gateway",
+    "repository_id": 1101714630,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smallmain--vscode-unify-chat-provider": {
+    "topics": [
+      "ai",
+      "chat",
+      "copilot",
+      "custom-chat",
+      "custom-models",
+      "github-copilot",
+      "language-model",
+      "language-model-api",
+      "llm",
+      "ucp"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "af0a3a4e1513173f1c04458ba862f2631a34a2cc",
+    "classification_basis": "package.json declares engines.vscode",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2025-12-25"
+      ],
+      [
+        "v7.4.0",
+        "2026-06-12"
+      ],
+      [
+        "v7.4.1",
+        "2026-06-12"
+      ],
+      [
+        "v7.4.2",
+        "2026-06-12"
+      ],
+      [
+        "v7.5.0",
+        "2026-06-13"
+      ],
+      [
+        "v7.6.0",
+        "2026-06-17"
+      ],
+      [
+        "v7.7.0",
+        "2026-07-01"
+      ],
+      [
+        "v7.8.0",
+        "2026-07-01"
+      ],
+      [
+        "v7.9.0",
+        "2026-07-03"
+      ],
+      [
+        "v7.9.1",
+        "2026-07-06"
+      ],
+      [
+        "v7.9.2",
+        "2026-07-07"
+      ],
+      [
+        "v7.10.0",
+        "2026-07-09"
+      ],
+      [
+        "v7.11.0",
+        "2026-07-09"
+      ],
+      [
+        "v7.12.0",
+        "2026-07-10"
+      ],
+      [
+        "v7.12.1",
+        "2026-07-10"
+      ],
+      [
+        "v7.12.2",
+        "2026-07-12"
+      ],
+      [
+        "v7.12.3",
+        "2026-07-12"
+      ],
+      [
+        "v8.0.0",
+        "2026-07-23"
+      ],
+      [
+        "v8.0.1",
+        "2026-07-23"
+      ],
+      [
+        "v8.0.2",
+        "2026-07-23"
+      ],
+      [
+        "v8.0.3",
+        "2026-07-23"
+      ],
+      [
+        "v8.0.4",
+        "2026-07-23"
+      ],
+      [
+        "v8.1.0",
+        "2026-07-25"
+      ],
+      [
+        "v8.1.1",
+        "2026-07-25"
+      ],
+      [
+        "v8.1.2",
+        "2026-07-31"
+      ],
+      [
+        "v8.2.0",
+        "2026-08-03"
+      ],
+      [
+        "v8.3.0",
+        "2026-08-03"
+      ],
+      [
+        "v8.4.0",
+        "2026-08-13"
+      ],
+      [
+        "v8.4.1",
+        "2026-08-13"
+      ],
+      [
+        "v8.5.0",
+        "2026-08-14"
+      ],
+      [
+        "v8.6.0",
+        "2026-08-20"
+      ],
+      [
+        "v8.7.0",
+        "2026-08-27"
+      ],
+      [
+        "v8.8.0",
+        "2026-08-27"
+      ],
+      [
+        "v8.9.0",
+        "2026-08-27"
+      ],
+      [
+        "v8.10.0",
+        "2026-09-06"
+      ],
+      [
+        "v8.11.0",
+        "2026-09-20"
+      ],
+      [
+        "v8.12.0",
+        "2026-09-21"
+      ],
+      [
+        "v8.13.0",
+        "2026-09-22"
+      ],
+      [
+        "v8.14.0",
+        "2026-10-09"
+      ],
+      [
+        "v8.15.0",
+        "2026-11-11"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/completion/edit/context.ts",
+        "src/completion/copilot/default-context-providers.ts",
+        "src/client/openai/codex-instructions.ts",
+        "src/completion/copilot/context-provider.ts",
+        "src/ui/index.ts",
+        "src/auth/index.ts",
+        "src/secret/index.ts",
+        "src/chat-lib/core/behavior-config.ts",
+        "src/chat-lib/core/ghost-text/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/smallmain/vscode-unify-chat-provider",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/README.md",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/package.json",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/edit/context.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/copilot/default-context-providers.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/client/openai/codex-instructions.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/copilot/context-provider.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/ui/index.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/auth/index.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/secret/index.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/chat-lib/core/behavior-config.ts",
+      "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/chat-lib/core/ghost-text/index.ts",
+      "https://api.github.com/repos/smallmain/vscode-unify-chat-provider/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/package.json"
+      },
+      {
+        "path": "src/completion/edit/context.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/edit/context.ts"
+      },
+      {
+        "path": "src/completion/copilot/default-context-providers.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/copilot/default-context-providers.ts"
+      },
+      {
+        "path": "src/client/openai/codex-instructions.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/client/openai/codex-instructions.ts"
+      },
+      {
+        "path": "src/completion/copilot/context-provider.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/completion/copilot/context-provider.ts"
+      },
+      {
+        "path": "src/ui/index.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/ui/index.ts"
+      },
+      {
+        "path": "src/auth/index.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/auth/index.ts"
+      },
+      {
+        "path": "src/secret/index.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/secret/index.ts"
+      },
+      {
+        "path": "src/chat-lib/core/behavior-config.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/chat-lib/core/behavior-config.ts"
+      },
+      {
+        "path": "src/chat-lib/core/ghost-text/index.ts",
+        "source": "https://github.com/smallmain/vscode-unify-chat-provider/blob/af0a3a4e1513173f1c04458ba862f2631a34a2cc/src/chat-lib/core/ghost-text/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:copilot stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "package.json declares engines.vscode",
+    "repository_id": 1107808109,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smythos--smythos-studio": {
+    "topics": [
+      "a2a",
+      "agentic-ai",
+      "ai-agents",
+      "devtools",
+      "mcp-client",
+      "n8n-alternative",
+      "no-code",
+      "open-source",
+      "orchestration",
+      "smythos",
+      "visual-builder"
+    ],
+    "homepage": "https://smythos.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/SmythOS/smythos-studio",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:mcp-client stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1015386919,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smallnest--goclaw": {
+    "topics": [
+      "ai-agent",
+      "ai-agents",
+      "llm",
+      "openclaw",
+      "openclaw-skills"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smallnest/goclaw",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1150995498,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smallnest--pigo": {
+    "topics": [
+      "coding-agent",
+      "pi-agent"
+    ],
+    "homepage": "https://pigo.rpcx.io",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smallnest/pigo",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:coding-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1294988947,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smixs--agent-second-brain": {
+    "topics": [
+      "ai-agents",
+      "ai-automation",
+      "claude",
+      "claude-code",
+      "ebbinghaus",
+      "knowledge-graph",
+      "llm",
+      "memory-system",
+      "obsidian",
+      "personal-assistant",
+      "pkm",
+      "productivity",
+      "python",
+      "second-brain",
+      "telegram-bot",
+      "voice-assistant"
+    ],
+    "homepage": "https://t.me/aimastersme",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smixs/agent-second-brain",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1123208325,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smithersai--smithers": {
+    "topics": [
+      "agent-orchestration",
+      "ai-agents",
+      "background-agents",
+      "claude-code",
+      "codex",
+      "developer-tools",
+      "durable-execution",
+      "human-in-the-loop",
+      "llm",
+      "multi-agent",
+      "react",
+      "typescript",
+      "workflow-engine"
+    ],
+    "homepage": "https://smithers.sh",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smithersai/smithers",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1128579105,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smart-mcp-proxy--mcpproxy-go": {
+    "topics": [
+      "ai",
+      "ai-agents",
+      "audit-logging",
+      "bm25",
+      "cli",
+      "context-window",
+      "developer-tools",
+      "docker",
+      "golang",
+      "llm",
+      "llm-tools",
+      "local-first",
+      "mcp",
+      "mcp-proxy",
+      "mcp-server",
+      "model-context-protocol",
+      "proxy-server",
+      "security",
+      "tool-routing",
+      "web-ui"
+    ],
+    "homepage": "https://mcpproxy.app",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smart-mcp-proxy/mcpproxy-go",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1004056914,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "smikitky--chatgpt-md-translator": {
+    "topics": [
+      "chatgpt",
+      "markdown",
+      "translator"
+    ],
+    "homepage": "https://www.npmjs.com/package/chatgpt-md-translator",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smikitky/chatgpt-md-translator",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:chatgpt stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 637868751,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "smallnest--langgraphgo": {
+    "topics": [
+      "agent",
+      "agentic",
+      "ai",
+      "langchain",
+      "langgraph"
+    ],
+    "homepage": "https://lango.rpcx.io",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Go) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/smallnest/langgraphgo",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:agentic stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1102475895,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

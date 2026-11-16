@@ -1,0 +1,22 @@
+.memento-admin { width: min(68rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); box-sizing: border-box; overflow: auto; color: #e5e9ef; background: #18212d; border: 1px solid #69798d; border-radius: 12px; padding: 1.25rem; font: 1rem/1.65 system-ui, sans-serif; }
+.memento-admin::backdrop { background: rgb(0 0 0 / 65%); }
+.memento-admin header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.memento-admin h2, .memento-admin h3, .memento-admin h4 { margin: .5rem 0; }
+.memento-admin button, .memento-admin a { font: inherit; }
+.memento-admin button { color: #eff7ff; background: #293c53; border: 1px solid #96aac2; border-radius: 6px; padding: .5rem .8rem; cursor: pointer; min-height: 44px; }
+.memento-admin button:disabled { opacity: .55; cursor: default; }
+.memento-admin :focus-visible { outline: 3px solid #ffd48a; outline-offset: 3px; }
+.memento-admin a { color: #aed9ff; display: inline-block; margin: .35rem .8rem .35rem 0; overflow-wrap: anywhere; }
+.memento-admin section { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #526176; }
+.memento-admin .admin-history button { display: block; width: 100%; text-align: left; margin: .5rem 0; }
+.memento-admin .admin-jobs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1rem; }
+.memento-admin .admin-jobs article, .memento-admin .admin-draft { padding: .9rem; background: #202c3c; border: 1px solid #526176; border-radius: 8px; }
+.memento-admin .admin-draft { margin: 1rem 0; }
+.memento-admin .admin-draft button { margin: .4rem .4rem .4rem 0; }
+.memento-admin p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.memento-admin pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 25rem; overflow: auto; background: #101822; border: 1px solid #526176; padding: .8rem; font: .85rem/1.6 ui-monospace, monospace; }
+.memento-admin .admin-notice { color: #ffdda4; min-height: 1.65em; }
+.memento-admin label { display: block; padding: .7rem 0; }
+.memento-admin input[type='checkbox'] { width: 1.1rem; height: 1.1rem; margin-right: .5rem; }
+.memento-admin summary { cursor: pointer; padding: .5rem 0; }
+@media (max-width: 40rem) { .memento-admin { padding: .8rem; } }

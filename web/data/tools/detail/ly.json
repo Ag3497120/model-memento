@@ -1,0 +1,570 @@
+{
+  "lynpoint--cyberverse": {
+    "topics": [
+      "ai-agents",
+      "ai-companion",
+      "digital-human",
+      "digital-life",
+      "jarvis-assistant",
+      "lip-sync",
+      "streaming",
+      "talking-avatar",
+      "talking-head",
+      "voice-agent",
+      "voice-assistant",
+      "webrtc"
+    ],
+    "homepage": "https://www.cyberverse.cc",
+    "archived": false,
+    "commit": "cd8bf23478ceb45d8eaf3755725145baeec44c64",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-05-16"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install -e \".[all]\" / pip3 install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128 / pip install vllm==0.11.0 / pip install \"huggingface_hub[cli]\" / pip install scikit_build_core uv",
+    "install_evidence": [
+      {
+        "command": "pip install -e \".[all]\"",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+        "line": 260
+      },
+      {
+        "command": "pip3 install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+        "line": 307
+      },
+      {
+        "command": "pip install vllm==0.11.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+        "line": 313
+      },
+      {
+        "command": "pip install \"huggingface_hub[cli]\"",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+        "line": 321
+      },
+      {
+        "command": "pip install scikit_build_core uv",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+        "line": 404
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "models/MuseTalk/app.py",
+        "server/internal/api/settings.go",
+        "server/cmd/cyberverse-server/main.go",
+        "server/cmd/xunfei-avatar-smoke/main.go",
+        "server/cmd/livekit_silence_user/main.go",
+        "server/internal/inference/trace_context.go",
+        "models/SoulX-LiveAct/model_liveact/model_memory.py",
+        "models/SoulX-LiveAct/model_liveact/model_memory_sp.py",
+        "models/SoulX-LiveAct/wan/distributed/xdit_context_parallel.py",
+        "frontend/src/main.ts",
+        "frontend/src/i18n/index.ts",
+        "frontend/src/types/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/gpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "accent": "#3b82f6",
+      "text": "#f0f0f5",
+      "font_ui": "Inter, system-ui, -apple-system, sans-serif",
+      "font_mono": "Azeret Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+      "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "accent",
+        "key": "--color-cv-accent",
+        "value": "#3b82f6",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css",
+        "line": 10
+      },
+      {
+        "token": "text",
+        "key": "--color-cv-text",
+        "value": "#f0f0f5",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css",
+        "line": 20
+      },
+      {
+        "token": "font_ui",
+        "value": "Inter, system-ui, -apple-system, sans-serif",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css",
+        "line": 46
+      },
+      {
+        "token": "font_mono",
+        "value": "Azeret Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css",
+        "line": 64
+      }
+    ],
+    "strings": [
+      "Path to ffmpeg executable",
+      "IP address to bind to",
+      "Port to bind to",
+      "Create a public link",
+      "Use float16 for faster inference",
+      "Drving Audio",
+      "打开资料",
+      "qwen3-tts-flash-realtime",
+      "cosyvoice-v3-plus",
+      "cosyvoice-v3-flash",
+      "cosyvoice-v3.5-plus",
+      "cosyvoice-v3.5-flash",
+      "Vivi 2.0",
+      "小何 2.0",
+      "云舟 2.0",
+      "小天 2.0",
+      "刘飞 2.0",
+      "魅力苏菲 2.0",
+      "清新女声 2.0",
+      "知性灿灿 2.0",
+      "撒娇学妹 2.0",
+      "Tim"
+    ],
+    "string_evidence": [
+      {
+        "text": "Path to ffmpeg executable",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 401,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "IP address to bind to",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 402,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Port to bind to",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 403,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Create a public link",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 404,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Use float16 for faster inference",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 405,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Drving Audio",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+        "line": 504,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "打开资料",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/components/ChatPanel.vue",
+        "line": 181,
+        "kind": "visible-text"
+      },
+      {
+        "text": "qwen3-tts-flash-realtime",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 257,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "cosyvoice-v3-plus",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 258,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "cosyvoice-v3-flash",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 259,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "cosyvoice-v3.5-plus",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 260,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "cosyvoice-v3.5-flash",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 261,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Vivi 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 266,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "小何 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 267,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "云舟 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 268,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "小天 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 269,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "刘飞 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 270,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "魅力苏菲 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 271,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "清新女声 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 272,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "知性灿灿 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 273,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "撒娇学妹 2.0",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 274,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Tim",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+        "line": 291,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/Lynpoint/CyberVerse",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/package.json",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/go.mod",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/pyproject.toml",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/package.json",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/musetalk/whisper/whisper/normalizers/english.json",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/App.vue",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/internal/api/settings.go",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/cyberverse-server/main.go",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/components/ChatPanel.vue",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/xunfei-avatar-smoke/main.go",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/livekit_silence_user/main.go",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/internal/inference/trace_context.go",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/model_liveact/model_memory.py",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/model_liveact/model_memory_sp.py",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/wan/distributed/xdit_context_parallel.py",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/main.ts",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/i18n/index.ts",
+      "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts",
+      "https://api.github.com/repos/Lynpoint/CyberVerse/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/package.json"
+      },
+      {
+        "path": "server/go.mod",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/go.mod"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/pyproject.toml"
+      },
+      {
+        "path": "frontend/package.json",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/package.json"
+      },
+      {
+        "path": "frontend/src/style.css",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/style.css"
+      },
+      {
+        "path": "models/MuseTalk/musetalk/whisper/whisper/normalizers/english.json",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/musetalk/whisper/whisper/normalizers/english.json"
+      },
+      {
+        "path": "frontend/src/App.vue",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/App.vue"
+      },
+      {
+        "path": "models/MuseTalk/app.py",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/MuseTalk/app.py"
+      },
+      {
+        "path": "server/internal/api/settings.go",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/internal/api/settings.go"
+      },
+      {
+        "path": "server/cmd/cyberverse-server/main.go",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/cyberverse-server/main.go"
+      },
+      {
+        "path": "frontend/src/components/ChatPanel.vue",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/components/ChatPanel.vue"
+      },
+      {
+        "path": "server/cmd/xunfei-avatar-smoke/main.go",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/xunfei-avatar-smoke/main.go"
+      },
+      {
+        "path": "server/cmd/livekit_silence_user/main.go",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/cmd/livekit_silence_user/main.go"
+      },
+      {
+        "path": "server/internal/inference/trace_context.go",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/server/internal/inference/trace_context.go"
+      },
+      {
+        "path": "models/SoulX-LiveAct/model_liveact/model_memory.py",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/model_liveact/model_memory.py"
+      },
+      {
+        "path": "models/SoulX-LiveAct/model_liveact/model_memory_sp.py",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/model_liveact/model_memory_sp.py"
+      },
+      {
+        "path": "models/SoulX-LiveAct/wan/distributed/xdit_context_parallel.py",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/models/SoulX-LiveAct/wan/distributed/xdit_context_parallel.py"
+      },
+      {
+        "path": "frontend/src/main.ts",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/main.ts"
+      },
+      {
+        "path": "frontend/src/i18n/index.ts",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/i18n/index.ts"
+      },
+      {
+        "path": "frontend/src/types/index.ts",
+        "source": "https://github.com/Lynpoint/CyberVerse/blob/cd8bf23478ceb45d8eaf3755725145baeec44c64/frontend/src/types/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=22, theme=4.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / memory",
+    "repository_id": 1214423832,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "lycorp-jp--sim-use": {
+    "topics": [
+      "accessibility",
+      "ai-agents",
+      "ai-development",
+      "android-emulator",
+      "ios-simulator",
+      "mobile-automation"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Swift) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/lycorp-jp/sim-use",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1280990105,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "lycohana--bilisum": {
+    "topics": [
+      "ai-notes",
+      "ai-summary",
+      "bilibili",
+      "bilibili-summary",
+      "knowledge-base",
+      "obsidian",
+      "rag",
+      "video-summary",
+      "whisper",
+      "youtube-summary"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/lycohana/BiliSum",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1201306820,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "lyellr88--marm-memory": {
+    "topics": [
+      "agent-memory",
+      "ai-agents",
+      "ai-memory",
+      "claude-code",
+      "codex-cli",
+      "developer-tools",
+      "embeddings",
+      "indexing-engine",
+      "knowledge-graph",
+      "llm",
+      "local-first",
+      "long-term-memory",
+      "mcp",
+      "mcp-servers",
+      "model-context-protocol",
+      "persistent-memory",
+      "rag",
+      "self-hosted",
+      "sematic-search",
+      "sqlite"
+    ],
+    "homepage": "https://lyellr88.github.io/marm-memory",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Lyellr88/marm-memory",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:rag stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 999368352,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "lyonzin--knowledge-rag": {
+    "topics": [
+      "antigravity",
+      "bm25",
+      "chromadb",
+      "claude-code",
+      "codex",
+      "cross-encoder",
+      "cursor",
+      "fastembed",
+      "hybrid-search",
+      "knowledge-base",
+      "local-ai",
+      "local-first",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "rag",
+      "reranking",
+      "retrieval-augmented-generation",
+      "semantic-search",
+      "vector-search"
+    ],
+    "homepage": "https://pypi.org/project/knowledge-rag/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/lyonzin/knowledge-rag",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1150645924,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

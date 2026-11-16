@@ -1,0 +1,850 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "n8n",
+  "name": "n8n",
+  "vendor": "n8n",
+  "kind": "node-editor",
+  "versions": [
+    {
+      "id": "n8n-2023-10",
+      "from": "2023-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "手順名",
+            "有効・無効の切り替え",
+            "保存"
+          ]
+        },
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        },
+        {
+          "name": "選択した処理の詳細",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "左に入力",
+            "中央に設定",
+            "右に出力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部。対象ノードがある場合",
+          "purpose": "作成中のAI手順を試す"
+        },
+        {
+          "label": "保存",
+          "where": "上部",
+          "purpose": "編集中の手順を保存する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#fdfcff",
+          "panel": "#ffffff",
+          "text": "#555555",
+          "muted": "#909399",
+          "accent": "#ff6d5a",
+          "border": "#dbdfe7",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "light.panel": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "light.text": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "light.muted": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "light.accent": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "light.border": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss"
+        }
+      },
+      "typography": {
+        "ui_named": "Open Sans",
+        "mono_named": "Menlo, Consolas, DejaVu Sans Mono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": "処理がない手順では、最初の処理を追加する入口を表示する。",
+      "distinctive": [
+        "会話を中心にせず、処理の箱と接続線を中心に配置する",
+        "ノードの設定と実行結果は編集用の詳細画面で見る",
+        "手順の内容によってチャットの試用ボタンが出る"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "regions・controlsの根拠。2023-10-12以前の最終コミットの画面部品を読む。コード上の版は1.11.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "package.jsonのversionは1.11.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://blog.n8n.io/n8ns-october-highlights-new-features-refined-cloud-plans-and-workflow-editor-improvements/",
+          "kind": "blog",
+          "date": "2023-11-07",
+          "shows": "2023年10月のLangChain連携、失敗した実行から編集画面へ戻る操作、履歴機能を説明。公開記事であり、ログイン後の画面を実測した資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/components/MainHeader/WorkflowDetails.vue",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "上部のWorkflowActivatorとSaveButton。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/components/NodeDetailsView.vue",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "入力・設定・出力の3区画。右側だけの常設チャットではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/components/Node.vue",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "通常ノードの角丸、処理中・成功・エラーの状態表示、種類別の形の違い。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss",
+          "kind": "oss-source",
+          "date": "2023-10-12",
+          "shows": "palette.lightはCSSのHSL値をsRGBの16進表記へ丸めて変換。bg=canvas、panel=background-xlight、text=text-dark、muted=text-light、accent=primary、border=foreground-base。typographyも同ファイル。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "n8n-2024-02",
+      "from": "2024-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        },
+        {
+          "name": "選択した処理の詳細",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "左に入力",
+            "中央に設定",
+            "右に出力"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#fbfcfe",
+          "panel": "#ffffff",
+          "text": "#414244",
+          "muted": "#909298",
+          "accent": "#ff6f5c",
+          "border": "#d9dee8",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#414244",
+          "text": "#f1f3f9",
+          "muted": "#a5abb6",
+          "accent": null,
+          "border": "#525456",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "light.panel": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "light.text": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "light.muted": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "light.accent": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "light.border": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "dark.panel": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss",
+          "dark.text": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss",
+          "dark.muted": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss",
+          "dark.border": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss",
+          "primitives": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_primitives.scss"
+        }
+      },
+      "typography": {
+        "ui_named": "Open Sans",
+        "mono_named": "Menlo, Consolas, DejaVu Sans Mono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "処理の詳細は入力・設定・出力の3区画",
+        "LangChain用ノードも手順の箱として編集する",
+        "出力の確認欄と利用者向けチャットは役割が異なる"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/2b9391a9758041f09c2e948eab942c45a9919aad/packages/editor-ui/src/components/NodeDetailsView.vue",
+          "kind": "oss-source",
+          "date": "2024-02-14",
+          "shows": "regions・controlsの根拠。2024-02-14以前の最終コミットの画面部品を読む。コード上の版は1.28.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/2b9391a9758041f09c2e948eab942c45a9919aad/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2024-02-14",
+          "shows": "package.jsonのversionは1.28.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n@1.28.0",
+          "kind": "release-notes",
+          "date": "2024-02-07",
+          "shows": "1.28.0の公開日は2月7日。2月14日はカタログの観察基準日であり、公開日とは異なる。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss",
+          "kind": "oss-source",
+          "date": "2024-02-07",
+          "shows": "色の役割、Open Sans、等幅書体、基準の角丸を定義。bg=canvas、panel=background-xlight。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_primitives.scss",
+          "kind": "oss-source",
+          "date": "2024-02-07",
+          "shows": "色のHSL定数。16進値はsRGBへ丸めた数値表現。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss",
+          "kind": "oss-source",
+          "date": "2024-02-07",
+          "shows": "暗色テーマの上書き。暗色canvasの正確な値を今回の抽出で確認できなかったためbgはnull。"
+        }
+      ],
+      "confidence": 0.79
+    },
+    {
+      "id": "n8n-2024-09",
+      "from": "2024-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "手順名",
+            "保存",
+            "有効・無効の切り替え"
+          ]
+        },
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部。会話用の開始ノードがある場合",
+          "purpose": "手順を会話で試す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": "処理がない手順では、最初の処理を追加する入口を表示する。",
+      "distinctive": [
+        "会話用ノードの有無に応じてチャットを試せる",
+        "キャンバスを移動・拡大して処理を追う",
+        "公開するチャット画面とノードの編集画面は別"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/editor-ui/src/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2024-09-18",
+          "shows": "regions・controlsの根拠。2024-09-18以前の最終コミットの画面部品を読む。コード上の版は1.60.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2024-09-18",
+          "shows": "package.jsonのversionは1.60.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "Chat Triggerは1.24.0以降。公開チャットと編集時の試用を区別。現行資料のストリーミング設定を古い月へ遡って適用しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/editor-ui/src/components/MainHeader/WorkflowDetails.vue",
+          "kind": "oss-source",
+          "date": "2024-09-18",
+          "shows": "上部の保存・有効化操作。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "n8n-2025",
+      "from": "2025-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部",
+          "purpose": "チャット用手順を試す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": "処理がない手順では、最初の処理を追加する入口を表示する。",
+      "distinctive": [
+        "チャット用ノードを認識して実行操作を変える",
+        "旧キャンバスと新キャンバスの部品が同じソース内に併存する",
+        "版番号だけで単一のレイアウトに決められない"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/editor-ui/src/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2025-01-15",
+          "shows": "regions・controlsの根拠。2025-01-15以前の最終コミットの画面部品を読む。コード上の版は1.75.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2025-01-15",
+          "shows": "package.jsonのversionは1.75.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "Chat Triggerは1.24.0以降。公開チャットと編集時の試用を区別。現行資料のストリーミング設定を古い月へ遡って適用しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/editor-ui/src/components/canvas/WorkflowCanvas.vue",
+          "kind": "oss-source",
+          "date": "2025-01-15",
+          "shows": "新しいキャンバス部品も同じソースに存在。旧NodeViewと併存するため、この日付だけで全利用者の見た目が切り替わったとはしない。"
+        }
+      ],
+      "confidence": 0.64
+    },
+    {
+      "id": "n8n-2025-08",
+      "from": "2025-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "手順名とタグ",
+            "保存",
+            "有効・無効の切り替え"
+          ]
+        },
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部",
+          "purpose": "作成した会話用手順を試す"
+        },
+        {
+          "label": "保存",
+          "where": "上部",
+          "purpose": "手順を保存する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "InterVariable",
+        "mono_named": "CommitMono",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": "処理がない手順では、最初の処理を追加する入口を表示する。",
+      "distinctive": [
+        "ノードと接続線が広い編集領域を使う",
+        "試用チャットへキャンバス操作から入る",
+        "MCPの接続先は専用ノードの設定で確認する"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/editor-ui/src/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2025-08-20",
+          "shows": "regions・controlsの根拠。2025-08-20以前の最終コミットの画面部品を読む。コード上の版は1.108.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/604b936d8f69d450116b4d255a365bf448d359ae/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2025-08-20",
+          "shows": "package.jsonのversionは1.108.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://docs.n8n.io/build/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test.md",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "評価は既知の入力と出力を比べる機能。MCP接続先の設定画面とは別。現在の説明であり、2025年8月の固定レイアウトの証明にはしない。"
+        },
+        {
+          "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "MCP URLの試験用・本番用切り替えはノード設定内。通常のキャンバス上部にMCP Endpointタブを設ける根拠ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/editor-ui/src/components/MainHeader/WorkflowDetails.vue",
+          "kind": "oss-source",
+          "date": "2025-08-20",
+          "shows": "上部の名前・タグ・保存・有効化。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/editor-ui/src/components/canvas/elements/buttons/CanvasChatButton.vue",
+          "kind": "oss-source",
+          "date": "2025-08-20",
+          "shows": "チャットの入口はキャンバス用ボタン部品。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/@n8n/design-system/src/css/_tokens.scss",
+          "kind": "oss-source",
+          "date": "2025-08-20",
+          "shows": "UI書体はInterVariable、等幅はCommitMonoから始まる。色の参照先を完全に解決していないためpaletteはnull。"
+        }
+      ],
+      "confidence": 0.73
+    },
+    {
+      "id": "n8n-2026-04",
+      "from": "2026-04",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部",
+          "purpose": "会話用の手順を試す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": "空の手順向けの案内を切り替える部品がある。具体的な文言と配置は未確認。",
+      "distinctive": [
+        "処理の編集にWorkflowCanvas部品を使う",
+        "AI補助の会話欄と作成した手順の試用チャットを区別する",
+        "空の手順向けの案内は表示条件によって変わる"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2026-04-15",
+          "shows": "regions・controlsの根拠。2026-04-15以前の最終コミットの画面部品を読む。コード上の版は2.17.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2026-04-15",
+          "shows": "package.jsonのversionは2.17.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://github.com/n8n-io/n8n/releases/tag/n8n@2.0.0",
+          "kind": "release-notes",
+          "date": "2025-12-08",
+          "shows": "2.0.0の公開と既定の安全設定の変更。VaultやOTel専用の常設タブの存在はこの資料から確認できない。"
+        }
+      ],
+      "confidence": 0.55
+    },
+    {
+      "id": "n8n-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "手順のキャンバス",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ノード（処理の箱）と接続線",
+            "空なら最初の処理を追加する入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "実行",
+          "where": "キャンバスの操作部",
+          "purpose": "手順を試す"
+        },
+        {
+          "label": "チャット",
+          "where": "キャンバスの操作部",
+          "purpose": "会話用の手順を試す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "キャンバスの実行状態と、選択した処理の出力として確認する。会話欄に見える内容は手順によって変わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "本体のソースは2.48.0という版を示す",
+        "ノード編集用キャンバスと会話用画面を区別する",
+        "Nodは別アプリなのでこの画面へ合成しない"
+      ],
+      "must_not_copy": [
+        "n8nのロゴと図形のマーク",
+        "接続先サービスのロゴとアプリアイコン",
+        "公式の画面画像・紹介用の図版"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "regions・controlsの根拠。2026-11-10以前の最終コミットの画面部品を読む。コード上の版は2.48.0。配布済み安定版であるとは断定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/n8n-io/n8n/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/cli/package.json",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "package.jsonのversionは2.48.0。当月の呼称とソースの対応だけを示し、最初の公開日ではない。"
+        },
+        {
+          "url": "https://blog.n8n.io/meet-nod/",
+          "kind": "blog",
+          "date": "2026-11-10",
+          "shows": "Nodはn8n本体とは別のデスクトップアプリ。キャンバス内の切り替えモードという説明を否定する一次資料。"
+        },
+        {
+          "url": "https://docs.n8n.io/build/ways-of-building-workflows/chat-hub.md",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "Chatはナビゲーションから開く別の会話画面。ノード編集画面と同一視しない。現在の説明。"
+        }
+      ],
+      "confidence": 0.62
+    }
+  ],
+  "corrections": [
+    "2023年の画面を常設の右チャット欄付きとして固定しない。NodeViewでは対象ノードがある場合にチャット操作を表示する。https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/views/NodeView.vue",
+    "ノードの詳細は入力・設定・出力の3区画。2024年2月を右側のJSON確認欄だけで表すと中央と左の区画が抜ける。https://raw.githubusercontent.com/n8n-io/n8n/2b9391a9758041f09c2e948eab942c45a9919aad/packages/editor-ui/src/components/NodeDetailsView.vue",
+    "1.28.0の公開日は2024-02-07。カタログの2024-02-14は公開日と区別する。https://github.com/n8n-io/n8n/releases/tag/n8n@1.28.0",
+    "Chat Triggerは1.24.0から。2024年9月に初めて追加されたと読める説明は直す。ただし当月の試用欄の寸法や位置はunverified。https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+    "2025年8月レンダラーのMCP Endpointタブ、94%メーター、会話欄の固定配置はunverified。MCP URLはノード設定内に置かれる。https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
+    "2026年4月のVault / OTel Traces常設タブとOTLP Spanという出力ノードの再現はunverified。安全設定の変更だけでは画面の変更を証明できない。https://github.com/n8n-io/n8n/releases/tag/n8n@2.0.0",
+    "2026年11月10日の読んだ本体ソースは2.48.0。3.0というカタログ名の根拠にはしない。Nodは別アプリであり、n8nキャンバスとの切り替えバーとして描かない。https://raw.githubusercontent.com/n8n-io/n8n/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/cli/package.json https://blog.n8n.io/meet-nod/",
+    "ノード下部の接続口の種類・本数を全AIノードで固定しない。今回、各当月の全ノード定義と接続口の形は未網羅なのでunverified。現行の説明を旧版の証拠にしない。https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger"
+  ]
+}

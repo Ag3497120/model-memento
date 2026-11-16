@@ -1,0 +1,93 @@
+/* L2 の画面内だけに適用する。共通部品の寸法と操作は保つ。 */
+.surface.opencode .opencode-heading {
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.surface.codex .codex-ascii {
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.surface.gemini-cli .gemini-ascii {
+  min-height: 3.3em;
+  flex: none;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: normal;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--text);
+}
+
+/* 共通のデスクトップ部品が作る製品の印を、中立な丸に置き換える。 */
+.surface:is(.codex-macos, .opencode, .openclaw, .cursor) .macos-apple-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  flex: none;
+  font-size: 0;
+}
+
+.surface:is(.codex-macos, .opencode, .openclaw, .cursor) .macos-apple-logo::before {
+  content: '○';
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* 会話に後から加わる印も、元の枠内の AI 表示に置き換える。 */
+.surface:is(.codex, .codex-macos, .opencode, .openclaw, .warelay, .aider, .aider-browser, .gemini-cli, .cursor, [class*="vscode-copilot-"], .cline) .fx-emblem:has(> .fx-svg:not(.rights-l3-role)) {
+  position: relative;
+}
+
+.surface:is(.codex, .codex-macos, .opencode, .openclaw, .warelay, .aider, .aider-browser, .gemini-cli, .cursor, [class*="vscode-copilot-"], .cline) .fx-emblem > .fx-svg:not(.rights-l3-role) {
+  visibility: hidden;
+}
+
+.surface:is(.codex, .codex-macos, .opencode, .openclaw, .warelay, .aider, .aider-browser, .gemini-cli, .cursor, [class*="vscode-copilot-"], .cline) .fx-emblem:has(> .fx-svg:not(.rights-l3-role))::before,
+.surface.openclaw.phase-2026-03-macos .composer .prompt-glyph {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+.surface:is(.codex, .codex-macos, .opencode, .openclaw, .warelay, .aider, .aider-browser, .gemini-cli, .cursor, [class*="vscode-copilot-"], .cline) .fx-emblem:has(> .fx-svg:not(.rights-l3-role))::before {
+  content: 'AI';
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 生成状態に付く飾り文字を除き、同じ状態を日本語で示す。 */
+.surface.gemini-cli .stream-fx-head[data-svg-type="gemini-sparkle"]:not(:has(.rights-l3-role)) .fx-status {
+  font-size: 0;
+}
+
+.surface.gemini-cli .stream-fx-head[data-svg-type="gemini-sparkle"]:not(:has(.rights-l3-role)) .fx-status::after {
+  content: '生成中…';
+  font-size: 11.5px;
+}
+
+.surface.gemini-cli .is-complete .stream-fx-head[data-svg-type="gemini-sparkle"]:not(:has(.rights-l3-role)) .fx-status::after {
+  content: '準備完了';
+}

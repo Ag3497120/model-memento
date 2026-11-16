@@ -1,0 +1,527 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "n8n",
+  "versions": [
+    {
+      "id": "n8n-2023-10",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "キャンバスのOpenAIノードを開き、ChatのComplete操作を選ぶ。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/nodes-base/nodes/OpenAi/ChatDescription.ts",
+            "date": "2023-10-12",
+            "shows": "OpenAIノードのChat操作のModel設定。候補は接続先の/v1/modelsから取得し、gpt-で始まるものを選ぶ。既定値はgpt-3.5-turbo。LangChainの会話モデルノードとは別の例。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2023-10-12",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI node on the canvas and choose the Complete operation under Chat.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "メッセージを追加",
+          "when": "2023-10-12..2023-10-12",
+          "where": "OpenAIノードのChat設定内のPromptにあるAdd Message。会話画面の送信ボタンではない。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/nodes-base/nodes/OpenAi/ChatDescription.ts",
+              "date": "2023-10-12",
+              "shows": "OpenAIノードのChat操作のModel設定。候補は接続先の/v1/modelsから取得し、gpt-で始まるものを選ぶ。既定値はgpt-3.5-turbo。LangChainの会話モデルノードとは別の例。"
+            }
+          ],
+          "text_en": "Add a message",
+          "where_en": "Add Message under Prompt in the OpenAI node's Chat settings."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2023-10-12",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2023-10-12",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ]
+      },
+      "trend": "会話よりも処理の箱とその設定を中心に組み立てる（出典：https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/nodes-base/nodes/OpenAi/ChatDescription.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified",
+        "当日のLangChain専用ノードのモデル選択はunverified"
+      ],
+      "trend_en": "The workspace centers on processing nodes and their settings. (https://github.com/n8n-io/n8n/blob/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/nodes-base/nodes/OpenAi/ChatDescription.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version).",
+        "unverified (model selection in the dedicated LangChain node that day)."
+      ]
+    },
+    {
+      "id": "n8n-2024-02",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2024-02-14",
+            "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-3.5-turboで、このノードだけに適用される。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2024-02-14",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "JSON形式では指示にもjsonと書く",
+          "when": "2024-02-14..2024-02-14",
+          "where": "JSON（決まった形のデータ）出力を選ぶとノード設定内に出る注意。対応する新しいモデルを選ぶ旨も原文にある。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2024-02-14",
+              "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-3.5-turboで、このノードだけに適用される。"
+            }
+          ],
+          "text_en": "Include json in instructions when using JSON mode",
+          "where_en": "Notice in node settings when JSON output is selected. The original also advises selecting a newer supported model."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-02-14",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2024-02-14",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ]
+      },
+      "trend": "モデルを切り替える操作も、処理の箱を開いて設定する流れに入る（出典：https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model switching follows the workflow of opening and configuring a node. (https://github.com/n8n-io/n8n/blob/2b9391a9758041f09c2e948eab942c45a9919aad/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "n8n-2024-09",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-3.5-turbo",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2024-09-18",
+            "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-3.5-turboで、このノードだけに適用される。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2024-09-18",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "接続先によって使えない機能があります",
+          "when": "2024-09-18..2024-09-18",
+          "where": "Base URL（接続先）を変更した場合のノード設定内の注意。会話・道具・JSON出力の対応を一律に保証しない旨。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2024-09-18",
+              "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-3.5-turboで、このノードだけに適用される。"
+            }
+          ],
+          "text_en": "Some features depend on the provider",
+          "where_en": "Notice in node settings after changing Base URL, explaining that chat, tools and JSON support vary."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-09-18",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2024-09-18",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ]
+      },
+      "trend": "モデルを切り替える操作も、処理の箱を開いて設定する流れに入る（出典：https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model switching follows the workflow of opening and configuring a node. (https://github.com/n8n-io/n8n/blob/ee7147c6b3b053ac8fc317319ab257204e599f16/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "n8n-2025",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-4o-mini",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2025-01-15",
+            "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-4o-miniで、このノードだけに適用される。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2025-01-15",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "接続先によって使えない機能があります",
+          "when": "2025-01-15..2025-01-15",
+          "where": "Base URL（接続先）を変更した場合のノード設定内の注意。会話・道具・JSON出力の対応を一律に保証しない旨。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2025-01-15",
+              "shows": "OpenAI Chat ModelノードのModel設定。候補は接続先から取得する。コードの既定値はgpt-4o-miniで、このノードだけに適用される。"
+            }
+          ],
+          "text_en": "Some features depend on the provider",
+          "where_en": "Notice in node settings after changing Base URL, explaining that chat, tools and JSON support vary."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-01-15",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/editor-ui/src/components/NodeDetailsView.vue",
+            "date": "2025-01-15",
+            "shows": "ノードを開く詳細画面は入力・設定・出力の領域を持つ。画面全体のモデル選択器ではなく、特定の処理の設定で変更する。"
+          }
+        ]
+      },
+      "trend": "モデルを切り替える操作も、処理の箱を開いて設定する流れに入る（出典：https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model switching follows the workflow of opening and configuring a node. (https://github.com/n8n-io/n8n/blob/da8aafc0e3a1b5d862f0723d0d53d2c38bcaebc3/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "n8n-2025-08",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "新しいノードではFrom Listで一覧から選ぶか、ID指定でモデル名を入力する。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-4.1-mini",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2025-08-20",
+            "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-4.1-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/editor-ui/src/views/NodeView.vue",
+            "date": "2025-08-20",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "In newer nodes, choose From List or enter a model name by ID.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "一覧かモデル名で指定",
+          "when": "2025-08-20..2025-08-20",
+          "where": "OpenAI Chat ModelノードのModel設定。新しい1.2版のノードで一覧選択とID指定を分ける。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2025-08-20",
+              "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-4.1-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+            }
+          ],
+          "text_en": "Choose from a list or enter a model name",
+          "where_en": "Model setting in the OpenAI Chat Model node. New version 1.2 separates list selection from ID entry."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-08-20",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/frontend/editor-ui/src/views/NodeView.vue",
+            "date": "2025-08-20",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ]
+      },
+      "trend": "モデルの指定方法が増えても、処理の箱ごとに設定する作りを保つ（出典：https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified",
+        "保存済みの1.0/1.1版ノードはgpt-4o-miniという別の既定を持つ"
+      ],
+      "trend_en": "Model configuration remains per-node as selection methods expand. (https://github.com/n8n-io/n8n/blob/604b936d8f69d450116b4d255a365bf448d359ae/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version).",
+        "Saved version 1.0/1.1 nodes have a different default, gpt-4o-mini."
+      ]
+    },
+    {
+      "id": "n8n-2026-04",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "新しいノードではFrom Listで一覧から選ぶか、ID指定でモデル名を入力する。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-5-mini",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2026-04-15",
+            "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-5-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+            "date": "2026-04-15",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "In newer nodes, choose From List or enter a model name by ID.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "全ての項目を必須にする",
+          "when": "2026-04-15..2026-04-15",
+          "where": "OpenAI Chat Modelの出力形式でstrict（指定どおりの形式）を有効にした場合の注意。通常の会話に常時出る案内ではない。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2026-04-15",
+              "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-5-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+            }
+          ],
+          "text_en": "Make all fields required",
+          "where_en": "Notice when strict output formatting is enabled in OpenAI Chat Model."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-04-15",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+            "date": "2026-04-15",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ]
+      },
+      "trend": "モデルの指定方法が増えても、処理の箱ごとに設定する作りを保つ（出典：https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model configuration remains per-node as selection methods expand. (https://github.com/n8n-io/n8n/blob/e4fc7539674730212cfbb325c36d38f83b2f77ee/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version)."
+      ]
+    },
+    {
+      "id": "n8n-2026-11",
+      "model_switch": {
+        "where": "settings",
+        "label": "モデル（Model）",
+        "steps": [
+          "使いたい処理につながったOpenAI Chat Modelの箱を開く。",
+          "ノードの設定内のModelを開き、接続先から読み込んだ候補を選ぶ。",
+          "新しいノードではFrom Listで一覧から選ぶか、ID指定でモデル名を入力する。",
+          "同じ手順に複数のモデルの箱がある場合は、対象の箱ごとに設定する。"
+        ],
+        "options": [],
+        "default": "gpt-5-mini",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+            "date": "2026-11-10",
+            "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-5-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+            "date": "2026-11-10",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ],
+        "steps_en": [
+          "Open the OpenAI Chat Model node connected to the operation you want.",
+          "Open Model in the node settings and choose an option loaded from the provider.",
+          "In newer nodes, choose From List or enter a model name by ID.",
+          "If a workflow has several model nodes, configure each relevant node."
+        ],
+        "label_en": "Model"
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "全ての項目を必須にする",
+          "when": "2026-11-10..2026-11-10",
+          "where": "OpenAI Chat Modelの出力形式でstrict（指定どおりの形式）を有効にした場合の注意。通常の会話に常時出る案内ではない。",
+          "sources": [
+            {
+              "url": "https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts",
+              "date": "2026-11-10",
+              "shows": "OpenAI Chat ModelノードのModel設定。新しいノードの一覧選択とID指定、コードの既定値gpt-5-miniを確認する。保存済みの古いノードの版とは既定が異なる場合がある。"
+            }
+          ],
+          "text_en": "Make all fields required",
+          "where_en": "Notice when strict output formatting is enabled in OpenAI Chat Model."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-10",
+        "sources": [
+          {
+            "url": "https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/frontend/editor-ui/src/app/views/NodeView.vue",
+            "date": "2026-11-10",
+            "shows": "処理の箱を並べるキャンバスを中心とする編集画面。モデル指定は対象ノードの設定で行い、別の会話画面と区別する。"
+          }
+        ]
+      },
+      "trend": "モデルの指定方法が増えても、処理の箱ごとに設定する作りを保つ（出典：https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts）。",
+      "unverified": [
+        "空のoptionsは接続先ごとに候補が変わるためで、全候補はunverified",
+        "defaultは例示したOpenAI系ノードのコード既定値で、製品全体の既定ではない",
+        "参照コミットが配布済み安定版だったか、ブラウザー名とOSの版はunverified"
+      ],
+      "trend_en": "Model configuration remains per-node as selection methods expand. (https://github.com/n8n-io/n8n/blob/28f60cebe5d5303e13867c2afe15d44b35b9e9d7/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts)",
+      "unverified_en": [
+        "Empty options reflects provider-dependent candidates. The full list is unverified.",
+        "default records the code default for the example OpenAI node.",
+        "unverified (whether the referenced commit was a distributed stable release, browser name and OS version)."
+      ]
+    }
+  ]
+}

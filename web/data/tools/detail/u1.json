@@ -1,0 +1,973 @@
+{
+  "u14app--deep-research": {
+    "topics": [
+      "anthropic",
+      "deep-research",
+      "deep-research-api",
+      "deepresearch",
+      "deepseek",
+      "gemini",
+      "grok",
+      "mcp-server",
+      "ollama",
+      "openai"
+    ],
+    "homepage": "https://research.u14.app",
+    "archived": false,
+    "commit": "4a211edd9face54d0786ecf73e69ce5257627e20",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.5.0",
+        "2025-03-15"
+      ],
+      [
+        "v0.5.2",
+        "2025-03-22"
+      ],
+      [
+        "v0.6.3",
+        "2025-03-27"
+      ],
+      [
+        "v0.6.6",
+        "2025-03-29"
+      ],
+      [
+        "v0.7.12",
+        "2025-04-11"
+      ],
+      [
+        "v0.8.2",
+        "2025-05-05"
+      ],
+      [
+        "v0.9.20",
+        "2025-05-20"
+      ],
+      [
+        "v0.10.0",
+        "2025-09-11"
+      ],
+      [
+        "v0.11.0",
+        "2026-02-10"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pnpm install  # or npm install or yarn install / docker run -d --name deep-research -p 3333:3000 xiangfa/deep-research / docker run -d --name deep-research \\ / docker run -d --name deep-research -p 3333:3000 deep-research",
+    "install_evidence": [
+      {
+        "command": "pnpm install  # or npm install or yarn install",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md",
+        "line": 98
+      },
+      {
+        "command": "docker run -d --name deep-research -p 3333:3000 xiangfa/deep-research",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md",
+        "line": 144
+      },
+      {
+        "command": "docker run -d --name deep-research \\",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md",
+        "line": 150
+      },
+      {
+        "command": "docker run -d --name deep-research -p 3333:3000 deep-research",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md",
+        "line": 161
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/utils/style.ts",
+        "src/components/Provider/Theme.tsx",
+        "src/app/layout.tsx",
+        "src/components/ui/input.tsx",
+        "src/app/page.tsx",
+        "src/utils/parser/index.ts",
+        "src/libs/mcp-server/index.ts",
+        "src/utils/deep-research/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Deep Research",
+      "Theme",
+      "Open Source",
+      "Please enter keywords",
+      "Export Session",
+      "Import Session",
+      "Current session exported.",
+      "Session imported successfully.",
+      "Failed to import session snapshot.",
+      "Rethinking",
+      "start",
+      "end",
+      "Search Failed",
+      "Unknown error"
+    ],
+    "string_evidence": [
+      {
+        "text": "Deep Research",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Theme",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Open Source",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Please enter keywords",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Export Session",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Import Session",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Current session exported.",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Session imported successfully.",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Failed to import session snapshot.",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Rethinking",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+        "line": 28,
+        "kind": "i18n"
+      },
+      {
+        "text": "start",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts",
+        "line": 122,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "end",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts",
+        "line": 153,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Search Failed",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts",
+        "line": 282,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Unknown error",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts",
+        "line": 570,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/u14app/deep-research",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/package.json",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/style.ts",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/Provider/Theme.tsx",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/MagicDown/style.css",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/globals.css",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/layout.tsx",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/ui/input.tsx",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/page.tsx",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/parser/index.ts",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/libs/mcp-server/index.ts",
+      "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts",
+      "https://api.github.com/repos/u14app/deep-research/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/package.json"
+      },
+      {
+        "path": "src/utils/style.ts",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/style.ts"
+      },
+      {
+        "path": "src/components/Provider/Theme.tsx",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/Provider/Theme.tsx"
+      },
+      {
+        "path": "src/components/MagicDown/style.css",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/MagicDown/style.css"
+      },
+      {
+        "path": "src/app/globals.css",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/globals.css"
+      },
+      {
+        "path": "src/locales/en-US.json",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/locales/en-US.json"
+      },
+      {
+        "path": "src/app/layout.tsx",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/layout.tsx"
+      },
+      {
+        "path": "src/components/ui/input.tsx",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/components/ui/input.tsx"
+      },
+      {
+        "path": "src/app/page.tsx",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/app/page.tsx"
+      },
+      {
+        "path": "src/utils/parser/index.ts",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/parser/index.ts"
+      },
+      {
+        "path": "src/libs/mcp-server/index.ts",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/libs/mcp-server/index.ts"
+      },
+      {
+        "path": "src/utils/deep-research/index.ts",
+        "source": "https://github.com/u14app/deep-research/blob/4a211edd9face54d0786ecf73e69ce5257627e20/src/utils/deep-research/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ollama stars:3000..9999 fork:false",
+      "topic:openai stars:3000..9999 fork:false",
+      "topic:mcp-server stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=14, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → mcp-server / protocol-mcp",
+    "repository_id": 936974548,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "u14app--neo-chat": {
+    "topics": [
+      "ai",
+      "ai-chat",
+      "gemini",
+      "openai",
+      "skills"
+    ],
+    "homepage": "https://neo.u14.app",
+    "archived": false,
+    "commit": "cc2fafe2e6db579df61059c2f684649b07d441ca",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.8.0",
+        "2024-05-03"
+      ],
+      [
+        "v0.8.2",
+        "2024-05-06"
+      ],
+      [
+        "v0.9.6",
+        "2024-05-20"
+      ],
+      [
+        "v0.10.7",
+        "2024-05-26"
+      ],
+      [
+        "v0.10.8",
+        "2024-05-28"
+      ],
+      [
+        "v0.11.8",
+        "2024-06-13"
+      ],
+      [
+        "v0.12.0",
+        "2024-06-13"
+      ],
+      [
+        "v0.12.2",
+        "2024-06-26"
+      ],
+      [
+        "v0.12.3",
+        "2024-10-15"
+      ],
+      [
+        "v1.0.0",
+        "2024-12-09"
+      ],
+      [
+        "v1.2.1",
+        "2024-12-31"
+      ],
+      [
+        "v1.3.0",
+        "2025-01-03"
+      ],
+      [
+        "v1.4.0",
+        "2025-01-13"
+      ],
+      [
+        "v1.5.0",
+        "2025-01-20"
+      ],
+      [
+        "v1.5.2",
+        "2025-01-20"
+      ],
+      [
+        "v1.5.3",
+        "2025-01-21"
+      ],
+      [
+        "v1.6.0",
+        "2025-01-26"
+      ],
+      [
+        "v1.6.1",
+        "2025-01-31"
+      ],
+      [
+        "v1.7.0",
+        "2025-02-04"
+      ],
+      [
+        "v1.7.1",
+        "2025-02-06"
+      ],
+      [
+        "v1.7.2",
+        "2025-02-06"
+      ],
+      [
+        "v1.8.0",
+        "2025-02-10"
+      ],
+      [
+        "v1.8.1",
+        "2025-02-15"
+      ],
+      [
+        "v1.9.0",
+        "2025-02-21"
+      ],
+      [
+        "v1.9.1",
+        "2025-02-21"
+      ],
+      [
+        "v1.10.0",
+        "2025-03-17"
+      ],
+      [
+        "v1.10.1",
+        "2025-03-18"
+      ],
+      [
+        "v2.0.0",
+        "2026-07-06"
+      ],
+      [
+        "v2.1.0",
+        "2026-07-08"
+      ],
+      [
+        "v2.2.0",
+        "2026-07-10"
+      ],
+      [
+        "v2.3.0",
+        "2026-07-19"
+      ],
+      [
+        "v2.4.0",
+        "2026-08-01"
+      ],
+      [
+        "v2.5.0",
+        "2026-09-11"
+      ],
+      [
+        "v2.6.0",
+        "2026-10-21"
+      ],
+      [
+        "v2.7.0",
+        "2026-10-21"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "docker run --rm -p 127.0.0.1:3000:3000 \\",
+    "install_evidence": [
+      {
+        "command": "docker run --rm -p 127.0.0.1:3000:3000 \\",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/README.md",
+        "line": 67
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/lib/utils/tokens.ts",
+        "src/lib/themeInitScript.ts",
+        "src/hooks/useChatThemeEffects.ts",
+        "src/i18n/locales/en.ts",
+        "src/app/layout.tsx",
+        "src/components/layout/Sidebar.tsx",
+        "src/app/page.tsx",
+        "src/lib/chat/contextBudget.ts",
+        "src/store/core/memoryStore.ts",
+        "src/lib/utils/promptContext.ts",
+        "src/lib/research/reportContext.ts",
+        "src/lib/agent/systemPrompt.ts",
+        "src/lib/research/prompts/json.ts",
+        "src/lib/research/prompts/index.ts",
+        "src/lib/index.ts",
+        "src/hooks/index.ts",
+        "src/store/index.ts",
+        "src/components/media/ImagePreview.tsx",
+        "src/components/layout/SidebarSearch.tsx",
+        "src/components/layout/sidebarLayout.ts",
+        "src/lib/api/chat-handler.ts",
+        "src/hooks/useChatBootstrap.ts",
+        "src/hooks/useChatGenerationController.ts",
+        "src/hooks/useChatPanelNavigation.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "oklch(1 0 0)",
+      "text": "oklch(0.145 0 0)",
+      "accent": "oklch(0.205 0 0)",
+      "font_ui": "ui-sans-serif, system-ui, sans-serif",
+      "font_mono": "ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo",
+      "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--background",
+        "value": "oklch(1 0 0)",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+        "line": 8
+      },
+      {
+        "token": "text",
+        "key": "--foreground",
+        "value": "oklch(0.145 0 0)",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+        "line": 9
+      },
+      {
+        "token": "accent",
+        "key": "--primary",
+        "value": "oklch(0.205 0 0)",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+        "line": 14
+      },
+      {
+        "token": "font_ui",
+        "value": "ui-sans-serif, system-ui, sans-serif",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+        "line": 340
+      },
+      {
+        "token": "font_mono",
+        "value": "ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+        "line": 341
+      }
+    ],
+    "strings": [
+      "Knowledge Base (RAG)",
+      "Enabled",
+      "Disabled",
+      "Enable RAG",
+      "RAG Support",
+      "Document Processing",
+      "Document Parser",
+      "Default Document Processing",
+      "Use the server-configured parser without entering a key.",
+      "Encrypted Sync",
+      "Sync status",
+      "No successful sync yet.",
+      "Ready",
+      "Syncing",
+      "Up to date",
+      "Offline",
+      "Needs review",
+      "Error",
+      "Sync now",
+      "Testing connection…",
+      "Connection successful.",
+      "Checking…",
+      "About",
+      "Client",
+      "Web application",
+      "Product Information",
+      "Website",
+      "Official Repository",
+      "Version",
+      "License"
+    ],
+    "string_evidence": [
+      {
+        "text": "Knowledge Base (RAG)",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Enabled",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Disabled",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Enable RAG",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "RAG Support",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Document Processing",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Document Parser",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Default Document Processing",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Use the server-configured parser without entering a key.",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Encrypted Sync",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sync status",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "No successful sync yet.",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ready",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Syncing",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Up to date",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Offline",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Needs review",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 14,
+        "kind": "i18n"
+      },
+      {
+        "text": "Error",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 15,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sync now",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 17,
+        "kind": "i18n"
+      },
+      {
+        "text": "Testing connection…",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 18,
+        "kind": "i18n"
+      },
+      {
+        "text": "Connection successful.",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Checking…",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+        "line": 25,
+        "kind": "i18n"
+      },
+      {
+        "text": "About",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Client",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Web application",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Product Information",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Website",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Official Repository",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Version",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "License",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+        "line": 10,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/u14app/neo-chat",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/README.md",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/package.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/docker/mcp-bridge/package.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/utils/tokens.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/themeInitScript.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatThemeEffects.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Media.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/layout.tsx",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/Sidebar.tsx",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/page.tsx",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/chat/contextBudget.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/store/core/memoryStore.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/utils/promptContext.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/reportContext.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/agent/systemPrompt.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/prompts/json.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/prompts/index.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/index.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/index.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/store/index.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/media/ImagePreview.tsx",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sidebar.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/MessageInput.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Content.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/ChatApp.json",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/SidebarSearch.tsx",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/sidebarLayout.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/api/chat-handler.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatBootstrap.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatGenerationController.ts",
+      "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatPanelNavigation.ts",
+      "https://api.github.com/repos/u14app/neo-chat/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/package.json"
+      },
+      {
+        "path": "docker/mcp-bridge/package.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/docker/mcp-bridge/package.json"
+      },
+      {
+        "path": "src/lib/utils/tokens.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/utils/tokens.ts"
+      },
+      {
+        "path": "src/lib/themeInitScript.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/themeInitScript.ts"
+      },
+      {
+        "path": "src/hooks/useChatThemeEffects.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatThemeEffects.ts"
+      },
+      {
+        "path": "src/app/globals.css",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/globals.css"
+      },
+      {
+        "path": "src/i18n/locales/en.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en.ts"
+      },
+      {
+        "path": "src/i18n/locales/en/RAG.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/RAG.json"
+      },
+      {
+        "path": "src/i18n/locales/en/Sync.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sync.json"
+      },
+      {
+        "path": "src/i18n/locales/en/About.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/About.json"
+      },
+      {
+        "path": "src/i18n/locales/en/Media.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Media.json"
+      },
+      {
+        "path": "src/app/layout.tsx",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/layout.tsx"
+      },
+      {
+        "path": "src/components/layout/Sidebar.tsx",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/Sidebar.tsx"
+      },
+      {
+        "path": "src/app/page.tsx",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/app/page.tsx"
+      },
+      {
+        "path": "src/lib/chat/contextBudget.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/chat/contextBudget.ts"
+      },
+      {
+        "path": "src/store/core/memoryStore.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/store/core/memoryStore.ts"
+      },
+      {
+        "path": "src/lib/utils/promptContext.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/utils/promptContext.ts"
+      },
+      {
+        "path": "src/lib/research/reportContext.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/reportContext.ts"
+      },
+      {
+        "path": "src/lib/agent/systemPrompt.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/agent/systemPrompt.ts"
+      },
+      {
+        "path": "src/lib/research/prompts/json.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/prompts/json.ts"
+      },
+      {
+        "path": "src/lib/research/prompts/index.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/research/prompts/index.ts"
+      },
+      {
+        "path": "src/lib/index.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/index.ts"
+      },
+      {
+        "path": "src/hooks/index.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/index.ts"
+      },
+      {
+        "path": "src/store/index.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/store/index.ts"
+      },
+      {
+        "path": "src/components/media/ImagePreview.tsx",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/media/ImagePreview.tsx"
+      },
+      {
+        "path": "src/i18n/locales/en/Sidebar.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Sidebar.json"
+      },
+      {
+        "path": "src/i18n/locales/en/MessageInput.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/MessageInput.json"
+      },
+      {
+        "path": "src/i18n/locales/en/Content.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/Content.json"
+      },
+      {
+        "path": "src/i18n/locales/en/ChatApp.json",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/i18n/locales/en/ChatApp.json"
+      },
+      {
+        "path": "src/components/layout/SidebarSearch.tsx",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/SidebarSearch.tsx"
+      },
+      {
+        "path": "src/components/layout/sidebarLayout.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/components/layout/sidebarLayout.ts"
+      },
+      {
+        "path": "src/lib/api/chat-handler.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/lib/api/chat-handler.ts"
+      },
+      {
+        "path": "src/hooks/useChatBootstrap.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatBootstrap.ts"
+      },
+      {
+        "path": "src/hooks/useChatGenerationController.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatGenerationController.ts"
+      },
+      {
+        "path": "src/hooks/useChatPanelNavigation.ts",
+        "source": "https://github.com/u14app/neo-chat/blob/cc2fafe2e6db579df61059c2f684649b07d441ca/src/hooks/useChatPanelNavigation.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:36:28.425Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / memory",
+    "repository_id": 736198723,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

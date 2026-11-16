@@ -1,0 +1,1164 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "lm-studio",
+  "name": "LM Studio",
+  "vendor": "Element Labs, Inc.",
+  "kind": "desktop-chat",
+  "versions": [
+    {
+      "id": "lm-studio-2023-05",
+      "from": "2023-05",
+      "to": "2023-11",
+      "regions": [
+        {
+          "name": "モデル入手",
+          "position": null,
+          "size": null,
+          "contents": [
+            "モデルを探して入手する独立した機能。初版の位置はunverified"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": null,
+          "size": null,
+          "contents": [
+            "手元のモデルと会話する画面。初版の位置はunverified"
+          ]
+        },
+        {
+          "name": "サーバー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "外部アプリからモデルを使う機能。初版の配置はunverified"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "暗いレトロな旧テーマを公式が回顧",
+        "モデルの検索・入手と会話を同じアプリに持つ",
+        "ローカルサーバーの機能も持つ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/free-for-work",
+          "kind": "blog",
+          "date": "2025-07-08",
+          "shows": "初回公開を2023年5月と回顧。初回ビルドの見た目は示さない。Element Labsの会社表記は公式ページのフッター。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+          "kind": "release-notes",
+          "date": "2024-08-22",
+          "shows": "旧版の暗いレトロな配色と一部Comic Sans使用を回顧。0.3.0の会話フォルダ、回答の左右切替、設定欄の刷新、文書添付、Dark/Light/Sepia/Systemを確認。色番号・主書体・固定幅は記載なし。本文の初回公開年は別の公式回顧と不一致。"
+        }
+      ],
+      "confidence": 0.32
+    },
+    {
+      "id": "lm-studio-2023-11",
+      "from": "2023-11",
+      "to": "2024-04",
+      "regions": [
+        {
+          "name": "機能切替",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "3番目の操作で会話を開く"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "モデルと対話"
+          ]
+        },
+        {
+          "name": "設定",
+          "position": "右",
+          "size": null,
+          "contents": [
+            "モデル設定",
+            "ハードウェア設定",
+            "GPU Acceleration"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "GPUを使う",
+          "where": "右のハードウェア設定",
+          "purpose": "原画面ではGPU Acceleration。層数を変えると会話欄の下に読込し直しボタンが出る"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の機能切替と右の展開式設定",
+        "GPUへ渡す層数を調整できる",
+        "設定変更後にモデルを読込し直す操作がある"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/lahoramaker/awesome-lmstudio/wiki/Troubleshooting-most-common-problems",
+          "kind": "press",
+          "date": "2023-11-14",
+          "shows": "利用者自身の手順書。press区分の外部ウォークスルーで報道記事ではない。左の3番目が会話、右のSettings内にModel ConfigurationとHardware Setting、GPU Accelerationと読込し直し操作。0.2.8の自動設定に言及。5月版・4月版の同一配置までは証明しない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+          "kind": "release-notes",
+          "date": "2024-08-22",
+          "shows": "旧版の暗いレトロな配色と一部Comic Sans使用を回顧。0.3.0の会話フォルダ、回答の左右切替、設定欄の刷新、文書添付、Dark/Light/Sepia/Systemを確認。色番号・主書体・固定幅は記載なし。本文の初回公開年は別の公式回顧と不一致。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/free-for-work",
+          "kind": "blog",
+          "date": "2025-07-08",
+          "shows": "初回公開を2023年5月と回顧。初回ビルドの見た目は示さない。Element Labsの会社表記は公式ページのフッター。"
+        }
+      ],
+      "confidence": 0.61
+    },
+    {
+      "id": "lm-studio-2024-04",
+      "from": "2024-04",
+      "to": "2024-08",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "0.3への変更前の旧テーマの期間",
+        "モデルの入手とローカル対話が基本",
+        "4月19日・0.2.20固有の配置はunverified"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+          "kind": "release-notes",
+          "date": "2024-08-22",
+          "shows": "旧版の暗いレトロな配色と一部Comic Sans使用を回顧。0.3.0の会話フォルダ、回答の左右切替、設定欄の刷新、文書添付、Dark/Light/Sepia/Systemを確認。色番号・主書体・固定幅は記載なし。本文の初回公開年は別の公式回顧と不一致。"
+        },
+        {
+          "url": "https://github.com/lahoramaker/awesome-lmstudio/wiki/Troubleshooting-most-common-problems",
+          "kind": "press",
+          "date": "2023-11-14",
+          "shows": "利用者自身の手順書。press区分の外部ウォークスルーで報道記事ではない。左の3番目が会話、右のSettings内にModel ConfigurationとHardware Setting、GPU Accelerationと読込し直し操作。0.2.8の自動設定に言及。5月版・4月版の同一配置までは証明しない。"
+        }
+      ],
+      "confidence": 0.25
+    },
+    {
+      "id": "lm-studio-2024-08",
+      "from": "2024-08",
+      "to": "2025-01",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話と入れ子のフォルダ。位置の数値は未確認"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "文書のドラッグ＆ドロップ",
+            "回答を作り直した履歴"
+          ]
+        },
+        {
+          "name": "設定の横欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "刷新された会話設定"
+          ]
+        },
+        {
+          "name": "開発用画面",
+          "position": "別ページ",
+          "size": null,
+          "contents": [
+            "モデルの読込ログ",
+            "右欄のコード例"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "自分のモデル",
+          "where": "モデル管理画面",
+          "purpose": "原画面ではMy Models。歯車からモデルごとの設定"
+        },
+        {
+          "label": "ネットワークで公開",
+          "where": "サーバー画面",
+          "purpose": "原画面ではServe on Network"
+        },
+        {
+          "label": "前後の回答",
+          "where": "回答の操作部",
+          "purpose": "左右矢印で作り直す前の回答を切替"
+        }
+      ],
+      "conversation": {
+        "user": "文書・画像を添付できる。通常の発言の形はunverified",
+        "assistant": "作り直した回答を残し、左右矢印で切り替える",
+        "tool_calls": null,
+        "streaming": "入力を処理する進み具合を百分率で表示"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "旧テーマにDark・Light・Sepiaを追加",
+        "会話を入れ子のフォルダに整理",
+        "文書を会話欄へ落として質問",
+        "回答の版を左右矢印で切替"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+          "kind": "release-notes",
+          "date": "2024-08-22",
+          "shows": "旧版の暗いレトロな配色と一部Comic Sans使用を回顧。0.3.0の会話フォルダ、回答の左右切替、設定欄の刷新、文書添付、Dark/Light/Sepia/Systemを確認。色番号・主書体・固定幅は記載なし。本文の初回公開年は別の公式回顧と不一致。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/app/user-interface/themes",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行のテーマ選択は設定、またはCmd/Ctrl+Kの後T。Autoで明暗を切替。2026-11-15閲覧。過去版の色番号・当時の配置は証明しない。"
+        }
+      ],
+      "confidence": 0.74
+    },
+    {
+      "id": "lm-studio-2025-01",
+      "from": "2025-01",
+      "to": "2025-02",
+      "regions": [
+        {
+          "name": "会話一覧",
+          "position": "左",
+          "size": null,
+          "contents": [
+            "0.3.6で改善された会話一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "0.3.8以降は考えた過程を折り畳む"
+          ]
+        },
+        {
+          "name": "説明の入口",
+          "position": "右上",
+          "size": null,
+          "contents": [
+            "Quick Docsを別窓で開く"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "説明を開く",
+          "where": "右上",
+          "purpose": "原画面ではQuick Docs"
+        },
+        {
+          "label": "考えた過程",
+          "where": "回答内",
+          "purpose": "DeepSeek R1の過程を開閉する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "R1の考えた過程と回答を分け、過程は開閉できる",
+        "tool_calls": "0.3.6の発表は外部向けAPI。アプリ内のMCP確認窓の根拠にはしない",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "考えた過程を開閉する回答表示",
+        "Quick Docsを別窓へ開く",
+        "道具対応のモデルにバッジ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.6",
+          "kind": "release-notes",
+          "date": "2025-01-06",
+          "shows": "道具を呼ぶ機能は外部アプリ向けAPI。モデルの道具対応バッジ、会話とサーバー欄の改善、右上Quick Docsの別窓を確認。アプリ内MCPの公開資料ではない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.8",
+          "kind": "release-notes",
+          "date": "2025-01-21",
+          "shows": "DeepSeek R1の考えた過程を折り畳む表示が追加されたと明記。カタログの1月24日は発売日とは限らない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.9",
+          "kind": "release-notes",
+          "date": "2025-01-30",
+          "shows": "考えた過程をAPIの別項目に分ける設定と、Runtimesの通知を確認。1月24日より後の版である。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.0",
+          "kind": "release-notes",
+          "date": "2024-08-22",
+          "shows": "旧版の暗いレトロな配色と一部Comic Sans使用を回顧。0.3.0の会話フォルダ、回答の左右切替、設定欄の刷新、文書添付、Dark/Light/Sepia/Systemを確認。色番号・主書体・固定幅は記載なし。本文の初回公開年は別の公式回顧と不一致。"
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "lm-studio-2025-02",
+      "from": "2025-02",
+      "to": "2025-06",
+      "regions": [
+        {
+          "name": "補助モデル設定",
+          "position": "設定の横欄",
+          "size": null,
+          "contents": [
+            "Speculative Decoding",
+            "下書き生成用の小さいモデルの選択"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "任意で採用された下書き文字を色分け"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "補助モデルを選ぶ",
+          "where": "設定の横欄",
+          "purpose": "主モデルと組み合わせる小さいモデルを選ぶ"
+        },
+        {
+          "label": "採用文字を色分け",
+          "where": "会話設定",
+          "purpose": "下書き由来の採用文字を緑で見分ける任意の表示"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "考えた過程の開閉。任意で回答の文字を採用元によって色分け",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "補助モデルを選ぶ専用欄",
+        "採用された下書き文字を緑で表示する選択肢",
+        "サーバー側にも補助モデル設定"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.10",
+          "kind": "blog",
+          "date": "2025-02-18",
+          "shows": "設定の横欄にSpeculative Decodingと補助モデルの選択器を追加。採用された下書きの文字を緑で区別する任意表示。記事内動画は説明文だけを参照、フレーム未使用。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.8",
+          "kind": "release-notes",
+          "date": "2025-01-21",
+          "shows": "DeepSeek R1の考えた過程を折り畳む表示が追加されたと明記。カタログの1月24日は発売日とは限らない。"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "lm-studio-2025-06",
+      "from": "2025-06",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "モデルによる道具の呼び出し",
+            "実行前の確認窓"
+          ]
+        },
+        {
+          "name": "道具の設定",
+          "position": "右",
+          "size": null,
+          "contents": [
+            "Programタブ",
+            "Installメニュー",
+            "アプリ内のmcp.json編集"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "道具の設定",
+          "where": "右のProgramタブ",
+          "purpose": "InstallからEdit mcp.jsonを開く"
+        },
+        {
+          "label": "今回だけ許可",
+          "where": "道具の確認窓",
+          "purpose": "引数を確認・編集して1回実行"
+        },
+        {
+          "label": "常に許可",
+          "where": "道具の確認窓",
+          "purpose": "以後の確認を省略。Tools & Integrationsで管理"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "考えた過程に短いプレビューを追加。表示は設定で変更可能",
+        "tool_calls": "引数を編集できる確認窓。呼出しの引数も生成中に順次表示",
+        "streaming": "b10で生成統計を最終回答・ヒント・全回答のどこに出すか選択"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "右のProgramタブ",
+        "道具の実行前に編集可能な確認窓",
+        "Solarized Darkを追加",
+        "生成統計の表示場所を選ぶ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.17",
+          "kind": "release-notes",
+          "date": "2025-06-25",
+          "shows": "右のProgram→Install→Edit mcp.jsonで道具の設定を編集。実行時は引数を編集できる確認窓と1回／常時許可。Solarized Dark、b7の思考表示プレビュー、b10の生成統計設定を確認。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.6",
+          "kind": "release-notes",
+          "date": "2025-01-06",
+          "shows": "道具を呼ぶ機能は外部アプリ向けAPI。モデルの道具対応バッジ、会話とサーバー欄の改善、右上Quick Docsの別窓を確認。アプリ内MCPの公開資料ではない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.10",
+          "kind": "blog",
+          "date": "2025-02-18",
+          "shows": "設定の横欄にSpeculative Decodingと補助モデルの選択器を追加。採用された下書きの文字を緑で区別する任意表示。記事内動画は説明文だけを参照、フレーム未使用。"
+        }
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "lm-studio-2025-10",
+      "from": "2025-10",
+      "to": "2026-02",
+      "regions": [
+        {
+          "name": "道具の設定",
+          "position": "右",
+          "size": null,
+          "contents": [
+            "0.3.17期のProgram配置は確認済み。0.3.30の変更有無はunverified"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "0.3.30の公式記事は動作修正が中心",
+        "補助モデル設定の初出は2月の0.3.10",
+        "10月版固有の新しい配置はunverified"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.30",
+          "kind": "release-notes",
+          "date": "2025-10-08",
+          "shows": "0.3.30 b1はAPI・読込処理の修正。b2は10月18日の更新。10月12日に新しいチャット配置や下書き生成が初登場した根拠はない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.17",
+          "kind": "release-notes",
+          "date": "2025-06-25",
+          "shows": "右のProgram→Install→Edit mcp.jsonで道具の設定を編集。実行時は引数を編集できる確認窓と1回／常時許可。Solarized Dark、b7の思考表示プレビュー、b10の生成統計設定を確認。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/lmstudio-v0.3.10",
+          "kind": "blog",
+          "date": "2025-02-18",
+          "shows": "設定の横欄にSpeculative Decodingと補助モデルの選択器を追加。採用された下書きの文字を緑で区別する任意表示。記事内動画は説明文だけを参照、フレーム未使用。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/app/user-interface/themes",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行のテーマ選択は設定、またはCmd/Ctrl+Kの後T。Autoで明暗を切替。2026-11-15閲覧。過去版の色番号・当時の配置は証明しない。"
+        }
+      ],
+      "confidence": 0.38
+    },
+    {
+      "id": "lm-studio-2026-02",
+      "from": "2026-02",
+      "to": "2026-06",
+      "regions": [
+        {
+          "name": "会話タブ",
+          "position": "上",
+          "size": null,
+          "contents": [
+            "複数の会話タブ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "左右に分割できる会話欄"
+          ]
+        },
+        {
+          "name": "詳細設定",
+          "position": "設定画面",
+          "size": null,
+          "contents": [
+            "Developerを有効にすると読込・横欄の詳細設定が表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "画面分割",
+          "where": "会話の右上",
+          "purpose": "新しい会話欄を追加。タブを左右へドラッグしても分割できる"
+        },
+        {
+          "label": "書き出し",
+          "where": "会話の…メニュー",
+          "purpose": "PDF・Markdown・テキストへ保存"
+        },
+        {
+          "label": "詳細設定",
+          "where": "Settings > Developer",
+          "purpose": "開発向けの設定と操作を表示"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "会話ごとに別の欄を開き、並行して生成できる",
+        "tool_calls": null,
+        "streaming": "Developer画面では入力処理の進捗と生成文字数を表示"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話のタブ",
+        "左右に並ぶ複数の会話",
+        "右上の画面分割操作",
+        "会話の…から書き出し"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/0.4.0",
+          "kind": "blog",
+          "date": "2026-01-28",
+          "shows": "Split Viewは会話右上の専用ボタンで新しい欄を追加。会話の…→Export、設定→Developerで詳細設定、Developerタブ内説明。新版はタブと画面分割を持つ。記事内動画は説明文のみ。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/app/basics/chat",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプで＋による新規会話、入れ子のフォルダ、会話タブを左右へドラッグして画面分割、欄右上の×を確認。2026-11-15閲覧。0.3期への遡及はしない。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "lm-studio-lmlink-mobile-2026-06-04",
+      "from": "2026-06",
+      "to": "2026-11",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Locallyという別のモバイル画面",
+        "LM Linkで別端末の大きなモデルを使う",
+        "iPhone・iPad向け。操作の配置はunverified"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/blog/locally-lm-link",
+          "kind": "blog",
+          "date": "2026-06-04",
+          "shows": "iPhone/iPadのLocallyがLM Studioのモバイルアプリとして紹介され、LM Linkで別の端末のモデルを使える。暗号化と端末内履歴を説明。本文だけでは操作の左右位置・吹き出し・配色は判定できない。"
+        },
+        {
+          "url": "https://lmstudio.ai/blog/0.4.0",
+          "kind": "blog",
+          "date": "2026-01-28",
+          "shows": "Split Viewは会話右上の専用ボタンで新しい欄を追加。会話の…→Export、設定→Developerで詳細設定、Developerタブ内説明。新版はタブと画面分割を持つ。記事内動画は説明文のみ。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/app/basics/chat",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプで＋による新規会話、入れ子のフォルダ、会話タブを左右へドラッグして画面分割、欄右上の×を確認。2026-11-15閲覧。0.3期への遡及はしない。"
+        }
+      ],
+      "confidence": 0.37
+    },
+    {
+      "id": "lm-studio-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "作業の一覧",
+          "position": null,
+          "size": null,
+          "contents": [
+            "プロジェクトと作業会話。左右位置は未確認"
+          ]
+        },
+        {
+          "name": "タブ",
+          "position": "上",
+          "size": null,
+          "contents": [
+            "会話",
+            "ファイル",
+            "内蔵ブラウザ"
+          ]
+        },
+        {
+          "name": "作業欄",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "タブを左右へドラッグして分割"
+          ]
+        },
+        {
+          "name": "プロジェクトファイル",
+          "position": "右",
+          "size": null,
+          "contents": [
+            "各会話で共有するファイル"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作成",
+          "where": "新しいプロジェクト画面",
+          "purpose": "Createでプロジェクトを作る"
+        },
+        {
+          "label": "コードの操作を許可",
+          "where": "新しいプロジェクト画面",
+          "purpose": "Allow codingを有効にして作業フォルダを選ぶ"
+        },
+        {
+          "label": "分岐",
+          "where": "対応する回答の操作",
+          "purpose": "Forkで別の会話を隣に開く"
+        },
+        {
+          "label": "読み上げ",
+          "where": "回答の操作",
+          "purpose": "Read Aloudで文章を音声にする"
+        }
+      ],
+      "conversation": {
+        "user": "ファイルやフォルダを添付できる。発言の枠形状はunverified",
+        "assistant": "作業の会話とファイルプレビュー。コードの変更箇所を見られる",
+        "tool_calls": "コードの変更や実行結果を確認する。呼出し単位の正確な枠形状はunverified",
+        "streaming": "別タブへ移っても処理を続け、完了した会話に印を表示"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "LM Studioとは別のBionicアプリ",
+        "プロジェクト内に複数の作業会話",
+        "会話・ファイル・内蔵ブラウザのタブ",
+        "右のProject Files",
+        "アプリ内端末と変更箇所の表示"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://lmstudio.ai/docs/bionic",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2026-11-15の公式ヘルプ。BionicはLM Studioとは別アプリと明記。ローカル・クラウド・LM Linkのモデルを使い、プロジェクト内の作業会話を管理する。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/bionic/projects-and-sessions",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "会話、プロジェクトファイル、内蔵ブラウザをタブで開く。タブを左右へドラッグして並べ、Forkで分岐し、裏で完了した会話に印が付く。2026-11-15閲覧。"
+        },
+        {
+          "url": "https://lmstudio.ai/docs/bionic/quick-start",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "作成画面のAllow coding、フォルダ選択、Create、Root modelを確認。右欄のProject Filesは全会話で共有。2026-11-15閲覧。"
+        },
+        {
+          "url": "https://lmstudio.ai/changelog/bionic-v1.1.10",
+          "kind": "changelog",
+          "date": "2026-10-29",
+          "shows": "1.1.10の公開日は10月29日。アプリ内端末、コードの変更表示、会話内ファイルプレビュー、Read Aloud操作を確認。"
+        }
+      ],
+      "confidence": 0.77
+    }
+  ],
+  "corrections": [
+    "初期の主書体・色番号を断定できない。0.3.0記事のComic Sansは『一部使用』で、全UIの主書体とする根拠ではない。https://lmstudio.ai/blog/lmstudio-v0.3.0",
+    "最初の公開は公式回顧で2023年5月。0.3.0記事内のMay 2024とは矛盾するため、初版ビルドの配置を同記事だけから確定しない。https://lmstudio.ai/blog/free-for-work",
+    "web/js/tools/lmstudio.jsが各版に描くGPU使用量・速度・固定のモデル名は、その版の画面値としてunverified。0.3.0のモデル設定は自動／手動で変わる。https://lmstudio.ai/blog/lmstudio-v0.3.0",
+    "1月の道具対応APIと6月のアプリ内MCPは分ける。思考の折り畳み表示は1月21日の0.3.8に明記。https://lmstudio.ai/blog/lmstudio-v0.3.6 https://lmstudio.ai/blog/lmstudio-v0.3.8 https://lmstudio.ai/blog/lmstudio-v0.3.17",
+    "0.3.30は10月8日。下書き生成の選択器・色分けは0.3.10で2月18日に公開済み。追加版lm-studio-2025-02に分離した。https://lmstudio.ai/blog/lmstudio-v0.3.30 https://lmstudio.ai/blog/lmstudio-v0.3.10",
+    "0.4.0の記事は /blog/0.4.0、公開日は2026年1月28日。既存IDの2026-02は図鑑の記録月として残す。https://lmstudio.ai/blog/0.4.0",
+    "Locally + LM LinkはiPhone/iPadの画面。デスクトップの3分割画面をそのまま流用する根拠はない。https://lmstudio.ai/blog/locally-lm-link",
+    "BionicはLM Studioとは別アプリ。既存2026-11 IDの記録はBionicの説明として残すが、主分類desktop-chatはLM Studio全体の分類である。1.1.10は10月29日公開。https://lmstudio.ai/docs/bionic https://lmstudio.ai/changelog/bionic-v1.1.10"
+  ]
+}

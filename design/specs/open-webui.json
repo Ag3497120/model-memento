@@ -1,0 +1,1172 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "open-webui",
+  "name": "Open WebUI",
+  "vendor": "Open WebUI",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "open-webui-2023-10",
+      "from": "2023-10",
+      "to": "2024-02",
+      "regions": [
+        {
+          "name": "履歴メニュー",
+          "position": "左",
+          "size": "18rem",
+          "contents": [
+            "新しい会話",
+            "仮の履歴行。開閉できる"
+          ]
+        },
+        {
+          "name": "モデル選択",
+          "position": "中央上",
+          "size": null,
+          "contents": [
+            "Modelのドロップダウン"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "横に広い発言と回答の帯"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "丸角の入力欄と右端の送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左の開閉メニュー上部",
+          "purpose": "原画面ではNew Chat"
+        },
+        {
+          "label": "モデルを選ぶ",
+          "where": "上のModel欄",
+          "purpose": "会話開始後は選択を無効化"
+        },
+        {
+          "label": "送信",
+          "where": "入力欄の右端",
+          "purpose": "文章があると緑の送信操作を表示"
+        }
+      ],
+      "conversation": {
+        "user": "基本の背景色のまま横帯に表示",
+        "assistant": "異なる背景の横帯。内側の文章幅を制限",
+        "tool_calls": null,
+        "streaming": "受け取った回答を会話の文章へ追記"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#343541",
+          "panel": "#202123",
+          "text": "#ececf1",
+          "muted": "#8e8ea0",
+          "accent": "#059669",
+          "border": "#565869",
+          "user_bubble": null
+        },
+        "source": {
+          "dark.bg": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "dark.panel": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/lib/components/layout/Navbar.svelte",
+          "dark.text": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "dark.muted": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "dark.accent": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "dark.border": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "gray_tokens": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/tailwind.config.js",
+          "emerald_token": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "rounded-xl。画面下に固定した横長の欄"
+      },
+      "empty_state": "モデルを選ぶ欄の下に、ローカルモデルの利用を案内する短い説明。元の動物ロゴは描かない",
+      "distinctive": [
+        "上に大きなModel選択欄",
+        "青みがある暗色の横帯",
+        "左の開閉式履歴",
+        "入力部の緑の送信操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte",
+          "kind": "oss-source",
+          "date": "2023-10-08",
+          "shows": "初期の固定コード。上部のModel選択、中央の空状態、下固定の入力、利用者と回答で異なる横帯。会話開始後はモデル選択を無効化する。画面の外側bg-gray-800、回答帯bg-gray-700、入力bg-gray-700、送信bg-emerald-600。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/lib/components/layout/Navbar.svelte",
+          "kind": "oss-source",
+          "date": "2023-10-08",
+          "shows": "初期左ナビは開閉式でw-72。New Chatと仮の履歴行。bg-gray-900。動的な保存履歴機能の完成を、この仮の行からは推定しない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/tailwind.config.js",
+          "kind": "oss-source",
+          "date": "2023-10-08",
+          "shows": "初期のgray色票：800=#343541、700=#40414f、900=#202123、100=#ececf1、500=#8e8ea0、600=#565869。後年のgrayとは値が違う。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.3.1/src/public/colors.js",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Tailwind 3の標準色の定義。初期送信ボタンemerald-600=#059669の補助資料。製品固有のgray上書きを優先する。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/commit/88eab8e8df5b1c8416e815aba51155aa6366b739",
+          "kind": "changelog",
+          "date": "2024-02-17",
+          "shows": "公式リポジトリのrename取り込み記録。Ollama WebUIからOpen WebUIへの名称変更の時期を確認。初期の全機能がこの時点で完成していたという資料ではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "open-webui-2024-02",
+      "from": "2024-02",
+      "to": "2024-09",
+      "regions": [
+        {
+          "name": "会話履歴",
+          "position": "左",
+          "size": "260px",
+          "contents": [
+            "新しい会話",
+            "検索",
+            "管理者向けモデル設定",
+            "下のアカウント操作"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "文書や画像の添付",
+            "送信と停止"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新しい会話",
+          "where": "左の上部",
+          "purpose": "原画面ではNew Chat"
+        },
+        {
+          "label": "モデルの設定",
+          "where": "左の管理者向け入口",
+          "purpose": "原画面ではModelfiles。管理者の場合に表示"
+        },
+        {
+          "label": "設定",
+          "where": "左の下部",
+          "purpose": "設定の窓を開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#000000",
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#000000",
+          "text": "#e3e3e3",
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.panel": "https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte",
+          "dark.panel": "https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte",
+          "dark.text": "https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte",
+          "tokens": "https://github.com/open-webui/open-webui/blob/v0.1.102/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "枠線付きrounded-xl。底に添付と送信"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "260pxの黒い履歴欄",
+        "名称がOpen WebUIへ変更",
+        "管理者用のModelfiles入口",
+        "白黒の送信操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "2月期の固定タグ。左260px、黒の履歴欄、New Chat、検索、管理者向けModelfiles、下部アカウント／設定。初期w-72とは異なる。タグの公開日を本文から確定していない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.1.102/tailwind.config.js",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "grayは900=#171717、850=#262626、800=#333、200=#e3e3e3へ変更済み。初期の青みがあるgrayをこのタグへ使わない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/chat/MessageInput.svelte",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "底の入力欄は白／dark:bg-gray-900と枠線、rounded-xl。ファイルの添付チップと送信／停止操作。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/commit/88eab8e8df5b1c8416e815aba51155aa6366b739",
+          "kind": "changelog",
+          "date": "2024-02-17",
+          "shows": "公式リポジトリのrename取り込み記録。Ollama WebUIからOpen WebUIへの名称変更の時期を確認。初期の全機能がこの時点で完成していたという資料ではない。"
+        }
+      ],
+      "confidence": 0.82
+    },
+    {
+      "id": "open-webui-2024-09",
+      "from": "2024-09",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "会話履歴",
+          "position": "左",
+          "size": "260px",
+          "contents": [
+            "新しい会話",
+            "検索",
+            "ピン留め",
+            "管理者向けWorkspace"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "回答本文と右寄せの利用者枠"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "添付・検索・道具",
+            "録音と通話"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作業用の管理画面",
+          "where": "左のWorkspace入口",
+          "purpose": "管理者の場合に表示"
+        },
+        {
+          "label": "検索",
+          "where": "左の履歴欄",
+          "purpose": "会話を探す"
+        },
+        {
+          "label": "添付や道具",
+          "where": "入力部",
+          "purpose": "利用できる機能から選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "標準では右寄せ、最大90%の丸い枠。設定で通常の行にも変更可",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": "#f9f9f9",
+          "text": "#171717",
+          "muted": "#676767",
+          "accent": null,
+          "border": null,
+          "user_bubble": "#f9f9f9"
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#0d0d0d",
+          "text": "#e3e3e3",
+          "muted": "#b4b4b4",
+          "accent": null,
+          "border": null,
+          "user_bubble": "#262626"
+        },
+        "source": {
+          "light.panel": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "dark.panel": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "light.text": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "dark.text": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "light.muted": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "dark.muted": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "light.user_bubble": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/UserMessage.svelte",
+          "dark.user_bubble": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/UserMessage.svelte",
+          "tokens": "https://github.com/open-webui/open-webui/blob/v0.3.21/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": "Archivo（font-primary指定部分）",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "灰色の横長入力、送信は丸いボタン"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の履歴検索とピン留め",
+        "権限に応じたWorkspace",
+        "右寄せの丸い利用者枠",
+        "録音と通話の操作"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2024-09-08",
+          "shows": "0.3.21の記録日は9月8日。Workspace期までの更新履歴と初期0.1系の日付を確認。9月15日に別の配置が登場したとは断定しない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-08",
+          "shows": "左260px、履歴検索・ピン留め、下部の利用者操作。Workspaceは管理者条件付き。背景はlight gray-50、dark gray-950、文字gray-900/gray-200、補助文字gray-600/gray-400。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/tailwind.config.js",
+          "kind": "oss-source",
+          "date": "2024-09-08",
+          "shows": "gray-50=#f9f9f9、900=#171717、950=#0d0d0d、850=#262626、200=#e3e3e3、600=#676767、400=#b4b4b4。CSS変数の上書きがない標準テーマ値。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/UserMessage.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-08",
+          "shows": "chatBubbleの標準はtrue。利用者は右寄せで最大90%、rounded-3xl、gray-50/dark gray-850。設定で通常の行表示へ戻せる。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/MessageInput.svelte",
+          "kind": "oss-source",
+          "date": "2024-09-08",
+          "shows": "下部入力はgray-50/dark gray-850、添付、道具や検索の選択、録音、通話、送信。複数モデルの選択時の分岐もある。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.3.21/src/app.css",
+          "kind": "oss-source",
+          "date": "2024-09-08",
+          "shows": "Inter・Archivo・Mona Sansを宣言。font-primaryを付けたナビ等はArchivo。宣言があるだけの書体を全画面の主書体とは扱わない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "open-webui-2025-04",
+      "from": "2025-04",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "会話履歴",
+          "position": "左",
+          "size": "260px",
+          "contents": [
+            "新しい会話",
+            "条件付きHome・Workspace",
+            "検索とフォルダ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "選んだモデル",
+            "利用者の枠と回答"
+          ]
+        },
+        {
+          "name": "最初の入力",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "未送信時の入力欄と提案"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "検索をクリア",
+          "where": "左の履歴検索",
+          "purpose": "検索条件を消す"
+        },
+        {
+          "label": "作業用の管理画面",
+          "where": "左のWorkspace入口",
+          "purpose": "モデル・知識・道具等を管理。表示は権限による"
+        }
+      ],
+      "conversation": {
+        "user": "標準で右寄せの丸い枠。設定で行表示にも変更",
+        "assistant": null,
+        "tool_calls": "道具の呼び出しの表示を整理。外部の道具はOpenAPI、MCPはMCPO経由",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": "#f9f9f9"
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": "#262626"
+        },
+        "source": {
+          "light.user_bubble": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Messages/UserMessage.svelte",
+          "dark.user_bubble": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Messages/UserMessage.svelte",
+          "tokens": "https://github.com/open-webui/open-webui/blob/v0.6.0/tailwind.config.js"
+        }
+      },
+      "typography": {
+        "ui_named": "OS標準書体、Interを含む代替スタック",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "未送信時は中央に入力欄。丸角と枠線"
+      },
+      "empty_state": "選択モデルと短い説明、質問を始める入力欄、提案を表示。仮の会話や複数モデルで表示が変わる",
+      "distinctive": [
+        "未送信時の中央の入力欄",
+        "左のフォルダと履歴検索",
+        "右寄せの利用者枠",
+        "会話内の道具表示を整理"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.6.0",
+          "kind": "release-notes",
+          "date": "2025-04-01",
+          "shows": "本文見出しの日付は2025-03-31、GitHub公開表示は4月1日。OpenAPI道具サーバー、MCPO経由MCP、道具表示の整理、検索クリア操作を確認。これは全画面アーティファクト初公開の証明ではない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/layout/Sidebar.svelte",
+          "kind": "oss-source",
+          "date": "2025-04-01",
+          "shows": "左履歴欄にNew Chat、条件付きHome/Workspace、検索、フォルダ、下部アカウント操作。全ユーザーに同じ項目が出るとは限らない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Messages/UserMessage.svelte",
+          "kind": "oss-source",
+          "date": "2025-04-01",
+          "shows": "利用者は標準で右寄せのgray-50/dark gray-850の丸い枠、最大90%。編集・再送・回答分岐などを条件表示。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.0/tailwind.config.js",
+          "kind": "oss-source",
+          "date": "2025-04-01",
+          "shows": "gray色票は50=#f9f9f9、850=#262626、900=#171717、950=#0d0d0dなど。CSS変数で変えられるため標準テーマ値としてだけ記録。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/tailwind.css",
+          "kind": "oss-source",
+          "date": "2025-04-01",
+          "shows": "html/preの基礎書体はOSのsystem、Inter等の順。サイトの宣伝ページの書体とは区別。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Placeholder.svelte",
+          "kind": "oss-source",
+          "date": "2025-04-01",
+          "shows": "未送信画面は選択モデル、モデル説明、中央の入力欄と提案群。入力の短い歓迎案内。Temporary Chatや複数モデルの表示は状態による。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "open-webui-2025-09",
+      "from": "2025-09",
+      "to": "2025-11",
+      "regions": [
+        {
+          "name": "添付の入口",
+          "position": "入力部",
+          "size": null,
+          "contents": [
+            "＋に添付をまとめる"
+          ]
+        },
+        {
+          "name": "連携の選択",
+          "position": "入力部",
+          "size": null,
+          "contents": [
+            "連携用の選択メニュー"
+          ]
+        },
+        {
+          "name": "参照する資料の選択",
+          "position": "入力部から開く",
+          "size": null,
+          "contents": [
+            "会話",
+            "ノート",
+            "知識"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "追加",
+          "where": "入力部の＋",
+          "purpose": "添付をまとめて選ぶ"
+        },
+        {
+          "label": "参照する資料",
+          "where": "添付の選択器",
+          "purpose": "会話・ノート・知識を探して加える"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "＋の添付操作と連携メニューをまとめた入力部"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "添付操作を＋へ統合",
+        "道具や連携を選択メニューへ整理",
+        "会話・ノート・知識の選択器"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.6.29",
+          "kind": "release-notes",
+          "date": "2025-09-17",
+          "shows": "入力のメニューを刷新し、添付を＋へ統合、連携を選択メニューへ整理。会話・ノート・知識の選択器を追加。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.29/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2025-09-17",
+          "shows": "0.6.29の入力刷新を確認。遡ると0.6.19（8月9日）に左ナビ刷新、0.6.16（7月14日）に共同編集ノート追加。カタログの2026年10月初登場説を訂正。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.35/src/lib/components/chat/MessageInput.svelte",
+          "kind": "oss-source",
+          "date": "2025-11-06",
+          "shows": "添付と連携を持つ入力部、条件付きの検索・画像・コード操作、丸い送信／停止操作。通常のチャットで使われる。"
+        }
+      ],
+      "confidence": 0.81
+    },
+    {
+      "id": "open-webui-2025-11",
+      "from": "2025-11",
+      "to": "2026-07",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "通常の会話",
+            "複数モデルを選んだ場合の比較"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "＋の添付",
+            "条件付きの検索・画像・コード・道具"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "追加",
+          "where": "入力部",
+          "purpose": "参照資料や添付を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "複数モデルを選んだときだけ比較表示。現行のCompare操作の位置は11月版へ遡及しない",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "添付と連携をまとめる丸角の入力部"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "通常チャットを保った比較機能",
+        "＋と連携選択を持つ入力部",
+        "生成物がない場合は生成物ボタンを隠す"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.35/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2025-11-06",
+          "shows": "11月期タグでモデル操作メニューの整理、アーティファクトがない場合のボタン非表示を確認。全会話がArena専用画面になるという内容ではない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.35/src/lib/components/chat/MessageInput.svelte",
+          "kind": "oss-source",
+          "date": "2025-11-06",
+          "shows": "添付と連携を持つ入力部、条件付きの検索・画像・コード操作、丸い送信／停止操作。通常のチャットで使われる。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.29/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2025-09-17",
+          "shows": "0.6.29の入力刷新を確認。遡ると0.6.19（8月9日）に左ナビ刷新、0.6.16（7月14日）に共同編集ノート追加。カタログの2026年10月初登場説を訂正。"
+        },
+        {
+          "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/multi-model-chats/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "2026-11-15の現行ヘルプ。比較はモデル選択器のCompare、回答は横並び／狭い画面では縦並び。Merge Responsesは回答後の操作。現行の操作名・位置を2025年11月へそのまま遡及しない。"
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "open-webui-2026-07",
+      "from": "2026-07",
+      "to": "2026-10",
+      "regions": [
+        {
+          "name": "機能と履歴",
+          "position": "左",
+          "size": "220–480px（変更可、折畳み時42px）",
+          "contents": [
+            "検索",
+            "フォルダ",
+            "条件付きのノートとWorkspace",
+            "折畳み時は縦の操作列"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "以前より狭い本文列"
+          ]
+        },
+        {
+          "name": "詳細設定",
+          "position": "設定画面",
+          "size": null,
+          "contents": [
+            "分類し直した項目"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "横幅を変更",
+          "where": "左欄の端",
+          "purpose": "ドラッグで220〜480pxの範囲に変更"
+        },
+        {
+          "label": "フォルダを開く",
+          "where": "左の一覧",
+          "purpose": "専用ページに会話を表示"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "列幅を狭め、文字の太さと間隔を整理",
+        "tool_calls": "管理者が有効にした補助エージェントの結果を会話へ返す。常設の監視表の配置はunverified",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "輪郭を見分けやすくした入力枠"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "全面的な画面刷新",
+        "狭い会話列と軽い文字",
+        "幅変更できる左欄",
+        "折畳み時の42pxの縦列",
+        "フォルダ専用ページ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.0",
+          "kind": "release-notes",
+          "date": "2026-07-27",
+          "shows": "全体刷新：会話の列を狭め、文字を軽くし、間隔・メニュー・入力枠・設定を整理。フォルダ専用ページと任意の補助エージェントを追加。常設の右補助エージェント監視欄や会話上の利用量計器の根拠ではない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.11.0/src/lib/components/layout/Sidebar.svelte",
+          "kind": "oss-source",
+          "date": "2026-07-27",
+          "shows": "左欄は220〜480pxで幅変更、折畳み時42pxの縦操作列。検索、フォルダ、Notes、Workspace等を条件付き表示。固定260pxとしない。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.11.0/src/tailwind.css",
+          "kind": "oss-source",
+          "date": "2026-07-27",
+          "shows": "grayはOKLCHで指定する新色票。旧hex値を流用しない。数値変換は未実施なのでpaletteの該当値をnullとする。"
+        },
+        {
+          "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプの会話・検索・履歴・生成中スクロール。公開されたヘルプであり利用者のログイン済み実画面を操作した観察ではない。2026-11-15閲覧。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "open-webui-2026-10",
+      "from": "2026-10",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "既存のチャット欄"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "下",
+          "size": null,
+          "contents": [
+            "丸角の枠線",
+            "資料選択と条件付きの道具"
+          ]
+        },
+        {
+          "name": "ノート",
+          "position": "別ページ",
+          "size": null,
+          "contents": [
+            "文書編集と、そのノートに属する会話の横欄"
+          ]
+        },
+        {
+          "name": "音声通話",
+          "position": "切替画面",
+          "size": null,
+          "contents": [
+            "設定によりRealtime方式"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "資料を加える",
+          "where": "入力部",
+          "purpose": "ノート等を選択"
+        },
+        {
+          "label": "道具の一覧",
+          "where": "入力部。利用可能な場合",
+          "purpose": "利用できる道具を確認"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": "回答末尾の生成中カーソルは以前より速い点滅"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "枠線付きrounded-3xl。仮の会話では破線"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "枠線を持つ大きな丸角の入力",
+        "仮の会話を破線で区別",
+        "選択式のRealtime通話",
+        "ノートは会話と別の編集ページ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.0",
+          "kind": "release-notes",
+          "date": "2026-10-10",
+          "shows": "Realtime通話、任意の3Dアバター、モデル編集の刷新、ノートや権限まわりの修正。生成末尾のカーソルの点滅も変更。任意の通話アバターは描き直し対象外。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.12.0/src/lib/components/chat/MessageInput.svelte",
+          "kind": "oss-source",
+          "date": "2026-10-10",
+          "shows": "入力部は枠線とrounded-3xl。仮の会話では破線、利用できる道具・検索等を条件付きで表示。ノート等の添付選択器を含む。"
+        },
+        {
+          "url": "https://docs.openwebui.com/features/notes/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプは会話と独立した文書編集ページ、選択箇所の編集、ノート内のChat横欄を説明。通常チャットの右に常にノートが出るとは記載しない。2026-11-15閲覧。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.6.29/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2025-09-17",
+          "shows": "0.6.29の入力刷新を確認。遡ると0.6.19（8月9日）に左ナビ刷新、0.6.16（7月14日）に共同編集ノート追加。カタログの2026年10月初登場説を訂正。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "open-webui-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "会話",
+          "position": "中央",
+          "size": null,
+          "contents": [
+            "通常の会話。作業欄を全幅にすると会話もタブになる"
+          ]
+        },
+        {
+          "name": "作業タブ",
+          "position": "会話の横、または全幅",
+          "size": null,
+          "contents": [
+            "ファイル",
+            "複数の端末",
+            "生成物とプレビュー",
+            "対応接続がある場合はデスクトップとブラウザ"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作業タブ",
+          "where": "会話上部",
+          "purpose": "原画面ではTabs。作業欄を開閉"
+        },
+        {
+          "label": "タブを追加",
+          "where": "作業欄の＋",
+          "purpose": "ファイル・端末・対応するデスクトップ等を追加"
+        },
+        {
+          "label": "並べ替え",
+          "where": "作業欄のタブ",
+          "purpose": "ドラッグして順番を変える"
+        },
+        {
+          "label": "全幅で表示",
+          "where": "作業欄",
+          "purpose": "会話の横から全幅表示へ切替"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "会話を続けながら別タブで生成物や作業画面を確認できる",
+        "tool_calls": "対応するOpen Terminal接続がある場合、同じデスクトップやブラウザを利用できる",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話上部のTabs入口",
+        "＋で増やす作業タブ",
+        "複数端末やファイルを並べ替え",
+        "横並び／全幅の表示切替",
+        "接続に応じたデスクトップとブラウザ"
+      ],
+      "must_not_copy": [
+        "製品ロゴ・アプリアイコン・ブランドの文字意匠",
+        "モデル提供元のロゴ・マスコット・利用者の顔写真",
+        "画面写真・説明の長文・同梱フォントファイル"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/open-webui/open-webui/releases/tag/v0.13.0",
+          "kind": "release-notes",
+          "date": "2026-11-03",
+          "shows": "会話上部のTabsから、ファイル、複数端末、プレビュー、音声、コメント等の作業タブを開く。＋で追加、並べ替え、全幅／横並び切替。Desktop/Browserは対応Open Terminal接続が必要。"
+        },
+        {
+          "url": "https://github.com/open-webui/open-webui/blob/v0.13.0/src/lib/components/chat/Navbar.svelte",
+          "kind": "oss-source",
+          "date": "2026-11-03",
+          "shows": "上部TabsボタンがshowTabsを切り替える。専用端末を接続する前から架空のデスクトップ状態やGit状態を表示する根拠はない。"
+        },
+        {
+          "url": "https://docs.openwebui.com/features/chat-conversations/chat-features/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行ヘルプの会話・検索・履歴・生成中スクロール。公開されたヘルプであり利用者のログイン済み実画面を操作した観察ではない。2026-11-15閲覧。"
+        }
+      ],
+      "confidence": 0.88
+    }
+  ],
+  "corrections": [
+    "2023-10の元コードは青みがある旧gray色票。後年の#171717等の無彩色をそのまま使わない。左欄は18remで、後の260pxとも異なる。https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/tailwind.config.js https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/lib/components/layout/Navbar.svelte",
+    "名称変更は2024年2月17日の公式取り込み記録で確認。初期Ollama WebUIを公式Ollamaアプリとして描かない。https://github.com/open-webui/open-webui/commit/88eab8e8df5b1c8416e815aba51155aa6366b739",
+    "web/js/tools/openwebui.jsの2024-09はWorkspaceのタブを会話上部へ常設しているが、確認した版ではWorkspaceは別の入口で、管理者条件付き。https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte",
+    "0.6.0のMCPはMCPOでOpenAPIへ変換する方式。すべての会話を最初から生成物の2分割画面として描く根拠はない。https://github.com/open-webui/open-webui/releases/tag/v0.6.0",
+    "見た目の変化として2025-09版を追加。入力の添付が＋へまとまり、連携と資料選択を整理した。https://github.com/open-webui/open-webui/releases/tag/v0.6.29",
+    "2025-11の通常画面にParallel Chat/Arena Leaderboard/Pipelinesの固定タブを並べる根拠は確認できない。比較は複数モデル選択時の状態である。現行ヘルプのCompare操作の位置も当時へ遡及しない。https://github.com/open-webui/open-webui/blob/v0.6.35/src/lib/components/chat/MessageInput.svelte https://docs.openwebui.com/features/chat-conversations/chat-features/multi-model-chats/",
+    "0.11の刷新は幅・文字・間隔・メニューの変更。rendererの利用量計器や固定の補助エージェント監視欄はunverified。左欄は幅変更できる。https://github.com/open-webui/open-webui/releases/tag/v0.11.0 https://github.com/open-webui/open-webui/blob/v0.11.0/src/lib/components/layout/Sidebar.svelte",
+    "共同編集ノートは0.6.16の2025年7月14日に既に記録があり、2026年10月の初登場ではない。通常会話にノートや金額の表が常設される根拠もない。https://github.com/open-webui/open-webui/blob/v0.6.29/CHANGELOG.md https://docs.openwebui.com/features/notes/",
+    "0.13はTabsから開く作業欄。デスクトップやブラウザは対応するOpen Terminal接続が必要。rendererのWayland :5900、Git main clean等を標準の固定状態として描かない。https://github.com/open-webui/open-webui/releases/tag/v0.13.0"
+  ]
+}

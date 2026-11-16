@@ -1,0 +1,74 @@
+{
+  "schema": "memento.style.v1",
+  "id": "context-engineering",
+  "name": "必要な情報を引き継ぐ",
+  "plain": "長い会話を要約し、決まったことと残る作業を短いメモで引き継ぎます。",
+  "when": "会話が長くなる仕事や、日をまたいで続きを頼むとき。",
+  "since": "2025-09",
+  "popularized_by": [
+    "Anthropic の文脈設計ガイド"
+  ],
+  "since_basis": "公開資料で確認できる年月です。発明や普及の開始年月を示すものではありません。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n長い作業では NOTES.md に、目的、決定、未解決、確認済みの結果、次の一手を短く残してください。会話を要約するときもこの5点を保ってください。再開時にはメモと元の資料を照らし合わせ、古い情報を修正してください。秘密の値は残さないでください。\n\n# English\n\nFor long tasks, keep a brief NOTES.md with the goal, decisions, unresolved issues, actual checks, and next action. Preserve these when summarizing a conversation. On resuming, check notes against original evidence and update stale details. Do not record secret values.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "via AGENTS.md",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://code.claude.com/docs/en/memory",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

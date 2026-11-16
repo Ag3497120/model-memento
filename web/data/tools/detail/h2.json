@@ -1,0 +1,721 @@
+{
+  "h2oai--h2ogpt": {
+    "topics": [
+      "ai",
+      "chatgpt",
+      "embeddings",
+      "fedramp",
+      "generative",
+      "gpt",
+      "gpt4all",
+      "llama2",
+      "llm",
+      "mixtral",
+      "pdf",
+      "private",
+      "privategpt",
+      "vectorstore"
+    ],
+    "homepage": "http://h2o.ai",
+    "archived": true,
+    "commit": "5af700f5bdd155816de33cf95a41ced8393c48dc",
+    "classification_basis": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "0.2.0",
+        "2024-03-02"
+      ],
+      [
+        "0.2.1",
+        "2024-06-04"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install requirements-parser pytest-instafail pytest-random-order playsound==1.3.0 / pip install pygame",
+    "install_evidence": [
+      {
+        "command": "pip install requirements-parser pytest-instafail pytest-random-order playsound==1.3.0",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/README.md",
+        "line": 156
+      },
+      {
+        "command": "pip install pygame",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/README.md",
+        "line": 159
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/gradio_themes.py",
+        "spaces/demo/app.py",
+        "openai_server/agent_tools/news_query.py",
+        "openai_server/agent_tools/bing_search.py",
+        "openai_server/agent_tools/google_search.py",
+        "src/cli.py",
+        "openai_server/chat_history_render.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "text": "#000000",
+      "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/gradio_themes.py"
+    },
+    "theme_evidence": [
+      {
+        "token": "text",
+        "key": "checkbox_label_text_color_selected_dark",
+        "value": "#000000",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/gradio_themes.py",
+        "line": 135
+      }
+    ],
+    "strings": [
+      "Enter your question here",
+      "Question",
+      "h2oGPT",
+      "Fetch news articles or top headlines from News API.",
+      "Choose between 'everything' or 'top-headlines' mode. Default is 'everything'.",
+      "The category for top headlines. Optional.",
+      "Bing Search Utility",
+      "Search query",
+      "Type of search",
+      "Number of results to return",
+      "Market for search results",
+      "Freshness of results",
+      "Safe search setting",
+      "-q",
+      "Multi-Engine Search Utility using SerpApi",
+      "Search engine to use",
+      "Google domain to use",
+      "Country of the search (default: us). Top 10 common countries:",
+      "-e"
+    ],
+    "string_evidence": [
+      {
+        "text": "Enter your question here",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/app.py",
+        "line": 55,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Question",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/app.py",
+        "line": 55,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "h2oGPT",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/app.py",
+        "line": 49,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Fetch news articles or top headlines from News API.",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/news_query.py",
+        "line": 58,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Choose between 'everything' or 'top-headlines' mode. Default is 'everything'.",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/news_query.py",
+        "line": 60,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The category for top headlines. Optional.",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/news_query.py",
+        "line": 83,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Bing Search Utility",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 24,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Search query",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 25,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Type of search",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 26,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Number of results to return",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 27,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Market for search results",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 28,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Freshness of results",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 30,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Safe search setting",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 32,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "-q",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+        "line": 25,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Multi-Engine Search Utility using SerpApi",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+        "line": 86,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Search engine to use",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+        "line": 91,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Google domain to use",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+        "line": 93,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Country of the search (default: us). Top 10 common countries:",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+        "line": 95,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "-e",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+        "line": 88,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/h2oai/h2ogpt",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/README.md",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/docs/INSTALL.md",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/requirements.txt",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/requirements.txt",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/cogvlm2_server/requirements.txt",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/gradio_themes.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/app.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/news_query.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/cli.py",
+      "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/chat_history_render.py",
+      "https://api.github.com/repos/h2oai/h2ogpt/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/README.md"
+      },
+      {
+        "path": "docs/INSTALL.md",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/docs/INSTALL.md"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/requirements.txt"
+      },
+      {
+        "path": "spaces/demo/requirements.txt",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/requirements.txt"
+      },
+      {
+        "path": "openai_server/cogvlm2_server/requirements.txt",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/cogvlm2_server/requirements.txt"
+      },
+      {
+        "path": "src/gradio_themes.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/gradio_themes.py"
+      },
+      {
+        "path": "spaces/demo/app.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/spaces/demo/app.py"
+      },
+      {
+        "path": "openai_server/agent_tools/news_query.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/news_query.py"
+      },
+      {
+        "path": "openai_server/agent_tools/bing_search.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/bing_search.py"
+      },
+      {
+        "path": "openai_server/agent_tools/google_search.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/agent_tools/google_search.py"
+      },
+      {
+        "path": "src/cli.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/src/cli.py"
+      },
+      {
+        "path": "openai_server/chat_history_render.py",
+        "source": "https://github.com/h2oai/h2ogpt/blob/5af700f5bdd155816de33cf95a41ced8393c48dc/openai_server/chat_history_render.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=19, theme=1.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "repository_id": 618613272,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "h2oai--h2o-llmstudio": {
+    "topics": [
+      "ai",
+      "chatbot",
+      "chatgpt",
+      "fedramp",
+      "fine-tuning",
+      "finetuning",
+      "generative",
+      "generative-ai",
+      "gpt",
+      "llama",
+      "llama2",
+      "llm",
+      "llm-training"
+    ],
+    "homepage": "https://h2o.ai",
+    "archived": false,
+    "commit": "f7ad2a2390e42f64f4d4de009bb776e6914d8b02",
+    "classification_basis": "Topics, README introduction, language (Python) → workflow-canvas / no-code",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2023-05-04"
+      ],
+      [
+        "v1.1.1",
+        "2023-12-07"
+      ],
+      [
+        "v1.2.0",
+        "2023-12-20"
+      ],
+      [
+        "v1.3.0",
+        "2024-02-01"
+      ],
+      [
+        "v1.3.1",
+        "2024-02-01"
+      ],
+      [
+        "v1.4.0",
+        "2024-03-11"
+      ],
+      [
+        "v1.4.1",
+        "2024-03-15"
+      ],
+      [
+        "v1.5.0",
+        "2024-04-26"
+      ],
+      [
+        "v1.6.0",
+        "2024-05-22"
+      ],
+      [
+        "v1.7.0",
+        "2024-06-07"
+      ],
+      [
+        "v1.8.0",
+        "2024-06-26"
+      ],
+      [
+        "v1.9.0",
+        "2024-07-24"
+      ],
+      [
+        "v1.10.0",
+        "2024-08-06"
+      ],
+      [
+        "v1.11.0",
+        "2024-08-16"
+      ],
+      [
+        "v1.11.1",
+        "2024-08-19"
+      ],
+      [
+        "v1.12.0",
+        "2024-09-12"
+      ],
+      [
+        "v1.12.1",
+        "2024-09-12"
+      ],
+      [
+        "v1.13.0",
+        "2024-09-26"
+      ],
+      [
+        "v1.14.0",
+        "2025-04-03"
+      ],
+      [
+        "v1.14.1",
+        "2025-04-08"
+      ],
+      [
+        "v1.14.2",
+        "2025-07-30"
+      ],
+      [
+        "v1.14.3",
+        "2025-09-18"
+      ],
+      [
+        "v1.14.4",
+        "2025-09-18"
+      ],
+      [
+        "v1.14.5",
+        "2025-12-11"
+      ],
+      [
+        "v1.14.6",
+        "2025-12-11"
+      ],
+      [
+        "v1.14.7",
+        "2026-01-19"
+      ],
+      [
+        "v1.14.8",
+        "2026-02-03"
+      ],
+      [
+        "v1.14.9",
+        "2026-02-20"
+      ],
+      [
+        "v1.14.10",
+        "2026-03-20"
+      ],
+      [
+        "v1.14.11",
+        "2026-04-07"
+      ],
+      [
+        "v1.14.12",
+        "2026-04-29"
+      ],
+      [
+        "v1.14.13",
+        "2026-05-30"
+      ],
+      [
+        "v1.14.14",
+        "2026-06-30"
+      ],
+      [
+        "v1.14.15",
+        "2026-07-10"
+      ],
+      [
+        "v1.14.16",
+        "2026-08-13"
+      ],
+      [
+        "v1.15.0",
+        "2026-08-18"
+      ],
+      [
+        "v1.15.1",
+        "2026-09-17"
+      ],
+      [
+        "v1.15.2",
+        "2026-09-26"
+      ],
+      [
+        "v1.15.3",
+        "2026-10-24"
+      ],
+      [
+        "v1.15.4",
+        "2026-11-04"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "docker run \\",
+    "install_evidence": [
+      {
+        "command": "docker run \\",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/README.md",
+        "line": 139
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "llm_studio/app.py",
+        "llm_studio/app_utils/sections/chat.py",
+        "llm_studio/app_utils/sections/home.py",
+        "llm_studio/app_utils/sections/settings.py",
+        "llm_studio/app_utils/sections/project.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Loading the model...",
+      "Chat Settings",
+      "Loading model configuration...",
+      "Model successfully loaded, how can I help you?",
+      "Chat History cleaned. How can I help you?",
+      "Disk usage",
+      "Experiments",
+      "Current GPU load",
+      "Current CPU load",
+      "Memory usage",
+      "Detailed GPU stats",
+      "finished",
+      "Save settings persistently",
+      "Load settings",
+      "Restore default settings",
+      "Stop experiments",
+      "Abort",
+      "Delete experiments",
+      "Compare experiments"
+    ],
+    "string_evidence": [
+      {
+        "text": "Loading the model...",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+        "line": 32,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Chat Settings",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+        "line": 43,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Loading model configuration...",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+        "line": 44,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Model successfully loaded, how can I help you?",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+        "line": 63,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Chat History cleaned. How can I help you?",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+        "line": 69,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Disk usage",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 26,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Experiments",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 45,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Current GPU load",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 66,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Current CPU load",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 68,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Memory usage",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 70,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Detailed GPU stats",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 87,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "finished",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+        "line": 135,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Save settings persistently",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/settings.py",
+        "line": 500,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Load settings",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/settings.py",
+        "line": 504,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Restore default settings",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/settings.py",
+        "line": 508,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Stop experiments",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py",
+        "line": 64,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Abort",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py",
+        "line": 71,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Delete experiments",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py",
+        "line": 81,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Compare experiments",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py",
+        "line": 106,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/h2oai/h2o-llmstudio",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/README.md",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/pyproject.toml",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/documentation/package.json",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app.py",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/settings.py",
+      "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py",
+      "https://api.github.com/repos/h2oai/h2o-llmstudio/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/pyproject.toml"
+      },
+      {
+        "path": "documentation/package.json",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/documentation/package.json"
+      },
+      {
+        "path": "llm_studio/app.py",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app.py"
+      },
+      {
+        "path": "llm_studio/app_utils/sections/chat.py",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/chat.py"
+      },
+      {
+        "path": "llm_studio/app_utils/sections/home.py",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/home.py"
+      },
+      {
+        "path": "llm_studio/app_utils/sections/settings.py",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/settings.py"
+      },
+      {
+        "path": "llm_studio/app_utils/sections/project.py",
+        "source": "https://github.com/h2oai/h2o-llmstudio/blob/f7ad2a2390e42f64f4d4de009bb776e6914d8b02/llm_studio/app_utils/sections/project.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=19, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → workflow-canvas / no-code",
+    "repository_id": 629142696,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

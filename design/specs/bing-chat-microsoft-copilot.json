@@ -1,0 +1,1182 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "bing-chat-microsoft-copilot",
+  "name": "Bing Chat / Microsoft Copilot",
+  "vendor": "Microsoft",
+  "kind": "chat-web",
+  "versions": [
+    {
+      "id": "bing-chat-microsoft-copilot-2023-02",
+      "from": "2023-02",
+      "to": "2023-03",
+      "regions": [
+        {
+          "name": "検索と会話の入口",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "検索から会話へ移る入口"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "質問と回答",
+            "回答が参照したウェブページへのリンク"
+          ]
+        },
+        {
+          "name": "Edge内の別画面",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "閲覧ページの横で質問や文章作成。Bingの全画面チャットとは別の表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "検索・Edgeの会話入口",
+          "purpose": "続けて質問する"
+        },
+        {
+          "label": "Compose",
+          "where": "Edgeの横の欄",
+          "purpose": "文章の下書きを作る"
+        }
+      ],
+      "conversation": {
+        "user": "質問を送り、その回答に続けて条件を足す。吹き出しの正確な形は未確認。",
+        "assistant": "文章と参照先リンク。検索結果に付く回答欄と、会話画面を区別する。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "利用権のない人には、試せる質問例と待機リストの案内。利用権のある会話開始画面の正確な見出しは未確認。",
+      "distinctive": [
+        "検索から会話へ移る構成",
+        "回答から参照元へ進める",
+        "Edgeではページの横にChatとComposeがある"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/",
+          "kind": "blog",
+          "date": "2023-02-07",
+          "shows": "regions・conversation・empty_state・distinctive: 限定プレビュー、検索と会話、参照リンク、EdgeのChat/Compose。一般公開の発表記事でありログイン済み画面の実機調査ではない。"
+        },
+        {
+          "url": "https://news.microsoft.com/wp-content/uploads/prod/sites/652/2023/02/Experience-Guide.pdf",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "regions・controls: 当時の公式プレビュー体験ガイドの本文。検索と会話、Edgeの横の欄。PDF本文を取得。発行日の明記は未確認。"
+        }
+      ],
+      "confidence": 0.66
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-03",
+      "from": "2023-03",
+      "to": "2023-05",
+      "regions": [
+        {
+          "name": "会話スタイル",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話開始時に3つの応答スタイルを選ぶ"
+          ]
+        },
+        {
+          "name": "回答列",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "参照先リンク",
+            "各回答の下に残り回数を示す表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Creative",
+          "where": "会話スタイル切替",
+          "purpose": "長めで発想を広げる回答"
+        },
+        {
+          "label": "Balanced",
+          "where": "会話スタイル切替",
+          "purpose": "中間の応答"
+        },
+        {
+          "label": "Precise",
+          "where": "会話スタイル切替",
+          "purpose": "短めで検索を重視する回答"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "参照先を持つ回答。回答の下に会話回数と制限を知らせる表示。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "3つの会話スタイルを選んで質問を始める。正確な歓迎文は未確認。",
+      "distinctive": [
+        "選択に応じて紫・青・緑に変わる。正確な色の数値は未確認",
+        "会話の回数表示",
+        "スタイルの切替であり、モデル名を選ぶ欄ではない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+          "kind": "release-notes",
+          "date": "2023-03-03",
+          "shows": "regions・controls・conversation・distinctive: 3スタイルと紫/青/緑への変化、回答下の回数・警告表示。"
+        },
+        {
+          "url": "https://www.windowscentral.com/software-apps/bing-chat-can-now-switch-between-tones-at-the-switch-of-a-toggle",
+          "kind": "press",
+          "date": "2023-03-02",
+          "shows": "controls・empty_state: 同時代の記事が3つの会話スタイル選択と段階的な提供を説明。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-05",
+      "from": "2023-05",
+      "to": "2023-07",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "質問と回答",
+            "グラフなどの回答内の表示"
+          ]
+        },
+        {
+          "name": "会話履歴",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "以前の会話",
+            "名前変更・削除・共有・書き出し"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "会話履歴",
+          "where": "右の一覧",
+          "purpose": "会話を再開する"
+        },
+        {
+          "label": "書き出し",
+          "where": "回答または会話の操作",
+          "purpose": "PDF・テキスト・Wordとして保存する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "文章に加えてグラフや料理向けの表示。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "履歴は右側",
+        "履歴名の初期値は最初の質問",
+        "回答のPDF・テキスト・Wordへの書き出し"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2023/05/04/announcing-the-next-wave-of-ai-innovation-with-microsoft-bing-and-edge/",
+          "kind": "blog",
+          "date": "2023-05-04",
+          "shows": "版の境界: オープンプレビューへの移行発表。履歴と書き出しは近日、画像入力は開発予定として記載。5月4日当日の全部提供を証明しない。"
+        },
+        {
+          "url": "https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/",
+          "kind": "release-notes",
+          "date": "2023-05-19",
+          "shows": "regions・controls・conversation・distinctive: 5月後半に提供済みとなった右側履歴、履歴の操作、書き出し形式、回答内グラフ。この仕様は月内後半の画面を対象にする。"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-07",
+      "from": "2023-07",
+      "to": "2023-11",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "参照先のある回答"
+          ]
+        },
+        {
+          "name": "画像を添える入力",
+          "position": null,
+          "size": null,
+          "contents": [
+            "写真や画像を質問に添える"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "過去の会話"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "画像を追加",
+          "where": "会話の入力",
+          "purpose": "画像について質問する"
+        },
+        {
+          "label": "会話履歴",
+          "where": "右側",
+          "purpose": "過去の会話を再開する"
+        }
+      ],
+      "conversation": {
+        "user": "質問に画像を添えられる。画像の枠の寸法は未確認。",
+        "assistant": "画像の内容について文章で答える。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "文字だけの入力から画像を添えられる入力へ",
+        "履歴は右側",
+        "仕事用の保護付き画面と個人用画面を区別する"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/",
+          "kind": "blog",
+          "date": "2023-07-18",
+          "shows": "controls・conversation・distinctive: 個人向け画像入力の展開と、仕事用の保護付きBing Chat Enterpriseを別々に発表。入力位置の正確な配置は未確認。"
+        },
+        {
+          "url": "https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/",
+          "kind": "release-notes",
+          "date": "2023-05-19",
+          "shows": "regions: 7月より前に右側の会話履歴が提供済み。7月固有の寸法や色は証明しない。"
+        }
+      ],
+      "confidence": 0.62
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2023-11",
+      "from": "2023-11",
+      "to": "2024-02",
+      "regions": [
+        {
+          "name": "専用の会話ページ",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "Copilotの会話",
+            "参照先付きの回答と画像生成"
+          ]
+        },
+        {
+          "name": "アカウント状態",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "対象の仕事用アカウントでは保護の表示"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "参照元のある回答と画像生成。吹き出しや余白の正確な値は未確認。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "Copilotの専用ページから会話を始める。改称日のカード配置・歓迎文は未確認。",
+      "distinctive": [
+        "専用のcopilot.microsoft.com",
+        "Bingには検索と会話を組み合わせた入口が残る",
+        "保護表示は対象の仕事用アカウントに依存する"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/",
+          "kind": "blog",
+          "date": "2023-11-15",
+          "shows": "regions・conversation・empty_state・distinctive: 改称日と専用会話ページ、Entra IDサインイン時のデータ保護。プラグインはプレビューで、固定の全利用者向け一覧ではない。"
+        },
+        {
+          "url": "https://blogs.bing.com/search/2023/12/Microsoft-Copilot-is-now-generally-available/",
+          "kind": "release-notes",
+          "date": "2023-12-01",
+          "shows": "conversation・distinctive: 参照先付き回答、一般提供、各入口の名称・画面変更は順次展開。11月15日の全画面詳細を証明しない。"
+        }
+      ],
+      "confidence": 0.58
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-02",
+      "from": "2024-02",
+      "to": "2024-03",
+      "regions": [
+        {
+          "name": "提案カード",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話を始めるための横送りの質問例"
+          ]
+        },
+        {
+          "name": "回答",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "整理された回答",
+            "生成画像を会話内で編集"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "提案を選ぶ",
+          "where": "開始画面のカード",
+          "purpose": "例から会話を始める"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "回答の見た目を整理。生成画像の編集を会話内から行える。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "横送りの質問例から始められる。カードの画像は再利用しない。",
+      "distinctive": [
+        "横送りの提案カード",
+        "回答を読みやすく整理",
+        "画像の編集を会話の中で行う"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/",
+          "kind": "blog",
+          "date": "2024-02-07",
+          "shows": "regions・controls・conversation・empty_state・distinctive: Web/iOS/Androidの刷新、提案のカルーセル、画像の会話内編集。"
+        },
+        {
+          "url": "https://www.sammobile.com/news/microsoft-launches-new-ui-copilot-android-ios-web/",
+          "kind": "press",
+          "date": "2024-02-09",
+          "shows": "regions・distinctive: 同時代の報道でWebと携帯版の画面刷新を確認。カード寸法や色の数値は採用しない。"
+        }
+      ],
+      "confidence": 0.64
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-03",
+      "from": "2024-03",
+      "to": "2024-10",
+      "regions": [
+        {
+          "name": "Notebookの指示編集",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "長い質問を繰り返し直す欄"
+          ]
+        },
+        {
+          "name": "Notebookの回答",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "指示に対する出力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Notebook",
+          "where": "会話とは別の入力方式",
+          "purpose": "長い指示を編集して結果を比べる"
+        }
+      ],
+      "conversation": {
+        "user": "左側で同じ指示を修正する。最大18,000文字との同時代報道がある。",
+        "assistant": "右側に結果。通常の会話の吹き出し列とは違う。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "指示と出力の左右分割",
+        "長い指示を繰り返し編集",
+        "Copilot GPTsとGPT Builderの発表・提供時期は別に扱う"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside",
+          "kind": "press",
+          "date": "2024-02-23",
+          "shows": "regions・controls・conversation・distinctive: 当時のNotebookは左が指示、右が結果。18,000文字、Web提供。3月4日が初日とはしない。"
+        },
+        {
+          "url": "https://blogs.microsoft.com/blog/2024/01/15/bringing-the-full-power-of-copilot-to-more-people-and-businesses/",
+          "kind": "blog",
+          "date": "2024-01-15",
+          "shows": "distinctive: Copilot ProとCopilot GPTsを発表。GPT Builderは今後の提供と記載。Notebookの左右配置や3月4日のBuilder提供の根拠にはしない。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2024-10",
+      "from": "2024-10",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "話題を探すホーム",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "Discoverの会話のきっかけ",
+            "Dailyの音声ニュースへの入口"
+          ]
+        },
+        {
+          "name": "会話と音声",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "文字での質問",
+            "音声で話す入口"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Discover",
+          "where": "ホーム",
+          "purpose": "話題を選ぶ"
+        },
+        {
+          "label": "Daily",
+          "where": "ホーム",
+          "purpose": "ニュースなどの音声まとめを聞く"
+        },
+        {
+          "label": "Voice",
+          "where": "会話の入口",
+          "purpose": "音声で話す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "短めで読みやすい返答を重視。音声で会話できる。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "airy",
+        "input_shape": null
+      },
+      "empty_state": "カードから話題を選ぶホーム。カードの絵・写真を転載せず、短い自作の質問例に置き換える。",
+      "distinctive": [
+        "暖かい印象のカード中心のホーム",
+        "話題発見と音声を前に出す",
+        "DailyとDiscoverの入口",
+        "VisionとThink Deeperは当初実験的な提供"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+          "kind": "blog",
+          "date": "2024-10-01",
+          "shows": "regions・controls・conversation・distinctive: Discover/Daily/Voiceの役割。VisionとThink DeeperはLabs。提供は地域・契約ごとに異なる。"
+        },
+        {
+          "url": "https://www.theverge.com/2024/10/1/24259187/microsoft-copilot-redesign-vision-voice-features-inflection-ai",
+          "kind": "press",
+          "date": "2024-10-01",
+          "shows": "regions・shape・empty_state: 同時代の取材記事が暖かいカード中心のホームを説明。airyは余白の多い構成の要約で、寸法の測定ではない。"
+        }
+      ],
+      "confidence": 0.7
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2025-03-macos",
+      "from": "2025-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "通常のアプリ画面",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話",
+            "Daily・Think Deeper・音声の機能"
+          ]
+        },
+        {
+          "name": "呼び出し用の小窓",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "すぐに質問や音声を始める小さな入力欄"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Option + Space",
+          "where": "アプリが動作中のMac",
+          "purpose": "小さい入力窓を呼び出す"
+        },
+        {
+          "label": "Think Deeper",
+          "where": "会話画面",
+          "purpose": "時間をかける応答を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "小窓から質問または音声で会話を始める。",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ブラウザの外に独立したMacアプリ",
+        "小さい呼び出し窓と通常画面を区別",
+        "文字・音声で始められる"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+          "kind": "press",
+          "date": "2025-02-27",
+          "shows": "regions・controls・conversation・distinctive: 発売時の取材。Option+Space、通常画面、Daily/Voice/Think Deeper。カタログの3月は記憶用の区切りで初公開日は2月27日。"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/getting-started-with-copilot-on-macos",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "controls: 現行の公式ヘルプもショートカットと小窓を説明する。更新される文書であり、2025年当初のメニュー配置・配色・画面共有の証拠にはしない。"
+        }
+      ],
+      "confidence": 0.65
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2025-04",
+      "from": "2025-04",
+      "to": "2026-03",
+      "regions": [
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "参照先や内容別の回答カード",
+            "調査や音声への入口"
+          ]
+        },
+        {
+          "name": "Pages",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "会話から内容をまとめて編集する作業面。左右の向きの当日確証はない"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Pages",
+          "where": "会話に関係する機能",
+          "purpose": "内容をまとめて書き直す"
+        },
+        {
+          "label": "Podcasts",
+          "where": "会話に関係する機能",
+          "purpose": "内容を音声で聞く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "内容別の回答カードや、まとめた内容を編集する作業面。",
+        "tool_calls": "Actionsが裏で作業する機能は発表済み。進捗カード・承認ボタンの当日の文言は未確認。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話から文章の編集へ進める",
+        "内容から音声番組を作る",
+        "携帯のカメラを使うVisionとWindows版の画面理解は展開時期が異なる"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/",
+          "kind": "blog",
+          "date": "2025-04-04",
+          "shows": "regions・controls・conversation・distinctive: Pages、Podcasts、Actions、Visionを発表。段階提供。固定の左メニューや全機能一斉提供は証明しない。"
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/microsoft-copilot-has-just-got-a-massive-ai-overhaul-heres-everything-new",
+          "kind": "press",
+          "date": "2025-04-04",
+          "shows": "distinctive: 同時代の現地取材に基づく更新機能の解説。画面の正確な並びや色は採用しない。"
+        }
+      ],
+      "confidence": 0.53
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2026-03",
+      "from": "2026-03",
+      "to": "2026-11",
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "unverified: 2026年3月20日固有の画面は未確認",
+        "Smartの選択とPagesの並列表示は現行ヘルプで確認できるが、3月の初公開日・配置は未確認",
+        "Actionsの一般提供や固定の進捗カードは未確認"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/conversation-modes-in-microsoft-copilot",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料のみ: 現行の個人向けヘルプは入力の下から応答方式を選ぶ手順を説明。3月20日の保存画面ではない。"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-pages",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料のみ: 現行のヘルプは会話と編集用ページを並べる構成を説明。個人/仕事用の対象を併記。3月20日の画面を確定できない。"
+        }
+      ],
+      "confidence": 0.22
+    },
+    {
+      "id": "bing-chat-microsoft-copilot-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "Home",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ChatとCoworkの入口",
+            "最近の作業と提案"
+          ]
+        },
+        {
+          "name": "共通の移動欄",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Agents & Pluginsから追加機能や共有された手順を探す"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Chat",
+          "where": "Home",
+          "purpose": "質問や会話を始める"
+        },
+        {
+          "label": "Cowork",
+          "where": "Home",
+          "purpose": "まとまった作業を依頼する"
+        },
+        {
+          "label": "Agents & Plugins",
+          "where": "共通の移動欄",
+          "purpose": "機能や共有された手順を探す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "最近の作業と次にできることを示すHome。対象アカウントに順次提供されるため全員共通の画面とはしない。",
+      "distinctive": [
+        "ChatとCoworkをまとめるHome",
+        "共通の移動欄",
+        "共有された作業手順の入口",
+        "2023年のBing画面からの連続した個人向けUIとは断定しない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+          "kind": "blog",
+          "date": "2026-09-25",
+          "shows": "regions・controls・empty_state: HomeでChatとCoworkをまとめ、最近の作業や提案を示す。仕事向けの発表で、初期はFrontierへ順次提供。"
+        },
+        {
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--october-2026/4568528",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "regions・controls・distinctive: 2026年10月の公式月次記事。共通ナビゲーションとAgents & Plugins、11月に進むSkills提供。正確な発行日は取得本文で未採録。個人向け全アカウントの提供根拠ではない。"
+        }
+      ],
+      "confidence": 0.55
+    }
+  ],
+  "corrections": [
+    "2023-02の描画に3色スタイル・固定の15回表示を置かない。3スタイルと当時6回の回数表示の公式記録は3月3日。https://blogs.bing.com/search/2023/3/Bing-Preview-Release-Notes-Tone-Changes-and-More/",
+    "2023-05-04に履歴・書き出し・画像入力が全て一斉追加されたという記述を分ける。右側履歴とPDF/テキスト/Wordは5月19日の提供済み項目。Markdownはこの資料では未確認。https://blogs.bing.com/search/2023/5/Bing-Preview-Release-Notes-Chat-History,-Charts,-Export,-and-more/",
+    "画像を添えるVisual Searchの消費者向け展開は7月18日。5月の予定発表を提供済みとしない。https://blogs.bing.com/search/2023/7/Bing-Chat-Enterprise-announced,-multimodal-Visual-Search-rolling-out-to-Bing-Chat/",
+    "2023-11の全利用者にProtectedを表示したり、Instacart/Kayak/Sunoの固定欄を置く根拠はない。保護は対象の仕事用サインイン、プラグインはプレビュー。https://blogs.bing.com/search/2023/11/our-vision-to-bring-microsoft-copilot-to-everyone-and-more/",
+    "2024-03のNotebookを通常チャット＋GPTs紹介カードで代用しない。左が指示、右が出力。https://www.windowscentral.com/software-apps/microsoft-copilots-new-feature-can-finally-handle-complex-projects-and-supports-up-to-18000-characters-but-it-has-one-major-downside",
+    "2024-02の横送り質問カードという独立した刷新を追加した。https://blogs.microsoft.com/blog/2024/02/07/delivering-copilot-for-everyone/",
+    "2024-10のDailyへ東京の気温・4記事・4分10秒を事実として固定しない。地域・言語で提供範囲が異なる。https://blogs.microsoft.com/blog/2024/10/01/an-ai-companion-for-everyone/",
+    "Mac版は2025-02-27に報道済み。2025-03のidは維持する。Sequoiaの背景、Excelの自動参照、初日からの画面共有はunverified。https://www.tomshardware.com/software/macos/copilot-gets-its-own-app-for-the-mac",
+    "2025-04の機能発表から、固定のCompanionメニューやRun Actionカードの文言は導けない。https://blogs.microsoft.com/blog/2025/04/04/your-ai-companion/",
+    "2026-03は当日固有の根拠がなくunverified。現行ヘルプのPagesやSmartを3月20日へ逆算しない。https://support.microsoft.com/en-us/microsoft-365-copilot/conversation-modes-in-microsoft-copilot",
+    "2026-11のHome/Chat/Coworkには仕事用の公式資料があるが、個人向けBing後継の全画面として混ぜない。回転ロゴ・840 Credits・固定モデル表示の根拠は未確認。https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
+  ]
+}
+

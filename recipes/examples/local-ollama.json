@@ -1,0 +1,12 @@
+{
+  "schema": "memento.recipe.v1",
+  "id": "local-ollama",
+  "title": "この端末のモデルで作業する",
+  "purpose": "モデルとアプリを用意した後、この端末で動かすモデルだけを選んで作業します。",
+  "conductor": { "harness": "opencode", "model": "ollama:qwen3.5:9b" },
+  "helpers": [],
+  "tools": [],
+  "instructions": { "style": "plan-then-act", "files": ["agents-md"] },
+  "frontend": "terminal",
+  "notes": "事前に Ollama とモデルを用意してください。通信を完全に止める設定は unverified。出典 https://ollama.com/library/qwen3.5:9b https://docs.ollama.com/api/introduction https://github.com/anomalyco/opencode"
+}

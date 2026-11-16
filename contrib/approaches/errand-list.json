@@ -1,0 +1,26 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "errand-list",
+  "name": "用事を頼んでおくと、手分けして報告する",
+  "plain": "「やっておいて」と頼むと、小さな用事に分けて、1 つずつ何をしたかを報告します。ここでは練習なので、実際のメール送信や予約はしません。",
+  "good_for": ["delegate"],
+  "seen_in": ["OpenClaw (formerly Clawdbot / Moltbot)", "Claude Code", "OpenAI Codex CLI"],
+  "placeholder": "例: 来週の家族旅行の準備をして",
+  "steps": [
+    {
+      "id": "errands",
+      "label": "手分けした用事",
+      "show": "list",
+      "system": "Split the request into 3 to 6 small errands, as a numbered list, in the language of the request. Mark, in parentheses and in the language of the request (for Japanese: （あなたの確認が必要）), any errand that would need the person's approval, money, a password or sending a message.",
+      "prompt": "{{input}}"
+    },
+    {
+      "id": "report",
+      "label": "報告",
+      "gate": "この分け方で進める（練習）",
+      "show": "text",
+      "system": "This is a rehearsal: you cannot act in the world. For each errand, write what you would do and what you would need from the person, then a short final summary. Never claim that anything was sent, booked or paid. Use the language of the request.",
+      "prompt": "Request:\n{{input}}\n\nErrands:\n{{step:errands}}"
+    }
+  ]
+}

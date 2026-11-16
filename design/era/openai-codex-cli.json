@@ -1,0 +1,765 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "openai-codex-cli",
+  "versions": [
+    {
+      "id": "openai-codex-cli-2025-04",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "まだ返答を受けていない会話で選ぶ。返答を受けた後は新しい会話を始める。",
+          "開いた一覧からモデルを選ぶ。"
+        ],
+        "options": [
+          "o4-mini",
+          "o3"
+        ],
+        "default": "o4-mini",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/model-overlay.tsx",
+            "date": "2025-04-16",
+            "shows": "Switch model の選択一覧。返答を一度受けた会話では変更できず、新しい会話が必要。"
+          },
+          {
+            "url": "https://github.com/openai/codex/commit/33d0d73b822abeae87cec07f2c2901ff900e434f",
+            "date": "2025-04-16",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/utils/model-utils.ts",
+            "date": "2025-04-16",
+            "shows": "推奨候補は o4-mini と o3。全候補はAPIから取得するため、この2件で全体を表さない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/README.md",
+            "date": "2025-04-16",
+            "shows": "既定値は o4-mini。--model と設定ファイルでも指定できる。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-chat-input.tsx",
+            "date": "2025-04-16",
+            "shows": "入力が /model で始まる場合にモデル選択を開く処理。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose before receiving a reply. After a reply, start a new chat.",
+          "Choose a model from the list that opens."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "返答の後はモデルを変更不可",
+          "when": "2025-04-16..2025-04-16",
+          "where": "モデル選択の一覧に代わって出る制約の説明。新しい会話を始めて選び直す。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/model-overlay.tsx",
+              "date": "2025-04-16",
+              "shows": "Switch model の選択一覧。返答を一度受けた会話では変更できず、新しい会話が必要。"
+            },
+            {
+              "url": "https://github.com/openai/codex/commit/33d0d73b822abeae87cec07f2c2901ff900e434f",
+              "date": "2025-04-16",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "Model changes unavailable after a reply",
+          "where_en": "Constraint explanation replacing the model list. Start a new chat to choose again."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-04-16",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/model-overlay.tsx",
+            "date": "2025-04-16",
+            "shows": "Switch model の選択一覧。返答を一度受けた会話では変更できず、新しい会話が必要。"
+          },
+          {
+            "url": "https://github.com/openai/codex/commit/33d0d73b822abeae87cec07f2c2901ff900e434f",
+            "date": "2025-04-16",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話からモデル一覧を重ねて開くが、返答後は変更できない（https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/model-overlay.tsx）。",
+      "trend_en": "A model list overlays terminal chat. Model changes become unavailable after a reply. (https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/model-overlay.tsx)"
+    },
+    {
+      "id": "openai-codex-cli-2025-06",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "Rust版を起動するコマンドに --model とモデル名を付ける。",
+          "会話中の /model 選択欄はこの固定版に描かない。"
+        ],
+        "options": [
+          "codex-mini-latest"
+        ],
+        "default": "codex-mini-latest",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/cli.rs",
+            "date": "2025-06-30",
+            "shows": "Rust版0.2.0 は起動時の --model / -m を定義する。同版のslash_command.rsに /model はない。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.2.0",
+            "date": "2025-06-30",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/core/src/flags.rs",
+            "date": "2025-06-30",
+            "shows": "OPENAI_DEFAULT_MODEL は codex-mini-latest。候補を閉じた一覧として列挙する方式ではない。"
+          }
+        ],
+        "steps_en": [
+          "Add --model followed by the model name to the Rust version's launch command.",
+          "Leave this pinned version without an in-chat /model selector."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+J で改行",
+          "when": "2025-06-30..2025-06-30",
+          "where": "端末の入力枠の下に並ぶキー操作の案内。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+              "date": "2025-06-30",
+              "shows": "入力枠の下辺のキー案内。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.2.0",
+              "date": "2025-06-30",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "Insert a line break with Ctrl+J",
+          "where_en": "Keyboard hints below the terminal input frame."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-06-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/cli.rs",
+            "date": "2025-06-30",
+            "shows": "Rust版0.2.0 は起動時の --model / -m を定義する。同版のslash_command.rsに /model はない。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.2.0",
+            "date": "2025-06-30",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "起動時にモデルを指定し、入力枠の下辺へキー操作を添える（https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/cli.rs）。",
+      "trend_en": "The model is chosen at launch, with keyboard hints below the input frame. (https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/cli.rs)"
+    },
+    {
+      "id": "openai-codex-cli-2025-09",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。",
+          "対応するモデルでは、考える量も選ぶ。"
+        ],
+        "options": [
+          "gpt-5-codex low",
+          "gpt-5-codex medium",
+          "gpt-5-codex high",
+          "gpt-5 minimal",
+          "gpt-5 low",
+          "gpt-5 medium",
+          "gpt-5 high"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2025-09-15",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.36.0",
+            "date": "2025-09-15",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/common/src/model_presets.rs",
+            "date": "2025-09-15",
+            "shows": "考える量を含む選択行の表示名。認証方法に応じて絞り込む。共通の既定表示は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens.",
+          "Choose the reasoning effort for supported models."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "/status で会話の使用量",
+          "when": "2025-09-15..2025-09-15",
+          "where": "入力行から開く、現在の設定と処理量の表示。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/slash_command.rs",
+              "date": "2025-09-15",
+              "shows": "/model は使用モデルと考える量を選ぶ操作。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.36.0",
+              "date": "2025-09-15",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "View chat usage with /status",
+          "where_en": "Current settings and usage display opened from the input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-09-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2025-09-15",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.36.0",
+            "date": "2025-09-15",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル名と考える量を組み合わせた選択行を端末内に並べる（https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/slash_command.rs）。",
+      "trend_en": "Terminal selection rows combine model names and reasoning effort. (https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/slash_command.rs)"
+    },
+    {
+      "id": "openai-codex-macos-2025-10",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：2025年10月の独立したmacOSアプリを確認できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-the-codex-app/",
+            "date": "2026-02-02",
+            "shows": "公式のmacOSアプリ公開日は2026年2月2日。2025年10月版の画面は unverified。"
+          }
+        ],
+        "steps_en": [
+          "unverified (a standalone macOS app in October 2025)."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "unverified",
+        "date_shown": null,
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-the-codex-app/",
+            "date": "2026-02-02",
+            "shows": "公式のmacOSアプリ公開日は2026年2月2日。2025年10月版の画面は unverified。"
+          }
+        ]
+      },
+      "trend": "このIDに対応する2025年10月のmacOS画面は unverified である（https://openai.com/index/introducing-the-codex-app/）。",
+      "trend_en": "unverified (the October 2025 macOS screen matching this ID). (https://openai.com/index/introducing-the-codex-app/)"
+    },
+    {
+      "id": "openai-codex-macos-2026-02",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話の入力欄にあるモデル名を押し、一覧を開く。",
+          "使うモデルを選ぶ。候補はログイン方法と契約によって変わる。"
+        ],
+        "options": [
+          "GPT-5.3-Codex"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://learn.chatgpt.com/docs/changelog",
+            "date": "2026-02-05",
+            "shows": "2026-02-05 の項目は、アプリの入力欄にあるモデル選択から GPT-5.3-Codex を選ぶと説明する。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name in the chat input to open the list.",
+          "Choose a model. Options depend on the sign-in method and plan."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "streaming-speed",
+          "text": "GPT-5.3-Codex は25%高速化",
+          "when": "2026-02-05..2026-02-05",
+          "where": "2月5日のモデル更新の説明。全処理の所要時間の保証や、常設の速度表示ではない。",
+          "sources": [
+            {
+              "url": "https://learn.chatgpt.com/docs/changelog",
+              "date": "2026-02-05",
+              "shows": "GPT-5.2-Codex との比較で25%高速という発表。"
+            }
+          ],
+          "text_en": "GPT-5.3-Codex is 25% faster",
+          "where_en": "February 5 model update announcement describing speed improvement."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "専用アプリ（実装方式は unverified）",
+        "date_shown": "2026-02-05",
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-the-codex-app/",
+            "date": "2026-02-02",
+            "shows": "macOS向けの専用アプリ。OSの細かな版と実装方式は unverified。"
+          }
+        ],
+        "app_shell_en": "Dedicated app (implementation unverified)"
+      },
+      "trend": "プロジェクトと作業の一覧を分け、会話と変更点の確認を一つの窓にまとめる（https://openai.com/index/introducing-the-codex-app/）。",
+      "trend_en": "Project and task lists are separated, while chat and change review share a window. (https://openai.com/index/introducing-the-codex-app/)"
+    },
+    {
+      "id": "openai-codex-cli-2026-02",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。",
+          "対応するモデルでは、考える量も選ぶ。"
+        ],
+        "options": [
+          "gpt-5.2-codex",
+          "gpt-5.1-codex-max",
+          "gpt-5.2",
+          "gpt-5.1-codex-mini"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-02-12",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.101.0",
+            "date": "2026-02-12",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/core/models.json",
+            "date": "2026-02-12",
+            "shows": "同梱の候補データで visibility が list の表示名だけを記録。配信される候補一覧や利用権で変わり得るため、実際の全候補と既定値は unverified。"
+          },
+          {
+            "url": "https://learn.chatgpt.com/docs/changelog",
+            "date": "2026-02-05",
+            "shows": "GPT-5.3-Codex のChatGPTログイン向け配信は別に告知済み。同梱データの hide を全アカウントで利用不可と解釈しない。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens.",
+          "Choose the reasoning effort for supported models."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/status で会話の使用量",
+          "when": "2026-02-12..2026-02-12",
+          "where": "入力行から開く設定と使用量の表示。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/slash_command.rs",
+              "date": "2026-02-12",
+              "shows": "/model は使用モデルと考える量を選ぶ操作。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.101.0",
+              "date": "2026-02-12",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "View chat usage with /status",
+          "where_en": "Settings and usage display opened from the input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-02-12",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-02-12",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.101.0",
+            "date": "2026-02-12",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行から設定や使用量を開き、会話の表示を広く保つ（https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/slash_command.rs）。",
+      "trend_en": "Settings and usage open from the terminal input, preserving room for chat. (https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/slash_command.rs)"
+    },
+    {
+      "id": "openai-codex-macos-2026-04",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話の入力欄にあるモデル名を押し、一覧を開く。",
+          "使うモデルを選ぶ。候補はログイン方法と契約によって変わる。"
+        ],
+        "options": [
+          "gpt-5.4",
+          "gpt-5.4-mini",
+          "gpt-5.3-codex",
+          "gpt-5.2",
+          "gpt-5.3-codex-spark"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://learn.chatgpt.com/docs/changelog",
+            "date": "2026-04-07",
+            "shows": "2026-04-07 の項目はChatGPTでログインした場合の候補と旧モデルの削除予定を列挙する。Pro限定のSparkを全プランの候補にしない。"
+          },
+          {
+            "url": "https://learn.chatgpt.com/docs/changelog",
+            "date": "2026-03-05",
+            "shows": "2026-03-05 の項目でもアプリのモデル選択の場所を入力欄と明記。"
+          }
+        ],
+        "steps_en": [
+          "Click the model name in the chat input to open the list.",
+          "Choose a model. Options depend on the sign-in method and plan."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "deprecation-notice",
+          "text": "旧モデルは4月14日に利用終了",
+          "when": "2026-04-09..2026-04-09",
+          "where": "4月7日の更新履歴。ChatGPTでログインした利用者の対象モデルに限り、選択一覧からは4月7日に削除。常設バナーは未確認。",
+          "sources": [
+            {
+              "url": "https://learn.chatgpt.com/docs/changelog",
+              "date": "2026-04-07",
+              "shows": "2026-04-07 の項目はChatGPTでログインした場合の候補と旧モデルの削除予定を列挙する。Pro限定のSparkを全プランの候補にしない。"
+            }
+          ],
+          "text_en": "Older models end April 14",
+          "where_en": "April 7 release notes. Applies to affected models for ChatGPT sign-ins, removed from selection April 7. A permanent banner is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "専用アプリ（実装方式は unverified）",
+        "date_shown": "2026-04-09",
+        "sources": [
+          {
+            "url": "https://openai.com/index/introducing-the-codex-app/",
+            "date": "2026-02-02",
+            "shows": "macOS向けの専用アプリ。OSの細かな版と実装方式は unverified。"
+          }
+        ],
+        "app_shell_en": "Dedicated app (implementation unverified)"
+      },
+      "trend": "会話内と別枠で変更点を確認し、行内コメントを折りたためる（https://learn.chatgpt.com/docs/changelog）。",
+      "trend_en": "Changes can be reviewed inline and in a separate pane, with collapsible inline comments. (https://learn.chatgpt.com/docs/changelog)"
+    },
+    {
+      "id": "openai-codex-cli-2026-06",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。",
+          "対応するモデルでは、考える量も選ぶ。"
+        ],
+        "options": [
+          "GPT-5.5",
+          "gpt-5.4",
+          "GPT-5.4-Mini",
+          "gpt-5.3-codex",
+          "gpt-5.2"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-06-15",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+            "date": "2026-06-15",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/models-manager/models.json",
+            "date": "2026-06-15",
+            "shows": "同梱の候補データで visibility が list の表示名だけを記録。配信される候補一覧や利用権で変わり得るため、実際の全候補と既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens.",
+          "Choose the reasoning effort for supported models."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "/usage で日別・週別の使用量",
+          "when": "2026-06-15..2026-06-15",
+          "where": "端末から開くアカウント使用量の画面。",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+              "date": "2026-06-15",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+              "date": "2026-06-15",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "View daily and weekly usage with /usage",
+          "where_en": "Account usage screen opened from the terminal."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-06-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-06-15",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+            "date": "2026-06-15",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行から設定や使用量を開き、会話の表示を広く保つ（https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/slash_command.rs）。",
+      "trend_en": "Settings and usage open from the terminal input, preserving room for chat. (https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/slash_command.rs)"
+    },
+    {
+      "id": "openai-codex-cli-2026-09",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。",
+          "対応するモデルでは、考える量も選ぶ。"
+        ],
+        "options": [
+          "GPT-5.6-Sol",
+          "GPT-5.6-Terra",
+          "GPT-5.6-Luna",
+          "GPT-5.5",
+          "GPT-5.2"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-08-26",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+            "date": "2026-08-26",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/models-manager/models.json",
+            "date": "2026-08-26",
+            "shows": "同梱の候補データで visibility が list の表示名だけを記録。配信される候補一覧や利用権で変わり得るため、実際の全候補と既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens.",
+          "Choose the reasoning effort for supported models."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/copy で一部分もコピー",
+          "when": "2026-08-26..2026-08-26",
+          "where": "返答全体・コード欄・引用を選ぶ端末内の一覧。",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+              "date": "2026-08-26",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+              "date": "2026-08-26",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "Copy a selection with /copy",
+          "where_en": "Terminal list for copying a full reply, code block or quotation."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-08-26",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-08-26",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+            "date": "2026-08-26",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行から設定や使用量を開き、会話の表示を広く保つ（https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/slash_command.rs）。",
+      "trend_en": "Settings and usage open from the terminal input, preserving room for chat. (https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/slash_command.rs)"
+    },
+    {
+      "id": "openai-codex-cli-2026-11",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。",
+          "対応するモデルでは、考える量も選ぶ。"
+        ],
+        "options": [
+          "GPT-6-Astra",
+          "GPT-6-Sol",
+          "GPT-6-Luna",
+          "GPT-5.6-Sol",
+          "GPT-5.6-Terra",
+          "GPT-5.6-Luna",
+          "GPT-5.5"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-09-29",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.159.0",
+            "date": "2026-09-29",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/models-manager/models.json",
+            "date": "2026-09-29",
+            "shows": "同梱の候補データで visibility が list の表示名だけを記録。配信される候補一覧や利用権で変わり得るため、実際の全候補と既定値は unverified。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens.",
+          "Choose the reasoning effort for supported models."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "what's-new",
+          "text": "短い起動案内と操作のヒント",
+          "when": "2026-09-29..2026-09-29",
+          "where": "新しい会話の歓迎画面と、応答中・応答後に条件付きで表示する短い案内。",
+          "sources": [
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.159.0",
+              "date": "2026-09-29",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            },
+            {
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.159.0",
+              "date": "2026-09-29",
+              "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+            }
+          ],
+          "text_en": "Short startup guide and command hints",
+          "where_en": "New-chat welcome screen and brief conditional guidance during or after replies."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-09-29",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/slash_command.rs",
+            "date": "2026-09-29",
+            "shows": "/model は使用モデルと考える量を選ぶ操作。"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.159.0",
+            "date": "2026-09-29",
+            "shows": "固定した版の日時と更新内容。IDの月より仕様の from と固定版を優先。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "短い起動案内と会話の区切りを整え、必要な操作だけを案内する（https://github.com/openai/codex/releases/tag/rust-v0.159.0）。",
+      "trend_en": "Brief startup guidance and conversation separators show relevant actions. (https://github.com/openai/codex/releases/tag/rust-v0.159.0)"
+    }
+  ]
+}

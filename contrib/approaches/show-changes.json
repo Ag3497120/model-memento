@@ -1,0 +1,19 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "show-changes",
+  "name": "直す前と後を並べて、OK なら反映",
+  "plain": "あなたの文章やプログラムを、勝手に書き換えません。直す前と後を並べて見せ、あなたが選んだときだけ反映します。",
+  "good_for": ["code", "talk"],
+  "seen_in": ["Aider", "Cline (formerly Claude Dev)", "Cursor", "Continue", "GitHub Copilot (VS Code)", "Windsurf"],
+  "placeholder": "直してほしい文章かプログラムを貼り、最後の行に「どう直すか」を書いてください",
+  "steps": [
+    {
+      "id": "change",
+      "label": "直す案",
+      "show": "diff",
+      "system": "You propose an edit. The user's message contains a text or code and, at the end, how to change it. Reply ONLY with JSON: {\"before\": \"<the exact original text>\", \"after\": \"<the full edited text>\", \"why\": \"<one plain sentence in the language of the request>\"}. Keep everything that does not need to change exactly as it was.",
+      "prompt": "{{input}}",
+      "json": true
+    }
+  ]
+}

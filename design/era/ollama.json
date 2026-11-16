@@ -1,0 +1,422 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "ollama",
+  "versions": [
+    {
+      "id": "ollama-2023-07",
+      "model_switch": {
+        "where": "other",
+        "label": "ollama run <model>",
+        "steps": [
+          "端末でollama runの後ろにモデル名を指定する。モデル名はフラグではなく引数。",
+          "別のモデルにするには/byeで会話を終え、別のモデル名で起動し直す。"
+        ],
+        "options": [
+          "llama2-uncensored"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go",
+            "date": "2023-07-20",
+            "shows": "runコマンドのモデル名、>>>入力、/help・/bye・/exit、任意の--verboseによる応答時間の表示を確認する。端末アプリ名やOSの版は指定しない。"
+          },
+          {
+            "url": "https://ollama.com/blog/run-llama2-uncensored-locally",
+            "date": "2023-08-01",
+            "shows": "公式の当時の実行例はollama run llama2-uncensored。固定の候補一覧や既定モデルを示す資料ではない。"
+          }
+        ],
+        "steps_en": [
+          "In the terminal, pass the model name as the argument after ollama run.",
+          "To change models, end the chat with /bye and restart with another model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/help で操作を確認",
+          "when": "2023-08-01..2023-08-01",
+          "where": ">>>の対話入力で/helpを実行すると表示される案内。原文の長いヘルプは転載しない。",
+          "sources": [
+            {
+              "url": "https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go",
+              "date": "2023-07-20",
+              "shows": "runコマンドのモデル名、>>>入力、/help・/bye・/exit、任意の--verboseによる応答時間の表示を確認する。端末アプリ名やOSの版は指定しない。"
+            }
+          ],
+          "text_en": "Check commands with /help",
+          "where_en": "Guidance displayed after /help at the >>> prompt, summarized briefly."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2023-08-01",
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go",
+            "date": "2023-07-20",
+            "shows": "runコマンドのモデル名、>>>入力、/help・/bye・/exit、任意の--verboseによる応答時間の表示を確認する。端末アプリ名やOSの版は指定しない。"
+          },
+          {
+            "url": "https://ollama.com/blog/run-llama2-uncensored-locally",
+            "date": "2023-08-01",
+            "shows": "公式の当時の実行例はollama run llama2-uncensored。固定の候補一覧や既定モデルを示す資料ではない。"
+          }
+        ]
+      },
+      "trend": "端末の入力記号と文字だけで会話する作りが中心になる（出典：https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go）。",
+      "unverified": [
+        "optionsは8月1日の公式実行例1件で、選択メニューの全候補ではない",
+        "既定モデル、端末アプリ名、OSの版はunverified"
+      ],
+      "trend_en": "Chat centers on a terminal prompt and text. (https://github.com/ollama/ollama/blob/e7a393de5405e7c12e4ca59493cb4c6037fe3b57/cmd/cmd.go)",
+      "unverified_en": [
+        "options records one official August 1 run example.",
+        "unverified (default model, terminal app name and OS version)."
+      ]
+    },
+    {
+      "id": "ollama-2024-02",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/load <model>",
+        "steps": [
+          "対話中の入力行に/loadとモデル名を入力する。",
+          "端末から始める場合はollama runにモデル名を指定する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/69f392c9b7ea7c5cc3d46c29774e37fdef51abd8/cmd/interactive.go",
+            "date": "2024-02-08",
+            "shows": "v0.1.24。入力行で/load <model>を受け付け、/? for helpと複数行入力の案内を表示する。日付はタグのコミット日時。"
+          }
+        ],
+        "steps_en": [
+          "Type /load followed by the model name in the chat input.",
+          "To start from the terminal, pass a model name to ollama run."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "/? で使い方を確認",
+          "when": "2024-02-08..2024-02-08",
+          "where": ">>>入力行の案内。原文はSend a message (/? for help)。",
+          "sources": [
+            {
+              "url": "https://github.com/ollama/ollama/blob/69f392c9b7ea7c5cc3d46c29774e37fdef51abd8/cmd/interactive.go",
+              "date": "2024-02-08",
+              "shows": "v0.1.24。入力行で/load <model>を受け付け、/? for helpと複数行入力の案内を表示する。日付はタグのコミット日時。"
+            }
+          ],
+          "text_en": "Check usage with /?",
+          "where_en": "Guidance at the >>> prompt, labeled Send a message (/? for help)."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "unverified",
+        "date_shown": "2024-02-08",
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/69f392c9b7ea7c5cc3d46c29774e37fdef51abd8/cmd/interactive.go",
+            "date": "2024-02-08",
+            "shows": "v0.1.24。入力行で/load <model>を受け付け、/? for helpと複数行入力の案内を表示する。日付はタグのコミット日時。"
+          }
+        ]
+      },
+      "trend": "入力行に短い案内を添え、会話中の命令でモデルを切り替える（出典：https://github.com/ollama/ollama/blob/69f392c9b7ea7c5cc3d46c29774e37fdef51abd8/cmd/interactive.go）。",
+      "unverified": [
+        "モデル候補の全一覧、固定の既定、端末アプリ名、OSの版はunverified"
+      ],
+      "trend_en": "Brief input guidance accompanies in-chat model-switching commands. (https://github.com/ollama/ollama/blob/69f392c9b7ea7c5cc3d46c29774e37fdef51abd8/cmd/interactive.go)",
+      "unverified_en": [
+        "unverified (the full model list, fixed default, terminal app name and OS version)."
+      ]
+    },
+    {
+      "id": "ollama-2024-09-macos",
+      "model_switch": {
+        "where": "none",
+        "label": "unverified",
+        "steps": [
+          "この版の対象はmacOSの常駐メニューで、モデルを選ぶ項目はない。",
+          "端末のモデル切替と、常駐メニューの更新操作を別の画面として扱う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/e9e9bdb8d904f009e8b1e54af9f77624d481cfb2/macapp/src/index.ts",
+            "date": "2024-09-24",
+            "shows": "v0.3.12。macOS常駐メニューに終了操作と、更新がある場合のみRestart to updateを出す。モデル選択器はこのメニューにはない。"
+          }
+        ],
+        "steps_en": [
+          "This version covers the macOS menu bar app, which has no model selection item.",
+          "Treat terminal model switching and menu bar updates as separate screens."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "更新して再起動",
+          "when": "2024-09-24..2024-09-24",
+          "where": "更新が見つかった場合だけ常駐メニューに出るRestart to update。常時表示ではない。",
+          "sources": [
+            {
+              "url": "https://github.com/ollama/ollama/blob/e9e9bdb8d904f009e8b1e54af9f77624d481cfb2/macapp/src/index.ts",
+              "date": "2024-09-24",
+              "shows": "v0.3.12。macOS常駐メニューに終了操作と、更新がある場合のみRestart to updateを出す。モデル選択器はこのメニューにはない。"
+            }
+          ],
+          "text_en": "Update and restart",
+          "where_en": "Restart to update in the menu bar menu, shown only when an update is found."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "メニューバーの常駐メニュー",
+        "date_shown": "2024-09-24",
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/e9e9bdb8d904f009e8b1e54af9f77624d481cfb2/macapp/src/index.ts",
+            "date": "2024-09-24",
+            "shows": "v0.3.12。macOS常駐メニューに終了操作と、更新がある場合のみRestart to updateを出す。モデル選択器はこのメニューにはない。"
+          }
+        ],
+        "app_shell_en": "Menu bar app menu"
+      },
+      "trend": "会話の操作から独立した、小さな常駐メニューが使われる（出典：https://github.com/ollama/ollama/blob/e9e9bdb8d904f009e8b1e54af9f77624d481cfb2/macapp/src/index.ts）。",
+      "unverified": [
+        "macOSの版と通常時の更新有無はunverified",
+        "labelは操作が存在しないためunverifiedとし、架空のモデルボタンを置かない"
+      ],
+      "trend_en": "A small menu bar menu operates independently of chat controls. (https://github.com/ollama/ollama/blob/e9e9bdb8d904f009e8b1e54af9f77624d481cfb2/macapp/src/index.ts)",
+      "unverified_en": [
+        "unverified (macOS version and whether an update is normally available).",
+        "label is unverified because the action is absent. Keep the reconstruction without a model button."
+      ]
+    },
+    {
+      "id": "ollama-2025-07-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "公式の新しい会話画面でモデルを入手して会話できる。",
+          "公開日の本文では切替位置、短いラベル、候補一覧はunverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://ollama.com/blog/new-app",
+            "date": "2025-07-30",
+            "shows": "macOS/Windows向け会話画面、モデルの入手、ファイルのドラッグ追加、設定で会話に渡す量を増やす機能。本文だけではモデル選択器の位置と短いラベルはunverified。"
+          }
+        ],
+        "steps_en": [
+          "The new official chat screen supports downloading models and chatting.",
+          "unverified (the switch location, short label and option list in the release-day article)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "文書をドラッグして追加",
+          "when": "2025-07-30..2025-07-30",
+          "where": "新しい会話画面でテキストやPDFを落とせる。これは機能の短い言い換えで、告知バナーの実在を意味しない。",
+          "sources": [
+            {
+              "url": "https://ollama.com/blog/new-app",
+              "date": "2025-07-30",
+              "shows": "macOS/Windows向け会話画面、モデルの入手、ファイルのドラッグ追加、設定で会話に渡す量を増やす機能。本文だけではモデル選択器の位置と短いラベルはunverified。"
+            }
+          ],
+          "text_en": "Drag documents to attach",
+          "where_en": "Text and PDF drag-and-drop in the new chat screen. Brief feature description."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "unverified",
+        "date_shown": "2025-07-30",
+        "sources": [
+          {
+            "url": "https://ollama.com/blog/new-app",
+            "date": "2025-07-30",
+            "shows": "macOS/Windows向け会話画面、モデルの入手、ファイルのドラッグ追加、設定で会話に渡す量を増やす機能。本文だけではモデル選択器の位置と短いラベルはunverified。"
+          }
+        ]
+      },
+      "trend": "端末の会話に加え、文書を直接落とせる会話画面が登場する（出典：https://ollama.com/blog/new-app）。",
+      "unverified": [
+        "モデル切替の位置・ラベル・候補・既定はunverified",
+        "macOSの版とウィンドウ枠の種類はunverified"
+      ],
+      "trend_en": "A chat screen with document drag-and-drop joins terminal chat. (https://ollama.com/blog/new-app)",
+      "unverified_en": [
+        "unverified (model switch location, label, options and default).",
+        "unverified (macOS version and window frame type)."
+      ]
+    },
+    {
+      "id": "ollama-2026-03-macos",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデルを選ぶ（Select model）",
+        "steps": [
+          "入力部のモデル名ボタンを開く。",
+          "上に開く候補欄のFind model...で絞り込み、モデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ChatForm.tsx",
+            "date": "2026-02-12",
+            "shows": "v0.16.0。ModelPickerを入力部に置く。対応モデルに応じて思考の操作を表示し、Enterで送信する。3月の記録はこのビルドを参照する。"
+          },
+          {
+            "url": "https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ModelPicker.tsx",
+            "date": "2026-02-12",
+            "shows": "v0.16.0。Select model、未選択時Select a model、Find model...という検索欄。候補は取得したモデル情報で変わる。"
+          }
+        ],
+        "steps_en": [
+          "Open the model name button in the input area.",
+          "Filter using Find model... in the list above and choose a model."
+        ],
+        "label_en": "Select model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデルを探す",
+          "when": "2026-03-01..2026-03-01",
+          "where": "入力部のモデル名から上に開く候補欄の先頭の検索欄。原文はFind model...。",
+          "sources": [
+            {
+              "url": "https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ModelPicker.tsx",
+              "date": "2026-02-12",
+              "shows": "v0.16.0。Select model、未選択時Select a model、Find model...という検索欄。候補は取得したモデル情報で変わる。"
+            }
+          ],
+          "text_en": "Find models",
+          "where_en": "Search field at the top of the list opened above the input's model name, labeled Find model...."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "unverified",
+        "date_shown": "2026-03-01",
+        "sources": [
+          {
+            "url": "https://ollama.com/blog/new-app",
+            "date": "2025-07-30",
+            "shows": "macOS/Windows向け会話画面、モデルの入手、ファイルのドラッグ追加、設定で会話に渡す量を増やす機能。本文だけではモデル選択器の位置と短いラベルはunverified。"
+          },
+          {
+            "url": "https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ChatForm.tsx",
+            "date": "2026-02-12",
+            "shows": "v0.16.0。ModelPickerを入力部に置く。対応モデルに応じて思考の操作を表示し、Enterで送信する。3月の記録はこのビルドを参照する。"
+          }
+        ]
+      },
+      "trend": "モデルと考え方の操作を文章入力の近くに集める（出典：https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ChatForm.tsx）。",
+      "unverified": [
+        "候補の全一覧・固定の既定、macOSの版、枠の種類はunverified",
+        "参照ビルドはv0.16.0で、3月全体の配布状況はunverified"
+      ],
+      "trend_en": "Model and reasoning controls gather near text input. (https://github.com/ollama/ollama/blob/f8dc7c9f54a753d2c6d3410936e73486f9bf463d/app/ui/app/src/components/ChatForm.tsx)",
+      "unverified_en": [
+        "unverified (the full list, fixed default, macOS version and frame type).",
+        "The reference build is v0.16.0. Distribution throughout March is unverified."
+      ]
+    },
+    {
+      "id": "ollama-2026-11-macos",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "モデルを選ぶ（Select model）",
+        "steps": [
+          "Chatの会話画面を開く。",
+          "入力部のモデル名から候補欄を開き、Find model...で探して選ぶ。",
+          "Appsの接続先選択と、Chatの返答モデル選択を混ぜない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/ChatForm.tsx",
+            "date": "2026-11-14",
+            "shows": "11月14日の固定ソース。モデル選択器は入力部にある。会話の入力部の機能とアプリ接続の画面を区別する。"
+          },
+          {
+            "url": "https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/ModelPicker.tsx",
+            "date": "2026-11-14",
+            "shows": "Select model、Select a model、Find model...。候補は動的な取得結果で、固定の一覧はない。"
+          },
+          {
+            "url": "https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/AppSidebar.tsx",
+            "date": "2026-11-14",
+            "shows": "Apps・Chat・Settingsの入口を分ける。mainのURLではなく取得時のコミットに固定した。"
+          }
+        ],
+        "steps_en": [
+          "Open the Chat screen.",
+          "Open the list from the model name in the input, then search with Find model... and select.",
+          "Keep Apps provider selection separate from Chat reply model selection."
+        ],
+        "label_en": "Select model"
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "アプリ接続・会話・設定",
+          "when": "2026-11-14..2026-11-14",
+          "where": "左の機能切替にあるApps・Chat・Settings。製品名を図案やロゴにしない。",
+          "sources": [
+            {
+              "url": "https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/AppSidebar.tsx",
+              "date": "2026-11-14",
+              "shows": "Apps・Chat・Settingsの入口を分ける。mainのURLではなく取得時のコミットに固定した。"
+            }
+          ],
+          "text_en": "App connections, chat and settings",
+          "where_en": "Apps, Chat and Settings in the left navigation. Product names use plain text."
+        }
+      ],
+      "desktop": {
+        "os": "macOS",
+        "app_shell": "unverified",
+        "date_shown": "2026-11-14",
+        "sources": [
+          {
+            "url": "https://ollama.com/blog/new-app",
+            "date": "2025-07-30",
+            "shows": "macOS/Windows向け会話画面、モデルの入手、ファイルのドラッグ追加、設定で会話に渡す量を増やす機能。本文だけではモデル選択器の位置と短いラベルはunverified。"
+          },
+          {
+            "url": "https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/AppSidebar.tsx",
+            "date": "2026-11-14",
+            "shows": "Apps・Chat・Settingsの入口を分ける。mainのURLではなく取得時のコミットに固定した。"
+          }
+        ]
+      },
+      "trend": "アプリとの接続と会話を別の入口に分ける（出典：https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/AppSidebar.tsx）。",
+      "unverified": [
+        "候補の全一覧・固定の既定、macOSの版、枠の種類はunverified"
+      ],
+      "trend_en": "App connections and chat have separate entry points. (https://github.com/ollama/ollama/blob/a5864fcb33969705de3c0ebfedf4b2a16c970bcc/app/ui/app/src/components/AppSidebar.tsx)",
+      "unverified_en": [
+        "unverified (the full list, fixed default, macOS version and frame type)."
+      ]
+    }
+  ]
+}

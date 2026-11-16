@@ -1,0 +1,291 @@
+{
+  "uber--adr": {
+    "topics": [
+      "agent-security",
+      "ai-agents",
+      "ai-security",
+      "benchmark",
+      "claude",
+      "claude-code",
+      "codex",
+      "cursor",
+      "llm-security",
+      "mcp",
+      "model-context-protocol",
+      "prompt-injection",
+      "threat-detection"
+    ],
+    "homepage": "https://arxiv.org/abs/2605.17380",
+    "archived": false,
+    "commit": "6b33dffecd719708c435f772c9e93f1210944e31",
+    "classification_basis": "Topics, README introduction, language (Python) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "sensor-v1.0.0",
+        "2026-07-31"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "Discovery/adr_discovery/redact/rules.py",
+        "Discovery/adr_discovery/tests_unit/test_import_rules.py",
+        "Detection/context_providers/source_codes/mcp_servers_1/memory_manager/memory_manager.py",
+        "Detection/context_providers/source_codes/mcp_servers_1/context-analyzer/context_analyzer.py",
+        "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/web.py",
+        "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "Sensor/adr_sensor/cli.py",
+        "Discovery/adr_discovery/cli.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Sender of the message",
+      "Recipient of the message (either user or a channel)",
+      "Body of the message",
+      "Name of the channel",
+      "The unique identifier of the file",
+      "The name of the file",
+      "The content of the file",
+      "The email of the owner of the file",
+      "ADR Sensor - Security observability for AI coding agents",
+      "Show version and exit",
+      "Source to ingest logs from (default: all)",
+      "--version",
+      "--resource",
+      "--source",
+      "--output-format",
+      "Inventory the AI tools on this endpoint.",
+      "scan a fixture tree instead of the live machine",
+      "print the whole snapshot as JSON",
+      "--root",
+      "--json"
+    ],
+    "string_evidence": [
+      {
+        "text": "Sender of the message",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "line": 10,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Recipient of the message (either user or a channel)",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "line": 11,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Body of the message",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "line": 12,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Name of the channel",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "line": 15,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The unique identifier of the file",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "line": 18,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The name of the file",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "line": 19,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The content of the file",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "line": 20,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The email of the owner of the file",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "line": 21,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "ADR Sensor - Security observability for AI coding agents",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 53,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Show version and exit",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 71,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Source to ingest logs from (default: all)",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 81,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--version",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 71,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--resource",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 72,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--source",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 77,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--output-format",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+        "line": 83,
+        "kind": "cli-help"
+      },
+      {
+        "text": "Inventory the AI tools on this endpoint.",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+        "line": 38,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "scan a fixture tree instead of the live machine",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+        "line": 39,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "print the whole snapshot as JSON",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+        "line": 40,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--root",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+        "line": 39,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--json",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+        "line": 40,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/uber/ADR",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/README.md",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/pyproject.toml",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/pyproject.toml",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/pyproject.toml",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/redact/rules.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/tests_unit/test_import_rules.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/context_providers/source_codes/mcp_servers_1/memory_manager/memory_manager.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/context_providers/source_codes/mcp_servers_1/context-analyzer/context_analyzer.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/web.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py",
+      "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py",
+      "https://api.github.com/repos/uber/ADR/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/README.md"
+      },
+      {
+        "path": "Sensor/pyproject.toml",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/pyproject.toml"
+      },
+      {
+        "path": "Detection/pyproject.toml",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/pyproject.toml"
+      },
+      {
+        "path": "Discovery/pyproject.toml",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/pyproject.toml"
+      },
+      {
+        "path": "Discovery/adr_discovery/redact/rules.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/redact/rules.py"
+      },
+      {
+        "path": "Discovery/adr_discovery/tests_unit/test_import_rules.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/tests_unit/test_import_rules.py"
+      },
+      {
+        "path": "Detection/context_providers/source_codes/mcp_servers_1/memory_manager/memory_manager.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/context_providers/source_codes/mcp_servers_1/memory_manager/memory_manager.py"
+      },
+      {
+        "path": "Detection/context_providers/source_codes/mcp_servers_1/context-analyzer/context_analyzer.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/context_providers/source_codes/mcp_servers_1/context-analyzer/context_analyzer.py"
+      },
+      {
+        "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/web.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/web.py"
+      },
+      {
+        "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py"
+      },
+      {
+        "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py"
+      },
+      {
+        "path": "Sensor/adr_sensor/cli.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Sensor/adr_sensor/cli.py"
+      },
+      {
+        "path": "Discovery/adr_discovery/cli.py",
+        "source": "https://github.com/uber/ADR/blob/6b33dffecd719708c435f772c9e93f1210944e31/Discovery/adr_discovery/cli.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:mcp stars:1000..2999 fork:false",
+      "topic:model-context-protocol stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=20, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → dashboard / observability-eval",
+    "repository_id": 1215280164,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

@@ -1,0 +1,99 @@
+.combine-dialog {
+  width: min(1180px, calc(100vw - 24px));
+  max-width: none;
+  height: min(920px, calc(100dvh - 24px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: #1e293b;
+  color-scheme: light;
+  font: 14px/1.65 system-ui, -apple-system, "Hiragino Sans", Meiryo, sans-serif;
+  box-shadow: 0 24px 80px #0f172a40;
+}
+.combine-dialog[open] { display: flex; flex-direction: column; }
+.combine-dialog::backdrop { background: #0f172a99; }
+.combine-dialog [hidden] { display: none; }
+.combine-dialog h1, .combine-dialog h2, .combine-dialog h3, .combine-dialog p { margin: 0 0 12px; }
+.combine-dialog h1 { font-size: 24px; line-height: 1.3; }
+.combine-dialog h2 { display: flex; align-items: center; gap: 10px; font-size: 19px; }
+.combine-dialog h3 { font-size: 16px; }
+.combine-dialog a { color: #155e75; }
+.combine-dialog button, .combine-dialog input, .combine-dialog select, .combine-dialog textarea { font: inherit; color: inherit; }
+.combine-dialog button { padding: 9px 13px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; }
+.combine-dialog button:hover { background: #e2e8f0; }
+.combine-dialog button:disabled { opacity: .5; cursor: default; }
+.combine-dialog :is(button, select, textarea, a, summary, h2, h3):focus-visible { outline: 3px solid #0e7490; outline-offset: 3px; }
+.combine-dialog button.combine-primary { background: #155e75; border-color: #155e75; color: #fff; }
+.combine-dialog button.combine-primary:hover { background: #164e63; }
+.combine-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px 16px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.combine-header h1, .combine-header p { margin: 0; }
+.combine-header .combine-eyebrow { color: #475569; font-size: 12px; margin-bottom: 3px; }
+.combine-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 20px 24px 32px; }
+.combine-intro { max-width: 72ch; }
+.combine-mode { padding: 12px 16px; border-radius: 8px; background: #e0f2fe; color: #164e63; }
+.combine-step { margin-top: 22px; padding: 22px; border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; scroll-margin-top: 12px; }
+.combine-step-number { display: inline-grid; place-items: center; flex: 0 0 29px; height: 29px; border-radius: 50%; background: #e2e8f0; font-size: 14px; }
+.combine-dialog fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.combine-dialog textarea { display: block; width: 100%; min-height: 100px; margin: 8px 0 12px; padding: 12px; border: 1px solid #94a3b8; border-radius: 8px; background: #fff; resize: vertical; }
+.combine-examples { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.combine-examples button { text-align: left; font-size: 13px; }
+.combine-recommendations { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.combine-recipe { display: flex; flex-direction: column; min-width: 0; padding: 16px; border: 1px solid #cbd5e1; border-radius: 10px; }
+.combine-card-number { color: #475569; margin-bottom: 6px; font-size: 12px; }
+.combine-recipe > .combine-primary { margin-top: auto; width: 100%; }
+.combine-recipe > details { margin-bottom: 14px; }
+.combine-diagram { margin: 4px 0 14px; }
+.combine-actor { padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc; min-width: 0; overflow-wrap: anywhere; }
+.combine-role { display: block; color: #475569; font-size: 12px; margin-bottom: 3px; }
+.combine-dialog .combine-tool-name { font: inherit; margin-bottom: 3px; }
+.combine-dialog .combine-model { font-size: 12px; color: #475569; margin-bottom: 8px; }
+.combine-actor-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.combine-actor-actions button, .combine-actor-actions a { font-size: 12px; }
+.combine-actor-actions button { padding: 6px 8px; }
+.combine-arrow { text-align: center; color: #64748b; font-size: 22px; }
+.combine-helpers { display: grid; gap: 8px; }
+.combine-empty-helper { padding: 10px; text-align: center; border: 1px dashed #cbd5e1; border-radius: 8px; color: #475569; }
+.combine-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.combine-chip { padding: 3px 9px; border-radius: 20px; border: 1px solid #cbd5e1; background: #f1f5f9; font-size: 12px; }
+.combine-dialog .combine-muted, .combine-dialog .combine-footnote { color: #475569; font-size: 12px; }
+.combine-dialog .combine-footnote { margin-top: 20px; }
+.combine-caution { padding: 12px; background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; color: #78350f; }
+.combine-dialog ul.combine-caution { padding-left: 30px; }
+.combine-sources { margin-top: 8px; margin-bottom: 12px; font-size: 12px; }
+.combine-sources ul { margin: 8px 0 0; padding-left: 16px; }
+.combine-sources li { margin-bottom: 6px; }
+.combine-dialog summary { cursor: pointer; overflow-wrap: anywhere; }
+.combine-editor { display: grid; gap: 14px; }
+.combine-editor legend { padding: 0 0 12px; }
+.combine-editor-actor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 14px; border: 1px solid #e2e8f0; border-radius: 8px; }
+.combine-editor-actor h3 { grid-column: 1 / -1; margin: 0; }
+.combine-field { display: grid; gap: 5px; min-width: 0; }
+.combine-dialog select { width: 100%; min-width: 0; padding: 9px; border: 1px solid #94a3b8; border-radius: 6px; background: #fff; }
+.combine-tool-row { display: flex; align-items: end; gap: 8px; }
+.combine-tool-row > :first-child { flex: 1; }
+.combine-step > .combine-primary { margin-top: 18px; }
+.combine-step > .combine-caution { margin-top: 14px; }
+.combine-adjusted-diagram { margin-top: 16px; }
+.combine-adjusted-diagram .combine-diagram { max-width: 420px; margin-top: 12px; }
+.combine-plan pre { max-height: 280px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px; background: #f1f5f9; border-radius: 6px; font-size: 12px; }
+.combine-dialog code { overflow-wrap: anywhere; font-size: 12px; }
+.combine-plan li { margin-bottom: 10px; }
+.combine-status { margin-top: 14px; padding: 12px; background: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 8px; }
+.combine-error { margin-top: 14px; padding: 12px; background: #fff1f2; border: 1px solid #fda4af; border-radius: 8px; color: #881337; }
+.combine-confirm { padding: 18px; border: 2px solid #155e75; border-radius: 10px; background: #f0f9ff; }
+.combine-confirm button { margin: 4px 8px 0 0; }
+.combine-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 900px) {
+  .combine-recommendations { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .combine-dialog { width: calc(100vw - 12px); height: calc(100dvh - 12px); max-height: calc(100dvh - 12px); border-radius: 10px; }
+  .combine-header { padding: 14px; }
+  .combine-content { padding: 14px; }
+  .combine-step { padding: 14px; }
+  .combine-editor-actor { grid-template-columns: 1fr; }
+  .combine-examples { display: grid; }
+}

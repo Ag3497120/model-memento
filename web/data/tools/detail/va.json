@@ -1,0 +1,3932 @@
+{
+  "vanna-ai--vanna": {
+    "topics": [
+      "agent",
+      "ai",
+      "data-visualization",
+      "database",
+      "llm",
+      "rag",
+      "sql",
+      "text-to-sql"
+    ],
+    "homepage": "https://vanna.ai/docs/",
+    "archived": true,
+    "commit": "365d0617c1a4567ffee1b19b40c27feb4206bfcf",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.1",
+        "2023-05-13"
+      ],
+      [
+        "v0.1.1",
+        "2024-02-21"
+      ],
+      [
+        "v0.2.0",
+        "2024-03-02"
+      ],
+      [
+        "v0.2.1",
+        "2024-03-05"
+      ],
+      [
+        "v0.3.0",
+        "2024-03-27"
+      ],
+      [
+        "v0.3.1",
+        "2024-03-29"
+      ],
+      [
+        "v0.3.2",
+        "2024-04-01"
+      ],
+      [
+        "v0.3.3",
+        "2024-04-05"
+      ],
+      [
+        "v0.3.4",
+        "2024-04-12"
+      ],
+      [
+        "v0.4.0",
+        "2024-04-16"
+      ],
+      [
+        "v0.4.1",
+        "2024-04-17"
+      ],
+      [
+        "v0.4.2",
+        "2024-04-21"
+      ],
+      [
+        "v0.4.3",
+        "2024-04-22"
+      ],
+      [
+        "v0.5.0",
+        "2024-04-30"
+      ],
+      [
+        "v0.5.1",
+        "2024-05-02"
+      ],
+      [
+        "v0.5.2",
+        "2024-05-06"
+      ],
+      [
+        "v0.5.3",
+        "2024-05-06"
+      ],
+      [
+        "v0.5.4",
+        "2024-05-07"
+      ],
+      [
+        "v0.5.5",
+        "2024-05-20"
+      ],
+      [
+        "v0.6.0",
+        "2024-06-07"
+      ],
+      [
+        "v0.6.1",
+        "2024-06-18"
+      ],
+      [
+        "v0.6.2",
+        "2024-06-18"
+      ],
+      [
+        "v0.6.3",
+        "2024-07-12"
+      ],
+      [
+        "v0.6.4",
+        "2024-07-26"
+      ],
+      [
+        "v0.6.5",
+        "2024-08-06"
+      ],
+      [
+        "v0.6.6",
+        "2024-08-09"
+      ],
+      [
+        "v0.7.0",
+        "2024-08-21"
+      ],
+      [
+        "v0.7.1",
+        "2024-08-23"
+      ],
+      [
+        "v0.7.2",
+        "2024-09-05"
+      ],
+      [
+        "v0.7.3",
+        "2024-09-16"
+      ],
+      [
+        "v0.7.4",
+        "2024-10-23"
+      ],
+      [
+        "v0.7.5",
+        "2024-10-25"
+      ],
+      [
+        "v0.7.6",
+        "2025-02-08"
+      ],
+      [
+        "v0.7.7",
+        "2025-04-07"
+      ],
+      [
+        "v0.7.8",
+        "2025-04-08"
+      ],
+      [
+        "v0.7.9",
+        "2025-04-10"
+      ],
+      [
+        "v2.0.0rc1",
+        "2025-11-15"
+      ],
+      [
+        "v2.0.0",
+        "2025-11-19"
+      ],
+      [
+        "v2.0.1",
+        "2025-11-20"
+      ],
+      [
+        "v2.0.2",
+        "2026-02-02"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/vanna/servers/flask/app.py",
+        "src/vanna/servers/fastapi/app.py",
+        "src/vanna/tools/agent_memory.py",
+        "src/vanna/core/user/request_context.py",
+        "src/vanna/integrations/faiss/agent_memory.py",
+        "src/vanna/integrations/marqo/agent_memory.py",
+        "src/vanna/core/system_prompt/default.py",
+        "src/vanna/tools/python.py",
+        "src/vanna/tools/run_sql.py",
+        "frontends/webcomponent/src/index.ts",
+        "frontends/webcomponent/.storybook/main.ts",
+        "frontends/webcomponent/src/components/vanna-chat.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "system_prompt_path": "src/vanna/core/system_prompt/default.py",
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "system_prompt",
+        "path": "src/vanna/core/system_prompt/default.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/system_prompt/default.py"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Vanna Agents API",
+      "API server for Vanna Agents framework",
+      "The original question that was asked",
+      "The name of the tool that was used successfully",
+      "The arguments that were passed to the tool",
+      "success",
+      "Request cookies",
+      "Request headers",
+      "Remote IP address",
+      "Query parameters",
+      "Additional framework-specific metadata",
+      "Python file to execute (relative to the workspace root)",
+      "Optional arguments to pass to the Python script",
+      "Optional timeout for the command in seconds",
+      "Query Results",
+      "No rows returned",
+      "Vanna AI Chat",
+      "Ask me anything...",
+      "idle",
+      "Unknown error",
+      "completed",
+      "Minimize",
+      "Restore",
+      "Maximize",
+      "Send message",
+      "Start a conversation"
+    ],
+    "string_evidence": [
+      {
+        "text": "Vanna Agents API",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/fastapi/app.py",
+        "line": 39,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "API server for Vanna Agents framework",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/fastapi/app.py",
+        "line": 40,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The original question that was asked",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py",
+        "line": 28,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The name of the tool that was used successfully",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py",
+        "line": 30,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "The arguments that were passed to the tool",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py",
+        "line": 33,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "success",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py",
+        "line": 97,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Request cookies",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+        "line": 29,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Request headers",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+        "line": 31,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Remote IP address",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+        "line": 33,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Query parameters",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+        "line": 36,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Additional framework-specific metadata",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+        "line": 40,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Python file to execute (relative to the workspace root)",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py",
+        "line": 29,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Optional arguments to pass to the Python script",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py",
+        "line": 33,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Optional timeout for the command in seconds",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py",
+        "line": 38,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Query Results",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/run_sql.py",
+        "line": 73,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "No rows returned",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/run_sql.py",
+        "line": 74,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Vanna AI Chat",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 710,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Ask me anything...",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 711,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "idle",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 724,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Unknown error",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 962,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "completed",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1166,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Minimize",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1342,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Restore",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1352,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Maximize",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1361,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Send message",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1408,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Start a conversation",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+        "line": 1380,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vanna-ai/vanna",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/README.md",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/pyproject.toml",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/package.json",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/flask/app.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/fastapi/app.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/integrations/faiss/agent_memory.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/integrations/marqo/agent_memory.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/system_prompt/default.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/run_sql.py",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/index.ts",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/.storybook/main.ts",
+      "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts",
+      "https://api.github.com/repos/vanna-ai/vanna/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/pyproject.toml"
+      },
+      {
+        "path": "frontends/webcomponent/package.json",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/package.json"
+      },
+      {
+        "path": "src/vanna/servers/flask/app.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/flask/app.py"
+      },
+      {
+        "path": "src/vanna/servers/fastapi/app.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/servers/fastapi/app.py"
+      },
+      {
+        "path": "src/vanna/tools/agent_memory.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/agent_memory.py"
+      },
+      {
+        "path": "src/vanna/core/user/request_context.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/user/request_context.py"
+      },
+      {
+        "path": "src/vanna/integrations/faiss/agent_memory.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/integrations/faiss/agent_memory.py"
+      },
+      {
+        "path": "src/vanna/integrations/marqo/agent_memory.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/integrations/marqo/agent_memory.py"
+      },
+      {
+        "path": "src/vanna/core/system_prompt/default.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/system_prompt/default.py"
+      },
+      {
+        "path": "src/vanna/tools/python.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py"
+      },
+      {
+        "path": "src/vanna/tools/run_sql.py",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/run_sql.py"
+      },
+      {
+        "path": "frontends/webcomponent/src/index.ts",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/index.ts"
+      },
+      {
+        "path": "frontends/webcomponent/.storybook/main.ts",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/.storybook/main.ts"
+      },
+      {
+        "path": "frontends/webcomponent/src/components/vanna-chat.ts",
+        "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/frontends/webcomponent/src/components/vanna-chat.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=26, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / rag",
+    "repository_id": 640317662,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.769Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "system_prompt_path",
+          "path": "src/vanna/core/system_prompt/default.py",
+          "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/core/system_prompt/default.py",
+          "verified": true
+        },
+        {
+          "field": "tools_def_path",
+          "path": "src/vanna/tools/python.py",
+          "source": "https://github.com/vanna-ai/vanna/blob/365d0617c1a4567ffee1b19b40c27feb4206bfcf/src/vanna/tools/python.py",
+          "verified": false
+        }
+      ]
+    }
+  },
+  "valuecell-ai--valuecell": {
+    "topics": [
+      "agentic-ai",
+      "agents",
+      "ai",
+      "assitant",
+      "crypto",
+      "equity",
+      "finance",
+      "investment",
+      "mcp",
+      "python",
+      "react",
+      "stock-market"
+    ],
+    "homepage": "https://valuecell.ai",
+    "archived": false,
+    "commit": "9793e9c0563fbf56fc096757d8bb80e209ac7aab",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2025-10-24"
+      ],
+      [
+        "v0.1.1",
+        "2025-10-31"
+      ],
+      [
+        "v0.1.2",
+        "2025-11-21"
+      ],
+      [
+        "v0.1.3",
+        "2025-11-25"
+      ],
+      [
+        "v0.1.4",
+        "2025-11-25"
+      ],
+      [
+        "v0.1.5",
+        "2025-11-26"
+      ],
+      [
+        "v0.1.6",
+        "2025-11-27"
+      ],
+      [
+        "v0.1.7",
+        "2025-11-29"
+      ],
+      [
+        "v0.1.8",
+        "2025-11-30"
+      ],
+      [
+        "v0.1.9",
+        "2025-11-30"
+      ],
+      [
+        "v0.1.10",
+        "2025-12-01"
+      ],
+      [
+        "v0.1.11",
+        "2025-12-01"
+      ],
+      [
+        "v0.1.12",
+        "2025-12-02"
+      ],
+      [
+        "v0.1.13",
+        "2025-12-03"
+      ],
+      [
+        "v0.1.14",
+        "2025-12-04"
+      ],
+      [
+        "v0.1.15",
+        "2025-12-04"
+      ],
+      [
+        "v0.1.16",
+        "2025-12-05"
+      ],
+      [
+        "v0.1.17",
+        "2025-12-08"
+      ],
+      [
+        "v0.1.18",
+        "2025-12-09"
+      ],
+      [
+        "v0.1.19",
+        "2025-12-15"
+      ],
+      [
+        "v0.1.20",
+        "2026-01-10"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "frontend/src/root.tsx",
+        "frontend/src-tauri/src/main.rs",
+        "frontend/src/app/home/home.tsx",
+        "frontend/src/app/agent/chat.tsx",
+        "python/valuecell/server/main.py",
+        "python/valuecell/server/api/app.py",
+        "frontend/src/components/ui/input.tsx",
+        "python/valuecell/agents/utils/context.py",
+        "python/valuecell/server/db/models/strategy_instruction.py",
+        "python/valuecell/agents/common/trading/portfolio/in_memory.py",
+        "python/valuecell/agents/common/trading/decision/prompt_based/system_prompt.py",
+        "frontend/src/i18n/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "oklch(1 0 0)",
+      "text": "oklch(0.145 0 0)",
+      "accent": "oklch(0.205 0 0)",
+      "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--background",
+        "value": "oklch(1 0 0)",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css",
+        "line": 49
+      },
+      {
+        "token": "text",
+        "key": "--foreground",
+        "value": "oklch(0.145 0 0)",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css",
+        "line": 50
+      },
+      {
+        "token": "accent",
+        "key": "--primary",
+        "value": "oklch(0.205 0 0)",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css",
+        "line": 55
+      }
+    ],
+    "strings": [
+      "General",
+      "Manage your preferences and application settings.",
+      "Account",
+      "Sign in to get started with Valuecell AI features.",
+      "Sign Out",
+      "Sign In",
+      "Language and Region",
+      "Yes",
+      "No",
+      "OK",
+      "Cancel",
+      "Confirm",
+      "Save",
+      "Delete",
+      "Edit",
+      "Add",
+      "Remove",
+      "Search",
+      "Filter",
+      "Sort",
+      "Loading...",
+      "Error",
+      "Success",
+      "Warning",
+      "Information",
+      "Close",
+      "Back",
+      "Next",
+      "Previous",
+      "Submit"
+    ],
+    "string_evidence": [
+      {
+        "text": "General",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Manage your preferences and application settings.",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Account",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sign in to get started with Valuecell AI features.",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sign Out",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sign In",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Language and Region",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Yes",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "No",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "OK",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Cancel",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Confirm",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Save",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Delete",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Edit",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Add",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Remove",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Search",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Filter",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 14,
+        "kind": "i18n"
+      },
+      {
+        "text": "Sort",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 15,
+        "kind": "i18n"
+      },
+      {
+        "text": "Loading...",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 16,
+        "kind": "i18n"
+      },
+      {
+        "text": "Error",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 17,
+        "kind": "i18n"
+      },
+      {
+        "text": "Success",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 18,
+        "kind": "i18n"
+      },
+      {
+        "text": "Warning",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Information",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 20,
+        "kind": "i18n"
+      },
+      {
+        "text": "Close",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 21,
+        "kind": "i18n"
+      },
+      {
+        "text": "Back",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 22,
+        "kind": "i18n"
+      },
+      {
+        "text": "Next",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 23,
+        "kind": "i18n"
+      },
+      {
+        "text": "Previous",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 24,
+        "kind": "i18n"
+      },
+      {
+        "text": "Submit",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+        "line": 25,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ValueCell-ai/valuecell",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/README.md",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/package.json",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/pyproject.toml",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src-tauri/Cargo.toml",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/root.tsx",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src-tauri/src/main.rs",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/app/home/home.tsx",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/app/agent/chat.tsx",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/main.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/api/app.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/components/ui/input.tsx",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/utils/context.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/db/models/strategy_instruction.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/common/trading/portfolio/in_memory.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/common/trading/decision/prompt_based/system_prompt.py",
+      "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/index.ts",
+      "https://api.github.com/repos/ValueCell-ai/valuecell/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/README.md"
+      },
+      {
+        "path": "frontend/package.json",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/package.json"
+      },
+      {
+        "path": "python/pyproject.toml",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/pyproject.toml"
+      },
+      {
+        "path": "frontend/src-tauri/Cargo.toml",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src-tauri/Cargo.toml"
+      },
+      {
+        "path": "frontend/src/global.css",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/global.css"
+      },
+      {
+        "path": "frontend/src/i18n/locales/en.json",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/locales/en.json"
+      },
+      {
+        "path": "python/configs/locales/en-US.json",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/configs/locales/en-US.json"
+      },
+      {
+        "path": "frontend/src/root.tsx",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/root.tsx"
+      },
+      {
+        "path": "frontend/src-tauri/src/main.rs",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src-tauri/src/main.rs"
+      },
+      {
+        "path": "frontend/src/app/home/home.tsx",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/app/home/home.tsx"
+      },
+      {
+        "path": "frontend/src/app/agent/chat.tsx",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/app/agent/chat.tsx"
+      },
+      {
+        "path": "python/valuecell/server/main.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/main.py"
+      },
+      {
+        "path": "python/valuecell/server/api/app.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/api/app.py"
+      },
+      {
+        "path": "frontend/src/components/ui/input.tsx",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/components/ui/input.tsx"
+      },
+      {
+        "path": "python/valuecell/agents/utils/context.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/utils/context.py"
+      },
+      {
+        "path": "python/valuecell/server/db/models/strategy_instruction.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/server/db/models/strategy_instruction.py"
+      },
+      {
+        "path": "python/valuecell/agents/common/trading/portfolio/in_memory.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/common/trading/portfolio/in_memory.py"
+      },
+      {
+        "path": "python/valuecell/agents/common/trading/decision/prompt_based/system_prompt.py",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/python/valuecell/agents/common/trading/decision/prompt_based/system_prompt.py"
+      },
+      {
+        "path": "frontend/src/i18n/index.ts",
+        "source": "https://github.com/ValueCell-ai/valuecell/blob/9793e9c0563fbf56fc096757d8bb80e209ac7aab/frontend/src/i18n/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:16.246Z",
+      "source_count": 4,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "repository_id": 1048320382,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vastsa--filecodebox": {
+    "topics": [
+      "anonymous",
+      "fastapi",
+      "filecodebox",
+      "mcp",
+      "python",
+      "tool",
+      "vue"
+    ],
+    "homepage": "https://fcb-docs.aiuo.net/",
+    "archived": false,
+    "commit": "8d3e4ad904c289c1852f08c3424ae370642c58c3",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "V1.1",
+        "2022-12-09"
+      ],
+      [
+        "V1.2",
+        "2022-12-10"
+      ],
+      [
+        "V1.4",
+        "2022-12-10"
+      ],
+      [
+        "V1.4.1",
+        "2022-12-11"
+      ],
+      [
+        "V1.4.3",
+        "2022-12-11"
+      ],
+      [
+        "V1.4.5",
+        "2022-12-11"
+      ],
+      [
+        "Main",
+        "2022-12-11"
+      ],
+      [
+        "V1.5.1",
+        "2022-12-13"
+      ],
+      [
+        "V1.5.2",
+        "2022-12-13"
+      ],
+      [
+        "V1.5.3",
+        "2022-12-13"
+      ],
+      [
+        "V1.5.4",
+        "2022-12-13"
+      ],
+      [
+        "V1.5.6",
+        "2022-12-16"
+      ],
+      [
+        "V1.5.7",
+        "2022-12-17"
+      ],
+      [
+        "latest",
+        "2022-12-19"
+      ],
+      [
+        "V1.5.9.1",
+        "2022-12-29"
+      ],
+      [
+        "V1.5.9.2",
+        "2023-01-10"
+      ],
+      [
+        "V1.6",
+        "2023-01-19"
+      ],
+      [
+        "V1.7Beta",
+        "2023-03-01"
+      ],
+      [
+        "V2.0",
+        "2023-10-25"
+      ],
+      [
+        "V2.1",
+        "2024-06-15"
+      ],
+      [
+        "2.2",
+        "2025-02-23"
+      ],
+      [
+        "V2.3",
+        "2025-12-30"
+      ],
+      [
+        "v2.5.1",
+        "2026-07-21"
+      ],
+      [
+        "v2.5.0",
+        "2026-07-21"
+      ],
+      [
+        "v2.5.2",
+        "2026-07-23"
+      ],
+      [
+        "v2.5.3",
+        "2026-07-23"
+      ],
+      [
+        "v2.5.4",
+        "2026-07-23"
+      ],
+      [
+        "v2.5.5",
+        "2026-08-29"
+      ],
+      [
+        "v2.5.6",
+        "2026-09-01"
+      ],
+      [
+        "v2.6.0",
+        "2026-09-14"
+      ],
+      [
+        "v2.6.1",
+        "2026-09-14"
+      ],
+      [
+        "v2.7.0",
+        "2026-09-16"
+      ],
+      [
+        "v2.7.1",
+        "2026-09-19"
+      ],
+      [
+        "v2.8.0",
+        "2026-10-10"
+      ],
+      [
+        "v2.8.1",
+        "2026-10-10"
+      ],
+      [
+        "v2.8.2",
+        "2026-10-10"
+      ],
+      [
+        "v2.8.3",
+        "2026-10-10"
+      ],
+      [
+        "v2.8.4",
+        "2026-10-25"
+      ],
+      [
+        "v2.8.5",
+        "2026-10-27"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "docker run -d --restart unless-stopped \\",
+    "install_evidence": [
+      {
+        "command": "docker run -d --restart unless-stopped \\",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/readme.md",
+        "line": 27
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "docs/.vitepress/theme/index.ts",
+        "main.py",
+        "core/settings.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "LGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/lgpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Github"
+    ],
+    "string_evidence": [
+      {
+        "text": "Github",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/core/settings.py",
+        "line": 25,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vastsa/FileCodeBox",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/readme.md",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/pyproject.toml",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/requirements.txt",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/docs/package.json",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/docs/.vitepress/theme/index.ts",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/main.py",
+      "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/core/settings.py",
+      "https://api.github.com/repos/vastsa/FileCodeBox/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "readme.md",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/readme.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/pyproject.toml"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/requirements.txt"
+      },
+      {
+        "path": "docs/package.json",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/docs/package.json"
+      },
+      {
+        "path": "docs/.vitepress/theme/index.ts",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/docs/.vitepress/theme/index.ts"
+      },
+      {
+        "path": "main.py",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/main.py"
+      },
+      {
+        "path": "core/settings.py",
+        "source": "https://github.com/vastsa/FileCodeBox/blob/8d3e4ad904c289c1852f08c3424ae370642c58c3/core/settings.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=1, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "repository_id": 576247474,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vastsa--pi-desktop": {
+    "topics": [
+      "ai-agent",
+      "coding-agent",
+      "desktop-app",
+      "electron",
+      "global",
+      "i18n",
+      "local-first",
+      "mcp",
+      "pi",
+      "pi-agent",
+      "pi-desktop",
+      "plugins",
+      "react",
+      "rust",
+      "typescript"
+    ],
+    "homepage": "https://www.aiuo.net",
+    "archived": false,
+    "commit": "525ec4986f7c6190708c3b6e5a85cf7935022803",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.4.1",
+        "2026-08-01"
+      ],
+      [
+        "v0.15.3",
+        "2026-09-21"
+      ],
+      [
+        "v0.15.4-beta.2",
+        "2026-09-22"
+      ],
+      [
+        "v0.15.4",
+        "2026-09-23"
+      ],
+      [
+        "v0.15.6",
+        "2026-09-23"
+      ],
+      [
+        "v0.15.7-beta.1",
+        "2026-09-24"
+      ],
+      [
+        "v0.15.7",
+        "2026-09-24"
+      ],
+      [
+        "v0.15.8",
+        "2026-09-25"
+      ],
+      [
+        "v0.15.9",
+        "2026-09-27"
+      ],
+      [
+        "v0.15.10",
+        "2026-09-28"
+      ],
+      [
+        "v0.16.0-beta.1",
+        "2026-09-30"
+      ],
+      [
+        "v0.16.0",
+        "2026-10-01"
+      ],
+      [
+        "v0.16.1",
+        "2026-10-04"
+      ],
+      [
+        "v0.17.0",
+        "2026-10-07"
+      ],
+      [
+        "v0.18.0-beta.2",
+        "2026-10-09"
+      ],
+      [
+        "v0.18.0-beta.3",
+        "2026-10-09"
+      ],
+      [
+        "v0.18.0-beta.4",
+        "2026-10-10"
+      ],
+      [
+        "v0.18.0-beta.5",
+        "2026-10-10"
+      ],
+      [
+        "v0.18.0",
+        "2026-10-10"
+      ],
+      [
+        "host-test-remote-mvp-20261010-f6cc3237",
+        "2026-10-10"
+      ],
+      [
+        "v0.18.0-beta.6",
+        "2026-10-11"
+      ],
+      [
+        "v0.18.0-beta.7",
+        "2026-10-12"
+      ],
+      [
+        "v0.19.0",
+        "2026-10-13"
+      ],
+      [
+        "v0.19.1",
+        "2026-10-13"
+      ],
+      [
+        "v0.20.1",
+        "2026-10-13"
+      ],
+      [
+        "v0.21.0-beta.1",
+        "2026-10-16"
+      ],
+      [
+        "v0.21.0-beta.3",
+        "2026-10-16"
+      ],
+      [
+        "v0.21.0-beta.4",
+        "2026-10-18"
+      ],
+      [
+        "v0.21.0-beta.6",
+        "2026-10-22"
+      ],
+      [
+        "v0.21.0-beta.7",
+        "2026-10-23"
+      ],
+      [
+        "v0.21.0-beta.8",
+        "2026-10-23"
+      ],
+      [
+        "v0.21.0",
+        "2026-10-24"
+      ],
+      [
+        "v0.22.0-beta.1",
+        "2026-10-26"
+      ],
+      [
+        "v0.22.0-beta.2",
+        "2026-10-28"
+      ],
+      [
+        "v0.22.0-beta.3",
+        "2026-11-01"
+      ],
+      [
+        "v0.22.0-beta.5",
+        "2026-11-04"
+      ],
+      [
+        "v0.22.0-beta.6",
+        "2026-11-06"
+      ],
+      [
+        "v0.22.0-beta.7",
+        "2026-11-08"
+      ],
+      [
+        "v0.22.0",
+        "2026-11-08"
+      ],
+      [
+        "v0.23.0-beta.1",
+        "2026-11-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "packages/shared/src/theme.ts",
+        "scripts/e2e/theme-surfaces.js",
+        "packages/plugin-sdk/src/theme-css.ts",
+        "docs/.vitepress/theme/index.ts",
+        "packages/i18n/src/locales/en/index.ts",
+        "apps/desktop/src/App.tsx",
+        "apps/desktop/src/main.tsx",
+        "crates/host-core/src/main.rs",
+        "apps/desktop/src/components/ui.tsx",
+        "apps/desktop/src/components/Sidebar.tsx",
+        "apps/desktop/src/components/Composer.tsx",
+        "crates/host-core/src/transcripts/layout.rs",
+        "scripts/e2e-project-path-case.py",
+        "apps/desktop/src/lib/context-menu.ts",
+        "apps/desktop/src/lib/project-name.ts",
+        "apps/desktop/src/lib/context-usage.ts",
+        "crates/host-core/src/tools/mod.rs",
+        "crates/host-core/src/tools/shell.rs",
+        "crates/host-core/src/tools/grep_rg.rs",
+        "apps/pi-host/src/cli.ts",
+        "apps/pi-host/src/index.ts",
+        "crates/host-core/src/review.rs",
+        "scripts/e2e/transcript-render.tsx",
+        "apps/desktop/src/components/LargeTextPreview.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "LGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/lgpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme_evidence": [],
+    "strings": [
+      "--expect-bug",
+      "host"
+    ],
+    "string_evidence": [
+      {
+        "text": "--expect-bug",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e-project-path-case.py",
+        "line": 59,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "host",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e-project-path-case.py",
+        "line": 58,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vastsa/PI-Desktop",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/README.md",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/Cargo.toml",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/package.json",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/package.json",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/package.json",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/shared/src/theme.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e/theme-surfaces.js",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/tokens.css",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/plugin-sdk/src/theme-css.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/docs/.vitepress/theme/index.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/globals.css",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/base.css",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/i18n/src/locales/en/index.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/App.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/main.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/main.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/ui.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/Sidebar.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/Composer.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/transcripts/layout.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e-project-path-case.py",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/context-menu.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/project-name.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/context-usage.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/mod.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/shell.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/grep_rg.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/src/cli.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/src/index.ts",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/review.rs",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e/transcript-render.tsx",
+      "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/LargeTextPreview.tsx",
+      "https://api.github.com/repos/vastsa/PI-Desktop/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/Cargo.toml"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/package.json"
+      },
+      {
+        "path": "apps/desktop/package.json",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/package.json"
+      },
+      {
+        "path": "apps/pi-host/package.json",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/package.json"
+      },
+      {
+        "path": "packages/shared/src/theme.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/shared/src/theme.ts"
+      },
+      {
+        "path": "scripts/e2e/theme-surfaces.js",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e/theme-surfaces.js"
+      },
+      {
+        "path": "apps/desktop/src/styles/tokens.css",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/tokens.css"
+      },
+      {
+        "path": "packages/plugin-sdk/src/theme-css.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/plugin-sdk/src/theme-css.ts"
+      },
+      {
+        "path": "docs/.vitepress/theme/index.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/docs/.vitepress/theme/index.ts"
+      },
+      {
+        "path": "apps/desktop/src/styles/globals.css",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/globals.css"
+      },
+      {
+        "path": "apps/desktop/src/styles/base.css",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/styles/base.css"
+      },
+      {
+        "path": "packages/i18n/src/locales/en/index.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/packages/i18n/src/locales/en/index.ts"
+      },
+      {
+        "path": "apps/desktop/src/App.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/App.tsx"
+      },
+      {
+        "path": "apps/desktop/src/main.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/main.tsx"
+      },
+      {
+        "path": "crates/host-core/src/main.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/main.rs"
+      },
+      {
+        "path": "apps/desktop/src/components/ui.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/ui.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/Sidebar.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/Sidebar.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/Composer.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/Composer.tsx"
+      },
+      {
+        "path": "crates/host-core/src/transcripts/layout.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/transcripts/layout.rs"
+      },
+      {
+        "path": "scripts/e2e-project-path-case.py",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e-project-path-case.py"
+      },
+      {
+        "path": "apps/desktop/src/lib/context-menu.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/context-menu.ts"
+      },
+      {
+        "path": "apps/desktop/src/lib/project-name.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/project-name.ts"
+      },
+      {
+        "path": "apps/desktop/src/lib/context-usage.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/lib/context-usage.ts"
+      },
+      {
+        "path": "crates/host-core/src/tools/mod.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/mod.rs"
+      },
+      {
+        "path": "crates/host-core/src/tools/shell.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/shell.rs"
+      },
+      {
+        "path": "crates/host-core/src/tools/grep_rg.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/tools/grep_rg.rs"
+      },
+      {
+        "path": "apps/pi-host/src/cli.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/src/cli.ts"
+      },
+      {
+        "path": "apps/pi-host/src/index.ts",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/pi-host/src/index.ts"
+      },
+      {
+        "path": "crates/host-core/src/review.rs",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/crates/host-core/src/review.rs"
+      },
+      {
+        "path": "scripts/e2e/transcript-render.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/scripts/e2e/transcript-render.tsx"
+      },
+      {
+        "path": "apps/desktop/src/components/LargeTextPreview.tsx",
+        "source": "https://github.com/vastsa/PI-Desktop/blob/525ec4986f7c6190708c3b6e5a85cf7935022803/apps/desktop/src/components/LargeTextPreview.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agent stars:3000..9999 fork:false",
+      "topic:mcp stars:3000..9999 fork:false",
+      "topic:coding-agent stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Final material verification requires more evidence: layout=false, strings=2, color=false, unavailable=0.",
+    "screen_verification": {
+      "version": 2,
+      "at": "2026-11-15T06:30:51.653Z",
+      "source_count": 8,
+      "unavailable": [],
+      "eligible": false
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "repository_id": 617502359,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vas3k--taxhacker": {
+    "topics": [
+      "accounting",
+      "ai-analysis",
+      "currency-exchange",
+      "expenses",
+      "gemini",
+      "invoices",
+      "llm",
+      "ocr-recognition",
+      "ollama",
+      "openai",
+      "self-hosted",
+      "taxes"
+    ],
+    "homepage": "https://taxhacker.app",
+    "archived": false,
+    "commit": "fdd787091ae642bf0c149701daec2114117eff5f",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.4",
+        "2025-03-17"
+      ],
+      [
+        "v0.1.5",
+        "2025-03-17"
+      ],
+      [
+        "v0.2.0",
+        "2025-03-22"
+      ],
+      [
+        "v0.2.1",
+        "2025-03-23"
+      ],
+      [
+        "v0.3.0",
+        "2025-03-28"
+      ],
+      [
+        "v0.5.0",
+        "2025-04-04"
+      ],
+      [
+        "v0.5.1",
+        "2025-04-10"
+      ],
+      [
+        "v0.5.5",
+        "2025-05-08"
+      ],
+      [
+        "v0.6.0",
+        "2025-07-23"
+      ],
+      [
+        "v0.6.1",
+        "2026-03-12"
+      ],
+      [
+        "v0.7.0",
+        "2026-04-03"
+      ],
+      [
+        "v0.8.0",
+        "2026-07-06"
+      ],
+      [
+        "v0.8.1",
+        "2026-07-07"
+      ],
+      [
+        "v0.8.2",
+        "2026-07-07"
+      ],
+      [
+        "v0.8.5",
+        "2026-07-20"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npm install / npx prisma generate && npx prisma migrate dev",
+    "install_evidence": [
+      {
+        "command": "npm install",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/README.md",
+        "line": 193
+      },
+      {
+        "command": "npx prisma generate && npx prisma migrate dev",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/README.md",
+        "line": 203
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "components/sidebar/theme-toggle.tsx",
+        "app/layout.tsx",
+        "app/(app)/layout.tsx",
+        "app/(auth)/layout.tsx",
+        "components/ui/input.tsx",
+        "app/(app)/apps/layout.tsx",
+        "components/ui/sidebar.tsx",
+        "app/(app)/settings/layout.tsx",
+        "app/page.tsx",
+        "models/projects.ts",
+        "components/files/preview.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Light Mode",
+      "Dark Mode",
+      "Toggle Sidebar",
+      "Settings",
+      "Customize your settings here",
+      "Type:",
+      "Uploaded:",
+      "Size:"
+    ],
+    "string_evidence": [
+      {
+        "text": "Light Mode",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/sidebar/theme-toggle.tsx",
+        "line": 32,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Dark Mode",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/sidebar/theme-toggle.tsx",
+        "line": 37,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Toggle Sidebar",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/ui/sidebar.tsx",
+        "line": 257,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Settings",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/settings/layout.tsx",
+        "line": 4,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Customize your settings here",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/settings/layout.tsx",
+        "line": 5,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Type:",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/files/preview.tsx",
+        "line": 41,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Uploaded:",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/files/preview.tsx",
+        "line": 44,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Size:",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/files/preview.tsx",
+        "line": 47,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vas3k/TaxHacker",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/README.md",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/package.json",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/sidebar/theme-toggle.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/globals.css",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/layout.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/layout.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(auth)/layout.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/ui/input.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/apps/layout.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/ui/sidebar.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/settings/layout.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/page.tsx",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/models/projects.ts",
+      "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/files/preview.tsx",
+      "https://api.github.com/repos/vas3k/TaxHacker/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/package.json"
+      },
+      {
+        "path": "components/sidebar/theme-toggle.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/sidebar/theme-toggle.tsx"
+      },
+      {
+        "path": "app/globals.css",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/globals.css"
+      },
+      {
+        "path": "app/layout.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/layout.tsx"
+      },
+      {
+        "path": "app/(app)/layout.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/layout.tsx"
+      },
+      {
+        "path": "app/(auth)/layout.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(auth)/layout.tsx"
+      },
+      {
+        "path": "components/ui/input.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/ui/input.tsx"
+      },
+      {
+        "path": "app/(app)/apps/layout.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/apps/layout.tsx"
+      },
+      {
+        "path": "components/ui/sidebar.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/ui/sidebar.tsx"
+      },
+      {
+        "path": "app/(app)/settings/layout.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/(app)/settings/layout.tsx"
+      },
+      {
+        "path": "app/page.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/app/page.tsx"
+      },
+      {
+        "path": "models/projects.ts",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/models/projects.ts"
+      },
+      {
+        "path": "components/files/preview.tsx",
+        "source": "https://github.com/vas3k/TaxHacker/blob/fdd787091ae642bf0c149701daec2114117eff5f/components/files/preview.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ollama stars:3000..9999 fork:false",
+      "topic:openai stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=true, strings=8, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / other",
+    "repository_id": 946010740,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vapi-network--vapi-network": {
+    "topics": [
+      "agent-payments",
+      "ai-agents",
+      "base",
+      "mcp",
+      "usdc",
+      "x402"
+    ],
+    "homepage": "https://vapinetwork.ai",
+    "archived": false,
+    "commit": "1cafa80f0f94a3459f4c7a66d8617f2fa40becf1",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "npm i -g vapi-network / pnpm install --frozen-lockfile",
+    "install_evidence": [
+      {
+        "command": "npm i -g vapi-network",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/README.md",
+        "line": 28
+      },
+      {
+        "command": "pnpm install --frozen-lockfile",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/README.md",
+        "line": 430
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "apps/desktop/src/renderer/App.tsx",
+        "apps/desktop/src/renderer/main.tsx",
+        "apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "apps/desktop/src/renderer/screens/Settings.tsx",
+        "packages/mcp/src/actions/context.ts",
+        "packages/mcp/src/tools/auth.ts",
+        "packages/mcp/src/tools/call.ts",
+        "packages/mcp/src/tools/docs.ts",
+        "packages/cli/src/cli.ts",
+        "packages/cli/src/index.ts",
+        "packages/mcp/src/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "packages/mcp/src/tools/auth.ts",
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "packages/mcp/src/tools/auth.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/auth.ts"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "text": "#9a3d00",
+      "accent": "#2b2b2b",
+      "bg": "#ffffff",
+      "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "text",
+        "key": "--vapi-color-orange-text",
+        "value": "#9a3d00",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css",
+        "line": 24
+      },
+      {
+        "token": "accent",
+        "key": "--vapi-color-primary-hover",
+        "value": "#2b2b2b",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css",
+        "line": 39
+      },
+      {
+        "token": "bg",
+        "key": "--vapi-status-open-bg",
+        "value": "#ffffff",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css",
+        "line": 103
+      }
+    ],
+    "strings": [
+      "vAPI Desktop could not reach its signer. Quit and reopen the app.",
+      "Opening your agent wallets",
+      "Hide sidebar",
+      "vAPI Desktop",
+      "Agent wallets",
+      "Linked",
+      "Not linked",
+      "Lock vAPI Desktop",
+      "Settings",
+      "vAPI account",
+      "Recovery",
+      "Emergency Kit",
+      "Encrypted backup",
+      "This Mac",
+      "Appearance",
+      "Beta",
+      "Send feedback",
+      "Keep crash reports",
+      "About",
+      "Connect",
+      "Connected",
+      "Turn on",
+      "Lock now"
+    ],
+    "string_evidence": [
+      {
+        "text": "vAPI Desktop could not reach its signer. Quit and reopen the app.",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/App.tsx",
+        "line": 55,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Opening your agent wallets",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/App.tsx",
+        "line": 82,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Hide sidebar",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 56,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "vAPI Desktop",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 62,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Agent wallets",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 79,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Linked",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 92,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Not linked",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 93,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Lock vAPI Desktop",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "line": 285,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Settings",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 49,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "vAPI account",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 50,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Recovery",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 64,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Emergency Kit",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 66,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Encrypted backup",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 80,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "This Mac",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 105,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Appearance",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 114,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Beta",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 118,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Send feedback",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 120,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Keep crash reports",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 128,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "About",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 158,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Connect",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 56,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Connected",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 60,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Turn on",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 94,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Lock now",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+        "line": 110,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vAPI-Network/vapi-network",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/README.md",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/package.json",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/package.json",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/package.json",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/package.json",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/theme.css",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/base.css",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/App.tsx",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/main.tsx",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/actions/context.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/auth.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/call.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/docs.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/src/cli.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/src/index.ts",
+      "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/index.ts",
+      "https://api.github.com/repos/vAPI-Network/vapi-network/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/package.json"
+      },
+      {
+        "path": "apps/desktop/package.json",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/package.json"
+      },
+      {
+        "path": "packages/cli/package.json",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/package.json"
+      },
+      {
+        "path": "packages/mcp/package.json",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/package.json"
+      },
+      {
+        "path": "apps/desktop/src/renderer/design-tokens/theme.css",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/theme.css"
+      },
+      {
+        "path": "apps/desktop/src/renderer/design-tokens/tokens.css",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/tokens.css"
+      },
+      {
+        "path": "apps/desktop/src/renderer/design-tokens/base.css",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/design-tokens/base.css"
+      },
+      {
+        "path": "apps/desktop/src/renderer/App.tsx",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/App.tsx"
+      },
+      {
+        "path": "apps/desktop/src/renderer/main.tsx",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/main.tsx"
+      },
+      {
+        "path": "apps/desktop/src/renderer/ui/Sidebar.tsx",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/ui/Sidebar.tsx"
+      },
+      {
+        "path": "apps/desktop/src/renderer/screens/Settings.tsx",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/apps/desktop/src/renderer/screens/Settings.tsx"
+      },
+      {
+        "path": "packages/mcp/src/actions/context.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/actions/context.ts"
+      },
+      {
+        "path": "packages/mcp/src/tools/auth.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/auth.ts"
+      },
+      {
+        "path": "packages/mcp/src/tools/call.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/call.ts"
+      },
+      {
+        "path": "packages/mcp/src/tools/docs.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/docs.ts"
+      },
+      {
+        "path": "packages/cli/src/cli.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/src/cli.ts"
+      },
+      {
+        "path": "packages/cli/src/index.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/cli/src/index.ts"
+      },
+      {
+        "path": "packages/mcp/src/index.ts",
+        "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:3000..9999 fork:false",
+      "topic:ai-agents stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:17.590Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "repository_id": 1401744296,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.593Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "packages/mcp/src/tools/auth.ts",
+          "source": "https://github.com/vAPI-Network/vapi-network/blob/1cafa80f0f94a3459f4c7a66d8617f2fa40becf1/packages/mcp/src/tools/auth.ts",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "vasu-devs--justhireme": {
+    "topics": [
+      "agents",
+      "ai",
+      "hireme",
+      "hiring",
+      "job",
+      "jobs",
+      "mulytiagent",
+      "rag",
+      "scrape",
+      "semantic-search",
+      "vector-database"
+    ],
+    "homepage": "https://www.JustHireMe.ai",
+    "archived": false,
+    "commit": "accdcdb537ff7e59997857b98482ff42d5198bf4",
+    "classification_basis": "package dependencies include Electron / Tauri and README describes a chat application",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-05-06"
+      ],
+      [
+        "v1.0.11",
+        "2026-05-19"
+      ],
+      [
+        "v1.0.12",
+        "2026-05-19"
+      ],
+      [
+        "v1.0.15",
+        "2026-05-19"
+      ],
+      [
+        "v1.0.16",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.17",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.19",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.20",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.21",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.22",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.23",
+        "2026-05-20"
+      ],
+      [
+        "v1.0.24",
+        "2026-05-21"
+      ],
+      [
+        "v1.0.25",
+        "2026-05-21"
+      ],
+      [
+        "v1.0.26",
+        "2026-05-21"
+      ],
+      [
+        "v1.0.28",
+        "2026-05-22"
+      ],
+      [
+        "v1.0.27",
+        "2026-05-22"
+      ],
+      [
+        "v1.0.29",
+        "2026-05-22"
+      ],
+      [
+        "v1.0.30",
+        "2026-05-22"
+      ],
+      [
+        "v1.0.32",
+        "2026-05-23"
+      ],
+      [
+        "v1.0.33",
+        "2026-05-23"
+      ],
+      [
+        "v1.0.34",
+        "2026-05-23"
+      ],
+      [
+        "v1.0.35",
+        "2026-05-24"
+      ],
+      [
+        "v1.0.36",
+        "2026-05-24"
+      ],
+      [
+        "v1.0.37-rc2",
+        "2026-05-24"
+      ],
+      [
+        "v1.0.37",
+        "2026-05-25"
+      ],
+      [
+        "v1.0.38",
+        "2026-05-25"
+      ],
+      [
+        "v1.0.39",
+        "2026-05-27"
+      ],
+      [
+        "v1.0.40",
+        "2026-05-27"
+      ],
+      [
+        "v1.0.41",
+        "2026-05-27"
+      ],
+      [
+        "v1.0.42",
+        "2026-05-28"
+      ],
+      [
+        "v1.1.0",
+        "2026-06-14"
+      ],
+      [
+        "v1.1.1",
+        "2026-06-14"
+      ],
+      [
+        "v1.2.0",
+        "2026-06-22"
+      ],
+      [
+        "v1.3.0",
+        "2026-07-02"
+      ],
+      [
+        "v1.4.0",
+        "2026-07-02"
+      ],
+      [
+        "test-2026-07-19",
+        "2026-07-18"
+      ],
+      [
+        "v1.5.0",
+        "2026-08-26"
+      ],
+      [
+        "v1.6.1",
+        "2026-08-26"
+      ],
+      [
+        "v1.6.2",
+        "2026-08-27"
+      ],
+      [
+        "v1.7.0",
+        "2026-09-01"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/shared/lib/theme.ts",
+        "src/App.tsx",
+        "src/main.tsx",
+        "backend/main.py",
+        "backend/api/app.py",
+        "src-tauri/src/main.rs",
+        "backend/api/routers/settings.py",
+        "backend/data/sqlite/settings.py",
+        "src/shared/components/Sidebar.tsx",
+        "src/shared/components/HelpChat.tsx"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "accent": "#C96442",
+      "bg": "#211b13",
+      "text": "#fbf7ef",
+      "font_ui": "Inter, system-ui, -apple-system, sans-serif",
+      "font_mono": "JetBrains Mono, ui-monospace, monospace",
+      "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "accent",
+        "key": "--accent",
+        "value": "#C96442",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+        "line": 22
+      },
+      {
+        "token": "bg",
+        "key": "--btn-primary-bg",
+        "value": "#211b13",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+        "line": 100
+      },
+      {
+        "token": "text",
+        "key": "--btn-primary-fg",
+        "value": "#fbf7ef",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+        "line": 101
+      },
+      {
+        "token": "font_ui",
+        "value": "Inter, system-ui, -apple-system, sans-serif",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+        "line": 67
+      },
+      {
+        "token": "font_mono",
+        "value": "JetBrains Mono, ui-monospace, monospace",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+        "line": 68
+      }
+    ],
+    "strings": [
+      "Apply",
+      "Dashboard",
+      "Pipeline",
+      "Graph",
+      "Activity",
+      "Profile",
+      "Ingestion",
+      "Add Context",
+      "Lead drawer",
+      "Help chat",
+      "Prompts",
+      "Dismiss",
+      "Subsystem degraded",
+      "Starting JustHireMe",
+      "Preparing your local workspace",
+      "JustHireMe",
+      "JustHireMe startup error",
+      "The app shell could not finish loading",
+      "--port",
+      "--no-services",
+      "Customize Job",
+      "Knowledge",
+      "All",
+      "Hot",
+      "New",
+      "Rated",
+      "Ready",
+      "Applied",
+      "Discarded",
+      "Job Pipeline"
+    ],
+    "string_evidence": [
+      {
+        "text": "Apply",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 303,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Dashboard",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 304,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Pipeline",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 305,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Graph",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 306,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Activity",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 307,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Profile",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 308,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Ingestion",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 309,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Add Context",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 309,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Lead drawer",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 315,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Help chat",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 339,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Prompts",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 344,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Dismiss",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 383,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Subsystem degraded",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 405,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Starting JustHireMe",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 428,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Preparing your local workspace",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+        "line": 429,
+        "kind": "visible-text"
+      },
+      {
+        "text": "JustHireMe",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/main.tsx",
+        "line": 38,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "JustHireMe startup error",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/main.tsx",
+        "line": 21,
+        "kind": "visible-text"
+      },
+      {
+        "text": "The app shell could not finish loading",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/main.tsx",
+        "line": 22,
+        "kind": "visible-text"
+      },
+      {
+        "text": "--port",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/main.py",
+        "line": 85,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--no-services",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/main.py",
+        "line": 88,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "Customize Job",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 8,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Knowledge",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 9,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "All",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 16,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Hot",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 17,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "New",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 18,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Rated",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 19,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Ready",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 20,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Applied",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 21,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Discarded",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 22,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Job Pipeline",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+        "line": 105,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vasu-devs/JustHireMe",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/README.md",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/package.json",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src-tauri/Cargo.toml",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/pyproject.toml",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/website/package.json",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/lib/theme.ts",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/main.tsx",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/main.py",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/api/app.py",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src-tauri/src/main.rs",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/api/routers/settings.py",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/data/sqlite/settings.py",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx",
+      "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/HelpChat.tsx",
+      "https://api.github.com/repos/vasu-devs/JustHireMe/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/package.json"
+      },
+      {
+        "path": "src-tauri/Cargo.toml",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src-tauri/Cargo.toml"
+      },
+      {
+        "path": "backend/pyproject.toml",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/pyproject.toml"
+      },
+      {
+        "path": "website/package.json",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/website/package.json"
+      },
+      {
+        "path": "src/shared/lib/theme.ts",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/lib/theme.ts"
+      },
+      {
+        "path": "src/index.css",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/index.css"
+      },
+      {
+        "path": "src/App.tsx",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/App.tsx"
+      },
+      {
+        "path": "src/main.tsx",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/main.tsx"
+      },
+      {
+        "path": "backend/main.py",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/main.py"
+      },
+      {
+        "path": "backend/api/app.py",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/api/app.py"
+      },
+      {
+        "path": "src-tauri/src/main.rs",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src-tauri/src/main.rs"
+      },
+      {
+        "path": "backend/api/routers/settings.py",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/api/routers/settings.py"
+      },
+      {
+        "path": "backend/data/sqlite/settings.py",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/backend/data/sqlite/settings.py"
+      },
+      {
+        "path": "src/shared/components/Sidebar.tsx",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/Sidebar.tsx"
+      },
+      {
+        "path": "src/shared/components/HelpChat.tsx",
+        "source": "https://github.com/vasu-devs/JustHireMe/blob/accdcdb537ff7e59997857b98482ff42d5198bf4/src/shared/components/HelpChat.tsx"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:rag stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:34:20.615Z",
+      "source_count": 6,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "package dependencies include Electron / Tauri and README describes a chat application",
+    "repository_id": 1169144801,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vanloctech--youwee": {
+    "topics": [
+      "ai",
+      "ai-agents",
+      "facebook-downloader",
+      "ffmpeg",
+      "ffmpeg-agent",
+      "instagram-downloader",
+      "llm",
+      "open-source",
+      "react",
+      "rust",
+      "summary-video",
+      "tauri",
+      "tiktok",
+      "tiktok-downloader-app",
+      "youtube-dl",
+      "youwee",
+      "yt-dlp",
+      "yt-dlp-gui"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vanloctech/youwee",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1136772909,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vastxie--99ai": {
+    "topics": [
+      "99ai",
+      "agent",
+      "ai",
+      "all-in-chat",
+      "chatgpt",
+      "dalle",
+      "luma",
+      "luma-video",
+      "midjourney",
+      "suno",
+      "suno-music"
+    ],
+    "homepage": "https://agent.lightai.cloud",
+    "archived": false,
+    "commit": "59e213340d26e1840fa86c9b5f526477b60e85dd",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "web/src/utils/themeMode.ts",
+        "admin/src/store/modules/theme.ts",
+        "site/.vitepress/theme/index.ts",
+        "web/src/constants/accountRules.ts",
+        "server/src/types/require-context.d.ts",
+        "server/src/modules/chat/prompt-context.util.ts",
+        "server/src/modules/chat/types/context.types.ts",
+        "server/src/modules/agent/tools/tool-media.ts",
+        "server/src/modules/agent/primitives/system-prompt.ts",
+        "server/src/modules/agent/tools/tool-provider.interface.ts",
+        "web/src/main.ts",
+        "admin/src/main.ts",
+        "server/src/main.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "tools_def_path": "server/src/modules/agent/tools/tool-provider.interface.ts",
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "tools_definition",
+        "path": "server/src/modules/agent/tools/tool-provider.interface.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-provider.interface.ts"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "text": "#ffffff",
+      "bg": "rgb(0 0 0 / 0.45)",
+      "font_ui": "-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB",
+      "font_mono": "ui-monospace, SF Mono, SFMono-Regular, JetBrains Mono, Cascadia Code, Menlo, Monaco",
+      "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "text",
+        "key": "--text-on-accent",
+        "value": "#ffffff",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css",
+        "line": 24
+      },
+      {
+        "token": "bg",
+        "key": "--media-scrim-bg",
+        "value": "rgb(0 0 0 / 0.45)",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css",
+        "line": 27
+      },
+      {
+        "token": "font_ui",
+        "value": "-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css",
+        "line": 195
+      },
+      {
+        "token": "font_mono",
+        "value": "ui-monospace, SF Mono, SFMono-Regular, JetBrains Mono, Cascadia Code, Menlo, Monaco",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css",
+        "line": 199
+      }
+    ],
+    "strings": [
+      "Good afternoon",
+      "AI-generated content is for reference only and does not represent the platform's stance.",
+      "Good evening",
+      "Ask",
+      "Question for you",
+      "Attachment upload failed",
+      "WeChat QR Login",
+      "WeChat",
+      "Bind confirmation failed",
+      "Binding...",
+      "Failed to get WeChat Bot QR code",
+      "Scan the QR code with WeChat",
+      "WeChat Bot unbound",
+      "Account usage",
+      "Usage",
+      "Account overview",
+      "Available credits",
+      "View plans",
+      "Buy credits",
+      "Choose a plan",
+      "Membership",
+      "Credit packs",
+      "Below your current tier",
+      "Refresh",
+      "Fri",
+      "Mon",
+      "Edit Flowchart",
+      "Flowchart",
+      "Generating...",
+      "Edit mind map"
+    ],
+    "string_evidence": [
+      {
+        "text": "Good afternoon",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "AI-generated content is for reference only and does not represent the platform's stance.",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Good evening",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Ask",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Question for you",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Attachment upload failed",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "WeChat QR Login",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "WeChat",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Bind confirmation failed",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Binding...",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Failed to get WeChat Bot QR code",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Scan the QR code with WeChat",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "WeChat Bot unbound",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Account usage",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Usage",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Account overview",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Available credits",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "View plans",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Buy credits",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Choose a plan",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Membership",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Credit packs",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Below your current tier",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Refresh",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Fri",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 22,
+        "kind": "i18n"
+      },
+      {
+        "text": "Mon",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+        "line": 23,
+        "kind": "i18n"
+      },
+      {
+        "text": "Edit Flowchart",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Flowchart",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Generating...",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Edit mind map",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json",
+        "line": 6,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/vastxie/99AI",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/README.md",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/package.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/package.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/package.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/package.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/utils/themeMode.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/.vitepress/theme/style.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/store/modules/theme.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/.vitepress/theme/index.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/base.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/index.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/App.vue",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/App.vue",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/views/chat/chat.vue",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/views/userData/chat.vue",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/constants/accountRules.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/types/require-context.d.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/chat/prompt-context.util.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/chat/types/context.types.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-media.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/primitives/system-prompt.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-provider.interface.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/main.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/main.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/main.ts",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/prose.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/global.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/themes/light.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/themes/dark.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/z-index.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/components.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/recipes.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/sidebar.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/composer.css",
+      "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/message.css",
+      "https://api.github.com/repos/vastxie/99AI/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/package.json"
+      },
+      {
+        "path": "web/package.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/package.json"
+      },
+      {
+        "path": "site/package.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/package.json"
+      },
+      {
+        "path": "admin/package.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/package.json"
+      },
+      {
+        "path": "web/src/styles/tokens.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/tokens.css"
+      },
+      {
+        "path": "web/src/utils/themeMode.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/utils/themeMode.ts"
+      },
+      {
+        "path": "site/.vitepress/theme/style.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/.vitepress/theme/style.css"
+      },
+      {
+        "path": "admin/src/store/modules/theme.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/store/modules/theme.ts"
+      },
+      {
+        "path": "site/.vitepress/theme/index.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/site/.vitepress/theme/index.ts"
+      },
+      {
+        "path": "web/src/styles/base.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/base.css"
+      },
+      {
+        "path": "web/src/styles/index.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/index.css"
+      },
+      {
+        "path": "web/src/locales/en-US.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/locales/en-US.json"
+      },
+      {
+        "path": "web/src/packs/wechat/locales/en-US.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/wechat/locales/en-US.json"
+      },
+      {
+        "path": "web/src/packs/commerce/locales/en-US.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/commerce/locales/en-US.json"
+      },
+      {
+        "path": "web/src/packs/rich-media/locales/en-US.json",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/packs/rich-media/locales/en-US.json"
+      },
+      {
+        "path": "web/src/App.vue",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/App.vue"
+      },
+      {
+        "path": "admin/src/App.vue",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/App.vue"
+      },
+      {
+        "path": "web/src/views/chat/chat.vue",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/views/chat/chat.vue"
+      },
+      {
+        "path": "admin/src/views/userData/chat.vue",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/views/userData/chat.vue"
+      },
+      {
+        "path": "web/src/constants/accountRules.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/constants/accountRules.ts"
+      },
+      {
+        "path": "server/src/types/require-context.d.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/types/require-context.d.ts"
+      },
+      {
+        "path": "server/src/modules/chat/prompt-context.util.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/chat/prompt-context.util.ts"
+      },
+      {
+        "path": "server/src/modules/chat/types/context.types.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/chat/types/context.types.ts"
+      },
+      {
+        "path": "server/src/modules/agent/tools/tool-media.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-media.ts"
+      },
+      {
+        "path": "server/src/modules/agent/primitives/system-prompt.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/primitives/system-prompt.ts"
+      },
+      {
+        "path": "server/src/modules/agent/tools/tool-provider.interface.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-provider.interface.ts"
+      },
+      {
+        "path": "web/src/main.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/main.ts"
+      },
+      {
+        "path": "admin/src/main.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/admin/src/main.ts"
+      },
+      {
+        "path": "server/src/main.ts",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/main.ts"
+      },
+      {
+        "path": "web/src/styles/prose.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/prose.css"
+      },
+      {
+        "path": "web/src/styles/global.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/global.css"
+      },
+      {
+        "path": "web/src/styles/themes/light.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/themes/light.css"
+      },
+      {
+        "path": "web/src/styles/themes/dark.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/themes/dark.css"
+      },
+      {
+        "path": "web/src/styles/z-index.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/z-index.css"
+      },
+      {
+        "path": "web/src/styles/components.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/components.css"
+      },
+      {
+        "path": "web/src/styles/recipes.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/recipes.css"
+      },
+      {
+        "path": "web/src/styles/sidebar.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/sidebar.css"
+      },
+      {
+        "path": "web/src/styles/composer.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/composer.css"
+      },
+      {
+        "path": "web/src/styles/message.css",
+        "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/web/src/styles/message.css"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:40:57.649Z",
+      "source_count": 6,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "repository_id": 744282517,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:22.593Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "server/src/modules/agent/tools/tool-provider.interface.ts",
+          "source": "https://github.com/vastxie/99AI/blob/59e213340d26e1840fa86c9b5f526477b60e85dd/server/src/modules/agent/tools/tool-provider.interface.ts",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "varunvasudeva1--llm-server-docs": {
+    "topics": [
+      "comfyui",
+      "debian",
+      "docker",
+      "huggingface",
+      "kokoro-fastapi",
+      "linux",
+      "llama-swap",
+      "llamacpp",
+      "llm",
+      "mcp-proxy",
+      "mcpjungle",
+      "ollama",
+      "open-webui",
+      "vllm"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "a99d767b1604ccddf0de7f764dcce75c784cff6c",
+    "classification_basis": "Topics, README introduction, language (unknown) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "docker run <container> --network app-net / pip install -U \"huggingface_hub[cli]\" / docker compose up -d / pip install vllm / docker run --gpus all \\",
+    "install_evidence": [
+      {
+        "command": "docker run <container> --network app-net",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+        "line": 416
+      },
+      {
+        "command": "pip install -U \"huggingface_hub[cli]\"",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+        "line": 496
+      },
+      {
+        "command": "docker compose up -d",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+        "line": 597
+      },
+      {
+        "command": "pip install vllm",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+        "line": 707
+      },
+      {
+        "command": "docker run --gpus all \\",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+        "line": 726
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/varunvasudeva1/llm-server-docs",
+      "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md",
+      "https://api.github.com/repos/varunvasudeva1/llm-server-docs/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/varunvasudeva1/llm-server-docs/blob/a99d767b1604ccddf0de7f764dcce75c784cff6c/README.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ollama stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (unknown) → framework / rag",
+    "repository_id": 777941000,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "vakra-dev--reader": {
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-crawler",
+      "ai-scraper",
+      "anti-bot",
+      "crawler",
+      "data-extraction",
+      "firecrawl-alternative",
+      "headless-browser",
+      "html-to-markdown",
+      "llm",
+      "markdown",
+      "nodejs",
+      "proxy-rotation",
+      "scraper",
+      "tavily-alternative",
+      "typescript",
+      "web-crawler",
+      "web-data-extraction",
+      "web-scraping"
+    ],
+    "homepage": "https://reader.dev",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vakra-dev/reader",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1129994727,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vanzan01--claude-code-sub-agent-collective": {
+    "topics": [
+      "agents",
+      "ai-development",
+      "autonomous-programming",
+      "claude",
+      "claude-code",
+      "context-engineering",
+      "multi-agent",
+      "playwright",
+      "sub-agents",
+      "task-master",
+      "taskmaster",
+      "yolo"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vanzan01/claude-code-sub-agent-collective",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 997410148,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vasco0x4--aida": {
+    "topics": [
+      "ai",
+      "ai-powered",
+      "claude",
+      "docker",
+      "exegol",
+      "hacking",
+      "llm",
+      "mcp",
+      "pentesting",
+      "security",
+      "security-tools",
+      "vulnerability-assessment"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Vasco0x4/AIDA",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1146833101,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vasihemanth--tokentelemetry": {
+    "topics": [
+      "ai-agents",
+      "claude-code",
+      "codex",
+      "cost-tracking",
+      "cursor",
+      "dashboard",
+      "developer-tools",
+      "gemini-cli",
+      "github-copilot",
+      "hermes-agent",
+      "llm",
+      "llm-monitoring",
+      "local-first",
+      "observability",
+      "open-source",
+      "token-usage",
+      "tokentelemetry-token-telemetry",
+      "typescript"
+    ],
+    "homepage": "https://tokentelemetry.com/docs/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/VasiHemanth/tokentelemetry",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1219697533,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "varun29ankus--shodh-memory": {
+    "topics": [
+      "agent-memory",
+      "agentic-ai",
+      "ai-agents",
+      "ai-memory",
+      "claude",
+      "cognitive-memory",
+      "edge-ai",
+      "graphrag",
+      "knowledge-graph",
+      "llm-free",
+      "local-first",
+      "mcp",
+      "model-context-protocol",
+      "robot-memory",
+      "robotics",
+      "ros2",
+      "rust",
+      "vector-database",
+      "vector-search",
+      "zenoh"
+    ],
+    "homepage": "https://www.shodh-memory.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/varun29ankuS/shodh-memory",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false",
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1109206705,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "vasylenko--bear-notes-mcp": {
+    "topics": [
+      "ai-assistant",
+      "bear",
+      "bear-notes",
+      "claude",
+      "claude-ai",
+      "claude-desktop",
+      "gtd-applications",
+      "mcp-bundle",
+      "mcp-server",
+      "notes",
+      "notetaking",
+      "productivity",
+      "second-brain",
+      "secondbrain",
+      "writing"
+    ],
+    "homepage": "https://bear-notes-mcp.vercel.app",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/vasylenko/bear-notes-mcp",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1048106675,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

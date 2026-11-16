@@ -1,0 +1,129 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Amazon",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "amazon-precision",
+      "publisher": "Amazon",
+      "kind": "prompting-guide",
+      "title": "Nova 1 への短く具体的な指示",
+      "url": "https://docs.aws.amazon.com/nova/latest/userguide/prompting-precision.html",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "仕事、必要な背景、答えの形を、短く具体的に分けて書きます。",
+          "when_ja": "Nova 1 で曖昧な依頼を整理したいとき。",
+          "summary_en": "Separate the task, relevant context and answer format into short, specific instructions.",
+          "when_en": "When clarifying an ambiguous request for Nova 1."
+        }
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/nova/latest/userguide/prompting-precision.html"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Short, specific instructions for Nova 1"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "amazon-examples",
+      "publisher": "Amazon",
+      "kind": "prompting-guide",
+      "title": "Nova 1 に答え方の例を見せる",
+      "url": "https://docs.aws.amazon.com/nova/latest/userguide/prompting-examples.html",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "examples",
+          "summary_ja": "依頼に近く、例外も含む複数の例で答え方を伝えます。",
+          "when_ja": "分類や報告の形式を揃えたいとき。",
+          "summary_en": "Use several task-relevant examples, including edge cases, to demonstrate the answer.",
+          "when_en": "When making classifications or reports consistent."
+        }
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/nova/latest/userguide/prompting-examples.html"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Show Nova 1 example answers"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "amazon-cot",
+      "publisher": "Amazon",
+      "kind": "prompting-guide",
+      "title": "Nova 1 の複雑な問題を段階に分ける",
+      "url": "https://docs.aws.amazon.com/nova/latest/userguide/prompting-chain-of-thought.html",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "reasoning-steps",
+          "summary_ja": "複雑な分析は段階に分ける方法を試し、待ち時間や出力量の増加も確かめます。",
+          "when_ja": "Nova 1 で複数段階の問題を扱うとき。",
+          "summary_en": "Try dividing complex analysis into stages and check the added latency and output length.",
+          "when_en": "When handling multistage problems with Nova 1."
+        }
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/nova/latest/userguide/prompting-chain-of-thought.html"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Break complex Nova 1 problems into stages"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "amazon-nova2",
+      "publisher": "Amazon",
+      "kind": "prompting-guide",
+      "title": "Nova 2 の長い資料と考える設定",
+      "url": "https://docs.aws.amazon.com/nova/latest/nova2-userguide/advanced-prompting-techniques.html",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "long-context",
+          "summary_ja": "長い資料を先に置き、質問や指示を後ろにまとめます。",
+          "when_ja": "Nova 2 で長い資料を読ませるとき。",
+          "summary_en": "Place long reference material before the questions and instructions.",
+          "when_en": "When asking Nova 2 to read long documents."
+        },
+        {
+          "technique_id": "reasoning-effort",
+          "summary_ja": "複雑な問題には考える設定を試し、単純な仕事では必要性を見直します。",
+          "when_ja": "問題に合わせて時間と答えの質を調整したいとき。",
+          "summary_en": "Try thinking settings for complex problems and reassess their need for simple tasks.",
+          "when_en": "When balancing response quality and time for the task."
+        }
+      ],
+      "sources": [
+        "https://docs.aws.amazon.com/nova/latest/nova2-userguide/advanced-prompting-techniques.html"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Nova 2 long context and thinking settings"
+    }
+  ]
+}

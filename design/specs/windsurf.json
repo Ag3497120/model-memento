@@ -1,0 +1,1267 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "windsurf",
+  "name": "Windsurf / Devin Desktop",
+  "vendor": "Codeium / Cognition",
+  "kind": "ide",
+  "versions": [
+    {
+      "id": "windsurf-2023-09",
+      "from": "2023-09",
+      "to": "2024-11",
+      "regions": [
+        {
+          "name": "通常のVS Code",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "コード入力と補完"
+          ]
+        },
+        {
+          "name": "Codeium Chat",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・回答・コード例"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Apply Diff",
+          "where": "対応する回答のコード例",
+          "purpose": "編集箇所を差分として開く"
+        }
+      ],
+      "conversation": {
+        "user": "コードについて会話欄から質問する。",
+        "assistant": "説明・最適化・テスト用のコードなどを返す。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "Windsurf Editor公開前のCodeium拡張",
+        "通常の編集と会話欄の組み合わせ",
+        "回答のコードから変更を差分で開く"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/changelist-apr23",
+          "kind": "changelog",
+          "date": "2023-05-08",
+          "shows": "regions・conversation・distinctive: 4月分の公式変更記録。VS CodeのChat提供、コード説明・最適化・テスト作成。9月15日固有の新画面は未確認。"
+        },
+        {
+          "url": "https://devin.ai/blog/changelist-may23",
+          "kind": "changelog",
+          "date": "2023-06-08",
+          "shows": "controls・distinctive: 5月分の公式変更記録。回答コード例のApply Diff。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-launch",
+          "kind": "blog",
+          "date": "2024-11-13",
+          "shows": "版の区別: Windsurf Editorという独立アプリの公開は2024年11月。2023年のCodeium拡張と同じ画面とはしない。"
+        }
+      ],
+      "confidence": 0.58
+    },
+    {
+      "id": "windsurf-2024-11",
+      "from": "2024-11",
+      "to": "2025-01",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイルと編集"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・返答・作業の経過"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "コマンドの実行"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Command",
+          "where": "コード編集またはターミナル",
+          "purpose": "自然な言葉で編集・コマンド作成を頼む"
+        }
+      ],
+      "conversation": {
+        "user": "横のCascadeへ依頼する。質問段や入力の厳密な装飾は未確認。",
+        "assistant": "会話と、必要なファイルの編集をつなぐ。",
+        "tool_calls": "検索・ファイル作成・編集・コマンド実行を扱う。初期のコマンド実行は利用者の承認が必要。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "通常のエディタと依頼待ちのCascade。初日の挨拶や提案カードは未確認。",
+      "distinctive": [
+        "横のChatがCascadeになる",
+        "会話から複数の作業をつなぐ",
+        "編集中のコードに補完候補",
+        "Commandはコード内とターミナルにもある"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-launch",
+          "kind": "blog",
+          "date": "2024-11-13",
+          "shows": "regions・controls・conversation・distinctive: Cascadeはside panel、Supercomplete、Commandとターミナル内Command。正確な左右位置・色・寸法は本文から確定しない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-1",
+          "kind": "blog",
+          "date": "2024-12-11",
+          "shows": "conversation.tool_calls: 初回公開時は全コマンドが承認対象だったと回顧。12月の自動実行や規則設定を11月へ戻さない。"
+        },
+        {
+          "url": "https://research.contrary.com/company/windsurf",
+          "kind": "press",
+          "date": "2025-05-01",
+          "shows": "比較資料: 後の長文調査でも独立したEditorとCascadeを説明。更新が入る記事のため、11月の細部の証拠にはしない。"
+        }
+      ],
+      "confidence": 0.69
+    },
+    {
+      "id": "windsurf-2025-01",
+      "from": "2025-01",
+      "to": "2025-03",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイルと編集"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・返答・作業の経過"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "コマンドの実行"
+          ]
+        },
+        {
+          "name": "覚えた規則",
+          "position": "separate-view",
+          "size": null,
+          "contents": [
+            "会話から保存された作業の規則を確認・編集"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "@web",
+          "where": "Cascadeへの質問",
+          "purpose": "ウェブを調べる"
+        },
+        {
+          "label": "@url",
+          "where": "Cascadeへの質問",
+          "purpose": "指定したページを参照する"
+        }
+      ],
+      "conversation": {
+        "user": "質問にウェブページの参照を含める。",
+        "assistant": "必要な情報をウェブから得て応答し、作業の規則を記憶できる。",
+        "tool_calls": "実行はIDE内のターミナル環境を使う。Problemsの問題をCascadeへ送れる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ウェブから質問の材料を得る",
+        "覚えた規則を後から確認・編集できる",
+        "Problemsの内容を会話へ渡す"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-2",
+          "kind": "blog",
+          "date": "2025-01-17",
+          "shows": "regions・conversation・distinctive: Wave 2、自動Memories、URL参照、Problemsとの連携。規則の保存は段階提供。"
+        },
+        {
+          "url": "https://www.neowin.net/news/windsurf-wave-2-now-memorizes-your-preferred-coding-styles-for-its-suggestion/",
+          "kind": "press",
+          "date": "2025-01-20",
+          "shows": "controls: 検索結果の取得本文で1.2.1、@webと@urlを確認。ページ本体の再取得は402。全文を読んだとはしない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-1",
+          "kind": "blog",
+          "date": "2024-12-11",
+          "shows": "時期の区別: 明示的なglobal rulesと.windsurfrulesはWave 1。1月に初追加とはしない。"
+        }
+      ],
+      "confidence": 0.67
+    },
+    {
+      "id": "windsurf-2025-03",
+      "from": "2025-03",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイルと編集"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・返答・作業の経過"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "コマンドの実行"
+          ]
+        },
+        {
+          "name": "Previews",
+          "position": "editor-or-browser",
+          "size": null,
+          "contents": [
+            "作っているウェブ画面",
+            "選んだ要素やエラーを会話へ渡す"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "要素を選ぶ",
+          "where": "Previews",
+          "purpose": "直したい箇所を会話へ伝える"
+        },
+        {
+          "label": "エラーを送る",
+          "where": "Previews",
+          "purpose": "表示中の問題を会話へ伝える"
+        }
+      ],
+      "conversation": {
+        "user": "ファイルを入力にドラッグしたり、プレビューの箇所を選んで依頼する。",
+        "assistant": "応答後に次の作業を提案する。",
+        "tool_calls": "編集・確認・エラーの修正。MCPは設定から追加する外部の道具への接続。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "プレビューから要素・エラーを送る",
+        "ファイルやタブを会話へドラッグする",
+        "返答の後に次の操作を提案",
+        "MCPの設定を見つけやすくする"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-4",
+          "kind": "blog",
+          "date": "2025-03-05",
+          "shows": "regions・controls・conversation・distinctive: Wave 4のPreviews、要素選択/エラー送信、次の提案、ドラッグ添付、MCP設定への入口。カタログの3月10日を初日としない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-3",
+          "kind": "blog",
+          "date": "2025-02-13",
+          "shows": "時期の区別: MCPとTab-to-jumpはWave 3。Wave 4/5が初導入ではない。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/previews",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料: 現行ヘルプでもIDEまたはブラウザでのプレビューを説明。3月当日の固定位置やツールバーの形を証明しない。"
+        }
+      ],
+      "confidence": 0.74
+    },
+    {
+      "id": "windsurf-2025-07",
+      "from": "2025-07",
+      "to": "2025-08",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイルと編集"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・返答・作業の経過"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "コマンドの実行"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "音声で入力",
+          "where": "Cascadeの入力",
+          "purpose": "長い依頼を話して入力する"
+        },
+        {
+          "label": "@で参照",
+          "where": "Cascadeの入力",
+          "purpose": "前の会話・ブラウザのタブ・ターミナルを参照"
+        },
+        {
+          "label": "チェックポイント",
+          "where": "会話",
+          "purpose": "名前を付けた状態へ戻る"
+        }
+      ],
+      "conversation": {
+        "user": "文字または音声で依頼。音声は入力用で、返答を読み上げる会話とはしない。",
+        "assistant": "計画を踏まえて作業し、名前を付けた区切りへ戻れる。",
+        "tool_calls": "ブラウザの内容を参照する道具が加わる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "話して依頼を入力",
+        "名前付きの戻り地点",
+        "別の会話やタブの@参照",
+        "7月の買収を新しいレイアウトとは扱わない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-11",
+          "kind": "blog",
+          "date": "2025-07-17",
+          "shows": "controls・conversation・distinctive: Wave 11の音声入力、名前付きチェックポイント、会話/ブラウザ/ターミナル参照。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2025-07-17",
+          "shows": "v1.11.0の照合: 音声と参照。色・余白の証拠ではない。"
+        },
+        {
+          "url": "https://cognition.com/blog/windsurf",
+          "kind": "blog",
+          "date": "2025-07-14",
+          "shows": "版の区別: 買収発表。直後は従来どおり運営するという説明であり、新しいSWE/Enterprise固定タブの根拠ではない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-8-ux-features-and-plugins",
+          "kind": "blog",
+          "date": "2025-05-08",
+          "shows": "controlsの前提: モデルを提供元・費用等で探す選択欄と、続行ボタンは5月の変更。7月の新規画面装飾とはしない。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "windsurf-2025-08",
+      "from": "2025-08",
+      "to": "2025-11",
+      "regions": [
+        {
+          "name": "コード編集",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "通常のファイルと編集"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "質問・返答・作業の経過"
+          ]
+        },
+        {
+          "name": "ターミナル",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "コマンドの実行"
+          ]
+        },
+        {
+          "name": "DeepWikiの説明",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "記号の説明を開き、Cascadeに参照として渡す"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Vibe and Replace",
+          "where": "検索・置換の操作",
+          "purpose": "一致した複数箇所に指示で変更を加える"
+        },
+        {
+          "label": "Cmd/Ctrl+Shift+Click",
+          "where": "コード中の記号",
+          "purpose": "説明を左の欄で開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "新しいChat/Cascadeの表示で重要な作業と道具の実行を追いやすくする。",
+        "tool_calls": "必要に応じて作業一覧を会話中に作る。計画の手動切替は不要になる。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "ホーム・Chat・Cascadeの刷新。ただし歓迎文やカードの正確な形は未確認。",
+      "distinctive": [
+        "ChatとCascadeを作り直した表示",
+        "計画の作業一覧が会話内に出る",
+        "DeepWikiの説明カード",
+        "複数箇所への指示による置換"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-12",
+          "kind": "blog",
+          "date": "2025-08-14",
+          "shows": "regions・controls・conversation・distinctive: Wave 12で画面刷新、DeepWiki、指示による置換、会話内の自動計画を発表。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": null,
+          "shows": "v1.12.1でChat/Cascade/homeの刷新を確認。ただし現行ページの日付は2025-09-29で、前後の版順・8月14日記事と食い違う。fromはブログの発表月を採用し、配布日そのものは未確定。"
+        }
+      ],
+      "confidence": 0.72
+    },
+    {
+      "id": "windsurf-2025-11",
+      "from": "2025-11",
+      "to": "2026-01",
+      "regions": [
+        {
+          "name": "コード",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ファイルと変更箇所"
+          ]
+        },
+        {
+          "name": "Cascade",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "会話と作業"
+          ]
+        },
+        {
+          "name": "Codemaps",
+          "position": "separate-view",
+          "size": null,
+          "contents": [
+            "質問に関係するコードのまとまり",
+            "図と説明、該当行へのリンク"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Cmd+Shift+C",
+          "where": "コードを開いた状態",
+          "purpose": "Codemapsを開く"
+        },
+        {
+          "label": "Fast / Smart",
+          "where": "Codemapsの生成",
+          "purpose": "生成の方式を選ぶ"
+        },
+        {
+          "label": "See more",
+          "where": "Codemaps内の説明",
+          "purpose": "関連コードの説明を広げる"
+        }
+      ],
+      "conversation": {
+        "user": "Codemapsの質問か自動提案を選ぶ。作った図を@でCascadeへ参照として渡せる。",
+        "assistant": "コードのまとまりを、リンク付きの説明や図で示す。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "Codemapsでは調べたい内容の入力または提案から始める。エディタ全体の初期画面の正確な文言は未確認。",
+      "distinctive": [
+        "コードを読むための図とまとまった説明",
+        "図の項目から該当するコードへ移動",
+        "CodemapsをCascadeの参照へ渡せる",
+        "Wave 11は7月であり11月版の名称ではない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://cognition.com/blog/codemaps",
+          "kind": "blog",
+          "date": "2025-11-04",
+          "shows": "regions・controls・conversation・empty_state: Codemapsの入口、2つの生成方式、リンクを持つ図、説明の展開、Cascadeへの@参照。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2025-10-10",
+          "shows": "時期の照合: v1.12.16にCodemapsのベータ表示。11月が全ての初登場日ではない。9月16日には別製品のWindsurf Browser廃止も記載。"
+        },
+        {
+          "url": "https://cognition.com/blog/swe-1-5",
+          "kind": "blog",
+          "date": "2025-10-29",
+          "shows": "時期の照合のみ: SWE-1.5の公開。性能値からUI上の固定速度表示は推定しない。"
+        }
+      ],
+      "confidence": 0.78
+    },
+    {
+      "id": "windsurf-2026-01",
+      "from": "2026-01",
+      "to": "2026-06",
+      "regions": [
+        {
+          "name": "2つのCascade",
+          "position": "side-or-editor",
+          "size": null,
+          "contents": [
+            "同じ依頼に応じる2列の作業",
+            "モデル名は比較中に隠す"
+          ]
+        },
+        {
+          "name": "比較の選択",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "よかった方を選ぶ操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Arena",
+          "where": "モデル選択の中のタブ",
+          "purpose": "比較を始める"
+        },
+        {
+          "label": "比較する組を選ぶ",
+          "where": "Arenaの選択欄",
+          "purpose": "特定のモデルか自動の組を選ぶ"
+        },
+        {
+          "label": "よかった方を選ぶ",
+          "where": "比較結果の下",
+          "purpose": "好みを記録する"
+        }
+      ],
+      "conversation": {
+        "user": "両方へ同時に続きを送るか、別々に会話を進める。",
+        "assistant": "2列に返答と作業。名前を隠して比較する。",
+        "tool_calls": "各列で通常のCascadeの作業を進める。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "モデル選択のArenaから比較する組を選び、依頼を入力する。",
+      "distinctive": [
+        "モデル名を隠す2列の比較",
+        "会話を同期・分岐できる",
+        "結果の下で好みを選ぶ",
+        "Code・Askに加えてPlan方式"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-14",
+          "kind": "blog",
+          "date": "2026-01-30",
+          "shows": "regions・controls・conversation・empty_state・distinctive: Arenaの入口、2列、隠した名前、同期と分岐、投票、Code/Ask/Plan。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2026-01-30",
+          "shows": "v1.9544.24の照合: Wave 14のArenaとPlan。固定のテスト成功表や自動採用ボタンを示す資料ではない。"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "windsurf-2026-06",
+      "from": "2026-06",
+      "to": "2026-09",
+      "regions": [
+        {
+          "name": "Agent Command Center",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ローカル・クラウドの作業を管理するKanban表示"
+          ]
+        },
+        {
+          "name": "Spaces",
+          "position": "navigation",
+          "size": null,
+          "contents": [
+            "関連する作業・PR・ファイル・参照をまとめる"
+          ]
+        },
+        {
+          "name": "コード編集",
+          "position": "editor-mode",
+          "size": null,
+          "contents": [
+            "従来のファイル編集にも戻れる"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Spaces",
+          "where": "作業管理",
+          "purpose": "関連する作業をまとめる"
+        },
+        {
+          "label": "編集画面へ移る",
+          "where": "アプリの表示切替",
+          "purpose": "コードを直接確認・編集する"
+        }
+      ],
+      "conversation": {
+        "user": "作業単位で依頼し、進行を確認する。",
+        "assistant": "作業の中で返答や成果を確認する。初日の吹き出し形は未確認。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": "作業を管理する画面を既定の入口とする。初日の挨拶・空の列名は未確認。",
+      "distinctive": [
+        "既定の入口は作業管理のKanban",
+        "Spacesで関連資料をまとめる",
+        "Devin LocalがCascadeの後継",
+        "従来の編集画面を併用"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://devin.ai/blog/windsurf-is-now-devin-desktop",
+          "kind": "blog",
+          "date": "2026-06-02",
+          "shows": "regions・conversation・empty_state・distinctive: 改称と既定のAgent Command Center、Kanban、Spaces、Devin Local。単なるCascade右欄の増設ではない。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2026-06-02",
+          "shows": "v3.0.12で改称を照合。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/agent-command-center",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "比較資料: 現行の作業管理画面とエディタ切替。更新される文書なので、最新の会話メニューやサイドバー項目を6月初日へ戻さない。"
+        }
+      ],
+      "confidence": 0.8
+    },
+    {
+      "id": "windsurf-2026-09",
+      "from": "2026-09",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "作業管理の表示",
+          "position": "window",
+          "size": null,
+          "contents": [
+            "Spaceを選び、その作業を表示"
+          ]
+        },
+        {
+          "name": "作業一覧",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "作業の一覧と絞り込み"
+          ]
+        },
+        {
+          "name": "会話・実行結果",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "進行中の作業とコマンド出力"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作業を選ぶ",
+          "where": "作業一覧",
+          "purpose": "表示する作業を切り替える"
+        },
+        {
+          "label": "表示を切り替える",
+          "where": "Agent / Editor",
+          "purpose": "作業管理と編集を行き来する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "実行中のコマンド出力は作業に流れ、完了した行を開いて全体を読める。",
+        "streaming": "コマンド出力の逐次表示。返答の細かい描画は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "直前の8月版ではSpaceに追従する作業管理画面",
+        "作業一覧の絞り込み",
+        "9月5日固有のParallel Cascade Arenaという改版はunverified"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2026-08-21",
+          "shows": "regions・controls・tool_calls・streaming: v3.8.20が9月5日より前の確認可能な画面。9月8日にCascade除去、10日に旧入口の整理もあるため9月全体を同一視しない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-is-now-devin-desktop",
+          "kind": "blog",
+          "date": "2026-06-02",
+          "shows": "regionsの前提: 作業管理が中心のDevin Desktop。9月固有の新Arenaを示す資料ではない。"
+        },
+        {
+          "url": "https://devin.ai/blog/windsurf-wave-14",
+          "kind": "blog",
+          "date": "2026-01-30",
+          "shows": "比較資料のみ: Arenaは1月にモデル名を隠す比較として発表。カタログのSWE-2/Claude/GPTの固定組や自動テスト表を証明しない。"
+        }
+      ],
+      "confidence": 0.54
+    },
+    {
+      "id": "windsurf-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "Agent Windowの作業一覧",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "作業をグループでまとめる",
+            "関連する子作業"
+          ]
+        },
+        {
+          "name": "作業の表示",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "複数の作業を並べる",
+            "会話"
+          ]
+        },
+        {
+          "name": "Files / Changes / Terminal",
+          "position": "in-session",
+          "size": null,
+          "contents": [
+            "作業に属するファイル・差分・実行結果"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "作業を並べる",
+          "where": "一覧から開いた作業へドラッグ",
+          "purpose": "最大8つまで並べる"
+        },
+        {
+          "label": "MCP",
+          "where": "作業見出しの追加メニュー",
+          "purpose": "その作業の外部道具の接続を確認する"
+        }
+      ],
+      "conversation": {
+        "user": "ファイルや選択したコードを会話入力へ渡せる。",
+        "assistant": "表やコードなどの返答。コードやコマンドは選択したテーマに従う。",
+        "tool_calls": "実行結果や確認を作業内に表示。許可が必要な操作は確認カード。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "作業一覧と複数作業の並列表示",
+        "各作業にファイル・変更・ターミナル",
+        "DevinのWeb版と揃えたAgent Window",
+        "古いVibe & Replaceを常設機能として戻さない"
+      ],
+      "must_not_copy": [
+        "ロゴ・製品アイコン・ブランド書体のファイル",
+        "画面写真・製品の挿絵・既存の長い例文。製品名は通常の文字で表示する"
+      ],
+      "sources": [
+        {
+          "url": "https://docs.devin.ai/desktop/changelog",
+          "kind": "changelog",
+          "date": "2026-10-23",
+          "shows": "regions・controls: v3.11.212でWeb版と揃えたAgent Window、最大8作業、Files/Changes/Terminal。v3.12.32（11月8日）で作業見出しのMCP操作、差分・コードのテーマ対応。11月1日当日の全機能を証明しない。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/agent-command-center",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "regions・conversation: 現行ヘルプの作業一覧、絞り込み、グループ、コードを入力へ送る手順。11月時点の照合用。"
+        },
+        {
+          "url": "https://docs.devin.ai/desktop/introducing-devin-desktop",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "版の区別: 現行製品はローカル・クラウド・外部エージェントを扱うDevin Desktop。公開ヘルプであり利用者のログイン画面の取得ではない。"
+        }
+      ],
+      "confidence": 0.74
+    }
+  ],
+  "corrections": [
+    "2023-09はCodeium拡張の時代。Windsurf Editor公開日は2024-11-13。https://devin.ai/blog/windsurf-launch",
+    "2024-11のRiptide/Supercomplete/Commandを3つの常設ナビゲーションボタンとして並べる根拠はない。Riptideは内部の検索の説明。https://devin.ai/blog/windsurf-launch",
+    "1月の.windsurfrules初導入という説明を修正。明示規則は12月Wave 1、自動記憶は1月17日Wave 2。1月16日の初公開日は未確認。https://devin.ai/blog/windsurf-wave-2",
+    "2025-03をWave 4/5混合の固定タブや常設下段ブラウザで表さない。3月5日のWave 4はIDE内またはブラウザでのPreviews。https://devin.ai/blog/windsurf-wave-4",
+    "2025-07のCognition買収だけを根拠にOwner/SWE/Enterpriseの常設カードやタブを作らない。https://cognition.com/blog/windsurf",
+    "Wave 11は7月17日。音声入力と名前付きチェックポイント、会話参照が特徴。11月の波として描かない。https://devin.ai/blog/windsurf-wave-11",
+    "8月14日のWave 12は明確なUI刷新なので追加した。現行changelogの1.12.1は9月29日表記で食い違う。発表日と配布日を区別する。https://devin.ai/blog/windsurf-wave-12",
+    "2025-11のCodemapsはコード図とリンクから読む画面。ブラウザの要素選択と混同しない。公開記事は11月4日、ベータの記録は10月。https://cognition.com/blog/codemaps",
+    "SWE-1.5の最大速度の発表はUIの常設950 tok/s表示の証明ではない。https://cognition.com/blog/swe-1-5",
+    "Arenaの独立版を2026-01に追加。モデル名を隠す2列・同期/分岐・投票が確認できる。固定のモデル名とテスト結果表は未確認。https://devin.ai/blog/windsurf-wave-14",
+    "2026-06は小さな統合プレビューではなく改称と作業管理を既定にする変更。Cascadeの後継はDevin Local。https://devin.ai/blog/windsurf-is-now-devin-desktop",
+    "2026-09-05の新Parallel Cascade Arena公開はunverified。9月8日にはCascade除去の記録があり、旧Cascadeの画面を月末まで延長しない。https://docs.devin.ai/desktop/changelog",
+    "2026-11へVibe & ReplaceやParallel Cascadeを常設タブとして残す根拠はない。9月10日にVibe & Replace等の旧入口を整理、10月23日にAgent Windowを変更。https://docs.devin.ai/desktop/changelog",
+    "全版の色・書体・角丸・固定幅は未確認。VS Code派生やWebサイトの外観だけを根拠にアプリの正確な値を埋めない。https://devin.ai/blog/windsurf-launch"
+  ]
+}
+

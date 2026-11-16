@@ -1,0 +1,733 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "hermes-agent",
+  "versions": [
+    {
+      "id": "nousresearch--hermes-agent-2026-03-0",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model と提供元・モデル名を入力する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.3.12/website/docs/user-guide/cli.md",
+            "date": "2026-03-12",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.3.12",
+            "date": "2026-03-12",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model followed by the provider and model name in the terminal input.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+J で改行",
+          "when": "2026-03-12..2026-03-12",
+          "where": "端末の入力欄で押すキー。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.3.12/website/docs/user-guide/cli.md",
+              "date": "2026-03-12",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.3.12",
+              "date": "2026-03-12",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Insert a line break with Ctrl+J",
+          "where_en": "Keyboard shortcut in the terminal input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-03-12",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.3.12/website/docs/user-guide/cli.md",
+            "date": "2026-03-12",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の歓迎案内と会話を縦に並べ、モデル変更を入力行から行う（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.3.12/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal welcome guidance and chat stack vertically, with model changes from the input. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.3.12/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-05-1",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/cli.md",
+            "date": "2026-05-29",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29.2",
+            "date": "2026-05-29",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "使用量を入力欄の上に表示",
+          "when": "2026-05-29..2026-05-29",
+          "where": "入力欄の上の状態欄。処理量や会話の残り容量を表示する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/cli.md",
+              "date": "2026-05-29",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29.2",
+              "date": "2026-05-29",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Usage shown above the input",
+          "where_en": "Status area above the input showing usage and remaining conversation capacity."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-05-29",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/cli.md",
+            "date": "2026-05-29",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に処理量と残り容量の状態欄を添える（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal chat gains a status area for usage and remaining capacity. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-06-2",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/cli.md",
+            "date": "2026-06-19",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+            "date": "2026-06-19",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "使用量を入力欄の上に表示",
+          "when": "2026-06-19..2026-06-19",
+          "where": "入力欄の上の状態欄。処理量や会話の残り容量を表示する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/cli.md",
+              "date": "2026-06-19",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+              "date": "2026-06-19",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Usage shown above the input",
+          "where_en": "Status area above the input showing usage and remaining conversation capacity."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-06-19",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/cli.md",
+            "date": "2026-06-19",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に処理量と残り容量の状態欄を添える（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal chat gains a status area for usage and remaining capacity. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-07-3",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.7.30/website/docs/user-guide/cli.md",
+            "date": "2026-07-30",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30",
+            "date": "2026-07-30",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "作業中にも次の指示を入力",
+          "when": "2026-07-30..2026-07-30",
+          "where": "実行中の入力欄。入力した指示をその後の応答へ反映する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.7.30/website/docs/user-guide/cli.md",
+              "date": "2026-07-30",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30",
+              "date": "2026-07-30",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Type the next instruction while work continues",
+          "where_en": "Input while running, allowing instructions to affect subsequent replies."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-07-30",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.7.30/website/docs/user-guide/cli.md",
+            "date": "2026-07-30",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に処理量と残り容量の状態欄を添える（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.7.30/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal chat gains a status area for usage and remaining capacity. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.7.30/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-08-4",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.8.31/website/docs/user-guide/cli.md",
+            "date": "2026-08-31",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31",
+            "date": "2026-08-31",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+S で下書きを退避",
+          "when": "2026-08-31..2026-08-31",
+          "where": "入力欄から下書きを一時的にしまう操作。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.8.31/website/docs/user-guide/cli.md",
+              "date": "2026-08-31",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31",
+              "date": "2026-08-31",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Stash a draft with Ctrl+S",
+          "where_en": "Action to temporarily stash a draft from the input."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-08-31",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.8.31/website/docs/user-guide/cli.md",
+            "date": "2026-08-31",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に処理量と残り容量の状態欄を添える（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.8.31/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal chat gains a status area for usage and remaining capacity. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.8.31/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-09-5",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/user-guide/cli.md",
+            "date": "2026-09-24",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24",
+            "date": "2026-09-24",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+T で作業状況を開く",
+          "when": "2026-09-24..2026-09-24",
+          "where": "入力中の下書きを残したまま開く、進行中の作業一覧。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/user-guide/cli.md",
+              "date": "2026-09-24",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24",
+              "date": "2026-09-24",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Open task status with Ctrl+T",
+          "where_en": "Active task list opened while preserving the input draft."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-09-24",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/user-guide/cli.md",
+            "date": "2026-09-24",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の会話に処理量と残り容量の状態欄を添える（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/user-guide/cli.md）。",
+      "trend_en": "Terminal chat gains a status area for usage and remaining capacity. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-2026-10-6",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/user-guide/cli.md",
+            "date": "2026-10-23",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+            "date": "2026-10-23",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "入力欄の下に状態を表示",
+          "when": "2026-10-23..2026-10-23",
+          "where": "modern が既定となる端末表示。以前の枠付き表示も設定で選べる。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/user-guide/cli.md",
+              "date": "2026-10-23",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+              "date": "2026-10-23",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Status shown below the input",
+          "where_en": "Terminal display with modern as the default. The earlier bordered display remains selectable in settings."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-10-23",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/user-guide/cli.md",
+            "date": "2026-10-23",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "枠を減らした会話行と、入力欄の下に置く状態欄へ整理する（https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/user-guide/cli.md）。",
+      "trend_en": "Fewer borders organize conversation lines, with status below the input. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "nousresearch--hermes-agent-record",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力してモデルを変更する。",
+          "起動時に選ぶ場合は hermes chat --model にモデル名を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md",
+            "date": "2026-11-14",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261114T064334Z",
+            "date": "2026-11-14",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input to change models.",
+          "To choose at launch, use hermes chat --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "端末を閉じても作業を継続",
+          "when": "2026-11-14..2026-11-14",
+          "where": "端末は接続画面として働き、接続を外しても中継側で受け付けた作業を続ける。これは動作の要約で、常設の警告ではない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md",
+              "date": "2026-11-14",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261114T064334Z",
+              "date": "2026-11-14",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Continue working after the terminal closes",
+          "where_en": "The terminal acts as a connection interface. Accepted work continues on the relay after disconnection."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-11-14",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md",
+            "date": "2026-11-14",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "枠を減らした会話行と、入力欄の下に置く状態欄へ整理する（https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md）。",
+      "trend_en": "Fewer borders organize conversation lines, with status below the input. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/cli.md)"
+    },
+    {
+      "id": "hermes-agent-2026-05",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "全画面の端末画面で /model を入力する。",
+          "重ねて開く一覧で、提供元ごとのモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/tui.md",
+            "date": "2026-05-29",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.28",
+            "date": "2026-05-28",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the full-screen terminal interface.",
+          "Choose a model grouped by provider in the overlay list."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "pricing",
+          "text": "モデル一覧に費用の目安",
+          "when": "2026-05-29..2026-05-29",
+          "where": "/model から開く一覧のモデル行。金額自体は固定しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/tui.md",
+              "date": "2026-05-29",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.28",
+              "date": "2026-05-28",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Estimated cost in the model list",
+          "where_en": "Model rows in the list opened with /model. Keep prices variable."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-05-29",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/tui.md",
+            "date": "2026-05-29",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "全画面の端末に、モデル選択や実行確認の一覧を重ねて開く（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/tui.md）。",
+      "trend_en": "Model selection and execution confirmation open as overlays in the full-screen terminal. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.5.29.2/website/docs/user-guide/tui.md)"
+    },
+    {
+      "id": "hermes-agent-2026-06",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "入力欄のマイク左にある現在のモデル名を押す。",
+          "一覧からモデルを選ぶ。",
+          "既定モデルを変える場合は Settings → Model を使う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/desktop.md",
+            "date": "2026-06-19",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+            "date": "2026-06-19",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name to the left of the microphone in the input.",
+          "Choose a model from the list.",
+          "Use Settings → Model to change the default model."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "モデル選択は次の会話にも引継ぎ",
+          "when": "2026-06-19..2026-06-19",
+          "where": "入力欄の選択状態。会話を変えても保持し、設定の既定値とは別に扱う。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/desktop.md",
+              "date": "2026-06-19",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19",
+              "date": "2026-06-19",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "text_en": "Model selection carries over to the next chat",
+          "where_en": "Selection in the input carries across chats, separate from the configured default."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Electron window",
+        "date_shown": "2026-06-19",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/desktop.md",
+            "date": "2026-06-19",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "左の会話一覧と中央の会話を持ち、モデル選択を入力欄へ置く（https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/desktop.md）。",
+      "trend_en": "A chat list sits on the left, conversation in the center and model selection in the input. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.6.19/website/docs/user-guide/desktop.md)"
+    },
+    {
+      "id": "hermes-agent-2026-11",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "入力欄のマイク左にある現在のモデル名を押す。",
+          "一覧からモデルを選ぶ。",
+          "既定モデルを変える場合は Settings → Model を使う。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md",
+            "date": "2026-11-14",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+            "date": "2026-11-05",
+            "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+          }
+        ],
+        "steps_en": [
+          "Click the current model name to the left of the microphone in the input.",
+          "Choose a model from the list.",
+          "Use Settings → Model to change the default model."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "Simple / Advanced",
+          "when": "2026-11-14..2026-11-14",
+          "where": "配置の編集と設定にある表示方法の選択。Advanced が既定で、Simple は会話を中心にする。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md",
+              "date": "2026-11-14",
+              "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.0",
+              "date": "2026-11-05",
+              "shows": "固定版の公開日。本文の日付とUTCの公開日に差がある場合は公開日を採る。"
+            }
+          ],
+          "where_en": "Layout editing and settings display selection. Advanced is the default and Simple centers on chat."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2026-11-14",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md",
+            "date": "2026-11-14",
+            "shows": "固定版の操作資料。モデル候補は接続した提供元や認証によって変わるため、画面の全候補と単一の既定値は unverified。"
+          }
+        ]
+      },
+      "trend": "会話中心の簡単な表示と、補助欄を並べた表示を選べる（https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md）。",
+      "trend_en": "Users can choose a simple chat view or a view with supporting panes. (https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.23.1%2Bcanary.20261114T064334Z/website/docs/user-guide/desktop.md)"
+    }
+  ]
+}

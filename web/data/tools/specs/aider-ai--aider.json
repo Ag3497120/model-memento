@@ -1,0 +1,121 @@
+{
+  "id": "aider-ai--aider",
+  "version": "5dc9490bb35f",
+  "from": "2026-11-15",
+  "surface": "terminal",
+  "layout": {
+    "t": "col",
+    "label": "Aider scrolling terminal",
+    "c": [
+      {
+        "t": "banner",
+        "label": "coder.show_announcements()"
+      },
+      {
+        "t": "thread",
+        "label": "tool_output / assistant_output"
+      },
+      {
+        "t": "composer",
+        "label": "PromptSession",
+        "c": [
+          {
+            "t": "panel",
+            "label": "AutoCompleter"
+          }
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "accent": "blue",
+    "source": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/io.py"
+  },
+  "strings": {
+    "s1": "You can skip this check with --no-gitignore",
+    "s2": "Try running with appropriate permissions or manually add these patterns to .gitignore:",
+    "s3": "Loaded model settings from:",
+    "s4": "Detected dumb terminal, disabling fancy input and pretty output.",
+    "s5": "[bold red]Warning:[/bold red] Invalid configuration for",
+    "s6": "Use --encoding to set the unicode encoding.",
+    "s7": "--model",
+    "s8": "--openai-api-key",
+    "s9": "--anthropic-api-key",
+    "s10": "--openai-api-base",
+    "s11": "--openai-api-type",
+    "s12": "--openai-api-version",
+    "s13": "--openai-api-deployment-id",
+    "s14": "--openai-organization-id",
+    "s15": "--set-env",
+    "s16": "--api-key",
+    "s17": "--list-models",
+    "s18": "--model-settings-file",
+    "s19": "--model-metadata-file",
+    "s20": "--alias",
+    "s21": "--reasoning-effort",
+    "s22": "--thinking-tokens",
+    "s23": "--verify-ssl",
+    "s24": "--timeout",
+    "s25": "--edit-format",
+    "s26": "--architect",
+    "s27": "--auto-accept-architect",
+    "s28": "--weak-model",
+    "s29": "--editor-model",
+    "s30": "--editor-edit-format"
+  },
+  "behaviors": {
+    "commands": [
+      "/help"
+    ],
+    "model_picker": "flag"
+  },
+  "mobile": "none",
+  "sources": [
+    "https://github.com/Aider-AI/aider",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/README.md",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/install.md",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/_includes/install.md",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/pyproject.toml",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/requirements.txt",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/help.py",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/main.py",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/context_coder.py",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/context_prompts.py",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/io.py",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/args.py",
+    "https://api.github.com/repos/Aider-AI/aider/releases",
+    "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/editblock_prompts.py"
+  ],
+  "provenance": {
+    "commit": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+    "snapshot_at": "2026-11-15",
+    "layout_path": "aider/io.py",
+    "layout_evidence": [
+      {
+        "component": "coder.show_announcements()",
+        "source": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/main.py",
+        "line": 1042
+      },
+      {
+        "component": "PromptSession",
+        "source": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/io.py",
+        "line": 25
+      }
+    ],
+    "behavior_evidence": [
+      {
+        "field": "model_picker",
+        "value": "flag",
+        "source": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/README.md"
+      },
+      {
+        "value": "/help",
+        "source": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/help.py",
+        "line": 27
+      }
+    ],
+    "method": "Observed component outline in source order. Conditional branches may coexist in this static outline.",
+    "mobile": "Terminal reconstruction.",
+    "stream": "Unmeasured; omitted."
+  }
+}

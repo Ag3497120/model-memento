@@ -1,0 +1,506 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "zed",
+  "versions": [
+    {
+      "id": "zed-2024-05-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "Change Model",
+        "steps": [
+          "会話欄の上部、題名の右にあるモデル名を押す。",
+          "押すたびに次のモデルへ進む。目的のモデルになるまで繰り返す。"
+        ],
+        "options": [
+          "gpt-3.5-turbo",
+          "gpt-4",
+          "gpt-4-turbo",
+          "gpt-4o"
+        ],
+        "default": "gpt-4o",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/assistant/src/assistant_panel.rs",
+            "date": "2024-05-29",
+            "kind": "source-code",
+            "shows": "会話欄上部のモデルボタンを押すたびに次のモデルへ循環。隣に残りの文章量を表示。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/open_ai/src/open_ai.rs",
+            "date": "2024-05-29",
+            "kind": "source-code",
+            "shows": "OpenAI接続の4モデルの表示名。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/settings/default.json",
+            "date": "2024-05-29",
+            "kind": "source-code",
+            "shows": "標準のOpenAI接続の既定モデルはgpt-4o。"
+          }
+        ],
+        "notes": "OpenAI接続の例。labelはボタンに重ねたときの案内。候補を開くメニューではない。別の接続先は設定から変更する。",
+        "steps_en": [
+          "Click the model name to the right of the title at the top of the chat.",
+          "Each click advances to the next model. Repeat until the desired model appears."
+        ],
+        "notes_en": "OpenAI connection example. label is the button hover hint. Change providers in settings."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "送れる文章の残りを表示",
+          "when": "2024-05-29..2024-05-29",
+          "where": "上部のモデル名の隣。残りが少ない場合や上限超過で表示色が変わる。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/assistant/src/assistant_panel.rs",
+              "date": "2024-05-29",
+              "kind": "source-code",
+              "shows": "会話欄上部のモデルボタンを押すたびに次のモデルへ循環。隣に残りの文章量を表示。"
+            }
+          ],
+          "text_en": "Show remaining message capacity",
+          "where_en": "Beside the top model name. Color changes when capacity is low or exceeded."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2024-05-29",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/assistant/src/assistant_panel.rs",
+            "date": "2024-05-29",
+            "kind": "source-code",
+            "shows": "会話欄上部のモデルボタンを押すたびに次のモデルへ循環。隣に残りの文章量を表示。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/settings/default.json",
+            "date": "2024-05-29",
+            "kind": "source-code",
+            "shows": "標準のOpenAI接続の既定モデルはgpt-4o。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "会話も編集できる文章として扱い、上部のボタンを何度も押してモデルを巡回する形だった。（https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/assistant/src/assistant_panel.rs）",
+      "trend_en": "Chat is editable text, with repeated clicks on a top button cycling models. (https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/crates/assistant/src/assistant_panel.rs)"
+    },
+    {
+      "id": "zed-2024-08-macos",
+      "model_switch": {
+        "where": "top-dropdown",
+        "label": "Change Model",
+        "steps": [
+          "会話欄の上部の操作列でモデル名を押す。",
+          "設定した接続先のモデル一覧から選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/crates/assistant/src/assistant_panel.rs",
+            "date": "2024-08-20",
+            "kind": "source-code",
+            "shows": "会話の上部の操作列にChange Modelの選択メニューを置く。"
+          },
+          {
+            "url": "https://zed.dev/blog/zed-ai",
+            "date": "2024-08-20",
+            "kind": "blog",
+            "shows": "Zed AIを公開。Claude 3.5 Sonnetを使い、公開初期は無料と案内。"
+          }
+        ],
+        "notes": "題名付近の操作列の選択メニュー。Claude 3.5 Sonnetの提供は確認できたが、候補の完全な表示名と既定値は unverified。",
+        "steps_en": [
+          "Click the model name in the toolbar at the top of the chat.",
+          "Choose from the configured provider's model list."
+        ],
+        "notes_en": "Selection menu in the toolbar near the title. Claude 3.5 Sonnet availability is confirmed. Full option labels and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "pricing",
+          "text": "公開初期は無料で利用可能",
+          "when": "2024-08-20..2024-08-20",
+          "where": "Zed AI公開時の公式案内。終了日とアプリ内の通知位置は unverified。",
+          "sources": [
+            {
+              "url": "https://zed.dev/blog/zed-ai",
+              "date": "2024-08-20",
+              "kind": "blog",
+              "shows": "Zed AIを公開。Claude 3.5 Sonnetを使い、公開初期は無料と案内。"
+            }
+          ],
+          "text_en": "Free during the initial release",
+          "where_en": "Official Zed AI launch announcement. Offer end date and in-app notice placement are unverified."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2024-08-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/crates/assistant/src/assistant_panel.rs",
+            "date": "2024-08-20",
+            "kind": "source-code",
+            "shows": "会話の上部の操作列にChange Modelの選択メニューを置く。"
+          },
+          {
+            "url": "https://zed.dev/blog/zed-ai",
+            "date": "2024-08-20",
+            "kind": "blog",
+            "shows": "Zed AIを公開。Claude 3.5 Sonnetを使い、公開初期は無料と案内。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "文章型の会話を保ちながら、上部でモデル一覧を開く形へ変わる。（https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/crates/assistant/src/assistant_panel.rs、https://zed.dev/blog/zed-ai）",
+      "trend_en": "Document-style chat remains, with a top model list replacing cycling. (https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/crates/assistant/src/assistant_panel.rs、https://zed.dev/blog/zed-ai)"
+    },
+    {
+      "id": "zed-2025-04-macos",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "4月のAgentic Editingベータ固有のモデル切替手順は unverified。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/zed-industries/zed/discussions/24028",
+            "date": "2025-03-31",
+            "kind": "maintainer-discussion",
+            "shows": "担当者がAgentic Editing betaの参加申込みを案内。"
+          }
+        ],
+        "notes": "旧文章型のAssistant PanelとベータのAgent Panelを混ぜない。5月7日の選択欄を4月へ遡らせない。",
+        "steps_en": [
+          "unverified (model switching steps specific to April's Agentic Editing beta)."
+        ],
+        "notes_en": "Keep the older document-style Assistant Panel and beta Agent Panel separate. April selection requires evidence beyond May 7."
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2025-04-23",
+        "sources": [
+          {
+            "url": "https://github.com/zed-industries/zed/discussions/24028",
+            "date": "2025-03-31",
+            "kind": "maintainer-discussion",
+            "shows": "担当者がAgentic Editing betaの参加申込みを案内。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "編集を進めるAgentの試用へ移る途中で、旧文章型の会話とは別の操作面が用意される。（https://github.com/zed-industries/zed/discussions/24028）",
+      "trend_en": "Agent editing trials introduce a separate interface alongside the older document-style chat. (https://github.com/zed-industries/zed/discussions/24028)"
+    },
+    {
+      "id": "zed-2025-05",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "Agent Panelのメッセージ入力にあるモデル選択を押す。",
+          "使う接続先とモデルを選ぶ。"
+        ],
+        "options": [
+          "Claude 3.5 Sonnet",
+          "Claude 3.7 Sonnet"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/37010aac6b340e058ef9c5a3c783802af90e5b9f/docs/src/ai/agent-panel.md",
+            "date": "2025-05-07",
+            "kind": "source-code",
+            "shows": "入力欄のモデル選択。非対応モデルはNo toolsを表示。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/37010aac6b340e058ef9c5a3c783802af90e5b9f/docs/src/ai/models.md",
+            "date": "2025-05-07",
+            "kind": "source-code",
+            "shows": "Zed提供のClaude 3.5 SonnetとClaude 3.7 Sonnet。標準と長い文章向けの条件を区別。"
+          }
+        ],
+        "notes": "Zed提供の一覧で確認できた候補のみ。自分のキーや手元のモデルは別途設定できる。ボタンの正確な表示と既定値は unverified。",
+        "steps_en": [
+          "Click the model selector in the Agent Panel message input.",
+          "Choose a provider and model."
+        ],
+        "notes_en": "Only confirmed options in Zed's hosted list. Your own keys and local models can be configured separately. Exact button display and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "無料は月50回、Proは月500回",
+          "when": "2025-05-07..2025-05-07",
+          "where": "公開時の料金案内。自分のAPIキーを使う場合は別条件。会話内に上限バナーが常設される証拠ではない。",
+          "sources": [
+            {
+              "url": "https://zed.dev/blog/fastest-ai-code-editor",
+              "date": "2025-05-07",
+              "kind": "blog",
+              "shows": "Agent Panelを一般公開。初期料金とモデル選択を説明。"
+            }
+          ],
+          "text_en": "50 requests per month free, 500 on Pro",
+          "where_en": "Launch pricing. Using your own API key has separate terms. A persistent chat limit banner is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2025-05-07",
+        "sources": [
+          {
+            "url": "https://zed.dev/blog/fastest-ai-code-editor",
+            "date": "2025-05-07",
+            "kind": "blog",
+            "shows": "Agent Panelを一般公開。初期料金とモデル選択を説明。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/37010aac6b340e058ef9c5a3c783802af90e5b9f/docs/src/ai/agent-panel.md",
+            "date": "2025-05-07",
+            "kind": "source-code",
+            "shows": "入力欄のモデル選択。非対応モデルはNo toolsを表示。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "会話の入力からモデルを選び、作業後は複数ファイルの変更をまとめて確認する形になる。（https://raw.githubusercontent.com/zed-industries/zed/37010aac6b340e058ef9c5a3c783802af90e5b9f/docs/src/ai/agent-panel.md、https://zed.dev/blog/fastest-ai-code-editor）",
+      "trend_en": "Models are selected from chat input, with multi-file changes reviewed together afterward. (https://raw.githubusercontent.com/zed-industries/zed/37010aac6b340e058ef9c5a3c783802af90e5b9f/docs/src/ai/agent-panel.md、https://zed.dev/blog/fastest-ai-code-editor)"
+    },
+    {
+      "id": "zed-2025-09-macos",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "ZedのAgentのメッセージ入力にあるモデル選択を押す。",
+          "設定した接続先とモデルを選ぶ。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md",
+            "date": "2025-09-16",
+            "kind": "source-code",
+            "shows": "モデル選択は入力欄。外部Agentではモデル選択など一部機能が未対応。容量が近づくと要約して新規会話へ移る案内。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md",
+            "date": "2025-09-16",
+            "kind": "source-code",
+            "shows": "右上の+で外部Agentを選ぶ。これはモデル選択とは別。"
+          }
+        ],
+        "notes": "Claude CodeやGemini CLIなど外部Agentの会話では、当時このモデル選択が未対応。外部Agentを選ぶ右上の+と区別する。全候補・既定値は unverified。",
+        "steps_en": [
+          "Click the model selector in Zed Agent's message input.",
+          "Choose a configured provider and model."
+        ],
+        "notes_en": "External-agent chats such as Claude Code and Gemini CLI lacked this selector then. The top-right + selects agents separately. Full options and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "要約して新しい会話へ",
+          "when": "2025-09-16..2025-09-16",
+          "where": "会話の容量に近づくと入力欄の下に案内が出る。要約を次の会話へ引き継げる。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md",
+              "date": "2025-09-16",
+              "kind": "source-code",
+              "shows": "モデル選択は入力欄。外部Agentではモデル選択など一部機能が未対応。容量が近づくと要約して新規会話へ移る案内。"
+            }
+          ],
+          "text_en": "Summarize and start a new chat",
+          "where_en": "Guidance below the input near conversation capacity, allowing a summary to carry into the next chat."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2025-09-16",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md",
+            "date": "2025-09-16",
+            "kind": "source-code",
+            "shows": "モデル選択は入力欄。外部Agentではモデル選択など一部機能が未対応。容量が近づくと要約して新規会話へ移る案内。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md",
+            "date": "2025-09-16",
+            "kind": "source-code",
+            "shows": "右上の+で外部Agentを選ぶ。これはモデル選択とは別。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "同じ会話面に外部Agentも選べるようになり、Agentの選択とモデルの選択が別の入口になる。（https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md、https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md）",
+      "trend_en": "External agents become available in the same chat workspace, with separate agent and model selectors. (https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/agent-panel.md、https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/docs/src/ai/external-agents.md)"
+    },
+    {
+      "id": "zed-2026-04",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "Agent Panelのメッセージ入力にあるモデル選択を押す。",
+          "同名のモデルでも接続先を確認して選ぶ。",
+          "よく使う候補は星のボタンでお気に入りにする。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f939ec604925667ea8281e1fa74600688d482706/docs/src/ai/agent-panel.md",
+            "date": "2026-04-22",
+            "kind": "source-code",
+            "shows": "入力欄のモデル選択とお気に入り。会話容量が近づくと入力の上に案内。"
+          }
+        ],
+        "notes": "モデルは会話入力に付属。左へ移ったAgent Panelを再現する場合も、画面全体の上部へ移さない。提供元の印はコピーせず平文で示す。全候補・既定値は unverified。",
+        "steps_en": [
+          "Click the model selector in the Agent Panel message input.",
+          "Check the provider when selecting models with the same name.",
+          "Use the star button to favorite frequently used options."
+        ],
+        "notes_en": "Model selection stays with chat input when the Agent Panel moves left. Show providers in plain text. Full options and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "要約して新しい会話へ",
+          "when": "2026-04-22..2026-04-22",
+          "where": "容量が近づくと、メッセージ入力欄の上に案内が出る。2025年9月の下側という説明とは区別。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/zed-industries/zed/f939ec604925667ea8281e1fa74600688d482706/docs/src/ai/agent-panel.md",
+              "date": "2026-04-22",
+              "kind": "source-code",
+              "shows": "入力欄のモデル選択とお気に入り。会話容量が近づくと入力の上に案内。"
+            }
+          ],
+          "text_en": "Summarize and start a new chat",
+          "where_en": "Guidance above the message input near capacity, reflecting a change from the September 2025 position below."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2026-04-22",
+        "sources": [
+          {
+            "url": "https://zed.dev/blog/parallel-agents",
+            "date": "2026-04-22",
+            "kind": "blog",
+            "shows": "会話一覧とAgent Panelを左、ファイルとGitを右にする新配置。既存利用者は任意で変更。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/f939ec604925667ea8281e1fa74600688d482706/docs/src/ai/agent-panel.md",
+            "date": "2026-04-22",
+            "kind": "source-code",
+            "shows": "入力欄のモデル選択とお気に入り。会話容量が近づくと入力の上に案内。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "会話一覧とAgentの面を左、ファイルの一覧を右へ置く新しい配置になる。（https://zed.dev/blog/parallel-agents）",
+      "trend_en": "A new layout puts chat lists and the Agent workspace on the left, with files on the right. (https://zed.dev/blog/parallel-agents)"
+    },
+    {
+      "id": "zed-2026-11-macos",
+      "model_switch": {
+        "where": "input-bar",
+        "label": "unverified",
+        "steps": [
+          "会話入力のモデル選択を押す。",
+          "使う接続先のモデルを選ぶ。",
+          "お気に入りを付ける場合は候補に重ねて星のボタンを押す。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+            "date": "2026-11-04",
+            "kind": "source-code",
+            "shows": "入力のモデル選択、お気に入り、自動要約、Steer。小容量のモデルのみ上限付近で新規会話の案内。"
+          }
+        ],
+        "notes": "同じモデルを複数の接続先で使える。ロゴは保存・模写せず、再描画では接続先を平文で補う。全候補・ボタン本文・既定値は unverified。",
+        "steps_en": [
+          "Click the model selector in the chat input.",
+          "Choose a model from the provider you want.",
+          "To favorite an option, hover over it and click the star."
+        ],
+        "notes_en": "The same model can use multiple providers. Show provider names in plain text in the reconstruction. Full options, button text and default are unverified."
+      },
+      "accents": [
+        {
+          "kind": "limits",
+          "text": "Start New Thread",
+          "when": "2026-11-04..2026-11-04",
+          "where": "自動要約に対応しない小容量のモデルで、容量の上限が近づくと入力欄の上の案内に出る。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+              "date": "2026-11-04",
+              "kind": "source-code",
+              "shows": "入力のモデル選択、お気に入り、自動要約、Steer。小容量のモデルのみ上限付近で新規会話の案内。"
+            }
+          ],
+          "where_en": "Guidance above the input near capacity for small-context models without automatic summarization."
+        },
+        {
+          "kind": "other",
+          "text": "Context Compacted",
+          "when": "2026-11-04..2026-11-04",
+          "where": "長いZed Agentの会話を自動で要約した際の履歴の行。開くと要約を読める。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+              "date": "2026-11-04",
+              "kind": "source-code",
+              "shows": "入力のモデル選択、お気に入り、自動要約、Steer。小容量のモデルのみ上限付近で新規会話の案内。"
+            }
+          ],
+          "where_en": "History row after automatic summarization of a long Zed Agent chat. Open it to read the summary."
+        }
+      ],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "Zed ウィンドウ",
+        "date_shown": "2026-11-04",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md",
+            "date": "2026-11-04",
+            "kind": "source-code",
+            "shows": "入力のモデル選択、お気に入り、自動要約、Steer。小容量のモデルのみ上限付近で新規会話の案内。"
+          },
+          {
+            "url": "https://zed.dev/blog/parallel-agents",
+            "date": "2026-04-22",
+            "kind": "blog",
+            "shows": "会話一覧とAgent Panelを左、ファイルとGitを右にする新配置。既存利用者は任意で変更。"
+          }
+        ],
+        "app_shell_en": "Zed window"
+      },
+      "trend": "並列の会話を一覧にまとめ、長い会話は要約の行として履歴に残す形になる。（https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md）",
+      "trend_en": "Parallel chats gather in a list, with long chats retained as summary rows in history. (https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/docs/src/ai/agent-panel.md)"
+    }
+  ]
+}

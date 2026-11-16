@@ -1,0 +1,109 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Mistral",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "mistral-prompting",
+      "publisher": "Mistral",
+      "kind": "prompting-guide",
+      "title": "Mistral の具体的な指示",
+      "url": "https://docs.mistral.ai/inference/prompting",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "mistral"
+        ],
+        "model_ids": [
+          "mistral-7b",
+          "mixtral-8x7b"
+        ],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "曖昧な形容詞を避け、具体的な条件や数値で望む答えを伝えます。",
+          "when_ja": "「短く」「良くして」だけでは意図が伝わらないとき。",
+          "summary_en": "Describe the desired answer with concrete constraints or numbers in place of vague adjectives.",
+          "when_en": "When requests such as “short” or “improve it” are too vague."
+        },
+        {
+          "technique_id": "spec",
+          "summary_ja": "長い指示に矛盾がないか見直し、判断の分岐を整理します。",
+          "when_ja": "例外の多い業務の約束を伝えるとき。",
+          "summary_en": "Review long instructions for contradictions and organize decision branches.",
+          "when_en": "When describing business rules with many exceptions."
+        }
+      ],
+      "sources": [
+        "https://docs.mistral.ai/inference/prompting"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Specific instructions for Mistral"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "mistral-cookbook",
+      "publisher": "Mistral",
+      "kind": "cookbook",
+      "title": "分類・要約・見直しの実例",
+      "url": "https://docs.mistral.ai/resources/cookbooks/mistral-prompting-prompting_capabilities",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "mistral"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "verify",
+          "summary_ja": "分類や要約の例を試し、作った答えを評価する段階も設けます。",
+          "when_ja": "仕事に合う指示文を実例から考えたいとき。",
+          "summary_en": "Try classification and summarization examples and include a stage for evaluating generated answers.",
+          "when_en": "When developing task-specific prompts from examples."
+        }
+      ],
+      "sources": [
+        "https://docs.mistral.ai/resources/cookbooks/mistral-prompting-prompting_capabilities"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Classification, summary and review examples"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "mistral-structured",
+      "publisher": "Mistral",
+      "kind": "prompting-guide",
+      "title": "Mistral の指定した項目での回答",
+      "url": "https://docs.mistral.ai/inference/conversations/structured-output/custom",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "mistral"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "output-format",
+          "summary_ja": "JSON（項目名と値で表す形式）の項目と型を決め、説明も加えます。",
+          "when_ja": "後の処理で読める回答が必要なとき。",
+          "summary_en": "Define JSON fields and types and add descriptions.",
+          "when_en": "When answers need to be read by a later processing step."
+        }
+      ],
+      "sources": [
+        "https://docs.mistral.ai/inference/conversations/structured-output/custom"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Mistral answers with specified fields"
+    }
+  ]
+}

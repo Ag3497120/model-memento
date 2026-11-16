@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Model Memento</title>
+<meta name="description" content="過去と現在の AI モデルを、当時のエディターやエージェントツールの画面ごと呼び出して使えるラボ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-concept="rebuild">
+<button type="button" class="memento-fab" id="mementoFab" aria-expanded="false" title="Memento のメニュー（モデル・ツール・設定）を開く">Memento</button>
+<div class="ide" id="ide" data-panel="models">
+  <!-- 上の帯: モデルと道具を別々に選ぶ -->
+  <header class="titlebar">
+    <a class="brand" href="#" aria-label="Model Memento">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">Model Memento</span>
+    </a>
+    <div class="titlebar-side">
+      <div class="clock-chip" title="今日の日付と、記録しているモデルの数">
+        <span id="today"></span>
+        <small id="todayNote"></small>
+      </div>
+      <button class="util-btn" id="moreBtn" aria-expanded="false" aria-controls="tbMore">設定</button>
+      <div class="tb-more" id="tbMore">
+        <div class="pill-group" id="concepts" role="radiogroup" aria-label="見せ方"></div>
+        <button class="util-btn" id="vcrossBtn" title="名簿と道具の年表を Vera の台帳（.vcross）に書き出して検証する">
+          <span class="dot" id="vcrossDot"></span><span id="vcrossLabel">記録の検証（開発者向け）</span>
+        </button>
+        <button class="util-btn" id="researchDrawerBtn" title="モデルの名簿やツールの記録を集め直す、モデルを深く調べる">記録を集める</button>
+        <button class="util-btn" id="langBtn" title="English / 日本語">EN</button>
+        <button class="util-btn" id="themeBtn" title="明るい・暗い・端末に合わせる">表示</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="static-note" id="staticNote" hidden><span></span><button type="button" class="ghost small" id="staticNoteClose" aria-label="このお知らせを閉じる">閉じる</button></div>
+
+  <div class="ide-body">
+    <!-- 左端の縦の列（スマホでは下のタブ） -->
+    <nav class="activity" id="activity" aria-label="パネル">
+      <button type="button" data-panel="env" aria-pressed="false" title="答え方・画面・指示ファイル"><span class="ic" aria-hidden="true">⚙</span><span>設定</span></button>
+      <button type="button" data-panel="models" aria-pressed="true" title="モデルを選ぶ・さがす"><span class="ic" aria-hidden="true">◎</span><span>モデル</span></button>
+      <button type="button" data-panel="tools" aria-pressed="false" title="使うツール（エディター・エージェントツール）の版"><span class="ic" aria-hidden="true">▤</span><span>ツール</span></button>
+      <button type="button" data-panel="files" aria-pressed="false" title="指示ファイル（CLAUDE.md など）"><span class="ic" aria-hidden="true">❐</span><span>指示ファイル</span></button>
+      <button type="button" data-panel="memories" aria-pressed="false" title="思い出・感謝・投票"><span class="ic" aria-hidden="true">✿</span><span>思い出</span></button>
+      <button type="button" data-panel="inspect" aria-pressed="false" title="このモデルの概要・手元で動かす方法・出典"><span class="ic" aria-hidden="true">⌕</span><span>このモデル</span></button>
+      <button type="button" data-panel="editor" class="only-narrow" aria-pressed="false" title="エディターに戻る"><span class="ic" aria-hidden="true">✎</span><span>エディター</span></button>
+    </nav>
+
+    <aside class="sidepanel" id="sidepanel">
+      <!-- 環境: 実行の仕方・画面・ハーネスの接続。道具の画面に入っているあいだは、Memento の引き出しから開く -->
+      <section class="panel" id="panel-env" data-for="env" hidden>
+        <div class="panel-head">
+          <h2 class="subject-name" id="sName">—</h2>
+          <div class="subject-title-row">
+            <span class="chip" id="sShellBadge" hidden></span>
+            <span class="chip accent" id="sArchetype" hidden></span>
+          </div>
+          <span class="subject-meta" id="sMeta"></span>
+        </div>
+        <div class="env-row">
+          <span class="env-label" id="envEdition"></span>
+        </div>
+        <div class="env-group">
+          <label class="env-label" for="sFamily">使うツール（会社・製品）</label>
+          <select id="sFamily"></select>
+          <p class="hint" id="familyNote"></p>
+        </div>
+        <div class="env-group">
+          <div class="env-label">答え方</div>
+          <div class="mode-pills" id="pipelineModes" role="radiogroup" aria-label="答え方">
+            <button type="button" data-pmode="static" aria-checked="false" title="モデルを使わず、記録に残っている事実だけを出す">資料だけ</button>
+            <button type="button" data-pmode="hybrid" aria-checked="true" title="本物が手に入らない過去のモデルを、今のモデルが再現する">再現</button>
+            <button type="button" data-pmode="real" aria-checked="false" title="本物のモデルで動かす（今のモデル、または手元に重みがある過去のモデル）">本物</button>
+          </div>
+          <div class="hint" id="realInfo"></div>
+          <div class="control-row">
+            <label class="env-label" for="sActor">再現に使うモデル</label>
+            <select id="sActor" aria-label="再現に使うモデル" title="過去のモデルの代わりに答える、今のモデル"></select>
+          </div>
+        </div>
+        <div class="env-group">
+          <div class="env-label">画面（エディター・アプリのデザイン）</div>
+          <label class="sr-only" for="sTool">画面</label>
+          <select id="sTool" aria-label="画面"></select>
+          <label class="check"><input type="checkbox" id="lockTool"> 画面を固定して、モデルだけ替える</label>
+        </div>
+        <div class="env-group">
+          <div class="env-label">指示ファイルと動き方（どのツールのものを使うか）</div>
+          <label class="sr-only" for="sHarness">指示ファイルと動き方</label>
+          <select id="sHarness" aria-label="指示ファイルと動き方"></select>
+          <p class="hint" id="harnessNote"></p>
+        </div>
+        <div class="env-group">
+          <div class="surface-toggle" id="viewSwitch" role="radiogroup" aria-label="表示">
+            <button type="button" data-sview="chat" aria-checked="true">会話</button>
+            <button type="button" data-sview="split" aria-checked="false">＋モデルが作った画面</button>
+          </div>
+          <div class="control-row">
+            <button type="button" class="small" id="sCalBtn" title="本物の出力と同じ質問を再現に使うモデルにも投げ、口調の差を合わせる">口調を合わせる</button>
+            <button type="button" class="small" id="sDeep" title="論文・評価・利用者の声・出力データセットの 4 方向から調べる（数分）">深く調べる</button>
+          </div>
+        </div>
+        <div class="env-group statusbar-in-panel">
+          <span class="sb-item" id="pipeStage1"><b>資料</b> <span id="pipe1Text">準備中</span></span>
+          <span class="sb-item" id="pipeStage2"><b>モデル</b> <span id="pipe2Text">—</span></span>
+          <span class="sb-item" id="sbFile"></span>
+          <span class="sb-item" id="ctxMeter" title="当時の文脈長のうち、この会話が使っている量"><span class="mono" id="ctxLabel">文脈 —</span><span class="ctx-bar"><b id="ctxFill" style="width:0%"></b></span></span>
+        </div>
+      </section>
+
+      <!-- モデル: 名簿・今のモデル・さがす -->
+      <section class="panel" id="panel-models" data-for="models">
+        <div class="panel-head"><h2>モデル</h2><p class="hint">選ぶと、エディターがそのモデルの時代の道具の画面になります。</p></div>
+        <form id="summonForm" class="quick-resolve">
+          <label class="sr-only" for="summonName">呼ぶモデルの名前</label>
+          <input id="summonName" placeholder="モデル名、または Hugging Face の user/repo" required>
+          <button type="submit" class="primary small" id="summonBtn" data-i18n="btn_resolve">呼ぶ</button>
+        </form>
+        <div class="subtabs" role="tablist">
+          <button role="tab" data-mtab="roster" aria-selected="true">名簿</button>
+          <button role="tab" data-mtab="live" aria-selected="false">今のモデル</button>
+          <button role="tab" data-mtab="search" aria-selected="false">さがす</button>
+        </div>
+        <div data-mpane="roster" class="mpane">
+          <div class="filter-strip" id="filters"></div>
+          <div class="roster-scroll" id="cards"></div>
+        </div>
+        <div data-mpane="live" class="mpane" hidden>
+          <p class="hint">サブスク（Claude Code・Codex）とローカル（Ollama）で動く今のモデル。直接話せるほか、過去のモデルの再現にも使います。</p>
+          <div class="live-pills" id="live"></div>
+        </div>
+        <div data-mpane="search" class="mpane" hidden>
+          <div class="counts" id="regCounts"></div>
+          <div class="subtabs small-tabs" role="tablist">
+            <button role="tab" data-sub="open" aria-selected="true">公開</button>
+            <button role="tab" data-sub="closed" aria-selected="false">クローズド</button>
+          </div>
+          <div id="hfToolbar" class="toolbar">
+            <form id="hfForm" class="toolbar-inline">
+              <select id="hreg" aria-label="登録所"></select>
+              <input id="hq" type="search" placeholder="検索（例: qwen, llama）" aria-label="検索">
+              <select id="hsort" aria-label="並び順"><option value="trendingScore">注目</option><option value="downloads">ダウンロード数</option><option value="likes">いいね</option><option value="createdAt">新しい順</option></select>
+              <select id="hpipe" aria-label="種類"><option value="text-generation">文章生成</option><option value="image-text-to-text">画像＋文章</option><option value="">すべての種類</option></select>
+              <select id="hfilter" aria-label="形式"><option value="">すべての形式</option><option value="gguf">GGUF</option><option value="mlx">MLX</option></select>
+              <button type="submit" class="primary small">検索</button>
+            </form>
+          </div>
+          <div id="closedToolbar" class="toolbar" hidden>
+            <input id="cq" type="search" placeholder="名前で絞り込む（例: claude, gpt-4）" aria-label="名前で絞り込む">
+            <label class="check"><input type="checkbox" id="cOpen"> オープンウェイトも</label>
+            <span class="count" id="cCount"></span>
+            <div class="chips" id="cVendors"></div>
+          </div>
+          <div id="sub-open">
+            <div id="hfGrid" class="hf-grid"></div>
+            <div class="cat-more-row"><button id="hMore" class="small">次の 36 件</button></div>
+          </div>
+          <div id="sub-closed" hidden>
+            <div class="ledger-wrap">
+              <table class="ledger" id="cTable">
+                <thead><tr><th>モデル</th><th>開発元</th><th>公開</th><th class="num">文脈</th><th></th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="cat-more-row"><button id="cMore" class="small">さらに表示</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 道具: 版の移り変わり・GitHub の公開履歴・このモデルの時代の道具 -->
+      <section class="panel" id="panel-tools" data-for="tools" hidden>
+        <div class="panel-head"><h2>使うツール</h2><p class="hint">エディターやエージェントツールの版。モデルとは別に選べます。</p></div>
+        <div id="insp-tool" class="insp-pane"></div>
+      </section>
+
+      <!-- ファイル: 道具が読む指示ファイル -->
+      <section class="panel" id="panel-files" data-for="files" hidden>
+        <div class="panel-head"><h2>指示ファイル</h2><p class="hint" id="filesNote"></p></div>
+        <div class="file-list" id="fileList"></div>
+        <label class="sr-only" for="fileEditor">指示ファイルの中身</label>
+        <textarea id="fileEditor" class="file-editor" spellcheck="false"></textarea>
+        <div class="file-actions">
+          <label class="check"><input type="checkbox" id="fileUse" checked> 会話でモデルに渡す</label>
+          <button type="button" class="small" id="fileReset">ひな形に戻す</button>
+        </div>
+      </section>
+
+      <!-- 思い出: このモデルへの思い出・感謝、かつてのスターへの投票 -->
+      <section class="panel" id="panel-memories" data-for="memories" hidden>
+        <div class="panel-head"><h2>思い出</h2><p class="hint" id="memNote"></p></div>
+        <form id="memForm" class="mem-form">
+          <div class="chips" id="memKinds" role="radiogroup" aria-label="種類">
+            <button type="button" data-kind="memory" aria-pressed="true">思い出</button>
+            <button type="button" data-kind="thanks" aria-pressed="false">感謝</button>
+          </div>
+          <label class="sr-only" for="memText">書く</label>
+          <textarea id="memText" rows="3" maxlength="600" placeholder="このモデルと過ごした思い出や、ありがとうを書く"></textarea>
+          <div class="file-actions"><span class="hint" id="memCount">0 / 600</span><button type="submit" class="primary small">残す</button></div>
+        </form>
+        <div class="mem-list" id="memList"></div>
+        <div class="panel-head"><h3>かつてのスター</h3><p class="hint" id="rankNote"></p></div>
+        <div class="toolbar">
+          <select id="rankSort" aria-label="並び順"><option value="votes">票が多い順</option><option value="likes">いいね順</option><option value="old">古い順</option></select>
+          <input id="rankQ" type="search" placeholder="名前で絞り込む" aria-label="名前で絞り込む">
+        </div>
+        <div class="chips" id="rankYears"></div>
+        <ol class="rank-list" id="rankList"></ol>
+      </section>
+
+      <!-- 下調べ: モデルの下調べ・動かし方・演じ手・根拠 -->
+      <section class="panel" id="panel-inspect" data-for="inspect" hidden>
+        <div class="insp-tabs" id="inspTabs" role="tablist">
+          <button role="tab" data-insp="vera" aria-selected="true">概要</button>
+          <button role="tab" data-insp="run" aria-selected="false">手元で動かす</button>
+          <button role="tab" data-insp="kuron" aria-selected="false">再現のようす</button>
+          <button role="tab" data-insp="evidence" aria-selected="false">出典</button>
+        </div>
+        <div class="insp-body">
+          <div id="insp-vera" class="insp-pane"></div>
+          <div id="insp-run" class="insp-pane" hidden></div>
+          <div id="insp-kuron" class="insp-pane" hidden></div>
+          <div id="insp-evidence" class="insp-pane" hidden></div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- エディター（主役のモデルが、当時の道具の画面で動く） -->
+    <main class="center-stage" id="editor">
+
+      <div class="real-bar" id="sReal" hidden>
+        <label><input type="checkbox" id="sRealToggle"> 本物を動かす（ブラウザ内、初回は約 130 MB 読み込み）</label>
+        <span id="sRealState" class="muted"></span>
+      </div>
+      <div class="banner-slim" id="sBanner"></div>
+
+      <div class="stage-canvas" id="stageCanvas" data-sview="chat">
+        <div class="skin" id="skinRoot">
+          <div data-skin="top"></div>
+          <div class="skin-body">
+            <div data-skin="left"></div>
+            <div class="skin-main">
+              <div data-skin="welcome"></div>
+              <div class="chat-pane" id="sChat" aria-live="polite"></div>
+                <form class="composer-bar" id="sForm">
+                  <div class="quick-prompts" id="quickPrompts">
+                    <button type="button" class="qchip" data-q="あなたは誰ですか？いつ、どこで、どんなふうに使われていましたか？">あなたは誰？</button>
+                    <button type="button" class="qchip" data-q="あなたが知っている AI の歴史を、あなたの知識の範囲で語ってください。">AI の歴史を聞く</button>
+                    <button type="button" class="qchip" data-q="あなたの時代の開発者は、どんな道具やエディターであなたを使っていましたか？">当時の使われ方</button>
+                    <button type="button" class="qchip" data-q="Claude Code や MCP について知っていますか？">締切より後のこと</button>
+                    <button type="button" class="qchip guide-chip" data-guide aria-pressed="false" title="設定やわからないことを、ふつうの言葉で頼む（例: Cursor の 2024 年の画面にして／画面を固定して／本物で動かして）">Memento に頼む</button>
+                    <button type="button" class="qchip combo" data-combo title="今のモデルが、いまの組み合わせ（モデル・画面・指示ファイル）でどうなるかを答えます">この組み合わせだとどうなる？</button>
+                  </div>
+                  <div class="composer-row">
+                    <label class="sr-only" for="sInput">話しかける</label>
+                    <textarea id="sInput" rows="2" placeholder="話しかける（Enter で送る）"></textarea>
+                    <button type="submit" id="sSend" class="primary">送る</button>
+                  </div>
+                </form>
+              <div data-skin="bottom"></div>
+            </div>
+            <div data-skin="right"></div>
+          </div>
+        </div>
+        <div class="surface-pane" id="surfacePane" hidden>
+          <div class="surface-hdr">
+            <span class="eyebrow" id="surfaceTitle">モデルが作った画面</span>
+            <span class="chip" id="surfaceSkinTag">—</span>
+          </div>
+          <iframe id="eraFrame" class="era-frame" sandbox="allow-scripts" referrerpolicy="no-referrer" title="モデルが作った画面"></iframe>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+</div>
+
+<dialog id="launchPop" class="model-pop launch-pop">
+  <div class="pop-head"><b class="launch-title">どのエージェントツールを使いますか？</b></div>
+  <p class="hint">モデルを選ぶたびに、そのモデルが使われていた頃の画面になります。例えば Claude を選ぶと、Claude Code がまだなかった頃のモデルは Web の Claude.ai の画面になります。あとから「設定」で変えられます。</p>
+  <div class="pop-list" id="launchList"></div>
+  <button type="button" class="ghost small" id="launchSkip">あとで決める（おまかせ）</button>
+</dialog>
+
+<dialog id="modelPop" class="model-pop">
+  <div class="pop-head">
+    <span class="pop-crumb" id="popCrumb">モデル</span>
+    <button class="ghost small" id="popClose" aria-label="閉じる">✕</button>
+  </div>
+  <label class="sr-only" for="popQ">モデルを絞り込む</label>
+  <input id="popQ" type="search" placeholder="モデル名で絞り込む" autocomplete="off">
+  <p class="hint" id="popHint"></p>
+  <div class="pop-list" id="popList"></div>
+</dialog>
+
+<dialog id="researchDialog" class="modal-box modal-narrow">
+  <div class="modal-head">
+    <h2>調査と Vera の台帳</h2>
+    <button class="ghost" id="researchClose" aria-label="閉じる">✕</button>
+  </div>
+  <div class="modal-scroll stack">
+    <div id="boot" class="boot"></div>
+    <div class="vcross-card" id="vcrossBox"></div>
+    <form id="researchForm" class="research-form">
+      <label>id<input name="id" id="rid" placeholder="llama-2-70b-chat" required pattern="[a-z0-9][a-z0-9._\-]*"></label>
+      <label>表示名<input name="name" id="rname" placeholder="Llama 2 70B Chat" required></label>
+      <label>開発元<input name="vendor" id="rvendor" placeholder="Meta"></label>
+      <label>別名<input name="aliases" id="raliases" placeholder="llama-2, llama2-chat"></label>
+      <label class="wide">ヒント<input name="hint" id="rhint" placeholder="任意"></label>
+      <button type="submit" class="primary" id="researchBtn">深く調べて人格を保存</button>
+    </form>
+    <pre id="researchLog" class="log" hidden></pre>
+  </div>
+</dialog>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

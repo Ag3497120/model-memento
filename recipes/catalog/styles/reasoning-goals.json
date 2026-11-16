@@ -1,0 +1,75 @@
+{
+  "schema": "memento.style.v1",
+  "id": "reasoning-goals",
+  "name": "目的と合格条件を渡す",
+  "plain": "考え方を細かく指定せず、達成したいことと確かめ方を渡します。",
+  "when": "自分で考えて答える推論モデルに、複雑な仕事を頼むとき。",
+  "since": "2024-12",
+  "popularized_by": [
+    "OpenAI の推論モデル向けガイド"
+  ],
+  "since_basis": "推論モデルの世代と、資料中の o1-2024-12-17 を目印にした年月です。この助言の初出日は unverified です。",
+  "files": [
+    {
+      "path": "project/AGENTS.md",
+      "content": "# 日本語\n\n目的は現在の依頼を満たすことです。合格条件は、依頼の条件をすべて満たし、根拠を確認でき、未確認の部分が明示されることです。手段は任せます。結論、確認結果、残った制約を日本語で短く返してください。\n\n# English\n\nMeet the current request. Acceptance criteria: satisfy its constraints, provide checkable evidence, and identify unverified parts. Choose the method yourself. Return the result, verification, and remaining limits briefly in Japanese.\n"
+    }
+  ],
+  "fits": {
+    "aider": "via AGENTS.md",
+    "antigravity": "via AGENTS.md",
+    "claude-code": "via AGENTS.md",
+    "codex": "via AGENTS.md",
+    "gemini-cli": "via AGENTS.md",
+    "hermes": "via AGENTS.md",
+    "openclaw": "via AGENTS.md",
+    "opencode": "via AGENTS.md",
+    "pi": "via AGENTS.md"
+  },
+  "fit_sources": {
+    "aider": [
+      "https://aider.chat/docs/usage/conventions.html"
+    ],
+    "antigravity": [
+      "https://antigravity.google/docs/rules/"
+    ],
+    "claude-code": [
+      "https://code.claude.com/docs/en/memory"
+    ],
+    "codex": [
+      "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+    ],
+    "gemini-cli": [
+      "https://geminicli.com/docs/cli/gemini-md/"
+    ],
+    "hermes": [
+      "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files"
+    ],
+    "openclaw": [
+      "https://docs.openclaw.ai/concepts/agent-workspace"
+    ],
+    "opencode": [
+      "https://opencode.ai/docs/instructions/"
+    ],
+    "pi": [
+      "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+    ]
+  },
+  "sources": [
+    "https://developers.openai.com/api/docs/guides/reasoning-best-practices",
+    "https://developers.openai.com/tracks/building-agents",
+    "https://aider.chat/docs/usage/conventions.html",
+    "https://antigravity.google/docs/rules/",
+    "https://code.claude.com/docs/en/memory",
+    "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "https://geminicli.com/docs/cli/gemini-md/",
+    "https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files",
+    "https://docs.openclaw.ai/concepts/agent-workspace",
+    "https://opencode.ai/docs/instructions/",
+    "https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/resource-loader.ts"
+  ],
+  "verified": {
+    "at": "2026-11-15",
+    "how": "docs"
+  }
+}

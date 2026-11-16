@@ -1,0 +1,1147 @@
+{
+  "hydropix--translatebookswithllms": {
+    "topics": [
+      "book-translation",
+      "docx",
+      "ebook-translator",
+      "epub",
+      "gemini",
+      "llm",
+      "lmstudio",
+      "localization-tool",
+      "ollama",
+      "openai-api",
+      "openrouter",
+      "pdf",
+      "poe",
+      "srt-subtitles",
+      "translation",
+      "translation-tool"
+    ],
+    "homepage": "https://github.com/hydropix/TranslateBooksWithLLMs/wiki",
+    "archived": false,
+    "commit": "7c1717615f66005e3de5604cf011a8e92049bb53",
+    "classification_basis": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2026-01-16"
+      ],
+      [
+        "v1.3.17",
+        "2026-05-28"
+      ],
+      [
+        "v1.3.18",
+        "2026-05-28"
+      ],
+      [
+        "v1.3.19",
+        "2026-05-28"
+      ],
+      [
+        "v1.3.20",
+        "2026-05-28"
+      ],
+      [
+        "v1.4.0",
+        "2026-05-29"
+      ],
+      [
+        "v1.4.1",
+        "2026-05-31"
+      ],
+      [
+        "v1.4.2",
+        "2026-06-01"
+      ],
+      [
+        "v1.4.3",
+        "2026-06-01"
+      ],
+      [
+        "v1.4.4",
+        "2026-06-01"
+      ],
+      [
+        "v1.4.5",
+        "2026-06-02"
+      ],
+      [
+        "v1.4.6",
+        "2026-06-03"
+      ],
+      [
+        "v1.4.7",
+        "2026-06-03"
+      ],
+      [
+        "v1.4.8",
+        "2026-06-06"
+      ],
+      [
+        "v1.4.9",
+        "2026-06-12"
+      ],
+      [
+        "v1.4.10",
+        "2026-06-16"
+      ],
+      [
+        "v1.4.11",
+        "2026-08-01"
+      ],
+      [
+        "v1.5.0",
+        "2026-08-02"
+      ],
+      [
+        "v1.5.1",
+        "2026-08-02"
+      ],
+      [
+        "v1.5.2",
+        "2026-08-03"
+      ],
+      [
+        "v1.5.4",
+        "2026-08-03"
+      ],
+      [
+        "v1.5.6",
+        "2026-08-09"
+      ],
+      [
+        "v1.5.7",
+        "2026-08-24"
+      ],
+      [
+        "v1.5.8",
+        "2026-08-24"
+      ],
+      [
+        "v1.5.9",
+        "2026-08-24"
+      ],
+      [
+        "v1.5.10",
+        "2026-09-06"
+      ],
+      [
+        "v1.5.11",
+        "2026-09-24"
+      ],
+      [
+        "v1.5.12",
+        "2026-09-28"
+      ],
+      [
+        "v1.5.13",
+        "2026-09-28"
+      ],
+      [
+        "v1.5.15",
+        "2026-10-03"
+      ],
+      [
+        "v1.5.16",
+        "2026-10-13"
+      ],
+      [
+        "v1.5.17",
+        "2026-10-23"
+      ],
+      [
+        "v1.5.18",
+        "2026-11-03"
+      ],
+      [
+        "v1.5.19",
+        "2026-11-06"
+      ],
+      [
+        "v1.5.20",
+        "2026-11-06"
+      ],
+      [
+        "v1.5.21",
+        "2026-11-06"
+      ],
+      [
+        "v1.5.22",
+        "2026-11-07"
+      ],
+      [
+        "v1.5.23",
+        "2026-11-13"
+      ],
+      [
+        "v1.5.24",
+        "2026-11-13"
+      ],
+      [
+        "v1.6.0",
+        "2026-11-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "docker run -p 5000:5000 -v $(pwd)/translated_files:/app/translated_files translatebook",
+    "install_evidence": [
+      {
+        "command": "docker run -p 5000:5000 -v $(pwd)/translated_files:/app/translated_files translatebook",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/README.md",
+        "line": 211
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/core/pdf/layout.py",
+        "src/core/job/context.py",
+        "src/core/term_fix/rules.py",
+        "src/core/epub/run_context.py",
+        "src/core/context_optimizer.py",
+        "src/utils/custom_instructions.py",
+        "scripts/migrate_custom_instructions.py",
+        "src/prompts/prompts.py",
+        "src/prompts/__init__.py",
+        "benchmark/cli.py",
+        "src/web/static/js/index.js",
+        "promo/source/render.py",
+        "src/web/static/js/utils/theme-manager.js"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "system_prompt_path": "src/prompts/prompts.py",
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [
+      {
+        "kind": "system_prompt",
+        "path": "src/prompts/prompts.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/prompts.py"
+      }
+    ],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "accent": "#3e5a78",
+      "bg": "#fffdf9",
+      "text": "#1f2a33",
+      "font_ui": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+      "font_mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "accent",
+        "key": "--primary-light",
+        "value": "#3e5a78",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+        "line": 9
+      },
+      {
+        "token": "bg",
+        "key": "--background-light",
+        "value": "#fffdf9",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+        "line": 11
+      },
+      {
+        "token": "text",
+        "key": "--text-dark",
+        "value": "#1f2a33",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+        "line": 14
+      },
+      {
+        "token": "font_ui",
+        "value": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+        "line": 72
+      },
+      {
+        "token": "font_mono",
+        "value": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+        "line": 1034
+      }
+    ],
+    "strings": [
+      "Styles",
+      "New from books",
+      "New blank style",
+      "Open folder",
+      "Name",
+      "Description",
+      "Phases",
+      "Mode",
+      "Actions",
+      "Edit",
+      "Duplicate",
+      "Assign to translation",
+      "Export",
+      "Delete",
+      "Style saved",
+      "Samples",
+      "Generate Audiobook",
+      "🎧 Generate Audiobook",
+      "TTS Provider",
+      "Edge TTS (Cloud)",
+      "Chatterbox TTS",
+      "(Not Available)",
+      "(Local GPU)",
+      "Chatterbox TTS (Not Available)",
+      "Chatterbox TTS (Local GPU)",
+      "Files",
+      "Select all",
+      "Download selected",
+      "Delete selected",
+      "Open output folder"
+    ],
+    "string_evidence": [
+      {
+        "text": "Styles",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "New from books",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "New blank style",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Open folder",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Name",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Description",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "Phases",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Mode",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Actions",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Edit",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Duplicate",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Assign to translation",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 14,
+        "kind": "i18n"
+      },
+      {
+        "text": "Export",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 18,
+        "kind": "i18n"
+      },
+      {
+        "text": "Delete",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 19,
+        "kind": "i18n"
+      },
+      {
+        "text": "Style saved",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 25,
+        "kind": "i18n"
+      },
+      {
+        "text": "Samples",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+        "line": 50,
+        "kind": "i18n"
+      },
+      {
+        "text": "Generate Audiobook",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "🎧 Generate Audiobook",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "TTS Provider",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Edge TTS (Cloud)",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Chatterbox TTS",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "(Not Available)",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "(Local GPU)",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 9,
+        "kind": "i18n"
+      },
+      {
+        "text": "Chatterbox TTS (Not Available)",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 10,
+        "kind": "i18n"
+      },
+      {
+        "text": "Chatterbox TTS (Local GPU)",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "Files",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+        "line": 2,
+        "kind": "i18n"
+      },
+      {
+        "text": "Select all",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Download selected",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Delete selected",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Open output folder",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+        "line": 8,
+        "kind": "i18n"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/hydropix/TranslateBooksWithLLMs",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/README.md",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/pyproject.toml",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/requirements.txt",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/de/style.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/es/style.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/benchmark/data/languages/en.yaml",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/common.json",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/pdf/layout.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/job/context.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/term_fix/rules.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/epub/run_context.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/context_optimizer.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/utils/custom_instructions.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/scripts/migrate_custom_instructions.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/prompts.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/__init__.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/benchmark/cli.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/js/index.js",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/promo/source/render.py",
+      "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/js/utils/theme-manager.js",
+      "https://api.github.com/repos/hydropix/TranslateBooksWithLLMs/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/pyproject.toml"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/requirements.txt"
+      },
+      {
+        "path": "src/web/static/style.css",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/style.css"
+      },
+      {
+        "path": "src/web/static/locales/de/style.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/de/style.json"
+      },
+      {
+        "path": "src/web/static/locales/en/style.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/style.json"
+      },
+      {
+        "path": "src/web/static/locales/es/style.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/es/style.json"
+      },
+      {
+        "path": "benchmark/data/languages/en.yaml",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/benchmark/data/languages/en.yaml"
+      },
+      {
+        "path": "src/web/static/locales/en/tts.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/tts.json"
+      },
+      {
+        "path": "src/web/static/locales/en/files.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/files.json"
+      },
+      {
+        "path": "src/web/static/locales/en/common.json",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/locales/en/common.json"
+      },
+      {
+        "path": "src/core/pdf/layout.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/pdf/layout.py"
+      },
+      {
+        "path": "src/core/job/context.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/job/context.py"
+      },
+      {
+        "path": "src/core/term_fix/rules.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/term_fix/rules.py"
+      },
+      {
+        "path": "src/core/epub/run_context.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/epub/run_context.py"
+      },
+      {
+        "path": "src/core/context_optimizer.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/core/context_optimizer.py"
+      },
+      {
+        "path": "src/utils/custom_instructions.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/utils/custom_instructions.py"
+      },
+      {
+        "path": "scripts/migrate_custom_instructions.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/scripts/migrate_custom_instructions.py"
+      },
+      {
+        "path": "src/prompts/prompts.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/prompts.py"
+      },
+      {
+        "path": "src/prompts/__init__.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/__init__.py"
+      },
+      {
+        "path": "benchmark/cli.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/benchmark/cli.py"
+      },
+      {
+        "path": "src/web/static/js/index.js",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/js/index.js"
+      },
+      {
+        "path": "promo/source/render.py",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/promo/source/render.py"
+      },
+      {
+        "path": "src/web/static/js/utils/theme-manager.js",
+        "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/web/static/js/utils/theme-manager.js"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ollama stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=30, theme=5.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → terminal / local-runtime",
+    "repository_id": 988184458,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:12.408Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "system_prompt_path",
+          "path": "src/prompts/prompts.py",
+          "source": "https://github.com/hydropix/TranslateBooksWithLLMs/blob/7c1717615f66005e3de5604cf011a8e92049bb53/src/prompts/prompts.py",
+          "verified": true
+        }
+      ]
+    }
+  },
+  "hyperspaceai--agi": {
+    "topics": [
+      "agi",
+      "ai-agents",
+      "ai-research",
+      "artificial-general-intelligence",
+      "autonomous-agents",
+      "autonomous-agents-",
+      "autoresearch",
+      "collaborative-ai",
+      "decentralized",
+      "distributed-ai",
+      "llm",
+      "p2p"
+    ],
+    "homepage": "https://agents.hyper.space/",
+    "archived": false,
+    "commit": "fb067577f6645ca66cfbc271fc13a38533f1b402",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "desktop-v3.0.0",
+        "2026-03-17"
+      ],
+      [
+        "chain-v1.3.0",
+        "2026-04-08"
+      ],
+      [
+        "chain-v1.3.1",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.3",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.4",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.5",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.6",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.7",
+        "2026-04-09"
+      ],
+      [
+        "chain-v1.3.8",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.9",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.10",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.11",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.12",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.13",
+        "2026-04-10"
+      ],
+      [
+        "chain-v1.3.17",
+        "2026-04-11"
+      ],
+      [
+        "chain-v1.3.18",
+        "2026-04-11"
+      ],
+      [
+        "chain-v1.3.19",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.3.20",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.3.21",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.3.22",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.3.23",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.3.24",
+        "2026-04-12"
+      ],
+      [
+        "chain-v1.4.0",
+        "2026-04-13"
+      ],
+      [
+        "chain-v1.7.4",
+        "2026-04-27"
+      ],
+      [
+        "chain-v1.7.2",
+        "2026-04-27"
+      ],
+      [
+        "chain-v1.7.5",
+        "2026-04-28"
+      ],
+      [
+        "chain-v1.7.6",
+        "2026-04-29"
+      ],
+      [
+        "chain-v1.7.7",
+        "2026-04-29"
+      ],
+      [
+        "chain-v1.7.8",
+        "2026-04-29"
+      ],
+      [
+        "chain-v1.7.13",
+        "2026-06-23"
+      ],
+      [
+        "chain-v1.7.14",
+        "2026-06-24"
+      ],
+      [
+        "chain-v1.7.15",
+        "2026-06-25"
+      ],
+      [
+        "chain-v1.7.17",
+        "2026-07-01"
+      ],
+      [
+        "chain-v1.7.20",
+        "2026-07-01"
+      ],
+      [
+        "chain-v1.7.21",
+        "2026-07-02"
+      ],
+      [
+        "b7-keys-b7a-mimc-binding-v1_b7b-bundle-binding-v1",
+        "2026-07-29"
+      ],
+      [
+        "avmd-v2.8.0",
+        "2026-07-30"
+      ],
+      [
+        "chain-v1.7.22",
+        "2026-08-24"
+      ],
+      [
+        "chain-v1.7.25",
+        "2026-09-25"
+      ],
+      [
+        "chain-v1.7.26",
+        "2026-09-28"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/hyperspaceai/agi",
+      "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/README.md",
+      "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/agent-board/package.json",
+      "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/projects/skills-and-tools/README.md",
+      "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/projects/skills-and-tools/LEADERBOARD.md",
+      "https://api.github.com/repos/hyperspaceai/agi/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/README.md"
+      },
+      {
+        "path": "agent-board/package.json",
+        "source": "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/agent-board/package.json"
+      },
+      {
+        "path": "projects/skills-and-tools/README.md",
+        "source": "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/projects/skills-and-tools/README.md"
+      },
+      {
+        "path": "projects/skills-and-tools/LEADERBOARD.md",
+        "source": "https://github.com/hyperspaceai/agi/blob/fb067577f6645ca66cfbc271fc13a38533f1b402/projects/skills-and-tools/LEADERBOARD.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:autonomous-agents stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "repository_id": 1176335208,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "hyper-mcp-rs--hyper-mcp": {
+    "topics": [
+      "ai",
+      "extism",
+      "llm",
+      "mcp",
+      "mcp-server",
+      "oci"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hyper-mcp-rs/hyper-mcp",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 914828187,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "hyperionaidev--smolmaxxing": {
+    "topics": [
+      "edge-ai",
+      "llama-cpp",
+      "llama-cpp-alternative",
+      "llm",
+      "local-llm",
+      "local-llm-support",
+      "on-device",
+      "quantization",
+      "quantization-algorithms"
+    ],
+    "homepage": "https://hyperion-ai.com/products/smolmaxxing",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (C) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hyperionaidev/smolmaxxing",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:local-llm stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1445286453,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "hybirdss--hycli": {
+    "topics": [
+      "ai-agents",
+      "automation",
+      "cli",
+      "developer-tools",
+      "local-first",
+      "mcp",
+      "rust",
+      "websites"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Hybirdss/Hycli",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1412178580,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "hyperb1iss--droidmind": {
+    "topics": [
+      "adb",
+      "ai",
+      "android",
+      "claude",
+      "context",
+      "llm",
+      "mcp",
+      "model",
+      "protocol"
+    ],
+    "homepage": "https://hyperb1iss.github.io/droidmind/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hyperb1iss/droidmind",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 941458633,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "hypothesi--mcp-server-tauri": {
+    "topics": [
+      "automation",
+      "cli",
+      "gemini-cli-extension",
+      "mcp",
+      "tauri",
+      "tauri-v2"
+    ],
+    "homepage": "https://hypothesi.github.io/mcp-server-tauri/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hypothesi/mcp-server-tauri",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1104967813,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "hyscaler--hycanvas": {
+    "topics": [
+      "agpl",
+      "alternative-to-canva",
+      "canva-alternative",
+      "collaboration",
+      "design-editor",
+      "design-tool",
+      "docker",
+      "generative-ai",
+      "golang",
+      "graphic-design",
+      "image-editor",
+      "mcp-server",
+      "nextjs",
+      "open-source",
+      "presentations",
+      "react",
+      "self-hosted",
+      "typescript",
+      "video-editor",
+      "whiteboard"
+    ],
+    "homepage": "https://hycanvas.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hyscaler/HyCanvas",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1276025294,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "hyprmcp--jetski": {
+    "topics": [
+      "ai",
+      "angular",
+      "authentication",
+      "dynamic-client-registration",
+      "go",
+      "golang",
+      "kubernetes",
+      "mcp",
+      "mcp-analytics",
+      "mcp-gateway",
+      "mcp-proxy",
+      "mcp-security",
+      "metacontroller",
+      "model-context-protocol",
+      "oauth2",
+      "oauth2-proxy",
+      "typescript"
+    ],
+    "homepage": "",
+    "archived": true,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/hyprmcp/jetski",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:150..299 fork:false",
+      "topic:model-context-protocol stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1013141089,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

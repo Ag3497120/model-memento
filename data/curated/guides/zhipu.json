@@ -1,0 +1,68 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "Zhipu",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "zhipu-thinking",
+      "publisher": "Zhipu",
+      "kind": "model-notes",
+      "title": "GLM の考える設定と履歴",
+      "url": "https://docs.z.ai/guides/capabilities/thinking-mode.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "glm"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "reasoning-effort",
+          "summary_ja": "考える機能の変更可否は版ごとに確認し、道具を使う会話では必要な思考項目を引き継ぎます。",
+          "when_ja": "GLM の考える機能と道具を併用するとき。",
+          "summary_en": "Check thinking controls for each version and preserve required reasoning fields during tool conversations.",
+          "when_en": "When combining GLM thinking and tools."
+        }
+      ],
+      "sources": [
+        "https://docs.z.ai/guides/capabilities/thinking-mode.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "GLM thinking settings and history"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "zhipu-structured",
+      "publisher": "Zhipu",
+      "kind": "prompting-guide",
+      "title": "GLM の答えの形を指定する",
+      "url": "https://docs.z.ai/guides/capabilities/struct-output.md",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [
+          "glm"
+        ],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "output-format",
+          "summary_ja": "必要な項目を指示に示し、対応する JSON の出力設定を使います。",
+          "when_ja": "回答を機械で読みたいとき。",
+          "summary_en": "Describe required fields in the prompt and use a supported JSON output setting.",
+          "when_en": "When answers need to be machine-readable."
+        }
+      ],
+      "sources": [
+        "https://docs.z.ai/guides/capabilities/struct-output.md"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Specify GLM answer structure"
+    }
+  ]
+}

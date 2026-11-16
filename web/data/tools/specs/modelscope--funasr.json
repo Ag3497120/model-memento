@@ -1,0 +1,179 @@
+{
+  "id": "modelscope--funasr",
+  "version": "d8a48a8af181",
+  "from": "2026-11-15",
+  "surface": "mcp-server",
+  "layout": {
+    "t": "col",
+    "label": "index.vue",
+    "c": [
+      {
+        "t": "col",
+        "label": "div",
+        "c": [
+          {
+            "t": "toolbar",
+            "label": "header",
+            "c": [
+              {
+                "t": "col",
+                "label": "div"
+              },
+              {
+                "t": "col",
+                "label": "div"
+              },
+              {
+                "t": "col",
+                "label": "div"
+              }
+            ]
+          },
+          {
+            "t": "banner",
+            "label": "banner-comp"
+          },
+          {
+            "t": "statusline",
+            "label": "footer",
+            "c": [
+              {
+                "t": "col",
+                "label": "div"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "bg": "#eff2f6",
+    "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/app/assets/css/index.scss"
+  },
+  "strings": {
+    "s1": "--format",
+    "s2": "convert quanjiao chars to banjiao",
+    "s3": "convert to upper case",
+    "s4": "convert to lower case",
+    "s5": "remove filler chars such as \"呃, 啊\"",
+    "s6": "remove whitespace",
+    "s7": "--to_banjiao",
+    "s8": "--model",
+    "s9": "--hub",
+    "s10": "--language",
+    "s11": "--device",
+    "s12": "--output-format",
+    "s13": "--subtitle-segment-mode",
+    "s14": "--output-dir",
+    "s15": "--timestamps",
+    "s16": "--spk",
+    "s17": "--hotwords",
+    "s18": "--verbose",
+    "s19": "--version",
+    "s20": "Audio file(s) to transcribe",
+    "s21": "Model (default: sensevoice)",
+    "s22": "Device: cuda:0, cpu (default: auto)",
+    "s23": "请输入关键字",
+    "s24": "Funasr介绍",
+    "s25": "核心功能",
+    "s26": "Paraformer模型介绍",
+    "s27": "离线文件转写服务",
+    "s28": "实时听写",
+    "s29": "Github",
+    "s30": "社区交流"
+  },
+  "behaviors": {
+    "commands": [],
+    "model_picker": "flag"
+  },
+  "sources": [
+    "https://github.com/modelscope/FunASR",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/README.md",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/runtime/onnxruntime/third_party/gflags/INSTALL.md",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/docs/installation/installation.md",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/pyproject.toml",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/package.json",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/runtime/golang/websocket/go.mod",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/integrations/openclaw/package.json",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/assets/css/index.scss",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/app/assets/css/index.scss",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/funasr/models/sense_voice/whisper_lib/normalizers/english.json",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/examples/industrial_data_pretraining/llm_asr/app.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/runtime/python/libtorch/demo_contextual_paraformer.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/funasr/datasets/fun_asr_datasets/multicontext_prompt.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/runtime/python/onnxruntime/demo_contextual_paraformer.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/funasr/models/fun_asr_nano/tools/cn_tn.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/funasr/models/fun_asr_nano/tools/utils.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/funasr/cli.py",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/main.js",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/mock/index.js",
+    "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+    "https://api.github.com/repos/modelscope/FunASR/releases"
+  ],
+  "provenance": {
+    "commit": "d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce",
+    "snapshot_at": "2026-11-15",
+    "layout_path": "web-pages/src/views/home/index.vue",
+    "layout_evidence": [
+      {
+        "component": "div",
+        "type": "col",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 2
+      },
+      {
+        "component": "header",
+        "type": "toolbar",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 3
+      },
+      {
+        "component": "div",
+        "type": "col",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 15
+      },
+      {
+        "component": "div",
+        "type": "col",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 17
+      },
+      {
+        "component": "div",
+        "type": "col",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 21
+      },
+      {
+        "component": "banner-comp",
+        "type": "banner",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 26
+      },
+      {
+        "component": "footer",
+        "type": "statusline",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 36
+      },
+      {
+        "component": "div",
+        "type": "col",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/web-pages/src/views/home/index.vue",
+        "line": 37
+      }
+    ],
+    "behavior_evidence": [
+      {
+        "field": "model_picker",
+        "value": "flag",
+        "source": "https://github.com/modelscope/FunASR/blob/d8a48a8af181dddf9b9f30aa50801c0ed6a6ffce/README.md"
+      }
+    ],
+    "method": "Observed component outline in source order. Conditional branches may coexist in this static outline.",
+    "mobile": "Unverified; omitted.",
+    "stream": "Unmeasured; omitted."
+  }
+}

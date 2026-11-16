@@ -1,0 +1,1493 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openclaw-formerly-clawdbot-moltbot",
+  "name": "OpenClaw（旧 Clawdbot / Moltbot）",
+  "vendor": "Peter Steinberger / OpenClaw Foundation",
+  "kind": "agent-app",
+  "versions": [
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2025-11",
+      "from": "2025-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "端末のヘルプ",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "warelay の名称と短い説明",
+            "送信・履歴・受信待ち・ログインなどのコマンド一覧",
+            "色を使った実行例の案内"
+          ]
+        },
+        {
+          "name": "接続と受信待ち",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "ログイン操作時は接続用の QR を端末へ出す",
+            "relay 操作時は送受信のログを表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "--help",
+          "where": "端末のコマンド",
+          "purpose": "コマンド一覧を見る"
+        },
+        {
+          "label": "login",
+          "where": "端末のコマンド",
+          "purpose": "WhatsApp の個人アカウントを接続する"
+        },
+        {
+          "label": "relay",
+          "where": "端末のコマンド",
+          "purpose": "受信を待って自動返信する"
+        },
+        {
+          "label": "status",
+          "where": "端末のコマンド",
+          "purpose": "最近の送受信を確認する"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の会話は接続先の WhatsApp に表示される。warelay 独自のチャット入力画面ではない。",
+        "assistant": "外部コマンドや設定で作った返信を WhatsApp へ送る。見た目は接続先のアプリに従う。",
+        "tool_calls": null,
+        "streaming": "Twilio 側には入力中の表示を送る処理がある。端末や会話内で回答本文を逐次描く範囲は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "常設のチャット入力欄はない。端末へコマンドを入力する。"
+      },
+      "empty_state": "ヘルプを表示するか、受信待ちのログを出す。製品独自の空の会話画面はない。",
+      "distinctive": [
+        "WhatsApp と外部コマンドをつなぐ端末の道具。",
+        "接続は QR 読み取りか Twilio の設定。",
+        "色付きのヘルプと、実行例の案内。",
+        "会話の見た目は既存のメッセージアプリに従う。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。",
+        "接続用 QR や実際の連絡先、WhatsApp のロゴを資料から転載しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v0.1.1/README.md",
+          "kind": "official-doc",
+          "date": "2025-11-25",
+          "shows": "regions・controls・conversation・empty_state：端末と WhatsApp の役割、QR 接続、ログ、外部コマンドでの返信、Twilio の入力中表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v0.1.1",
+          "kind": "release-notes",
+          "date": "2025-11-25",
+          "shows": "ヘルプの名称・説明・実行例に色を使う変更。具体的な色番号・書体・間隔は書かれていない。"
+        },
+        {
+          "url": "https://openclaw.ai/blog/introducing-openclaw",
+          "kind": "blog",
+          "date": "2026-01-29",
+          "shows": "WhatsApp Relay から Clawd / Moltbot / OpenClaw へ続く名称の経緯。過去の画面の色や配置の証拠には使わない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openclaw-clawdbot-2026-01",
+      "from": "2026-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "minmax(220px, 280px)",
+          "contents": [
+            "管理ページへの移動",
+            "接続や会話、道具などを切り替える一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "上に Session Key と更新操作",
+            "中央に会話と道具の結果",
+            "下に Message の入力"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の Message",
+            "Send 操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Session Key",
+          "where": "会話欄の上",
+          "purpose": "表示する会話を選ぶ"
+        },
+        {
+          "label": "Refresh",
+          "where": "会話欄の上",
+          "purpose": "会話を読み直す"
+        },
+        {
+          "label": "Send",
+          "where": "入力欄の下",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Message",
+          "where": "下の複数行入力欄",
+          "purpose": "依頼を書く"
+        }
+      ],
+      "conversation": {
+        "user": "会話の行として本文と時刻を表示する。左右の厳密な配置と面色は未確認。",
+        "assistant": "会話の行として本文と時刻を表示し、道具の結果は別のカードへ出す。",
+        "tool_calls": "道具名と結果を専用のカードへ表示する。",
+        "streaming": "受け取っている回答を同じ会話欄に出す。送信中は Send の表示が Sending… に変わる。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f5f1ea",
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#e28a3f",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0a0f14",
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": "#f59f4a",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Work Sans（本文）、Unbounded（見出し）",
+        "mono_named": "IBM Plex Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "下部の複数行の四角い入力欄。正確な角丸は未確認。"
+      },
+      "empty_state": "履歴のない会話は空の履歴欄になり、Session Key と Message の入力欄を表示する。",
+      "distinctive": [
+        "暗い青系の面と暖色のアクセント、明るい版は生成りの面。",
+        "左の管理一覧と、右の会話。",
+        "会話の上に Session Key と Refresh。",
+        "下に Message と Send。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-01-04",
+          "shows": "Clawdbot の Control UI。regions・controls・接続と会話の役割の根拠。この日以前の最後の公開コミットを固定した開発中の画面であり、同日の製品リリースを意味しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-01-04",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-01-04",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/ui/src/ui/views/chat.ts",
+          "kind": "oss-source",
+          "date": "2026-01-04",
+          "shows": "conversation・empty_state・controls：Session Key、Refresh、Message、Send、時刻、回答と道具のカード。"
+        },
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/commits?until=2026-01-04T23%3A59%3A59Z&per_page=1",
+          "kind": "oss-source",
+          "date": "2026-01-04",
+          "shows": "観測する公開コミット aa45f512f4bb376a060b4642b4b27b358573f710 の選定根拠。UTC の同日末以前で取得。指定日の名前のタグを推定していない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2026-01-04",
+          "shows": "当時の更新履歴を参照。日付名のタグが見つからないため、未公開項目をリリース済み機能と扱わない。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "openclaw-moltbot-2026-01",
+      "from": "2026-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "220px",
+          "contents": [
+            "管理ページへの移動",
+            "会話、セッション、道具、接続先などの設定"
+          ]
+        },
+        {
+          "name": "上の帯",
+          "position": "top",
+          "size": "56px",
+          "contents": [
+            "接続状態、表示の切り替え、現在のページ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "道具の呼び出しと結果",
+            "セッションの選択と入力欄"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼と添付",
+            "送信、作業停止、次の入力の待ち行列"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Send",
+          "where": "入力欄の操作",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Stop",
+          "where": "作業中の入力欄の操作",
+          "purpose": "実行中の作業を止める"
+        },
+        {
+          "label": "New session",
+          "where": "会話の操作",
+          "purpose": "新しい会話を始める"
+        },
+        {
+          "label": "Queue",
+          "where": "作業中の入力欄",
+          "purpose": "次のメッセージを待ち行列へ置く"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "左側のカードに本文を表示する。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答を到着に合わせて表示する。実行中の枠の色をゆっくり変え、作業中の追加入力を待ち行列へ置ける。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#fafafa",
+          "text": "#3f3f46",
+          "muted": "#71717a",
+          "accent": "#dc2626",
+          "border": "#e4e4e7",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#12141a",
+          "panel": "#12141a",
+          "text": "#e4e4e7",
+          "muted": "#71717a",
+          "accent": "#ff5c5c",
+          "border": "#27272a",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "light.panel": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "light.text": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "light.border": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "dark.border": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Space Grotesk",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": "regular",
+        "input_shape": "下部に複数行の入力欄と操作を置く。共通の角丸とメッセージの角丸は別。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の管理一覧と上の接続・表示の帯。",
+        "Space Grotesk と赤いアクセント。",
+        "右の利用者発言と、左の回答カード。",
+        "送信・停止・追加入力を下部へまとめる。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-01-28",
+          "shows": "Moltbot の Control UI。regions・controls・接続と会話の役割の根拠。この日以前の最後の公開コミットを固定した開発中の画面であり、同日の製品リリースを意味しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-01-28",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-01-28",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-01-28",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/commits?until=2026-01-28T23%3A59%3A59Z&per_page=1",
+          "kind": "oss-source",
+          "date": "2026-01-28",
+          "shows": "観測する公開コミット fdcac0ccf44704f384f891f8c1016af531e88cb9 の選定根拠。UTC の同日末以前で取得。指定日の名前のタグを推定していない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2026-01-28",
+          "shows": "当時の更新履歴を参照。日付名のタグが見つからないため、未公開項目をリリース済み機能と扱わない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/ui/src/ui/views/chat.ts",
+          "kind": "oss-source",
+          "date": "2026-01-28",
+          "shows": "controls：同日の実装で New session / Stop、Send / Queue の切り替えを確認。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2026-01",
+      "from": "2026-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "220px",
+          "contents": [
+            "管理ページへの移動",
+            "会話、セッション、道具、接続先などの設定"
+          ]
+        },
+        {
+          "name": "上の帯",
+          "position": "top",
+          "size": "56px",
+          "contents": [
+            "接続状態、表示の切り替え、現在のページ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "道具の呼び出しと結果",
+            "セッションの選択と入力欄"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼と添付",
+            "送信、作業停止、次の入力の待ち行列"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Send",
+          "where": "入力欄の操作",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Stop",
+          "where": "作業中の入力欄の操作",
+          "purpose": "実行中の作業を止める"
+        },
+        {
+          "label": "New session",
+          "where": "会話の操作",
+          "purpose": "新しい会話を始める"
+        },
+        {
+          "label": "Queue",
+          "where": "作業中の入力欄",
+          "purpose": "次のメッセージを待ち行列へ置く"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "左側のカードに本文を表示する。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答を到着に合わせて表示する。実行中の枠の色をゆっくり変え、作業中の追加入力を待ち行列へ置ける。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#fafafa",
+          "panel": "#fafafa",
+          "text": "#3f3f46",
+          "muted": "#71717a",
+          "accent": "#dc2626",
+          "border": "#e4e4e7",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#12141a",
+          "panel": "#12141a",
+          "text": "#e4e4e7",
+          "muted": "#71717a",
+          "accent": "#ff5c5c",
+          "border": "#27272a",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "light.panel": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "light.text": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "light.border": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "dark.border": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Space Grotesk",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": 8,
+        "density": "regular",
+        "input_shape": "下部に複数行の入力欄と操作を置く。共通の角丸とメッセージの角丸は別。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の管理一覧と上の接続・表示の帯。",
+        "Space Grotesk と赤いアクセント。",
+        "右の利用者発言と、左の回答カード。",
+        "送信・停止・追加入力を下部へまとめる。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-01-31",
+          "shows": "OpenClaw の Control UI。regions・controls・接続と会話の役割の根拠。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-01-31",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-01-31",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-01-31",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.1.30",
+          "kind": "release-notes",
+          "date": "2026-01-31",
+          "shows": "固定タグの公開日は1月31日。会話一覧や表示名の改善を確認。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/ui/views/chat.ts",
+          "kind": "oss-source",
+          "date": "2026-01-31",
+          "shows": "controls：New session / Stop と Send / Queue の切り替え。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/docs/tui.md",
+          "kind": "official-doc",
+          "date": "2026-01-31",
+          "shows": "別の端末用画面も存在する。上に接続先・エージェント・セッション、中央に履歴、下に入力と状態欄。ブラウザーの領域と合成しない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openclaw-2026-03-macos",
+      "from": "2026-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "メニューバーの状態",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "現在の作業と接続の状態を表す小さな表示"
+          ]
+        },
+        {
+          "name": "開いたメニュー",
+          "position": "dropdown",
+          "size": null,
+          "contents": [
+            "先頭に稼働中の作業、待機中なら接続の状態",
+            "定期確認、ブラウザー、カメラ、実行許可、Canvas、音声の切り替え",
+            "チャットと管理画面を開く操作、設定、終了"
+          ]
+        },
+        {
+          "name": "音声の表示",
+          "position": "overlay",
+          "size": null,
+          "contents": [
+            "音声で入力した文章",
+            "認識中の音量を表す帯",
+            "編集・送信・取り消しの操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Open Chat",
+          "where": "メニューバーから開くメニュー",
+          "purpose": "接続中のエージェントの会話を別の画面で開く"
+        },
+        {
+          "label": "Open Dashboard",
+          "where": "メニューバーから開くメニュー",
+          "purpose": "ブラウザーの管理画面を開く"
+        },
+        {
+          "label": "Voice Wake",
+          "where": "メニューバーから開くメニュー",
+          "purpose": "声で入力を始める機能を切り替える"
+        },
+        {
+          "label": "Exec Approvals",
+          "where": "メニューバーから開くメニュー",
+          "purpose": "コマンド実行の許可の扱いを選ぶ"
+        },
+        {
+          "label": "Settings…",
+          "where": "メニューバーから開くメニュー",
+          "purpose": "設定を開く"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "メニューの最初の状態行に、どの会話がどの作業をしているか短く出す。会話本文は Open Chat から別の画面へ開く。",
+        "streaming": "作業中は活動の状態を表示し、待機すると接続の健康状態へ戻る。音声の表示には認識途中の文が届く。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/apps/macos/Sources/OpenClaw/MenuContentView.swift",
+          "dark": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/apps/macos/Sources/OpenClaw/MenuContentView.swift"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "メニュー本体にチャット入力欄はない。音声用の別表示か、Open Chat で開く会話を使う。"
+      },
+      "empty_state": "待機時は接続の状態を表示する。メニュー自体は空のチャット画面ではない。",
+      "distinctive": [
+        "常駐する小さな状態表示から開く操作メニュー。",
+        "作業中の表示が、待機時の接続状態より優先される。",
+        "音声入力は別の重ねた表示で扱う。",
+        "チャット、ブラウザー管理画面、設定をそれぞれ開く。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。",
+        "メニューバーのロブスターの姿や動きを描き直さない。",
+        "macOS の壁紙やアプリアイコン、音声表示の画像を転載しない。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/menu-bar.md",
+          "kind": "official-doc",
+          "date": "2026-03-18",
+          "shows": "regions・conversation・empty_state：メニュー先頭の活動、待機時の状態、接続デバイスの一覧。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/apps/macos/Sources/OpenClaw/MenuContentView.swift",
+          "kind": "oss-source",
+          "date": "2026-03-18",
+          "shows": "regions・controls：スイッチ、実行許可の選択、Open Chat、Open Dashboard、設定、終了。固定の色番号や幅を持つ模倣メニューにはしない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/webchat.md",
+          "kind": "official-doc",
+          "date": "2026-03-18",
+          "shows": "Open Chat は別の会話表示を開き、セッションを切り替えられる。メニュー内へチャット本文を合成しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/voice-overlay.md",
+          "kind": "official-doc",
+          "date": "2026-03-18",
+          "shows": "音声で起動した表示と押しながら話す操作の関係。認識中の文の引き継ぎと、離した時の送信。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/apps/macos/Sources/OpenClaw/VoiceWakeOverlayView.swift",
+          "kind": "oss-source",
+          "date": "2026-03-18",
+          "shows": "音声の別表示の文章、編集、音量帯、操作。外側の角丸12、内側8はこの別表示の値であり、メニュー全体の radius_px には流用しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/CHANGELOG.md",
+          "kind": "changelog",
+          "date": "2026-03-18",
+          "shows": "この日の開発中の変更。日付名のタグがないため、メニューの初公開日とは扱わない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.1.30/docs/platforms/macos.md",
+          "kind": "official-doc",
+          "date": "2026-01-31",
+          "shows": "メニューバー型のコンパニオンは1月の固定版にも記載がある。3月18日を初登場日と断定しない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "openclaw-2026-06",
+      "from": "2026-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "258px",
+          "contents": [
+            "管理ページへの移動",
+            "会話、セッション、道具、接続先などの設定"
+          ]
+        },
+        {
+          "name": "上の帯",
+          "position": "top",
+          "size": "52px",
+          "contents": [
+            "接続状態、表示の切り替え、現在のページ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話の履歴",
+            "道具の呼び出しと結果",
+            "セッションの選択と入力欄"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼と添付",
+            "送信、作業停止、次の入力の待ち行列"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Send",
+          "where": "入力欄の操作",
+          "purpose": "入力を送る"
+        },
+        {
+          "label": "Stop",
+          "where": "作業中の入力欄の操作",
+          "purpose": "実行中の作業を止める"
+        },
+        {
+          "label": "New Chat",
+          "where": "会話の操作",
+          "purpose": "新しい会話を始める"
+        },
+        {
+          "label": "Model",
+          "where": "会話欄の上",
+          "purpose": "会話で使うモデルを選ぶ。表示するラベルは設定と言語で変わる。"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "左側のカードに本文を表示する。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答を到着に合わせて表示する。実行中の枠の色をゆっくり変え、作業中の追加入力を待ち行列へ置ける。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f8f9fa",
+          "panel": "#f8f9fa",
+          "text": "#3c3c43",
+          "muted": "#6a6a6f",
+          "accent": "#dc2626",
+          "border": "#e5e5ea",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0e1015",
+          "panel": "#0e1015",
+          "text": "#d4d4d8",
+          "muted": "#8b8b94",
+          "accent": "#ff5c5c",
+          "border": "#1e2028",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "light.panel": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "light.text": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "light.border": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "dark.border": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": 10,
+        "density": "regular",
+        "input_shape": "下部に複数行の入力欄と操作を置く。共通の角丸とメッセージの角丸は別。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左欄258pxと、折りたたみ時の細い移動欄。",
+        "Inter の本文と赤いアクセント。",
+        "モデルと推論の強さを会話単位で設定する。",
+        "チャット内の道具の結果と、入力付近の容量表示。",
+        "追加の手順を提案として確認する Skill Workshop があり、通常の会話とは別に見直せる。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-06-15",
+          "shows": "OpenClaw の Control UI。regions・controls・接続と会話の役割の根拠。この日以前の最後の公開コミットを固定した開発中の画面であり、同日の製品リリースを意味しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/commits?until=2026-06-15T23%3A59%3A59Z&per_page=1",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "観測する公開コミット fd806ada649a124d44bffa4850b0da19b739e6e4 の選定根拠。UTC の同日末以前で取得。指定日の名前のタグを推定していない。"
+        },
+        {
+          "url": "https://openclaw.ai/blog/openclaw-agent-skill-workshop",
+          "kind": "blog",
+          "date": "2026-06-03",
+          "shows": "Skill Workshop の別ページに、状態別の提案一覧、選択した提案、適用・修正・却下の操作がある。記事本文と画像の説明文だけで確認し、画像は取得しない。通常チャットの常設領域として合成しない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openclaw-formerly-clawdbot-moltbot-2026-08",
+      "from": "2026-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "258px",
+          "contents": [
+            "利用中のエージェントの選択",
+            "ページへの移動と、保存した会話の一覧",
+            "全員を表示するモードではエージェント別の会話グループ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の会話履歴",
+            "利用者の入力、回答、道具の結果",
+            "会話の設定と入力"
+          ]
+        },
+        {
+          "name": "補助の表示",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "必要なときに開く会話の補助欄",
+            "ファイル、実行結果、別の質問など",
+            "常に三分割する画面ではない"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼",
+            "添付と、会話で使う機能の選択",
+            "送信と作業停止の操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "+",
+          "where": "左欄の会話一覧",
+          "purpose": "新しい会話の下書き画面を開く"
+        },
+        {
+          "label": "+",
+          "where": "入力欄の横",
+          "purpose": "添付やこの会話で使う機能の一覧を開く"
+        },
+        {
+          "label": "Cmd/Ctrl+K",
+          "where": "ブラウザー画面",
+          "purpose": "操作や移動先を探す"
+        },
+        {
+          "label": "Cmd/Ctrl+B",
+          "where": "ブラウザー画面",
+          "purpose": "左の一覧を開閉する"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "通常の回答本文は背景と外枠を外した平らな表示。転送された発言などは別の面を持つ。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答と道具の進行を更新する。停止・追加入力の操作は会話の実行状態に従う。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#faf9f7",
+          "panel": "#faf9f7",
+          "text": "#403c35",
+          "muted": "#6e6960",
+          "accent": "#bd4531",
+          "border": "#e8e4dc",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0e1015",
+          "panel": "#0e1015",
+          "text": "#bcbcc0",
+          "muted": "#8b8b94",
+          "accent": "#ff5c5c",
+          "border": "#1e2028",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "light.panel": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "light.text": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "light.border": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "dark.border": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Instrument Sans",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": 10,
+        "density": "regular",
+        "input_shape": "内容が増える複数行の入力欄。共通の角丸値に加え、部分ごとの大きさと利用者の丸み設定がある。"
+      },
+      "empty_state": "新しい会話のページに下書きと実行先・作業場所の選択を出す。最初の依頼を送るまでは会話を作らない。",
+      "distinctive": [
+        "会話を中心に組み直したブラウザー画面。",
+        "左のエージェント選択と保存した会話。",
+        "独立した常設の上帯をなくし、左欄と会話見出しへ操作をまとめる。",
+        "Instrument Sans と、背景を外した通常の回答本文。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.8.1/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-08-31",
+          "shows": "OpenClaw の Control UI。regions・controls・接続と会話の役割の根拠。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-08-31",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-08-31",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/v2026.8.1/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-08-31",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.1",
+          "kind": "release-notes",
+          "date": "2026-08-31",
+          "shows": "OpenClaw 2.0 に対応する固定リリース。タグ名の8月1日を公開日としない。"
+        },
+        {
+          "url": "https://openclaw.ai/blog/openclaw-2-accidentally",
+          "kind": "blog",
+          "date": "2026-08-30",
+          "shows": "会話中心のブラウザー版への組み直しを公式に説明。掲載画像は取得せず、本文と画像の説明文だけを読む。"
+        }
+      ],
+      "confidence": 0.92
+    },
+    {
+      "id": "openclaw-2026-09",
+      "from": "2026-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "258px",
+          "contents": [
+            "利用中のエージェントの選択",
+            "ページへの移動と、保存した会話の一覧",
+            "全員を表示するモードではエージェント別の会話グループ"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の会話履歴",
+            "利用者の入力、回答、道具の結果",
+            "会話の設定と入力"
+          ]
+        },
+        {
+          "name": "補助の表示",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "必要なときに開く会話の補助欄",
+            "ファイル、実行結果、別の質問など",
+            "常に三分割する画面ではない"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼",
+            "添付と、会話で使う機能の選択",
+            "送信と作業停止の操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "+",
+          "where": "左欄の会話一覧",
+          "purpose": "新しい会話の下書き画面を開く"
+        },
+        {
+          "label": "+",
+          "where": "入力欄の横",
+          "purpose": "添付やこの会話で使う機能の一覧を開く"
+        },
+        {
+          "label": "Cmd/Ctrl+K",
+          "where": "ブラウザー画面",
+          "purpose": "操作や移動先を探す"
+        },
+        {
+          "label": "Cmd/Ctrl+B",
+          "where": "ブラウザー画面",
+          "purpose": "左の一覧を開閉する"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "通常の回答本文は背景と外枠を外した平らな表示。転送された発言などは別の面を持つ。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答と道具の進行を更新する。停止・追加入力の操作は会話の実行状態に従う。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#faf9f7",
+          "panel": "#faf9f7",
+          "text": "#403c35",
+          "muted": "#6e6960",
+          "accent": "#bd4531",
+          "border": "#e8e4dc",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#0e1015",
+          "panel": "#0e1015",
+          "text": "#bcbcc0",
+          "muted": "#8b8b94",
+          "accent": "#ff5c5c",
+          "border": "#1e2028",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "light.panel": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "light.text": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "light.border": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.bg": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "dark.border": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Instrument Sans",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": 10,
+        "density": "regular",
+        "input_shape": "内容が増える複数行の入力欄。共通の角丸値に加え、部分ごとの大きさと利用者の丸み設定がある。"
+      },
+      "empty_state": "新しい会話のページに下書きと実行先・作業場所の選択を出す。最初の依頼を送るまでは会話を作らない。",
+      "distinctive": [
+        "会話を中心に組み直したブラウザー画面。",
+        "左のエージェント選択と保存した会話。",
+        "独立した常設の上帯をなくし、左欄と会話見出しへ操作をまとめる。",
+        "Instrument Sans と、背景を外した通常の回答本文。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-09-12",
+          "shows": "OpenClaw の Control UI。regions・controls・接続と会話の役割の根拠。この日以前の最後の公開コミットを固定した開発中の画面であり、同日の製品リリースを意味しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-09-12",
+          "shows": "palette・typography・shape.radius_px：標準 Claw 系の明暗の基礎値。panel は CSS の --panel、accent は --accent。透明度や混色を含む利用者の面色は HEX として作らず null。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-09-12",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-09-12",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/chat.md",
+          "kind": "official-doc",
+          "date": "2026-09-12",
+          "shows": "controls・conversation：会話の補助欄、入力横の +、実行の進行と道具の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/sessions-and-sidebar.md",
+          "kind": "official-doc",
+          "date": "2026-09-12",
+          "shows": "regions・controls・empty_state：左欄の構成、会話の下書き画面、左欄の開閉と操作の検索。"
+        },
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/commits?until=2026-09-12T23%3A59%3A59Z&per_page=1",
+          "kind": "oss-source",
+          "date": "2026-09-12",
+          "shows": "観測する公開コミット 52823e567a69f7a6447f0246fd1c9989373103da の選定根拠。UTC の同日末以前で取得。指定日の名前のタグを推定していない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/CHANGELOG/2026.9.4.md",
+          "kind": "changelog",
+          "date": "2026-09-12",
+          "shows": "固定した保存時点に含まれる9.4の変更履歴。会話から再利用する手順を作る操作などの説明を確認。発売日や寸法はこのファイル名から推定しない。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openclaw-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "ブラウザー管理画面の左欄",
+          "position": "left",
+          "size": "258px",
+          "contents": [
+            "Pages・Sessions・Users の移動用の細い帯",
+            "選んだ一覧、ピン留め、会話と未読の状態",
+            "新しい会話を開く +"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "中央の会話履歴",
+            "利用者の入力、回答、道具の結果",
+            "会話の設定と入力"
+          ]
+        },
+        {
+          "name": "補助の表示",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "必要なときに開く会話の補助欄",
+            "ファイル、実行結果、別の質問など",
+            "常に三分割する画面ではない"
+          ]
+        },
+        {
+          "name": "入力欄",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の依頼",
+            "添付と、会話で使う機能の選択",
+            "送信と作業停止の操作"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "+",
+          "where": "左欄の会話一覧",
+          "purpose": "新しい会話の下書き画面を開く"
+        },
+        {
+          "label": "+",
+          "where": "入力欄の横",
+          "purpose": "添付やこの会話で使う機能の一覧を開く"
+        },
+        {
+          "label": "Cmd/Ctrl+K",
+          "where": "ブラウザー画面",
+          "purpose": "操作や移動先を探す"
+        },
+        {
+          "label": "Cmd/Ctrl+B",
+          "where": "ブラウザー画面",
+          "purpose": "左の一覧を開閉する"
+        }
+      ],
+      "conversation": {
+        "user": "利用者の発言を右側に寄せ、回答と位置で区別する。背景はテーマや参加者の設定から決まる。",
+        "assistant": "通常の回答本文は背景と外枠を外した平らな表示。転送された発言などは別の面を持つ。",
+        "tool_calls": "呼び出した道具と実行結果を会話の中で確認できる。詳しい内容は専用の表示を開く。",
+        "streaming": "回答と道具の進行を更新する。停止・追加入力の操作は会話の実行状態に従う。正確な更新間隔は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": "#353535",
+          "muted": "#5e5e5e",
+          "accent": "#bd4531",
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": "#0e1015",
+          "text": "#bcbcc0",
+          "muted": "#8e8e97",
+          "accent": "#ff5c5c",
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light.text": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "light.muted": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "light.accent": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "dark.panel": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "dark.text": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "dark.muted": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "dark.accent": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css"
+        }
+      },
+      "typography": {
+        "ui_named": "Instrument Sans",
+        "mono_named": "JetBrains Mono",
+        "free_fallback": "system-ui, \"Noto Sans JP\", sans-serif; ui-monospace, \"Noto Sans Mono\", monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "内容が増える複数行の入力欄。共通の角丸値に加え、部分ごとの大きさと利用者の丸み設定がある。"
+      },
+      "empty_state": "新しい会話のページには案内と最近の会話を出す。既存の空の会話は、案内を重ねず入力欄を表示する。",
+      "distinctive": [
+        "左の移動用の細い帯から Pages・Sessions・Users を切り替える。",
+        "左欄を折りたたむと会話を広く使える。",
+        "Instrument Sans の本文と、平らな回答表示。",
+        "新しい会話の下書きで実行先と作業場所を選ぶ。"
+      ],
+      "must_not_copy": [
+        "OpenClaw のロゴ、ロブスターのマスコット、装飾した文字ロゴを描き直さない。",
+        "画面の画像、アイコン画像、製品の図柄や生成顔の絵を使わない。",
+        "チャネルやモデル提供者のロゴを並べない。製品名は通常の文字だけで示す。"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui.md",
+          "kind": "official-doc",
+          "date": "2026-11-10",
+          "shows": "OpenClaw の Control UI。regions・controls・接続と会話の役割の根拠。この日以前の最後の公開コミットを固定した開発中の画面であり、同日の製品リリースを意味しない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "palette・typography：標準 Claw の data-theme=dark/light を優先し、後段の面色の指定まで確認。bg と border、明るい版の panel は混色の式なので未変換の HEX は null。root の古い値をそのまま完成色にしない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/layout.css",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "regions：左欄の幅、上帯の高さ、折りたたみ状態。広い画面の基準値で、狭い画面や利用者の設定では変わる。density は本調査での分類。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/chat/grouped.css",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "conversation・shape：利用者の右寄せ、回答のカードまたは平らな本文、道具用の面、実行中の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui/chat.md",
+          "kind": "official-doc",
+          "date": "2026-11-10",
+          "shows": "controls・conversation：会話の補助欄、入力横の +、実行の進行と道具の表示。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui/sessions-and-sidebar.md",
+          "kind": "official-doc",
+          "date": "2026-11-10",
+          "shows": "regions・controls・empty_state：左欄の構成、会話の下書き画面、左欄の開閉と操作の検索。"
+        },
+        {
+          "url": "https://api.github.com/repos/openclaw/openclaw/commits?until=2026-11-10T23%3A59%3A59Z&per_page=1",
+          "kind": "oss-source",
+          "date": "2026-11-10",
+          "shows": "観測する公開コミット ecaefd29e7f1a23657de41a7eb217ba083c477be の選定根拠。UTC の同日末以前で取得。指定日の名前のタグを推定していない。"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.11.3",
+          "kind": "release-notes",
+          "date": "2026-11-10",
+          "shows": "同月の公開リリース。カタログの『2.0 が11月に初登場』という読み方はせず、8月の2.0からの後続として扱う。"
+        }
+      ],
+      "confidence": 0.89
+    }
+  ],
+  "corrections": [
+    "初期版は warelay のヘルプ・QR 接続・ログを表示する端末の道具。WhatsApp の配色を warelay 自身の画面色として採用しない：https://github.com/openclaw/openclaw/blob/v0.1.1/README.md",
+    "カタログの Clawdbot 2026-01-04 を端末だけの製品と決めつけない。同日の公開コードには左の管理一覧と会話を持つ Control UI がある。本仕様は、このブラウザー画面を主な再描画対象に選んだ：https://github.com/openclaw/openclaw/blob/aa45f512f4bb376a060b4642b4b27b358573f710/docs/control-ui.md",
+    "名称が変わるたびに WhatsApp / Telegram / Discord / Slack のバッジを持つ独自チャットへ作り直した、という根拠はない。1月28日の Control UI は管理用の左欄と会話であり、各メッセージアプリの画面とは別：https://github.com/openclaw/openclaw/blob/fdcac0ccf44704f384f891f8c1016af531e88cb9/docs/web/control-ui.md",
+    "以前の調査は1月版を既存チャネル中心に扱ったが、ブラウザーの明暗、書体、220px の左欄、56px の上帯も固定ソースで確認できる。メッセージアプリと混ぜず別の画面として再描画する：https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/base.css 、https://github.com/openclaw/openclaw/blob/v2026.1.30/ui/src/styles/layout.css",
+    "macOS メニュー内にチャット、壁紙付きのデスクトップ、固定の起動フレーズのバッジを合成しない。Open Chat は別の会話表示を開く。メニューバー型アプリは既に1月版の資料にもある：https://github.com/openclaw/openclaw/blob/07d9f725b618bd676b791f6d1949ecb2bff759c1/docs/platforms/mac/webchat.md 、https://github.com/openclaw/openclaw/blob/v2026.1.30/docs/platforms/macos.md",
+    "6月版を固定の Skills / Nodes のタブ列と汎用の許可カードだけで表さない。同日のコードでは258px の左欄、78px の折りたたみ欄、52px の上帯、Inter の本文を確認できる：https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/layout.css 、https://github.com/openclaw/openclaw/blob/fd806ada649a124d44bffa4850b0da19b739e6e4/ui/src/styles/base.css",
+    "9月の『常設3ペイン、右は ClawHub と Live Canvas』というカタログ記述は、そのまま採用しない。標準は左のエージェント・ページ・会話と中央の会話で、補助欄は必要時に開く：https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/sessions-and-sidebar.md 、https://github.com/openclaw/openclaw/blob/52823e567a69f7a6447f0246fd1c9989373103da/docs/web/control-ui/chat.md",
+    "OpenClaw 2.0 の大きな画面変更は11月初登場ではない。公式記事は8月30日、対応する v2026.8.1 の GitHub 公開は8月31日。別の見た目の追加版として記録した：https://openclaw.ai/blog/openclaw-2-accidentally 、https://github.com/openclaw/openclaw/releases/tag/v2026.8.1",
+    "11月の固定コードの左欄は Pages / Sessions / Users の移動用の帯を持つ。汎用の『Gateway / OpenCode / Claude Code / Codex』タブ列に置き換えない：https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/docs/web/control-ui/sessions-and-sidebar.md",
+    "kind は複数の表示を持つ agent-app とした。各版の主対象は領域名と出典に明示し、複数の画面を合成しない。スナップショットの日付は初公開日や終了日を意味しない。終了日は未確認なので to は null。density と free_fallback は本調査側の分類・提案：https://github.com/openclaw/openclaw/blob/v2026.1.30/README.md",
+    "Foundation の名は現在の運営名。2025年の版の運営名を遡って置き換えない：https://openclaw.ai/blog/introducing-openclaw-foundation",
+    "11月版の面色は、以前の root の値から変更されている。data-theme=light の文字は #353535、dark の控えめな文字は #8e8e97。背景と枠は後段の混色の式を優先するため、HEX を推測せず null にした：https://github.com/openclaw/openclaw/blob/ecaefd29e7f1a23657de41a7eb217ba083c477be/ui/src/styles/base.css"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "memento.guide.v1",
+  "publisher": "NVIDIA",
+  "guides": [
+    {
+      "schema": "memento.guide.v1",
+      "id": "nvidia-guardrails",
+      "publisher": "NVIDIA",
+      "kind": "best-practices",
+      "title": "モデルごとに指示文を分けて比べる",
+      "url": "https://docs.nvidia.com/nemo/guardrails/configure-guardrails/yaml-schema/prompt-configuration",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "verify",
+          "summary_ja": "モデルや仕事に応じて指示文を切り替え、短い版などを比較できます。",
+          "when_ja": "異なるモデルで同じ処理を試すとき。",
+          "summary_en": "Choose prompts by model or task and compare variants such as shorter versions.",
+          "when_en": "When testing the same process with different models."
+        }
+      ],
+      "sources": [
+        "https://docs.nvidia.com/nemo/guardrails/configure-guardrails/yaml-schema/prompt-configuration"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Compare instructions across models"
+    },
+    {
+      "schema": "memento.guide.v1",
+      "id": "nvidia-cosmos",
+      "publisher": "NVIDIA",
+      "kind": "prompting-guide",
+      "title": "Cosmos Predict2 へ場面を具体的に伝える",
+      "url": "https://docs.nvidia.com/cosmos/2.2.0/predict2/reference.html",
+      "published": null,
+      "updated": null,
+      "applies_to": {
+        "model_families": [],
+        "model_ids": [],
+        "tool_ids": []
+      },
+      "techniques": [
+        {
+          "technique_id": "clear-goal",
+          "summary_ja": "物体、素材、光、位置関係を具体的に書き、現実の動きとの整合を保ちます。",
+          "when_ja": "Cosmos で映像の場面を指定するとき。",
+          "summary_en": "Specify objects, materials, lighting and spatial relationships while keeping motion physically consistent.",
+          "when_en": "When describing video scenes for Cosmos."
+        }
+      ],
+      "sources": [
+        "https://docs.nvidia.com/cosmos/2.2.0/predict2/reference.html"
+      ],
+      "checked_at": "2026-11-16",
+      "title_en": "Describe Cosmos Predict2 scenes precisely"
+    }
+  ]
+}

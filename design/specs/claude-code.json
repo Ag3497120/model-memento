@@ -1,0 +1,1312 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "claude-code",
+  "name": "Claude Code",
+  "vendor": "Anthropic",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "claude-code-2025-02",
+      "from": "2025-02",
+      "to": "2025-04",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "依頼、実行内容と返答を端末の中で扱う。起動時の枠の形と上下配置は未確認（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "端末内で文章を返し、ファイル操作やコマンド実行を行う（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）",
+        "tool_calls": "実行する道具には手動の確認を設定できる。初日の確認文面は未確認（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "独立したIDE専用欄ではなく端末を使う（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）",
+        "ファイルの読み書きとコマンド実行を会話から行う（https://www.anthropic.com/news/claude-3-7-sonnet）",
+        "道具ごとの実行確認を扱う（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+          "kind": "blog",
+          "date": "2025-02-24",
+          "shows": "通常/拡張思考を切り替え、考えた内容を表示。思考量の数値指定はAPIの説明。Claude Codeは端末の別製品。"
+        },
+        {
+          "url": "https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996",
+          "kind": "press",
+          "date": "2025-02-27",
+          "shows": "公開直後の実使用記事。UIは端末、専用IDEプラグインでない。許可を伴う道具実行。"
+        }
+      ],
+      "confidence": 0.53
+    },
+    {
+      "id": "claude-code-2025-04",
+      "from": "2025-04",
+      "to": "2025-05",
+      "regions": [
+        {
+          "name": "terminal",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "端末内の会話が基本。4月15日固有の配置変更は未確認（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "初期の画面は端末の会話（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）",
+        "公式履歴には0.2.44で思考の指示語、0.2.54でメモ追加と長い実行結果を開く操作がある。各版の日付は未確認（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+        "unverified：起動時にCLAUDE.mdの探索ツリーを常設表示するという根拠"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "版番号別の公式履歴。0.2.44思考語、0.2.54 #/Ctrl+R、1.0.0、1.0.38 hooks、1.0.60 /agents、2.0.0端末刷新。日付がない項目は初出日を断定しない。"
+        },
+        {
+          "url": "https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996",
+          "kind": "press",
+          "date": "2025-02-27",
+          "shows": "公開直後の実使用記事。UIは端末、専用IDEプラグインでない。許可を伴う道具実行。"
+        }
+      ],
+      "confidence": 0.25
+    },
+    {
+      "id": "claude-code-2025-05",
+      "from": "2025-05",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "welcome",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "1.0.24/27の投稿例では文字の罫線による歓迎枠と作業フォルダ。5月22日初日の表示と同一かは未確認（https://github.com/anthropics/claude-code/issues/2097）"
+          ]
+        },
+        {
+          "name": "conversation",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "依頼と道具の実行内容が縦に並ぶ（https://github.com/anthropics/claude-code/issues/2097）"
+          ]
+        },
+        {
+          "name": "composer",
+          "position": "below-conversation",
+          "size": null,
+          "contents": [
+            "投稿例の入力の先頭は >（https://github.com/anthropics/claude-code/issues/2097）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/help",
+          "where": "端末の入力行。1.0.27の投稿例（https://github.com/anthropics/claude-code/issues/2097）",
+          "purpose": "コマンド一覧を開く（https://github.com/anthropics/claude-code/issues/2097）"
+        }
+      ],
+      "conversation": {
+        "user": "入力は > を先頭にする行。1.0.24/27の例（https://github.com/anthropics/claude-code/issues/2097）",
+        "assistant": "文章を端末に縦に表示（https://github.com/anthropics/claude-code/issues/2097）",
+        "tool_calls": "道具の呼び出し行に ⏺、結果に ⎿ を付けて字下げした投稿例（https://github.com/anthropics/claude-code/issues/2097）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": "端末の文字入力行。Webの丸い入力カードではない（https://github.com/anthropics/claude-code/issues/2097）"
+      },
+      "empty_state": "1.0.27の投稿例では歓迎枠、作業フォルダ、操作の案内と入力待ち。5月初日の文面は未確認（https://github.com/anthropics/claude-code/issues/2097）",
+      "distinctive": [
+        "1.0で一般公開（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+        "端末の会話と道具の出力を分ける文字記号（https://github.com/anthropics/claude-code/issues/2097）",
+        "IDEとの連携では変更点をエディター側に表示（https://www.anthropic.com/news/claude-4）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-4",
+          "kind": "blog",
+          "date": "2025-05-22",
+          "shows": "Opus 4/Sonnet 4、思考と検索などの交互実行、Claude Code一般公開とIDE差分連携。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "版番号別の公式履歴。0.2.44思考語、0.2.54 #/Ctrl+R、1.0.0、1.0.38 hooks、1.0.60 /agents、2.0.0端末刷新。日付がない項目は初出日を断定しない。"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/issues/2097",
+          "kind": "press",
+          "date": null,
+          "shows": "公式リポジトリの利用者報告。1.0.24/27のテキスト出力に歓迎枠、>入力、道具行⏺と結果⎿。5月初日から同じとは確定しない。source種別pressは投稿資料の代替分類で報道ではない。"
+        }
+      ],
+      "confidence": 0.62
+    },
+    {
+      "id": "claude-code-2025-07",
+      "from": "2025-07",
+      "to": "2025-09",
+      "regions": [
+        {
+          "name": "conversation",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "1.0系の端末会話。hooksがあるだけで上下に管理パネルが常設される根拠はない（https://github.com/anthropics/claude-code/issues/2097）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "1.0.38で処理前後の自動処理hooksを追加。日付はこの資料では不明（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+        "1.0.60で /agents による補助役の管理を追加。7月15日に使えたかは未確認（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+        "unverified：HooksとSubagentsの左右2枚の常設ダッシュボード"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "版番号別の公式履歴。0.2.44思考語、0.2.54 #/Ctrl+R、1.0.0、1.0.38 hooks、1.0.60 /agents、2.0.0端末刷新。日付がない項目は初出日を断定しない。"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/issues/2097",
+          "kind": "press",
+          "date": null,
+          "shows": "公式リポジトリの利用者報告。1.0.24/27のテキスト出力に歓迎枠、>入力、道具行⏺と結果⎿。5月初日から同じとは確定しない。source種別pressは投稿資料の代替分類で報道ではない。"
+        }
+      ],
+      "confidence": 0.29
+    },
+    {
+      "id": "claude-code-2025-09",
+      "from": "2025-09",
+      "to": "2025-10",
+      "regions": [
+        {
+          "name": "terminal-status",
+          "position": null,
+          "size": null,
+          "contents": [
+            "刷新した端末で実行状態が見やすくなる。正確な当日の枠配置は未確認（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+          ]
+        },
+        {
+          "name": "ide-extension",
+          "position": "ide-sidebar",
+          "size": null,
+          "contents": [
+            "端末とは別に、VS Codeの専用欄で会話と実行内容を表示する（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+          ]
+        },
+        {
+          "name": "ide-diff",
+          "position": "editor",
+          "size": null,
+          "contents": [
+            "編集したファイル内で変更点を表示する（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/rewind",
+          "where": "端末の入力行。Escを2回押しても開く（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+          "purpose": "コード、会話、または両方を過去の状態へ戻す（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+        },
+        {
+          "label": "Ctrl+R",
+          "where": "端末の入力中（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+          "purpose": "過去の依頼を検索する（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "VS Codeの専用欄では変更を見ながら作業する。端末の細かな行頭記号は未確認（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "状態表示を改善した端末2.0（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+        "保存した状態を選んで巻き戻す（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+        "VS Codeには専用欄とファイル内の変更点（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+          "kind": "blog",
+          "date": "2025-09-29",
+          "shows": "端末2.0の状態表示・Ctrl+R履歴検索、Esc二回または/rewind、別のVS Code欄とファイル内差分。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+          "kind": "blog",
+          "date": "2025-09-29",
+          "shows": "Sonnet 4.5と製品更新。モデル発表だけでは全画面の配置を確定できない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "版番号別の公式履歴。0.2.44思考語、0.2.54 #/Ctrl+R、1.0.0、1.0.38 hooks、1.0.60 /agents、2.0.0端末刷新。日付がない項目は初出日を断定しない。"
+        }
+      ],
+      "confidence": 0.68
+    },
+    {
+      "id": "claude-code-2025-10",
+      "from": "2025-10",
+      "to": "2025-11",
+      "regions": [
+        {
+          "name": "web-task",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Webでリポジトリを選んで依頼し、作業の進み具合と変更点を確認する。左右の幅は未確認（https://claude.com/resources/articles/claude-code-on-the-web）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "リポジトリを指定して作業を依頼するWeb入力。文字欄の形は未確認（https://claude.com/resources/articles/claude-code-on-the-web）",
+        "assistant": "進捗と変更のまとめを示し、PRとして確認できる（https://claude.com/resources/articles/claude-code-on-the-web）",
+        "tool_calls": null,
+        "streaming": "進み具合を追い、作業中に追加の指示を送れる（https://claude.com/resources/articles/claude-code-on-the-web）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "ブラウザから使うクラウドの作業画面（https://claude.com/resources/articles/claude-code-on-the-web）",
+        "複数のタスクを並行して進める（https://claude.com/resources/articles/claude-code-on-the-web）",
+        "進捗と変更点を確認してPRを作る（https://claude.com/resources/articles/claude-code-on-the-web）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/claude-code-on-the-web",
+          "kind": "blog",
+          "date": "2025-10-20",
+          "shows": "Webでリポジトリを選んで依頼、進行と変更を確認しPRへ。複数タスクとiOS。ローカル遠隔操作とは別。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/claude-code-on-the-web",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行クラウドセッション手順。公開日付ではなく操作の補足。"
+        }
+      ],
+      "confidence": 0.59
+    },
+    {
+      "id": "claude-code-2025-11",
+      "from": "2025-11",
+      "to": "2025-12",
+      "regions": [
+        {
+          "name": "desktop-code",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Desktopから複数のローカル・遠隔セッションを使う。11月24日当日の左右配置は未確認（https://www.anthropic.com/news/claude-opus-4-5）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "DesktopからClaude Codeを使える（https://www.anthropic.com/news/claude-opus-4-5）",
+        "複数の作業セッションを並行して扱う（https://www.anthropic.com/news/claude-opus-4-5）",
+        "翌年1月のレビューではCodeがChat・Coworkと並ぶ。11月初日と同じ配置かは未確認（https://simonwillison.net/2026/Jan/12/claude-cowork/）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-4-5",
+          "kind": "blog",
+          "date": "2025-11-24",
+          "shows": "Claude CodeをDesktopから並列で使う更新とOpus 4.5。正確な初日寸法はない。"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Jan/12/claude-cowork/",
+          "kind": "press",
+          "date": "2026-01-12",
+          "shows": "公開当日の実使用と記事内の画面説明。左Chat/Code/CoworkとNew task、中央の実行内容、右Progress/Artifacts/Context/Working files、下の返信欄。"
+        }
+      ],
+      "confidence": 0.4
+    },
+    {
+      "id": "claude-code-2025-12",
+      "from": "2025-12",
+      "to": "2026-02",
+      "regions": [],
+      "controls": [
+        {
+          "label": "/theme",
+          "where": "端末の入力行から開く。2.0.74の手順（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）",
+          "purpose": "コードの色分けをCtrl+Tで切り替える（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "2.0.74ではテーマ選択にコードの色分け案内（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）",
+        "LSPというコードの定義・参照を調べる道具を追加。専用の常設診断表の根拠にはしない（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）",
+        "Desktopでの並列セッションは11月24日に提供済み（https://www.anthropic.com/news/claude-opus-4-5）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.0.74",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "LSP、/themeの色分け切替、/terminal-setup拡大。12月10日当日の機能かは別途確認が必要。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-4-5",
+          "kind": "blog",
+          "date": "2025-11-24",
+          "shows": "Claude CodeをDesktopから並列で使う更新とOpus 4.5。正確な初日寸法はない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+          "kind": "changelog",
+          "date": null,
+          "shows": "版番号別の公式履歴。0.2.44思考語、0.2.54 #/Ctrl+R、1.0.0、1.0.38 hooks、1.0.60 /agents、2.0.0端末刷新。日付がない項目は初出日を断定しない。"
+        }
+      ],
+      "confidence": 0.38
+    },
+    {
+      "id": "claude-code-2026-02",
+      "from": "2026-02",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "model-picker",
+          "position": "terminal-dialog",
+          "size": null,
+          "contents": [
+            "固定したモデルの内部名でなく、人が読めるモデル名と更新案内を表示する（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）"
+          ]
+        },
+        {
+          "name": "remote-status",
+          "position": "terminal",
+          "size": null,
+          "contents": [
+            "ローカルの作業をほかの端末へつなぐ。現行手順では接続状態を表示。2月初日の行配置は未確認（https://code.claude.com/docs/en/remote-control）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "端末の入力行（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）",
+          "purpose": "読みやすいモデル名から選ぶ（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "2.1.51でローカル遠隔操作用のコマンドを追加（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）",
+        "同じ作業をWebや携帯から続ける（https://code.claude.com/docs/en/remote-control）",
+        "モデル選択に読みやすい名前を表示（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.51",
+          "kind": "release-notes",
+          "date": "2026-02-24",
+          "shows": "remote-control導入、固定モデル名を人が読める表示にする/model変更。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/remote-control",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行のローカル遠隔操作。端末を動かしたままURL/QRからWebや携帯へ接続、端末側に接続状態。後日の追加フラグは2月へ遡及しない。"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-4-6",
+          "kind": "blog",
+          "date": "2026-02-05",
+          "shows": "Opus 4.6、adaptive thinking、APIのeffort設定とClaude Codeのagent teams。APIの1MをWeb入力表示へ転記しない。"
+        }
+      ],
+      "confidence": 0.57
+    },
+    {
+      "id": "claude-code-2026-04-macos",
+      "from": "2026-04",
+      "to": "2026-05",
+      "regions": [
+        {
+          "name": "desktop-sidebar",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "Desktopの進行中と最近のセッション一覧、状態・Project・環境による絞り込み（https://claude.com/resources/articles/claude-code-desktop-redesign）"
+          ]
+        },
+        {
+          "name": "desktop-workspace",
+          "position": "user-arranged",
+          "size": null,
+          "contents": [
+            "会話、差分、プレビュー、端末、ファイル編集をドラッグして配置。公開は4月14日で、カタログの4月5日とは違う（https://claude.com/resources/articles/claude-code-desktop-redesign）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Verbose / Normal / Summary",
+          "where": "DesktopのCode画面。細かな位置は未確認（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+          "purpose": "実行内容を見せる量を変える（https://claude.com/resources/articles/claude-code-desktop-redesign）"
+        },
+        {
+          "label": "⌘+;",
+          "where": "DesktopのCode画面（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+          "purpose": "本来の会話を変えずに追加の質問をする（https://claude.com/resources/articles/claude-code-desktop-redesign）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": "作業の会話とプレビュー・差分などを自分で並べて見る（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+        "tool_calls": "表示量の設定で詳しい実行内容から結果中心の表示まで切り替える（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "左の複数セッション一覧（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+        "固定の左右二分割でなく、配置を動かせる各欄（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+        "端末とファイル編集もアプリに統合（https://claude.com/resources/articles/claude-code-desktop-redesign）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://claude.com/resources/articles/claude-code-desktop-redesign",
+          "kind": "blog",
+          "date": "2026-04-14",
+          "shows": "左の並列セッション一覧、絞り込み、配置可変の会話/端末/差分/編集/プレビュー、表示量3段階。"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=rWaQSQEm_aY",
+          "kind": "video",
+          "date": "2026-04-14",
+          "shows": "公式Claudeチャンネルの題名・説明文を検索で確認。並列一覧と配置変更可能な各欄。映像フレームは見ていない。"
+        },
+        {
+          "url": "https://www.macrumors.com/2026/04/15/anthropic-rebuilds-claude-code-desktop-app/",
+          "kind": "press",
+          "date": "2026-04-15",
+          "shows": "公式刷新の翌日記事。一覧のstatus/project/environment絞り込み、統合端末・ファイル編集・差分欄。"
+        }
+      ],
+      "confidence": 0.77
+    },
+    {
+      "id": "claude-code-2026-05",
+      "from": "2026-05",
+      "to": "2026-08",
+      "regions": [
+        {
+          "name": "plugin-browser",
+          "position": "terminal-dialog",
+          "size": null,
+          "contents": [
+            "Discover/Browseで導入前にコマンド、補助役、追加手順、外部接続などの内容を読む（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）"
+          ]
+        },
+        {
+          "name": "status",
+          "position": "footer",
+          "size": null,
+          "contents": [
+            "該当する場合、PRの状態を示す（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/plugin",
+          "where": "端末の入力行から開く（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）",
+          "purpose": "拡張を探して中身を確認する（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": "2.1.145は待機中の印と経過時間が止まる不具合を修正している。印の形と色は未確認（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "導入前に拡張の中身が読める選択画面（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）",
+        "全画面方式で候補をマウスで選択（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）",
+        "画面下端のPR状態表示（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+          "kind": "release-notes",
+          "date": "2026-05-19",
+          "shows": "/pluginのDiscover/Browseで導入前に中身表示、全画面で候補をマウス選択、下端のPR表示。UTC表記でカタログ05-20と1日差。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/interactive-mode",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の端末入力、許可モード、道具の表示、履歴、差分操作。年ごとの初出を示すページではない。"
+        }
+      ],
+      "confidence": 0.62
+    },
+    {
+      "id": "claude-code-2026-08",
+      "from": "2026-08",
+      "to": "2026-10",
+      "regions": [
+        {
+          "name": "permission-dialog",
+          "position": "terminal-dialog",
+          "size": null,
+          "contents": [
+            "許可欄には変更点と選択肢。2.1.238は長い行と幅の狭い端末での表示を修正（https://github.com/anthropics/claude-code/releases/tag/v2.1.238）"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "許可確認の欄と変更点の折返し（https://github.com/anthropics/claude-code/releases/tag/v2.1.238）",
+        "キー操作の設定が追加される（https://github.com/anthropics/claude-code/releases/tag/v2.1.238）",
+        "月末の8月31日の週には、全画面方式の/diff横欄を案内。8月20日の機能とは断定しない（https://code.claude.com/docs/en/whats-new）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+          "kind": "release-notes",
+          "date": "2026-08-20",
+          "shows": "キー操作設定、許可欄の長文折返し修正。Adaptive Effortや/scheduleの初公開記事ではない。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/whats-new",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "2026-08-24週CLI会話をDesktopの/resumeへ、08-31週全画面の横の/diff欄とMac背後操作、09-07週切り離し窓。05月pop-outや08-24 Inspector導入とは一致しない。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/fullscreen",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の全画面描画は端末内の表示方式。/tui fullscreenで切替、内部スクロール、マウス選択、下端への移動。最大化したデスクトップ窓を意味しない。"
+        }
+      ],
+      "confidence": 0.43
+    },
+    {
+      "id": "claude-code-2026-10",
+      "from": "2026-10",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "transcript",
+          "position": "terminal-viewport",
+          "size": null,
+          "contents": [
+            "現行の全画面方式では端末内で会話をスクロールする。10月8日の新機能かは未確認（https://code.claude.com/docs/en/fullscreen）"
+          ]
+        },
+        {
+          "name": "diff",
+          "position": "beside-conversation",
+          "size": null,
+          "contents": [
+            "全画面方式で会話横の/diff欄。8月31日の週の資料で確認（https://code.claude.com/docs/en/whats-new）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/tui fullscreen",
+          "where": "現行の端末入力行。10月8日の導入日ではない（https://code.claude.com/docs/en/fullscreen）",
+          "purpose": "端末内の全画面表示方式に切り替える（https://code.claude.com/docs/en/fullscreen）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "参考となる全画面方式は端末内でのスクロールとマウス操作（https://code.claude.com/docs/en/fullscreen）",
+        "会話横の差分表示を8月末には案内（https://code.claude.com/docs/en/whats-new）",
+        "unverified：10月8日のWorktree Swarm専用レーンとHooks v2の常設表"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/fullscreen",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の全画面描画は端末内の表示方式。/tui fullscreenで切替、内部スクロール、マウス選択、下端への移動。最大化したデスクトップ窓を意味しない。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/whats-new",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "2026-08-24週CLI会話をDesktopの/resumeへ、08-31週全画面の横の/diff欄とMac背後操作、09-07週切り離し窓。05月pop-outや08-24 Inspector導入とは一致しない。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/interactive-mode",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の端末入力、許可モード、道具の表示、履歴、差分操作。年ごとの初出を示すページではない。"
+        }
+      ],
+      "confidence": 0.3
+    },
+    {
+      "id": "claude-code-2026-11",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "welcome",
+          "position": "terminal-header",
+          "size": null,
+          "contents": [
+            "作業フォルダなどを含む歓迎ヘッダーがある。2.1.325は名前による改行崩れを修正（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）"
+          ]
+        },
+        {
+          "name": "error-help",
+          "position": "below-error",
+          "size": null,
+          "contents": [
+            "組織の設定で依頼が止まった場合、/rewindや/clearの案内をエラーの下に出す（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）"
+          ]
+        },
+        {
+          "name": "permission-dialog",
+          "position": "terminal-dialog",
+          "size": null,
+          "contents": [
+            "長い選択肢や狭い幅で折り返す許可欄（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/rewind / /clear",
+          "where": "拒否エラーの下の案内に示される入力コマンド（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）",
+          "purpose": "依頼を変えるために戻すか会話を消す（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "focus viewでは道具や思考の表示をまとめる方式が存在する。2.1.325はその表示不具合を修正（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）",
+        "streaming": "処理中の印に、ノートブックのセルをもう一度実行する案内を加える場合がある（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace（再描画用の提案。特定の端末フォントを原画面の指定として固定しない）"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "端末内の歓迎ヘッダー（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）",
+        "拒否された依頼の下に次の操作の案内（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）",
+        "全画面方式は端末内部の表示で、DesktopのCode窓とは別（https://code.claude.com/docs/en/fullscreen）"
+      ],
+      "must_not_copy": [
+        "製品のロゴ、放射状の印、起動時の文字で描いたキャラクター",
+        "製品の名前をロゴの書体や形で描いたもの",
+        "画面画像、製品アート、専用フォントのファイル、長い原文や回答例"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+          "kind": "release-notes",
+          "date": "2026-11-13",
+          "shows": "実行中の案内、拒否エラー下の/rewind・/clear案内、focus viewや許可欄・歓迎ヘッダーの修正。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/fullscreen",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現行の全画面描画は端末内の表示方式。/tui fullscreenで切替、内部スクロール、マウス選択、下端への移動。最大化したデスクトップ窓を意味しない。"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/terminal-config",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "端末アプリの配色とClaude Codeテーマは別。下端の状態欄を変更可能。特定のフォントや全端末共通色は指定しない。"
+        }
+      ],
+      "confidence": 0.6
+    }
+  ],
+  "corrections": [
+    "web/js/tools/claude-code.jsのclaudeMascotBannerは端末にキャラクターを文字で描く。ユーザーの権利ルールに従い全時代で再描画対象から除外する（https://github.com/anthropics/claude-code/blob/main/LICENSE.md）",
+    "2025-02の起動時を独自のCLAUDE.mdカードと3ボタン許可カードに固定する根拠はない。公開直後のUIは端末であり、5月や9月のIDE専用欄を遡及しない（https://www.devclass.com/ai-ml/2025/02/27/anthropic-previews-claude-code-agentic-coding-capable-but-costly/1622996）",
+    "2025-04の起動時CLAUDE.md探索ツリーや常設Hierarchy Loaderは未確認。公式履歴に機能の説明があっても、常設の画面要素とは限らない（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+    "1.0.24/27の歓迎枠・>・道具の行頭記号は投稿本文で確認した。5月22日初日へ同じ枠を固定する根拠とは分ける（https://github.com/anthropics/claude-code/issues/2097）",
+    "5月GA画面のHooks/Subagentsボタンは早すぎる可能性がある。履歴ではhooksは1.0.38、補助役の管理は1.0.60で登場。版番号だけから日付は推定しない（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+    "2025-07のHooks/Commands/Subagentsの固定ダッシュボードは機能から創作されたもの。常設表示は未確認（https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md）",
+    "2025-09は端末2.0とネイティブVS Code欄。Webは10月20日、Desktopは11月24日の別更新なので9月の同時公開としない（https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously）",
+    "2025-10の固定Cloud Sandbox右コード欄やPR一覧の幅は未確認。進捗・変更まとめ・複数タスクという動作だけを採用（https://claude.com/resources/articles/claude-code-on-the-web）",
+    "2025-12-10の固定LSP診断表とCtrl+Bの背景作業表は未確認。LSP追加は2.0.74で確認できるが、その公開日と12月10日の同一性を確認していない（https://github.com/anthropics/claude-code/releases/tag/v2.0.74）",
+    "2026-02の1Mメーター、Agent Teamsの常設表、独自のAllow Remote Controlカードは未確認。2.1.51の確実なUI変更は/modelの読みやすい名前と更新案内（https://github.com/anthropics/claude-code/releases/tag/v2.1.51）",
+    "2026-04-macosの4月5日公開、iTerm2とXcodeの固定左右分割、Metal 120Hzなどは未確認。4月14日の公式刷新はDesktop内の並べ替え可能な複数欄であり、端末の窓の見た目とは違う（https://claude.com/resources/articles/claude-code-desktop-redesign）",
+    "2026-05のAuto Mode Classifierスコア表や独自の3ボタンは未確認。2.1.145の実際の公開記録は導入前の拡張内容、候補のマウス操作、PR状態など（https://github.com/anthropics/claude-code/releases/tag/v2.1.145）",
+    "2026-08の/scheduleとAdaptive Effort初出は2.1.238の公開記録からは確認できない。Opus 5.5は9月22日なので8月20日のモデル表示にしない（https://support.claude.com/en/articles/12138966-release-notes）",
+    "2026-10のWorktree Swarm/ Hooks v2常設表と特定の実行数レーンは未確認。既存の複数作業機能から創作しない（https://code.claude.com/docs/en/interactive-mode）",
+    "2026-11のUnified Desktop Window描画を端末2.1.325の見た目の代用にしない。公開記録は端末の歓迎ヘッダー・許可欄・focus viewなどの修正を記載（https://github.com/anthropics/claude-code/releases/tag/v2.1.325）",
+    "公開GitHubには履歴やプラグインもあるが、CLIの描画全体をOSSと断定しない。公式の権利表記を確認し、テーマ実装のコピーは行っていない（https://github.com/anthropics/claude-code/blob/main/LICENSE.md）",
+    "一律の黒背景・橙の色コード・固定フォントを全時期に適用する根拠はない。Claude Codeのテーマと端末アプリ自身の配色は別（https://code.claude.com/docs/en/terminal-config）"
+  ]
+}
+

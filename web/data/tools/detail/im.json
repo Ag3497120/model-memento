@@ -1,0 +1,696 @@
+{
+  "img2threejs--img2threejs": {
+    "topics": [
+      "3d",
+      "ai-agents",
+      "claude-code",
+      "computer-graphics",
+      "generative",
+      "image-to-3d",
+      "procedural-generation",
+      "threejs",
+      "typescript",
+      "webgl"
+    ],
+    "homepage": "https://img2threejs.io",
+    "archived": false,
+    "commit": "0c0c49bc168e648dbaf9c8c080474de0b3a941b6",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0",
+        "2026-07-21"
+      ],
+      [
+        "v1.3",
+        "2026-07-23"
+      ],
+      [
+        "v1.4.0",
+        "2026-07-26"
+      ],
+      [
+        "v1.5-beta",
+        "2026-08-06"
+      ],
+      [
+        "v1.5.1",
+        "2026-08-23"
+      ],
+      [
+        "v1.5.2",
+        "2026-09-03"
+      ],
+      [
+        "v2.0.0",
+        "2026-09-06"
+      ],
+      [
+        "v2.0.1",
+        "2026-11-05"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "npx --yes img2threejs@latest install   # links the skill into every agent it finds / npx --yes img2threejs@latest doctor    # one line per agent: \"managed\" means installed / npx --yes @img2threejs/img2@latest install --yes / npx --yes @img2threejs/img2@latest plugins       # the live catalog / npx --yes img2threejs@latest doctor   # base-skill host/link report",
+    "install_evidence": [
+      {
+        "command": "npx --yes img2threejs@latest install   # links the skill into every agent it finds",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+        "line": 115
+      },
+      {
+        "command": "npx --yes img2threejs@latest doctor    # one line per agent: \"managed\" means installed",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+        "line": 116
+      },
+      {
+        "command": "npx --yes @img2threejs/img2@latest install --yes",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+        "line": 139
+      },
+      {
+        "command": "npx --yes @img2threejs/img2@latest plugins       # the live catalog",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+        "line": 140
+      },
+      {
+        "command": "npx --yes img2threejs@latest doctor   # base-skill host/link report",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+        "line": 220
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "forge/stage3_build/bake_projected_texture.py",
+        "forge/stage4_review/append_review.py",
+        "forge/stage4_review/diagnose_render.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Path to the original reference photo",
+      "Validated cs2-intake.json with source view and camera evidence",
+      "Path to a de-lit albedo produced by stage1_intake/delight_albedo.py, if available",
+      "Build pass being reviewed",
+      "Estimated match score from 0 to 1",
+      "Short review summary",
+      "Semicolon-separated matched criteria",
+      "Semicolon-separated mismatches",
+      "Semicolon-separated spec refinement tasks",
+      "spec",
+      "ObjectSculptSpec JSON (for per-part color delta + recording the result)",
+      "Record the result into --spec",
+      "Write a scene JSON with material maps disabled",
+      "--reference"
+    ],
+    "string_evidence": [
+      {
+        "text": "Path to the original reference photo",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage3_build/bake_projected_texture.py",
+        "line": 142,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Validated cs2-intake.json with source view and camera evidence",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage3_build/bake_projected_texture.py",
+        "line": 143,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Path to a de-lit albedo produced by stage1_intake/delight_albedo.py, if available",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage3_build/bake_projected_texture.py",
+        "line": 144,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Build pass being reviewed",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 228,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Estimated match score from 0 to 1",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 229,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Short review summary",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 231,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Semicolon-separated matched criteria",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 232,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Semicolon-separated mismatches",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 233,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Semicolon-separated spec refinement tasks",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 234,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "spec",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+        "line": 227,
+        "kind": "cli-help"
+      },
+      {
+        "text": "ObjectSculptSpec JSON (for per-part color delta + recording the result)",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py",
+        "line": 315,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Record the result into --spec",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py",
+        "line": 317,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Write a scene JSON with material maps disabled",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py",
+        "line": 319,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--reference",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py",
+        "line": 313,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/img2threejs/img2threejs",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/package.json",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/requirements.txt",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/integrations/vision/pyproject.toml",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/integrations/glb_character_pipeline/pyproject.toml",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage3_build/bake_projected_texture.py",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/vfx.md",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/build.md",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/README.md",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py",
+      "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py",
+      "https://api.github.com/repos/img2threejs/img2threejs/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/package.json"
+      },
+      {
+        "path": "forge/requirements.txt",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/requirements.txt"
+      },
+      {
+        "path": "integrations/vision/pyproject.toml",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/integrations/vision/pyproject.toml"
+      },
+      {
+        "path": "integrations/glb_character_pipeline/pyproject.toml",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/integrations/glb_character_pipeline/pyproject.toml"
+      },
+      {
+        "path": "forge/stage3_build/bake_projected_texture.py",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage3_build/bake_projected_texture.py"
+      },
+      {
+        "path": "docs/standard-prompts/vfx.md",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/vfx.md"
+      },
+      {
+        "path": "docs/standard-prompts/build.md",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/build.md"
+      },
+      {
+        "path": "docs/standard-prompts/README.md",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/docs/standard-prompts/README.md"
+      },
+      {
+        "path": "forge/stage4_review/append_review.py",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/append_review.py"
+      },
+      {
+        "path": "forge/stage4_review/diagnose_render.py",
+        "source": "https://github.com/img2threejs/img2threejs/blob/0c0c49bc168e648dbaf9c8c080474de0b3a941b6/forge/stage4_review/diagnose_render.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:10000..29999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=14, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / general-agent",
+    "repository_id": 1301140808,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imxv--pretty-mermaid-skills": {
+    "topics": [
+      "agent-skills",
+      "ai-agents",
+      "ascii-art",
+      "claude-code",
+      "codex",
+      "cursor",
+      "diagram-generator",
+      "documentation",
+      "flowchart",
+      "mermaid",
+      "mermaid-diagram",
+      "skills",
+      "svg"
+    ],
+    "homepage": "https://www.skills.sh/imxv/pretty-mermaid-skills/pretty-mermaid",
+    "archived": false,
+    "commit": "e234ab73c2992f03c36db04fd55ebb90abca9c45",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "install": "npx skills add imxv/pretty-mermaid-skills@pretty-mermaid -g -y / npx skills list -g",
+    "install_evidence": [
+      {
+        "command": "npx skills add imxv/pretty-mermaid-skills@pretty-mermaid -g -y",
+        "source": "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/README.md",
+        "line": 24
+      },
+      {
+        "command": "npx skills list -g",
+        "source": "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/README.md",
+        "line": 84
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/imxv/Pretty-mermaid-skills",
+      "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/README.md",
+      "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/package.json",
+      "https://api.github.com/repos/imxv/Pretty-mermaid-skills/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/imxv/Pretty-mermaid-skills/blob/e234ab73c2992f03c36db04fd55ebb90abca9c45/package.json"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "repository_id": 1145741988,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "import-ai--omnibox": {
+    "topics": [
+      "agent",
+      "ai-search",
+      "editor",
+      "llm",
+      "note",
+      "rag"
+    ],
+    "homepage": "https://www.omnibox.pro",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/import-ai/omnibox",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 910336786,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imhuso--cunzhi": {
+    "topics": [
+      "ai",
+      "mcp"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/imhuso/cunzhi",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 989405937,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "im4codes--imcodes": {
+    "topics": [
+      "ai",
+      "ai-agents",
+      "automation",
+      "claude",
+      "claude-code",
+      "codex",
+      "codex-cli",
+      "gemini",
+      "gemini-cli",
+      "instant-messaging",
+      "openai",
+      "openclaw"
+    ],
+    "homepage": "https://im.codes",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/im4codes/imcodes",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:openai stars:500..999 fork:false",
+      "topic:claude stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1185233810,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imkkingshuk--lockknife": {
+    "topics": [
+      "adb",
+      "ai-agents",
+      "ai-assisted-hacking",
+      "ai-hacking",
+      "android-forensics",
+      "android-hacking",
+      "android-reverse-engineering",
+      "android-security",
+      "autonomous-agents",
+      "claude",
+      "cli-tool",
+      "developer-tools",
+      "foss",
+      "hacker-tools",
+      "malware-analysis",
+      "mobile-forensics",
+      "open-source",
+      "openclaw",
+      "security-research-tool",
+      "terminal-ui"
+    ],
+    "homepage": "https://lockknife.vercel.app",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "GPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/ImKKingshuk/LockKnife",
+      "https://api.github.com/licenses/gpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:500..999 fork:false",
+      "topic:autonomous-agents stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 668917472,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imbue-ai--vet": {
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-code-review",
+      "ai-coding-tools",
+      "code-quality",
+      "code-review",
+      "coding-assistant"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/imbue-ai/vet",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1144257001,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imdarktom--llamapen": {
+    "topics": [
+      "ai",
+      "bunjs",
+      "dexiejs",
+      "ollama",
+      "ollama-api",
+      "vue",
+      "vue3"
+    ],
+    "homepage": "https://llamapen.app",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Vue) → terminal / local-runtime",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/ImDarkTom/LlamaPen",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ollama stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 923103714,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imoonlab--hyper-rag": {
+    "topics": [
+      "graph-rag",
+      "hypergraph",
+      "llms",
+      "rag"
+    ],
+    "homepage": "https://www.nature.com/articles/s41467-026-71411-1",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/iMoonLab/Hyper-RAG",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 959734860,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imfeh2--fora": {
+    "topics": [
+      "agent",
+      "agent-runtime",
+      "agentic-workflows",
+      "ai",
+      "ai-agent",
+      "ai-workspace",
+      "automation",
+      "fastapi",
+      "llm",
+      "mcp",
+      "react",
+      "rust",
+      "tauri",
+      "tauri-app",
+      "workflow",
+      "workflow-automation"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/imfeh2/fora",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:300..499 fork:false",
+      "topic:ai-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1161490172,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "imshaikot--browsentic": {
+    "topics": [
+      "agentic-browser",
+      "agentic-browsing",
+      "agy-cli",
+      "ai",
+      "ai-agent",
+      "ai-browser-extension",
+      "ai-tools",
+      "brave-extension",
+      "browser-agent",
+      "browser-automation",
+      "browser-extension",
+      "browser-use",
+      "browserskill",
+      "chrome-extension",
+      "claude-code",
+      "codex",
+      "firefox-addon",
+      "mcp-server",
+      "nanobrowser",
+      "web-automation"
+    ],
+    "homepage": "https://browsentic.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/imshaikot/browsentic",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1311496151,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

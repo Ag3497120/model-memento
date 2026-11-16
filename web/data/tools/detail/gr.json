@@ -1,0 +1,2981 @@
+{
+  "graphify-labs--graphify": {
+    "topics": [
+      "ai-agents",
+      "antigravity",
+      "ast",
+      "claude-code",
+      "code-analysis",
+      "code-search",
+      "codex",
+      "cursor",
+      "developer-tools",
+      "gemini",
+      "graphify",
+      "graphrag",
+      "knowledge-graph",
+      "leiden",
+      "llm",
+      "mcp",
+      "openclaw",
+      "rag",
+      "skills",
+      "tree-sitter"
+    ],
+    "homepage": "https://www.graphify.com",
+    "archived": false,
+    "commit": "d4a5b323ef8501518b82c58a05fe21b35ce24992",
+    "classification_basis": "Topics, README introduction, language (Python) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2026-04-05"
+      ],
+      [
+        "v0.9.71",
+        "2026-09-28"
+      ],
+      [
+        "v0.9.72",
+        "2026-09-29"
+      ],
+      [
+        "v0.9.73",
+        "2026-09-30"
+      ],
+      [
+        "v0.9.74",
+        "2026-10-02"
+      ],
+      [
+        "v0.9.75",
+        "2026-10-04"
+      ],
+      [
+        "v0.9.76",
+        "2026-10-04"
+      ],
+      [
+        "v0.9.77",
+        "2026-10-05"
+      ],
+      [
+        "v0.9.78",
+        "2026-10-06"
+      ],
+      [
+        "v0.9.79",
+        "2026-10-06"
+      ],
+      [
+        "v0.9.80",
+        "2026-10-07"
+      ],
+      [
+        "v0.9.81",
+        "2026-10-08"
+      ],
+      [
+        "v0.9.82",
+        "2026-10-09"
+      ],
+      [
+        "v0.9.83",
+        "2026-10-09"
+      ],
+      [
+        "v0.9.84",
+        "2026-10-10"
+      ],
+      [
+        "v0.9.85",
+        "2026-10-10"
+      ],
+      [
+        "v0.9.86",
+        "2026-10-11"
+      ],
+      [
+        "v0.9.87",
+        "2026-10-12"
+      ],
+      [
+        "v0.9.88",
+        "2026-10-12"
+      ],
+      [
+        "v0.9.89",
+        "2026-10-13"
+      ],
+      [
+        "v0.9.90",
+        "2026-10-13"
+      ],
+      [
+        "v0.9.91",
+        "2026-10-14"
+      ],
+      [
+        "v0.9.92",
+        "2026-10-16"
+      ],
+      [
+        "v0.9.93",
+        "2026-10-20"
+      ],
+      [
+        "v0.9.94",
+        "2026-10-22"
+      ],
+      [
+        "v0.9.95",
+        "2026-10-23"
+      ],
+      [
+        "v0.9.96",
+        "2026-10-26"
+      ],
+      [
+        "v0.9.97",
+        "2026-10-27"
+      ],
+      [
+        "v0.9.98",
+        "2026-10-30"
+      ],
+      [
+        "v0.9.99",
+        "2026-10-30"
+      ],
+      [
+        "v0.9.100",
+        "2026-11-01"
+      ],
+      [
+        "v0.9.101",
+        "2026-11-02"
+      ],
+      [
+        "v0.9.102",
+        "2026-11-03"
+      ],
+      [
+        "v0.9.103",
+        "2026-11-05"
+      ],
+      [
+        "v0.9.104",
+        "2026-11-08"
+      ],
+      [
+        "v0.9.105",
+        "2026-11-09"
+      ],
+      [
+        "v0.9.106",
+        "2026-11-10"
+      ],
+      [
+        "v0.9.107",
+        "2026-11-11"
+      ],
+      [
+        "v0.9.108",
+        "2026-11-12"
+      ],
+      [
+        "v0.9.109",
+        "2026-11-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "uv tool install graphifyy      # install the CLI (or: pipx install graphifyy) / brew install python@3.12 uv / uv tool install graphifyy   # recommended, isolated env (if 'graphify' isn't found after, run: uv tool update-shell) / pipx install graphifyy      # alternative / pip install graphifyy       # may need PATH setup, see Troubleshooting below",
+    "install_evidence": [
+      {
+        "command": "uv tool install graphifyy      # install the CLI (or: pipx install graphifyy)",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+        "line": 55
+      },
+      {
+        "command": "brew install python@3.12 uv",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+        "line": 170
+      },
+      {
+        "command": "uv tool install graphifyy   # recommended, isolated env (if 'graphify' isn't found after, run: uv tool update-shell)",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+        "line": 200
+      },
+      {
+        "command": "pipx install graphifyy      # alternative",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+        "line": 201
+      },
+      {
+        "command": "pip install graphifyy       # may need PATH setup, see Troubleshooting below",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+        "line": 202
+      }
+    ],
+    "instruction_files": [
+      "AGENTS.md"
+    ],
+    "instruction_evidence": [
+      {
+        "name": "AGENTS.md",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "path": "graphify/cli.py",
+        "line": 3551,
+        "basis": "Filename referenced near a file discovery / read operation in implementation source"
+      }
+    ],
+    "instruction_search": {
+      "inspected_paths": [
+        "graphify/cli.py",
+        "graphify/pi/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "signal weight halves every N days (default 30)",
+      "distinct useful results to promote a node to preferred (default 2)",
+      "--no-label",
+      "_Opt[str]",
+      "--question",
+      "--answer",
+      "--answer-file"
+    ],
+    "string_evidence": [
+      {
+        "text": "signal weight halves every N days (default 30)",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 2531,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "distinct useful results to promote a node to preferred (default 2)",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 2533,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--no-label",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 3050,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "_Opt[str]",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 3588,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--question",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 2493,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--answer",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 2494,
+        "kind": "cli-help"
+      },
+      {
+        "text": "--answer-file",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+        "line": 2495,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/Graphify-Labs/graphify",
+      "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md",
+      "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/pyproject.toml",
+      "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/pi/package.json",
+      "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py",
+      "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/pi/index.ts",
+      "https://api.github.com/repos/Graphify-Labs/graphify/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/pyproject.toml"
+      },
+      {
+        "path": "graphify/pi/package.json",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/pi/package.json"
+      },
+      {
+        "path": "graphify/cli.py",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/cli.py"
+      },
+      {
+        "path": "graphify/pi/index.ts",
+        "source": "https://github.com/Graphify-Labs/graphify/blob/d4a5b323ef8501518b82c58a05fe21b35ce24992/graphify/pi/index.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:>=30000 fork:false",
+      "topic:mcp stars:>=30000 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=7, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "repository_id": 1200597263,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "grab--cursor-talk-to-figma-mcp": {
+    "topics": [
+      "agent",
+      "agentic",
+      "agentic-ai",
+      "ai",
+      "ai-agents",
+      "automation",
+      "claude-code",
+      "codex",
+      "cursor",
+      "design",
+      "figma",
+      "generative-ai",
+      "llm",
+      "llms",
+      "mcp",
+      "model-context-protocol"
+    ],
+    "homepage": "https://www.figma.com/community/plugin/1485687494525374295/cursor-talk-to-figma-mcp-plugin",
+    "archived": false,
+    "commit": "ddd90f3a6d454ea0b2fc29f1b084f50fd062b880",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/grab/cursor-talk-to-figma-mcp",
+      "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/README.md",
+      "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/package.json",
+      "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/src/talk_to_figma_mcp/package.json",
+      "https://api.github.com/repos/grab/cursor-talk-to-figma-mcp/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/package.json"
+      },
+      {
+        "path": "src/talk_to_figma_mcp/package.json",
+        "source": "https://github.com/grab/cursor-talk-to-figma-mcp/blob/ddd90f3a6d454ea0b2fc29f1b084f50fd062b880/src/talk_to_figma_mcp/package.json"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:3000..9999 fork:false",
+      "topic:mcp stars:3000..9999 fork:false",
+      "topic:agentic stars:3000..9999 fork:false",
+      "topic:model-context-protocol stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → mcp-server / protocol-mcp",
+    "repository_id": 949523404,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "greptimeteam--greptimedb": {
+    "topics": [
+      "ai-agents",
+      "cloud-native",
+      "distributed-database",
+      "greptimedb",
+      "high-cardinality",
+      "logs",
+      "metrics",
+      "object-storage",
+      "observability",
+      "observability-database",
+      "opentelemetry",
+      "prometheus",
+      "promql",
+      "rust",
+      "self-hosted",
+      "traces",
+      "wide-events"
+    ],
+    "homepage": "https://greptime.com/product/db",
+    "archived": false,
+    "commit": "1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8",
+    "classification_basis": "Topics, README introduction, language (Rust) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0-alpha-20221115",
+        "2022-11-15"
+      ],
+      [
+        "v1.0.0-nightly-20260413",
+        "2026-04-13"
+      ],
+      [
+        "v1.0.0-nightly-20260420",
+        "2026-04-20"
+      ],
+      [
+        "v1.0.1",
+        "2026-04-23"
+      ],
+      [
+        "v1.0.0-nightly-20260504",
+        "2026-05-04"
+      ],
+      [
+        "v1.0.0-nightly-20260511",
+        "2026-05-11"
+      ],
+      [
+        "v1.0.2",
+        "2026-05-14"
+      ],
+      [
+        "v1.0.0-nightly-20260518",
+        "2026-05-18"
+      ],
+      [
+        "v1.1.0-nightly-20260525",
+        "2026-05-25"
+      ],
+      [
+        "v1.1.0",
+        "2026-06-14"
+      ],
+      [
+        "v1.1.0-nightly-20260615",
+        "2026-06-15"
+      ],
+      [
+        "v1.1.1",
+        "2026-06-18"
+      ],
+      [
+        "v1.1.0-nightly-20260622",
+        "2026-06-22"
+      ],
+      [
+        "v1.2.0-8513d8d6b-20260625-1782368704",
+        "2026-06-25"
+      ],
+      [
+        "v1.1.2",
+        "2026-07-02"
+      ],
+      [
+        "v1.2.0-nightly-20260706",
+        "2026-07-06"
+      ],
+      [
+        "v1.1.2-0783225e0-20260710-1783671342",
+        "2026-07-10"
+      ],
+      [
+        "v1.1.3",
+        "2026-07-17"
+      ],
+      [
+        "v1.2.0-d1e61a4ad-20260720-1784560249",
+        "2026-07-20"
+      ],
+      [
+        "v1.1.4",
+        "2026-07-24"
+      ],
+      [
+        "v1.2.0-beta.1",
+        "2026-08-01"
+      ],
+      [
+        "v1.3.0-70470bafb-20260807-1786098766",
+        "2026-08-07"
+      ],
+      [
+        "v1.2.0-beta.2",
+        "2026-08-21"
+      ],
+      [
+        "v1.3.0-nightly-20260824",
+        "2026-08-24"
+      ],
+      [
+        "v1.3.0-alpha.1",
+        "2026-09-03"
+      ],
+      [
+        "v1.3.0-alpha.1-nightly-20260907",
+        "2026-09-07"
+      ],
+      [
+        "v1.2.0",
+        "2026-09-08"
+      ],
+      [
+        "v1.2.1",
+        "2026-09-16"
+      ],
+      [
+        "v1.3.0-alpha.1-3c0e2a8d5-20260928-1790639248",
+        "2026-09-29"
+      ],
+      [
+        "v1.3.0-beta.1",
+        "2026-09-29"
+      ],
+      [
+        "v1.4.0-nightly-20261005",
+        "2026-10-05"
+      ],
+      [
+        "v1.4.0-alpha.0-97913b4b3-20261007-1791360072",
+        "2026-10-07"
+      ],
+      [
+        "v1.4.0-nightly-20261012",
+        "2026-10-12"
+      ],
+      [
+        "v1.3.0-beta.2",
+        "2026-10-15"
+      ],
+      [
+        "v1.4.0-nightly-20261022",
+        "2026-10-22"
+      ],
+      [
+        "v1.4.0-nightly-20261028",
+        "2026-10-28"
+      ],
+      [
+        "v1.3.0",
+        "2026-10-28"
+      ],
+      [
+        "v1.3.0-nightly-20261102",
+        "2026-11-02"
+      ],
+      [
+        "v1.4.0-nightly-20261109",
+        "2026-11-09"
+      ],
+      [
+        "v1.3.1",
+        "2026-11-13"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "docker run -p 127.0.0.1:4000-4003:4000-4003 \\",
+    "install_evidence": [
+      {
+        "command": "docker run -p 127.0.0.1:4000-4003:4000-4003 \\",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/README.md",
+        "line": 72
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/catalog/src/memory.rs",
+        "tests-fuzz/src/context.rs",
+        "src/session/src/context.rs",
+        ".github/ci/ci_scope_rules.py",
+        "src/cmd/src/cli.rs",
+        "src/plugins/src/cli.rs",
+        "src/mito2/src/sst/index.rs",
+        "src/common/meta/src/ddl/drop_view.rs",
+        "src/common/meta/src/ddl/event/view.rs",
+        "src/common/meta/src/ddl/create_view.rs",
+        "src/log-store/src/object_store_wal/io.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Result",
+      "Option",
+      "HashMap",
+      "Arc",
+      "Validate the CI scope rules.",
+      "also fail when a pattern",
+      "--check-paths",
+      "CmdResult",
+      "std::result::Result",
+      "ControlFlow",
+      "impl Iterator",
+      "Vec",
+      "object_store::layers::mock::Result",
+      "ProcedureResult",
+      "TableReference",
+      "output.downcast_ref::",
+      "BoxStream",
+      "mock::Result"
+    ],
+    "string_evidence": [
+      {
+        "text": "Result",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs",
+        "line": 198,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Option",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs",
+        "line": 299,
+        "kind": "visible-text"
+      },
+      {
+        "text": "HashMap",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs",
+        "line": 528,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Arc",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs",
+        "line": 846,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Validate the CI scope rules.",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/.github/ci/ci_scope_rules.py",
+        "line": 183,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "also fail when a pattern",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/.github/ci/ci_scope_rules.py",
+        "line": 187,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--check-paths",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/.github/ci/ci_scope_rules.py",
+        "line": 184,
+        "kind": "cli-help"
+      },
+      {
+        "text": "CmdResult",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cmd/src/cli.rs",
+        "line": 155,
+        "kind": "visible-text"
+      },
+      {
+        "text": "std::result::Result",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/plugins/src/cli.rs",
+        "line": 29,
+        "kind": "visible-text"
+      },
+      {
+        "text": "ControlFlow",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs",
+        "line": 995,
+        "kind": "visible-text"
+      },
+      {
+        "text": "impl Iterator",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs",
+        "line": 1383,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Vec",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs",
+        "line": 2077,
+        "kind": "visible-text"
+      },
+      {
+        "text": "object_store::layers::mock::Result",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs",
+        "line": 2341,
+        "kind": "visible-text"
+      },
+      {
+        "text": "ProcedureResult",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/drop_view.rs",
+        "line": 61,
+        "kind": "visible-text"
+      },
+      {
+        "text": "TableReference",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/drop_view.rs",
+        "line": 255,
+        "kind": "visible-text"
+      },
+      {
+        "text": "output.downcast_ref::",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/create_view.rs",
+        "line": 297,
+        "kind": "visible-text"
+      },
+      {
+        "text": "BoxStream",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/log-store/src/object_store_wal/io.rs",
+        "line": 265,
+        "kind": "visible-text"
+      },
+      {
+        "text": "mock::Result",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/log-store/src/object_store_wal/io.rs",
+        "line": 536,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/GreptimeTeam/greptimedb",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/README.md",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/Cargo.toml",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/api/Cargo.toml",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cli/Cargo.toml",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cmd/Cargo.toml",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/catalog/src/memory.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/tests-fuzz/src/context.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/.github/ci/ci_scope_rules.py",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cmd/src/cli.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/plugins/src/cli.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/drop_view.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/event/view.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/create_view.rs",
+      "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/log-store/src/object_store_wal/io.rs",
+      "https://api.github.com/repos/GreptimeTeam/greptimedb/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/Cargo.toml"
+      },
+      {
+        "path": "src/api/Cargo.toml",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/api/Cargo.toml"
+      },
+      {
+        "path": "src/cli/Cargo.toml",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cli/Cargo.toml"
+      },
+      {
+        "path": "src/cmd/Cargo.toml",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cmd/Cargo.toml"
+      },
+      {
+        "path": "src/catalog/src/memory.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/catalog/src/memory.rs"
+      },
+      {
+        "path": "tests-fuzz/src/context.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/tests-fuzz/src/context.rs"
+      },
+      {
+        "path": "src/session/src/context.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/session/src/context.rs"
+      },
+      {
+        "path": ".github/ci/ci_scope_rules.py",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/.github/ci/ci_scope_rules.py"
+      },
+      {
+        "path": "src/cmd/src/cli.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/cmd/src/cli.rs"
+      },
+      {
+        "path": "src/plugins/src/cli.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/plugins/src/cli.rs"
+      },
+      {
+        "path": "src/mito2/src/sst/index.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/mito2/src/sst/index.rs"
+      },
+      {
+        "path": "src/common/meta/src/ddl/drop_view.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/drop_view.rs"
+      },
+      {
+        "path": "src/common/meta/src/ddl/event/view.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/event/view.rs"
+      },
+      {
+        "path": "src/common/meta/src/ddl/create_view.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/common/meta/src/ddl/create_view.rs"
+      },
+      {
+        "path": "src/log-store/src/object_store_wal/io.rs",
+        "source": "https://github.com/GreptimeTeam/greptimedb/blob/1dbc0cd80fd54477b90eb83ae1d89ec793ae3ae8/src/log-store/src/object_store_wal/io.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=18, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Rust) → dashboard / observability-eval",
+    "repository_id": 480217156,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "groupultra--telegram-search": {
+    "topics": [
+      "ai",
+      "ai-agent",
+      "embedding",
+      "mcp",
+      "telegram",
+      "telegram-bot"
+    ],
+    "homepage": "https://search.lingogram.app",
+    "archived": false,
+    "commit": "e0667a41a706638bedbc7e616b7ff2d6f21bbec5",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.0.2",
+        "2025-02-17"
+      ],
+      [
+        "v1.1.33",
+        "2025-12-05"
+      ],
+      [
+        "v1.1.34-beta.1",
+        "2025-12-06"
+      ],
+      [
+        "v1.1.34-beta.2",
+        "2025-12-07"
+      ],
+      [
+        "v1.1.34-beta.3",
+        "2025-12-07"
+      ],
+      [
+        "v1.1.34-beta.4",
+        "2025-12-07"
+      ],
+      [
+        "v1.1.34-beta.5",
+        "2025-12-07"
+      ],
+      [
+        "v1.1.34-beta.6",
+        "2025-12-09"
+      ],
+      [
+        "v1.1.34-beta.7",
+        "2025-12-11"
+      ],
+      [
+        "v1.1.34",
+        "2025-12-11"
+      ],
+      [
+        "v1.1.36",
+        "2025-12-13"
+      ],
+      [
+        "v1.1.37",
+        "2025-12-13"
+      ],
+      [
+        "v1.1.38",
+        "2025-12-14"
+      ],
+      [
+        "v1.1.39",
+        "2025-12-18"
+      ],
+      [
+        "v1.1.40",
+        "2025-12-22"
+      ],
+      [
+        "v1.1.41",
+        "2025-12-24"
+      ],
+      [
+        "v1.1.43",
+        "2025-12-29"
+      ],
+      [
+        "v1.1.44",
+        "2025-12-29"
+      ],
+      [
+        "v1.1.45",
+        "2025-12-30"
+      ],
+      [
+        "v1.1.46",
+        "2026-01-14"
+      ],
+      [
+        "v1.1.47",
+        "2026-01-26"
+      ],
+      [
+        "v1.1.48",
+        "2026-01-26"
+      ],
+      [
+        "v1.1.49",
+        "2026-03-04"
+      ],
+      [
+        "v1.2.0",
+        "2026-03-26"
+      ],
+      [
+        "v1.2.1",
+        "2026-03-28"
+      ],
+      [
+        "v1.2.2",
+        "2026-04-01"
+      ],
+      [
+        "v1.2.3",
+        "2026-04-04"
+      ],
+      [
+        "v1.2.4",
+        "2026-04-07"
+      ],
+      [
+        "v1.2.5",
+        "2026-04-10"
+      ],
+      [
+        "v1.2.6",
+        "2026-05-14"
+      ],
+      [
+        "v1.2.7",
+        "2026-06-28"
+      ],
+      [
+        "v1.2.8",
+        "2026-06-29"
+      ],
+      [
+        "v1.3.1",
+        "2026-08-18"
+      ],
+      [
+        "v1.3.2",
+        "2026-10-10"
+      ],
+      [
+        "v1.3.3",
+        "2026-10-11"
+      ],
+      [
+        "v1.4.0",
+        "2026-10-16"
+      ],
+      [
+        "v1.5.0",
+        "2026-10-17"
+      ],
+      [
+        "v1.6.0",
+        "2026-10-17"
+      ],
+      [
+        "v1.6.1",
+        "2026-11-05"
+      ],
+      [
+        "v1.7.0",
+        "2026-11-09"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "brew install groupultra/telegram-search/tg-search / pnpm install && pnpm run build:packages && pnpm -F @tg-search/cli build / docker run -d -p 3333:3333 ghcr.io/groupultra/telegram-search:latest / pnpm install && cp .env.example .env",
+    "install_evidence": [
+      {
+        "command": "brew install groupultra/telegram-search/tg-search",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md",
+        "line": 58
+      },
+      {
+        "command": "pnpm install && pnpm run build:packages && pnpm -F @tg-search/cli build",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md",
+        "line": 114
+      },
+      {
+        "command": "docker run -d -p 3333:3333 ghcr.io/groupultra/telegram-search:latest",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md",
+        "line": 151
+      },
+      {
+        "command": "pnpm install && cp .env.example .env",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md",
+        "line": 179
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "packages/core/src/context.ts",
+        "packages/bot/src/commands/context.ts",
+        "packages/core/src/services/message-context.ts",
+        "packages/core/src/utils/memory-leak-detector.ts",
+        "packages/client/src/devtools/pglite-devtools.ts",
+        "apps/web/src/main.ts",
+        "apps/server/src/index.ts",
+        "apps/server/mock/index.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "font_ui": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+      "bg": "hsl(0 0% 100%)",
+      "text": "hsl(240 10% 3.9%)",
+      "accent": "hsl(240 5.9% 10%)",
+      "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "font_ui",
+        "value": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css",
+        "line": 38
+      },
+      {
+        "token": "bg",
+        "key": "--background",
+        "value": "hsl(0 0% 100%)",
+        "raw_value": "0 0% 100%",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css",
+        "line": 7
+      },
+      {
+        "token": "text",
+        "key": "--foreground",
+        "value": "hsl(240 10% 3.9%)",
+        "raw_value": "240 10% 3.9%",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css",
+        "line": 8
+      },
+      {
+        "token": "accent",
+        "key": "--primary",
+        "value": "hsl(240 5.9% 10%)",
+        "raw_value": "240 5.9% 10%",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css",
+        "line": 16
+      }
+    ],
+    "strings": [
+      "Back",
+      "Cancel",
+      "Confirm",
+      "Clear",
+      "Unknown",
+      "Unknown Chat",
+      "AI Chat",
+      "AI is thinking...",
+      "Clear Chat",
+      "Please configure AI API in settings first",
+      "Context Retrievals",
+      "Send",
+      "gpt-4o-mini",
+      "qwen-vl-max",
+      "fc-...",
+      "Configure your AI models and API endpoints.",
+      "Vector embedding model for semantic search",
+      "Large Language Model for chat and reasoning",
+      "fromCoreEvents: Set",
+      "Promise",
+      "resolved",
+      "not_requested",
+      "depth_budget",
+      "cycle",
+      "missing",
+      "node_budget",
+      "Unknown error"
+    ],
+    "string_evidence": [
+      {
+        "text": "Back",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 3,
+        "kind": "i18n"
+      },
+      {
+        "text": "Cancel",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 4,
+        "kind": "i18n"
+      },
+      {
+        "text": "Confirm",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 5,
+        "kind": "i18n"
+      },
+      {
+        "text": "Clear",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 6,
+        "kind": "i18n"
+      },
+      {
+        "text": "Unknown",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 7,
+        "kind": "i18n"
+      },
+      {
+        "text": "Unknown Chat",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 8,
+        "kind": "i18n"
+      },
+      {
+        "text": "AI Chat",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 11,
+        "kind": "i18n"
+      },
+      {
+        "text": "AI is thinking...",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 12,
+        "kind": "i18n"
+      },
+      {
+        "text": "Clear Chat",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 13,
+        "kind": "i18n"
+      },
+      {
+        "text": "Please configure AI API in settings first",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 14,
+        "kind": "i18n"
+      },
+      {
+        "text": "Context Retrievals",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 15,
+        "kind": "i18n"
+      },
+      {
+        "text": "Send",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+        "line": 35,
+        "kind": "i18n"
+      },
+      {
+        "text": "gpt-4o-mini",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 386,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "qwen-vl-max",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 460,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "fc-...",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 542,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Configure your AI models and API endpoints.",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 288,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Vector embedding model for semantic search",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 304,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Large Language Model for chat and reasoning",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+        "line": 373,
+        "kind": "visible-text"
+      },
+      {
+        "text": "fromCoreEvents: Set",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/context.ts",
+        "line": 21,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Promise",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/context.ts",
+        "line": 34,
+        "kind": "visible-text"
+      },
+      {
+        "text": "resolved",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 43,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "not_requested",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 47,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "depth_budget",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 57,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "cycle",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 64,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "missing",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 74,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "node_budget",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+        "line": 79,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Unknown error",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/src/index.ts",
+        "line": 62,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/groupultra/telegram-search",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/package.json",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/package.json",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/package.json",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/bot/package.json",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/App.vue",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/components/ui/Input/Input.vue",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/context.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/bot/src/commands/context.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/utils/memory-leak-detector.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/client/src/devtools/pglite-devtools.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/main.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/src/index.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/mock/index.ts",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/index.vue",
+      "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css",
+      "https://api.github.com/repos/groupultra/telegram-search/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/package.json"
+      },
+      {
+        "path": "apps/web/package.json",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/package.json"
+      },
+      {
+        "path": "apps/server/package.json",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/package.json"
+      },
+      {
+        "path": "packages/bot/package.json",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/bot/package.json"
+      },
+      {
+        "path": "apps/web/src/locales/en.json",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/locales/en.json"
+      },
+      {
+        "path": "apps/web/src/App.vue",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/App.vue"
+      },
+      {
+        "path": "apps/web/src/pages/settings.vue",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/settings.vue"
+      },
+      {
+        "path": "apps/web/src/components/ui/Input/Input.vue",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/components/ui/Input/Input.vue"
+      },
+      {
+        "path": "packages/core/src/context.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/context.ts"
+      },
+      {
+        "path": "packages/bot/src/commands/context.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/bot/src/commands/context.ts"
+      },
+      {
+        "path": "packages/core/src/services/message-context.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/services/message-context.ts"
+      },
+      {
+        "path": "packages/core/src/utils/memory-leak-detector.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/core/src/utils/memory-leak-detector.ts"
+      },
+      {
+        "path": "packages/client/src/devtools/pglite-devtools.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/packages/client/src/devtools/pglite-devtools.ts"
+      },
+      {
+        "path": "apps/web/src/main.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/main.ts"
+      },
+      {
+        "path": "apps/server/src/index.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/src/index.ts"
+      },
+      {
+        "path": "apps/server/mock/index.ts",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/server/mock/index.ts"
+      },
+      {
+        "path": "apps/web/src/pages/index.vue",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/pages/index.vue"
+      },
+      {
+        "path": "apps/web/src/styles/main.css",
+        "source": "https://github.com/groupultra/telegram-search/blob/e0667a41a706638bedbc7e616b7ff2d6f21bbec5/apps/web/src/styles/main.css"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agent stars:3000..9999 fork:false",
+      "topic:mcp stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=27, theme=4.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / other",
+    "repository_id": 929338255,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "graykode--abtop": {
+    "topics": [
+      "ai-agents",
+      "ai-coding-agent",
+      "btop",
+      "claude-code",
+      "cli",
+      "codex",
+      "developer-tools",
+      "htop",
+      "monitor",
+      "ratatui",
+      "rust",
+      "terminal",
+      "tui"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "4b96568666c1f3b887202d14b0a1c6171315e520",
+    "classification_basis": "Cargo.toml declares a TUI library",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-03-29"
+      ],
+      [
+        "v0.2.0",
+        "2026-03-30"
+      ],
+      [
+        "v0.2.1",
+        "2026-03-30"
+      ],
+      [
+        "v0.2.2",
+        "2026-03-30"
+      ],
+      [
+        "v0.2.3",
+        "2026-03-31"
+      ],
+      [
+        "v0.2.4",
+        "2026-03-31"
+      ],
+      [
+        "v0.2.5",
+        "2026-04-01"
+      ],
+      [
+        "v0.2.6",
+        "2026-04-01"
+      ],
+      [
+        "v0.2.7",
+        "2026-04-02"
+      ],
+      [
+        "v0.2.8",
+        "2026-04-03"
+      ],
+      [
+        "v0.2.9",
+        "2026-04-03"
+      ],
+      [
+        "v0.2.10",
+        "2026-04-07"
+      ],
+      [
+        "v0.2.11",
+        "2026-04-08"
+      ],
+      [
+        "v0.2.12",
+        "2026-04-17"
+      ],
+      [
+        "v0.2.13",
+        "2026-04-18"
+      ],
+      [
+        "v0.2.14",
+        "2026-04-19"
+      ],
+      [
+        "v0.3.0",
+        "2026-04-20"
+      ],
+      [
+        "v0.3.1",
+        "2026-04-20"
+      ],
+      [
+        "v0.3.2",
+        "2026-04-20"
+      ],
+      [
+        "v0.3.3",
+        "2026-04-21"
+      ],
+      [
+        "v0.3.4",
+        "2026-04-22"
+      ],
+      [
+        "v0.3.5",
+        "2026-04-24"
+      ],
+      [
+        "v0.3.6",
+        "2026-04-24"
+      ],
+      [
+        "v0.3.7",
+        "2026-04-25"
+      ],
+      [
+        "v0.3.8",
+        "2026-04-27"
+      ],
+      [
+        "v0.4.0",
+        "2026-05-02"
+      ],
+      [
+        "v0.4.1",
+        "2026-05-05"
+      ],
+      [
+        "v0.4.2",
+        "2026-05-06"
+      ],
+      [
+        "v0.4.3",
+        "2026-05-09"
+      ],
+      [
+        "v0.4.4",
+        "2026-05-10"
+      ],
+      [
+        "v0.4.5",
+        "2026-05-24"
+      ],
+      [
+        "v0.4.6",
+        "2026-05-28"
+      ],
+      [
+        "v0.4.7",
+        "2026-05-29"
+      ],
+      [
+        "v0.4.8",
+        "2026-06-08"
+      ],
+      [
+        "v0.5.0",
+        "2026-06-29"
+      ],
+      [
+        "v0.5.1",
+        "2026-06-29"
+      ],
+      [
+        "v0.5.2",
+        "2026-07-05"
+      ],
+      [
+        "v0.5.3",
+        "2026-07-07"
+      ],
+      [
+        "v0.5.4",
+        "2026-09-14"
+      ],
+      [
+        "v0.5.5",
+        "2026-09-14"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "cargo install abtop",
+    "install_evidence": [
+      {
+        "command": "cargo install abtop",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/README.md",
+        "line": 33
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/theme.rs",
+        "src/ui/tokens.rs",
+        "src/app.rs",
+        "src/main.rs",
+        "src/ui/help.rs",
+        "src/ui/context.rs",
+        "src/ui/projects.rs"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "Option",
+      "Vec",
+      "HashMap",
+      "std::io::Result"
+    ],
+    "string_evidence": [
+      {
+        "text": "Option",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/theme.rs",
+        "line": 66,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Vec",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/app.rs",
+        "line": 331,
+        "kind": "visible-text"
+      },
+      {
+        "text": "HashMap",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/app.rs",
+        "line": 943,
+        "kind": "visible-text"
+      },
+      {
+        "text": "std::io::Result",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/main.rs",
+        "line": 4,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/demo.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/btop.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/catppuccin.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/deuteranopia.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/dracula.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/gruvbox.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/high-contrast.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/light.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/nord.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/protanopia.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/tokyo-night.tape",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/assets/themes/tritanopia.tape"
+    ],
+    "sources": [
+      "https://github.com/graykode/abtop",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/README.md",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/Cargo.toml",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/theme.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/tokens.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/app.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/main.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/help.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/context.rs",
+      "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/projects.rs",
+      "https://api.github.com/repos/graykode/abtop/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/README.md"
+      },
+      {
+        "path": "Cargo.toml",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/Cargo.toml"
+      },
+      {
+        "path": "src/theme.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/theme.rs"
+      },
+      {
+        "path": "src/ui/tokens.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/tokens.rs"
+      },
+      {
+        "path": "src/app.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/app.rs"
+      },
+      {
+        "path": "src/main.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/main.rs"
+      },
+      {
+        "path": "src/ui/help.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/help.rs"
+      },
+      {
+        "path": "src/ui/context.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/context.rs"
+      },
+      {
+        "path": "src/ui/projects.rs",
+        "source": "https://github.com/graykode/abtop/blob/4b96568666c1f3b887202d14b0a1c6171315e520/src/ui/projects.rs"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=4, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Cargo.toml declares a TUI library",
+    "repository_id": 1195165448,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "grt1228--chatgpt-java": {
+    "topics": [
+      "chatgpt",
+      "chatgpt-java",
+      "gpt-35-turbo",
+      "gpt-4",
+      "gpt-plugins",
+      "java",
+      "openai-api",
+      "openai-chatgpt",
+      "openai-images",
+      "openai-whisper",
+      "tiktoken-java",
+      "whisper"
+    ],
+    "homepage": "https://chatgpt-java.unfbx.com",
+    "archived": false,
+    "commit": "ae761b89450812fab4cd7bba6626f9874705ca40",
+    "classification_basis": "Topics, README introduction, language (Java) → web-chat / chat-ui",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.11",
+        "2023-04-09"
+      ],
+      [
+        "v1.0.12",
+        "2023-04-14"
+      ],
+      [
+        "v1.0.13",
+        "2023-04-28"
+      ],
+      [
+        "1.0.14-beta1",
+        "2023-06-16"
+      ],
+      [
+        "v1.0.14",
+        "2023-06-26"
+      ],
+      [
+        "v1.0.15",
+        "2023-07-20"
+      ],
+      [
+        "v1.1.1-beta0",
+        "2023-08-21"
+      ],
+      [
+        "v1.1.2-beta0",
+        "2023-11-14"
+      ],
+      [
+        "v1.1.3",
+        "2023-11-22"
+      ],
+      [
+        "v1.1.5",
+        "2023-12-05"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/Grt1228/chatgpt-java",
+      "https://github.com/Grt1228/chatgpt-java/blob/ae761b89450812fab4cd7bba6626f9874705ca40/README.md",
+      "https://api.github.com/repos/Grt1228/chatgpt-java/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/Grt1228/chatgpt-java/blob/ae761b89450812fab4cd7bba6626f9874705ca40/README.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:chatgpt stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Java) → web-chat / chat-ui",
+    "repository_id": 600362783,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "griptape-ai--griptape": {
+    "topics": [
+      "ai",
+      "anthropic",
+      "claude",
+      "gpt",
+      "huggingface",
+      "llm",
+      "openai",
+      "python"
+    ],
+    "homepage": "https://www.griptape.ai",
+    "archived": false,
+    "commit": "5f6fd2376a5ac082eb77732de09216ff14e748bf",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.15.0",
+        "2023-08-19"
+      ],
+      [
+        "v1.5.0",
+        "2025-03-13"
+      ],
+      [
+        "v1.5.1",
+        "2025-03-24"
+      ],
+      [
+        "v1.5.2",
+        "2025-03-25"
+      ],
+      [
+        "v1.6.0",
+        "2025-04-08"
+      ],
+      [
+        "v1.6.1",
+        "2025-04-14"
+      ],
+      [
+        "v1.6.2",
+        "2025-04-17"
+      ],
+      [
+        "v1.6.3",
+        "2025-04-21"
+      ],
+      [
+        "v1.6.4",
+        "2025-04-22"
+      ],
+      [
+        "v1.7.0",
+        "2025-05-05"
+      ],
+      [
+        "v1.7.1",
+        "2025-05-09"
+      ],
+      [
+        "v1.7.2",
+        "2025-06-04"
+      ],
+      [
+        "v1.7.3",
+        "2025-06-05"
+      ],
+      [
+        "v1.7.5",
+        "2025-07-08"
+      ],
+      [
+        "v1.8.0",
+        "2025-07-25"
+      ],
+      [
+        "v1.8.1",
+        "2025-08-08"
+      ],
+      [
+        "v1.8.2",
+        "2025-08-27"
+      ],
+      [
+        "v1.8.3",
+        "2025-09-29"
+      ],
+      [
+        "v1.8.4",
+        "2025-09-30"
+      ],
+      [
+        "v1.8.5",
+        "2025-10-06"
+      ],
+      [
+        "v1.8.6",
+        "2025-10-08"
+      ],
+      [
+        "v1.8.7",
+        "2025-10-09"
+      ],
+      [
+        "v1.8.8",
+        "2025-10-10"
+      ],
+      [
+        "v1.8.9",
+        "2025-10-28"
+      ],
+      [
+        "v1.8.10",
+        "2025-10-28"
+      ],
+      [
+        "v1.8.11",
+        "2025-10-29"
+      ],
+      [
+        "v1.8.12",
+        "2025-10-29"
+      ],
+      [
+        "v1.8.13",
+        "2025-11-24"
+      ],
+      [
+        "v1.9.0",
+        "2026-01-13"
+      ],
+      [
+        "v1.9.1",
+        "2026-02-15"
+      ],
+      [
+        "v1.9.2",
+        "2026-02-18"
+      ],
+      [
+        "v1.9.3",
+        "2026-02-19"
+      ],
+      [
+        "v1.9.4",
+        "2026-03-13"
+      ],
+      [
+        "v1.10.0",
+        "2026-04-20"
+      ],
+      [
+        "v1.10.1",
+        "2026-05-07"
+      ],
+      [
+        "v1.10.2",
+        "2026-05-28"
+      ],
+      [
+        "v1.10.3",
+        "2026-06-16"
+      ],
+      [
+        "v1.11.0",
+        "2026-07-14"
+      ],
+      [
+        "v1.12.0",
+        "2026-08-10"
+      ],
+      [
+        "v1.13.0",
+        "2026-08-26"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "griptape/utils/chat.py",
+        "griptape/rules/ruleset.py",
+        "griptape/engines/rag/rag_context.py",
+        "griptape/memory/meta/meta_memory.py",
+        "griptape/memory/task/task_memory.py",
+        "griptape/tools/__init__.py",
+        "griptape/tools/base_tool.py",
+        "griptape/drivers/prompt/__init__.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/griptape-ai/griptape",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/README.md",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/pyproject.toml",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/mcp/requirements.txt",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/utils/chat.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/rules/ruleset.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/engines/rag/rag_context.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/memory/meta/meta_memory.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/memory/task/task_memory.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/__init__.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/base_tool.py",
+      "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/drivers/prompt/__init__.py",
+      "https://api.github.com/repos/griptape-ai/griptape/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/pyproject.toml"
+      },
+      {
+        "path": "griptape/tools/mcp/requirements.txt",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/mcp/requirements.txt"
+      },
+      {
+        "path": "griptape/utils/chat.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/utils/chat.py"
+      },
+      {
+        "path": "griptape/rules/ruleset.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/rules/ruleset.py"
+      },
+      {
+        "path": "griptape/engines/rag/rag_context.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/engines/rag/rag_context.py"
+      },
+      {
+        "path": "griptape/memory/meta/meta_memory.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/memory/meta/meta_memory.py"
+      },
+      {
+        "path": "griptape/memory/task/task_memory.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/memory/task/task_memory.py"
+      },
+      {
+        "path": "griptape/tools/__init__.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/__init__.py"
+      },
+      {
+        "path": "griptape/tools/base_tool.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/base_tool.py"
+      },
+      {
+        "path": "griptape/drivers/prompt/__init__.py",
+        "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/drivers/prompt/__init__.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false",
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / memory",
+    "repository_id": 588992876,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false,
+    "harness_verification": {
+      "at": "2026-11-15T06:58:11.355Z",
+      "method": "Definition syntax checked in commit-pinned implementation source.",
+      "observations": [
+        {
+          "field": "tools_def_path",
+          "path": "griptape/tools/__init__.py",
+          "source": "https://github.com/griptape-ai/griptape/blob/5f6fd2376a5ac082eb77732de09216ff14e748bf/griptape/tools/__init__.py",
+          "verified": false
+        }
+      ]
+    }
+  },
+  "greggh--claude-code.nvim": {
+    "topics": [
+      "ai-assistant",
+      "anthropic",
+      "claude",
+      "claude-code",
+      "neovim",
+      "nvim",
+      "plugin",
+      "terminal"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "55c0cb59828fbc3bec744288286a46f5d5750b83",
+    "classification_basis": "Topics, README introduction, language (Lua) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.4.1",
+        "2025-03-03"
+      ],
+      [
+        "v0.4.2",
+        "2025-03-04"
+      ],
+      [
+        "v0.4.3",
+        "2025-03-21"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/greggh/claude-code.nvim",
+      "https://github.com/greggh/claude-code.nvim/blob/55c0cb59828fbc3bec744288286a46f5d5750b83/README.md",
+      "https://api.github.com/repos/greggh/claude-code.nvim/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/greggh/claude-code.nvim/blob/55c0cb59828fbc3bec744288286a46f5d5750b83/README.md"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Lua) → framework / other",
+    "repository_id": 938379776,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "grinev--opencode-telegram-bot": {
+    "topics": [
+      "ai-agent",
+      "autonomous-agent",
+      "coding-agent",
+      "developer-tools",
+      "grammy",
+      "nodejs",
+      "openclaw-alternative",
+      "opencode",
+      "telegram",
+      "telegrambot",
+      "typescript"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "45405ce89c9d420191106db205c90654dff682af",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-02-11"
+      ],
+      [
+        "v0.17.0",
+        "2026-04-17"
+      ],
+      [
+        "v0.18.0",
+        "2026-04-22"
+      ],
+      [
+        "v0.19.0",
+        "2026-04-26"
+      ],
+      [
+        "v0.19.1",
+        "2026-05-01"
+      ],
+      [
+        "v0.19.2",
+        "2026-05-02"
+      ],
+      [
+        "v0.19.3",
+        "2026-05-02"
+      ],
+      [
+        "v0.20.0",
+        "2026-05-06"
+      ],
+      [
+        "v0.20.1",
+        "2026-05-07"
+      ],
+      [
+        "v0.20.2",
+        "2026-05-10"
+      ],
+      [
+        "v0.20.3",
+        "2026-05-10"
+      ],
+      [
+        "v0.20.4",
+        "2026-05-13"
+      ],
+      [
+        "v0.20.5",
+        "2026-05-16"
+      ],
+      [
+        "v0.20.6",
+        "2026-05-19"
+      ],
+      [
+        "v0.21.0",
+        "2026-05-30"
+      ],
+      [
+        "v0.21.1",
+        "2026-06-04"
+      ],
+      [
+        "v0.21.2",
+        "2026-06-15"
+      ],
+      [
+        "v0.22.0",
+        "2026-06-27"
+      ],
+      [
+        "v0.22.1",
+        "2026-07-02"
+      ],
+      [
+        "v0.22.2",
+        "2026-07-11"
+      ],
+      [
+        "v0.22.3",
+        "2026-07-20"
+      ],
+      [
+        "v0.22.4",
+        "2026-07-28"
+      ],
+      [
+        "v0.22.5",
+        "2026-07-29"
+      ],
+      [
+        "v0.23.0",
+        "2026-08-06"
+      ],
+      [
+        "v0.23.1",
+        "2026-08-07"
+      ],
+      [
+        "v0.24.0",
+        "2026-08-10"
+      ],
+      [
+        "v0.24.1",
+        "2026-08-24"
+      ],
+      [
+        "v0.25.0",
+        "2026-09-01"
+      ],
+      [
+        "v0.25.1",
+        "2026-09-07"
+      ],
+      [
+        "v0.25.2",
+        "2026-09-13"
+      ],
+      [
+        "v0.25.3",
+        "2026-09-19"
+      ],
+      [
+        "v0.26.0",
+        "2026-09-26"
+      ],
+      [
+        "v0.26.1",
+        "2026-09-28"
+      ],
+      [
+        "v0.26.2",
+        "2026-09-30"
+      ],
+      [
+        "v0.26.3",
+        "2026-10-03"
+      ],
+      [
+        "v0.26.4",
+        "2026-10-11"
+      ],
+      [
+        "v0.26.5",
+        "2026-10-17"
+      ],
+      [
+        "v0.26.6",
+        "2026-10-27"
+      ],
+      [
+        "v0.27.0",
+        "2026-11-06"
+      ],
+      [
+        "v0.27.1",
+        "2026-11-12"
+      ]
+    ],
+    "release_coverage": "latest-39-plus-earliest-published-release",
+    "install": "npx @grinev/opencode-telegram-bot@latest / npm install -g @grinev/opencode-telegram-bot / npm install / docker compose up -d --build",
+    "install_evidence": [
+      {
+        "command": "npx @grinev/opencode-telegram-bot@latest",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md",
+        "line": 91
+      },
+      {
+        "command": "npm install -g @grinev/opencode-telegram-bot",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md",
+        "line": 103
+      },
+      {
+        "command": "npm install",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md",
+        "line": 490
+      },
+      {
+        "command": "docker compose up -d --build",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md",
+        "line": 527
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/i18n/en.ts",
+        "src/app/types/project.ts",
+        "src/bot/menus/project-name.ts",
+        "src/app/services/project-service.ts",
+        "src/bot/commands/projects-command.ts",
+        "src/cli.ts",
+        "src/index.ts",
+        "src/cli/args.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [],
+    "string_evidence": [],
+    "recordings": [],
+    "sources": [
+      "https://github.com/grinev/opencode-telegram-bot",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/package.json",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/i18n/en.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/app/types/project.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/bot/menus/project-name.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/app/services/project-service.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/bot/commands/projects-command.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/cli.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/index.ts",
+      "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/cli/args.ts",
+      "https://api.github.com/repos/grinev/opencode-telegram-bot/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/package.json"
+      },
+      {
+        "path": "src/i18n/en.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/i18n/en.ts"
+      },
+      {
+        "path": "src/app/types/project.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/app/types/project.ts"
+      },
+      {
+        "path": "src/bot/menus/project-name.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/bot/menus/project-name.ts"
+      },
+      {
+        "path": "src/app/services/project-service.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/app/services/project-service.ts"
+      },
+      {
+        "path": "src/bot/commands/projects-command.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/bot/commands/projects-command.ts"
+      },
+      {
+        "path": "src/cli.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/cli.ts"
+      },
+      {
+        "path": "src/index.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/index.ts"
+      },
+      {
+        "path": "src/cli/args.ts",
+        "source": "https://github.com/grinev/opencode-telegram-bot/blob/45405ce89c9d420191106db205c90654dff682af/src/cli/args.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agent stars:1000..2999 fork:false",
+      "topic:coding-agent stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=0, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "repository_id": 1153494379,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "greyhaven-ai--autocontext": {
+    "topics": [
+      "agents",
+      "ai",
+      "autoresearch",
+      "claude",
+      "claude-code",
+      "codex",
+      "hermes",
+      "hermes-agent",
+      "llms",
+      "ml",
+      "openclaw",
+      "pi",
+      "pi-coding-agent"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/greyhaven-ai/autocontext",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1155776799,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "griffinmartin--opencode-claude-auth": {
+    "topics": [
+      "ai",
+      "anthropic",
+      "authentication",
+      "claude",
+      "claude-code",
+      "homebrew",
+      "nodejs",
+      "oauth",
+      "opencode",
+      "opencode-plugin",
+      "typescript"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/griffinmartin/opencode-claude-auth",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1186664179,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "grafbase--grafbase": {
+    "topics": [
+      "ai",
+      "api",
+      "enterprise-graphql",
+      "federation",
+      "graphql",
+      "graphql-federation",
+      "mcp",
+      "model-context-protocol",
+      "rust",
+      "webassembly"
+    ],
+    "homepage": "https://the-guild.dev/graphql/hive/blog/acquired-grafbase",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / gateway",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MPL-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/grafbase/grafbase",
+      "https://api.github.com/licenses/mpl-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false",
+      "topic:model-context-protocol stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 370342171,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "graphicle-ai--graphicle": {
+    "topics": [
+      "agent-memory",
+      "ai-agents",
+      "claude-code",
+      "code-analysis",
+      "code-graph",
+      "code-intelligence",
+      "code-search",
+      "codex",
+      "coding-agents",
+      "context-engineering",
+      "cursor",
+      "developer-tools",
+      "graphrag",
+      "knowledge-graph",
+      "local-first",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "rust",
+      "tree-sitter"
+    ],
+    "homepage": "https://www.karlex.ai/graphicle",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / memory",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Graphicle-AI/graphicle",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:model-context-protocol stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1418870464,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "growthxai--output": {
+    "topics": [
+      "agents",
+      "ai",
+      "ai-agents",
+      "ai-sdk",
+      "claude",
+      "claude-code",
+      "javascript",
+      "llm",
+      "nodejs",
+      "open-source",
+      "reliability",
+      "temporal",
+      "typescript",
+      "workflow-engine",
+      "workflows"
+    ],
+    "homepage": "https://output.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/growthxai/output",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agents stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1180979069,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "graphlit--graphlit-mcp-server": {
+    "topics": [
+      "claude",
+      "content-extraction",
+      "content-ingestion",
+      "data-collection",
+      "llm-tools",
+      "mcp-server",
+      "model-context-protocol",
+      "search-api",
+      "unstructured-data",
+      "web-crawler",
+      "web-scraping"
+    ],
+    "homepage": "https://www.graphlit.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/graphlit/graphlit-mcp-server",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:model-context-protocol stars:300..499 fork:false",
+      "topic:claude stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 940989522,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "griddynamics--rosetta": {
+    "topics": [
+      "ai",
+      "claude-code",
+      "codex",
+      "coding",
+      "copilot",
+      "cursor",
+      "developer-tools",
+      "griddynamics",
+      "mcp-server",
+      "plugins",
+      "progressive-disclosure",
+      "rosetta",
+      "sdlc",
+      "skills",
+      "testing"
+    ],
+    "homepage": "https://griddynamics.github.io/rosetta/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/griddynamics/rosetta",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:copilot stars:300..499 fork:false",
+      "topic:mcp-server stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1154446066,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "green-pt--honey-for-devs": {
+    "topics": [
+      "agents",
+      "ai",
+      "claude",
+      "claude-code",
+      "codex",
+      "cursor",
+      "developer-tools",
+      "llm",
+      "prompt-engineering",
+      "token-optimization"
+    ],
+    "homepage": "https://github.com/Green-PT/honey-for-devs",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (JavaScript) → terminal / cli-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Green-PT/honey-for-devs",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:claude stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1274327218,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "grisuno--lazyown": {
+    "topics": [
+      "assistant-cli",
+      "autonomous-agents",
+      "c2-ai-powered",
+      "hive",
+      "implants",
+      "interactive",
+      "mcp",
+      "metadata-extraction",
+      "nmap-scan",
+      "pentesting-tools",
+      "reverse-shell",
+      "suid-enumeration"
+    ],
+    "homepage": "https://grisuno.github.io/LazyOwn/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (HTML) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/grisuno/LazyOwn",
+      "https://api.github.com/licenses/agpl-3.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:autonomous-agents stars:300..499 fork:false",
+      "topic:mcp stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 803610586,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "gradusnikov--eclipse-chatgpt-plugin": {
+    "topics": [
+      "eclipse",
+      "eclipse-plugin",
+      "mcp",
+      "mcp-client",
+      "mcp-server",
+      "plugin"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Java) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/gradusnikov/eclipse-chatgpt-plugin",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:150..299 fork:false",
+      "topic:mcp stars:150..299 fork:false",
+      "topic:mcp-client stars:150..299 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 629515724,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

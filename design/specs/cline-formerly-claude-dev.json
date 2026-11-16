@@ -1,0 +1,1374 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "cline-formerly-claude-dev",
+  "name": "Cline",
+  "vendor": "Cline Bot Inc.",
+  "kind": "ide-extension",
+  "versions": [
+    {
+      "id": "cline-formerly-claude-dev-2024-07",
+      "from": "2024-07",
+      "to": "2024-10",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Run Command",
+          "where": "入力欄の上",
+          "purpose": "提案されたコマンドを実行する"
+        },
+        {
+          "label": "Start New Task",
+          "where": "完了後の下部",
+          "purpose": "新しい依頼を始める"
+        },
+        {
+          "label": "Retry",
+          "where": "呼び出し失敗後の下部",
+          "purpose": "失敗した呼び出しを再試行する"
+        }
+      ],
+      "conversation": {
+        "user": "依頼は上部の見出しに残る。追加入力はホストのバッジ色を使う小さな角丸の帯。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatView.tsx",
+          "dark": "https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatView.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "手伝える内容を尋ねる見出しと説明の下に、最初の依頼を入力する欄。",
+      "distinctive": [
+        "狭いパネルに作業の経過を縦に並べる",
+        "会話の中からファイル変更やコマンドを承認する",
+        "上部にタスク全体の料金とトークン数をまとめる"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄の形、操作、ホストの色・書体変数。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者・返答・操作結果の表示。"
+        },
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v1.0.4",
+          "kind": "release-notes",
+          "date": "2024-07-28",
+          "shows": "2024-07-28 の v1.0.4。横のパネルに加えてエディタ内のタブで開く操作と、失敗時の再試行。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/index.css",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "冒頭のシステム書体と source-code-pro の指定はコメント内。実効書体とは扱わない。"
+        }
+      ],
+      "confidence": 0.87
+    },
+    {
+      "id": "cline-formerly-claude-dev-2024-10",
+      "from": "2024-10",
+      "to": "2024-12",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信",
+            "@でファイルや関連情報を添付",
+            "画像の添付"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Cancel",
+          "where": "入力欄の上",
+          "purpose": "進行中の返答や作業を止める"
+        }
+      ],
+      "conversation": {
+        "user": "依頼は上部の見出しに残る。追加入力はホストのバッジ色を使う小さな角丸の帯。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v2.0.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v2.0.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "手伝える内容を尋ねる見出しと説明の下に、最初の依頼を入力する欄。",
+      "distinctive": [
+        "旧名から Cline へ名前が変わる",
+        "返答とファイル編集が順に現れ、編集位置に黄色の目印",
+        "入力欄に画像添付と @ の候補一覧",
+        "実行中の Cancel と、承認待ちのボタン列"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/blob/v2.0.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄の形、操作、ホストの色・書体変数。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v2.0.0/webview-ui/src/components/chat/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者・返答・操作結果の表示。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v2.0.0/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "タスク見出し、入力欄、Cancel、空画面の条件。"
+        },
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v2.0.0",
+          "kind": "release-notes",
+          "date": "2024-10-09",
+          "shows": "v2.0.0 は2024-10-09。改名、逐次表示、編集中の黄色い目印、停止操作。"
+        }
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "cline-2024-12",
+      "from": "2024-12",
+      "to": "2025-01",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "自動承認メニュー",
+          "position": "above-input",
+          "size": null,
+          "contents": [
+            "Auto-approve のチェックと選択項目",
+            "読み取り、編集、コマンド、ブラウザ、外部ツールの許可設定",
+            "依頼回数の上限と通知設定"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Auto-approve",
+          "where": "入力欄付近",
+          "purpose": "種類ごとに確認を省く操作を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "依頼は上部の見出しに残る。追加入力はホストのバッジ色を使う小さな角丸の帯。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "手伝える内容を尋ねる見出しと説明の下に、最初の依頼を入力する欄。",
+      "distinctive": [
+        "折りたたみ式の自動承認メニュー",
+        "操作の種類ごとのチェック項目",
+        "確認なしで進める呼び出し回数の上限",
+        "大きなファイルの一部変更を表示"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄の形、操作、ホストの色・書体変数。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者・返答・操作結果の表示。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話・承認・入力欄と自動承認メニューの配置。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.0.0/webview-ui/src/components/chat/AutoApproveMenu.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "自動承認の展開メニュー、カテゴリ、上限入力。"
+        },
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.0.0",
+          "kind": "release-notes",
+          "date": "2024-12-18",
+          "shows": "v3.0.0 は2024-12-18。自動承認メニューと部分置換方式の編集。.clinerules は設定ファイル。"
+        }
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "cline-2025-01",
+      "from": "2025-01",
+      "to": "2025-02",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信",
+            "入力欄の下のモデル表示と小さな Plan / Act 切替"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Plan",
+          "where": "入力欄の下",
+          "purpose": "作業前の相談に切り替える"
+        },
+        {
+          "label": "Act",
+          "where": "入力欄の下",
+          "purpose": "実際の編集へ切り替える"
+        }
+      ],
+      "conversation": {
+        "user": "最初の依頼はタスク見出しに残る。追加入力の細かな形は unverified。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.2.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.2.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "手伝える内容を尋ねる見出しと説明の下に、最初の依頼を入力する欄。",
+      "distinctive": [
+        "入力欄の下に Plan / Act の切替",
+        "モデル・接続先を入力欄の下の小さな表示から選ぶ",
+        "切替の外枠は12pxの角丸、入力欄本体は2px",
+        "会話と承認の縦並びは継続"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/blob/v3.2.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄の形、操作、ホストの色・書体変数。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.2.0/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話一覧、タスク見出し、自動承認と入力欄。追加入力の正確な角丸はこの資料から確定しない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.2.0",
+          "kind": "release-notes",
+          "date": "2025-01-21",
+          "shows": "v3.2.0 は2025-01-21。Plan / Act と入力欄下のモデル選択を追加。"
+        },
+        {
+          "url": "https://cline.bot/blog/everyones-talking-about-r1-vs-o1-benchmarks-but-heres-what-really-matters",
+          "kind": "blog",
+          "date": "2025-01-23",
+          "shows": "相談と実装でモードを切り替える使い方。固定色や寸法の資料ではない。"
+        }
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "cline-formerly-claude-dev-2025-02",
+      "from": "2025-02",
+      "to": "2025-07",
+      "regions": [
+        {
+          "name": "追加ツールの一覧",
+          "position": "panel",
+          "size": null,
+          "contents": [
+            "会話パネルと切り替えて開く別画面",
+            "Marketplace / Installed のタブ",
+            "検索と並べ替え",
+            "ツールの名前・説明・利用数・導入操作のカード"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Marketplace",
+          "where": "一覧の上",
+          "purpose": "追加できる外部ツールを探す"
+        },
+        {
+          "label": "Installed",
+          "where": "一覧の上",
+          "purpose": "導入した外部ツールを見る"
+        },
+        {
+          "label": "Search MCPs...",
+          "where": "一覧の上",
+          "purpose": "外部ツールを名前などで探す"
+        },
+        {
+          "label": "Install",
+          "where": "各カード",
+          "purpose": "外部ツールを導入する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.4.0/webview-ui/src/components/mcp/McpView.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.4.0/webview-ui/src/components/mcp/McpView.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "検索欄と並べ替え。カードの導入ボタンは2pxの角丸。通常の会話欄とは別画面。"
+      },
+      "empty_state": "追加できる外部ツールを探す一覧。検索に一致するものがなければ、該当なしの案内。",
+      "distinctive": [
+        "一覧と導入済みの2タブ",
+        "検索欄と並べ替え",
+        "各ツールをカードで縦に表示",
+        "導入前・導入中・導入済みでボタンが変化"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.4.0",
+          "kind": "release-notes",
+          "date": "2025-02-19",
+          "shows": "v3.4.0、2025-02-19。MCP Marketplace と会話内の図表示を追加。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.4.0/webview-ui/src/components/mcp/McpView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Marketplace / Installed のタブと画面切替。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.4.0/webview-ui/src/components/mcp/marketplace/McpMarketplaceView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "検索、並べ替え、候補なしの状態。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.4.0/webview-ui/src/components/mcp/marketplace/McpMarketplaceCard.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "カードの導入ボタンは Install。ブログ本文の Download と異なるため実装を優先。"
+        },
+        {
+          "url": "https://cline.bot/blog/introducing-the-mcp-marketplace-clines-new-app-store",
+          "kind": "blog",
+          "date": "2025-02-19",
+          "shows": "公開日の説明と、一覧から外部ツールを導入する流れ。製品内画面を開いた観察ではない。"
+        }
+      ],
+      "confidence": 0.95
+    },
+    {
+      "id": "cline-2025-07",
+      "from": "2025-07",
+      "to": "2025-11",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Plan",
+          "where": "入力欄の下",
+          "purpose": "作業前の相談へ切り替える"
+        },
+        {
+          "label": "Act",
+          "where": "入力欄の下",
+          "purpose": "実際の編集へ切り替える"
+        },
+        {
+          "label": "Compare",
+          "where": "会話中の保存位置",
+          "purpose": "その時点からのファイル変更を開く"
+        },
+        {
+          "label": "Restore",
+          "where": "会話中の保存位置",
+          "purpose": "会話やファイルを選んだ時点へ戻す"
+        }
+      ],
+      "conversation": {
+        "user": "ホストのバッジ色を使い、3pxの角丸と9pxの内側余白がある帯。クリックして追加入力を修正できる。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "製品マーク、依頼を尋ねる見出し、提案された作業を表示。再現時はマークを省く。",
+      "distinctive": [
+        "Plan / Act の小さな切替",
+        "会話中の保存位置から比較・復元",
+        "追加入力を編集して、その先をやり直す操作",
+        "空画面の提案された作業"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄の形、操作、ホストの色・書体変数。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "利用者・返答・操作結果の表示。"
+        },
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.19.4",
+          "kind": "release-notes",
+          "date": "2025-07-15",
+          "shows": "v3.19.4 は2025-07-15。保存や比較機能の最初の公開日ではない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/common/CheckpointControls.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "Compare / Restore と、会話・ファイル・両方を戻す選択肢。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "追加入力の3px角丸、9px余白、修正操作。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/chat/chat-view/components/layout/WelcomeSection.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面で HomeHeader と SuggestedTasks を使う。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/welcome/HomeHeader.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の製品マークと短い見出し。マークは複製しない。"
+        },
+        {
+          "url": "https://docs.cline.bot/core-workflows/checkpoints",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在の説明は会話内の保存位置から比較・復元する流れ。過去版の細かな配置は固定版ソースを優先。"
+        }
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "cline-2025-11",
+      "from": "2025-11",
+      "to": "2026-04",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Plan",
+          "where": "入力欄の下",
+          "purpose": "作業前の相談へ切り替える"
+        },
+        {
+          "label": "Act",
+          "where": "入力欄の下",
+          "purpose": "実際の編集へ切り替える"
+        },
+        {
+          "label": "Compare",
+          "where": "会話中の保存位置",
+          "purpose": "その時点からのファイル変更を開く"
+        },
+        {
+          "label": "Restore",
+          "where": "会話中の保存位置",
+          "purpose": "会話やファイルを選んだ時点へ戻す"
+        }
+      ],
+      "conversation": {
+        "user": "追加入力は専用の利用者メッセージとして表示する。正確な色値は VS Code のテーマ次第。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "入力欄下の Plan / Act",
+        "ファイルや画像を入力に添付",
+        "会話内の保存位置の印",
+        "作業完了後に変更をまとめて確認する操作"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.36.0",
+          "kind": "release-notes",
+          "date": "2025-11-06",
+          "shows": "2025-11-06 の v3.36.0 を11月枠の代表にする。CLI の追加と VS Code パネルの形を同一視しない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.36.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "VS Code 内の入力欄、Plan / Act、モデル表示。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.36.0/webview-ui/src/components/chat/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話内の保存位置の印と完了後の See new changes。独立した横長の時間軸ではない。"
+        },
+        {
+          "url": "https://docs.cline.bot/core-workflows/checkpoints",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在の比較・復元の説明。2025-11-08 のピクセル配置の証明ではない。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "cline-2026-04",
+      "from": "2026-04",
+      "to": "2026-11",
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Approve",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を許可する"
+        },
+        {
+          "label": "Reject",
+          "where": "入力欄の上",
+          "purpose": "提案された操作を断る"
+        },
+        {
+          "label": "Plan",
+          "where": "入力欄の下",
+          "purpose": "作業前の相談へ切り替える"
+        },
+        {
+          "label": "Act",
+          "where": "入力欄の下",
+          "purpose": "実際の編集へ切り替える"
+        },
+        {
+          "label": "Compare",
+          "where": "会話中の保存位置",
+          "purpose": "その時点からのファイル変更を開く"
+        },
+        {
+          "label": "Restore",
+          "where": "会話中の保存位置",
+          "purpose": "会話やファイルを選んだ時点へ戻す"
+        }
+      ],
+      "conversation": {
+        "user": "追加入力は専用の利用者メッセージとして表示する。正確な色値は VS Code のテーマ次第。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "タスクの履歴や提案、案内カードを表示する空画面。案内は利用者と設定によって変わる。",
+      "distinctive": [
+        "Plan 側と Act 側で切替の色が変わる",
+        "会話にファイル操作の範囲や処理を表示",
+        "入力欄は2pxの角丸を継続",
+        "空画面に履歴や案内カード"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v3.78.0",
+          "kind": "release-notes",
+          "date": "2026-04-10",
+          "shows": "v3.78.0 は2026-04-10。利用上限到達時の専用エラー表示と、read_file の行範囲表示の修正。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.78.0/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "入力欄と Plan / Act。Plan はホストの警告色、Act はフォーカス色。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.78.0/webview-ui/src/components/chat/ChatRow.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ファイル・コマンド・推論表示の行。別OSの画面を横に並べる構成ではない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v3.78.0/webview-ui/src/components/chat/chat-view/components/layout/WelcomeSection.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "空画面の履歴、提案、条件つきの案内。"
+        },
+        {
+          "url": "https://docs.cline.bot/core-workflows/plan-and-act",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のモード切替の説明。公開月の資料ではない。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "cline-2026-11",
+      "from": "2026-10",
+      "to": null,
+      "regions": [
+        {
+          "name": "拡張パネル",
+          "position": "side",
+          "size": null,
+          "contents": [
+            "VS Code の横、またはエディタ内のタブ。幅と左右位置はホスト側の設定次第"
+          ]
+        },
+        {
+          "name": "タスク見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "依頼文",
+            "トークン数（モデルへ渡す文字量の目安）と利用料金"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "返答",
+            "ファイル操作とコマンド実行の記録"
+          ]
+        },
+        {
+          "name": "入力と承認",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "状況に応じた承認・拒否",
+            "複数行の入力と送信"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Plan",
+          "where": "ローカル作業の入力欄下",
+          "purpose": "作業前に相談する"
+        },
+        {
+          "label": "Act",
+          "where": "ローカル作業の入力欄下",
+          "purpose": "編集を進める"
+        },
+        {
+          "label": "Local",
+          "where": "設定のモデル選択",
+          "purpose": "手元で実行する作業のモデルを選ぶ"
+        },
+        {
+          "label": "Cloud",
+          "where": "設定のモデル選択",
+          "purpose": "遠隔で実行する作業のモデルを選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "ホストのバッジ色を使う帯。以前の入力を編集し、その先を再生成する操作がある。",
+        "assistant": "文章とコードを縦に並べる。コードは周囲と別の背景。",
+        "tool_calls": "ファイル名やコマンドを個別の行・枠で表示し、必要なときに承認を求める。",
+        "streaming": "返答を順に表示し、実行中は Cancel で停止できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {
+          "light": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "dark": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif; コードは ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 2,
+        "density": "compact",
+        "input_shape": "横長の複数行欄。入力欄の角は2px。会話やコードの枠とは別の値。"
+      },
+      "empty_state": "履歴、提案、利用できる場合は遠隔で実行中の作業を表示。条件によって案内が変わる。",
+      "distinctive": [
+        "ローカル作業では Plan / Act を継続",
+        "遠隔作業では Act のみでモード切替を隠す",
+        "空画面に遠隔で実行中の作業を表示",
+        "手元と遠隔のモデル設定を分ける"
+      ],
+      "must_not_copy": [
+        "Cline の製品マーク、旧名時代のマーク",
+        "VS Code や追加ツールのロゴとアプリアイコン",
+        "公式画面の画像、案内文の長い転載"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/cline/cline/releases/tag/v4.1.26",
+          "kind": "release-notes",
+          "date": "2026-10-26",
+          "shows": "2026-10-26 の v4.1.26 を11月枠の確認済み代表にする。Local / Cloud と遠隔実行の開始状況カード。11月1日の新配色の根拠ではない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "ローカルの Plan / Act と、遠隔作業で切替を隠す条件。2pxの入力欄。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatView.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "会話と入力欄。遠隔作業ではローカル用の自動承認設定を適用しない。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/UserMessage.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "バッジ色の利用者メッセージと再生成操作。"
+        },
+        {
+          "url": "https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/chat-view/components/layout/WelcomeSection.tsx",
+          "kind": "oss-source",
+          "date": null,
+          "shows": "履歴と遠隔実行中の作業を空画面に表示。"
+        },
+        {
+          "url": "https://cline.bot/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "ログイン前の製品紹介だけ。IDE・CLI・SDK・Desktop・Cloud が別の利用面であることの補助資料。内部の配置や11月の変更日は証明しない。"
+        }
+      ],
+      "confidence": 0.86
+    }
+  ],
+  "corrections": [
+    "2024-07 の renderer にある Deny は、この固定版の Reject と異なる。コマンドの主操作は Run Command。 https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatView.tsx",
+    "旧調査の書体を未確定とした判断は維持する。ただし入力欄は VS Code の書体変数を参照。index.css のコメント内の書体名を実効値にしない。固定色やパネル幅も unverified。 https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/components/ChatView.tsx https://github.com/cline/cline/blob/v1.0.4/webview-ui/src/index.css",
+    "2024-10 に Plan / Act、保存位置への復元、外部ツールの一覧をまとめて載せない。変更履歴では MCP は2.2、保存位置は3.1、Plan / Act は3.2、Marketplace は3.4。 https://github.com/cline/cline/blob/main/CHANGELOG.md",
+    "2024-12 の MCP Marketplace は誤り。v3.0.0 の中心は自動承認メニュー。公開日は12月18日で、カタログの12月15日は一致しない。 https://github.com/cline/cline/releases/tag/v3.0.0 https://cline.bot/blog/introducing-the-mcp-marketplace-clines-new-app-store",
+    "2025-01 の v3.2.0 は1月21日公開。モードごとにモデルを記憶する更新は3.2.6。3.2.5以降の黄色い入力枠も3.2.0へ遡らせない。 https://github.com/cline/cline/releases/tag/v3.2.0 https://github.com/cline/cline/blob/main/CHANGELOG.md",
+    "2025-07 の独立した Shadow Git 表、Memory Bank 操作列、2025-11 の横長の保存時間軸は unverified。会話中の小さな保存位置と比較・復元を再現する。 https://github.com/cline/cline/blob/v3.19.4/webview-ui/src/components/common/CheckpointControls.tsx https://github.com/cline/cline/blob/v3.36.0/webview-ui/src/components/chat/ChatRow.tsx",
+    "2026-04 の JetBrains と CLI を同じ VS Code 画面へ埋め込む根拠はない。v3.78.0 の確認済み変更は利用上限エラーとファイル読み取り範囲表示など。 https://github.com/cline/cline/releases/tag/v3.78.0",
+    "2026-11 の SDK/CLI 表示や MCP Sandbox 承認カードは VS Code の必須外観として unverified。v4.1.26 はローカルと遠隔作業を区別し、遠隔では Plan / Act を隠す。11月の新デザインとしての開始日は unverified。 https://github.com/cline/cline/blob/v4.1.26/apps/vscode/webview-ui/src/components/chat/ChatTextArea.tsx"
+  ]
+}
+

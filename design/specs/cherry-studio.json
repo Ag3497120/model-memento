@@ -1,0 +1,926 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "cherry-studio",
+  "name": "Cherry Studio",
+  "vendor": "CherryHQ",
+  "kind": "desktop-chat",
+  "versions": [
+    {
+      "id": "cherry-studio-2024-06",
+      "from": "2024-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名の文字",
+            "新規会話の操作"
+          ]
+        },
+        {
+          "name": "会話一覧",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "スレッド一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "選択したスレッドの最後のメッセージ"
+          ]
+        },
+        {
+          "name": "設定用の空領域",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "この時点のソースでは内容未実装"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "新規会話",
+          "where": "上部",
+          "purpose": "スレッドを追加する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "読めた初期ソースはスレッド一覧・会話・設定領域の横並び",
+        "会話の表示は最後のメッセージだけの試作段階",
+        "アシスタント管理や知識ベース付きの完成画面としては確認できない"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2024-05-31",
+          "shows": "カタログの6月15日以前の最終コミット。画面はCherry AIという文字の見出し、新規会話、Threads、Chat、空のSettings領域。出荷済みv0.5の証拠ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/components/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2024-05-31",
+          "shows": "会話領域は選択中スレッドのlastMessageだけを表示。完成した複数モデル会話の表示とは異なる。"
+        },
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio/releases/tag/v0.5.0",
+          "kind": "release-notes",
+          "date": "2024-08-07",
+          "shows": "v0.5.0は8月7日。6月のカタログ名をそのままv0.5の実画面と断定できない。"
+        }
+      ],
+      "confidence": 0.28
+    },
+    {
+      "id": "cherry-studio-2024-08",
+      "from": "2024-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "画面切り替えの帯",
+          "position": "left",
+          "size": "55px",
+          "contents": [
+            "アプリ内の画面へ移動する入口"
+          ]
+        },
+        {
+          "name": "アシスタント一覧",
+          "position": "left",
+          "size": "245px",
+          "contents": [
+            "アシスタントの選択",
+            "追加"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "選択したアシスタントの会話"
+          ]
+        },
+        {
+          "name": "話題一覧",
+          "position": "right",
+          "size": "260px",
+          "contents": [
+            "話題の一覧。表示は設定による"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "アシスタントを追加",
+          "where": "上部",
+          "purpose": "使い方を決めたアシスタントを追加する"
+        },
+        {
+          "label": "表示切り替え",
+          "where": "上部",
+          "purpose": "補助欄を表示・非表示にする"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": null,
+          "text": "#000000",
+          "muted": "#00000099",
+          "accent": "#00b96b",
+          "border": "#00000028",
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": null,
+          "text": "#fffff5db",
+          "muted": "#ebebf599",
+          "accent": "#135200",
+          "border": "#ffffff20",
+          "user_bubble": null
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "light.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "light.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "light.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "light.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "dark.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "dark.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "dark.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "dark.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "dark.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss"
+        }
+      },
+      "typography": {
+        "ui_named": "Ubuntu（公開時の変更説明とCSSの読み込みで確認。本文にはシステム書体の候補もある）",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "細い画面切り替え帯とアシスタント一覧を分ける",
+        "会話に広い中央領域を使う",
+        "初期の色指定は緑系で、赤いロゴ色を画面全体の強調色にはしていない"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio/releases/tag/v0.5.0",
+          "kind": "release-notes",
+          "date": "2024-08-07",
+          "shows": "追加時の選択ポップアップ、Ubuntuの使用を説明。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss",
+          "kind": "oss-source",
+          "date": "2024-08-07",
+          "shows": "paletteとregionsの幅。rgbaの色は8桁16進に丸めて記載。アシスタント245px、話題260px、画面帯55px。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2024-08-07",
+          "shows": "Assistants・Chat・Navigation部品と上部の表示操作。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/pages/home/components/Chat.tsx",
+          "kind": "oss-source",
+          "date": "2024-08-07",
+          "shows": "中央の発言と下部入力、右側の話題一覧。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/pages/home/components/NavigationCenter.tsx",
+          "kind": "oss-source",
+          "date": "2024-08-07",
+          "shows": "上部にアシスタント名、モデルの選択、一覧の表示操作。"
+        }
+      ],
+      "confidence": 0.71
+    },
+    {
+      "id": "cherry-studio-2025-01",
+      "from": "2025-01",
+      "to": null,
+      "regions": [
+        {
+          "name": "画面切り替えの帯",
+          "position": "left",
+          "size": "50px",
+          "contents": [
+            "会話以外の画面へ移動する入口"
+          ]
+        },
+        {
+          "name": "アシスタントと話題",
+          "position": "left",
+          "size": "275px",
+          "contents": [
+            "アシスタント一覧",
+            "話題一覧。表示と位置は設定で変わる"
+          ]
+        },
+        {
+          "name": "会話の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "選択中のアシスタントと話題"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "発言",
+            "返答",
+            "思考の折りたたみ"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": "会話の表示方法を切り替えられる。吹き出し表示では利用者を右側、回答を左側へそろえる。",
+        "assistant": "名前やモデルを示す見出しと本文、文字数などの情報や操作を伴う。",
+        "tool_calls": null,
+        "streaming": "返答の生成中と完了後で思考欄の見出しを切り替える。文字を出す速さや印は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "#00000099",
+          "accent": "#00b96b",
+          "border": "#00000028",
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#111111",
+          "panel": "#151515",
+          "text": "#fffff5db",
+          "muted": "#ebebf599",
+          "accent": "#00b96b",
+          "border": "#ffffff22",
+          "user_bubble": "#28b561"
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.panel": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "light.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.panel": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "dark.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss"
+        }
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "50pxの画面切り替え帯と275pxの一覧欄",
+        "思考の内容を折りたたみ、所要時間を小さく示す",
+        "吹き出しと通常の表示を選べる"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/package.json",
+          "kind": "oss-source",
+          "date": "2025-01-24",
+          "shows": "カタログの1月26日以前の最終コミットの版は0.9.17。"
+        },
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio/releases/tag/v0.9.17",
+          "kind": "release-notes",
+          "date": null,
+          "shows": "v0.9.17の公開タグ。今回、取得本文から完全な公開日を読み取っていないためdateはnull。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2025-01-24",
+          "shows": "regions: 見出し、設定に応じた左一覧、中央Chat。話題の位置も設定による。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss",
+          "kind": "oss-source",
+          "date": "2025-01-24",
+          "shows": "paletteと一覧幅。bgはchat-background、panelはcolor-background、user_bubbleは吹き出しモード用定数。表示モードを問わず全発言が緑色になるとはしない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Messages/Message.tsx",
+          "kind": "oss-source",
+          "date": "2025-01-24",
+          "shows": "conversation: 通常表示と吹き出し表示の分岐、発言の左右、見出し、情報と操作。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Messages/MessageThought.tsx",
+          "kind": "oss-source",
+          "date": "2025-01-24",
+          "shows": "conversationとdistinctive: 思考を折りたたむ欄、生成中と時間表示。"
+        }
+      ],
+      "confidence": 0.83
+    },
+    {
+      "id": "cherry-studio-2025-06-macos",
+      "from": "2025-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "画面切り替えの帯",
+          "position": "left",
+          "size": "50px",
+          "contents": [
+            "各機能への入口"
+          ]
+        },
+        {
+          "name": "アシスタントと話題",
+          "position": "left",
+          "size": "275px",
+          "contents": [
+            "アシスタント",
+            "話題。非表示にできる"
+          ]
+        },
+        {
+          "name": "会話の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "選択中のアシスタントと話題"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "発言と返答",
+            "折りたためる思考欄"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文章の入力",
+            "添付",
+            "参照する知識ベース",
+            "複数モデルの指定",
+            "外部ツールの設定"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "送信",
+          "where": "下部の入力欄",
+          "purpose": "入力した内容を送る"
+        },
+        {
+          "label": "知識ベース",
+          "where": "入力欄の操作部",
+          "purpose": "会話に使う資料集を選ぶ"
+        },
+        {
+          "label": "MCP",
+          "where": "入力欄の操作部",
+          "purpose": "接続した外部ツールを選ぶ"
+        },
+        {
+          "label": "@",
+          "where": "入力欄の操作部",
+          "purpose": "返答させるモデルを追加する"
+        }
+      ],
+      "conversation": {
+        "user": "発言と添付を表示する。通常表示と吹き出し表示の両方がある。",
+        "assistant": "本文のほか、思考を折りたたむ欄と所要時間を表示できる。",
+        "tool_calls": "外部ツールを使う内容は会話内の専用ブロックで表せる。詳細な承認カードの形は未確認。",
+        "streaming": "思考中は電球を示す印と時間が変わり、完了後も折りたたんで確認できる。"
+      },
+      "palette": {
+        "light": {
+          "bg": "#f3f3f3",
+          "panel": "#ffffff",
+          "text": "#000000",
+          "muted": "#00000099",
+          "accent": "#00b96b",
+          "border": "#00000019",
+          "user_bubble": "#95ec69"
+        },
+        "dark": {
+          "bg": "#111111",
+          "panel": "#181818",
+          "text": "#fffff5e6",
+          "muted": "#ebebf599",
+          "accent": "#00b96b",
+          "border": "#ffffff19",
+          "user_bubble": "#28b561"
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.panel": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "light.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "dark.panel": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss"
+        }
+      },
+      "typography": {
+        "ui_named": "Ubuntu",
+        "mono_named": "Cascadia Code, Fira Code, Consolas, Menlo, Courier",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": "下部に複数行の入力欄と、添付や外部ツールを選ぶ操作をまとめる。"
+      },
+      "empty_state": null,
+      "distinctive": [
+        "入力欄に資料集・外部ツール・複数モデルの入口をまとめる",
+        "思考欄は折りたたみと時間表示を持つ",
+        "会話の横に固定の知識ベース検査欄を必須にしない"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/package.json",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "読んだソースの版は1.4.2。"
+        },
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio/releases/tag/v1.4.0",
+          "kind": "release-notes",
+          "date": "2025-06-01",
+          "shows": "1.4.0の公開は6月1日。選択した文字から呼び出す補助機能やテーマの更新を説明。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "regions: 上部見出し、左一覧、Chat。表示設定の条件を含む。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "paletteと一覧幅。吹き出し用の緑は色定数として確認。暗色panelはcolor-blackの#181818。rgbaは8桁の16進へ丸めた。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/font.scss",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "typography: Ubuntuを先頭にした本文の候補と、コードの等幅書体候補。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Inputbar/Inputbar.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "controls・input_shape: 複数行入力、添付、KnowledgeBaseInput、MentionModelsInput、外部ツール状態。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Messages/Blocks/ThinkingBlock.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "思考欄の折りたたみ、電球表示、時間、コピー。"
+        },
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio-docs/blob/main/i18n/english/advanced-basic/mcp/config.md",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "外部ツールは設定で追加し、会話で有効化する。現行の英訳文書なので、特定の6月版の寸法の根拠にはしない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Messages/Message.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "conversation: 通常表示と吹き出し表示の分岐、本文と発言の操作。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/Messages/Blocks/ToolBlock.tsx",
+          "kind": "oss-source",
+          "date": "2025-06-18",
+          "shows": "conversation.tool_calls: 会話内の外部ツール用ブロックをMessageToolsで表示する。"
+        }
+      ],
+      "confidence": 0.86
+    },
+    {
+      "id": "cherry-studio-2026-03-macos",
+      "from": "2026-03",
+      "to": null,
+      "regions": [
+        {
+          "name": "画面の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "設定により位置を変える見出し"
+          ]
+        },
+        {
+          "name": "アシスタントと話題",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "表示・非表示を変えられる一覧"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "複数モデルの返答をまとめた組",
+            "表示方法に応じて折りたたみ・横並び・格子状に変わる"
+          ]
+        }
+      ],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": "複数モデルの返答はひとまとめにし、折りたたみや列表示、格子状の表示を選べる。",
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": "#ffffff",
+          "panel": null,
+          "text": "#000000",
+          "muted": "#00000099",
+          "accent": "#00b96b",
+          "border": "#00000019",
+          "user_bubble": "#0000000b"
+        },
+        "dark": {
+          "bg": "#181818",
+          "panel": "#222222",
+          "text": "#fffff5e6",
+          "muted": "#ebebf599",
+          "accent": "#00b96b",
+          "border": "#ffffff19",
+          "user_bubble": "#ffffff14"
+        },
+        "source": {
+          "light.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "light.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "light.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "light.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "light.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "light.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.bg": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.panel": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.text": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.muted": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.accent": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.border": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "dark.user_bubble": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css"
+        }
+      },
+      "typography": {
+        "ui_named": "利用者の指定書体、Ubuntu、システム書体の順",
+        "mono_named": "利用者の指定書体、Cascadia Code、Fira Codeなど",
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": 10,
+        "density": "regular",
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "返答の比較は固定の4分割に限らない",
+        "格子表示の列数は設定値で変わり、既定の式は2列",
+        "利用者の吹き出し用の基本色が薄い中性色へ変わる"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/package.json",
+          "kind": "oss-source",
+          "date": "2026-03-14",
+          "shows": "版は1.7.25。v1.9というカタログ名はこのソースと対応しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-14",
+          "shows": "regions: 見出し位置と一覧の表示条件。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Messages/MessageGroup.tsx",
+          "kind": "oss-source",
+          "date": "2026-03-14",
+          "shows": "conversation・distinctive・shape: 比較の表示方法、列数設定、格子のカード角丸10px。4モデル上限や統合ボタンの証明ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css",
+          "kind": "oss-source",
+          "date": "2026-03-14",
+          "shows": "palette: 会話背景は透明、ベース背景と中性色の利用者用背景。rgbaを16進へ丸めて記録。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/font.css",
+          "kind": "oss-source",
+          "date": "2026-03-14",
+          "shows": "typography: 利用者指定の書体変数が先頭。"
+        },
+        {
+          "url": "https://cherryai.com/docs/en/cherrystudio/preview/chat/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のChat説明。アシスタント・話題・入力の役割を確認する補助資料。新しいタブ構成を3月へ遡らせない。"
+        }
+      ],
+      "confidence": 0.79
+    },
+    {
+      "id": "cherry-studio-2026-11-macos",
+      "from": "2026-11",
+      "to": null,
+      "regions": [
+        {
+          "name": "ページのタブ",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "開いている会話や機能のページ",
+            "新規タブと検索"
+          ]
+        },
+        {
+          "name": "アシスタントと話題",
+          "position": "left",
+          "size": null,
+          "contents": [
+            "アシスタント",
+            "その中の会話"
+          ]
+        },
+        {
+          "name": "会話",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "選択した話題の発言"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "複数行の入力欄",
+            "外部情報の検索",
+            "追加操作",
+            "思考の程度",
+            "送信"
+          ]
+        },
+        {
+          "name": "補助欄",
+          "position": "right",
+          "size": null,
+          "contents": [
+            "話題の補助情報。表示は設定による"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "+",
+          "where": "入力欄の左側",
+          "purpose": "添付・資料集・外部ツールなどを選ぶ"
+        },
+        {
+          "label": "検索",
+          "where": "入力欄の左側",
+          "purpose": "ウェブ検索を切り替える"
+        },
+        {
+          "label": "送信",
+          "where": "入力欄の右側",
+          "purpose": "入力した内容を送る"
+        },
+        {
+          "label": "モデル",
+          "where": "会話の見出し",
+          "purpose": "使うモデルを変更する"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": "Inter",
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif / ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "regular",
+        "input_shape": null
+      },
+      "empty_state": "新しい話題では絵文字と、会話を始めるよう促す短い案内を表示する。本文はまだ空。",
+      "distinctive": [
+        "ウィンドウ上部に複数ページのタブを置く",
+        "左でアシスタントと話題をまとめる",
+        "追加操作を入力欄の+から開く",
+        "通常の会話と作業用の機能は区別される"
+      ],
+      "must_not_copy": [
+        "Cherry Studioのさくらんぼのロゴ・マスコット",
+        "モデル提供会社のロゴ・アプリアイコン",
+        "公式の背景画像・macOSの壁紙・画面写真"
+      ],
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/2292fdd739266df12518e4f706de1aa99f66015f/package.json",
+          "kind": "oss-source",
+          "date": "2026-11-05",
+          "shows": "読んだ当日以前のソースの版は2.1.10。v2.3の出荷済み画面と同一視しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/2292fdd739266df12518e4f706de1aa99f66015f/src/renderer/pages/home/HomePage.tsx",
+          "kind": "oss-source",
+          "date": "2026-11-05",
+          "shows": "regions: リソース一覧、話題の補助欄と表示状態、会話の配置。固定のSandbox & Knowledge欄ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/2292fdd739266df12518e4f706de1aa99f66015f/packages/ui/src/styles/tokens/colors/providers.css",
+          "kind": "oss-source",
+          "date": "2026-11-05",
+          "shows": "色は新しい意味別の変数とOKLCH値、半透明背景で定義。従来の色を引き継がず、未解決のpaletteはnull。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/CherryHQ/cherry-studio/2292fdd739266df12518e4f706de1aa99f66015f/packages/ui/src/styles/tokens/typography.css",
+          "kind": "oss-source",
+          "date": "2026-11-05",
+          "shows": "本文と見出しの基本書体Inter。"
+        },
+        {
+          "url": "https://cherryai.com/docs/en/cherrystudio/preview/chat/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "現在のページタブ、左一覧、モデル選択、下部の+・検索・思考の程度・送信、新しい話題の空表示。11月5日の全画面を直接再現した証拠ではない。"
+        },
+        {
+          "url": "https://www.cherryai.com/docs/en/cherrystudio/preview/",
+          "kind": "official-doc",
+          "date": null,
+          "shows": "ChatとWorkの入口・役割を区別。現在の公開ヘルプ。"
+        },
+        {
+          "url": "https://github.com/CherryHQ/cherry-studio/issues/20328",
+          "kind": "oss-source",
+          "date": "2026-09-10",
+          "shows": "v2.3は機能提案の対象版として記載。提案の画面仕様を出荷済みの画面と扱わない。"
+        }
+      ],
+      "confidence": 0.67
+    }
+  ],
+  "corrections": [
+    "2024年6月のv0.5という呼称は不一致。v0.5.0は8月7日公開なので8月版を追加した。6月以前の読めたソースは会話画面の試作であり、知識ベースや複数モデル機能を重ねない。https://github.com/CherryHQ/cherry-studio/releases/tag/v0.5.0 https://raw.githubusercontent.com/CherryHQ/cherry-studio/f866387862f2f92bd4768d4611ded6fd90405313/src/renderer/src/pages/home/components/Chat.tsx",
+    "2025年1月の思考欄と時間表示はソースで確認できる。一方、rendererの1,840 chunksのメーターや常設の右側知識ベース欄はunverified。https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/Messages/MessageThought.tsx https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/pages/home/HomePage.tsx",
+    "2025年6月のHomePageは左一覧とChatを組む。MCP Marketの固定右ペイン、7台稼働の表示、コマンド承認カードを既定画面とは確認できない。https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/pages/home/HomePage.tsx",
+    "2026年3月のソース版は1.7.25。比較表示は設定で列数を変える。固定2×2・最大4台・第5モデルのSynthesisボタン・常時速度と費用の表示はunverified。https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/package.json https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/pages/home/Messages/MessageGroup.tsx",
+    "2026年11月5日の読んだソースは2.1.10。v2.3を対象とした提案を完成済みとしない。Autonomous Sandbox & Knowledgeの固定右ペイン、Knowledge Graphタブ、暗号化済み同期メーターはunverified。https://raw.githubusercontent.com/CherryHQ/cherry-studio/2292fdd739266df12518e4f706de1aa99f66015f/package.json https://github.com/CherryHQ/cherry-studio/issues/20328",
+    "rendererのさくらんぼの製品マークや回転ロゴ、OS壁紙は再現素材として使わない。製品名は普通の文字だけにする。色の強調はロゴの色を推定せず、CSSの役割別定数を使う。https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss"
+  ]
+}

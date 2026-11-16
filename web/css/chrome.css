@@ -1,0 +1,137 @@
+/* Only Model Memento's own navigation. Reproduced tool surfaces keep their styles. */
+.chrome-dialog, .chrome-skip {
+  --chrome-bg: #fafaf8;
+  --chrome-panel: #ffffff;
+  --chrome-text: #242b30;
+  --chrome-muted: #58636c;
+  --chrome-border: #cdd3d6;
+  --chrome-hover: #eef1f1;
+  --chrome-accent: #245e66;
+  color: var(--chrome-text);
+  background: var(--chrome-bg);
+  color-scheme: light;
+  font: 13px/1.5 system-ui, -apple-system, "Hiragino Sans", Meiryo, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chrome-dialog, .chrome-skip {
+    --chrome-bg: #202629;
+    --chrome-panel: #272f33;
+    --chrome-text: #edf1f2;
+    --chrome-muted: #b6c0c6;
+    --chrome-border: #55636b;
+    --chrome-hover: #343e43;
+    --chrome-accent: #9bd3dc;
+    color-scheme: dark;
+  }
+}
+
+.chrome-dialog button, .chrome-dialog select, .chrome-dialog input {
+  font: inherit;
+  color: var(--chrome-text);
+  border: 1px solid var(--chrome-border);
+  background: var(--chrome-panel);
+  border-radius: 7px;
+  min-height: 40px;
+  padding: 7px 10px;
+  line-height: 1.4;
+}
+.chrome-dialog button:hover { background: var(--chrome-hover); }
+.chrome-dialog :focus-visible, .chrome-skip:focus-visible {
+  outline: 3px solid var(--chrome-accent);
+  outline-offset: 2px;
+}
+.chrome-dialog [hidden] { display: none !important; }
+.chrome-timeline { display: flex; min-width: 0; padding: 0; }
+.chrome-timeline > button { flex: none; }
+.chrome-era-track { display: flex; gap: 5px; flex: 1; min-width: 0; overflow-x: auto; padding: 4px; scrollbar-width: thin; }
+.chrome-dialog .chrome-era { flex: none; min-height: 34px; padding: 5px 10px; border-radius: 20px; white-space: nowrap; font-size: 12px; }
+.chrome-dialog [aria-current="true"], .chrome-dialog [aria-pressed="true"] {
+  border-color: var(--chrome-accent);
+  background: var(--chrome-hover);
+}
+.chrome-skip { position: fixed; left: 8px; top: -100px; padding: 10px; z-index: 100; }
+.chrome-skip:focus { top: 6px; }
+
+dialog.chrome-dialog {
+  padding: 0;
+  width: min(560px, calc(100vw - 24px));
+  height: auto;
+  max-height: calc(100dvh - 32px);
+  border: 1px solid var(--chrome-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 64px #0004;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.chrome-dialog::backdrop { background: #101b2266; }
+.chrome-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--chrome-border); }
+.chrome-dialog h2 { font-size: 18px; line-height: 1.5; margin: 0; font-weight: 600; }
+.chrome-dialog p { margin: 0 0 12px; overflow-wrap: anywhere; }
+.chrome-dialog-body { display: grid; gap: 16px; padding: 18px; min-width: 0; }
+.chrome-dialog .chrome-muted { color: var(--chrome-muted); font-size: 12px; margin: 0; }
+.chrome-field { display: grid; gap: 6px; min-width: 0; }
+.chrome-field p { margin: 0; }
+.chrome-field select, .chrome-field input { width: 100%; min-width: 0; max-width: 100%; }
+.chrome-inline-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.chrome-results { display: grid; gap: 6px; }
+.chrome-dialog .chrome-result { text-align: left; width: 100%; overflow-wrap: anywhere; font-weight: 400; }
+.chrome-menu { display: grid; gap: 4px; }
+.chrome-menu button { display: flex; align-items: center; gap: 10px; text-align: left; min-width: 0; }
+.chrome-menu button > span:nth-child(2) { flex: 1; overflow-wrap: anywhere; }
+.chrome-menu-icon { width: 20px; flex: none; text-align: center; }
+.chrome-menu small { color: var(--chrome-muted); flex: none; }
+.chrome-hint .chrome-dialog-body { padding: 24px; }
+
+@media (max-width: 450px) {
+  .chrome-timeline { padding-left: 6px; padding-right: 6px; }
+  .chrome-dialog-header { padding: 12px; }
+  .chrome-dialog-body { padding: 12px; }
+}
+
+@media (forced-colors: active) {
+  .chrome-dialog [aria-current="true"], .chrome-dialog [aria-pressed="true"] { outline: 2px solid Highlight; }
+}
+
+/* The app menu opens from the desktop menu bar. No permanent Memento strip. */
+dialog.chrome-dialog[data-chrome-view="menu"] { position: fixed; top: 36px; left: 10px; right: auto; bottom: auto; margin: 0; width: min(430px, calc(100vw - 20px)); max-height: calc(100dvh - 44px); border-radius: 6px; }
+.chrome-menu-edition { min-width: 0; display: grid; gap: 8px; border-block: 1px solid var(--chrome-border); padding: 12px 0; }
+.chrome-menu-edition p { margin: 0; }
+.chrome-more-menu > summary { cursor: pointer; padding: 6px 0; }
+.chrome-more-menu > .chrome-menu { margin-top: 8px; }
+.chrome-dialog h3 { font-size: 14px; margin: 0 0 8px; }
+.chrome-dialog .chrome-era-track { max-width: 100%; }
+.chrome-dialog .era-memento-line a { margin-right: 8px; }
+
+/* メニューの区分と戻る操作（2026-11-16） */
+.chrome-menu-group { display: grid; gap: 6px; min-width: 0; }
+.chrome-menu-group + .chrome-menu-group { border-top: 1px solid var(--chrome-border); padding-top: 12px; }
+.chrome-dialog .chrome-menu-heading { font-size: 11px; letter-spacing: .08em; color: var(--chrome-muted); margin: 0; font-weight: 600; }
+.chrome-dialog .chrome-menu-item { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 8px 10px; border-radius: 6px; font-weight: 400; min-width: 0; }
+.chrome-menu-text { display: grid; gap: 2px; flex: 1; min-width: 0; }
+.chrome-menu-label { font-weight: 600; overflow-wrap: anywhere; }
+.chrome-dialog .chrome-menu-desc { color: var(--chrome-muted); font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
+.chrome-menu-go { flex: none; color: var(--chrome-muted); font-size: 18px; line-height: 1; }
+.chrome-dialog .chrome-menu-state { flex: none; font-size: 11px; padding: 2px 6px; border: 1px solid var(--chrome-border); border-radius: 999px; }
+.chrome-menu-item[aria-pressed="true"] .chrome-menu-state { background: var(--chrome-border); }
+.chrome-menu-now { display: grid; gap: 2px; margin: 0; }
+.chrome-menu-now small { color: var(--chrome-muted); font-size: 11px; }
+.chrome-menu-group .chrome-menu-edition { border-block: 0; padding: 0; }
+.chrome-menu-plain { justify-self: start; }
+.chrome-dialog-header h2, .chrome-dialog-header h1 { flex: 1; min-width: 0; }
+.screen-back { flex: none; white-space: nowrap; }
+header:has(> .screen-back) { display: flex; align-items: center; gap: 12px; }
+header:has(> .screen-back) > h1, header:has(> .screen-back) > h2, header:has(> .screen-back) > div { flex: 1; min-width: 0; }
+.chrome-dialog .chrome-menu-item { border: 0; background: transparent; color: inherit; cursor: pointer; }
+.chrome-dialog .chrome-menu-item:hover, .chrome-dialog .chrome-menu-item:focus-visible { background: color-mix(in srgb, var(--chrome-border) 45%, transparent); }
+.chrome-dialog .chrome-menu-item:focus-visible { outline: 2px solid var(--chrome-muted); outline-offset: -2px; }
+/* 中身に合わせた高さ（height:auto だと上下0の配置で画面いっぱいに伸びる） */
+dialog.chrome-dialog { height: fit-content; }
+
+.chrome-inline-actions .chrome-language-switch {
+  font-size: .85em;
+  padding: .3rem .5rem;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}

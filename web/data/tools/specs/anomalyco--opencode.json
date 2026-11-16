@@ -1,0 +1,441 @@
+{
+  "id": "anomalyco--opencode",
+  "version": "d432a06b9c07",
+  "from": "2026-11-15",
+  "surface": "terminal",
+  "layout": {
+    "t": "col",
+    "label": "app.tsx",
+    "c": [
+      {
+        "t": "terminal",
+        "label": "TuiTerminalEnvironmentProvider",
+        "c": [
+          {
+            "t": "terminal",
+            "label": "SessionTerminalsProvider",
+            "c": [
+              {
+                "t": "panel",
+                "label": "DialogProvider",
+                "c": [
+                  {
+                    "t": "chatlist",
+                    "label": "PromptHistoryProvider",
+                    "c": [
+                      {
+                        "t": "panel",
+                        "label": "PanelProvider"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "t": "panel",
+        "label": "DialogHighlights"
+      },
+      {
+        "t": "panel",
+        "label": "CommandPaletteDialog"
+      },
+      {
+        "t": "chatlist",
+        "label": "DialogSessionList"
+      },
+      {
+        "t": "banner",
+        "label": "DialogOpen"
+      },
+      {
+        "t": "panel",
+        "label": "DialogModel"
+      },
+      {
+        "t": "panel",
+        "label": "DialogAgent"
+      },
+      {
+        "t": "panel",
+        "label": "DialogUsage"
+      },
+      {
+        "t": "panel",
+        "label": "DialogMcp"
+      },
+      {
+        "t": "panel",
+        "label": "DialogVariant"
+      },
+      {
+        "t": "panel",
+        "label": "DialogIntegration",
+        "c": [
+          {
+            "t": "panel",
+            "label": "DialogModel"
+          },
+          {
+            "t": "panel",
+            "label": "DialogHighlights"
+          },
+          {
+            "t": "panel",
+            "label": "DialogConfig"
+          },
+          {
+            "t": "statusline",
+            "label": "DialogStatus"
+          },
+          {
+            "t": "panel",
+            "label": "DialogPair"
+          },
+          {
+            "t": "panel",
+            "label": "DialogDebug"
+          },
+          {
+            "t": "panel",
+            "label": "DialogThemeList"
+          },
+          {
+            "t": "panel",
+            "label": "DialogHelp"
+          },
+          {
+            "t": "col",
+            "label": "box",
+            "c": [
+              {
+                "t": "col",
+                "label": "box",
+                "c": [
+                  {
+                    "t": "tabs",
+                    "label": "SessionTabs"
+                  },
+                  {
+                    "t": "col",
+                    "label": "box",
+                    "c": [
+                      {
+                        "t": "col",
+                        "label": "box",
+                        "c": [
+                          {
+                            "t": "tabs",
+                            "label": "SessionTabs"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tokens": {
+    "accent": "#9d7cd8",
+    "bg": "#0a0a0a",
+    "text": "#eeeeee",
+    "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/assets/opencode.json"
+  },
+  "strings": {
+    "s1": "Theme performance",
+    "s2": "Themes",
+    "s3": "MCP server needs authentication",
+    "s4": "Open MCP servers",
+    "s5": "Run /mcps to view details.",
+    "s6": "Copied to clipboard",
+    "s7": "Show command palette",
+    "s8": "Switch session",
+    "s9": "New session",
+    "s10": "Clear session",
+    "s11": "menu",
+    "s12": "normal",
+    "s13": "Clear screen",
+    "s14": "Open command palette",
+    "s15": "Cycle model variant",
+    "s16": "View subagents",
+    "s17": "View pending prompts",
+    "s18": "Interrupt subagent",
+    "s19": "Close sidebar",
+    "s20": "Queued prompts",
+    "s21": "delete",
+    "s22": "undo",
+    "s23": "Leave shell mode before undoing a queued prompt",
+    "s24": "Failed to undo pending prompt",
+    "s25": "steer",
+    "s26": "enter",
+    "s27": "Page up",
+    "s28": "Redo"
+  },
+  "behaviors": {
+    "commands": [
+      "/exit",
+      "/new"
+    ]
+  },
+  "mobile": "none",
+  "sources": [
+    "https://github.com/anomalyco/opencode",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/cli/dev/README.md",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/package.json",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/cli/package.json",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/package.json",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/ai/package.json",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/mini/theme.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/context/theme.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/component/dialog-theme-list.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/component/theme-error-toast.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/assets/opencode.json",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/index.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/app.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/index.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/ui/src/i18n/en.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/i18n/en.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/i18n/english.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/runtime/i18n/en.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/gui-plugins/src/btw/i18n/en.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/home.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/session/sidebar.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/app.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/app.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/data/app/src/app.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/voice/composer.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/shell/state/layout.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/gui-plugins/src/pairing/page.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/util/project.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/plugin/src/tui/context.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/session/composer/context.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/core/src/project.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/prompt/part.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/prompt/codec.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/prompt/parse.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/index.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/mini/index.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/theme/src/tui/index.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/plugin/render.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/mini/footer.view.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/session/group-view.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/session/index.tsx",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/process-daemon/src/main.rs",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/color.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/discovery.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/system.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/theme/component.ts",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/style/index.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/data/app/src/routes/index.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/style/ibm-plex-mono.dev.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/services/site/src/style/fonts.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/app/src/voice/voice.css",
+    "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/ui/layout.ts",
+    "https://api.github.com/repos/anomalyco/opencode/releases"
+  ],
+  "provenance": {
+    "commit": "d432a06b9c07bab0be4e8d642173b1cb14137f11",
+    "snapshot_at": "2026-11-15",
+    "layout_path": "packages/tui/src/app.tsx",
+    "layout_evidence": [
+      {
+        "component": "TuiTerminalEnvironmentProvider",
+        "type": "terminal",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 360
+      },
+      {
+        "component": "SessionTerminalsProvider",
+        "type": "terminal",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 415
+      },
+      {
+        "component": "DialogProvider",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 424
+      },
+      {
+        "component": "PromptHistoryProvider",
+        "type": "chatlist",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 426
+      },
+      {
+        "component": "PanelProvider",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 433
+      },
+      {
+        "component": "DialogHighlights",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 746
+      },
+      {
+        "component": "CommandPaletteDialog",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 760
+      },
+      {
+        "component": "DialogSessionList",
+        "type": "chatlist",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 770
+      },
+      {
+        "component": "DialogOpen",
+        "type": "banner",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 834
+      },
+      {
+        "component": "DialogModel",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 909
+      },
+      {
+        "component": "DialogAgent",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 954
+      },
+      {
+        "component": "DialogUsage",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 963
+      },
+      {
+        "component": "DialogMcp",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 972
+      },
+      {
+        "component": "DialogVariant",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1006
+      },
+      {
+        "component": "DialogIntegration",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1025
+      },
+      {
+        "component": "DialogModel",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1026
+      },
+      {
+        "component": "DialogHighlights",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1038
+      },
+      {
+        "component": "DialogConfig",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1049
+      },
+      {
+        "component": "DialogStatus",
+        "type": "statusline",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1058
+      },
+      {
+        "component": "DialogPair",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1078
+      },
+      {
+        "component": "DialogDebug",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1124
+      },
+      {
+        "component": "DialogThemeList",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1133
+      },
+      {
+        "component": "DialogHelp",
+        "type": "panel",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1164
+      },
+      {
+        "component": "box",
+        "type": "col",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1405
+      },
+      {
+        "component": "box",
+        "type": "col",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1424
+      },
+      {
+        "component": "SessionTabs",
+        "type": "tabs",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1434
+      },
+      {
+        "component": "box",
+        "type": "col",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1436
+      },
+      {
+        "component": "box",
+        "type": "col",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1438
+      },
+      {
+        "component": "SessionTabs",
+        "type": "tabs",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/app.tsx",
+        "line": 1440
+      }
+    ],
+    "behavior_evidence": [
+      {
+        "value": "/exit",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/routes/home.tsx",
+        "line": 161
+      },
+      {
+        "value": "/new",
+        "source": "https://github.com/anomalyco/opencode/blob/d432a06b9c07bab0be4e8d642173b1cb14137f11/packages/tui/src/mini/footer.view.tsx",
+        "line": 832
+      }
+    ],
+    "method": "Observed component outline in source order. Conditional branches may coexist in this static outline.",
+    "mobile": "Terminal reconstruction.",
+    "stream": "Unmeasured; omitted."
+  }
+}

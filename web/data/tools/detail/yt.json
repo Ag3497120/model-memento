@@ -1,0 +1,621 @@
+{
+  "ythx-101--x-tweet-fetcher": {
+    "topics": [
+      "agent-skills",
+      "agent-tools",
+      "ai-agent",
+      "automation",
+      "cli",
+      "fxtwitter",
+      "llm-tools",
+      "nitter",
+      "no-api",
+      "no-login",
+      "osint",
+      "playwright",
+      "python",
+      "scraper",
+      "sqlite",
+      "tweet-scraper",
+      "twitter",
+      "twitter-api-alternative",
+      "twitter-scraper",
+      "x-twitter"
+    ],
+    "homepage": "https://github.com/ythx-101/openclaw-qa",
+    "archived": false,
+    "commit": "e1a668d2ae2d19f8c628ad437b7a4223b3c24b94",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / framework",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.1.0",
+        "2026-02-16"
+      ],
+      [
+        "v1.5.0",
+        "2026-02-26"
+      ],
+      [
+        "v1.6.0",
+        "2026-03-04"
+      ],
+      [
+        "v1.6.1",
+        "2026-03-04"
+      ],
+      [
+        "v1.6.2",
+        "2026-03-04"
+      ],
+      [
+        "v1.6.3",
+        "2026-03-07"
+      ],
+      [
+        "v1.7.0",
+        "2026-03-14"
+      ],
+      [
+        "v1.8.0",
+        "2026-03-19"
+      ],
+      [
+        "v1.9.0",
+        "2026-03-20"
+      ],
+      [
+        "v2.0.0",
+        "2026-03-23"
+      ],
+      [
+        "v3.0.0",
+        "2026-07-05"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install git+https://github.com/ythx-101/x-tweet-fetcher / pip install \".[playwright]\"            # from the clone / docker run -v $(pwd)/nitter.conf:/src/nitter.conf -d --network host zedeus/nitter:latest / pip install -e \".[dev]\"",
+    "install_evidence": [
+      {
+        "command": "pip install git+https://github.com/ythx-101/x-tweet-fetcher",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md",
+        "line": 47
+      },
+      {
+        "command": "pip install \".[playwright]\"            # from the clone",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md",
+        "line": 83
+      },
+      {
+        "command": "docker run -v $(pwd)/nitter.conf:/src/nitter.conf -d --network host zedeus/nitter:latest",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md",
+        "line": 185
+      },
+      {
+        "command": "pip install -e \".[dev]\"",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md",
+        "line": 252
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/xtf/cli.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "--url",
+      "--user",
+      "--search",
+      "--user-info",
+      "--article",
+      "--monitor",
+      "--list",
+      "--limit",
+      "--replies",
+      "--pretty",
+      "--text-only",
+      "--timeout",
+      "--port",
+      "--nitter",
+      "--backend",
+      "--browser-driver",
+      "--ledger",
+      "--query",
+      "--stats",
+      "--lang",
+      "X/Twitter username (without @)"
+    ],
+    "string_evidence": [
+      {
+        "text": "--url",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 77,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--user",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 78,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--search",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 79,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--user-info",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 80,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--article",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 81,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--monitor",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 83,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--list",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 85,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--limit",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 87,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--replies",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 89,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--pretty",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 90,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--text-only",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 91,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--timeout",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 92,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--port",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 93,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--nitter",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 95,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--backend",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 97,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--browser-driver",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 99,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--ledger",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 101,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--query",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 104,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--stats",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 106,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--lang",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 108,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "X/Twitter username (without @)",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+        "line": 78,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ythx-101/x-tweet-fetcher",
+      "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md",
+      "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/pyproject.toml",
+      "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py",
+      "https://api.github.com/repos/ythx-101/x-tweet-fetcher/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/README.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/pyproject.toml"
+      },
+      {
+        "path": "src/xtf/cli.py",
+        "source": "https://github.com/ythx-101/x-tweet-fetcher/blob/e1a668d2ae2d19f8c628ad437b7a4223b3c24b94/src/xtf/cli.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agent stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=21, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / framework",
+    "repository_id": 1157855507,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ythx-101--live-panel-skill": {
+    "topics": [
+      "agent-skill",
+      "ai-agents",
+      "animated-diagram",
+      "architecture-diagram",
+      "chinese",
+      "claude-code",
+      "claude-skills",
+      "codex",
+      "data-visualization",
+      "diagram-as-code",
+      "excalidraw",
+      "ffmpeg",
+      "headless-chrome",
+      "infographic",
+      "json-to-video",
+      "motion-graphics",
+      "mp4",
+      "multi-agent",
+      "python",
+      "xiaohongshu"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "d5aa86d8a5729cea2c78f083df672977f168a147",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "scripts/render.py",
+        "scripts/verify_view.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/mit",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "--config",
+      "--out",
+      "--width",
+      "--height",
+      "--duration",
+      "--fps",
+      "--chrome",
+      "--ffmpeg",
+      "--template",
+      "--crf",
+      "--audio",
+      "--html-out",
+      "--keep-frames",
+      "--no-sandbox",
+      "path to the JSON config",
+      "output .mp4",
+      "alternative template.html",
+      "--combos",
+      "--json",
+      "--quick",
+      "--samples",
+      "config.json to verify",
+      "path to Chrome (default: search PATH)",
+      "output directory (default /tmp/vv)",
+      "print only the JSON report on stdout"
+    ],
+    "string_evidence": [
+      {
+        "text": "--config",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 16,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--out",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 17,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--width",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 18,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--height",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 19,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--duration",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 20,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--fps",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 21,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--chrome",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 22,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--ffmpeg",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 23,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--template",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 24,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--crf",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 25,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--audio",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 26,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--html-out",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 27,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--keep-frames",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 28,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--no-sandbox",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 29,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "path to the JSON config",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 16,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "output .mp4",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 17,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "alternative template.html",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+        "line": 24,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "--combos",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 457,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--json",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 459,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--quick",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 461,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "--samples",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 463,
+        "kind": "cli-flag"
+      },
+      {
+        "text": "config.json to verify",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 454,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "path to Chrome (default: search PATH)",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 455,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "output directory (default /tmp/vv)",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 456,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "print only the JSON report on stdout",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+        "line": 459,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/ythx-101/live-panel-skill",
+      "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/README.md",
+      "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py",
+      "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py",
+      "https://api.github.com/repos/ythx-101/live-panel-skill/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/README.md"
+      },
+      {
+        "path": "scripts/render.py",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/render.py"
+      },
+      {
+        "path": "scripts/verify_view.py",
+        "source": "https://github.com/ythx-101/live-panel-skill/blob/d5aa86d8a5729cea2c78f083df672977f168a147/scripts/verify_view.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=25, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → framework / general-agent",
+    "repository_id": 1403431984,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "ythx-101--ask-search": {
+    "topics": [
+      "agent-skills",
+      "ai-agent-tools",
+      "ai-agents",
+      "claude-code",
+      "docker-compose",
+      "llm-tools",
+      "mcp",
+      "mcp-server",
+      "metasearch",
+      "model-context-protocol",
+      "openclaw",
+      "privacy",
+      "python",
+      "search-cli",
+      "searxng",
+      "self-hosted",
+      "tavily",
+      "web-search"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/ythx-101/ask-search",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp-server stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false",
+      "topic:model-context-protocol stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1176838622,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  }
+}

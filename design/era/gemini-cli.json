@@ -1,0 +1,578 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "gemini-cli",
+  "versions": [
+    {
+      "id": "gemini-cli-2025-06-25",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "起動するコマンドに --model とモデル名を付ける。",
+          "起動後に選ぶ /model は、この固定版のコマンド一覧では確認できない。"
+        ],
+        "options": [
+          "gemini-2.5-pro",
+          "gemini-2.5-flash"
+        ],
+        "default": "gemini-2.5-pro",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/configuration.md",
+            "date": "2025-06-25",
+            "shows": "--model / -m と GEMINI_MODEL による指定。モデル一覧の常設選択欄は確認できない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/packages/core/src/config/models.ts",
+            "date": "2025-06-25",
+            "shows": "組み込みのモデル名と既定の Pro。接続方法による利用制限は別。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd",
+            "date": "2025-06-25",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Add --model followed by the model name to the launch command.",
+          "unverified (/model after launch in this pinned version's command list)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "個人の無料枠は毎分60回・毎日1000回",
+          "when": "2025-06-25..2025-06-25",
+          "where": "公開時の利用条件。端末に常設された残回数表示という意味ではない。",
+          "sources": [
+            {
+              "url": "https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/",
+              "date": "2025-06-25",
+              "shows": "個人のGoogleアカウントでの公開時の無料枠。"
+            }
+          ],
+          "text_en": "Free personal allowance of 60 requests per minute and 1,000 per day",
+          "where_en": "Usage conditions at launch. A persistent terminal counter is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-06-25",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/configuration.md",
+            "date": "2025-06-25",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd",
+            "date": "2025-06-25",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル名を起動時の引数で渡し、端末の会話と入力行で操作する（https://raw.githubusercontent.com/google-gemini/gemini-cli/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/configuration.md）。",
+      "trend_en": "The model name is passed at launch, with chat and controls in the terminal. (https://raw.githubusercontent.com/google-gemini/gemini-cli/b6b9923dc3b80a73fdee3a3ccd6070c8cfb551cd/docs/cli/configuration.md)"
+    },
+    {
+      "id": "gemini-cli-2025-08",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "起動するコマンドに --model とモデル名を付ける。",
+          "起動後に選ぶ /model は、この固定版のコマンド一覧では確認できない。"
+        ],
+        "options": [
+          "gemini-2.5-pro",
+          "gemini-2.5-flash",
+          "gemini-2.5-flash-lite"
+        ],
+        "default": "gemini-2.5-pro",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/configuration.md",
+            "date": "2025-08-14",
+            "shows": "--model / -m と GEMINI_MODEL による指定。モデル一覧の常設選択欄は確認できない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/packages/core/src/config/models.ts",
+            "date": "2025-08-14",
+            "shows": "組み込みのモデル名と既定の Pro。接続方法による利用制限は別。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/6037cb5d60b8e31b92315dd86fc65dbc57316376",
+            "date": "2025-08-14",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Add --model followed by the model name to the launch command.",
+          "unverified (/model after launch in this pinned version's command list)."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Ctrl+L で画面を消去",
+          "when": "2025-08-14..2025-08-14",
+          "where": "端末の入力中に使えるキー。会話の表示を消去する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/commands.md",
+              "date": "2025-08-14",
+              "shows": "/clear と Ctrl+L による表示の消去。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/6037cb5d60b8e31b92315dd86fc65dbc57316376",
+              "date": "2025-08-14",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "text_en": "Clear the screen with Ctrl+L",
+          "where_en": "Keyboard shortcut during terminal input to clear the conversation display."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-08-14",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/configuration.md",
+            "date": "2025-08-14",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/6037cb5d60b8e31b92315dd86fc65dbc57316376",
+            "date": "2025-08-14",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル名を起動時の引数で渡し、端末の会話と入力行で操作する（https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/configuration.md）。",
+      "trend_en": "The model name is passed at launch, with chat and controls in the terminal. (https://raw.githubusercontent.com/google-gemini/gemini-cli/6037cb5d60b8e31b92315dd86fc65dbc57316376/docs/cli/configuration.md)"
+    },
+    {
+      "id": "gemini-cli-2025-10",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "開いた一覧からモデルを選ぶ。"
+        ],
+        "options": [
+          "Auto (recommended)",
+          "Pro",
+          "Flash",
+          "Flash-Lite"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2025-10-15",
+            "shows": "モデル選択の表示名。試験中のモデルは利用権がある場合だけ表示する。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/core/src/config/models.ts",
+            "date": "2025-10-15",
+            "shows": "表示名に対応するモデル識別名。定数だけで画面の候補や利用権を断定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/8c74be79c58a0c344d4eb05c72b649a49cb44cae",
+            "date": "2025-10-15",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose a model from the list that opens."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "Select Model",
+          "when": "2025-10-15..2025-10-15",
+          "where": "端末内で /model から開く一覧の見出し。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/ModelDialog.tsx",
+              "date": "2025-10-15",
+              "shows": "モデル選択の表示名。試験中のモデルは利用権がある場合だけ表示する。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/8c74be79c58a0c344d4eb05c72b649a49cb44cae",
+              "date": "2025-10-15",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "where_en": "Heading in the list opened with /model in the terminal."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-10-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2025-10-15",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/8c74be79c58a0c344d4eb05c72b649a49cb44cae",
+            "date": "2025-10-15",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル変更が起動時の指定から端末内の選択一覧へ移る（https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/ModelDialog.tsx）。",
+      "trend_en": "Model switching moves from a launch option to a terminal selection list. (https://raw.githubusercontent.com/google-gemini/gemini-cli/8c74be79c58a0c344d4eb05c72b649a49cb44cae/packages/cli/src/ui/components/ModelDialog.tsx)"
+    },
+    {
+      "id": "gemini-cli-2026-01",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "自動選択を選ぶか、Manual を開いてモデルを選ぶ。"
+        ],
+        "options": [
+          "Auto (Gemini 2.5)",
+          "Auto (Gemini 3)",
+          "Manual",
+          "gemini-2.5-pro",
+          "gemini-2.5-flash",
+          "gemini-2.5-flash-lite",
+          "gemini-3-pro-preview",
+          "gemini-3-flash-preview"
+        ],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-01-22",
+            "shows": "モデル選択の表示名。試験中のモデルは利用権がある場合だけ表示する。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/core/src/config/models.ts",
+            "date": "2026-01-22",
+            "shows": "表示名に対応するモデル識別名。定数だけで画面の候補や利用権を断定しない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/docs/cli/commands.md",
+            "date": "2026-01-22",
+            "shows": "/model の操作。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/beacc4f6fd102fd969239ffddb6c092631cd0481",
+            "date": "2026-01-22",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose automatic selection or open Manual to choose a model."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "update-notice",
+          "text": "Gemini 3 is now available.",
+          "when": "2026-01-22..2026-01-22",
+          "where": "モデル選択一覧の利用条件に応じた案内。全利用者への常設表示ではない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/ModelDialog.tsx",
+              "date": "2026-01-22",
+              "shows": "モデル選択の表示名。試験中のモデルは利用権がある場合だけ表示する。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/beacc4f6fd102fd969239ffddb6c092631cd0481",
+              "date": "2026-01-22",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "where_en": "Conditional guidance in the model list based on usage eligibility."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-01-22",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-01-22",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/beacc4f6fd102fd969239ffddb6c092631cd0481",
+            "date": "2026-01-22",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "自動選択と手動選択を分け、手動の候補をもう一段の一覧へ収める（https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/ModelDialog.tsx）。",
+      "trend_en": "Automatic and manual selection are separated, with manual models in a nested list. (https://raw.githubusercontent.com/google-gemini/gemini-cli/beacc4f6fd102fd969239ffddb6c092631cd0481/packages/cli/src/ui/components/ModelDialog.tsx)"
+    },
+    {
+      "id": "gemini-cli-2026-03",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "自動選択を選ぶか、Manual を開いてモデルを選ぶ。",
+          "名前で直接指定する場合は /model set にモデル名を付ける。保存する場合は --persist を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-03-20",
+            "shows": "モデル選択は接続先の一覧や利用権に対応する。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/packages/core/src/config/models.ts",
+            "date": "2026-03-20",
+            "shows": "表示名に対応するモデル識別名。定数だけで画面の候補や利用権を断定しない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/docs/reference/commands.md",
+            "date": "2026-03-20",
+            "shows": "/model の操作。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/fc03891a113da762175011f4e8e93acd0da49b0d",
+            "date": "2026-03-20",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose automatic selection or open Manual to choose a model.",
+          "For a model by name, use /model set followed by its name. Add --persist to save it."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "--persist で次回にも保存",
+          "when": "2026-03-20..2026-03-20",
+          "where": "/model set の保存指定。単なる一時変更と区別する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/docs/reference/commands.md",
+              "date": "2026-03-20",
+              "shows": "/model set <model-name> [--persist]。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/fc03891a113da762175011f4e8e93acd0da49b0d",
+              "date": "2026-03-20",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "text_en": "Save for next time with --persist",
+          "where_en": "Persistence option for /model set, saving the change for later sessions."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-03-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-03-20",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/fc03891a113da762175011f4e8e93acd0da49b0d",
+            "date": "2026-03-20",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "自動選択と手動選択を分け、手動の候補をもう一段の一覧へ収める（https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/ModelDialog.tsx）。",
+      "trend_en": "Automatic and manual selection are separated, with manual models in a nested list. (https://raw.githubusercontent.com/google-gemini/gemini-cli/fc03891a113da762175011f4e8e93acd0da49b0d/packages/cli/src/ui/components/ModelDialog.tsx)"
+    },
+    {
+      "id": "gemini-cli-2026-07",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "自動選択を選ぶか、Manual を開いてモデルを選ぶ。",
+          "名前で直接指定する場合は /model set にモデル名を付ける。保存する場合は --persist を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-07-15",
+            "shows": "モデル選択は接続先の一覧や利用権に対応する。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/core/src/config/models.ts",
+            "date": "2026-07-15",
+            "shows": "表示名に対応するモデル識別名。定数だけで画面の候補や利用権を断定しない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/docs/reference/commands.md",
+            "date": "2026-07-15",
+            "shows": "/model の操作。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb",
+            "date": "2026-07-15",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose automatic selection or open Manual to choose a model.",
+          "For a model by name, use /model set followed by its name. Add --persist to save it."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "モデルごとの残量を表示",
+          "when": "2026-07-15..2026-07-15",
+          "where": "モデル選択一覧の ModelQuotaDisplay。利用条件に応じて表示し、具体的な残量は固定しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/ModelDialog.tsx",
+              "date": "2026-07-15",
+              "shows": "モデル選択は接続先の一覧や利用権に対応する。全候補と利用者ごとの既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb",
+              "date": "2026-07-15",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "text_en": "Show remaining allowance by model",
+          "where_en": "ModelQuotaDisplay in the model list, shown according to usage conditions with variable remaining amounts."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-07-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-07-15",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb",
+            "date": "2026-07-15",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル選択の一覧に利用枠の情報もまとめる（https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/ModelDialog.tsx）。",
+      "trend_en": "The model list also groups allowance information. (https://raw.githubusercontent.com/google-gemini/gemini-cli/3ff5ba20fc1ad7d867218bbdb34756eb54d6eccb/packages/cli/src/ui/components/ModelDialog.tsx)"
+    },
+    {
+      "id": "gemini-cli-2026-11",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力欄に /model を入力する。",
+          "自動選択を選ぶか、Manual を開いてモデルを選ぶ。",
+          "名前で直接指定する場合は /model set にモデル名を付ける。保存する場合は --persist を付ける。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-10-30",
+            "shows": "モデル選択は接続先の一覧や利用権に対応する。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/core/src/config/models.ts",
+            "date": "2026-10-30",
+            "shows": "表示名に対応するモデル識別名。定数だけで画面の候補や利用権を断定しない。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/docs/reference/commands.md",
+            "date": "2026-10-30",
+            "shows": "/model の操作。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/6814e00d6b148c3a1d57244d5d7040f7c541009d",
+            "date": "2026-10-30",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "steps_en": [
+          "Type /model in the terminal input.",
+          "Choose automatic selection or open Manual to choose a model.",
+          "For a model by name, use /model set followed by its name. Add --persist to save it."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "usage-cap",
+          "text": "モデルごとの残量を表示",
+          "when": "2026-11-01..2026-11-01",
+          "where": "モデル選択一覧の ModelQuotaDisplay。利用条件に応じて表示し、具体的な残量は固定しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/ModelDialog.tsx",
+              "date": "2026-10-30",
+              "shows": "モデル選択は接続先の一覧や利用権に対応する。全候補と利用者ごとの既定値は unverified。"
+            },
+            {
+              "url": "https://github.com/google-gemini/gemini-cli/commit/6814e00d6b148c3a1d57244d5d7040f7c541009d",
+              "date": "2026-10-30",
+              "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+            }
+          ],
+          "text_en": "Show remaining allowance by model",
+          "where_en": "ModelQuotaDisplay in the model list, shown according to usage conditions with variable remaining amounts."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2026-11-01",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/ModelDialog.tsx",
+            "date": "2026-10-30",
+            "shows": "端末の操作画面。端末アプリ名やOSの版は固定しない。"
+          },
+          {
+            "url": "https://github.com/google-gemini/gemini-cli/commit/6814e00d6b148c3a1d57244d5d7040f7c541009d",
+            "date": "2026-10-30",
+            "shows": "固定した実装の日時。画面を示す代表日は仕様の月内に置く。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "モデル選択の一覧に利用枠の情報もまとめる（https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/ModelDialog.tsx）。",
+      "trend_en": "The model list also groups allowance information. (https://raw.githubusercontent.com/google-gemini/gemini-cli/6814e00d6b148c3a1d57244d5d7040f7c541009d/packages/cli/src/ui/components/ModelDialog.tsx)"
+    }
+  ]
+}

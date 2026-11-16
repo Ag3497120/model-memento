@@ -1,0 +1,102 @@
+{
+  "schema": "memento.persona.v1",
+  "model_id": "microsoft/phi-2",
+  "name": "Phi-2",
+  "family": "phi",
+  "aliases": [
+    "phi-2"
+  ],
+  "reviewed_at": "2026-11-15",
+  "traits": {
+    "tone": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "verbosity": {
+      "value": "教科書のような説明になり、最初の答えの後も余分な文章を続けることがある。",
+      "source": "https://huggingface.co/microsoft/phi-2",
+      "basis": "official",
+      "confidence": 0.78,
+      "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+      "value_en": "May produce textbook-style explanations and continue with extra text after the initial answer."
+    },
+    "formatting_habits": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "refusal_style": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "humour": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "self_description": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "knowledge_cutoff": {
+      "value": null,
+      "source": null,
+      "basis": "family-default",
+      "confidence": 0,
+      "note": "未確認です。固有の話し方としては扱いません。"
+    },
+    "interface": {
+      "value": "completion",
+      "source": "https://huggingface.co/microsoft/phi-2",
+      "basis": "official",
+      "confidence": 0.9,
+      "note": "資料で示された入出力形式です。chat は対話、completion は文章の続きを書く形式です。"
+    },
+    "quirks": [],
+    "failure_modes": [
+      {
+        "value": "細かな指示に従えなかったり、英語以外の文章を理解しにくかったりする。",
+        "source": "https://huggingface.co/microsoft/phi-2",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Can struggle with detailed instructions and understanding non-English text."
+      }
+    ],
+    "typical_strengths": [
+      {
+        "value": "質問と答え、対話、コードの形を示して続けさせる課題。",
+        "source": "https://huggingface.co/microsoft/phi-2",
+        "basis": "official",
+        "confidence": 0.78,
+        "note": "公式資料の説明です。実際の応答を測った結果ではありません。",
+        "value_en": "Continuing examples of question answering, conversation and code."
+      }
+    ]
+  },
+  "resolution": {
+    "kind": "researched",
+    "ancestor": null,
+    "path": [
+      "microsoft/phi-2"
+    ],
+    "method": "own",
+    "warnings": [
+      "空欄の話し方は未確認です。公開資料の説明だけで人格全体が分かるわけではありません。"
+    ],
+    "links": []
+  }
+}

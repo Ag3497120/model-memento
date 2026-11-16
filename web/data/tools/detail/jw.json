@@ -1,0 +1,281 @@
+{
+  "jwadow--kiro-gateway": {
+    "topics": [
+      "ai",
+      "anthropic",
+      "api-gateway",
+      "aws",
+      "claude",
+      "codewhisperer",
+      "fastapi",
+      "free",
+      "kiro",
+      "kiro-cli",
+      "llm",
+      "openai",
+      "openclaw",
+      "opencode",
+      "opus",
+      "proxy",
+      "python",
+      "sonnet",
+      "sso",
+      "streaming"
+    ],
+    "homepage": "",
+    "archived": false,
+    "commit": "a5292ca04c7c6231e0b47673ac3f981f5a706e1e",
+    "classification_basis": "Topics, README introduction, language (Python) → framework / gateway",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v1.0.0",
+        "2025-12-13"
+      ],
+      [
+        "v1.0.1",
+        "2025-12-13"
+      ],
+      [
+        "v1.0.2",
+        "2025-12-13"
+      ],
+      [
+        "v1.0.3",
+        "2025-12-16"
+      ],
+      [
+        "v1.0.4",
+        "2025-12-17"
+      ],
+      [
+        "v1.0.5",
+        "2025-12-17"
+      ],
+      [
+        "v1.0.6",
+        "2025-12-17"
+      ],
+      [
+        "v1.0.7",
+        "2025-12-18"
+      ],
+      [
+        "v1.0.8",
+        "2026-01-04"
+      ],
+      [
+        "v2.0",
+        "2026-01-11"
+      ],
+      [
+        "v2.1",
+        "2026-01-21"
+      ],
+      [
+        "v2.2",
+        "2026-01-30"
+      ],
+      [
+        "v2.3",
+        "2026-02-03"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "pip install -r requirements.txt / docker run -d \\ / docker run -d -p 8000:8000 --env-file .env --name kiro-gateway ghcr.io/jwadow/kiro-gateway:latest / docker run -d -p 8000:8000 --env-file .env kiro-gateway",
+    "install_evidence": [
+      {
+        "command": "pip install -r requirements.txt",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md",
+        "line": 93
+      },
+      {
+        "command": "docker run -d \\",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md",
+        "line": 371
+      },
+      {
+        "command": "docker run -d -p 8000:8000 --env-file .env --name kiro-gateway ghcr.io/jwadow/kiro-gateway:latest",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md",
+        "line": 412
+      },
+      {
+        "command": "docker run -d -p 8000:8000 --env-file .env kiro-gateway",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md",
+        "line": 449
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "main.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "AGPL-3.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/agpl-3.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "strings": [
+      "-H",
+      "-p",
+      "-v"
+    ],
+    "string_evidence": [
+      {
+        "text": "-H",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/main.py",
+        "line": 624,
+        "kind": "cli-help"
+      },
+      {
+        "text": "-p",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/main.py",
+        "line": 632,
+        "kind": "cli-help"
+      },
+      {
+        "text": "-v",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/main.py",
+        "line": 640,
+        "kind": "cli-help"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/jwadow/kiro-gateway",
+      "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md",
+      "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/requirements.txt",
+      "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/main.py",
+      "https://api.github.com/repos/jwadow/kiro-gateway/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/README.md"
+      },
+      {
+        "path": "requirements.txt",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/requirements.txt"
+      },
+      {
+        "path": "main.py",
+        "source": "https://github.com/jwadow/kiro-gateway/blob/a5292ca04c7c6231e0b47673ac3f981f5a706e1e/main.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:openai stars:1000..2999 fork:false",
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=3, theme=0.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (Python) → framework / gateway",
+    "repository_id": 1115489218,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "jwuthri--tracely-ai": {
+    "topics": [
+      "agent",
+      "agent-observability",
+      "ai-agents",
+      "ci-cd",
+      "clickhouse",
+      "evals",
+      "evaluation",
+      "llm",
+      "llm-as-judge",
+      "llm-evaluation",
+      "llm-observability",
+      "llm-ops",
+      "llmops",
+      "mcp",
+      "monitoring",
+      "opentelemetry",
+      "python",
+      "self-hosted",
+      "tracing"
+    ],
+    "homepage": "https://tracely-ai.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/Jwuthri/Tracely-ai",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:llmops stars:1000..2999 fork:false",
+      "topic:ai-agents stars:1000..2999 fork:false",
+      "topic:llm-evaluation stars:1000..2999 fork:false",
+      "topic:mcp stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1258496446,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "jwuthri-cloud--tracely-ai": {
+    "topics": [
+      "agent-evaluation",
+      "ai-agents",
+      "ai-testing",
+      "ci-cd",
+      "clickhouse",
+      "developer-tools",
+      "llm-evaluation",
+      "llm-observability",
+      "llmops",
+      "mcp",
+      "observability",
+      "python",
+      "regression-testing",
+      "self-hosted",
+      "tracing"
+    ],
+    "homepage": "https://tracely-ai.com",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → dashboard / observability-eval",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "MIT",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/jwuthri-cloud/Tracely-ai",
+      "https://api.github.com/licenses/mit"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:llmops stars:500..999 fork:false",
+      "topic:llm-evaluation stars:500..999 fork:false",
+      "topic:mcp stars:500..999 fork:false",
+      "topic:ai-agents stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1414493071,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

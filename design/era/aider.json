@@ -1,0 +1,646 @@
+{
+  "schema": "memento.era.v1",
+  "tool_id": "aider",
+  "versions": [
+    {
+      "id": "aider-2023-05",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "端末で aider --model にモデル名を付けて起動する。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo",
+          "gpt-4-32k"
+        ],
+        "default": "gpt-4",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.5.0/aider/main.py",
+            "date": "2023-06-07",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0",
+            "date": "2023-06-07",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Start aider in the terminal with --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "capacity",
+          "text": "/tokens で会話の使用量",
+          "when": "2023-06-07..2023-06-07",
+          "where": "端末の入力行から呼び出す容量の表示。残量の数字は固定しない。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.5.0",
+              "date": "2023-06-07",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "text_en": "View chat usage with /tokens",
+          "where_en": "Usage display opened from the terminal input. Keep remaining amounts variable."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2023-06-07",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.5.0/aider/main.py",
+            "date": "2023-06-07",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行と文字の返答を中心にし、モデル指定は起動時に行う（https://raw.githubusercontent.com/Aider-AI/aider/v0.5.0/aider/main.py）。",
+      "trend_en": "The terminal centers on text input and replies, with the model chosen at launch. (https://raw.githubusercontent.com/Aider-AI/aider/v0.5.0/aider/main.py)"
+    },
+    {
+      "id": "aider-2023-11",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "端末で aider --model にモデル名を付けて起動する。"
+        ],
+        "options": [
+          "gpt-4",
+          "gpt-3.5-turbo-16k",
+          "gpt-4-1106-preview",
+          "gpt-4-0613"
+        ],
+        "default": "gpt-4",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.18.0/aider/main.py",
+            "date": "2023-11-17",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.18.0",
+            "date": "2023-11-17",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Start aider in the terminal with --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "GPT-4 Turbo の編集失敗を改善",
+          "when": "2023-11-17..2023-11-17",
+          "where": "v0.18.0 の更新内容。新しい常設バナーではなく、更新履歴を開いた場合だけ示す。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.18.0",
+              "date": "2023-11-17",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "text_en": "Improved GPT-4 Turbo edit reliability",
+          "where_en": "Release notes for v0.18.0, shown only when the changelog is opened."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2023-11-17",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.18.0/aider/main.py",
+            "date": "2023-11-17",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行と文字の返答を中心にし、モデル指定は起動時に行う（https://raw.githubusercontent.com/Aider-AI/aider/v0.18.0/aider/main.py）。",
+      "trend_en": "The terminal centers on text input and replies, with the model chosen at launch. (https://raw.githubusercontent.com/Aider-AI/aider/v0.18.0/aider/main.py)"
+    },
+    {
+      "id": "aider-2023-12",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "端末で aider --model にモデル名を付けて起動する。"
+        ],
+        "options": [
+          "gpt-4-0613",
+          "gpt-4-1106-preview",
+          "gpt-3.5-turbo-1106"
+        ],
+        "default": "gpt-4-0613",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.19.0/aider/main.py",
+            "date": "2023-12-20",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.19.0",
+            "date": "2023-12-20",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Start aider in the terminal with --model followed by the model name."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "--4-turbo",
+          "when": "2023-12-20..2023-12-20",
+          "where": "起動時にモデルを指定する短い引数。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.19.0",
+              "date": "2023-12-20",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "where_en": "Short launch argument for choosing a model."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2023-12-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.19.0/aider/main.py",
+            "date": "2023-12-20",
+            "shows": "起動時に --model で指定する。会話中に変更する /model をこの版には遡らせない。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行と文字の返答を中心にし、モデル指定は起動時に行う（https://raw.githubusercontent.com/Aider-AI/aider/v0.19.0/aider/main.py）。",
+      "trend_en": "The terminal centers on text input and replies, with the model chosen at launch. (https://raw.githubusercontent.com/Aider-AI/aider/v0.19.0/aider/main.py)"
+    },
+    {
+      "id": "aider-2024-05",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "ブラウザー版を起動する端末で、aider --browser に --model とモデル名を付ける。",
+          "ブラウザー画面の中に常設のモデル選択欄を描かない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/gui.py",
+            "date": "2024-05-02",
+            "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.31.0",
+            "date": "2024-05-02",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/main.py",
+            "date": "2024-05-02",
+            "shows": "launch_gui は起動時の引数をブラウザー側へ渡し、gui.py の get_coder が同じ引数からモデルを作る。"
+          }
+        ],
+        "steps_en": [
+          "In the terminal, start aider --browser with --model followed by the model name.",
+          "Leave the browser screen without a permanent model selector."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "ブラウザー版は試験中",
+          "when": "2024-05-02..2024-05-02",
+          "where": "ブラウザー画面の左欄に出る注意。自分の言葉で短く要約する。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/gui.py",
+              "date": "2024-05-02",
+              "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+            }
+          ],
+          "text_en": "Browser version is experimental",
+          "where_en": "Notice in the browser screen's left column, briefly summarized in original words."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2024-05-02",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/gui.py",
+            "date": "2024-05-02",
+            "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+          }
+        ]
+      },
+      "trend": "ブラウザーに会話と補助欄を置き、モデル指定は起動する端末側へ残す（https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/gui.py）。",
+      "trend_en": "The browser places chat beside a sidebar, while the launching terminal controls model selection. (https://raw.githubusercontent.com/Aider-AI/aider/v0.31.0/aider/gui.py)"
+    },
+    {
+      "id": "aider-2024-06",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /models と名前の一部を入れ、候補を探す。",
+          "/model に選ぶモデル名を付けて入力する。"
+        ],
+        "options": [],
+        "default": "gpt-4o",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.39.0/aider/commands.py",
+            "date": "2024-06-20",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.39.0",
+            "date": "2024-06-20",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.39.0/aider/models.py",
+            "date": "2024-06-20",
+            "shows": "DEFAULT_MODEL_NAME は gpt-4o。"
+          }
+        ],
+        "steps_en": [
+          "Type /models followed by part of a name in the terminal to find models.",
+          "Type /model followed by the model name to select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "--sonnet",
+          "when": "2024-06-20..2024-06-20",
+          "where": "Claude 3.5 Sonnet を選ぶ起動時の短い引数。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.39.0",
+              "date": "2024-06-20",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "where_en": "Short launch argument for choosing Claude 3.5 Sonnet."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2024-06-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.39.0/aider/commands.py",
+            "date": "2024-06-20",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行でモデル名や設定を直接指定する（https://raw.githubusercontent.com/Aider-AI/aider/v0.39.0/aider/commands.py）。",
+      "trend_en": "Model names and settings are entered directly in the terminal input. (https://raw.githubusercontent.com/Aider-AI/aider/v0.39.0/aider/commands.py)"
+    },
+    {
+      "id": "aider-2024-10",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /models と名前の一部を入れ、候補を探す。",
+          "/model に選ぶモデル名を付けて入力する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.59.0/aider/commands.py",
+            "date": "2024-10-04",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.59.0",
+            "date": "2024-10-04",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Type /models followed by part of a name in the terminal to find models.",
+          "Type /model followed by the model name to select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "/settings に起動時の案内も表示",
+          "when": "2024-10-04..2024-10-04",
+          "where": "端末の /settings の出力。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.59.0",
+              "date": "2024-10-04",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "text_en": "/settings also shows startup guidance",
+          "where_en": "Terminal output from /settings."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2024-10-04",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.59.0/aider/commands.py",
+            "date": "2024-10-04",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行でモデル名や設定を直接指定する（https://raw.githubusercontent.com/Aider-AI/aider/v0.59.0/aider/commands.py）。",
+      "trend_en": "Model names and settings are entered directly in the terminal input. (https://raw.githubusercontent.com/Aider-AI/aider/v0.59.0/aider/commands.py)"
+    },
+    {
+      "id": "aider-2025-01",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /models と名前の一部を入れ、候補を探す。",
+          "/model に選ぶモデル名を付けて入力する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.72.0/aider/commands.py",
+            "date": "2025-01-20",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.72.0",
+            "date": "2025-01-20",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Type /models followed by part of a name in the terminal to find models.",
+          "Type /model followed by the model name to select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "keyboard-hint",
+          "text": "--model r1",
+          "when": "2025-01-20..2025-01-20",
+          "where": "DeepSeek R1 を選ぶ起動時の短い指定。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.72.0",
+              "date": "2025-01-20",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "where_en": "Short launch argument for choosing DeepSeek R1."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-01-20",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.72.0/aider/commands.py",
+            "date": "2025-01-20",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行でモデル名や設定を直接指定する（https://raw.githubusercontent.com/Aider-AI/aider/v0.72.0/aider/commands.py）。",
+      "trend_en": "Model names and settings are entered directly in the terminal input. (https://raw.githubusercontent.com/Aider-AI/aider/v0.72.0/aider/commands.py)"
+    },
+    {
+      "id": "aider-2025-04",
+      "model_switch": {
+        "where": "slash-command",
+        "label": "/model",
+        "steps": [
+          "端末の入力行に /models と名前の一部を入れ、候補を探す。",
+          "/model に選ぶモデル名を付けて入力する。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.82.0/aider/commands.py",
+            "date": "2025-04-14",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.82.0",
+            "date": "2025-04-14",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          }
+        ],
+        "steps_en": [
+          "Type /models followed by part of a name in the terminal to find models.",
+          "Type /model followed by the model name to select."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "other",
+          "text": "GPT-4.1 に対応",
+          "when": "2025-04-14..2025-04-14",
+          "where": "v0.82.0 の更新履歴の要約。端末の常設メッセージではない。",
+          "sources": [
+            {
+              "url": "https://github.com/Aider-AI/aider/releases/tag/v0.82.0",
+              "date": "2025-04-14",
+              "shows": "更新履歴で確認できる操作または変更。"
+            }
+          ],
+          "text_en": "GPT-4.1 support",
+          "where_en": "Summary of the v0.82.0 release notes."
+        }
+      ],
+      "desktop": {
+        "os": "terminal",
+        "app_shell": "terminal（アプリ名は unverified）",
+        "date_shown": "2025-04-14",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.82.0/aider/commands.py",
+            "date": "2025-04-14",
+            "shows": "入力行の /model は使用するモデルを変更し、/models は候補を名前で探す。全候補と利用者ごとの既定値は unverified。"
+          }
+        ],
+        "app_shell_en": "Terminal (app name unverified)"
+      },
+      "trend": "端末の入力行でモデル名や設定を直接指定する（https://raw.githubusercontent.com/Aider-AI/aider/v0.82.0/aider/commands.py）。",
+      "trend_en": "Model names and settings are entered directly in the terminal input. (https://raw.githubusercontent.com/Aider-AI/aider/v0.82.0/aider/commands.py)"
+    },
+    {
+      "id": "aider-2025-09",
+      "model_switch": {
+        "where": "cli-flag",
+        "label": "--model",
+        "steps": [
+          "ブラウザー版を起動する端末で、aider --browser に --model とモデル名を付ける。",
+          "ブラウザー画面の中に常設のモデル選択欄を描かない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/gui.py",
+            "date": "2025-08-09",
+            "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+          },
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+            "date": "2025-08-09",
+            "shows": "固定した版の公開日とモデル対応・操作の変更。"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/main.py",
+            "date": "2025-08-09",
+            "shows": "launch_gui は起動時の引数をブラウザー側へ渡し、gui.py の get_coder が同じ引数からモデルを作る。"
+          }
+        ],
+        "steps_en": [
+          "In the terminal, start aider --browser with --model followed by the model name.",
+          "Leave the browser screen without a permanent model selector."
+        ]
+      },
+      "accents": [
+        {
+          "kind": "beta-badge",
+          "text": "ブラウザー版は試験中",
+          "when": "2025-09-15..2025-09-15",
+          "where": "v0.86.0 のブラウザー画面の左欄に残る注意。9月の新機能とは断定しない。",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/gui.py",
+              "date": "2025-08-09",
+              "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+            }
+          ],
+          "text_en": "Browser version is experimental",
+          "where_en": "Notice retained in the v0.86.0 browser sidebar. A September introduction is unverified."
+        }
+      ],
+      "desktop": {
+        "os": "browser",
+        "app_shell": "browser tab",
+        "date_shown": "2025-09-15",
+        "sources": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/gui.py",
+            "date": "2025-08-09",
+            "shows": "ブラウザー版の画面にはモデル選択部品を確認できない。モデルは起動する端末側で指定する。"
+          }
+        ]
+      },
+      "trend": "ブラウザーに会話と補助欄を置き、モデル指定は起動する端末側へ残す（https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/gui.py）。",
+      "trend_en": "The browser places chat beside a sidebar, while the launching terminal controls model selection. (https://raw.githubusercontent.com/Aider-AI/aider/v0.86.0/aider/gui.py)"
+    },
+    {
+      "id": "aider-2026-03",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：2026年固有の版とモデル選択方法を確認できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+            "date": "2025-08-09",
+            "shows": "仕様の from は null。2026年の別の画面変更を示す資料としては unverified。"
+          }
+        ],
+        "steps_en": [
+          "unverified (the 2026-specific version and model selection method)."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "unverified",
+        "date_shown": null,
+        "sources": [
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+            "date": "2025-08-09",
+            "shows": "仕様の from は null。2026年の別の画面変更を示す資料としては unverified。"
+          }
+        ]
+      },
+      "trend": "2026年固有の画面変化は unverified であり、2025年版を新しい画面として断定しない（https://github.com/Aider-AI/aider/releases/tag/v0.86.0）。",
+      "trend_en": "Screen changes specific to 2026 are unverified. The 2025 record remains the reference. (https://github.com/Aider-AI/aider/releases/tag/v0.86.0)"
+    },
+    {
+      "id": "aider-2026-11",
+      "model_switch": {
+        "where": "other",
+        "label": "unverified",
+        "steps": [
+          "unverified：2026年固有の版とモデル選択方法を確認できない。"
+        ],
+        "options": [],
+        "default": null,
+        "sources": [
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+            "date": "2025-08-09",
+            "shows": "仕様の from は null。2026年の別の画面変更を示す資料としては unverified。"
+          }
+        ],
+        "steps_en": [
+          "unverified (the 2026-specific version and model selection method)."
+        ]
+      },
+      "accents": [],
+      "desktop": {
+        "os": "unverified",
+        "app_shell": "unverified",
+        "date_shown": null,
+        "sources": [
+          {
+            "url": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+            "date": "2025-08-09",
+            "shows": "仕様の from は null。2026年の別の画面変更を示す資料としては unverified。"
+          }
+        ]
+      },
+      "trend": "2026年固有の画面変化は unverified であり、2025年版を新しい画面として断定しない（https://github.com/Aider-AI/aider/releases/tag/v0.86.0）。",
+      "trend_en": "Screen changes specific to 2026 are unverified. The 2025 record remains the reference. (https://github.com/Aider-AI/aider/releases/tag/v0.86.0)"
+    }
+  ]
+}

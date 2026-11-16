@@ -1,0 +1,421 @@
+{
+  "wbopan--cui": {
+    "topics": [
+      "agent",
+      "ai",
+      "claude",
+      "claude-code",
+      "mcp",
+      "typescript",
+      "web-ui",
+      "webui"
+    ],
+    "homepage": "",
+    "archived": true,
+    "commit": "cef7750fa6723149133ae4259eaa94402158796a",
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "v0.3.0",
+        "2025-07-27"
+      ],
+      [
+        "v0.3.2",
+        "2025-07-28"
+      ],
+      [
+        "v0.3.3",
+        "2025-07-28"
+      ],
+      [
+        "v0.3.6",
+        "2025-07-29"
+      ],
+      [
+        "v0.4.0",
+        "2025-07-30"
+      ],
+      [
+        "v0.4.1",
+        "2025-07-30"
+      ],
+      [
+        "v0.4.2",
+        "2025-07-31"
+      ],
+      [
+        "v0.4.3",
+        "2025-08-01"
+      ],
+      [
+        "v0.5.2",
+        "2025-08-07"
+      ],
+      [
+        "v0.6.0",
+        "2025-08-08"
+      ],
+      [
+        "v0.6.1",
+        "2025-08-08"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "src/web/chat/hooks/useTheme.ts",
+        "src/web/App.tsx",
+        "src/web/main.tsx",
+        "src/web/chat/components/ui/input.tsx",
+        "src/web/chat/components/Home/Home.tsx",
+        "src/web/chat/components/Layout/Layout.tsx",
+        "src/web/chat/components/Composer/Composer.tsx",
+        "src/web/chat/components/ToolRendering/tools/WebTool.tsx",
+        "src/web/chat/components/ToolRendering/tools/BashTool.tsx",
+        "src/web/chat/components/ToolRendering/tools/EditTool.tsx",
+        "src/types/index.ts",
+        "src/mcp-server/index.ts",
+        "src/web/inspector/InspectorApp.tsx",
+        "src/web/chat/ChatApp.tsx",
+        "src/web/chat/components/Home/Header.tsx",
+        "src/web/chat/services/api.ts"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/apache-2.0",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#ffffff",
+      "text": "#0d0d0d",
+      "accent": "#0285ff",
+      "font_mono": "SF Mono, Monaco, Cascadia Code, Roboto Mono, Consolas, Courier New, monospace",
+      "font_ui": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+      "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "--color-bg-primary",
+        "value": "#ffffff",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+        "line": 3
+      },
+      {
+        "token": "text",
+        "key": "--color-text-primary",
+        "value": "#0d0d0d",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+        "line": 8
+      },
+      {
+        "token": "accent",
+        "key": "--color-accent",
+        "value": "#0285ff",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+        "line": 15
+      },
+      {
+        "token": "font_mono",
+        "value": "SF Mono, Monaco, Cascadia Code, Roboto Mono, Consolas, Courier New, monospace",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+        "line": 37
+      },
+      {
+        "token": "font_ui",
+        "value": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+        "line": 38
+      }
+    ],
+    "strings": [
+      "Unknown error",
+      "Describe your task",
+      "What is the next task?",
+      "Enter a directory...",
+      "View all code environments",
+      "Select AI model",
+      "Type a message...",
+      "Ask",
+      "Ask before making changes",
+      "Auto",
+      "Apply edits automatically",
+      "Yolo",
+      "Plan",
+      "Edit completed successfully",
+      "Open Settings",
+      "Settings"
+    ],
+    "string_evidence": [
+      {
+        "text": "Unknown error",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Home.tsx",
+        "line": 116,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Describe your task",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Home.tsx",
+        "line": 152,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "What is the next task?",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Home.tsx",
+        "line": 143,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Enter a directory...",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 117,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "View all code environments",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 135,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Select AI model",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 208,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Type a message...",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 300,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Ask",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1062,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Ask before making changes",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1062,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Auto",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1063,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Apply edits automatically",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1063,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Yolo",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1064,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Plan",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+        "line": 1065,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Edit completed successfully",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/EditTool.tsx",
+        "line": 62,
+        "kind": "visible-text"
+      },
+      {
+        "text": "Open Settings",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Header.tsx",
+        "line": 42,
+        "kind": "ui-attribute"
+      },
+      {
+        "text": "Settings",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Header.tsx",
+        "line": 49,
+        "kind": "visible-text"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/wbopan/cui",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/docs/README.md",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/package.json",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/hooks/useTheme.ts",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/styles/index.css",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/global.css",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/App.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/main.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ui/input.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Home.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Layout/Layout.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/WebTool.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/BashTool.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/EditTool.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/types/index.ts",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/mcp-server/index.ts",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/inspector/InspectorApp.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/ChatApp.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Header.tsx",
+      "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/services/api.ts",
+      "https://api.github.com/repos/wbopan/cui/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "docs/README.md",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/docs/README.md"
+      },
+      {
+        "path": "package.json",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/package.json"
+      },
+      {
+        "path": "src/web/chat/styles/theme.css",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/theme.css"
+      },
+      {
+        "path": "src/web/chat/hooks/useTheme.ts",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/hooks/useTheme.ts"
+      },
+      {
+        "path": "src/web/styles/index.css",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/styles/index.css"
+      },
+      {
+        "path": "src/web/chat/styles/global.css",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/styles/global.css"
+      },
+      {
+        "path": "src/web/App.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/App.tsx"
+      },
+      {
+        "path": "src/web/main.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/main.tsx"
+      },
+      {
+        "path": "src/web/chat/components/ui/input.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ui/input.tsx"
+      },
+      {
+        "path": "src/web/chat/components/Home/Home.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Home.tsx"
+      },
+      {
+        "path": "src/web/chat/components/Layout/Layout.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Layout/Layout.tsx"
+      },
+      {
+        "path": "src/web/chat/components/Composer/Composer.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Composer/Composer.tsx"
+      },
+      {
+        "path": "src/web/chat/components/ToolRendering/tools/WebTool.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/WebTool.tsx"
+      },
+      {
+        "path": "src/web/chat/components/ToolRendering/tools/BashTool.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/BashTool.tsx"
+      },
+      {
+        "path": "src/web/chat/components/ToolRendering/tools/EditTool.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/ToolRendering/tools/EditTool.tsx"
+      },
+      {
+        "path": "src/types/index.ts",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/types/index.ts"
+      },
+      {
+        "path": "src/mcp-server/index.ts",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/mcp-server/index.ts"
+      },
+      {
+        "path": "src/web/inspector/InspectorApp.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/inspector/InspectorApp.tsx"
+      },
+      {
+        "path": "src/web/chat/ChatApp.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/ChatApp.tsx"
+      },
+      {
+        "path": "src/web/chat/components/Home/Header.tsx",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/components/Home/Header.tsx"
+      },
+      {
+        "path": "src/web/chat/services/api.ts",
+        "source": "https://github.com/wbopan/cui/blob/cef7750fa6723149133ae4259eaa94402158796a/src/web/chat/services/api.ts"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false",
+      "topic:claude stars:1000..2999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Source-backed component outline, at least ten short original UI/help strings, and theme tokens.",
+    "screen_verification": {
+      "version": 3,
+      "at": "2026-11-15T06:40:57.413Z",
+      "source_count": 5,
+      "unavailable": [],
+      "eligible": true
+    },
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (TypeScript) → framework / general-agent",
+    "repository_id": 1000671216,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "wb04307201--spring-ai-loom-agent": {
+    "topics": [
+      "ai-agent",
+      "spring-ai"
+    ],
+    "homepage": "",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Java) → framework / general-agent",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/wb04307201/spring-ai-loom-agent",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ai-agent stars:300..499 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 825649818,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

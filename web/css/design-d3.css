@@ -1,0 +1,521 @@
+/* D3: scoped redraws. No image/font assets. Unknown values inherit web/style.css.
+   CSS comments use the requested // spec: spelling inside valid CSS comments. */
+
+.surface.d3[data-spec-version="continue-2023-06"], .surface.d3[data-spec-version="continue-2023-06"].dark {
+  --bg: #1e1e1e !important; /* // spec: continue-2023-06 palette.dark.bg; https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css */
+  --panel: #1e1e1e !important; /* // spec: continue-2023-06 palette.dark.panel; https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css */
+  --text: #ffffff !important; /* // spec: continue-2023-06 palette.dark.text; https://raw.githubusercontent.com/continuedev/continue/9913b4fd46275f9185bf6a6896931bc38bd7d3d0/extension/react-app/src/index.css */
+}
+.surface.d3[data-spec-version="continue-2023-06"] { --d3-radius: 5px; } /* // spec: continue-2023-06 shape.radius_px */
+.surface.d3[data-spec-version="continue-2023-06"] .composer { border-radius: var(--d3-radius); } /* // spec: continue-2023-06 shape.radius_px */
+.surface.d3[data-spec-version="continue-2023-06"] { --d3-density: compact; } /* // spec: continue-2023-06 shape.density */
+.surface.d3[data-spec-version="continue-2024-05"] { --d3-radius: 5px; } /* // spec: continue-2024-05 shape.radius_px */
+.surface.d3[data-spec-version="continue-2024-05"] .composer { border-radius: var(--d3-radius); } /* // spec: continue-2024-05 shape.radius_px */
+.surface.d3[data-spec-version="continue-2024-05"] { --d3-density: compact; } /* // spec: continue-2024-05 shape.density */
+.surface.d3[data-spec-version="continue-2024-11"] { --d3-density: compact; } /* // spec: continue-2024-11 shape.density */
+.surface.d3[data-spec-version="continue-2025-02"] { --d3-density: compact; } /* // spec: continue-2025-02 shape.density */
+.surface.d3[data-spec-version="continue-2025-10"] { --d3-density: compact; } /* // spec: continue-2025-10 shape.density */
+.surface.d3[data-spec-version="continue-2026-05"] { --d3-density: compact; } /* // spec: continue-2026-05 shape.density */
+.surface.d3[data-spec-version="continue-2026-06"] { --d3-density: compact; } /* // spec: continue-2026-06 shape.density */
+.surface.d3[data-spec-version="continue-2026-11"] { --d3-density: compact; } /* // spec: continue-2026-11 shape.density */
+
+.surface.d3[data-spec-version="huggingchat-2023-04"], .surface.d3[data-spec-version="huggingchat-2023-04"].light {
+  --text: #4b5563 !important; /* // spec: huggingchat-2023-04 palette.light.text; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #6b7280 !important; /* // spec: huggingchat-2023-04 palette.light.muted; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+  --border: #f3f4f6 !important; /* // spec: huggingchat-2023-04 palette.light.border; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+}
+
+.surface.d3[data-spec-version="huggingchat-2023-04"].dark {
+  --bg: #111827 !important; /* // spec: huggingchat-2023-04 palette.dark.bg; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/app.html */
+  --text: #d1d5db !important; /* // spec: huggingchat-2023-04 palette.dark.text; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #9ca3af !important; /* // spec: huggingchat-2023-04 palette.dark.muted; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+  --border: #1f2937 !important; /* // spec: huggingchat-2023-04 palette.dark.border; https://github.com/huggingface/chat-ui/blob/07a1e01a7e8e4a74cbaf1ae9f925016263418c3f/src/lib/components/chat/ChatMessage.svelte */
+}
+.surface.d3[data-spec-version="huggingchat-2023-04"] { --d3-density: regular; } /* // spec: huggingchat-2023-04 shape.density */
+.surface.d3[data-spec-version="huggingchat-2023-08"] { --d3-density: regular; } /* // spec: huggingchat-2023-08 shape.density */
+.surface.d3[data-spec-version="huggingchat-2024-02"] { --d3-density: regular; } /* // spec: huggingchat-2024-02 shape.density */
+.surface.d3[data-spec-version="huggingchat-2024-09"] { --d3-density: regular; } /* // spec: huggingchat-2024-09 shape.density */
+
+.surface.d3[data-spec-version="huggingchat-2025-10"], .surface.d3[data-spec-version="huggingchat-2025-10"].light {
+  --text: #323843 !important; /* // spec: huggingchat-2025-10 palette.light.text; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #6b7280 !important; /* // spec: huggingchat-2025-10 palette.light.muted; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+  --accent: #000000 !important; /* // spec: huggingchat-2025-10 palette.light.accent; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte */
+  --border: #f3f4f6 !important; /* // spec: huggingchat-2025-10 palette.light.border; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+}
+
+.surface.d3[data-spec-version="huggingchat-2025-10"].dark {
+  --bg: #12151c !important; /* // spec: huggingchat-2025-10 palette.dark.bg; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/app.html */
+  --text: #d1d5db !important; /* // spec: huggingchat-2025-10 palette.dark.text; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #9ca3af !important; /* // spec: huggingchat-2025-10 palette.dark.muted; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+  --accent: #ffffff !important; /* // spec: huggingchat-2025-10 palette.dark.accent; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatWindow.svelte */
+  --border: #1b1f27 !important; /* // spec: huggingchat-2025-10 palette.dark.border; https://github.com/huggingface/chat-ui/blob/278fc67521fee7c1fb84dae4b6e631313610fd14/src/lib/components/chat/ChatMessage.svelte */
+}
+.surface.d3[data-spec-version="huggingchat-2025-10"] { --d3-density: regular; } /* // spec: huggingchat-2025-10 shape.density */
+
+.surface.d3[data-spec-version="huggingchat-2026-04"], .surface.d3[data-spec-version="huggingchat-2026-04"].light {
+  --text: #323843 !important; /* // spec: huggingchat-2026-04 palette.light.text; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #6b7280 !important; /* // spec: huggingchat-2026-04 palette.light.muted; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+  --accent: #000000 !important; /* // spec: huggingchat-2026-04 palette.light.accent; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte */
+  --border: #f3f4f6 !important; /* // spec: huggingchat-2026-04 palette.light.border; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+}
+
+.surface.d3[data-spec-version="huggingchat-2026-04"].dark {
+  --text: #d1d5db !important; /* // spec: huggingchat-2026-04 palette.dark.text; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+  --muted: #9ca3af !important; /* // spec: huggingchat-2026-04 palette.dark.muted; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+  --accent: #ffffff !important; /* // spec: huggingchat-2026-04 palette.dark.accent; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatWindow.svelte */
+  --border: #1b1f27 !important; /* // spec: huggingchat-2026-04 palette.dark.border; https://github.com/huggingface/chat-ui/blob/c0cfbdf65cd25f750666e5bb37ea46be8f755004/src/lib/components/chat/ChatMessage.svelte */
+}
+.surface.d3[data-spec-version="huggingchat-2026-04"] { --d3-density: regular; } /* // spec: huggingchat-2026-04 shape.density */
+
+.surface.d3[data-spec-version="huggingchat-2026-11"], .surface.d3[data-spec-version="huggingchat-2026-11"].light {
+  --panel: #ffffff !important; /* // spec: huggingchat-2026-11 palette.light.panel; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte */
+  --muted: #737373 !important; /* // spec: huggingchat-2026-11 palette.light.muted; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/NavMenu.svelte */
+  --accent: #000000 !important; /* // spec: huggingchat-2026-11 palette.light.accent; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte */
+}
+
+.surface.d3[data-spec-version="huggingchat-2026-11"].dark {
+  --panel: #0a0a0a !important; /* // spec: huggingchat-2026-11 palette.dark.panel; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/SidePaneHost.svelte */
+  --muted: #a3a3a3 !important; /* // spec: huggingchat-2026-11 palette.dark.muted; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/NavMenu.svelte */
+  --accent: #ffffff !important; /* // spec: huggingchat-2026-11 palette.dark.accent; https://github.com/huggingface/chat-ui/blob/f543c9a1f38683ce6cebf82c007bbef2e24ee867/src/lib/components/chat/ChatWindow.svelte */
+}
+.surface.d3[data-spec-version="huggingchat-2026-11"] { --d3-density: regular; } /* // spec: huggingchat-2026-11 shape.density */
+
+.surface.d3[data-spec-version="open-webui-2023-10"].dark {
+  --bg: #343541 !important; /* // spec: open-webui-2023-10 palette.dark.bg; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte */
+  --panel: #202123 !important; /* // spec: open-webui-2023-10 palette.dark.panel; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/lib/components/layout/Navbar.svelte */
+  --text: #ececf1 !important; /* // spec: open-webui-2023-10 palette.dark.text; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte */
+  --muted: #8e8ea0 !important; /* // spec: open-webui-2023-10 palette.dark.muted; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte */
+  --accent: #059669 !important; /* // spec: open-webui-2023-10 palette.dark.accent; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte */
+  --border: #565869 !important; /* // spec: open-webui-2023-10 palette.dark.border; https://github.com/open-webui/open-webui/blob/c4413a7afaa8ee6e05193fb63de69e149cb1885e/src/routes/+page.svelte */
+}
+.surface.d3[data-spec-version="open-webui-2023-10"] { --d3-density: regular; } /* // spec: open-webui-2023-10 shape.density */
+
+.surface.d3[data-spec-version="open-webui-2024-02"], .surface.d3[data-spec-version="open-webui-2024-02"].light {
+  --panel: #000000 !important; /* // spec: open-webui-2024-02 palette.light.panel; https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte */
+}
+
+.surface.d3[data-spec-version="open-webui-2024-02"].dark {
+  --panel: #000000 !important; /* // spec: open-webui-2024-02 palette.dark.panel; https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte */
+  --text: #e3e3e3 !important; /* // spec: open-webui-2024-02 palette.dark.text; https://github.com/open-webui/open-webui/blob/v0.1.102/src/lib/components/layout/Sidebar.svelte */
+}
+.surface.d3[data-spec-version="open-webui-2024-02"] { --d3-density: regular; } /* // spec: open-webui-2024-02 shape.density */
+
+.surface.d3[data-spec-version="open-webui-2024-09"], .surface.d3[data-spec-version="open-webui-2024-09"].light {
+  --panel: #f9f9f9 !important; /* // spec: open-webui-2024-09 palette.light.panel; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --text: #171717 !important; /* // spec: open-webui-2024-09 palette.light.text; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --muted: #676767 !important; /* // spec: open-webui-2024-09 palette.light.muted; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --user-bg: #f9f9f9 !important; /* // spec: open-webui-2024-09 palette.light.user_bubble; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/UserMessage.svelte */
+}
+
+.surface.d3[data-spec-version="open-webui-2024-09"].dark {
+  --panel: #0d0d0d !important; /* // spec: open-webui-2024-09 palette.dark.panel; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --text: #e3e3e3 !important; /* // spec: open-webui-2024-09 palette.dark.text; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --muted: #b4b4b4 !important; /* // spec: open-webui-2024-09 palette.dark.muted; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/layout/Sidebar.svelte */
+  --user-bg: #262626 !important; /* // spec: open-webui-2024-09 palette.dark.user_bubble; https://github.com/open-webui/open-webui/blob/v0.3.21/src/lib/components/chat/Messages/UserMessage.svelte */
+}
+.surface.d3[data-spec-version="open-webui-2024-09"] { --d3-density: regular; } /* // spec: open-webui-2024-09 shape.density */
+
+.surface.d3[data-spec-version="open-webui-2025-04"], .surface.d3[data-spec-version="open-webui-2025-04"].light {
+  --user-bg: #f9f9f9 !important; /* // spec: open-webui-2025-04 palette.light.user_bubble; https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Messages/UserMessage.svelte */
+}
+
+.surface.d3[data-spec-version="open-webui-2025-04"].dark {
+  --user-bg: #262626 !important; /* // spec: open-webui-2025-04 palette.dark.user_bubble; https://github.com/open-webui/open-webui/blob/v0.6.0/src/lib/components/chat/Messages/UserMessage.svelte */
+}
+.surface.d3[data-spec-version="open-webui-2025-04"] { --d3-density: regular; } /* // spec: open-webui-2025-04 shape.density */
+.surface.d3[data-spec-version="open-webui-2025-09"] { --d3-density: regular; } /* // spec: open-webui-2025-09 shape.density */
+.surface.d3[data-spec-version="open-webui-2025-11"] { --d3-density: regular; } /* // spec: open-webui-2025-11 shape.density */
+.surface.d3[data-spec-version="open-webui-2026-07"] { --d3-density: regular; } /* // spec: open-webui-2026-07 shape.density */
+.surface.d3[data-spec-version="open-webui-2026-10"] { --d3-density: regular; } /* // spec: open-webui-2026-10 shape.density */
+
+.surface.d3[data-spec-version="n8n-2023-10"], .surface.d3[data-spec-version="n8n-2023-10"].light {
+  --bg: #fdfcff !important; /* // spec: n8n-2023-10 palette.light.bg; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+  --panel: #ffffff !important; /* // spec: n8n-2023-10 palette.light.panel; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+  --text: #555555 !important; /* // spec: n8n-2023-10 palette.light.text; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+  --muted: #909399 !important; /* // spec: n8n-2023-10 palette.light.muted; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+  --accent: #ff6d5a !important; /* // spec: n8n-2023-10 palette.light.accent; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+  --border: #dbdfe7 !important; /* // spec: n8n-2023-10 palette.light.border; https://raw.githubusercontent.com/n8n-io/n8n/ec141416e29540a2bf6ce99be1b13d76517eca13/packages/design-system/src/css/_tokens.scss */
+}
+.surface.d3[data-spec-version="n8n-2023-10"] { --d3-radius: 8px; } /* // spec: n8n-2023-10 shape.radius_px */
+.surface.d3[data-spec-version="n8n-2023-10"] .composer { border-radius: var(--d3-radius); } /* // spec: n8n-2023-10 shape.radius_px */
+.surface.d3[data-spec-version="n8n-2023-10"] { --d3-density: compact; } /* // spec: n8n-2023-10 shape.density */
+
+.surface.d3[data-spec-version="n8n-2024-02"], .surface.d3[data-spec-version="n8n-2024-02"].light {
+  --bg: #fbfcfe !important; /* // spec: n8n-2024-02 palette.light.bg; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+  --panel: #ffffff !important; /* // spec: n8n-2024-02 palette.light.panel; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+  --text: #414244 !important; /* // spec: n8n-2024-02 palette.light.text; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+  --muted: #909298 !important; /* // spec: n8n-2024-02 palette.light.muted; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+  --accent: #ff6f5c !important; /* // spec: n8n-2024-02 palette.light.accent; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+  --border: #d9dee8 !important; /* // spec: n8n-2024-02 palette.light.border; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.scss */
+}
+
+.surface.d3[data-spec-version="n8n-2024-02"].dark {
+  --panel: #414244 !important; /* // spec: n8n-2024-02 palette.dark.panel; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss */
+  --text: #f1f3f9 !important; /* // spec: n8n-2024-02 palette.dark.text; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss */
+  --muted: #a5abb6 !important; /* // spec: n8n-2024-02 palette.dark.muted; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss */
+  --border: #525456 !important; /* // spec: n8n-2024-02 palette.dark.border; https://raw.githubusercontent.com/n8n-io/n8n/n8n@1.28.0/packages/design-system/src/css/_tokens.dark.scss */
+}
+.surface.d3[data-spec-version="n8n-2024-02"] { --d3-density: compact; } /* // spec: n8n-2024-02 shape.density */
+.surface.d3[data-spec-version="n8n-2024-09"] { --d3-density: compact; } /* // spec: n8n-2024-09 shape.density */
+.surface.d3[data-spec-version="n8n-2025"] { --d3-density: compact; } /* // spec: n8n-2025 shape.density */
+.surface.d3[data-spec-version="n8n-2025-08"] { --d3-density: compact; } /* // spec: n8n-2025-08 shape.density */
+.surface.d3[data-spec-version="n8n-2026-04"] { --d3-density: compact; } /* // spec: n8n-2026-04 shape.density */
+.surface.d3[data-spec-version="n8n-2026-11"] { --d3-density: compact; } /* // spec: n8n-2026-11 shape.density */
+.surface.d3[data-spec-version="ollama-2023-07"] { --d3-density: compact; } /* // spec: ollama-2023-07 shape.density */
+.surface.d3[data-spec-version="ollama-2024-02"] { --d3-density: compact; } /* // spec: ollama-2024-02 shape.density */
+.surface.d3[data-spec-version="ollama-2026-03-macos"] { --d3-density: regular; } /* // spec: ollama-2026-03-macos shape.density */
+
+.surface.d3[data-spec-version="zed-2024-05-macos"].light {
+  --bg: #fafafa !important; /* // spec: zed-2024-05-macos palette.light.bg; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --panel: #ebebec !important; /* // spec: zed-2024-05-macos palette.light.panel; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --text: #383a41 !important; /* // spec: zed-2024-05-macos palette.light.text; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --muted: #7e8087 !important; /* // spec: zed-2024-05-macos palette.light.muted; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --accent: #5c78e2 !important; /* // spec: zed-2024-05-macos palette.light.accent; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --border: #c9c9ca !important; /* // spec: zed-2024-05-macos palette.light.border; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+}
+
+.surface.d3[data-spec-version="zed-2024-05-macos"], .surface.d3[data-spec-version="zed-2024-05-macos"].dark {
+  --bg: #282c33 !important; /* // spec: zed-2024-05-macos palette.dark.bg; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --panel: #2f343e !important; /* // spec: zed-2024-05-macos palette.dark.panel; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --text: #c8ccd4 !important; /* // spec: zed-2024-05-macos palette.dark.text; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --muted: #838994 !important; /* // spec: zed-2024-05-macos palette.dark.muted; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --accent: #74ade8 !important; /* // spec: zed-2024-05-macos palette.dark.accent; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+  --border: #464b57 !important; /* // spec: zed-2024-05-macos palette.dark.border; https://raw.githubusercontent.com/zed-industries/zed/bdf627ce07e7f0d4dc72eafca3be276c4ed8ca5d/assets/themes/one/one.json */
+}
+.surface.d3[data-spec-version="zed-2024-05-macos"] { --d3-density: compact; } /* // spec: zed-2024-05-macos shape.density */
+
+.surface.d3[data-spec-version="zed-2024-08-macos"].light {
+  --bg: #fafafa !important; /* // spec: zed-2024-08-macos palette.light.bg; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --panel: #ebebec !important; /* // spec: zed-2024-08-macos palette.light.panel; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --text: #383a41 !important; /* // spec: zed-2024-08-macos palette.light.text; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --muted: #7e8087 !important; /* // spec: zed-2024-08-macos palette.light.muted; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --accent: #5c78e2 !important; /* // spec: zed-2024-08-macos palette.light.accent; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --border: #c9c9ca !important; /* // spec: zed-2024-08-macos palette.light.border; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+}
+
+.surface.d3[data-spec-version="zed-2024-08-macos"], .surface.d3[data-spec-version="zed-2024-08-macos"].dark {
+  --bg: #282c33 !important; /* // spec: zed-2024-08-macos palette.dark.bg; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --panel: #2f343e !important; /* // spec: zed-2024-08-macos palette.dark.panel; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --text: #c8ccd4 !important; /* // spec: zed-2024-08-macos palette.dark.text; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --muted: #838994 !important; /* // spec: zed-2024-08-macos palette.dark.muted; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --accent: #74ade8 !important; /* // spec: zed-2024-08-macos palette.dark.accent; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+  --border: #464b57 !important; /* // spec: zed-2024-08-macos palette.dark.border; https://raw.githubusercontent.com/zed-industries/zed/a3672d96d4a8f776f32ffb6d830130d54d418bf4/assets/themes/one/one.json */
+}
+.surface.d3[data-spec-version="zed-2024-08-macos"] { --d3-density: compact; } /* // spec: zed-2024-08-macos shape.density */
+.surface.d3[data-spec-version="zed-2025-05"] { --d3-density: compact; } /* // spec: zed-2025-05 shape.density */
+
+.surface.d3[data-spec-version="zed-2025-09-macos"].light {
+  --bg: #fafafa !important; /* // spec: zed-2025-09-macos palette.light.bg; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --panel: #ebebec !important; /* // spec: zed-2025-09-macos palette.light.panel; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --text: #242529 !important; /* // spec: zed-2025-09-macos palette.light.text; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --muted: #58585a !important; /* // spec: zed-2025-09-macos palette.light.muted; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --accent: #5c78e2 !important; /* // spec: zed-2025-09-macos palette.light.accent; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --border: #c9c9ca !important; /* // spec: zed-2025-09-macos palette.light.border; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+}
+
+.surface.d3[data-spec-version="zed-2025-09-macos"], .surface.d3[data-spec-version="zed-2025-09-macos"].dark {
+  --bg: #282c33 !important; /* // spec: zed-2025-09-macos palette.dark.bg; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --panel: #2f343e !important; /* // spec: zed-2025-09-macos palette.dark.panel; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --text: #dce0e5 !important; /* // spec: zed-2025-09-macos palette.dark.text; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --muted: #a9afbc !important; /* // spec: zed-2025-09-macos palette.dark.muted; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --accent: #74ade8 !important; /* // spec: zed-2025-09-macos palette.dark.accent; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+  --border: #464b57 !important; /* // spec: zed-2025-09-macos palette.dark.border; https://raw.githubusercontent.com/zed-industries/zed/f6c5c68751f686a4cf90ea1a1d32a361cb7c888e/assets/themes/one/one.json */
+}
+.surface.d3[data-spec-version="zed-2025-09-macos"] { --d3-density: compact; } /* // spec: zed-2025-09-macos shape.density */
+.surface.d3[data-spec-version="zed-2026-04"] { --d3-density: compact; } /* // spec: zed-2026-04 shape.density */
+
+.surface.d3[data-spec-version="zed-2026-11-macos"].light {
+  --bg: #fafafa !important; /* // spec: zed-2026-11-macos palette.light.bg; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --panel: #ebebec !important; /* // spec: zed-2026-11-macos palette.light.panel; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --text: #242529 !important; /* // spec: zed-2026-11-macos palette.light.text; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --muted: #58585a !important; /* // spec: zed-2026-11-macos palette.light.muted; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --accent: #5c78e2 !important; /* // spec: zed-2026-11-macos palette.light.accent; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --border: #c9c9ca !important; /* // spec: zed-2026-11-macos palette.light.border; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+}
+
+.surface.d3[data-spec-version="zed-2026-11-macos"], .surface.d3[data-spec-version="zed-2026-11-macos"].dark {
+  --bg: #282c33 !important; /* // spec: zed-2026-11-macos palette.dark.bg; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --panel: #2f343e !important; /* // spec: zed-2026-11-macos palette.dark.panel; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --text: #dce0e5 !important; /* // spec: zed-2026-11-macos palette.dark.text; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --muted: #a9afbc !important; /* // spec: zed-2026-11-macos palette.dark.muted; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --accent: #74ade8 !important; /* // spec: zed-2026-11-macos palette.dark.accent; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+  --border: #464b57 !important; /* // spec: zed-2026-11-macos palette.dark.border; https://raw.githubusercontent.com/zed-industries/zed/c7bea343838f42b4c14151393e41f0bbe033c95e/assets/themes/one/one.json */
+}
+.surface.d3[data-spec-version="zed-2026-11-macos"] { --d3-density: compact; } /* // spec: zed-2026-11-macos shape.density */
+
+.surface.d3[data-spec-version="cherry-studio-2024-08"], .surface.d3[data-spec-version="cherry-studio-2024-08"].light {
+  --bg: #ffffff !important; /* // spec: cherry-studio-2024-08 palette.light.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --text: #000000 !important; /* // spec: cherry-studio-2024-08 palette.light.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --muted: #00000099 !important; /* // spec: cherry-studio-2024-08 palette.light.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2024-08 palette.light.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --border: #00000028 !important; /* // spec: cherry-studio-2024-08 palette.light.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+}
+
+.surface.d3[data-spec-version="cherry-studio-2024-08"].dark {
+  --bg: #181818 !important; /* // spec: cherry-studio-2024-08 palette.dark.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --text: #fffff5db !important; /* // spec: cherry-studio-2024-08 palette.dark.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --muted: #ebebf599 !important; /* // spec: cherry-studio-2024-08 palette.dark.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --accent: #135200 !important; /* // spec: cherry-studio-2024-08 palette.dark.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+  --border: #ffffff20 !important; /* // spec: cherry-studio-2024-08 palette.dark.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/v0.5.0/src/renderer/src/assets/styles/index.scss */
+}
+.surface.d3[data-spec-version="cherry-studio-2024-08"] { --d3-density: regular; } /* // spec: cherry-studio-2024-08 shape.density */
+
+.surface.d3[data-spec-version="cherry-studio-2025-01"], .surface.d3[data-spec-version="cherry-studio-2025-01"].light {
+  --bg: #f3f3f3 !important; /* // spec: cherry-studio-2025-01 palette.light.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --panel: #ffffff !important; /* // spec: cherry-studio-2025-01 palette.light.panel; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --text: #000000 !important; /* // spec: cherry-studio-2025-01 palette.light.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --muted: #00000099 !important; /* // spec: cherry-studio-2025-01 palette.light.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2025-01 palette.light.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --border: #00000028 !important; /* // spec: cherry-studio-2025-01 palette.light.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --user-bg: #95ec69 !important; /* // spec: cherry-studio-2025-01 palette.light.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+}
+
+.surface.d3[data-spec-version="cherry-studio-2025-01"].dark {
+  --bg: #111111 !important; /* // spec: cherry-studio-2025-01 palette.dark.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --panel: #151515 !important; /* // spec: cherry-studio-2025-01 palette.dark.panel; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --text: #fffff5db !important; /* // spec: cherry-studio-2025-01 palette.dark.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --muted: #ebebf599 !important; /* // spec: cherry-studio-2025-01 palette.dark.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2025-01 palette.dark.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --border: #ffffff22 !important; /* // spec: cherry-studio-2025-01 palette.dark.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+  --user-bg: #28b561 !important; /* // spec: cherry-studio-2025-01 palette.dark.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/446499287348c61e403d1ea0b253cfc46fc7e6c2/src/renderer/src/assets/styles/index.scss */
+}
+.surface.d3[data-spec-version="cherry-studio-2025-01"] { --d3-density: regular; } /* // spec: cherry-studio-2025-01 shape.density */
+
+.surface.d3[data-spec-version="cherry-studio-2025-06-macos"], .surface.d3[data-spec-version="cherry-studio-2025-06-macos"].light {
+  --bg: #f3f3f3 !important; /* // spec: cherry-studio-2025-06-macos palette.light.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --panel: #ffffff !important; /* // spec: cherry-studio-2025-06-macos palette.light.panel; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --text: #000000 !important; /* // spec: cherry-studio-2025-06-macos palette.light.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --muted: #00000099 !important; /* // spec: cherry-studio-2025-06-macos palette.light.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2025-06-macos palette.light.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --border: #00000019 !important; /* // spec: cherry-studio-2025-06-macos palette.light.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --user-bg: #95ec69 !important; /* // spec: cherry-studio-2025-06-macos palette.light.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+}
+
+.surface.d3[data-spec-version="cherry-studio-2025-06-macos"].dark {
+  --bg: #111111 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --panel: #181818 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.panel; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --text: #fffff5e6 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --muted: #ebebf599 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2025-06-macos palette.dark.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --border: #ffffff19 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+  --user-bg: #28b561 !important; /* // spec: cherry-studio-2025-06-macos palette.dark.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/8c9822cc713d52d79eb99f278bd331d04e269618/src/renderer/src/assets/styles/color.scss */
+}
+.surface.d3[data-spec-version="cherry-studio-2025-06-macos"] { --d3-density: regular; } /* // spec: cherry-studio-2025-06-macos shape.density */
+
+.surface.d3[data-spec-version="cherry-studio-2026-03-macos"], .surface.d3[data-spec-version="cherry-studio-2026-03-macos"].light {
+  --bg: #ffffff !important; /* // spec: cherry-studio-2026-03-macos palette.light.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --text: #000000 !important; /* // spec: cherry-studio-2026-03-macos palette.light.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --muted: #00000099 !important; /* // spec: cherry-studio-2026-03-macos palette.light.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2026-03-macos palette.light.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --border: #00000019 !important; /* // spec: cherry-studio-2026-03-macos palette.light.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --user-bg: #0000000b !important; /* // spec: cherry-studio-2026-03-macos palette.light.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+}
+
+.surface.d3[data-spec-version="cherry-studio-2026-03-macos"].dark {
+  --bg: #181818 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.bg; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --panel: #222222 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.panel; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --text: #fffff5e6 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.text; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --muted: #ebebf599 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.muted; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --accent: #00b96b !important; /* // spec: cherry-studio-2026-03-macos palette.dark.accent; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --border: #ffffff19 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.border; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+  --user-bg: #ffffff14 !important; /* // spec: cherry-studio-2026-03-macos palette.dark.user_bubble; https://raw.githubusercontent.com/CherryHQ/cherry-studio/f0f04eeda03868ea75f8d5219baad8afec7a38e3/src/renderer/src/assets/styles/color.css */
+}
+.surface.d3[data-spec-version="cherry-studio-2026-03-macos"] { --d3-radius: 10px; } /* // spec: cherry-studio-2026-03-macos shape.radius_px */
+.surface.d3[data-spec-version="cherry-studio-2026-03-macos"] .composer { border-radius: var(--d3-radius); } /* // spec: cherry-studio-2026-03-macos shape.radius_px */
+.surface.d3[data-spec-version="cherry-studio-2026-03-macos"] { --d3-density: regular; } /* // spec: cherry-studio-2026-03-macos shape.density */
+.surface.d3[data-spec-version="cherry-studio-2026-11-macos"] { --d3-density: regular; } /* // spec: cherry-studio-2026-11-macos shape.density */
+
+/* Shared plumbing preserves the existing 600px breakpoint, toolbar spacing and system font fallbacks.
+   // spec: continue-2023-06 typography.free_fallback; windsurf-2024-11 typography.free_fallback;
+   // spec: huggingchat-2023-04 typography.free_fallback; lm-studio-2023-05 typography.free_fallback;
+   // spec: open-webui-2023-10 typography.free_fallback; n8n-2023-10 typography.free_fallback;
+   // spec: ollama-2023-07 typography.free_fallback; zed-2024-05-macos typography.free_fallback; cherry-studio-2024-08 typography.free_fallback */
+.surface.d3 { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+.d3 [hidden] { display: none !important; }
+.d3 strong, .d3 h1, .d3 h3 { font-family: inherit; letter-spacing: normal; }
+.d3 pre, .d3 code { font-family: ui-monospace, monospace; }
+.d3 .native-header, .d3 .panel-header, .d3 .native-sidebar, .d3 .explorer,
+.d3 .agent-panel, .d3 .lm-runtime, .d3 .cherry-assistants, .d3 .cherry-rail {
+  background: var(--panel); color: inherit; border-color: var(--border);
+}
+.d3 .native-sidebar button, .d3 .lm-runtime button { color: inherit; background: transparent; border-color: var(--border); }
+.d3 .composer { background: var(--bg); border-color: var(--border); box-shadow: none; }
+.d3 .composer .send { background: var(--accent); }
+.d3 .d3-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 8px 12px; flex: none; }
+.d3 select, .d3 input, .d3 textarea { color: inherit; font: inherit; max-width: 100%; }
+.d3 select { background: var(--bg); border: 1px solid var(--border); padding: 6px; }
+.d3 input[type=search], .d3 input[type=number] { background: var(--bg); border: 1px solid var(--border); padding: 6px; min-width: 0; }
+.d3 .d3-row { display: flex; flex: 1; min-width: 0; min-height: 0; }
+.d3 .d3-sources { font-size: 10px; padding: 4px 12px; flex: none; max-height: 100px; overflow: auto; color: var(--muted); }
+.d3 .d3-sources a { display: inline-block; margin: 4px 8px 4px 0; color: inherit; }
+.d3 .d3-unverified { padding: 12px; color: var(--muted); }
+.d3 .d3-compact { font-size: 12px; }
+/* These shared effects invent fixed speed/model/connection states. Hide their chrome locally.
+   // spec: continue-2024-11 corrections[4]; windsurf-2025-11 corrections[8]; huggingchat-2026-04 corrections[7];
+   // spec: lm-studio-2023-05 corrections[2]; open-webui-2026-07 corrections[6]; ollama-2026-11-macos corrections[6];
+   // spec: zed-2026-11-macos corrections[6]; cherry-studio-2026-03-macos corrections[3]; n8n-2026-11 corrections[6] */
+.d3 .stream-fx-head, .d3 .stream-fx-foot { display: none; }
+.d3 .message.assistant.is-thinking::before { content: '回答を作っています…'; display: block; color: var(--muted); font-size: 12px; }
+.d3 .message .answer-text::after { content: none; }
+
+/* // spec: continue-2023-06 conversation; continue-2024-11 conversation; continue-2026-06 conversation; continue-2026-11 conversation */
+.d3.continue .message { border-radius: 0; box-shadow: none; }
+.d3.continue .message.user { background: var(--panel); }
+.d3.continue .message.assistant { background: var(--bg); }
+.d3.continue .d3-step { text-align: left; border: 1px solid var(--border); padding: 12px; width: 100%; }
+.d3.continue .d3-continue-panel { display: flex; flex-direction: column; }
+
+/* // spec: windsurf-2026-01 regions; windsurf-2026-06 regions; windsurf-2026-11 regions */
+.d3.windsurf .d3-arena { display: flex; flex: 1; min-height: 0; }
+.d3.windsurf .d3-arena > * { flex: 1; width: 50%; border-right: 1px solid var(--border); }
+.d3.windsurf .d3-kanban { display: flex; flex: 1; border: 1px solid var(--border); padding: 20px; }
+.d3.windsurf .d3-work-view { padding: 12px; }
+
+/* // spec: huggingchat-2023-04 regions[0].size; huggingchat-2025-10 regions[0].size */
+.d3.huggingchat.phase-2023-04 .native-sidebar { width: 280px; }
+.d3.huggingchat.phase-2025-10 .native-sidebar { width: 290px; }
+/* // spec: huggingchat-2023-04 empty_state; huggingchat-2023-08 empty_state; huggingchat-2024-02 empty_state; huggingchat-2024-09 empty_state */
+.d3.huggingchat .d3-hf-introduction { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; text-align: left; }
+.d3.huggingchat .d3-model-card { border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+/* // spec: huggingchat-2023-04 conversation; huggingchat-2025-10 conversation; huggingchat-2026-04 conversation; huggingchat-2026-11 conversation */
+.d3.huggingchat .message.user { background: transparent; text-align: left; margin-left: 0; border: 0; }
+.d3.huggingchat .message.assistant { border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(transparent, var(--panel)); }
+.d3.huggingchat .composer .send { color: var(--bg); border-radius: 50%; }
+.d3.huggingchat .composer { border-radius: 14px; } /* // spec: huggingchat-2023-04 shape.input_shape; retained 14px approximation; exact px unverified */
+.d3.huggingchat .d3-first-visit { border: 1px solid var(--border); background: var(--panel); padding: 18px; } /* // spec: huggingchat-2025-10 regions[3] */
+.d3.huggingchat .d3-hf-pane { min-width: max(20%, 300px); max-width: 80%; width: 40%; resize: horizontal; overflow: auto; background: var(--panel); border-left: 1px solid var(--border); } /* // spec: huggingchat-2026-11 regions[3].size */
+.d3.huggingchat.phase-2026-11 .composer { flex-wrap: wrap; } /* // spec: huggingchat-2026-11 shape.input_shape */
+.d3.huggingchat .d3-task-band { flex: 0 0 100%; border-bottom: 1px solid var(--border); padding: 8px; } /* // spec: huggingchat-2026-11 regions[2] */
+.d3.huggingchat .d3-model-meta { color: var(--muted); font-size: 11px; margin-top: 8px; } /* // spec: huggingchat-2025-10 conversation.assistant; huggingchat-2026-04 conversation.assistant; huggingchat-2026-11 conversation.assistant */
+
+/* // spec: lm-studio-2023-11 regions; lm-studio-2024-08 regions; lm-studio-2025-06 regions; lm-studio-2026-02 regions */
+.d3.lmstudio .lm-runtime { background: var(--panel); }
+.d3.lmstudio .chat-main { min-width: 0; }
+.d3.lmstudio .d3-work-view { padding: 12px; }
+.d3.lmstudio .lm-workspace > .chat-main + .chat-main { border-left: 1px solid var(--border); }
+.d3.lmstudio .d3-thought { border: 1px solid var(--border); padding: 8px; } /* // spec: lm-studio-2025-01 conversation.assistant; lm-studio-2025-02 conversation.assistant; lm-studio-2025-06 conversation.assistant */
+
+/* // spec: open-webui-2023-10 regions[0].size; open-webui-2024-02 regions[0].size; open-webui-2024-09 regions[0].size; open-webui-2025-04 regions[0].size */
+.d3.openwebui.phase-2023-10 .native-sidebar { width: 18rem; }
+.d3.openwebui:is(.phase-2024-02,.phase-2024-09,.phase-2025-04) .native-sidebar { width: 260px; }
+.d3.openwebui.phase-2024-02 .native-sidebar { color: #e3e3e3; } /* // spec: open-webui-2024-02 palette.dark.text; sidebar's source applies in both modes */
+.d3.openwebui.phase-2023-10 .message { margin: 0; border-radius: 0; border: 0; padding: 20px; } /* // spec: open-webui-2023-10 conversation */
+.d3.openwebui.phase-2023-10 .message.user { background: var(--bg); } /* // spec: open-webui-2023-10 conversation.user */
+.d3.openwebui.phase-2023-10 .message.assistant { background: var(--panel); } /* // spec: open-webui-2023-10 conversation.assistant */
+.d3.openwebui:is(.phase-2024-09,.phase-2025-04) .message.user { margin-left: auto; max-width: 90%; border-radius: 14px; background: var(--user-bg); } /* // spec: open-webui-2024-09 conversation.user; open-webui-2025-04 conversation.user */
+.d3.openwebui .composer .send { border-radius: 50%; } /* // spec: open-webui-2024-09 shape.input_shape */
+.d3.openwebui .d3-resizable-sidebar { width: 260px; min-width: 220px; max-width: 480px; resize: horizontal; overflow: auto; } /* // spec: open-webui-2026-07 regions[0].size; 260px retains prior width */
+.d3.openwebui .native-sidebar.d3-collapsed { width: 42px; min-width: 42px; padding: 6px; resize: none; } /* // spec: open-webui-2026-07 regions[0].size */
+.d3.openwebui .d3-collapsed > * { overflow: hidden; white-space: nowrap; }
+.d3.openwebui .d3-central-input:not(:has(.message)) .thread { flex: 0 1 auto; } /* // spec: open-webui-2025-04 regions[2] */
+.d3.openwebui .d3-central-input:not(:has(.message)) { justify-content: center; }
+.d3.openwebui.phase-2026-07 .answer-text { max-width: 100%; } /* // spec: open-webui-2026-07 conversation.assistant; no invented exact width */
+.d3.openwebui.phase-2026-10 .composer { border-radius: 14px; border: 1px solid var(--border); } /* // spec: open-webui-2026-10 shape.input_shape rounded-3xl; existing 14px approximation retained because radius_px is null */
+.d3.openwebui .d3-work-pane { width: 40%; min-width: 0; overflow: auto; border-left: 1px solid var(--border); } /* // spec: open-webui-2026-11 regions[1]; retains prior 40% secondary pane approximation */
+.d3.openwebui.d3-work-full > .chat-main { display: none; }
+.d3.openwebui.d3-work-full .d3-work-pane { flex: 1; width: auto; } /* // spec: open-webui-2026-11 controls[3] */
+
+/* // spec: n8n-2023-10 regions; n8n-2024-02 regions; n8n-2024-09 regions; n8n-2025 regions; n8n-2025-08 regions; n8n-2026-04 regions; n8n-2026-11 regions */
+.d3.n8n .d3-workflow-main { flex: 1; min-height: 0; display: flex; flex-direction: column; position: relative; }
+.d3.n8n .workflow-canvas { flex: 1; background-color: var(--bg); }
+.d3.n8n .workflow-node { color: var(--text); background: var(--panel); border-color: var(--border); box-shadow: none; }
+.d3.n8n.phase-2023-10 .workflow-node { border-radius: 8px; } /* // spec: n8n-2023-10 shape.radius_px */
+.d3.n8n .workflow-chat { height: 42%; flex: none; } /* // spec: n8n-2023-10 corrections[0]; existing test drawer proportion retained when explicitly opened */
+.d3.n8n .d3-node-details { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--bg); overflow: auto; } /* // spec: n8n-2023-10 regions[2]; n8n-2024-02 regions[1] */
+.d3.n8n .d3-node-details > button { grid-column: 1 / -1; justify-self: end; }
+.d3.n8n .d3-node-details > section { padding: 18px; border-right: 1px solid var(--border); min-width: 0; }
+.d3.n8n.phase-2023-10 { color-scheme: light; } /* // spec: n8n-2023-10 palette.light */
+
+/* // spec: ollama-2023-07 shape.input_shape; ollama-2024-02 shape.input_shape; ollama-2024-09-macos regions */
+.d3.d3-ollama-terminal { font-family: ui-monospace, monospace; }
+.d3.d3-ollama-terminal .composer { border: 0; border-radius: 0; padding-left: 0; background: transparent; }
+.d3.d3-ollama-terminal .empty-state { align-items: flex-start; min-height: 0; }
+.d3.d3-ollama-terminal .message { border: 0; border-radius: 0; background: transparent; margin: 0; padding: 8px 0; }
+.d3.d3-ollama-terminal .message-label { display: none; }
+.d3.d3-ollama-terminal .message.user .answer-text::before { content: '>>> '; } /* // spec: ollama-2023-07 conversation.user; ollama-2024-02 conversation.user */
+.d3.d3-ollama-terminal .d3-menubar { font-family: system-ui, sans-serif; padding: 6px; } /* // spec: ollama-2024-09-macos regions[0] */
+.d3.d3-ollama-app.phase-2026-03 .composer { max-width: 768px; width: calc(100% - 40px); margin-left: auto; margin-right: auto; flex-wrap: wrap; } /* // spec: ollama-2026-03-macos regions[2].size; shape.input_shape; radius remains existing approximation */
+.d3.d3-ollama-app.phase-2026-03 .message.user { margin-left: auto; border-radius: 14px; background: var(--panel); } /* // spec: ollama-2026-03-macos conversation.user */
+.d3.d3-ollama-app.phase-2026-03 .message.assistant { background: transparent; border-radius: 0; } /* // spec: ollama-2026-03-macos conversation.assistant */
+
+/* // spec: zed-2024-05-macos regions; zed-2024-08-macos regions; zed-2025-09-macos regions */
+.d3.zed:is(.phase-2024-05,.phase-2024-08,.phase-2025-09) .explorer { width: 240px; }
+.d3.zed:is(.phase-2024-05,.phase-2024-08,.phase-2025-09) .agent-panel { width: 640px; flex: 0 1 640px; }
+.d3.zed .d3-editable-buffer { display: flex; flex-direction: column; }
+.d3.zed .d3-editable-buffer .message { background: transparent; border-radius: 0; border: 0; }
+.d3.zed .d3-buffer-entry { order: 1; }
+.d3.zed .d3-buffer-entry .composer { margin: 0; padding: 8px 0; border: 0; background: transparent; } /* // spec: zed-2024-05-macos shape.input_shape; zed-2024-08-macos shape.input_shape */
+.d3.zed .d3-review { padding: 8px 12px; border-top: 1px solid var(--border); } /* // spec: zed-2025-05 regions[1]; zed-2025-09-macos controls[1] */
+.d3.zed .d3-threads-sidebar { width: 185px; flex: none; display: flex; flex-direction: column; gap: 10px; padding: 12px; background: var(--panel); } /* // spec: zed-2026-04 regions[0]; width retains existing file-list approximation (null) */
+.d3.zed.phase-2026-11 .d3-threads-sidebar { width: 300px; } /* // spec: zed-2026-11-macos regions[0].size */
+.d3.zed.phase-2026-11 .explorer { width: 240px; border-left: 1px solid var(--border); } /* // spec: zed-2026-11-macos regions[3].size */
+.d3.zed .d3-zed-parallel .agent-panel { flex: 1; min-width: 0; border-right: 1px solid var(--border); border-left: 0; } /* // spec: zed-2026-04 regions[1]; zed-2026-11-macos regions[1] */
+.d3.zed .d3-zed-parallel > .editor { flex: 1; }
+
+/* // spec: cherry-studio-2024-08 regions; cherry-studio-2025-01 regions; cherry-studio-2025-06-macos regions */
+.d3.cherry-studio.phase-2024-08 .cherry-rail { width: 55px; }
+.d3.cherry-studio.phase-2024-08 .cherry-assistants { width: 245px; }
+.d3.cherry-studio:is(.phase-2025-01,.phase-2025-06) .cherry-rail { width: 50px; }
+.d3.cherry-studio:is(.phase-2025-01,.phase-2025-06) .cherry-assistants { width: 275px; }
+.d3.cherry-studio .d3-cherry-topics { width: 260px; flex: none; background: var(--panel); border-left: 1px solid var(--border); padding: 14px; } /* // spec: cherry-studio-2024-08 regions[3].size; later null widths keep same approximation */
+.d3.cherry-studio .composer { flex-wrap: wrap; }
+.d3.cherry-studio .composer > .d3-toolbar { flex-basis: 100%; padding: 0; } /* // spec: cherry-studio-2025-06-macos shape.input_shape; cherry-studio-2026-11-macos regions[3] */
+.d3.cherry-studio:is(.phase-2025-01,.phase-2025-06,.phase-2026-03) .message.user { background: var(--user-bg); margin-left: auto; } /* // spec: cherry-studio-2025-01 conversation.user; cherry-studio-2025-06-macos conversation.user; cherry-studio-2026-03-macos palette */
+.d3.cherry-studio .d3-model-group { padding: 12px; border: 1px solid var(--border); }
+.d3.cherry-studio .d3-model-group[data-layout='格子状'] { display: grid; grid-template-columns: repeat(var(--d3-columns, 1), minmax(0, 1fr)); } /* // spec: cherry-studio-2026-03-macos conversation.assistant; configurable columns, no fixed 2x2 */
+
+/* Existing breakpoint reused for usability, not a claim about unverified product breakpoints. */
+@media (max-width: 600px) {
+  .d3 .d3-row, .d3 .d3-arena, .d3 .lm-workspace, .d3 .cherry-workspace, .d3 .zed-workspace { flex-direction: column; }
+  .d3 .native-sidebar, .d3 .explorer, .d3 .d3-threads-sidebar, .d3 .cherry-assistants, .d3 .cherry-rail { display: none; }
+  .d3 .d3-hf-introduction { grid-template-columns: 1fr; }
+  .d3 .agent-panel, .d3.zed .agent-panel { width: 100%; flex: 1; }
+  .d3 .d3-arena > * { width: 100%; }
+  .d3 .d3-work-pane { width: 100%; }
+  .d3.huggingchat .d3-hf-pane { position: absolute; inset: 0; z-index: 2; width: 100%; min-width: 0; max-width: 100%; resize: none; } /* // spec: huggingchat-2026-11 regions[3].position */
+  .d3.n8n .d3-node-details { grid-template-columns: 1fr; }
+}
+
+/* // spec: continue-2024-05 shape.density; zed-2025-09-macos shape.density; n8n-2025 shape.density */
+.surface.d3.d3-compact { font-size: 12px; }
+.surface.d3.d3-compact .message { font-size: inherit; }
+/* // spec: continue-2024-05 conversation.streaming; huggingchat-2023-08 controls[2]; open-webui-2024-02 regions[1]; zed-2024-05-macos controls[3] */
+.d3 .d3-stop { display: none; }
+.d3:has(.message.is-thinking, .message.is-streaming) .d3-stop { display: inline-block; }
+
+.surface.d3[data-spec-version="continue-2023-06"].light {
+  --bg: #1e1e1e !important; /* // spec: continue-2023-06 palette.light.bg=null; retained pre-D3 CSS fallback */
+  --panel: #252526 !important; /* // spec: continue-2023-06 palette.light.panel=null; retained pre-D3 CSS fallback */
+  --text: #d4d4d4 !important; /* // spec: continue-2023-06 palette.light.text=null; retained pre-D3 CSS fallback */
+}
+
+.surface.d3[data-spec-version="n8n-2023-10"].dark {
+  --bg: #1b1e24 !important; /* // spec: n8n-2023-10 palette.dark.bg=null; retained pre-D3 CSS fallback */
+  --panel: #232730 !important; /* // spec: n8n-2023-10 palette.dark.panel=null; retained pre-D3 CSS fallback */
+  --text: #f1f3f5 !important; /* // spec: n8n-2023-10 palette.dark.text=null; retained pre-D3 CSS fallback */
+  --muted: #9aa2b1 !important; /* // spec: n8n-2023-10 palette.dark.muted=null; retained pre-D3 CSS fallback */
+  --accent: #ff6d5a !important; /* // spec: n8n-2023-10 palette.dark.accent=null; retained pre-D3 CSS fallback */
+  --border: #363c4a !important; /* // spec: n8n-2023-10 palette.dark.border=null; retained pre-D3 CSS fallback */
+}
+
+.surface.d3[data-spec-version="n8n-2024-02"].dark {
+  --bg: #1b1e24 !important; /* // spec: n8n-2024-02 palette.dark.bg=null; retained pre-D3 CSS fallback */
+  --accent: #ff6d5a !important; /* // spec: n8n-2024-02 palette.dark.accent=null; retained pre-D3 CSS fallback */
+}
+
+/* // spec: lm-studio-2025-01 conversation.assistant; cherry-studio-2025-01 conversation.assistant; ollama-2026-03-macos conversation; huggingchat-2026-11 conversation.tool_calls */
+.d3 .d3-thought, .d3 .d3-tools { border: 1px solid var(--border); padding: 8px 12px; margin-top: 8px; text-align: left; }
+.d3 .d3-tools pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.d3 .d3-tools textarea { width: 100%; background: var(--bg); color: var(--text); }
+/* // spec: huggingchat-2023-04 controls[2]; huggingchat-2023-08 regions[2]; huggingchat-2025-10 regions[3] */
+.d3.huggingchat .d3-share { display: none; }
+.d3.huggingchat:has(.message) .d3-share { display: inline-block; align-self: center; }
+.d3.huggingchat.phase-2025-10 .d3-first-visit { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+/* // spec: ollama-2026-03-macos controls[1].where; input chooser opens upward, no fixed model names */
+.d3.ollama .d3-ollama-models { position: relative; }
+.d3.ollama .d3-model-menu { position: absolute; bottom: 100%; background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 12px; }
+.d3.ollama .d3-model-options { display: flex; flex-direction: column; }
+/* // spec: open-webui-2026-11 regions[0]; conversation moves into the full-width work tab */
+.d3.openwebui .d3-work-pane { display: flex; flex-direction: column; min-height: 0; }
+.d3.openwebui .d3-work-content { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.d3.openwebui .d3-work-content > .chat-main { flex: 1; }

@@ -1,0 +1,1217 @@
+{
+  "schema": "memento.design.v1",
+  "tool_id": "openai-codex-cli",
+  "name": "OpenAI Codex CLI",
+  "vendor": "OpenAI",
+  "kind": "terminal",
+  "versions": [
+    {
+      "id": "openai-codex-cli-2025-04",
+      "from": "2025-04",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の製品情報",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名と版番号を文字の角丸罫線で囲む",
+            "最初の枠は64列の幅"
+          ]
+        },
+        {
+          "name": "作業の設定",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "別の罫線枠にセッション番号",
+            "作業フォルダー",
+            "モデル",
+            "許可の設定"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "会話",
+            "実行する処理と結果"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文字の罫線で囲む複数行入力",
+            "生成中の表示",
+            "候補の案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "使うモデルの選択欄を開く"
+        },
+        {
+          "label": "Tab",
+          "where": "空の入力欄",
+          "purpose": "候補を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": "実行内容の確認を求める場合は、会話の入力部分で許可・拒否を選ぶ。",
+        "streaming": "処理中は経過秒と考え中の表示が出る。文章の逐次描画の細部は未確認。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末文字の角丸罫線で囲んだ入力欄。CSSの角丸半径には置き換えない。"
+      },
+      "empty_state": "製品名と研究プレビューの版番号、作業設定の別枠、送信またはTabで候補選択を促す空の入力欄。",
+      "distinctive": [
+        "製品情報とセッション設定が別々の枠",
+        "作業フォルダー・モデル・許可設定を縦に並べる",
+        "許可の切り替えは端末内の選択欄",
+        "配色と文字の大きさは端末設定にも左右される"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "kind": "blog",
+          "date": "2025-04-16",
+          "shows": "Codex CLIの研究プレビュー公開と、端末で使うコーディング支援という製品区分。マーケティング記事の外観を端末の配色に使わない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-header.tsx",
+          "kind": "oss-source",
+          "date": "2025-04-16",
+          "shows": "regions・empty_state: 64列の製品情報枠と別の設定枠。通常の文字色、青、紫、許可設定ごとのANSI色名を使う。端末の具体的なRGB値は定義しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-chat-input.tsx",
+          "kind": "oss-source",
+          "date": "2025-04-16",
+          "shows": "controls・input_shape・empty_state: /model、Tab案内、角丸文字罫線、処理中・確認待ちの切り替え。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-chat.tsx",
+          "kind": "oss-source",
+          "date": "2025-04-16",
+          "shows": "許可設定の選択欄と経過秒、入力・履歴の構成。"
+        }
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "openai-codex-cli-2025-06",
+      "from": "2025-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の設定",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名、研究プレビュー、版番号",
+            "セッション番号",
+            "作業フォルダー、モデル、接続先、許可、安全の設定を行ごとに表示"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者・回答・思考の区別",
+            "実行コマンドと結果",
+            "変更案と外部ツール"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "角丸文字罫線の入力欄",
+            "残りの文脈量（会話を覚えられる残量）の案内",
+            "送信と終了のキー案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "Enter",
+          "where": "入力欄",
+          "purpose": "送信する"
+        },
+        {
+          "label": "Ctrl+J",
+          "where": "入力欄",
+          "purpose": "改行する"
+        },
+        {
+          "label": "Ctrl+D",
+          "where": "入力欄",
+          "purpose": "終了する"
+        },
+        {
+          "label": "/compact",
+          "where": "入力欄の残量案内",
+          "purpose": "会話を短くまとめる操作"
+        }
+      ],
+      "conversation": {
+        "user": "userの見出しを青緑の端末色で示し、その下に本文を置く。",
+        "assistant": "codexの見出しを紫の端末色で示す。回答とthinkingの欄を区別する。",
+        "tool_calls": "commandという見出し、実行文字列、進行中または結果。変更案と確認の履歴も分ける。",
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "全周を端末文字の角丸罫線で囲む。下辺右側にキー案内を置く。"
+      },
+      "empty_state": "設定の行と空の入力欄。残量が分かると、入力欄の案内に割合を付け足す。",
+      "distinctive": [
+        "6月のRust初期版は縦に並ぶ設定行",
+        "発言者をuserとcodexという見出しで区別する",
+        "残量の案内が入力欄の仮表示に入る",
+        "送信・改行・終了のキーが入力枠の下辺に並ぶ"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.2.0",
+          "kind": "release-notes",
+          "date": "2025-06-30",
+          "shows": "対象に固定したRust 0.2.0の公開タグ。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/history_cell.rs",
+          "kind": "oss-source",
+          "date": "2025-06-30",
+          "shows": "regions・conversation・empty_state: 設定の行、user/codex/thinking/commandの表示。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "oss-source",
+          "date": "2025-06-30",
+          "shows": "controls・input_shape: 角丸文字罫線、残量、Enter/Ctrl+D/Ctrl+J。"
+        }
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "openai-codex-cli-2025-09",
+      "from": "2025-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "角丸文字罫線内の製品名と版番号",
+            "モデル、思考の程度、/modelの案内",
+            "作業フォルダー"
+          ]
+        },
+        {
+          "name": "初回案内",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "短い開始案内",
+            "/init、/status、/approvals、/model"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "発言と回答",
+            "処理の短い記録と結果"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "メッセージ入力",
+            "候補を選ぶ欄",
+            "貼り付けた長文・画像を示す短い表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルと思考の程度を選ぶ"
+        },
+        {
+          "label": "/approvals",
+          "where": "入力欄",
+          "purpose": "許可の設定を選ぶ"
+        },
+        {
+          "label": "/status",
+          "where": "入力欄",
+          "purpose": "作業の設定を確認する"
+        },
+        {
+          "label": "/init",
+          "where": "入力欄",
+          "purpose": "プロジェクトへの指示ファイルを作る"
+        }
+      ],
+      "conversation": {
+        "user": "画面表示では各行の左に細い縦棒▌を置き、本文とともに薄く表示する。書き出し用の履歴ではuserの見出しに変わる。",
+        "assistant": "画面表示では最初の行を>で始め、続きは字下げする。書き出し用の履歴ではcodexの見出しに変わる。",
+        "tool_calls": "実行した処理を短い見出しにまとめ、下に字下げした結果を置く。",
+        "streaming": "最初の行と追加の行を区別して表示し、続きの行に毎回発言者名を付けない。"
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末内の複数行入力。大きな貼り付けは短い仮表示にまとめる。"
+      },
+      "empty_state": "モデルと作業フォルダーの枠、その下に4つの短いコマンド案内。",
+      "distinctive": [
+        "製品名・モデル・フォルダーを1つの枠へまとめる",
+        "利用者の発言は細い縦棒で区別する",
+        "回答の先頭は>、継続部分は字下げ",
+        "許可を変える入口は/approvals"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.36.0",
+          "kind": "release-notes",
+          "date": "2025-09-15",
+          "shows": "GPT-5-Codex対応と会話再開など。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/history_cell.rs",
+          "kind": "oss-source",
+          "date": "2025-09-15",
+          "shows": "regions・conversation・empty_state: 実画面用display_linesと書き出し用transcript_linesの違い。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "oss-source",
+          "date": "2025-09-15",
+          "shows": "入力・候補・長文貼り付けと画像の仮表示。"
+        }
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "openai-codex-macos-2025-10",
+      "from": "2025-10",
+      "to": null,
+      "regions": [],
+      "controls": [],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-the-codex-app/",
+          "kind": "blog",
+          "date": "2026-02-02",
+          "shows": "macOSアプリの公開。プロジェクト別スレッド、変更の確認とコメント、分離した作業コピー、定期実行と確認待ち一覧を説明。CLIの画面ではない。"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/changelog",
+          "kind": "changelog",
+          "date": null,
+          "shows": "日付付きの履歴。2026-02-02のアプリ公開、02-03のスレッド一覧操作、04-09の補助欄とインライン／分離レビューを参照。現行ページの他の日付の機能を遡らせない。"
+        }
+      ],
+      "confidence": 0
+    },
+    {
+      "id": "openai-codex-macos-2026-02",
+      "from": "2026-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "プロジェクトとスレッドの一覧",
+          "position": null,
+          "size": null,
+          "contents": [
+            "プロジェクトごとの作業",
+            "切り替えられるスレッド"
+          ]
+        },
+        {
+          "name": "スレッド",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "依頼と作業の進捗",
+            "変更した内容の確認"
+          ]
+        },
+        {
+          "name": "変更の確認",
+          "position": null,
+          "size": null,
+          "contents": [
+            "コードの差分",
+            "差分へのコメント"
+          ]
+        },
+        {
+          "name": "定期実行",
+          "position": null,
+          "size": null,
+          "contents": [
+            "予定した作業",
+            "完了した結果の確認待ち一覧"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "差分へコメント",
+          "where": "変更の確認",
+          "purpose": "修正したい箇所を伝える"
+        },
+        {
+          "label": "定期実行",
+          "where": "定期実行の画面",
+          "purpose": "繰り返す作業の予定を決める"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "CLIとは別のデスクトップアプリ",
+        "プロジェクトごとに複数の作業スレッドを整理する",
+        "変更点の確認からコメントを付ける",
+        "定期実行した結果を確認待ち一覧で扱う"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-the-codex-app/",
+          "kind": "blog",
+          "date": "2026-02-02",
+          "shows": "macOSアプリの公開。プロジェクト別スレッド、変更の確認とコメント、分離した作業コピー、定期実行と確認待ち一覧を説明。CLIの画面ではない。"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/changelog",
+          "kind": "changelog",
+          "date": null,
+          "shows": "日付付きの履歴。2026-02-02のアプリ公開、02-03のスレッド一覧操作、04-09の補助欄とインライン／分離レビューを参照。現行ページの他の日付の機能を遡らせない。"
+        }
+      ],
+      "confidence": 0.56
+    },
+    {
+      "id": "openai-codex-cli-2026-02",
+      "from": "2026-02",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名と版番号の文字罫線枠",
+            "モデルと思考の程度",
+            "作業フォルダー"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "利用者の依頼",
+            "回答",
+            "実行した処理"
+          ]
+        },
+        {
+          "name": "入力と操作案内",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "メッセージ入力",
+            "候補・貼り付け内容の短い表示"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルと思考の程度を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "›の印で始め、上下に余白を入れた端末内の色付きの帯として表示する。色の数値は端末や表示設定による。",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末内の入力欄。長い貼り付けや添付を短い表示で扱う。"
+      },
+      "empty_state": "製品名・モデル・作業フォルダーの枠と、操作を始めるための案内。",
+      "distinctive": [
+        "起動時の設定を文字罫線枠にまとめる",
+        "利用者の発言は›の印と帯で区別する",
+        "外部連携の機能があっても通常画面は端末の会話履歴"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.101.0",
+          "kind": "release-notes",
+          "date": "2026-02-12",
+          "shows": "0.101.0の修正内容。公開日は2月12日で、カタログの2月15日とは区別。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/history_cell.rs",
+          "kind": "oss-source",
+          "date": "2026-02-12",
+          "shows": "regions・user・empty_state: 見出し枠、依頼の帯と›。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "oss-source",
+          "date": "2026-02-12",
+          "shows": "入力欄、長い貼り付けと添付の扱い。"
+        }
+      ],
+      "confidence": 0.75
+    },
+    {
+      "id": "openai-codex-macos-2026-04",
+      "from": "2026-04",
+      "to": null,
+      "regions": [
+        {
+          "name": "プロジェクトとスレッドの一覧",
+          "position": null,
+          "size": null,
+          "contents": [
+            "プロジェクトと作業の一覧"
+          ]
+        },
+        {
+          "name": "スレッド",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "依頼と進捗"
+          ]
+        },
+        {
+          "name": "補助パネル",
+          "position": null,
+          "size": null,
+          "contents": [
+            "Gitの概要（変更の要約）",
+            "参照元の一覧",
+            "コードの差分"
+          ]
+        },
+        {
+          "name": "レビュー",
+          "position": null,
+          "size": null,
+          "contents": [
+            "会話内、または分離した表示",
+            "折りたためる行内コメント"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "コメント",
+          "where": "レビュー内",
+          "purpose": "変更箇所への指示を記す"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "system-ui, sans-serif"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": null,
+        "input_shape": null
+      },
+      "empty_state": null,
+      "distinctive": [
+        "会話内と分離したレビューを選べる",
+        "行内のコメントを折りたためる",
+        "補助パネルで変更の概要と参照元を見る"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-the-codex-app/",
+          "kind": "blog",
+          "date": "2026-02-02",
+          "shows": "macOSアプリの公開。プロジェクト別スレッド、変更の確認とコメント、分離した作業コピー、定期実行と確認待ち一覧を説明。CLIの画面ではない。"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/changelog",
+          "kind": "changelog",
+          "date": null,
+          "shows": "日付付きの履歴。2026-02-02のアプリ公開、02-03のスレッド一覧操作、04-09の補助欄とインライン／分離レビューを参照。現行ページの他の日付の機能を遡らせない。"
+        }
+      ],
+      "confidence": 0.52
+    },
+    {
+      "id": "openai-codex-cli-2026-06",
+      "from": "2026-06",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名と版番号の文字罫線枠",
+            "モデルと思考の程度",
+            "作業フォルダー",
+            "条件に応じた許可設定"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "依頼",
+            "回答",
+            "実行の記録"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文章を入力する部分",
+            "候補と状態に応じた案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルと思考の程度を選ぶ"
+        },
+        {
+          "label": "/permissions",
+          "where": "入力欄",
+          "purpose": "許可の設定を選ぶ"
+        },
+        {
+          "label": "/usage",
+          "where": "入力欄",
+          "purpose": "日・週・累計の利用量を見る"
+        },
+        {
+          "label": "@",
+          "where": "入力欄",
+          "purpose": "ファイルなどの参照候補を開く"
+        }
+      ],
+      "conversation": {
+        "user": "›の印と、利用者の発言用の帯で表示する。",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末内の文章入力。候補や状態案内は状況によって変わる。"
+      },
+      "empty_state": "製品名・モデル・フォルダーの枠、その下に開始用の操作案内。",
+      "distinctive": [
+        "モデルとフォルダーの起動枠",
+        "利用者の発言は›で区別する",
+        "/usageで利用量の画面を開く"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+          "kind": "release-notes",
+          "date": "2026-06-15",
+          "shows": "/usage、/delete、/importと@候補の変更。役割別の常設ダッシュボードを説明した資料ではない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "regions・empty_state: モデルとフォルダーを含む枠、/modelと/permissionsの案内。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/history_cell/messages.rs",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "利用者の依頼はuser_message_styleと›の印で描画。色の数値は固定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.140.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "oss-source",
+          "date": "2026-06-15",
+          "shows": "入力部品と貼り付け・添付の短い表示。"
+        }
+      ],
+      "confidence": 0.77
+    },
+    {
+      "id": "openai-codex-cli-2026-09",
+      "from": "2026-08",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "製品名と版番号の文字罫線枠",
+            "モデルと思考の程度",
+            "作業フォルダー",
+            "条件に応じた許可設定"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "依頼",
+            "回答",
+            "実行の記録"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文章を入力する部分",
+            "候補と状態に応じた案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルと思考の程度を選ぶ"
+        },
+        {
+          "label": "/permissions",
+          "where": "入力欄",
+          "purpose": "許可の設定を選ぶ"
+        },
+        {
+          "label": "/copy",
+          "where": "入力欄",
+          "purpose": "返答やコードのうちコピーする内容を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": "›の印と、利用者の発言用の帯で表示する。",
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "端末内の文章入力。候補や状態案内は状況によって変わる。"
+      },
+      "empty_state": "製品名・モデル・フォルダーの枠、その下に開始用の操作案内。",
+      "distinctive": [
+        "モデルとフォルダーの起動枠を維持する",
+        "/copyで返答の一部分も選べる",
+        "他のタスクを参照する操作を持つ"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+          "kind": "release-notes",
+          "date": "2026-08-26",
+          "shows": "タスク参照、/copyの選択欄、会話タイトルなどの変更。Realtime Sandbox Inspectorの記載は確認できない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "oss-source",
+          "date": "2026-08-26",
+          "shows": "regions・empty_state: モデルとフォルダーを含む枠、/modelと/permissionsの案内。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/history_cell/messages.rs",
+          "kind": "oss-source",
+          "date": "2026-08-26",
+          "shows": "利用者の依頼はuser_message_styleと›の印で描画。色の数値は固定しない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+          "kind": "oss-source",
+          "date": "2026-08-26",
+          "shows": "入力部品と貼り付け・添付の短い表示。"
+        }
+      ],
+      "confidence": 0.77
+    },
+    {
+      "id": "openai-codex-cli-2026-11",
+      "from": "2026-09",
+      "to": null,
+      "regions": [
+        {
+          "name": "起動時の見出し",
+          "position": "top",
+          "size": null,
+          "contents": [
+            "枠を外した短い製品名と版番号",
+            "字下げした作業フォルダー",
+            "表示条件に応じた短いあいさつ"
+          ]
+        },
+        {
+          "name": "履歴",
+          "position": "center",
+          "size": null,
+          "contents": [
+            "依頼",
+            "回答",
+            "実行の記録"
+          ]
+        },
+        {
+          "name": "入力",
+          "position": "bottom",
+          "size": null,
+          "contents": [
+            "文章を入力する部分",
+            "候補と状態に応じた案内"
+          ]
+        }
+      ],
+      "controls": [
+        {
+          "label": "/model",
+          "where": "入力欄",
+          "purpose": "モデルと思考の程度を選ぶ"
+        },
+        {
+          "label": "/permissions",
+          "where": "入力欄",
+          "purpose": "許可の設定を選ぶ"
+        }
+      ],
+      "conversation": {
+        "user": null,
+        "assistant": null,
+        "tool_calls": null,
+        "streaming": null
+      },
+      "palette": {
+        "light": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "dark": {
+          "bg": null,
+          "panel": null,
+          "text": null,
+          "muted": null,
+          "accent": null,
+          "border": null,
+          "user_bubble": null
+        },
+        "source": {}
+      },
+      "typography": {
+        "ui_named": null,
+        "mono_named": null,
+        "free_fallback": "ui-monospace, monospace"
+      },
+      "shape": {
+        "radius_px": null,
+        "density": "compact",
+        "input_shape": "文章の入力部と候補・状態案内を分ける。案内の上下位置は表示状態による。"
+      },
+      "empty_state": "通常セッションでは短い製品名と作業フォルダーを表示し、条件に応じてあいさつを加える。サインインの歓迎画面とは区別する。",
+      "distinctive": [
+        "通常セッションの起動枠をなくして短くする",
+        "作業フォルダーを字下げして表示する",
+        "短いあいさつと操作案内を表示条件に応じて出す",
+        "サインインの歓迎画面と作業中の見出しを分ける"
+      ],
+      "must_not_copy": [
+        "OpenAIのロゴと結び目のマーク",
+        "製品名の横にあるブランド用の図形・記号を含むマーク",
+        "公式の画面画像や端末の背景画像"
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.159.0",
+          "kind": "release-notes",
+          "date": "2026-09-29",
+          "shows": "短い起動見出し、操作中の案内、警告表示、会話の描画などの変更。公開日は9月29日。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/history_cell/session.rs",
+          "kind": "oss-source",
+          "date": "2026-09-29",
+          "shows": "regions・empty_state: display_linesは枠なしの短い見出しとフォルダー。raw_linesのmodel行は書き出し用なので実画面へ戻さない。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs",
+          "kind": "oss-source",
+          "date": "2026-09-29",
+          "shows": "下部の入力、候補、状態案内の領域を割り当てる。画面の広さや状態によって案内の位置と高さが変わる。"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/onboarding/welcome.rs",
+          "kind": "oss-source",
+          "date": "2026-09-29",
+          "shows": "サインイン時の歓迎画面は通常セッションの見出しとは別。ここにあるブランド図形は再現対象外。"
+        }
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "corrections": [
+    "2025年6月にv0.24の起動枠を表示する現rendererは当月の0.2.0と異なる。0.2.0は設定行、user/codexの見出し、全周罫線の入力欄を使う。https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/history_cell.rs https://raw.githubusercontent.com/openai/codex/rust-v0.2.0/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+    "2025年9月0.36.0の画面用表示と書き出し用履歴を混ぜない。画面上は利用者に▌、回答に>を使う。https://raw.githubusercontent.com/openai/codex/rust-v0.36.0/codex-rs/tui/src/history_cell.rs",
+    "端末の背景・本文色・書体を固定の黒、緑、青として保存しない。初期コードのANSI色名は端末の色表によって数値が異なる。HEX値とピクセルの角丸半径はnull。https://raw.githubusercontent.com/openai/codex/33d0d73b822abeae87cec07f2c2901ff900e434f/codex-cli/src/components/chat/terminal-header.tsx",
+    "2025年10月のmacOSアプリはunverified。公式公開は2026-02-02なので、元IDは未確認記録として残し、確認できる2026年2月版を追加した。デスクトップの配色と寸法も今回確認していない。https://openai.com/index/introducing-the-codex-app/ https://learn.chatgpt.com/docs/changelog",
+    "2026年2月のapp-server JSON-RPCとMCP OAuthを常設の端末ダッシュボードとして描く根拠はない。ソースの通常画面は起動枠と履歴。https://raw.githubusercontent.com/openai/codex/rust-v0.101.0/codex-rs/tui/src/history_cell.rs",
+    "2026年4月のAutomations新規導入という説明は不正確。2月の公開記事で既に説明されている。4月9日のインライン／分離レビューは確認できるが、Approve Hunk / Split Sheetの既定ボタンやo3-pro選択はunverified。https://openai.com/index/introducing-the-codex-app/ https://learn.chatgpt.com/docs/changelog",
+    "v0.140.0の公開説明は/usage・/delete・/import・@候補など。rendererの3役の固定メーターやサインイン状態のカードはunverified。https://github.com/openai/codex/releases/tag/rust-v0.140.0",
+    "v0.150.0は2026-08-26公開。カタログの9月というIDを保持したがfromを確認できた8月へ修正した。Realtime Sandbox Inspector、システムコール計器、実行中の環境変数注入のUIはunverified。https://api.github.com/repos/openai/codex/releases/tags/rust-v0.150.0 https://raw.githubusercontent.com/openai/codex/rust-v0.150.0/codex-rs/tui/src/history_cell/session.rs",
+    "v0.159.0は2026-09-29公開。11月というIDを保持しfromを9月へ修正した。通常セッションの描画は枠なし。書き出し用raw_linesのmodel行やサインイン用の歓迎図形を通常画面へ合成しない。既定モデルGPT-6.1 Solという当タグの主張はunverified。https://api.github.com/repos/openai/codex/releases/tags/rust-v0.159.0 https://raw.githubusercontent.com/openai/codex/rust-v0.159.0/codex-rs/tui/src/history_cell/session.rs",
+    "カタログはCLIに別製品のmacOSアプリを混在させている。このファイルのkindはCLIのterminal。既存macOS IDの記録は互換性のため含めたが、別のagent-appへ移すにはカタログ側の修正が必要。https://openai.com/index/introducing-the-codex-app/"
+  ]
+}

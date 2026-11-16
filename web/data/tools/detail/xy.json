@@ -1,0 +1,472 @@
+{
+  "xyproto--algernon": {
+    "topics": [
+      "algernon",
+      "build-less",
+      "cross-platform",
+      "fasthttp",
+      "go",
+      "http3",
+      "live-reload",
+      "local-llm",
+      "lua",
+      "mysql",
+      "npm-less",
+      "ollama",
+      "pongo2",
+      "postgresql",
+      "quic",
+      "react19",
+      "redis",
+      "server-sent-events",
+      "sqlite",
+      "tls13"
+    ],
+    "homepage": "https://algernon.roboticoverlords.org",
+    "archived": false,
+    "commit": "afe22980e9f982ed33f996e26b5c59cf8eeba84f",
+    "classification_basis": "Topics, README introduction, language (JavaScript) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "releases": [
+      [
+        "1.6",
+        "2017-10-04"
+      ],
+      [
+        "1.8",
+        "2017-12-25"
+      ],
+      [
+        "1.10",
+        "2018-05-01"
+      ],
+      [
+        "1.10.1",
+        "2018-06-18"
+      ],
+      [
+        "1.11.0",
+        "2018-09-12"
+      ],
+      [
+        "1.12.0",
+        "2018-10-31"
+      ],
+      [
+        "1.12.2",
+        "2019-01-27"
+      ],
+      [
+        "1.12.3",
+        "2019-02-19"
+      ],
+      [
+        "1.12.4",
+        "2019-04-06"
+      ],
+      [
+        "1.12.5",
+        "2019-08-22"
+      ],
+      [
+        "1.12.6",
+        "2020-01-07"
+      ],
+      [
+        "1.12.7",
+        "2020-03-24"
+      ],
+      [
+        "1.12.8",
+        "2020-06-27"
+      ],
+      [
+        "1.12.11",
+        "2021-01-02"
+      ],
+      [
+        "1.12.12",
+        "2021-01-18"
+      ],
+      [
+        "1.12.14",
+        "2021-08-23"
+      ],
+      [
+        "v1.13.0",
+        "2022-05-09"
+      ],
+      [
+        "v1.14.0",
+        "2022-08-04"
+      ],
+      [
+        "v1.15.0",
+        "2023-05-17"
+      ],
+      [
+        "v1.15.1",
+        "2023-05-17"
+      ],
+      [
+        "v1.15.2",
+        "2023-06-03"
+      ],
+      [
+        "v1.15.3",
+        "2023-08-10"
+      ],
+      [
+        "v1.15.4",
+        "2023-10-16"
+      ],
+      [
+        "v1.15.5",
+        "2023-12-06"
+      ],
+      [
+        "v1.16.0",
+        "2024-02-22"
+      ],
+      [
+        "v1.17.0",
+        "2024-06-26"
+      ],
+      [
+        "v1.17.1",
+        "2024-07-13"
+      ],
+      [
+        "v1.17.2",
+        "2025-01-20"
+      ],
+      [
+        "v1.17.3",
+        "2025-02-26"
+      ],
+      [
+        "v1.17.4",
+        "2025-08-07"
+      ],
+      [
+        "v1.17.5",
+        "2025-11-13"
+      ],
+      [
+        "v1.17.6",
+        "2026-04-25"
+      ],
+      [
+        "v1.17.7",
+        "2026-05-12"
+      ],
+      [
+        "v1.17.8",
+        "2026-05-24"
+      ],
+      [
+        "v1.17.9",
+        "2026-05-29"
+      ],
+      [
+        "v1.17.10",
+        "2026-07-04"
+      ],
+      [
+        "v1.17.11",
+        "2026-07-26"
+      ],
+      [
+        "v1.17.12",
+        "2026-10-12"
+      ],
+      [
+        "v1.17.13",
+        "2026-11-05"
+      ]
+    ],
+    "release_coverage": "all-published-releases",
+    "install": "go install github.com/xyproto/algernon@latest / docker run -it -p4000:4000 -v .:/srv/algernon xyproto/algernon / go install github.com/xyproto/algernon@main",
+    "install_evidence": [
+      {
+        "command": "go install github.com/xyproto/algernon@latest",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/README.md",
+        "line": 30
+      },
+      {
+        "command": "docker run -it -p4000:4000 -v .:/srv/algernon xyproto/algernon",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/README.md",
+        "line": 61
+      },
+      {
+        "command": "go install github.com/xyproto/algernon@main",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/README.md",
+        "line": 176
+      }
+    ],
+    "instruction_files": [],
+    "instruction_evidence": [],
+    "instruction_search": {
+      "inspected_paths": [
+        "platformdep/colors.go",
+        "platformdep/colors_unix.go",
+        "main.go",
+        "engine/help.go",
+        "plugins/go/main.go",
+        "plugins/py/main.py",
+        "platformdep/input.go",
+        "samples/prettify/main.go",
+        "samples/simplepy/main.py"
+      ],
+      "status": "bounded-source-inspection",
+      "note": "Presence of a repository AGENTS.md alone is never treated as loader support."
+    },
+    "harness": {
+      "license": "BSD-3-Clause",
+      "redistribute": true
+    },
+    "harness_evidence": [],
+    "redistribution": {
+      "basis": "OSI-approved repository-level SPDX identifier",
+      "license_source": "https://api.github.com/licenses/bsd-3-clause",
+      "obligations": "Retain applicable notices and license text. Copyleft licenses require their corresponding source and distribution conditions. Per-file and bundled third-party licenses require separate review."
+    },
+    "theme": {
+      "bg": "#202020",
+      "font_ui": "Helvetica Neue, sans-serif",
+      "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/formulas/style.css"
+    },
+    "theme_evidence": [
+      {
+        "token": "bg",
+        "key": "background",
+        "value": "#202020",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/formulas/style.css",
+        "line": 2
+      },
+      {
+        "token": "font_ui",
+        "value": "Helvetica Neue, sans-serif",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/formulas/style.css",
+        "line": 4
+      }
+    ],
+    "strings": [
+      "Web Server"
+    ],
+    "string_evidence": [
+      {
+        "text": "Web Server",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/main.go",
+        "line": 13,
+        "kind": "ui-attribute"
+      }
+    ],
+    "recordings": [],
+    "sources": [
+      "https://github.com/xyproto/algernon",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/README.md",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/go.mod",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/py/requirements.txt",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/colors.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/colors_unix.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/formulas/style.css",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/react_tsx/style.css",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/main.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/engine/help.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/go/main.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/py/main.py",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/input.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/prettify/main.go",
+      "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/simplepy/main.py",
+      "https://api.github.com/repos/xyproto/algernon/releases"
+    ],
+    "inspected_files": [
+      {
+        "path": "README.md",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/README.md"
+      },
+      {
+        "path": "go.mod",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/go.mod"
+      },
+      {
+        "path": "plugins/py/requirements.txt",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/py/requirements.txt"
+      },
+      {
+        "path": "platformdep/colors.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/colors.go"
+      },
+      {
+        "path": "platformdep/colors_unix.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/colors_unix.go"
+      },
+      {
+        "path": "samples/formulas/style.css",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/formulas/style.css"
+      },
+      {
+        "path": "samples/react_tsx/style.css",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/react_tsx/style.css"
+      },
+      {
+        "path": "main.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/main.go"
+      },
+      {
+        "path": "engine/help.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/engine/help.go"
+      },
+      {
+        "path": "plugins/go/main.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/go/main.go"
+      },
+      {
+        "path": "plugins/py/main.py",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/plugins/py/main.py"
+      },
+      {
+        "path": "platformdep/input.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/platformdep/input.go"
+      },
+      {
+        "path": "samples/prettify/main.go",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/prettify/main.go"
+      },
+      {
+        "path": "samples/simplepy/main.py",
+        "source": "https://github.com/xyproto/algernon/blob/afe22980e9f982ed33f996e26b5c59cf8eeba84f/samples/simplepy/main.py"
+      }
+    ],
+    "tree_truncated": false,
+    "discovered_by": [
+      "topic:ollama stars:3000..9999 fork:false",
+      "topic:local-llm stars:3000..9999 fork:false"
+    ],
+    "evidence_limitations": [
+      "ソース確認の範囲は inspected_files に記録した。",
+      "表示速度と最初の文字までの時間は未実測。"
+    ],
+    "tier_reason": "Insufficient screen evidence: layout=false, strings=1, theme=2.",
+    "tier_a_candidate": false,
+    "classification_source_observation": "Topics, README introduction, language (JavaScript) → framework / other",
+    "repository_id": 31953662,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "xytom--coding-tools-mcp": {
+    "topics": [
+      "dsh-plugin",
+      "mcp",
+      "mcp-server"
+    ],
+    "homepage": "https://coding-tools-mcp.github.io/docs/",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Python) → mcp-server / protocol-mcp",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/xyTom/coding-tools-mcp",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:mcp stars:1000..2999 fork:false",
+      "topic:mcp-server stars:1000..2999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1245329241,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 150,
+    "fork": false
+  },
+  "xynehq--xyne": {
+    "topics": [
+      "assistants",
+      "bedrock",
+      "bun",
+      "claude",
+      "enterprise-search",
+      "gen-ai",
+      "generative-ai",
+      "information-retrieval",
+      "integrations",
+      "llm",
+      "openai",
+      "rag",
+      "typescript"
+    ],
+    "homepage": "https://xyne.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (TypeScript) → framework / rag",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/xynehq/xyne",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:rag stars:500..999 fork:false",
+      "topic:claude stars:500..999 fork:false",
+      "topic:openai stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 851256132,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  },
+  "xybrid-ai--xybrid": {
+    "topics": [
+      "ai-games",
+      "edge-ai",
+      "ios",
+      "kotlin",
+      "llamacpp",
+      "llm",
+      "mobile-llm",
+      "ollama",
+      "on-device-ai",
+      "on-device-ml",
+      "onnx-runtime",
+      "privacy",
+      "privacy-tools",
+      "rust",
+      "swift",
+      "unity-ai",
+      "unity3d",
+      "voice-ai",
+      "voice-assistant"
+    ],
+    "homepage": "https://xybrid.ai",
+    "archived": false,
+    "classification_basis": "Topics, README introduction, language (Rust) → framework / other",
+    "classification_rule_version": "2026-11-15.3",
+    "harness": {
+      "license": "Apache-2.0",
+      "redistribute": true
+    },
+    "sources": [
+      "https://github.com/xybrid-ai/xybrid",
+      "https://api.github.com/licenses/apache-2.0"
+    ],
+    "tier_reason": "Repository metadata only. Screen materials have not been inspected.",
+    "discovered_by": [
+      "topic:ollama stars:500..999 fork:false"
+    ],
+    "tier_a_candidate": false,
+    "repository_id": 1115684492,
+    "stars_at": "2026-11-15",
+    "minimum_stars": 300,
+    "fork": false
+  }
+}

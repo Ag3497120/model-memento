@@ -1,0 +1,27 @@
+{
+  "schema": "memento.approach.v1",
+  "id": "pick-one",
+  "name": "いくつか案を出して、選んでもらう",
+  "plain": "答えを 1 つに決めつけず、違う案を 3 つ出します。気に入ったものを選ぶと、それを仕上げます。",
+  "good_for": ["talk", "code"],
+  "seen_in": ["ChatGPT", "OpenAI Playground"],
+  "placeholder": "例: 小さなパン屋の名前を考えて",
+  "steps": [
+    {
+      "id": "options",
+      "label": "3 つの案",
+      "show": "choices",
+      "system": "Offer three clearly different options for the request. Reply ONLY with JSON: {\"options\": [{\"title\": \"...\", \"text\": \"...\"}, ...]} with exactly three items, in the language of the request. Each text at most three sentences.",
+      "prompt": "{{input}}",
+      "json": true
+    },
+    {
+      "id": "finish",
+      "label": "仕上げ",
+      "gate": "選んだ案で仕上げる",
+      "show": "text",
+      "system": "Finish the option the person chose. Keep its idea, make it complete and ready to use, in the language of the request.",
+      "prompt": "Request:\n{{input}}\n\nChosen option:\n{{choice}}"
+    }
+  ]
+}
